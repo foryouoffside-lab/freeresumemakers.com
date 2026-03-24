@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1774308897726,
+    "name": "sang",
+    "rating": 0,
+    "comment": "good\n",
+    "templateId": "18",
+    "parentId": null,
+    "date": "2026-03-23T23:34:57.726Z"
+  },
+  {
+    "id": 1774066560628,
+    "name": "Anonymous",
+    "rating": 0,
+    "comment": "hii",
+    "templateId": "1",
+    "parentId": 1774066496593,
+    "date": "2026-03-21T04:16:00.628Z"
+  },
+  {
+    "id": 1774066496593,
+    "name": "sangmesh ",
+    "rating": 5,
+    "comment": "need of improvment",
+    "templateId": "1",
+    "parentId": null,
+    "date": "2026-03-21T04:14:56.593Z"
+  },
+  {
+    "id": 1774017712825,
+    "name": "Test User 466",
+    "rating": 5,
+    "comment": "This is a test review from automated script",
+    "templateId": "1",
+    "date": "2026-03-20T14:41:52.825Z",
+    "ipHash": "18fl"
+  }
+]

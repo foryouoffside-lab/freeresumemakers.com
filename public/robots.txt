@@ -1,0 +1,44 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_error
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://freeresumemakers.com/sitemap.xml
+
+# Crawl delay to be respectful (prevents server overload)
+Crawl-delay: 1
+
+# Specify host
+Host: https://freeresumemakers.com
+
+# Additional crawler-specific rules for better SEO
+
+# Googlebot (optimized for Google)
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+# Allow images to be crawled (important for OG images and template previews)
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /images/
+Allow: /template-previews/
+
+# Allow all other bots to crawl images
+User-agent: *
+Allow: /assets/
+Allow: /images/
+Allow: /template-previews/

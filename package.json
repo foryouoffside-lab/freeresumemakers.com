@@ -1,26 +1,27 @@
 {
   "name": "temx-nextjs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "next": "^16.1.6",
+    "qrcode.react": "^4.2.0",
+    "razorpay": "^2.9.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/react": "19.2.13",
+    "critters": "^0.0.23",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4"
   }
 }
