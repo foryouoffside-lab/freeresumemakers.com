@@ -194,7 +194,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="@freeresumemaker" />
         
         {/* Additional SEO Meta Tags */}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
         
@@ -268,7 +268,7 @@ function MyApp({ Component, pageProps }) {
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+            })(window, document, "clarity", "script", "");
           `
         }}
       />
@@ -327,6 +327,8 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+
 
 
 
