@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import SEO from '../components/SEO';
 import Head from 'next/head';
 import Script from 'next/script';
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps }) {
@@ -165,6 +166,7 @@ function MyApp({ Component, pageProps }) {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <Analytics />
         <SpeedInsights />
       </ResumeProvider>
 
