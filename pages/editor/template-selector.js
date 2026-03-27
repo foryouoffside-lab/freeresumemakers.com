@@ -1,7 +1,7 @@
 ﻿// pages/editor/template-selector.js
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import TemplateSelectorComponent from '../../components/templates/TemplateSelector';
+import TemplateSelector from '../../components/templates/TemplateSelector';
 
 export default function TemplateSelectorPage() {
   const router = useRouter();
@@ -259,7 +259,7 @@ export default function TemplateSelectorPage() {
       </div>
       
       {/* Template Selector Component */}
-      <TemplateSelectorComponent onTemplateSelect={handleTemplateSelect} />
+      <TemplateSelector onTemplateSelect={handleTemplateSelect} />
       
       {/* Footer Section */}
       <div style={{
