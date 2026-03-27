@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 // pages/_app.js
 import { ResumeProvider } from '../context/ResumeContext';
@@ -10,6 +10,7 @@ import SEO from '../components/SEO';
 import Head from 'next/head';
 import Script from 'next/script';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -166,6 +167,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
         <Footer />
         <SpeedInsights />
+        <Analytics />
       </ResumeProvider>
 
       <style jsx global>{`
