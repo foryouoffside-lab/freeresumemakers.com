@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import { ResumeProvider, useResume } from '../../../context/ResumeContext';
 import Preview from '../../../components/editor/Preview';
 import Link from 'next/link';
-import Head from 'next/head';
-import { useEffect } from 'react';
 import SEO from '../../../components/SEO';
 
 // Template names for SEO
