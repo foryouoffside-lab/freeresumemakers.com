@@ -937,7 +937,7 @@ export const ResumeProvider = ({ children }) => {
     debug: {
       getCurrentState: () => state,
       getLocalStorage: checkLocalStorage,
-      logState: () => // console.log removed for production,
+      logState: () => { /* console.log removed for production */ },
       saveNow: forceSaveNow,
       fixSummary,
       cleanSkills: (skills) => cleanSkillsData(skills),
