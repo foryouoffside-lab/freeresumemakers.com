@@ -1,4 +1,4 @@
-// pages/professions/education.js
+﻿// pages/professions/education.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -177,7 +177,7 @@ export default function EducationExamples() {
               'Teach Microeconomics and Development Economics to 500+ undergraduate and postgraduate students annually',
               'Supervise 8 PhD scholars, with 3 completed and 5 in progress',
               'Published 18 research papers in Scopus/WoS indexed journals with 500+ citations',
-              'Secured â‚¹50 Lakh in research grants from ICSSR, UGC, and Ministry of Education',
+              'Secured Ã¢â€šÂ¹50 Lakh in research grants from ICSSR, UGC, and Ministry of Education',
               'Designed and launched new curriculum for MA Economics program',
               'Organized 5 national and 2 international conferences with 1,000+ participants'
             ]
@@ -241,9 +241,9 @@ export default function EducationExamples() {
           'Recipient of ICSSR Senior Research Fellowship (2023)'
         ],
         grants: [
-          'ICSSR Research Grant: â‚¹25 Lakh for project on "Digital Economy and Employment" (2022-24)',
-          'UGC Major Research Project: â‚¹15 Lakh for "Microfinance Impact Study" (2019-22)',
-          'Ministry of Education Grant: â‚¹10 Lakh for curriculum development (2021)'
+          'ICSSR Research Grant: Ã¢â€šÂ¹25 Lakh for project on "Digital Economy and Employment" (2022-24)',
+          'UGC Major Research Project: Ã¢â€šÂ¹15 Lakh for "Microfinance Impact Study" (2019-22)',
+          'Ministry of Education Grant: Ã¢â€šÂ¹10 Lakh for curriculum development (2021)'
         ]
       }
     }
@@ -327,11 +327,11 @@ export default function EducationExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/professions/education" style={{ color: '#666', textDecoration: 'none' }}>Education Resumes</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -362,7 +362,7 @@ export default function EducationExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Education Resume Examples
+            Ã¢â€ Â Back to All Education Resume Examples
           </button>
 
           {/* Template Header */}
@@ -779,9 +779,9 @@ export default function EducationExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Education Resumes</span>
         </nav>
 
@@ -848,11 +848,11 @@ export default function EducationExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>K-12 â€¢ Higher Ed</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>K-12 Ã¢â‚¬Â¢ Higher Ed</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Teaching & Research Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CTET â€¢ UGC-NET â€¢ PhD</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CTET Ã¢â‚¬Â¢ UGC-NET Ã¢â‚¬Â¢ PhD</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -991,7 +991,7 @@ export default function EducationExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume â†’
+                  View Complete Resume Ã¢â€ â€™
                 </span>
               </div>
             </div>
@@ -1075,7 +1075,7 @@ export default function EducationExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now â†’
+            Create Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 

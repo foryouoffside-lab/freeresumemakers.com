@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/editor/Summary.js
 // ENHANCED VERSION - 10+ EXAMPLES PER CATEGORY
 // WITH ALL FUNCTIONALITY FIXES AND IMPROVEMENTS
@@ -813,7 +813,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
                     alignItems: 'center',
                     gap: '6px'
                   }}>
-                    <span aria-hidden="true">📋</span> Select Profession
+                    <span aria-hidden="true">📄‹</span> Select Profession
                   </h4>
                   <div style={{
                     display: 'grid',
@@ -897,7 +897,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
                     </>
                   ) : (
                     <>
-                      <span style={{ fontSize: '16px' }} aria-hidden="true">✨</span>
+                      <span style={{ fontSize: '16px' }} aria-hidden="true">âœ¨</span>
                       {isMobile ? 'Generate' : `Generate ${professionTemplates[selectedProfession]?.title || 'Professional'} Summary`}
                     </>
                   )}
@@ -910,7 +910,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
                   textAlign: 'center',
                   fontStyle: 'italic'
                 }}>
-                  ✨ {Object.values(professionTemplates).reduce((sum, p) => sum + p.examples.length, 0)} examples available • All under 300 characters
+                  âœ¨ {Object.values(professionTemplates).reduce((sum, p) => sum + p.examples.length, 0)} examples available â€¢ All under 300 characters
                 </p>
               </div>
             </section>
@@ -933,7 +933,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span aria-hidden="true">📝</span> 
+                  <span aria-hidden="true">📄</span> 
                   {isMobile ? 'Examples' : `${professionTemplates[selectedProfession]?.title || 'Software Engineer'} Examples (${professionTemplates[selectedProfession]?.examples.length} available)`}
                 </h3>
                 
@@ -1048,7 +1048,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
                   background: '#e9ecef',
                   borderRadius: '6px'
                 }}>
-                  📊 {professionTemplates[selectedProfession]?.examples.length} examples available • All under 300 characters
+                  📄Š {professionTemplates[selectedProfession]?.examples.length} examples available â€¢ All under 300 characters
                 </p>
               </section>
             </aside>
@@ -1096,7 +1096,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
               </div>
             ) : (
               <div style={{ color: '#0070f3', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '16px' }} aria-hidden="true">ℹ️</span>
+                <span style={{ fontSize: '16px' }} aria-hidden="true">â„¹ï¸</span>
                 {isMobile ? 'Write or generate' : 'Write a compelling summary or use our generator (70+ under 300 char examples)'}
               </div>
             )}

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -160,7 +160,7 @@ export default function About() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>About Us</span>
         </nav>
 
@@ -592,7 +592,7 @@ export default function About() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Â© {currentYear} Free Resume Builder. Helping job seekers create professional resumes that get noticed.</p>
+          <p>Ã‚Â© {currentYear} Free Resume Builder. Helping job seekers create professional resumes that get noticed.</p>
           <div style={{marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <Link href="/privacy-policy" style={{color: '#999', textDecoration: 'none', fontSize: '0.8rem'}}>Privacy Policy</Link>
             <span style={{color: '#ddd'}}>|</span>

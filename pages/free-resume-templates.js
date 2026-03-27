@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -157,7 +157,7 @@ export default function FreeTemplatesPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Free Resume Templates</span>
         </nav>
 
@@ -395,7 +395,7 @@ export default function FreeTemplatesPage() {
                   onMouseEnter={(e) => e.currentTarget.style.color = '#0060d6'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#0070f3'}
                 >
-                  Use This Template â†’
+                  Use This Template Ã¢â€ â€™
                 </Link>
               </div>
             </div>
@@ -464,7 +464,7 @@ export default function FreeTemplatesPage() {
                     fontWeight: 500
                   }}
                 >
-                  View Templates â†’
+                  View Templates Ã¢â€ â€™
                 </Link>
               </div>
             ))}
@@ -539,7 +539,7 @@ export default function FreeTemplatesPage() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
           <div style={{ marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/templates" style={{ color: '#999', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

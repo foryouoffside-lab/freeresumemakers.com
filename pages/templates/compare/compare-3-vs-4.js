@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -188,11 +188,11 @@ export default function Compare3Vs4() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 3 vs Template 4</li>
           </ol>
         </nav>
@@ -209,7 +209,7 @@ export default function Compare3Vs4() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              ðŸš€ MODERN TECH vs EXECUTIVE TIMELINE SHOWDOWN
+              Ã°Å¸Å¡â‚¬ MODERN TECH vs EXECUTIVE TIMELINE SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -241,13 +241,13 @@ export default function Compare3Vs4() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“Š Updated: March 2026
+              Ã°Å¸â€œÅ  Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸŒ™ Modern Tech: 96% ATS
+              Ã°Å¸Å’â„¢ Modern Tech: 96% ATS
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“ˆ Executive: 97% ATS
+              Ã°Å¸â€œË† Executive: 97% ATS
             </div>
           </div>
         </header>
@@ -262,12 +262,12 @@ export default function Compare3Vs4() {
           border: '1px solid #e2e8f0'
         }}>
           <p style={{ fontSize: '1rem', color: '#1e293b', margin: 0 }}>
-            <strong>ðŸ’¡ Quick Career Guide:</strong> 
+            <strong>Ã°Å¸â€™Â¡ Quick Career Guide:</strong> 
             <span style={{ display: 'inline-block', marginLeft: '12px' }}>
-              ðŸ–¥ï¸ <strong>Software Developers & UX Designers</strong> â†’ Template 3 (Modern Tech)
+              Ã°Å¸â€“Â¥Ã¯Â¸Â <strong>Software Developers & UX Designers</strong> Ã¢â€ â€™ Template 3 (Modern Tech)
             </span>
             <span style={{ display: 'inline-block', marginLeft: '12px' }}>
-              ðŸ“Š <strong>Project Managers & Executives</strong> â†’ Template 4 (Executive Timeline)
+              Ã°Å¸â€œÅ  <strong>Project Managers & Executives</strong> Ã¢â€ â€™ Template 4 (Executive Timeline)
             </span>
           </p>
         </div>
@@ -301,10 +301,10 @@ export default function Compare3Vs4() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸ–¥ï¸ MODERN TECH
+              Ã°Å¸â€“Â¥Ã¯Â¸Â MODERN TECH
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸŒ™</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸Å’â„¢</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: 'white' }}>
                 {templates[3].name}
                 <span style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 'normal', marginLeft: '8px' }}>(Template 3)</span>
@@ -314,7 +314,7 @@ export default function Compare3Vs4() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template3Sections.map(section => (
@@ -327,7 +327,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].features.map(feature => (
@@ -340,7 +340,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].bestFor.map(role => (
@@ -353,7 +353,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ðŸ“Š Content Limits
+                Ã°Å¸â€œÅ  Content Limits
               </h3>
               <div style={{ background: 'rgba(255,255,255,0.1)', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -387,7 +387,7 @@ export default function Compare3Vs4() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 3 â†’
+              View Template 3 Ã¢â€ â€™
             </Link>
           </div>
 
@@ -412,10 +412,10 @@ export default function Compare3Vs4() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸ“ˆ EXECUTIVE TIMELINE
+              Ã°Å¸â€œË† EXECUTIVE TIMELINE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ“Š</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸â€œÅ </div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[4].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 4)</span>
@@ -425,7 +425,7 @@ export default function Compare3Vs4() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template4Sections.map(section => (
@@ -438,7 +438,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[4].features.map(feature => (
@@ -451,7 +451,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[4].bestFor.map(role => (
@@ -464,7 +464,7 @@ export default function Compare3Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“Š Content Limits
+                Ã°Å¸â€œÅ  Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -498,7 +498,7 @@ export default function Compare3Vs4() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 4 â†’
+              View Template 4 Ã¢â€ â€™
             </Link>
           </div>
         </div>
@@ -506,7 +506,7 @@ export default function Compare3Vs4() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Feature Comparison: Modern Tech vs Executive Timeline
+            Ã°Å¸â€œÅ  Feature Comparison: Modern Tech vs Executive Timeline
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -537,18 +537,18 @@ export default function Compare3Vs4() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Timeline Visualization</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Square Markers</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Square Markers</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Certifications Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Dedicated Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Dedicated Section</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Density Scaling</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -567,8 +567,8 @@ export default function Compare3Vs4() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Print Friendly</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âš ï¸ Good (uses more ink)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Excellent</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å¡Â Ã¯Â¸Â Good (uses more ink)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Excellent</td>
                 </tr>
                 <tr style={{ background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Ideal Career Level</td>
@@ -588,12 +588,12 @@ export default function Compare3Vs4() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸŽ¯ Choose Based on Your Role
+            Ã°Å¸Å½Â¯ Choose Based on Your Role
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ–¥ï¸</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€“Â¥Ã¯Â¸Â</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 3 (Modern Tech) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Software Developer / Engineer</li>
@@ -606,12 +606,12 @@ export default function Compare3Vs4() {
                 <li>Startup Professionals</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ’¡ Why:</strong> Dark theme shows tech sophistication; certifications section highlights technical credentials.
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¡ Why:</strong> Dark theme shows tech sophistication; certifications section highlights technical credentials.
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ“Š</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€œÅ </div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 4 (Executive Timeline) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Project / Program Manager</li>
@@ -624,7 +624,7 @@ export default function Compare3Vs4() {
                 <li>Corporate Leadership Roles</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ’¡ Why:</strong> Timeline markers visualize career progression; clean layout appeals to corporate recruiters.
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¡ Why:</strong> Timeline markers visualize career progression; clean layout appeals to corporate recruiters.
               </div>
             </div>
           </div>
@@ -633,26 +633,26 @@ export default function Compare3Vs4() {
         {/* Career Level Guide */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“ˆ Career Level Recommendation
+            Ã°Å¸â€œË† Career Level Recommendation
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>Entry to Mid-Level</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ–¥ï¸</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€“Â¥Ã¯Â¸Â</div>
               <p><strong>Template 3 (Modern Tech)</strong></p>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Perfect for individual contributors and professionals looking to stand out with modern design</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>Senior to Executive</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ“ˆ</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€œË†</div>
               <p><strong>Template 4 (Executive Timeline)</strong></p>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Ideal for leaders who need to showcase career progression and strategic achievements</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>Both Work For</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ¤</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Â¤Â</div>
               <p><strong>Mid-Level Professionals</strong></p>
-              <p style={{ fontSize: '0.9rem', color: '#475569' }}>Choose based on industry: Tech â†’ Template 3, Corporate â†’ Template 4</p>
+              <p style={{ fontSize: '0.9rem', color: '#475569' }}>Choose based on industry: Tech Ã¢â€ â€™ Template 3, Corporate Ã¢â€ â€™ Template 4</p>
             </div>
           </div>
         </div>
@@ -660,17 +660,17 @@ export default function Compare3Vs4() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            âš–ï¸ Pros & Cons Analysis
+            Ã¢Å¡â€“Ã¯Â¸Â Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 3 (Modern Tech) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 3 (Modern Tech) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 3 (Modern Tech) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 3 (Modern Tech) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -678,13 +678,13 @@ export default function Compare3Vs4() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 4 (Executive Timeline) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 4 (Executive Timeline) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[4].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 4 (Executive Timeline) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 4 (Executive Timeline) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[4].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -697,11 +697,11 @@ export default function Compare3Vs4() {
         {/* Industry Success Rates */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Industry Success Rates (2026 Data)
+            Ã°Å¸â€œÅ  Industry Success Rates (2026 Data)
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ’»</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€™Â»</div>
               <strong>Tech & Software</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 3: 23% higher interview rate<br />
@@ -709,7 +709,7 @@ export default function Compare3Vs4() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ“Š</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€œÅ </div>
               <strong>Project Management</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 4: 28% higher success rate<br />
@@ -717,7 +717,7 @@ export default function Compare3Vs4() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸŽ¨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
               <strong>Creative & Design</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 3: 35% higher response rate<br />
@@ -730,7 +730,7 @@ export default function Compare3Vs4() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            â“ Frequently Asked Questions
+            Ã¢Ââ€œ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -783,7 +783,7 @@ export default function Compare3Vs4() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            ðŸ” Explore More Template Comparisons
+            Ã°Å¸â€Â Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

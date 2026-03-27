@@ -1,4 +1,4 @@
-// pages/blog/ats-resume-tips-2026.js
+﻿// pages/blog/ats-resume-tips-2026.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -157,9 +157,9 @@ export default function ATSResumeTips2026() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>ATS Resume Tips 2026</span>
         </div>
 
@@ -355,7 +355,7 @@ export default function ATSResumeTips2026() {
               borderLeft: '4px solid #0070f3'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>ðŸ“Š Key Statistic:</strong> According to industry research, <strong>75% of qualified resumes</strong> are rejected by ATS 
+                <strong>Ã°Å¸â€œÅ  Key Statistic:</strong> According to industry research, <strong>75% of qualified resumes</strong> are rejected by ATS 
                 before ever reaching a human recruiter. Proper optimization can dramatically improve your chances.
               </p>
             </div>
@@ -387,11 +387,11 @@ export default function ATSResumeTips2026() {
                 padding: '25px',
                 border: '1px solid #a5d6a7'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#2e7d32' }}>âœ“ Recommended</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#2e7d32' }}>Ã¢Å“â€œ Recommended</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li>Standard fonts (Arial, Calibri, Times New Roman)</li>
                   <li>Save as DOCX (safest for ATS)</li>
-                  <li>Simple bullet points (â€¢ or -)</li>
+                  <li>Simple bullet points (Ã¢â‚¬Â¢ or -)</li>
                   <li>0.5-1 inch margins</li>
                   <li>Left-aligned text</li>
                   <li>Single-column layout</li>
@@ -404,7 +404,7 @@ export default function ATSResumeTips2026() {
                 padding: '25px',
                 border: '1px solid #ef9a9a'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>âœ— Avoid</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>Ã¢Å“â€” Avoid</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li>Tables or columns</li>
                   <li>Text in headers or footers</li>
@@ -425,7 +425,7 @@ export default function ATSResumeTips2026() {
               border: '1px solid #bbdef5'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>ðŸ’¡ Pro Tip:</strong> Save your resume as DOCX if the job posting doesn't specify a format. DOCX files are 
+                <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> Save your resume as DOCX if the job posting doesn't specify a format. DOCX files are 
                 generally more compatible with older ATS systems than PDFs.
               </p>
             </div>
@@ -469,7 +469,7 @@ export default function ATSResumeTips2026() {
               border: '1px solid #bbdefb'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>ðŸ“ Example:</strong> If a job description mentions "experience with JavaScript, React, and Node.js," 
+                <strong>Ã°Å¸â€œÂ Example:</strong> If a job description mentions "experience with JavaScript, React, and Node.js," 
                 include these exact terms in your skills section and work experience bullets.
               </p>
             </div>
@@ -497,7 +497,7 @@ export default function ATSResumeTips2026() {
               margin: '20px 0'
             }}>
               <div style={{ background: '#e8f5e9', padding: '20px', borderRadius: '12px' }}>
-                <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#2e7d32' }}>âœ“ Recommended Headings:</h3>
+                <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#2e7d32' }}>Ã¢Å“â€œ Recommended Headings:</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li>Work Experience</li>
                   <li>Professional Experience</li>
@@ -509,7 +509,7 @@ export default function ATSResumeTips2026() {
                 </ul>
               </div>
               <div style={{ background: '#ffebee', padding: '20px', borderRadius: '12px' }}>
-                <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#c62828' }}>âœ— Headings to Avoid:</h3>
+                <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#c62828' }}>Ã¢Å“â€” Headings to Avoid:</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li>Where I've Worked</li>
                   <li>My Journey</li>
@@ -651,7 +651,7 @@ export default function ATSResumeTips2026() {
             margin: '50px 0',
             border: '1px solid #e9ecef'
           }}>
-            <h3 style={{ fontSize: '24px', marginBottom: '20px', color: '#333' }}>ðŸ“Œ Key Takeaways</h3>
+            <h3 style={{ fontSize: '24px', marginBottom: '20px', color: '#333' }}>Ã°Å¸â€œÅ’ Key Takeaways</h3>
             <div style={{ display: 'grid', gap: '12px' }}>
               {[
                 'Use simple, clean formatting without tables or graphics',
@@ -663,7 +663,7 @@ export default function ATSResumeTips2026() {
                 'Avoid common mistakes like submitting images or using complex formatting'
               ].map((item, index) => (
                 <div key={index} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
+                  <span style={{ color: '#0070f3', fontSize: '18px' }}>Ã¢Å“â€œ</span>
                   <span>{item}</span>
                 </div>
               ))}
@@ -677,7 +677,7 @@ export default function ATSResumeTips2026() {
               margin: '0 0 20px 0',
               color: '#333'
             }}>
-              â“ Frequently Asked Questions About ATS
+              Ã¢Ââ€œ Frequently Asked Questions About ATS
             </h2>
             
             <div style={{
@@ -728,7 +728,7 @@ export default function ATSResumeTips2026() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Download ATS Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Get a printable checklist of all ATS optimization tips. Use it to review your resume before submitting applications.
@@ -777,10 +777,10 @@ export default function ATSResumeTips2026() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('ATS Resume Tips for 2026: Complete Guide to Beat Applicant Tracking Systems')}&url=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('ATS Resume Tips for 2026')}&body=${encodeURIComponent('Check out this comprehensive guide: https://freeresumemaker.xyz/blog/ats-resume-tips-2026')}` }
+              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('ATS Resume Tips for 2026: Complete Guide to Beat Applicant Tracking Systems')}&url=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
+              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
+              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ats-resume-tips-2026` },
+              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('ATS Resume Tips for 2026')}&body=${encodeURIComponent('Check out this comprehensive guide: https://freeresumemaker.xyz/blog/ats-resume-tips-2026')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -867,7 +867,7 @@ export default function ATSResumeTips2026() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -953,7 +953,7 @@ export default function ATSResumeTips2026() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: March 24, 2026 | Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: March 24, 2026 | Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

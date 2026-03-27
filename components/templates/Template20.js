@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template20.js
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER - FIXED HOOK ORDER
 // TEMPLATE 20 - SOFTWARE ENGINEERING FOCUSED
@@ -27,18 +27,18 @@ const CONTENT_LIMITS = Object.freeze({
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: 'âœ‰',
-  phone: 'ðŸ“ž',
+  email: 'Ã¢Å“â€°',
+  phone: 'Ã°Å¸â€œÅ¾',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: 'âŒ¨',
-  portfolio: 'ðŸŒ',
-  location: 'ðŸ“',
-  calendar: 'ðŸ“…',
-  bullet: 'â€”',
-  dot: 'â€¢',
-  triangle: 'â–¹',
-  award: 'ðŸ†',
-  default: 'ðŸ“Œ'
+  github: 'Ã¢Å’Â¨',
+  portfolio: 'Ã°Å¸Å’Â',
+  location: 'Ã°Å¸â€œÂ',
+  calendar: 'Ã°Å¸â€œâ€¦',
+  bullet: 'Ã¢â‚¬â€',
+  dot: 'Ã¢â‚¬Â¢',
+  triangle: 'Ã¢â€“Â¹',
+  award: 'Ã°Å¸Ââ€ ',
+  default: 'Ã°Å¸â€œÅ’'
 });
 
 // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -302,7 +302,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} â€“ ${endDate}`;
+    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
   },
 
   formatBulletPoints: (points, charLimit = null) => {
@@ -330,17 +330,17 @@ const TemplateHelpers = Object.freeze({
   },
 
   icons: Object.freeze({
-    location: 'ðŸ“',
-    bullet: 'â€”',
-    dot: 'â€¢',
-    triangle: 'â–¹',
-    email: 'âœ‰',
-    phone: 'ðŸ“ž',
-    linkedin: 'ðŸ”—',
-    github: 'âŒ¨',
-    portfolio: 'ðŸŒ',
-    calendar: 'ðŸ“…',
-    award: 'ðŸ†'
+    location: 'Ã°Å¸â€œÂ',
+    bullet: 'Ã¢â‚¬â€',
+    dot: 'Ã¢â‚¬Â¢',
+    triangle: 'Ã¢â€“Â¹',
+    email: 'Ã¢Å“â€°',
+    phone: 'Ã°Å¸â€œÅ¾',
+    linkedin: 'Ã°Å¸â€â€”',
+    github: 'Ã¢Å’Â¨',
+    portfolio: 'Ã°Å¸Å’Â',
+    calendar: 'Ã°Å¸â€œâ€¦',
+    award: 'Ã°Å¸Ââ€ '
   })
 });
 
@@ -851,7 +851,7 @@ const Template20 = ({
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                {processedData.skills.join(' â€¢ ')}
+                {processedData.skills.join(' Ã¢â‚¬Â¢ ')}
               </div>
             </div>
           </section>

@@ -1,4 +1,4 @@
-// components/DownloadCounter.js
+﻿// components/DownloadCounter.js
 import { useState, useEffect } from 'react';
 
 export default function DownloadCounter() {

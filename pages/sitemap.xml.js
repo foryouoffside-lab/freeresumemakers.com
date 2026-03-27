@@ -1,4 +1,4 @@
-// pages/sitemap.xml.js
+﻿// pages/sitemap.xml.js
 const EXTERNAL_DATA_URL = 'https://freeresumemaker.xyz';
 
 function generateSiteMap() {

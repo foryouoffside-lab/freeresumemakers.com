@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Privacy Policy</span>
         </nav>
 
@@ -498,7 +498,7 @@ export default function PrivacyPolicy() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                Contact Form →
+                Contact Form â†’
               </Link>
             </div>
           </div>

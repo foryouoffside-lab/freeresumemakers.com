@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/forms/Experience.js
 // STABLE VERSION - Fixed infinite save loop
 // ============================================
@@ -940,7 +940,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                 margin: '0 0 12px 0',
                 fontWeight: 600
               }}>
-                👔 Job Role Templates
+                📄‘” Job Role Templates
               </h4>
               <div style={{
                 display: 'grid',
@@ -984,7 +984,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                 margin: '0 0 12px 0',
                 fontWeight: 600
               }}>
-                🏆 Achievement Categories
+                📄† Achievement Categories
               </h4>
               <div style={{
                 display: 'grid',
@@ -1031,7 +1031,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                 transition: 'all 0.2s'
               }}
             >
-              ⚡ Generate 4 Achievements
+              âš¡ Generate 4 Achievements
               {(selectedRole || selectedCategory) && (
                 <span style={{
                   background: 'rgba(255,255,255,0.2)',
@@ -1192,7 +1192,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                         <InfoIcon tooltip="Use the STAR method: Situation, Task, Action, Result. Include metrics and numbers." />
                       </div>
                       <small style={{ fontSize: '12px', color: '#718096' }}>
-                        {newAchievementCount}/{MAX_ACHIEVEMENTS} added • Max {MAX_CHARS} characters each
+                        {newAchievementCount}/{MAX_ACHIEVEMENTS} added â€¢ Max {MAX_CHARS} characters each
                       </small>
                     </div>
                     
@@ -1202,7 +1202,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                         gap: '8px',
                         marginBottom: '12px'
                       }}>
-                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>•</span>
+                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>â€¢</span>
                         <div style={{ flex: 1 }}>
                           <textarea
                             value={bullet}
@@ -1301,7 +1301,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                 border: '1px solid #fed7aa',
                 textAlign: 'center'
               }}>
-                <div style={{ fontSize: '32px', marginBottom: '12px' }}>⚠️</div>
+                <div style={{ fontSize: '32px', marginBottom: '12px' }}>âš ï¸</div>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#c05621', marginBottom: '8px' }}>
                   Limit Reached
                 </h4>
@@ -1335,7 +1335,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>📋</span>
+                  <span>📄‹</span>
                   Your Experience
                 </h3>
                 <div style={{
@@ -1357,7 +1357,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>💼</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📄’¼</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No experience entries yet
                   </p>
@@ -1411,7 +1411,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   padding: '4px 8px',
                                   borderRadius: '20px'
                                 }}>
-                                  🟢 Current
+                                  📄Ÿ¢ Current
                                 </span>
                               )}
                             </div>
@@ -1447,7 +1447,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                               padding: '4px 8px',
                               borderRadius: '20px'
                             }}>
-                              📅 {formatDate(exp.startDate)} - {exp.current ? 'Present' : formatDate(exp.endDate)}
+                              📄… {formatDate(exp.startDate)} - {exp.current ? 'Present' : formatDate(exp.endDate)}
                             </span>
                             {exp.location && (
                               <span style={{
@@ -1457,7 +1457,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                                 padding: '4px 8px',
                                 borderRadius: '20px'
                               }}>
-                                📍 {exp.location}
+                                📄 {exp.location}
                               </span>
                             )}
                           </div>
@@ -1498,7 +1498,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   cursor: 'pointer'
                                 }}
                               >
-                                ⚡ Generate
+                                âš¡ Generate
                               </button>
                             </div>
                           </div>
@@ -1525,7 +1525,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   cursor: 'pointer'
                                 }}
                               >
-                                ⚡ Generate Achievements
+                                âš¡ Generate Achievements
                               </button>
                             </div>
                           ) : (
@@ -1536,7 +1536,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   gap: '8px',
                                   marginBottom: '10px'
                                 }}>
-                                  <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>•</span>
+                                  <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>â€¢</span>
                                   <div style={{ flex: 1 }}>
                                     <textarea
                                       value={bullet || ''}

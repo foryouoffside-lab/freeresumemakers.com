@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/editor/Preview.js
 // UPI PAYMENT - KEEP PAY VIA UPI BUTTON FOR ALL
 // REMOVED DOWNLOAD COUNTER
@@ -164,7 +164,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
       
       setTimeout(() => setDownloadStatus(''), 3000);
     } catch (error) {
-      console.error('❌ PDF generation error:', error);
+      console.error('âŒ PDF generation error:', error);
       setDownloadStatus('Error generating PDF. Please try again.');
       setTimeout(() => setDownloadStatus(''), 3000);
     } finally {
@@ -382,7 +382,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               color: '#6c757d',
               margin: '8px 0 0 0'
             }}>
-              Template {displayTemplateId} • Real-time preview • A4 format
+              Template {displayTemplateId} â€¢ Real-time preview â€¢ A4 format
             </p>
           </div>
         </div>
@@ -413,7 +413,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
           </div>
           <div style={{ textAlign: 'center' }}>
             <span style={{ display: 'block', fontSize: '24px', fontWeight: 700, color: '#8b5cf6' }}>
-              {state.personalInfo?.fullName ? '✓' : '○'}
+              {state.personalInfo?.fullName ? 'âœ“' : 'â—‹'}
             </span>
             <span style={{ fontSize: fontSizes.small, color: '#6c757d' }}>Content Ready</span>
           </div>
@@ -448,7 +448,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               alignItems: 'center',
               gap: '8px'
             }}>
-              <span>👁️</span>
+              <span>📄‘ï¸</span>
               Interactive Preview
             </h2>
             
@@ -476,7 +476,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                     border: '1px solid #e2e8f0'
                   }}
                 >
-                  −
+                  âˆ’
                 </button>
                 <span style={{ minWidth: '60px', textAlign: 'center', fontSize: fontSizes.small }}>
                   {Math.round(previewScale * 100)}%
@@ -509,7 +509,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                     border: '1px solid #e2e8f0'
                   }}
                 >
-                  ↺
+                  â†º
                 </button>
               </div>
 
@@ -536,7 +536,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 onMouseEnter={() => setHoveredBtn('download')}
                 onMouseLeave={() => setHoveredBtn(null)}
               >
-                {isGenerating ? '⏳ Generating...' : '📄 Download PDF'}
+                {isGenerating ? 'â³ Generating...' : '📄 Download PDF'}
               </button>
             </div>
           </div>
@@ -571,7 +571,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               fontSize: fontSizes.small,
               animation: 'slideIn 0.3s ease-out'
             }}>
-              ✨ Thank you for downloading! Please share your experience below ✨
+              âœ¨ Thank you for downloading! Please share your experience below âœ¨
             </div>
           )}
 
@@ -619,7 +619,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                   zIndex: 10,
                   whiteSpace: 'nowrap'
                 }}>
-                  👆 Drag to move • Ctrl+Scroll to zoom
+                  📄‘† Drag to move â€¢ Ctrl+Scroll to zoom
                 </div>
               )}
               <div
@@ -664,7 +664,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
             paddingBottom: '16px',
             borderBottom: '1px solid #e2e8f0'
           }}>
-            <span style={{ fontSize: '28px' }}>💝</span>
+            <span style={{ fontSize: '28px' }}>📄’</span>
             <div>
               <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 600, color: '#0f172a' }}>
                 Support My Work
@@ -702,7 +702,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <span>❤️</span>
+                <span>â¤ï¸</span>
                 Support via UPI
               </button>
             </div>
@@ -774,12 +774,12 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                       fontWeight: 500
                     }}
                   >
-                    {copied ? '✓ Copied!' : 'Copy'}
+                    {copied ? 'âœ“ Copied!' : 'Copy'}
                   </button>
                 </div>
               </div>
 
-              {/* 📱 Pay via UPI App Button - KEPT FOR ALL USERS */}
+              {/* 📄± Pay via UPI App Button - KEPT FOR ALL USERS */}
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '16px' }}>
                 <button
                   onClick={handleUPIPayment}
@@ -806,7 +806,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  <span>📱</span>
+                  <span>📄±</span>
                   Pay via UPI App
                 </button>
               </div>
@@ -821,8 +821,8 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                   marginBottom: '16px'
                 }}>
                   <p style={{ margin: 0, fontSize: '13px', color: '#92400e' }}>
-                    💡 On desktop: Click "Pay via UPI App" to see QR code<br />
-                    📱 Or scan the QR code with your phone
+                    📄’¡ On desktop: Click "Pay via UPI App" to see QR code<br />
+                    📄± Or scan the QR code with your phone
                   </p>
                 </div>
               )}
@@ -861,12 +861,12 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               padding: '40px 20px',
               animation: 'fadeIn 0.5s ease'
             }}>
-              <div style={{ fontSize: '64px', marginBottom: '16px' }}>🎉</div>
+              <div style={{ fontSize: '64px', marginBottom: '16px' }}>📄Ž‰</div>
               <h4 style={{ margin: '0 0 8px 0', fontSize: '20px', fontWeight: 600, color: '#10b981' }}>
                 Thank you so much!
               </h4>
               <p style={{ color: '#64748b', marginBottom: '0' }}>
-                Your support means the world to me. 🙏
+                Your support means the world to me. 📄™
               </p>
             </div>
           )}
@@ -905,7 +905,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                   cursor: currentStep === 0 ? 'not-allowed' : 'pointer'
                 }}
               >
-                ← Previous
+                â† Previous
               </button>
             )}
             {onNext && (
@@ -922,7 +922,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                   cursor: 'pointer'
                 }}
               >
-                {currentStep === totalSteps - 1 ? 'Finish' : 'Next'} →
+                {currentStep === totalSteps - 1 ? 'Finish' : 'Next'} â†’
               </button>
             )}
           </div>

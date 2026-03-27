@@ -1,4 +1,4 @@
-// pages/api/create-order.js
+﻿// pages/api/create-order.js
 import Razorpay from 'razorpay';
 
 // Initialize Razorpay with environment variables
@@ -10,7 +10,7 @@ const razorpay = new Razorpay({
 // Valid currencies supported by Razorpay
 const VALID_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'SGD', 'AED'];
 const MIN_AMOUNT = 1; // Minimum support amount in INR
-const MAX_AMOUNT = 10000; // Maximum support amount in INR (â‚¹10,000)
+const MAX_AMOUNT = 10000; // Maximum support amount in INR (Ã¢â€šÂ¹10,000)
 const SUPPORTED_PAYMENT_METHODS = ['card', 'netbanking', 'upi', 'wallet'];
 
 export default async function handler(req, res) {
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     if (!amount || typeof amount !== 'number' || amount < MIN_AMOUNT || amount > MAX_AMOUNT) {
       return res.status(400).json({
         error: 'Invalid amount',
-        message: `Amount must be between â‚¹${MIN_AMOUNT} and â‚¹${MAX_AMOUNT}`,
+        message: `Amount must be between Ã¢â€šÂ¹${MIN_AMOUNT} and Ã¢â€šÂ¹${MAX_AMOUNT}`,
         minAmount: MIN_AMOUNT,
         maxAmount: MAX_AMOUNT
       });

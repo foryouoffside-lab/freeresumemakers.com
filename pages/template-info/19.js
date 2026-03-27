@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+﻿import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '../../components/SEO';
@@ -248,11 +248,11 @@ export default function TemplateInfoPage() {
               <span><strong>{sectionCount}</strong> Sections</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '24px' }}>✅</span>
+              <span style={{ fontSize: '24px' }}>âœ…</span>
               <span><strong>ATS-Friendly</strong> Design</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '24px' }}>⭐</span>
+              <span style={{ fontSize: '24px' }}>â­</span>
               <span><strong>4.8/5</strong> Rating (1,250+ reviews)</span>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function TemplateInfoPage() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {benefits.map((benefit, index) => (
                 <li key={index} style={{ marginBottom: '12px', paddingLeft: '28px', position: 'relative' }}>
-                  <span style={{ position: 'absolute', left: 0, color: '#0070f3', fontSize: '18px' }}>✓</span>
+                  <span style={{ position: 'absolute', left: 0, color: '#0070f3', fontSize: '18px' }}>âœ“</span>
                   {benefit}
                 </li>
               ))}
@@ -370,7 +370,7 @@ export default function TemplateInfoPage() {
               fontSize: '1rem' 
             }}
           >
-            Start Building Your Resume →
+            Start Building Your Resume â†’
           </Link>
           <p style={{ marginTop: '20px', fontSize: '0.85rem', opacity: 0.8 }}>
             <Link href="/templates/" style={{ color: 'white', textDecoration: 'underline' }}>

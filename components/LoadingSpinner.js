@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // src/components/common/LoadingSpinner.js
 // VERSATILE LOADING SPINNER WITH INLINE STYLES
 // ============================================

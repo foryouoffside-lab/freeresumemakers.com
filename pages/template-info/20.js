@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+﻿import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '../../components/SEO';
@@ -183,11 +183,11 @@ export default function TemplateInfoPage() {
         <section style={{ marginBottom: '40px', backgroundColor: '#f8f9fa', padding: '24px', borderRadius: '12px' }}>
           <h2 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Why Choose {templateName}?</h2>
           <ul style={{ paddingLeft: '20px' }}>
-            <li style={{ marginBottom: '12px' }}>✓ ATS-optimized formatting that passes automated screening systems</li>
-            <li style={{ marginBottom: '12px' }}>✓ Professional design trusted by recruiters and hiring managers</li>
-            <li style={{ marginBottom: '12px' }}>✓ Easy to customize and fill out in minutes</li>
-            <li style={{ marginBottom: '12px' }}>✓ Download as PDF or DOCX format</li>
-            <li style={{ marginBottom: '12px' }}>✓ 100% free with no hidden costs</li>
+            <li style={{ marginBottom: '12px' }}>âœ“ ATS-optimized formatting that passes automated screening systems</li>
+            <li style={{ marginBottom: '12px' }}>âœ“ Professional design trusted by recruiters and hiring managers</li>
+            <li style={{ marginBottom: '12px' }}>âœ“ Easy to customize and fill out in minutes</li>
+            <li style={{ marginBottom: '12px' }}>âœ“ Download as PDF or DOCX format</li>
+            <li style={{ marginBottom: '12px' }}>âœ“ 100% free with no hidden costs</li>
           </ul>
         </section>
         
@@ -241,7 +241,7 @@ export default function TemplateInfoPage() {
               fontSize: '1rem'
             }}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
           <p style={{ marginTop: '20px', fontSize: '0.9rem' }}>
             <Link href="/templates/" style={{ color: 'white', textDecoration: 'underline' }}>

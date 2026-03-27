@@ -1,4 +1,4 @@
-import SEO from '../../../components/SEO';
+﻿import SEO from '../../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -162,13 +162,13 @@ export default function BySectionSkills() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates/by-section/skills" style={{ color: '#666', textDecoration: 'none' }}>Skills Section</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedTemplate.name}</span>
           </nav>
 
@@ -199,7 +199,7 @@ export default function BySectionSkills() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Skills Section Templates
+            â† Back to All Skills Section Templates
           </button>
 
           {/* Template Header */}
@@ -382,7 +382,7 @@ export default function BySectionSkills() {
                   gap: '8px',
                   padding: '8px 0'
                 }}>
-                  <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
+                  <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
                   <span style={{ color: '#666' }}>{feature}</span>
                 </div>
               ))}
@@ -430,7 +430,7 @@ export default function BySectionSkills() {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Use This Template →
+              Use This Template â†’
             </Link>
           </div>
         </div>
@@ -477,11 +477,11 @@ export default function BySectionSkills() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Skills Section</span>
         </nav>
 
@@ -533,7 +533,7 @@ export default function BySectionSkills() {
             <div style={{ fontSize: '14px', color: '#666' }}>Skills-Focused Templates</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Technical • Soft • Business</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Technical â€¢ Soft â€¢ Business</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Multiple Skill Categories</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -723,7 +723,7 @@ export default function BySectionSkills() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Template Details →
+                  View Template Details â†’
                 </span>
               </div>
             </div>
@@ -807,7 +807,7 @@ export default function BySectionSkills() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now →
+            Start Building Now â†’
           </Link>
         </div>
 
@@ -824,10 +824,10 @@ export default function BySectionSkills() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-list-skills-on-resume" style={{ color: '#0070f3' }}>How to List Skills on Your Resume →</Link>
-            <Link href="/blog/technical-skills-for-resume" style={{ color: '#0070f3' }}>Top Technical Skills for Resume →</Link>
-            <Link href="/templates/by-section/experience" style={{ color: '#0070f3' }}>Templates with Experience Section →</Link>
-            <Link href="/blog/ats-keyword-optimization" style={{ color: '#0070f3' }}>ATS Keyword Optimization Guide →</Link>
+            <Link href="/blog/how-to-list-skills-on-resume" style={{ color: '#0070f3' }}>How to List Skills on Your Resume â†’</Link>
+            <Link href="/blog/technical-skills-for-resume" style={{ color: '#0070f3' }}>Top Technical Skills for Resume â†’</Link>
+            <Link href="/templates/by-section/experience" style={{ color: '#0070f3' }}>Templates with Experience Section â†’</Link>
+            <Link href="/blog/ats-keyword-optimization" style={{ color: '#0070f3' }}>ATS Keyword Optimization Guide â†’</Link>
           </div>
         </div>
       </div>

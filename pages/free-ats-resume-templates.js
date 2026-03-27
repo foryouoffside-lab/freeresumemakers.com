@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -157,7 +157,7 @@ export default function FreeATSResumeTemplates() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Free ATS Resume Templates</span>
         </nav>
 
@@ -387,7 +387,7 @@ export default function FreeATSResumeTemplates() {
                     textDecoration: 'none'
                   }}
                 >
-                  View All Templates â†’
+                  View All Templates Ã¢â€ â€™
                 </Link>
               </div>
             ))}
@@ -478,7 +478,7 @@ export default function FreeATSResumeTemplates() {
                 textDecoration: 'none'
               }}
             >
-              Read Complete ATS Guide â†’
+              Read Complete ATS Guide Ã¢â€ â€™
             </Link>
           </div>
         </div>
@@ -575,7 +575,7 @@ export default function FreeATSResumeTemplates() {
                   textDecoration: 'none'
                 }}
               >
-                {industry.linkText} â†’
+                {industry.linkText} Ã¢â€ â€™
               </Link>
             </div>
           ))}
@@ -624,7 +624,7 @@ export default function FreeATSResumeTemplates() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Browse All Templates â†’
+            Browse All Templates Ã¢â€ â€™
           </Link>
         </div>
 
@@ -636,7 +636,7 @@ export default function FreeATSResumeTemplates() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
           <div style={{ marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/templates" style={{ color: '#999', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

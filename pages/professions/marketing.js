@@ -1,4 +1,4 @@
-// pages/professions/marketing.js
+﻿// pages/professions/marketing.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -286,11 +286,11 @@ export default function MarketingExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/professions/marketing" style={{ color: '#666', textDecoration: 'none' }}>Marketing Resumes</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -321,7 +321,7 @@ export default function MarketingExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Marketing Resume Examples
+            Ã¢â€ Â Back to All Marketing Resume Examples
           </button>
 
           {/* Template Header */}
@@ -696,9 +696,9 @@ export default function MarketingExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Marketing Resumes</span>
         </nav>
 
@@ -765,11 +765,11 @@ export default function MarketingExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Digital â€¢ Content</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Digital Ã¢â‚¬Â¢ Content</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Specializations</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>ROAS â€¢ SEO â€¢ Traffic</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>ROAS Ã¢â‚¬Â¢ SEO Ã¢â‚¬Â¢ Traffic</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Quantifiable Metrics</div>
           </div>
         </div>
@@ -908,7 +908,7 @@ export default function MarketingExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume â†’
+                  View Complete Resume Ã¢â€ â€™
                 </span>
               </div>
             </div>
@@ -992,7 +992,7 @@ export default function MarketingExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now â†’
+            Create Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 

@@ -1,4 +1,4 @@
-// pages/templates/compare/9-vs-10.js
+﻿// pages/templates/compare/9-vs-10.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -185,11 +185,11 @@ export default function CompareTemplate9vs10() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Modernist vs The Essential</span>
         </div>
 
@@ -251,11 +251,11 @@ export default function CompareTemplate9vs10() {
                 }
               }}
             >
-              {tab === 'overview' && 'ðŸ“‹ Overview'}
-              {tab === 'features' && 'âš¡ Features'}
-              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
-              {tab === 'industry' && 'ðŸ¢ Career Stage Fit'}
-              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
+              {tab === 'overview' && 'Ã°Å¸â€œâ€¹ Overview'}
+              {tab === 'features' && 'Ã¢Å¡Â¡ Features'}
+              {tab === 'visual' && 'Ã°Å¸Å½Â¨ Visual Comparison'}
+              {tab === 'industry' && 'Ã°Å¸ÂÂ¢ Career Stage Fit'}
+              {tab === 'verdict' && 'Ã¢Å¡â€“Ã¯Â¸Â Final Verdict'}
             </button>
           ))}
         </div>
@@ -317,7 +317,7 @@ export default function CompareTemplate9vs10() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 3rem; margin-bottom: 10px;">ðŸ“„</div>
+                          <div style="font-size: 3rem; margin-bottom: 10px;">Ã°Å¸â€œâ€ž</div>
                           <div style="font-weight: bold; font-size: 1.2rem;">The Modernist</div>
                           <div style="font-size: 0.9rem; margin-top: 5px;">Template Preview</div>
                         </div>
@@ -414,7 +414,7 @@ export default function CompareTemplate9vs10() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 3rem; margin-bottom: 10px;">ðŸ“„</div>
+                          <div style="font-size: 3rem; margin-bottom: 10px;">Ã°Å¸â€œâ€ž</div>
                           <div style="font-weight: bold; font-size: 1.2rem;">The Essential</div>
                           <div style="font-size: 0.9rem; margin-top: 5px;">Template Preview</div>
                         </div>
@@ -566,27 +566,27 @@ export default function CompareTemplate9vs10() {
                 <tbody>
                   {[
                     { feature: 'Layout Style', t1: 'Two-column with equal spacing', t2: 'One-column focused layout' },
-                    { feature: 'Experience Entries', t1: 'âœ“ Multiple (up to 3)', t2: 'âœ“ Single, detailed focus' },
-                    { feature: 'Project Showcase', t1: 'âœ— No dedicated section', t2: 'âœ“ Yes, included' },
+                    { feature: 'Experience Entries', t1: 'Ã¢Å“â€œ Multiple (up to 3)', t2: 'Ã¢Å“â€œ Single, detailed focus' },
+                    { feature: 'Project Showcase', t1: 'Ã¢Å“â€” No dedicated section', t2: 'Ã¢Å“â€œ Yes, included' },
                     { feature: 'Skills Display', t1: 'Grid layout (8 skills)', t2: 'Grid layout (6 skills)' },
-                    { feature: 'Education Emphasis', t1: 'Standard education section', t2: 'âœ“ Enhanced for students' },
-                    { feature: 'Internship Highlighting', t1: 'Standard experience', t2: 'âœ“ Internship optimized' },
-                    { feature: 'Entry-Level Focus', t1: 'âœ— General purpose', t2: 'âœ“ Yes, specialized' },
-                    { feature: 'Equal Spacing Design', t1: 'âœ“ Yes, signature feature', t2: 'âœ— No' },
-                    { feature: 'Modern Typography', t1: 'âœ“ Yes', t2: 'âœ“ Yes' },
-                    { feature: 'Languages Section', t1: 'âœ“ Yes (3 max)', t2: 'âœ“ Yes (2 max)' },
+                    { feature: 'Education Emphasis', t1: 'Standard education section', t2: 'Ã¢Å“â€œ Enhanced for students' },
+                    { feature: 'Internship Highlighting', t1: 'Standard experience', t2: 'Ã¢Å“â€œ Internship optimized' },
+                    { feature: 'Entry-Level Focus', t1: 'Ã¢Å“â€” General purpose', t2: 'Ã¢Å“â€œ Yes, specialized' },
+                    { feature: 'Equal Spacing Design', t1: 'Ã¢Å“â€œ Yes, signature feature', t2: 'Ã¢Å“â€” No' },
+                    { feature: 'Modern Typography', t1: 'Ã¢Å“â€œ Yes', t2: 'Ã¢Å“â€œ Yes' },
+                    { feature: 'Languages Section', t1: 'Ã¢Å“â€œ Yes (3 max)', t2: 'Ã¢Å“â€œ Yes (2 max)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 9 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('âœ“') ? (
+                        {row.t1.includes('Ã¢Å“â€œ') ? (
                           <span style={{ color: '#0f766e', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('âœ“') ? (
+                        {row.t2.includes('Ã¢Å“â€œ') ? (
                           <span style={{ color: '#0284c7', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -607,7 +607,7 @@ export default function CompareTemplate9vs10() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0f766e', marginBottom: '15px' }}>
-                  âœ… The Modernist - Pros
+                  Ã¢Å“â€¦ The Modernist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template9.pros.map((item, index) => (
@@ -615,7 +615,7 @@ export default function CompareTemplate9vs10() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0f766e', marginTop: '25px', marginBottom: '15px' }}>
-                  âš ï¸ The Modernist - Cons
+                  Ã¢Å¡Â Ã¯Â¸Â The Modernist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template9.cons.map((item, index) => (
@@ -625,7 +625,7 @@ export default function CompareTemplate9vs10() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0284c7', marginBottom: '15px' }}>
-                  âœ… The Essential - Pros
+                  Ã¢Å“â€¦ The Essential - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template10.pros.map((item, index) => (
@@ -633,7 +633,7 @@ export default function CompareTemplate9vs10() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0284c7', marginTop: '25px', marginBottom: '15px' }}>
-                  âš ï¸ The Essential - Cons
+                  Ã¢Å¡Â Ã¯Â¸Â The Essential - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template10.cons.map((item, index) => (
@@ -701,7 +701,7 @@ export default function CompareTemplate9vs10() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 4rem; margin-bottom: 15px;">ðŸ“„</div>
+                          <div style="font-size: 4rem; margin-bottom: 15px;">Ã°Å¸â€œâ€ž</div>
                           <div style="font-weight: bold; font-size: 1.5rem;">The Modernist</div>
                           <div style="margin-top: 10px;">Template Preview</div>
                         </div>
@@ -711,7 +711,7 @@ export default function CompareTemplate9vs10() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/9" style={{ color: '#0f766e', textDecoration: 'underline' }}>
-                      View Full Details â†’
+                      View Full Details Ã¢â€ â€™
                     </Link>
                   </div>
                 </div>
@@ -757,7 +757,7 @@ export default function CompareTemplate9vs10() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 4rem; margin-bottom: 15px;">ðŸ“„</div>
+                          <div style="font-size: 4rem; margin-bottom: 15px;">Ã°Å¸â€œâ€ž</div>
                           <div style="font-weight: bold; font-size: 1.5rem;">The Essential</div>
                           <div style="margin-top: 10px;">Template Preview</div>
                         </div>
@@ -767,7 +767,7 @@ export default function CompareTemplate9vs10() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/10" style={{ color: '#0284c7', textDecoration: 'underline' }}>
-                      View Full Details â†’
+                      View Full Details Ã¢â€ â€™
                     </Link>
                   </div>
                 </div>
@@ -953,7 +953,7 @@ export default function CompareTemplate9vs10() {
                 padding: '30px',
                 border: '1px solid #99f6e4'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸŽ¯</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸Å½Â¯</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0f766e', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Modernist
                 </h3>
@@ -983,7 +983,7 @@ export default function CompareTemplate9vs10() {
                 padding: '30px',
                 border: '1px solid #bae6fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸŒ±</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸Å’Â±</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0284c7', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Essential
                 </h3>
@@ -1016,7 +1016,7 @@ export default function CompareTemplate9vs10() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                ðŸ’¡ Career Growth Tip
+                Ã°Å¸â€™Â¡ Career Growth Tip
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Your resume needs evolve with your career. Start with The Essential as a student or intern, then transition to The Modernist as you gain experience. Both templates are free, so you can update your resume as you grow professionally!
@@ -1135,7 +1135,7 @@ export default function CompareTemplate9vs10() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

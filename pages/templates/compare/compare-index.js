@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 
 export default function CompareIndex() {
@@ -149,9 +149,9 @@ export default function CompareIndex() {
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
           <span style={{ color: '#1e293b', fontWeight: '500' }}>Comparisons</span>
         </nav>
 
@@ -184,13 +184,13 @@ export default function CompareIndex() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“Š 11+ Expert Comparisons
+              Ã°Å¸â€œÅ  11+ Expert Comparisons
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              â­ ATS Scores Included
+              Ã¢Â­Â ATS Scores Included
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸŽ¯ Industry Recommendations
+              Ã°Å¸Å½Â¯ Industry Recommendations
             </div>
           </div>
         </header>
@@ -243,7 +243,7 @@ export default function CompareIndex() {
           marginBottom: '40px',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'white' }}>â­ Most Popular Comparisons</h2>
+          <h2 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'white' }}>Ã¢Â­Â Most Popular Comparisons</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
             {comparisons.filter(c => c.popular).map(item => (
               <Link 
@@ -341,12 +341,12 @@ export default function CompareIndex() {
                         )}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                           <div style={{ fontSize: '1.8rem' }}>
-                            {category.includes('Professional') ? 'ðŸ’¼' : 
-                             category.includes('Modern') ? 'ðŸŒ™' : 
-                             category.includes('Tech') ? 'ðŸ’»' : 
-                             category.includes('Minimalist') ? 'âœ¨' : 
-                             category.includes('Academic') ? 'ðŸ“š' : 
-                             category.includes('Creative') ? 'ðŸŽ¨' : 'ðŸ“Š'}
+                            {category.includes('Professional') ? 'Ã°Å¸â€™Â¼' : 
+                             category.includes('Modern') ? 'Ã°Å¸Å’â„¢' : 
+                             category.includes('Tech') ? 'Ã°Å¸â€™Â»' : 
+                             category.includes('Minimalist') ? 'Ã¢Å“Â¨' : 
+                             category.includes('Academic') ? 'Ã°Å¸â€œÅ¡' : 
+                             category.includes('Creative') ? 'Ã°Å¸Å½Â¨' : 'Ã°Å¸â€œÅ '}
                           </div>
                           <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#0f172a' }}>{item.title}</h3>
                         </div>
@@ -368,11 +368,11 @@ export default function CompareIndex() {
                             fontSize: '0.7rem',
                             fontWeight: '500'
                           }}>
-                            ðŸŽ¯ {item.bestFor}
+                            Ã°Å¸Å½Â¯ {item.bestFor}
                           </span>
                         </div>
                         <div style={{ marginTop: '16px', color: '#667eea', fontSize: '0.85rem', fontWeight: '500' }}>
-                          Compare now â†’
+                          Compare now Ã¢â€ â€™
                         </div>
                       </div>
                     </Link>
@@ -392,26 +392,26 @@ export default function CompareIndex() {
           marginBottom: '48px'
         }}>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '20px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“‹ How to Choose the Right Template
+            Ã°Å¸â€œâ€¹ How to Choose the Right Template
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>1ï¸âƒ£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>1Ã¯Â¸ÂÃ¢Æ’Â£</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Consider Your Industry</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Creative fields need modern designs; corporate roles prefer traditional layouts</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>2ï¸âƒ£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>2Ã¯Â¸ÂÃ¢Æ’Â£</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Check ATS Compatibility</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Higher ATS scores (95%+) ensure your resume passes automated screening</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>3ï¸âƒ£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>3Ã¯Â¸ÂÃ¢Æ’Â£</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Match Your Experience Level</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Entry-level vs executive templates have different section focuses</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>4ï¸âƒ£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>4Ã¯Â¸ÂÃ¢Æ’Â£</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Compare Side by Side</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Use our detailed comparisons to see features, sections, and limits</p>
             </div>
@@ -421,7 +421,7 @@ export default function CompareIndex() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '48px' }}>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            â“ Frequently Asked Questions
+            Ã¢Ââ€œ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <details style={{ background: 'white', padding: '16px 20px', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
@@ -442,7 +442,7 @@ export default function CompareIndex() {
         {/* Related Resources */}
         <div>
           <h2 style={{ fontSize: '1.4rem', marginBottom: '20px', color: '#0f172a' }}>
-            ðŸ” More Resources
+            Ã°Å¸â€Â More Resources
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             <Link href="/templates" style={{ padding: '10px 20px', background: 'white', borderRadius: '10px', textDecoration: 'none', color: '#1e293b', fontSize: '0.875rem', border: '1px solid #e2e8f0' }}>

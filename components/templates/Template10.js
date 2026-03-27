@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, memo } from 'react';
+﻿import React, { useRef, useMemo, memo } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== ULTRA-OPTIMIZED TEMPLATE 10 =====
@@ -9,13 +9,13 @@ import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T10_ICON_MAPPING = Object.freeze({
-  email: 'âœ‰ï¸',
-  phone: 'ðŸ“±',
-  location: 'ðŸ“',
+  email: 'Ã¢Å“â€°Ã¯Â¸Â',
+  phone: 'Ã°Å¸â€œÂ±',
+  location: 'Ã°Å¸â€œÂ',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'âŒ¨ï¸',
-  website: 'ðŸŒ',
-  default: 'ðŸ“Œ'
+  github: 'Ã¢Å’Â¨Ã¯Â¸Â',
+  website: 'Ã°Å¸Å’Â',
+  default: 'Ã°Å¸â€œÅ’'
 });
 
 // ===== CONTENT LIMITS =====
@@ -277,7 +277,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
     if (!s && !e) return '';
     if (!s) return e;
     if (!e) return s;
-    return `${s} â€“ ${e}`;
+    return `${s} Ã¢â‚¬â€œ ${e}`;
   };
 
   // ===== DATA PROCESSING WITH LIMITS =====
@@ -920,7 +920,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
               <div style={styles.skillsList}>
                 {data.skills.map((skill, i) => (
                   <div key={i} style={styles.skillItem}>
-                    <span style={styles.skillBullet}>â–¹</span>
+                    <span style={styles.skillBullet}>Ã¢â€“Â¹</span>
                     <span style={styles.skillName}>{skill}</span>
                   </div>
                 ))}
@@ -940,7 +940,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
                   {/* Location with icon */}
                   {edu.location && (
                     <div style={styles.eduLocation}>
-                      <span>ðŸ“</span> {edu.location}
+                      <span>Ã°Å¸â€œÂ</span> {edu.location}
                     </div>
                   )}
                   
@@ -965,7 +965,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
                   {edu.achievements.length > 0 && (
                     <div style={styles.eduAchievements}>
                       {edu.achievements.map((achievement, j) => (
-                        <span key={j} style={styles.eduAchievement}>âœ“ {achievement}</span>
+                        <span key={j} style={styles.eduAchievement}>Ã¢Å“â€œ {achievement}</span>
                       ))}
                     </div>
                   )}
@@ -1005,7 +1005,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
                   
                   {exp.location && (
                     <div style={styles.expLocation}>
-                      <span>ðŸ“</span> {exp.location}
+                      <span>Ã°Å¸â€œÂ</span> {exp.location}
                     </div>
                   )}
                   
@@ -1014,7 +1014,7 @@ const Template10 = ({ isExporting = false, ...props }) => {
                     <ul style={styles.expPoints}>
                       {exp.points.map((point, j) => (
                         <li key={j} style={styles.expPoint}>
-                          <span style={styles.bulletPoint}>â–¹</span>
+                          <span style={styles.bulletPoint}>Ã¢â€“Â¹</span>
                           <span>{point}</span>
                         </li>
                       ))}

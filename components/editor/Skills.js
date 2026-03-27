@@ -1,4 +1,4 @@
-// client/src/components/forms/Skills.js
+﻿// client/src/components/forms/Skills.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 
@@ -142,7 +142,7 @@ const normalizeSkills = (data) => {
 const skillCategories = {
   technical: { 
     label: 'Technical', 
-    icon: '💻',
+    icon: '📄’»',
     color: '#8e44ad',
     description: 'Programming languages, frameworks, tools, and technical competencies',
     skills: ['JavaScript', 'React', 'Node.js', 'Python', 'Java', 'HTML/CSS', 
@@ -153,7 +153,7 @@ const skillCategories = {
   },
   soft: { 
     label: 'Soft Skills', 
-    icon: '🤝',
+    icon: '📄¤',
     color: '#27ae60',
     description: 'Interpersonal, communication, and personal attributes',
     skills: ['Communication', 'Leadership', 'Problem Solving', 'Teamwork', 
@@ -164,7 +164,7 @@ const skillCategories = {
   },
   business: { 
     label: 'Business', 
-    icon: '📊',
+    icon: '📄Š',
     color: '#f39c12',
     description: 'Business strategy, management, analytics, and professional services',
     skills: ['Project Management', 'Strategic Planning', 'Data Analysis', 
@@ -175,7 +175,7 @@ const skillCategories = {
   },
   creative: { 
     label: 'Creative', 
-    icon: '🎨',
+    icon: '📄Ž¨',
     color: '#e74c3c',
     description: 'Design, content creation, multimedia, and artistic skills',
     skills: ['UI/UX Design', 'Graphic Design', 'Content Writing', 'Video Editing', 
@@ -777,7 +777,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
               
               {limitInfo.canAdd && (
                 <div style={{ fontSize: '12px', color: '#718096', marginTop: '10px' }}>
-                  💡 Press Enter to quickly add skills. Be specific - use "React" instead of "Frontend Development".
+                  📄’¡ Press Enter to quickly add skills. Be specific - use "React" instead of "Frontend Development".
                 </div>
               )}
             </div>
@@ -832,7 +832,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>📌</span>
+                  <span>📄Œ</span>
                   Your Skills
                 </h2>
                 <div style={{
@@ -854,7 +854,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📋</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📄‹</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No skills added yet
                   </p>
@@ -883,7 +883,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flex: 1 }}>
-                        <span style={{ fontSize: '12px', color: '#48bb78' }}>⚡</span>
+                        <span style={{ fontSize: '12px', color: '#48bb78' }}>âš¡</span>
                         <span style={{ fontSize: '13px', fontWeight: 500, color: '#2d3748', wordBreak: 'break-word' }}>
                           {skill}
                         </span>
@@ -906,7 +906,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                           }}
                           aria-label={`Edit ${skill}`}
                         >
-                          ✏️
+                          âœï¸
                         </button>
                         <button
                           onClick={() => handleRemoveSkill(index)}
@@ -925,7 +925,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                           }}
                           aria-label={`Remove ${skill}`}
                         >
-                          ×
+                          Ã—
                         </button>
                       </div>
                     </div>
@@ -986,7 +986,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>⭐</span>
+                <span>â­</span>
                 Popular {skillCategories[selectedCategory]?.label} Skills
               </h2>
               <p style={{
@@ -994,7 +994,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add quickly • These keywords are frequently searched by recruiters
+                Click to add quickly â€¢ These keywords are frequently searched by recruiters
               </p>
               
               <div style={{
@@ -1027,7 +1027,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                       title={!canAdd && !isAdded ? `Max ${maxSkillsLimit} skills reached` : ""}
                     >
                       {skill}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>✓</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>âœ“</span>}
                     </button>
                   );
                 })}
@@ -1043,7 +1043,7 @@ const Skills = ({ onDataChange, data, templateId, navigationButtons }) => {
                   color: '#c05621',
                   textAlign: 'center'
                 }}>
-                  ⚠️ Maximum {maxSkillsLimit} skills reached. Remove existing skills to add more.
+                  âš ï¸ Maximum {maxSkillsLimit} skills reached. Remove existing skills to add more.
                 </div>
               )}
             </div>

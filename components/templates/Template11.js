@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useEffect, useState, useCallback } from 'react';
+﻿import React, { useRef, useMemo, useEffect, useState, useCallback } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== DEBUG MODE =====
@@ -288,9 +288,9 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
     const endDate = formatDate(exp.endDate);
     
     if (startDate && endDate) {
-      return `${startDate} â€“ ${endDate}`;
+      return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
     } else if (startDate) {
-      return `${startDate} â€“ Present`;
+      return `${startDate} Ã¢â‚¬â€œ Present`;
     } else if (endDate) {
       return endDate;
     }
@@ -324,12 +324,12 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
       if (value) contacts.push({ value: safeString(value), icon });
     };
 
-    addContact(personalInfo.email, 'âœ‰');
-    addContact(personalInfo.phone, 'â˜');
-    addContact(personalInfo.address, 'ðŸ“');
-    addContact(personalInfo.linkedin, 'ðŸ”—');
-    addContact(personalInfo.website, 'ðŸŒ');
-    addContact(personalInfo.github, 'âš¡');
+    addContact(personalInfo.email, 'Ã¢Å“â€°');
+    addContact(personalInfo.phone, 'Ã¢ËœÂ');
+    addContact(personalInfo.address, 'Ã°Å¸â€œÂ');
+    addContact(personalInfo.linkedin, 'Ã°Å¸â€â€”');
+    addContact(personalInfo.website, 'Ã°Å¸Å’Â');
+    addContact(personalInfo.github, 'Ã¢Å¡Â¡');
 
     return contacts;
   }, [personalInfo, safeString]);
@@ -813,7 +813,7 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
             
             {location && (
               <div style={{...styles.expLocation, ...styles.textWrapFix}}>
-                <span style={styles.locationIcon}>ðŸ“</span> {location}
+                <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span> {location}
               </div>
             )}
           </div>
@@ -870,7 +870,7 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
             
             {location && (
               <div style={{...styles.eduLocation, ...styles.textWrapFix}}>
-                <span style={styles.locationIcon}>ðŸ“</span> {location}
+                <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span> {location}
               </div>
             )}
           </div>

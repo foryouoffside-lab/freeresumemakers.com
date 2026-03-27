@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/editor/GuidedForm.js
 // UPDATED: Added onDownloadComplete prop and passes it to Preview
 // ============================================
@@ -69,19 +69,19 @@ const SectionHeader = ({ currentSection, currentStep, totalSteps, onSave, isSavi
 
   const getSectionIcon = (section) => {
     const icons = {
-      personalInfo: 'ðŸ‘¤',
-      imageSection: 'ðŸ“¸',
-      summary: 'ðŸ“',
-      experience: 'ðŸ’¼',
-      education: 'ðŸŽ“',
-      skills: 'âš¡',
-      projects: 'ðŸš€',
-      internships: 'ðŸŒŸ',
-      certifications: 'ðŸ“œ',
-      awards: 'ðŸ†',
-      preview: 'ðŸ‘ï¸'
+      personalInfo: 'Ã°Å¸â€˜Â¤',
+      imageSection: 'Ã°Å¸â€œÂ¸',
+      summary: 'Ã°Å¸â€œÂ',
+      experience: 'Ã°Å¸â€™Â¼',
+      education: 'Ã°Å¸Å½â€œ',
+      skills: 'Ã¢Å¡Â¡',
+      projects: 'Ã°Å¸Å¡â‚¬',
+      internships: 'Ã°Å¸Å’Å¸',
+      certifications: 'Ã°Å¸â€œÅ“',
+      awards: 'Ã°Å¸Ââ€ ',
+      preview: 'Ã°Å¸â€˜ÂÃ¯Â¸Â'
     };
-    return icons[section] || 'ðŸ“‹';
+    return icons[section] || 'Ã°Å¸â€œâ€¹';
   };
 
   const getSectionDescription = (section) => {
@@ -178,7 +178,7 @@ const SectionHeader = ({ currentSection, currentStep, totalSteps, onSave, isSavi
           </>
         ) : (
           <>
-            <span>ðŸ’¾</span>
+            <span>Ã°Å¸â€™Â¾</span>
             Save Progress
           </>
         )}
@@ -252,7 +252,7 @@ const NavigationButtons = ({
           minWidth: '120px'
         }}
       >
-        <span style={{ fontSize: '18px' }}>â†</span>
+        <span style={{ fontSize: '18px' }}>Ã¢â€ Â</span>
         Back
       </button>
       
@@ -282,7 +282,7 @@ const NavigationButtons = ({
           opacity: isSaving ? 0.7 : 1
         }}
       >
-        <span style={{ fontSize: '18px' }}>ðŸ‘ï¸</span>
+        <span style={{ fontSize: '18px' }}>Ã°Å¸â€˜ÂÃ¯Â¸Â</span>
         Preview Resume
       </button>
       
@@ -313,7 +313,7 @@ const NavigationButtons = ({
         }}
       >
         {isLastSection ? 'Finish' : 'Continue'}
-        <span style={{ fontSize: '18px' }}>â†’</span>
+        <span style={{ fontSize: '18px' }}>Ã¢â€ â€™</span>
       </button>
     </div>
   );
@@ -329,7 +329,7 @@ const GuidedForm = ({
   onPreview,
   isInfoSection = false,
   onChangeTemplate,
-  onDownloadComplete  // â† ADD THIS PROP
+  onDownloadComplete  // Ã¢â€ Â ADD THIS PROP
 }) => {
   const { state, updateTemplateSection, forceSaveNow, isSaving, debug } = useResume();
   const [canProceed, setCanProceed] = useState(true);
@@ -428,7 +428,7 @@ const GuidedForm = ({
   const renderSectionComponent = () => {
     const data = getSectionData();
     
-    // âœ… CRITICAL FIX: Preview section receives onDownloadComplete
+    // Ã¢Å“â€¦ CRITICAL FIX: Preview section receives onDownloadComplete
     if (currentSection === 'preview') {
       
       return (
@@ -436,7 +436,7 @@ const GuidedForm = ({
           <Preview 
             templateId={templateId}
             isInline={true}
-            onDownloadComplete={onDownloadComplete}  // â† PASS THE CALLBACK HERE
+            onDownloadComplete={onDownloadComplete}  // Ã¢â€ Â PASS THE CALLBACK HERE
           />
         </div>
       );
@@ -481,7 +481,7 @@ const GuidedForm = ({
           borderRadius: '12px',
           border: '2px dashed #e9ecef'
         }}>
-          <span style={{ fontSize: '48px', display: 'block', marginBottom: '16px' }}>ðŸ“‹</span>
+          <span style={{ fontSize: '48px', display: 'block', marginBottom: '16px' }}>Ã°Å¸â€œâ€¹</span>
           <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '8px', color: '#333' }}>
             Section: {currentSection}
           </h3>

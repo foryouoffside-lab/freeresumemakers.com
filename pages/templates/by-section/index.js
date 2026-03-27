@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import Head from 'next/head';
 
@@ -141,9 +141,9 @@ export default function BySectionIndex() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Browse by Section</span>
         </nav>
 
@@ -291,7 +291,7 @@ export default function BySectionIndex() {
                     alignItems: 'center',
                     gap: '4px'
                   }}>
-                    View Templates →
+                    View Templates â†’
                   </span>
                 </div>
               </div>
@@ -438,7 +438,7 @@ export default function BySectionIndex() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now →
+            Start Building Now â†’
           </Link>
         </div>
 
@@ -455,10 +455,10 @@ export default function BySectionIndex() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-choose-resume-sections" style={{ color: '#0070f3' }}>How to Choose Resume Sections →</Link>
-            <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3' }}>Resume Formatting Guide →</Link>
-            <Link href="/templates" style={{ color: '#0070f3' }}>All Resume Templates →</Link>
-            <Link href="/examples" style={{ color: '#0070f3' }}>Resume Examples by Industry →</Link>
+            <Link href="/blog/how-to-choose-resume-sections" style={{ color: '#0070f3' }}>How to Choose Resume Sections â†’</Link>
+            <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3' }}>Resume Formatting Guide â†’</Link>
+            <Link href="/templates" style={{ color: '#0070f3' }}>All Resume Templates â†’</Link>
+            <Link href="/examples" style={{ color: '#0070f3' }}>Resume Examples by Industry â†’</Link>
           </div>
         </div>
       </div>

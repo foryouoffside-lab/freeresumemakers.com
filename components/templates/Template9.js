@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template9.js
 // UPDATED: LinkedIn "in" icon with blue color optimization
 // - Shows ONLY username (not full linkedin.com/in/username)
@@ -36,12 +36,12 @@ import { useResume } from '../../context/ResumeContext';
 // ICON MAPPING - Using Template1 style with LinkedIn blue color
 // ============================================================================
 const ICON_MAPPING = Object.freeze({
-  email: { icon: 'âœ‰', color: '#666666' },
-  phone: { icon: 'â˜Ž', color: '#666666' },
-  location: { icon: 'ðŸ“', color: '#666666' },
+  email: { icon: 'Ã¢Å“â€°', color: '#666666' },
+  phone: { icon: 'Ã¢ËœÅ½', color: '#666666' },
+  location: { icon: 'Ã°Å¸â€œÂ', color: '#666666' },
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color
-  github: { icon: 'ðŸ™', color: '#333333' },
-  website: { icon: 'ðŸŒ', color: '#666666' }
+  github: { icon: 'Ã°Å¸Ââ„¢', color: '#333333' },
+  website: { icon: 'Ã°Å¸Å’Â', color: '#666666' }
 });
 
 // ============================================================================
@@ -79,7 +79,7 @@ const Template9Helpers = Object.freeze({
     if (!s && !e) return '';
     if (!s) return e;
     if (!e) return s;
-    return `${s} â€“ ${e}`;
+    return `${s} Ã¢â‚¬â€œ ${e}`;
   },
   
   // Smart truncation preserving word boundaries
@@ -257,7 +257,7 @@ const Template9Helpers = Object.freeze({
   
   // Get contact icon with color
   getContactIcon: (type) => {
-    const iconConfig = ICON_MAPPING[type] || { icon: 'â€¢', color: '#666666' };
+    const iconConfig = ICON_MAPPING[type] || { icon: 'Ã¢â‚¬Â¢', color: '#666666' };
     return iconConfig.icon;
   },
   
@@ -1038,7 +1038,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
     return (
       <div style={styles.skillsContainer}>
         <p style={styles.skillsText}>
-          {data.skillList.join(' â€¢ ')}
+          {data.skillList.join(' Ã¢â‚¬Â¢ ')}
         </p>
       </div>
     );
@@ -1064,7 +1064,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
         )}
         {exp.location && (
           <span style={styles.expLocation}>
-            <span style={styles.locationIcon} aria-hidden="true">ðŸ“</span>
+            <span style={styles.locationIcon} aria-hidden="true">Ã°Å¸â€œÂ</span>
             <span>{exp.location}</span>
           </span>
         )}
@@ -1074,7 +1074,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
         <ul style={styles.expBullets}>
           {exp.achievements.map((bullet, i) => (
             <li key={i} style={styles.expBullet} itemProp="description">
-              <span style={styles.bulletIcon} aria-hidden="true">â€¢</span>
+              <span style={styles.bulletIcon} aria-hidden="true">Ã¢â‚¬Â¢</span>
               <span style={styles.bulletText}>{bullet}</span>
             </li>
           ))}
@@ -1111,7 +1111,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
         )}
         {edu.location && (
           <span style={styles.eduLocation}>
-            <span style={styles.locationIcon} aria-hidden="true">ðŸ“</span>
+            <span style={styles.locationIcon} aria-hidden="true">Ã°Å¸â€œÂ</span>
             <span>{edu.location}</span>
           </span>
         )}
@@ -1136,7 +1136,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
         <ul style={styles.eduBullets}>
           {edu.achievements.map((achievement, i) => (
             <li key={i} style={styles.eduBullet}>
-              <span style={styles.bulletIcon} aria-hidden="true">â€¢</span>
+              <span style={styles.bulletIcon} aria-hidden="true">Ã¢â‚¬Â¢</span>
               <span style={styles.bulletText}>{achievement}</span>
             </li>
           ))}
@@ -1152,7 +1152,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
           <div style={styles.certSingleLine}>
             <div style={styles.certTitleIssuer}>
               <span style={styles.certName}>{cert.name}</span>
-              <span style={{ color: colors.textMuted, margin: '0 2px' }}>â€¢</span>
+              <span style={{ color: colors.textMuted, margin: '0 2px' }}>Ã¢â‚¬Â¢</span>
               <span style={styles.certIssuer}>{cert.issuer}</span>
             </div>
             <span style={styles.certDate}>{cert.date}</span>
@@ -1186,7 +1186,7 @@ const Template9 = ({ isExporting = false, ...props }) => {
             <span style={styles.awardName}>{award.title}</span>
             {award.issuer && (
               <>
-                <span style={{ color: colors.textMuted, margin: '0 2px' }}>â€¢</span>
+                <span style={{ color: colors.textMuted, margin: '0 2px' }}>Ã¢â‚¬Â¢</span>
                 <span style={styles.awardIssuer}>{award.issuer}</span>
               </>
             )}

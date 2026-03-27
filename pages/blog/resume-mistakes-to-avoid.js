@@ -1,4 +1,4 @@
-// pages/blog/resume-mistakes-to-avoid.js
+﻿// pages/blog/resume-mistakes-to-avoid.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -289,9 +289,9 @@ export default function ResumeMistakesToAvoid() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Resume Mistakes to Avoid</span>
         </div>
 
@@ -502,7 +502,7 @@ export default function ResumeMistakesToAvoid() {
                   borderRadius: '8px',
                   border: '1px solid #e9ecef'
                 }}>
-                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
+                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>Ã¢Å“â€œ</span>
                   <span style={{ fontSize: '14px' }}>{item}</span>
                 </div>
               ))}
@@ -571,7 +571,7 @@ export default function ResumeMistakesToAvoid() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Review Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to review your resume for common mistakes before submitting applications.
@@ -676,10 +676,10 @@ export default function ResumeMistakesToAvoid() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('15 Resume Mistakes to Avoid in 2026')}&url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Resume Mistakes to Avoid')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid')}` }
+              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('15 Resume Mistakes to Avoid in 2026')}&url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Resume Mistakes to Avoid')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -761,7 +761,7 @@ export default function ResumeMistakesToAvoid() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -847,7 +847,7 @@ export default function ResumeMistakesToAvoid() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 20, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 20, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-// pages/professions/software-engineering.js
+﻿// pages/professions/software-engineering.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -303,11 +303,11 @@ export default function SoftwareEngineeringExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/professions/software-engineering" style={{ color: '#666', textDecoration: 'none' }}>Software Engineering Resumes</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -338,7 +338,7 @@ export default function SoftwareEngineeringExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Software Engineering Resume Examples
+            Ã¢â€ Â Back to All Software Engineering Resume Examples
           </button>
 
           {/* Template Header */}
@@ -682,9 +682,9 @@ export default function SoftwareEngineeringExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Software Engineering Resumes</span>
         </nav>
 
@@ -751,7 +751,7 @@ export default function SoftwareEngineeringExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>React â€¢ Node.js â€¢ AWS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>React Ã¢â‚¬Â¢ Node.js Ã¢â‚¬Â¢ AWS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Modern Tech Stack</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -894,7 +894,7 @@ export default function SoftwareEngineeringExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume â†’
+                  View Complete Resume Ã¢â€ â€™
                 </span>
               </div>
             </div>
@@ -978,7 +978,7 @@ export default function SoftwareEngineeringExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now â†’
+            Create Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 

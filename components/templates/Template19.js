@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template19.js
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER - OPTIMIZED
 // UPDATED: 
@@ -63,7 +63,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} â€“ ${endDate}`;
+    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
   },
 
   formatGPA: (gpa, scale) => {
@@ -275,22 +275,22 @@ const TemplateHelpers = Object.freeze({
   },
 
   icons: Object.freeze({
-    email: 'âœ‰',
-    phone: 'ðŸ“ž',
-    location: 'ðŸ“',
+    email: 'Ã¢Å“â€°',
+    phone: 'Ã°Å¸â€œÅ¾',
+    location: 'Ã°Å¸â€œÂ',
     linkedin: 'in',
-    github: 'âŒ¨',
-    portfolio: 'ðŸŒ',
-    calendar: 'ðŸ“…',
-    briefcase: 'ðŸ’¼',
-    project: 'âš¡',
-    education: 'ðŸŽ“',
-    internship: 'ðŸŒŸ',
-    certification: 'ðŸ“œ',
-    award: 'ðŸ†',
-    bullet: 'â€”',
-    dot: 'â€¢',
-    triangle: 'â–¹'
+    github: 'Ã¢Å’Â¨',
+    portfolio: 'Ã°Å¸Å’Â',
+    calendar: 'Ã°Å¸â€œâ€¦',
+    briefcase: 'Ã°Å¸â€™Â¼',
+    project: 'Ã¢Å¡Â¡',
+    education: 'Ã°Å¸Å½â€œ',
+    internship: 'Ã°Å¸Å’Å¸',
+    certification: 'Ã°Å¸â€œÅ“',
+    award: 'Ã°Å¸Ââ€ ',
+    bullet: 'Ã¢â‚¬â€',
+    dot: 'Ã¢â‚¬Â¢',
+    triangle: 'Ã¢â€“Â¹'
   })
 });
 

@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // src/components/common/Footer.js
 // UPDATED - Added FAQ link
 // ============================================
@@ -247,12 +247,12 @@ const Footer = () => {
 
   // Share buttons
   const shareButtons = [
-    { platform: 'whatsapp', icon: 'ðŸ“±', label: 'Share on WhatsApp' },
-    { platform: 'facebook', icon: 'ðŸ“˜', label: 'Share on Facebook' },
-    { platform: 'twitter', icon: 'ðŸ¦', label: 'Share on Twitter' },
-    { platform: 'linkedin', icon: 'ðŸ’¼', label: 'Share on LinkedIn' },
-    { platform: 'email', icon: 'ðŸ“§', label: 'Share via Email' },
-    { platform: 'copy', icon: 'ðŸ”—', label: 'Copy link' }
+    { platform: 'whatsapp', icon: 'Ã°Å¸â€œÂ±', label: 'Share on WhatsApp' },
+    { platform: 'facebook', icon: 'Ã°Å¸â€œËœ', label: 'Share on Facebook' },
+    { platform: 'twitter', icon: 'Ã°Å¸ÂÂ¦', label: 'Share on Twitter' },
+    { platform: 'linkedin', icon: 'Ã°Å¸â€™Â¼', label: 'Share on LinkedIn' },
+    { platform: 'email', icon: 'Ã°Å¸â€œÂ§', label: 'Share via Email' },
+    { platform: 'copy', icon: 'Ã°Å¸â€â€”', label: 'Copy link' }
   ];
 
   return (
@@ -347,7 +347,7 @@ const Footer = () => {
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                ðŸ“§ Contact Us
+                Ã°Å¸â€œÂ§ Contact Us
               </Link>
             </div>
           </div>
@@ -357,7 +357,7 @@ const Footer = () => {
         <div style={styles.bottomBar}>
           <div>
             <p style={styles.copyright}>
-              Â© {currentYear} Resume Builder. All rights reserved. | 20+ Templates
+              Ã‚Â© {currentYear} Resume Builder. All rights reserved. | 20+ Templates
             </p>
             {/* Legal Links */}
             <div style={styles.legalLinks}>
@@ -371,13 +371,13 @@ const Footer = () => {
                   >
                     {page.name}
                   </Link>
-                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>â€¢</span>}
+                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>Ã¢â‚¬Â¢</span>}
                 </React.Fragment>
               ))}
             </div>
           </div>
           <p style={styles.version}>
-            <span>Made with â¤ï¸ for job seekers</span>
+            <span>Made with Ã¢ÂÂ¤Ã¯Â¸Â for job seekers</span>
             <span>Version 2.0</span>
           </p>
         </div>

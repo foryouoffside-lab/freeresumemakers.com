@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+﻿import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '../../components/SEO';
@@ -152,7 +152,7 @@ export default function TemplateInfoPage() {
           <h1>Template Not Found</h1>
           <p>The template you're looking for doesn't exist or may have been moved.</p>
           <Link href="/templates/" style={{ display: 'inline-block', marginTop: '20px', padding: '12px 24px', backgroundColor: '#0070f3', color: 'white', textDecoration: 'none', borderRadius: '5px' }}>
-            Browse All Templates →
+            Browse All Templates â†’
           </Link>
         </div>
       </>
@@ -233,7 +233,7 @@ export default function TemplateInfoPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {benefits.map((benefit, index) => (
               <li key={index} style={{ marginBottom: '12px', paddingLeft: '24px', position: 'relative' }}>
-                <span style={{ position: 'absolute', left: 0, color: '#0070f3' }}>✓</span>
+                <span style={{ position: 'absolute', left: 0, color: '#0070f3' }}>âœ“</span>
                 {benefit}
               </li>
             ))}
@@ -303,7 +303,7 @@ export default function TemplateInfoPage() {
               fontWeight: 'bold'
             }}
           >
-            Start Building Your Resume →
+            Start Building Your Resume â†’
           </Link>
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
             Or <Link href="/templates/" style={{ color: '#0070f3' }}>browse all templates</Link> to find the perfect fit for your career

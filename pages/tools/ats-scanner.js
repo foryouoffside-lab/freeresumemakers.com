@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
@@ -27,27 +27,27 @@ export default function ATSScanner() {
       let suggestions = [];
       if (score < 50) {
         suggestions = [
-          'âŒ Add more keywords from the job description',
-          'âŒ Use standard section headings (Experience, Education, Skills)',
-          'âŒ Avoid tables, columns, and graphics',
-          'âŒ Include specific metrics and achievements',
-          'âŒ Match your skills to job requirements'
+          'Ã¢ÂÅ’ Add more keywords from the job description',
+          'Ã¢ÂÅ’ Use standard section headings (Experience, Education, Skills)',
+          'Ã¢ÂÅ’ Avoid tables, columns, and graphics',
+          'Ã¢ÂÅ’ Include specific metrics and achievements',
+          'Ã¢ÂÅ’ Match your skills to job requirements'
         ];
       } else if (score < 75) {
         suggestions = [
-          'âš ï¸ Add 5-10 more relevant keywords',
-          'âš ï¸ Quantify your achievements with numbers',
-          'âš ï¸ Include industry-specific terminology',
-          'âœ“ Good formatting overall',
-          'âœ“ Strong skills section'
+          'Ã¢Å¡Â Ã¯Â¸Â Add 5-10 more relevant keywords',
+          'Ã¢Å¡Â Ã¯Â¸Â Quantify your achievements with numbers',
+          'Ã¢Å¡Â Ã¯Â¸Â Include industry-specific terminology',
+          'Ã¢Å“â€œ Good formatting overall',
+          'Ã¢Å“â€œ Strong skills section'
         ];
       } else {
         suggestions = [
-          'âœ“ Excellent keyword optimization!',
-          'âœ“ Great use of industry terminology',
-          'âœ“ Strong formatting for ATS',
-          'ðŸ’¡ Consider adding more metrics and numbers',
-          'ðŸ’¡ Include a professional summary section'
+          'Ã¢Å“â€œ Excellent keyword optimization!',
+          'Ã¢Å“â€œ Great use of industry terminology',
+          'Ã¢Å“â€œ Strong formatting for ATS',
+          'Ã°Å¸â€™Â¡ Consider adding more metrics and numbers',
+          'Ã°Å¸â€™Â¡ Include a professional summary section'
         ];
       }
       
@@ -75,9 +75,9 @@ export default function ATSScanner() {
   };
 
   const getScoreEmoji = (score) => {
-    if (score >= 80) return 'ðŸŽ‰';
-    if (score >= 60) return 'ðŸ“ˆ';
-    return 'ðŸ“Š';
+    if (score >= 80) return 'Ã°Å¸Å½â€°';
+    if (score >= 60) return 'Ã°Å¸â€œË†';
+    return 'Ã°Å¸â€œÅ ';
   };
 
   // Generate structured data for FAQ
@@ -167,15 +167,15 @@ export default function ATSScanner() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/tools" style={{ color: '#666', textDecoration: 'none' }}>Tools</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>ATS Scanner</span>
         </nav>
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>ðŸ¤–</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>Ã°Å¸Â¤â€“</div>
           <h1 style={{
             fontSize: '42px',
             marginBottom: '16px',
@@ -280,7 +280,7 @@ export default function ATSScanner() {
               transition: 'background 0.2s'
             }}
           >
-            {analyzing ? 'Analyzing...' : 'ðŸ” Analyze Resume'}
+            {analyzing ? 'Analyzing...' : 'Ã°Å¸â€Â Analyze Resume'}
           </button>
           <button 
             onClick={clearForm}
@@ -336,17 +336,17 @@ export default function ATSScanner() {
               </div>
               {results.score >= 80 && (
                 <p style={{ marginTop: '12px', color: '#28a745', fontWeight: 'bold' }}>
-                  âœ“ Your resume is well-optimized! You have a strong chance of passing ATS screening.
+                  Ã¢Å“â€œ Your resume is well-optimized! You have a strong chance of passing ATS screening.
                 </p>
               )}
               {results.score >= 60 && results.score < 80 && (
                 <p style={{ marginTop: '12px', color: '#ffc107', fontWeight: 'bold' }}>
-                  âš ï¸ Good start! A few optimizations can significantly improve your ATS score.
+                  Ã¢Å¡Â Ã¯Â¸Â Good start! A few optimizations can significantly improve your ATS score.
                 </p>
               )}
               {results.score < 60 && (
                 <p style={{ marginTop: '12px', color: '#dc3545', fontWeight: 'bold' }}>
-                  âŒ Your resume needs optimization. Follow our suggestions below to improve your ATS score.
+                  Ã¢ÂÅ’ Your resume needs optimization. Follow our suggestions below to improve your ATS score.
                 </p>
               )}
             </div>
@@ -375,7 +375,7 @@ export default function ATSScanner() {
             {/* Matched Keywords */}
             <div style={{ marginBottom: '32px' }}>
               <h3 style={{ fontSize: '20px', marginBottom: '16px', color: '#333' }}>
-                âœ“ Keywords Found in Your Resume
+                Ã¢Å“â€œ Keywords Found in Your Resume
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 {results.matchedKeywords.map((kw, i) => (
@@ -399,7 +399,7 @@ export default function ATSScanner() {
             {/* Suggestions */}
             <div>
               <h3 style={{ fontSize: '20px', marginBottom: '16px', color: '#333' }}>
-                ðŸ’¡ Optimization Suggestions
+                Ã°Å¸â€™Â¡ Optimization Suggestions
               </h3>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {results.suggestions.map((tip, i) => (
@@ -443,12 +443,12 @@ export default function ATSScanner() {
             gap: '20px'
           }}>
             {[
-              { icon: 'ðŸ”‘', title: 'Use Exact Keywords', desc: 'Include exact keywords and phrases from the job description throughout your resume for maximum ATS compatibility.' },
-              { icon: 'ðŸ“', title: 'Standard Sections', desc: 'Use clear section headings like "Work Experience" and "Education" to ensure ATS can parse your resume correctly.' },
-              { icon: 'ðŸš«', title: 'Avoid Complex Formatting', desc: 'Skip tables, columns, graphics, and special characters that can confuse ATS software.' },
-              { icon: 'ðŸ“„', title: 'Use PDF Format', desc: 'Save and upload your resume as a PDF file to preserve formatting across different systems.' },
-              { icon: 'ðŸ“Š', title: 'Quantify Achievements', desc: 'Use numbers, percentages, and metrics to demonstrate your impact and stand out to recruiters.' },
-              { icon: 'ðŸŽ¯', title: 'Tailor Each Application', desc: 'Customize your resume for each job you apply to, matching skills and keywords from the job description.' }
+              { icon: 'Ã°Å¸â€â€˜', title: 'Use Exact Keywords', desc: 'Include exact keywords and phrases from the job description throughout your resume for maximum ATS compatibility.' },
+              { icon: 'Ã°Å¸â€œÂ', title: 'Standard Sections', desc: 'Use clear section headings like "Work Experience" and "Education" to ensure ATS can parse your resume correctly.' },
+              { icon: 'Ã°Å¸Å¡Â«', title: 'Avoid Complex Formatting', desc: 'Skip tables, columns, graphics, and special characters that can confuse ATS software.' },
+              { icon: 'Ã°Å¸â€œâ€ž', title: 'Use PDF Format', desc: 'Save and upload your resume as a PDF file to preserve formatting across different systems.' },
+              { icon: 'Ã°Å¸â€œÅ ', title: 'Quantify Achievements', desc: 'Use numbers, percentages, and metrics to demonstrate your impact and stand out to recruiters.' },
+              { icon: 'Ã°Å¸Å½Â¯', title: 'Tailor Each Application', desc: 'Customize your resume for each job you apply to, matching skills and keywords from the job description.' }
             ].map((tip, idx) => (
               <div key={idx} style={{ textAlign: 'center', padding: '20px', background: 'white', borderRadius: '12px' }}>
                 <div style={{ fontSize: '32px', marginBottom: '12px' }}>{tip.icon}</div>
@@ -513,11 +513,11 @@ export default function ATSScanner() {
         }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px' }}>More Free Resume Tools</h3>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none' }}>ðŸ” Keywords Finder</Link>
-            <span>â€¢</span>
-            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none' }}>âœ“ Resume Checker</Link>
-            <span>â€¢</span>
-            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none' }}>ðŸ“ Resume Review</Link>
+            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã°Å¸â€Â Keywords Finder</Link>
+            <span>Ã¢â‚¬Â¢</span>
+            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢Å“â€œ Resume Checker</Link>
+            <span>Ã¢â‚¬Â¢</span>
+            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã°Å¸â€œÂ Resume Review</Link>
           </div>
         </div>
 

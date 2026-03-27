@@ -1,4 +1,4 @@
-import SEO from '../../../components/SEO';
+﻿import SEO from '../../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -162,13 +162,13 @@ export default function BySectionProjects() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/templates/by-section/projects" style={{ color: '#666', textDecoration: 'none' }}>Projects Section</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedTemplate.name}</span>
           </nav>
 
@@ -199,7 +199,7 @@ export default function BySectionProjects() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Projects Section Templates
+            â† Back to All Projects Section Templates
           </button>
 
           {/* Template Header */}
@@ -386,7 +386,7 @@ export default function BySectionProjects() {
                   gap: '8px',
                   padding: '8px 0'
                 }}>
-                  <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
+                  <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
                   <span style={{ color: '#666' }}>{feature}</span>
                 </div>
               ))}
@@ -434,7 +434,7 @@ export default function BySectionProjects() {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Use This Template →
+              Use This Template â†’
             </Link>
           </div>
         </div>
@@ -481,11 +481,11 @@ export default function BySectionProjects() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Projects Section</span>
         </nav>
 
@@ -537,7 +537,7 @@ export default function BySectionProjects() {
             <div style={{ fontSize: '14px', color: '#666' }}>Project-Focused Templates</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Technical • Creative • Academic</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Technical â€¢ Creative â€¢ Academic</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Multiple Portfolio Formats</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -696,7 +696,7 @@ export default function BySectionProjects() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Template Details →
+                  View Template Details â†’
                 </span>
               </div>
             </div>
@@ -780,7 +780,7 @@ export default function BySectionProjects() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now →
+            Start Building Now â†’
           </Link>
         </div>
 
@@ -797,10 +797,10 @@ export default function BySectionProjects() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-list-projects-on-resume" style={{ color: '#0070f3' }}>How to List Projects on Your Resume →</Link>
-            <Link href="/blog/github-portfolio-for-developers" style={{ color: '#0070f3' }}>Creating a Developer Portfolio →</Link>
-            <Link href="/templates/by-section/skills" style={{ color: '#0070f3' }}>Templates with Skills Section →</Link>
-            <Link href="/blog/technical-resume-tips" style={{ color: '#0070f3' }}>Technical Resume Tips →</Link>
+            <Link href="/blog/how-to-list-projects-on-resume" style={{ color: '#0070f3' }}>How to List Projects on Your Resume â†’</Link>
+            <Link href="/blog/github-portfolio-for-developers" style={{ color: '#0070f3' }}>Creating a Developer Portfolio â†’</Link>
+            <Link href="/templates/by-section/skills" style={{ color: '#0070f3' }}>Templates with Skills Section â†’</Link>
+            <Link href="/blog/technical-resume-tips" style={{ color: '#0070f3' }}>Technical Resume Tips â†’</Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 
 export default function PaymentScanner({ onScan }) {
   const [showPayment, setShowPayment] = useState(false);
@@ -13,7 +13,7 @@ export default function PaymentScanner({ onScan }) {
 
   const handlePayment = () => {
     setPaid(true);
-    setMessage('Thank you for your support! You\'re awesome! ðŸŽ‰');
+    setMessage('Thank you for your support! You\'re awesome! Ã°Å¸Å½â€°');
     setTimeout(() => setMessage(''), 5000);
     onScan && onScan();
   };
@@ -74,7 +74,7 @@ export default function PaymentScanner({ onScan }) {
           </button>
           
           <p className="text-xs text-gray-400 text-center">
-            Your support helps keep this tool free for everyone â¤ï¸
+            Your support helps keep this tool free for everyone Ã¢ÂÂ¤Ã¯Â¸Â
           </p>
         </div>
       ) : (

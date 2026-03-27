@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -188,11 +188,11 @@ export default function Compare1Vs3() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 1 vs Template 3</li>
           </ol>
         </nav>
@@ -209,7 +209,7 @@ export default function Compare1Vs3() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              ðŸ”¥ PROFESSIONAL vs MODERN SHOWDOWN
+              Ã°Å¸â€Â¥ PROFESSIONAL vs MODERN SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -241,13 +241,13 @@ export default function Compare1Vs3() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“Š Updated: March 2026
+              Ã°Å¸â€œÅ  Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ’¼ Professional Style
+              Ã°Å¸â€™Â¼ Professional Style
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸš€ Modern Style
+              Ã°Å¸Å¡â‚¬ Modern Style
             </div>
           </div>
         </header>
@@ -280,10 +280,10 @@ export default function Compare1Vs3() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸ’¼ PROFESSIONAL STYLE
+              Ã°Å¸â€™Â¼ PROFESSIONAL STYLE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ“„</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸â€œâ€ž</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[1].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 1)</span>
@@ -293,7 +293,7 @@ export default function Compare1Vs3() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template1Sections.map(section => (
@@ -306,7 +306,7 @@ export default function Compare1Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[1].features.map(feature => (
@@ -319,7 +319,7 @@ export default function Compare1Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[1].bestFor.map(role => (
@@ -346,7 +346,7 @@ export default function Compare1Vs3() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 1 â†’
+              View Template 1 Ã¢â€ â€™
             </Link>
           </div>
 
@@ -372,10 +372,10 @@ export default function Compare1Vs3() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸš€ MODERN STYLE
+              Ã°Å¸Å¡â‚¬ MODERN STYLE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸŒ™</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸Å’â„¢</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: 'white' }}>
                 {templates[3].name}
                 <span style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 'normal', marginLeft: '8px' }}>(Template 3)</span>
@@ -385,7 +385,7 @@ export default function Compare1Vs3() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template3Sections.map(section => (
@@ -398,7 +398,7 @@ export default function Compare1Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].features.map(feature => (
@@ -411,7 +411,7 @@ export default function Compare1Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].bestFor.map(role => (
@@ -438,7 +438,7 @@ export default function Compare1Vs3() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 3 â†’
+              View Template 3 Ã¢â€ â€™
             </Link>
           </div>
         </div>
@@ -446,7 +446,7 @@ export default function Compare1Vs3() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Feature Comparison: Professional vs Modern
+            Ã°Å¸â€œÅ  Feature Comparison: Professional vs Modern
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -477,28 +477,28 @@ export default function Compare1Vs3() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Image Support</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Certifications Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Experience Filtering</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… By Type</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ Single List</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ By Type</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ Single List</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Density Scaling</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Projects Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes (up to 4)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes (up to 4)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -528,12 +528,12 @@ export default function Compare1Vs3() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ¢ Which Template Should You Choose Based on Your Industry?
+            Ã°Å¸ÂÂ¢ Which Template Should You Choose Based on Your Industry?
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ¦</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸ÂÂ¦</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 1 (Professional) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Banking & Finance</li>
@@ -545,12 +545,12 @@ export default function Compare1Vs3() {
                 <li>Consulting Firms</li>
               </ul>
               <p style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px', color: '#1e40af' }}>
-                ðŸ’¡ These industries value traditional professionalism and often prefer conservative resume formats.
+                Ã°Å¸â€™Â¡ These industries value traditional professionalism and often prefer conservative resume formats.
               </p>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ’»</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€™Â»</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 3 (Modern) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Software Development & Engineering</li>
@@ -562,7 +562,7 @@ export default function Compare1Vs3() {
                 <li>Creative Agencies</li>
               </ul>
               <p style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px', color: '#1e40af' }}>
-                ðŸ’¡ Modern industries appreciate innovation and visual appeal - dark themes show you're tech-savvy.
+                Ã°Å¸â€™Â¡ Modern industries appreciate innovation and visual appeal - dark themes show you're tech-savvy.
               </p>
             </div>
           </div>
@@ -571,17 +571,17 @@ export default function Compare1Vs3() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            âš–ï¸ Pros & Cons Analysis
+            Ã¢Å¡â€“Ã¯Â¸Â Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 1 (Obsidian) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 1 (Obsidian) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 1 (Obsidian) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 1 (Obsidian) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -589,13 +589,13 @@ export default function Compare1Vs3() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 3 (Global Pro) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 3 (Global Pro) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 3 (Global Pro) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 3 (Global Pro) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -608,7 +608,7 @@ export default function Compare1Vs3() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            â“ Frequently Asked Questions
+            Ã¢Ââ€œ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -661,7 +661,7 @@ export default function Compare1Vs3() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            ðŸ” Explore More Template Comparisons
+            Ã°Å¸â€Â Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

@@ -1,4 +1,4 @@
-// pages/editor/index.js - SEO OPTIMIZED VERSION (2026 Update)
+﻿// pages/editor/index.js - SEO OPTIMIZED VERSION (2026 Update)
 import TemplateSelector from '../../components/templates/TemplateSelector';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -169,7 +169,7 @@ export default function EditorIndex() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px' }}>›</span>
+          <span style={{ margin: '0 8px' }}>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Builder</span>
         </nav>
 
@@ -199,14 +199,14 @@ export default function EditorIndex() {
             marginTop: '40px'
           }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>🤖</div>
+              <div style={{ fontSize: '40px', marginBottom: '16px' }}>📄¤–</div>
               <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>ATS-Friendly Design</h3>
               <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
                 All templates are optimized to pass Applicant Tracking Systems with clean formatting and standard section headings. Updated for 2026 ATS algorithms.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚡</div>
+              <div style={{ fontSize: '40px', marginBottom: '16px' }}>âš¡</div>
               <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>Real-Time Preview</h3>
               <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
                 See changes instantly as you type. No waiting, no refreshing - just seamless editing with instant feedback.
@@ -220,7 +220,7 @@ export default function EditorIndex() {
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>💎</div>
+              <div style={{ fontSize: '40px', marginBottom: '16px' }}>📄’Ž</div>
               <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>100% Free Forever</h3>
               <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
                 No hidden costs, no sign-up required. Create unlimited resumes completely free with no watermarks.
@@ -390,7 +390,7 @@ export default function EditorIndex() {
               e.currentTarget.style.boxShadow = 'none';
             }}
           >
-            Start Building Now →
+            Start Building Now â†’
           </button>
         </div>
 
@@ -403,7 +403,7 @@ export default function EditorIndex() {
           borderTop: '1px solid #eee',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates (2026) | 100% Free</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates (2026) | 100% Free</p>
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             <Link href="/templates" style={{ color: '#999', textDecoration: 'none' }}>All Templates</Link>
             <Link href="/blog/ats-resume-tips-2026" style={{ color: '#999', textDecoration: 'none' }}>ATS Guide 2026</Link>

@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template2.js 
 // ENHANCED: Name optimization like Template1
 // UPDATED: Auto-reduces font size for long names
@@ -13,10 +13,10 @@ import LoadingSpinner from '../LoadingSpinner';
 
 // EXPERIENCE TYPES - unchanged
 const EXPERIENCE_TYPES = Object.freeze({
-  job: { label: "Work Experience", icon: "ðŸ’¼", color: "#2563eb" },
-  project: { label: "Project", icon: "âš¡", color: "#db2777" },
-  freelance: { label: "Freelance", icon: "ðŸ’»", color: "#ea580c" },
-  research: { label: "Research", icon: "ðŸ”¬", color: "#16a34a" }
+  job: { label: "Work Experience", icon: "Ã°Å¸â€™Â¼", color: "#2563eb" },
+  project: { label: "Project", icon: "Ã¢Å¡Â¡", color: "#db2777" },
+  freelance: { label: "Freelance", icon: "Ã°Å¸â€™Â»", color: "#ea580c" },
+  research: { label: "Research", icon: "Ã°Å¸â€Â¬", color: "#16a34a" }
 });
 
 // CONTENT LIMITS - achievementsPerExperience set to 3
@@ -256,7 +256,7 @@ const TemplateHelpers = Object.freeze({
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} â€“ ${end}`;
+    return `${start} Ã¢â‚¬â€œ ${end}`;
   },
 
   formatFullUrl: (url) => {
@@ -418,20 +418,20 @@ const TemplateHelpers = Object.freeze({
 
   // UPDATED: Icons with LinkedIn using "in" in blue
   icons: Object.freeze({
-    email: 'âœ‰ï¸',
-    phone: 'ðŸ“ž',
-    location: 'ðŸ“',
+    email: 'Ã¢Å“â€°Ã¯Â¸Â',
+    phone: 'Ã°Å¸â€œÅ¾',
+    location: 'Ã°Å¸â€œÂ',
     linkedin: 'in',  // Using "in" like Template17
-    github: 'ðŸ™',
-    portfolio: 'ðŸŒ',
-    briefcase: 'ðŸ’¼',
-    education: 'ðŸŽ“',
-    skills: 'âš¡',
-    projects: 'ðŸš€',
-    certificate: 'ðŸ“œ',
-    bullet: 'â€¢',
-    triangle: 'â–¹',
-    gpa: 'ðŸ“Š'
+    github: 'Ã°Å¸Ââ„¢',
+    portfolio: 'Ã°Å¸Å’Â',
+    briefcase: 'Ã°Å¸â€™Â¼',
+    education: 'Ã°Å¸Å½â€œ',
+    skills: 'Ã¢Å¡Â¡',
+    projects: 'Ã°Å¸Å¡â‚¬',
+    certificate: 'Ã°Å¸â€œÅ“',
+    bullet: 'Ã¢â‚¬Â¢',
+    triangle: 'Ã¢â€“Â¹',
+    gpa: 'Ã°Å¸â€œÅ '
   }),
 
   // ===== NAME OPTIMIZATION FUNCTION (like Template1) =====
@@ -1584,7 +1584,7 @@ const Template2 = ({
               {processedData.hasData.summary && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>ðŸ“</span>
+                    <span style={styles.sectionIcon}>Ã°Å¸â€œÂ</span>
                     ABOUT ME
                   </h3>
                   <div style={getDynamicStyles.summaryCard}>
@@ -1621,7 +1621,7 @@ const Template2 = ({
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
                     <span style={styles.sectionIcon}>
-                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'ðŸ’¼'}
+                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'Ã°Å¸â€™Â¼'}
                     </span>
                     {EXPERIENCE_TYPES[selectedExperienceType]?.label || 'EXPERIENCE'}
                   </h3>
@@ -1659,7 +1659,7 @@ const Template2 = ({
                           </div>
                           {(exp.startDate || exp.endDate) && (
                             <div style={getDynamicStyles.experienceDates}>
-                              {exp.startDate} â€“ {exp.endDate}
+                              {exp.startDate} Ã¢â‚¬â€œ {exp.endDate}
                             </div>
                           )}
                         </div>
@@ -1694,7 +1694,7 @@ const Template2 = ({
               {processedData.hasData.projects && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>ðŸš€</span>
+                    <span style={styles.sectionIcon}>Ã°Å¸Å¡â‚¬</span>
                     PROJECTS
                   </h3>
                   <div style={getDynamicStyles.projectList}>
@@ -1722,7 +1722,7 @@ const Template2 = ({
                           </div>
                           {(project.startDate || project.endDate) && (
                             <div style={getDynamicStyles.projectDates}>
-                              {project.startDate} â€“ {project.endDate}
+                              {project.startDate} Ã¢â‚¬â€œ {project.endDate}
                             </div>
                           )}
                         </div>
@@ -1753,7 +1753,7 @@ const Template2 = ({
                             onMouseEnter={() => setHoveredItem(`${project.id}-link`)}
                             onMouseLeave={() => setHoveredItem(null)}
                           >
-                            ðŸ”— {project.displayLink}
+                            Ã°Å¸â€â€” {project.displayLink}
                           </a>
                         )}
                       </div>
@@ -1768,7 +1768,7 @@ const Template2 = ({
               {processedData.hasData.skills && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>âš¡</span>
+                    <span style={styles.sectionIcon}>Ã¢Å¡Â¡</span>
                     KEY SKILLS
                   </h3>
                   <div style={getDynamicStyles.skillsContainer}>
@@ -1794,7 +1794,7 @@ const Template2 = ({
               {processedData.hasData.education && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>ðŸŽ“</span>
+                    <span style={styles.sectionIcon}>Ã°Å¸Å½â€œ</span>
                     EDUCATION
                   </h3>
                   <div style={getDynamicStyles.educationList}>
@@ -1827,7 +1827,7 @@ const Template2 = ({
                             {edu.displayDate && (
                               <div style={getDynamicStyles.educationDateBadge}>
                                 {edu.displayDate}
-                                {edu.current && <span> â€¢ Current</span>}
+                                {edu.current && <span> Ã¢â‚¬Â¢ Current</span>}
                               </div>
                             )}
                             
@@ -1859,7 +1859,7 @@ const Template2 = ({
               {processedData.hasData.certifications && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>ðŸ“œ</span>
+                    <span style={styles.sectionIcon}>Ã°Å¸â€œÅ“</span>
                     CERTIFICATION
                   </h3>
                   <div style={getDynamicStyles.certificationList}>

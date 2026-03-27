@@ -1,4 +1,4 @@
-// pages/templates/compare/18-vs-19.js
+﻿// pages/templates/compare/18-vs-19.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -186,11 +186,11 @@ export default function CompareTemplate18vs19() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Code vs The Scholar 2.0</span>
         </div>
 
@@ -252,11 +252,11 @@ export default function CompareTemplate18vs19() {
                 }
               }}
             >
-              {tab === 'overview' && 'ðŸ“‹ Overview'}
-              {tab === 'features' && 'âš¡ Features'}
-              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
-              {tab === 'industry' && 'ðŸ¢ Profession Fit'}
-              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
+              {tab === 'overview' && 'Ã°Å¸â€œâ€¹ Overview'}
+              {tab === 'features' && 'Ã¢Å¡Â¡ Features'}
+              {tab === 'visual' && 'Ã°Å¸Å½Â¨ Visual Comparison'}
+              {tab === 'industry' && 'Ã°Å¸ÂÂ¢ Profession Fit'}
+              {tab === 'verdict' && 'Ã¢Å¡â€“Ã¯Â¸Â Final Verdict'}
             </button>
           ))}
         </div>
@@ -318,7 +318,7 @@ export default function CompareTemplate18vs19() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 3rem; margin-bottom: 10px;">ðŸ‘¨â€ðŸ’»</div>
+                          <div style="font-size: 3rem; margin-bottom: 10px;">Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€™Â»</div>
                           <div style="font-weight: bold; font-size: 1.2rem;">The Code</div>
                           <div style="font-size: 0.9rem; margin-top: 5px;">Developer Template</div>
                         </div>
@@ -415,7 +415,7 @@ export default function CompareTemplate18vs19() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 3rem; margin-bottom: 10px;">ðŸŽ“</div>
+                          <div style="font-size: 3rem; margin-bottom: 10px;">Ã°Å¸Å½â€œ</div>
                           <div style="font-weight: bold; font-size: 1.2rem;">The Scholar 2.0</div>
                           <div style="font-size: 0.9rem; margin-top: 5px;">Academic Template</div>
                         </div>
@@ -567,29 +567,29 @@ export default function CompareTemplate18vs19() {
                 <tbody>
                   {[
                     { feature: 'Primary Focus', t1: 'Software Development', t2: 'Academic Research' },
-                    { feature: 'Project Links', t1: 'âœ“ Yes, clickable URLs', t2: 'âœ— No' },
-                    { feature: 'Tech Tags', t1: 'âœ“ Yes (programming languages)', t2: 'âœ— No' },
-                    { feature: 'Publications Section', t1: 'âœ— No', t2: 'âœ“ Yes, dedicated' },
-                    { feature: 'White-Box Education', t1: 'âœ— No', t2: 'âœ“ Yes, signature feature' },
-                    { feature: 'Code-Friendly Icons', t1: 'âœ“ Yes', t2: 'âœ— No' },
-                    { feature: 'Research Showcase', t1: 'âœ— No', t2: 'âœ“ Yes' },
-                    { feature: 'Teaching Experience', t1: 'âœ— No', t2: 'âœ“ Yes' },
-                    { feature: 'GitHub Integration', t1: 'âœ“ Yes', t2: 'âœ— No' },
-                    { feature: 'Conference Presentations', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Project Links', t1: 'Ã¢Å“â€œ Yes, clickable URLs', t2: 'Ã¢Å“â€” No' },
+                    { feature: 'Tech Tags', t1: 'Ã¢Å“â€œ Yes (programming languages)', t2: 'Ã¢Å“â€” No' },
+                    { feature: 'Publications Section', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes, dedicated' },
+                    { feature: 'White-Box Education', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes, signature feature' },
+                    { feature: 'Code-Friendly Icons', t1: 'Ã¢Å“â€œ Yes', t2: 'Ã¢Å“â€” No' },
+                    { feature: 'Research Showcase', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes' },
+                    { feature: 'Teaching Experience', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes' },
+                    { feature: 'GitHub Integration', t1: 'Ã¢Å“â€œ Yes', t2: 'Ã¢Å“â€” No' },
+                    { feature: 'Conference Presentations', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes' },
                     { feature: 'Skills Display', t1: 'Tech tags grid (12 skills)', t2: 'Standard grid (8 skills)' },
-                    { feature: 'Academic References', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Academic References', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('âœ“') ? (
+                        {row.t1.includes('Ã¢Å“â€œ') ? (
                           <span style={{ color: '#2563eb', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('âœ“') ? (
+                        {row.t2.includes('Ã¢Å“â€œ') ? (
                           <span style={{ color: '#1e3a8a', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -610,7 +610,7 @@ export default function CompareTemplate18vs19() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginBottom: '15px' }}>
-                  âœ… The Code - Pros
+                  Ã¢Å“â€¦ The Code - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.pros.map((item, index) => (
@@ -618,7 +618,7 @@ export default function CompareTemplate18vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginTop: '25px', marginBottom: '15px' }}>
-                  âš ï¸ The Code - Cons
+                  Ã¢Å¡Â Ã¯Â¸Â The Code - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.cons.map((item, index) => (
@@ -628,7 +628,7 @@ export default function CompareTemplate18vs19() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#1e3a8a', marginBottom: '15px' }}>
-                  âœ… The Scholar 2.0 - Pros
+                  Ã¢Å“â€¦ The Scholar 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.pros.map((item, index) => (
@@ -636,7 +636,7 @@ export default function CompareTemplate18vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#1e3a8a', marginTop: '25px', marginBottom: '15px' }}>
-                  âš ï¸ The Scholar 2.0 - Cons
+                  Ã¢Å¡Â Ã¯Â¸Â The Scholar 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.cons.map((item, index) => (
@@ -704,7 +704,7 @@ export default function CompareTemplate18vs19() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 4rem; margin-bottom: 15px;">ðŸ‘¨â€ðŸ’»</div>
+                          <div style="font-size: 4rem; margin-bottom: 15px;">Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€™Â»</div>
                           <div style="font-weight: bold; font-size: 1.5rem;">The Code</div>
                           <div style="margin-top: 10px;">Developer Template</div>
                         </div>
@@ -714,7 +714,7 @@ export default function CompareTemplate18vs19() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/18" style={{ color: '#2563eb', textDecoration: 'underline' }}>
-                      View Full Details â†’
+                      View Full Details Ã¢â€ â€™
                     </Link>
                   </div>
                 </div>
@@ -760,7 +760,7 @@ export default function CompareTemplate18vs19() {
                       `;
                       fallback.innerHTML = `
                         <div>
-                          <div style="font-size: 4rem; margin-bottom: 15px;">ðŸŽ“</div>
+                          <div style="font-size: 4rem; margin-bottom: 15px;">Ã°Å¸Å½â€œ</div>
                           <div style="font-weight: bold; font-size: 1.5rem;">The Scholar 2.0</div>
                           <div style="margin-top: 10px;">Academic Template</div>
                         </div>
@@ -770,7 +770,7 @@ export default function CompareTemplate18vs19() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/19" style={{ color: '#1e3a8a', textDecoration: 'underline' }}>
-                      View Full Details â†’
+                      View Full Details Ã¢â€ â€™
                     </Link>
                   </div>
                 </div>
@@ -956,7 +956,7 @@ export default function CompareTemplate18vs19() {
                 padding: '30px',
                 border: '1px solid #93c5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ’»</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸â€™Â»</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2563eb', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Code
                 </h3>
@@ -986,7 +986,7 @@ export default function CompareTemplate18vs19() {
                 padding: '30px',
                 border: '1px solid #93c5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸŽ“</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸Å½â€œ</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#1e3a8a', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar 2.0
                 </h3>
@@ -1019,7 +1019,7 @@ export default function CompareTemplate18vs19() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                ðŸ’¡ Industry Transition Tip
+                Ã°Å¸â€™Â¡ Industry Transition Tip
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Moving between industry and academia? Keep both templates ready. Use The Code for tech industry applications and The Scholar 2.0 for academic positions. With our free builder, you can maintain multiple versions of your resume tailored to each opportunity.
@@ -1135,7 +1135,7 @@ export default function CompareTemplate18vs19() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

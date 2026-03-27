@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template4.js 
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER
 // WITH INLINE STYLES (CSS CONVERTED TO INLINE)
@@ -147,13 +147,13 @@ const TEMPLATE4_CONSTANTS = Object.freeze({
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: 'âœ‰ï¸',
-  phone: 'ðŸ“ž',
-  address: 'ðŸ“',
+  email: 'Ã¢Å“â€°Ã¯Â¸Â',
+  phone: 'Ã°Å¸â€œÅ¾',
+  address: 'Ã°Å¸â€œÂ',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: 'ðŸ™',
-  portfolio: 'ðŸŒ',
-  default: 'ðŸ“Œ'
+  github: 'Ã°Å¸Ââ„¢',
+  portfolio: 'Ã°Å¸Å’Â',
+  default: 'Ã°Å¸â€œÅ’'
 });
 
 // ===== COLOR SCHEMES with MAXIMUM CONTRAST for PDF =====
@@ -248,7 +248,7 @@ const TemplateHelpers = Object.freeze({
 
   cleanBullet: (bullet) => {
     let cleaned = TemplateHelpers.safeString(bullet);
-    cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
+    cleaned = cleaned.replace(/^[Ã¢â‚¬Â¢\*\-]\s*/, '');
     cleaned = cleaned.replace(/\.\.+/g, '.');
     return cleaned;
   },
@@ -2096,13 +2096,13 @@ const Template4 = ({
                       ...styles.locationSeparator,
                       ...(isMobile ? styles.mobileStyles.locationSeparator : {})
                     }}> | </span>
-                    ðŸ“ {getSafeText(exp.location)}
+                    Ã°Å¸â€œÂ {getSafeText(exp.location)}
                   </span>
                 )}
               </div>
             </div>
             <span style={styles.period}>
-              {formatDate(exp.startDate)} â€“ {formatDate(exp.endDate)}
+              {formatDate(exp.startDate)} Ã¢â‚¬â€œ {formatDate(exp.endDate)}
             </span>
           </div>
           
@@ -2117,7 +2117,7 @@ const Template4 = ({
                     ...styles.descriptionItem,
                     ...(isMobile ? styles.mobileStyles.descriptionItem : {})
                   }}>
-                    <span style={styles.descriptionBullet}>â€¢</span>
+                    <span style={styles.descriptionBullet}>Ã¢â‚¬Â¢</span>
                     <span style={styles.descriptionText}>
                       {getSafeText(bullet)}
                     </span>
@@ -2147,7 +2147,7 @@ const Template4 = ({
       if (!formattedStart && !formattedEnd) return '';
       if (formattedStart && !formattedEnd) return formattedStart;
       if (!formattedStart && formattedEnd) return formattedEnd;
-      return `${formattedStart} â€“ ${formattedEnd}`;
+      return `${formattedStart} Ã¢â‚¬â€œ ${formattedEnd}`;
     };
     
     const gpaFormatted = edu.gpa ? formatGPA(edu.gpa, edu.gpaScale) : null;
@@ -2197,7 +2197,7 @@ const Template4 = ({
                       alignItems: 'center',
                       gap: '2px'
                     }}>
-                      <span>ðŸ“</span> {edu.location}
+                      <span>Ã°Å¸â€œÂ</span> {edu.location}
                     </span>
                   )}
                   
@@ -2287,7 +2287,7 @@ const Template4 = ({
             </div>
             {(project.startDate || project.endDate) && (
               <span style={styles.period}>
-                {formatDate(project.startDate)} â€“ {formatDate(project.endDate)}
+                {formatDate(project.startDate)} Ã¢â‚¬â€œ {formatDate(project.endDate)}
               </span>
             )}
           </div>
@@ -2303,7 +2303,7 @@ const Template4 = ({
                     ...styles.projectBulletItem,
                     ...(isMobile ? styles.mobileStyles.projectBulletItem : {})
                   }}>
-                    <span style={styles.projectBullet}>â€¢</span>
+                    <span style={styles.projectBullet}>Ã¢â‚¬Â¢</span>
                     <span style={styles.projectBulletText}>
                       {getSafeText(bullet)}
                     </span>
@@ -2423,7 +2423,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 CONTACT
               </h3>
             </div>
@@ -2441,7 +2441,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 SKILLS
               </h3>
             </div>
@@ -2461,7 +2461,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 CERTIFICATIONS
               </h3>
             </div>
@@ -2481,7 +2481,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 AWARDS
               </h3>
             </div>
@@ -2510,7 +2510,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 PROFESSIONAL SUMMARY
               </h3>
             </div>
@@ -2529,7 +2529,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 EXPERIENCE
               </h3>
             </div>
@@ -2555,7 +2555,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 PROJECTS
               </h3>
             </div>
@@ -2581,7 +2581,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>âœ¦</span>
+                <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
                 EDUCATION
               </h3>
             </div>

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -43,7 +43,7 @@ export default function KeywordsFinder() {
     if (!keywords) return;
     const keywordList = keywords.allKeywords.map(k => k.word).join('\n');
     navigator.clipboard.writeText(keywordList);
-    setCopySuccess('âœ… Keywords copied!');
+    setCopySuccess('Ã¢Å“â€¦ Keywords copied!');
     setTimeout(() => setCopySuccess(''), 2000);
   };
 
@@ -194,15 +194,15 @@ export default function KeywordsFinder() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/tools" style={{ color: '#666', textDecoration: 'none' }}>Tools</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Resume Keywords Finder</span>
         </nav>
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>ðŸ”‘</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>Ã°Å¸â€â€˜</div>
           <h1 style={{
             fontSize: '48px',
             marginBottom: '16px',
@@ -232,7 +232,7 @@ export default function KeywordsFinder() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>ðŸ’¡ Pro Tip:</strong> Over 75% of resumes are rejected by ATS systems before reaching human recruiters. 
+            <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> Over 75% of resumes are rejected by ATS systems before reaching human recruiters. 
             Using the right keywords from the job description can increase your interview chances by up to 40%. 
             Our tool identifies the most important keywords recruiters are looking for.
           </p>
@@ -247,7 +247,7 @@ export default function KeywordsFinder() {
           border: '1px solid #e9ecef' 
         }}>
           <h2 style={{ fontSize: '28px', marginBottom: '12px', color: '#1a1a1a' }}>
-            ðŸ” Extract Keywords from Job Description
+            Ã°Å¸â€Â Extract Keywords from Job Description
           </h2>
           <p style={{ marginBottom: '20px', color: '#666', fontSize: '16px' }}>
             Paste any job description below and get instant keyword analysis to optimize your resume.
@@ -291,7 +291,7 @@ export default function KeywordsFinder() {
                 transition: 'all 0.2s'
               }}
             >
-              ðŸ” Extract Keywords
+              Ã°Å¸â€Â Extract Keywords
             </button>
             {keywords && (
               <button 
@@ -308,7 +308,7 @@ export default function KeywordsFinder() {
                   transition: 'all 0.2s'
                 }}
               >
-                ðŸ“‹ Copy All Keywords
+                Ã°Å¸â€œâ€¹ Copy All Keywords
               </button>
             )}
             {copySuccess && <span style={{ color: '#059669', fontWeight: '500', fontSize: '14px' }}>{copySuccess}</span>}
@@ -333,7 +333,7 @@ export default function KeywordsFinder() {
               gap: '16px'
             }}>
               <h2 style={{ fontSize: '28px', margin: 0 }}>
-                ðŸ“Š Extracted Keywords
+                Ã°Å¸â€œÅ  Extracted Keywords
               </h2>
               <div style={{ 
                 background: '#0070f3', 
@@ -379,7 +379,7 @@ export default function KeywordsFinder() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '32px' }}>
               {keywords.categories.hard.length > 0 && (
                 <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>ðŸ’» Hard Skills & Technical Keywords</h3>
+                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>Ã°Å¸â€™Â» Hard Skills & Technical Keywords</h3>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                     {keywords.categories.hard.map((kw, i) => (
                       <span key={i} style={{ background: '#dbeafe', padding: '6px 12px', borderRadius: '20px', fontSize: '13px' }}>{kw.word}</span>
@@ -390,7 +390,7 @@ export default function KeywordsFinder() {
 
               {keywords.categories.soft.length > 0 && (
                 <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>ðŸ¤ Soft Skills & Interpersonal Keywords</h3>
+                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>Ã°Å¸Â¤Â Soft Skills & Interpersonal Keywords</h3>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                     {keywords.categories.soft.map((kw, i) => (
                       <span key={i} style={{ background: '#fef9c3', padding: '6px 12px', borderRadius: '20px', fontSize: '13px' }}>{kw.word}</span>
@@ -401,7 +401,7 @@ export default function KeywordsFinder() {
 
               {keywords.categories.industry.length > 0 && (
                 <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>ðŸ¢ Industry-Specific Keywords</h3>
+                  <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#0070f3' }}>Ã°Å¸ÂÂ¢ Industry-Specific Keywords</h3>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                     {keywords.categories.industry.map((kw, i) => (
                       <span key={i} style={{ background: '#e0f2fe', padding: '6px 12px', borderRadius: '20px', fontSize: '13px' }}>{kw.word}</span>
@@ -413,7 +413,7 @@ export default function KeywordsFinder() {
 
             {/* How to Use Section */}
             <div style={{ background: '#e6f7ff', padding: '28px', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '22px', marginBottom: '16px', color: '#1a1a1a' }}>ðŸ“ How to Use These Keywords in Your Resume</h3>
+              <h3 style={{ fontSize: '22px', marginBottom: '16px', color: '#1a1a1a' }}>Ã°Å¸â€œÂ How to Use These Keywords in Your Resume</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
                 <div>
                   <strong style={{ color: '#0070f3' }}>1. Skills Section</strong>
@@ -499,9 +499,9 @@ export default function KeywordsFinder() {
         }}>
           <h3 style={{ fontSize: '22px', marginBottom: '20px', color: '#1a1a1a' }}>More Free Resume Optimization Tools</h3>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ¤– ATS Scanner â†’</Link>
-            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>âœ“ Resume Checker â†’</Link>
-            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ“ Resume Review â†’</Link>
+            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã°Å¸Â¤â€“ ATS Scanner Ã¢â€ â€™</Link>
+            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã¢Å“â€œ Resume Checker Ã¢â€ â€™</Link>
+            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã°Å¸â€œÂ Resume Review Ã¢â€ â€™</Link>
           </div>
         </div>
 
@@ -528,7 +528,7 @@ export default function KeywordsFinder() {
             fontWeight: '600',
             fontSize: '16px'
           }}>
-            Start Building Your Resume Now â†’
+            Start Building Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 

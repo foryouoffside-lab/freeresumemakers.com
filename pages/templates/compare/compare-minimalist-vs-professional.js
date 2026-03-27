@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 
 export default function MinimalistVsProfessional() {
@@ -126,11 +126,11 @@ export default function MinimalistVsProfessional() {
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
           <Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
           <span style={{ color: '#1e293b', fontWeight: '500' }}>Minimalist vs Professional</span>
         </nav>
 
@@ -146,7 +146,7 @@ export default function MinimalistVsProfessional() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              âœ¨ MINIMALIST vs ðŸ’¼ PROFESSIONAL SHOWDOWN
+              Ã¢Å“Â¨ MINIMALIST vs Ã°Å¸â€™Â¼ PROFESSIONAL SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -178,13 +178,13 @@ export default function MinimalistVsProfessional() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“Š Updated: March 2026
+              Ã°Å¸â€œÅ  Updated: March 2026
             </div>
             <div style={{ background: '#eef2ff', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem', color: '#1e40af' }}>
-              âœ¨ Minimalist: 96-99% ATS
+              Ã¢Å“Â¨ Minimalist: 96-99% ATS
             </div>
             <div style={{ background: '#eef2ff', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem', color: '#1e40af' }}>
-              ðŸ’¼ Professional: 94-98% ATS
+              Ã°Å¸â€™Â¼ Professional: 94-98% ATS
             </div>
           </div>
         </header>
@@ -198,15 +198,15 @@ export default function MinimalistVsProfessional() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'white' }}>ðŸŽ¯ Quick Decision Guide</h2>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'white' }}>Ã°Å¸Å½Â¯ Quick Decision Guide</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '20px' }}>
             <div style={{ background: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>âœ¨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã¢Å“Â¨</div>
               <strong>Choose Minimalist If:</strong>
               <p style={{ fontSize: '0.9rem', marginTop: '8px', opacity: 0.9 }}>Tech, design, startups, modern companies, or when you want content to speak for itself</p>
             </div>
             <div style={{ background: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ’¼</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
               <strong>Choose Professional If:</strong>
               <p style={{ fontSize: '0.9rem', marginTop: '8px', opacity: 0.9 }}>Corporate, finance, law, healthcare, government, or traditional industries</p>
             </div>
@@ -229,7 +229,7 @@ export default function MinimalistVsProfessional() {
             boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
           }}>
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>âœ¨</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã¢Å“Â¨</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>Minimalist Templates</h2>
               <p style={{ color: '#475569' }}>Clean, simple, content-focused designs</p>
               <div style={{ 
@@ -241,24 +241,24 @@ export default function MinimalistVsProfessional() {
                 fontSize: '0.75rem',
                 marginTop: '8px'
               }}>
-                âš¡ ATS Score: 96-99%
+                Ã¢Å¡Â¡ ATS Score: 96-99%
               </div>
             </div>
 
             <div style={{ marginBottom: '24px' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>âœ… Key Characteristics</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>Ã¢Å“â€¦ Key Characteristics</h3>
               <ul style={{ color: '#475569', lineHeight: '1.8', paddingLeft: '20px' }}>
-                <li>âœ“ Clean, ample white space</li>
-                <li>âœ“ Simple, modern typography</li>
-                <li>âœ“ Content-first approach</li>
-                <li>âœ“ No unnecessary graphics or colors</li>
-                <li>âœ“ Maximum ATS compatibility</li>
-                <li>âœ“ Perfect for digital submission</li>
+                <li>Ã¢Å“â€œ Clean, ample white space</li>
+                <li>Ã¢Å“â€œ Simple, modern typography</li>
+                <li>Ã¢Å“â€œ Content-first approach</li>
+                <li>Ã¢Å“â€œ No unnecessary graphics or colors</li>
+                <li>Ã¢Å“â€œ Maximum ATS compatibility</li>
+                <li>Ã¢Å“â€œ Perfect for digital submission</li>
               </ul>
             </div>
 
             <div style={{ marginBottom: '24px' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>ðŸ“‹ Best Templates</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>Ã°Å¸â€œâ€¹ Best Templates</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {minimalistTemplates.map(template => (
                   <div key={template.id} style={{ 
@@ -284,7 +284,7 @@ export default function MinimalistVsProfessional() {
             </div>
 
             <div style={{ background: '#eef2ff', padding: '16px', borderRadius: '12px' }}>
-              <strong style={{ color: '#1e40af' }}>âœ¨ Best Industries:</strong>
+              <strong style={{ color: '#1e40af' }}>Ã¢Å“Â¨ Best Industries:</strong>
               <p style={{ marginTop: '8px', color: '#475569', fontSize: '0.9rem' }}>Tech & IT, Design, Marketing, Startups, Creative Agencies, Modern Companies</p>
             </div>
 
@@ -304,7 +304,7 @@ export default function MinimalistVsProfessional() {
                 marginTop: '24px'
               }}
             >
-              Browse Minimalist Templates â†’
+              Browse Minimalist Templates Ã¢â€ â€™
             </Link>
           </div>
 
@@ -317,7 +317,7 @@ export default function MinimalistVsProfessional() {
             boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
           }}>
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ’¼</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>Professional Templates</h2>
               <p style={{ color: '#475569' }}>Traditional, structured, formal designs</p>
               <div style={{ 
@@ -329,24 +329,24 @@ export default function MinimalistVsProfessional() {
                 fontSize: '0.75rem',
                 marginTop: '8px'
               }}>
-                âš¡ ATS Score: 94-98%
+                Ã¢Å¡Â¡ ATS Score: 94-98%
               </div>
             </div>
 
             <div style={{ marginBottom: '24px' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>âœ… Key Characteristics</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>Ã¢Å“â€¦ Key Characteristics</h3>
               <ul style={{ color: '#475569', lineHeight: '1.8', paddingLeft: '20px' }}>
-                <li>âœ“ Structured, formal layouts</li>
-                <li>âœ“ Traditional formatting</li>
-                <li>âœ“ Section-based organization</li>
-                <li>âœ“ Formal presentation style</li>
-                <li>âœ“ Corporate-ready appearance</li>
-                <li>âœ“ High print quality</li>
+                <li>Ã¢Å“â€œ Structured, formal layouts</li>
+                <li>Ã¢Å“â€œ Traditional formatting</li>
+                <li>Ã¢Å“â€œ Section-based organization</li>
+                <li>Ã¢Å“â€œ Formal presentation style</li>
+                <li>Ã¢Å“â€œ Corporate-ready appearance</li>
+                <li>Ã¢Å“â€œ High print quality</li>
               </ul>
             </div>
 
             <div style={{ marginBottom: '24px' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>ðŸ“‹ Best Templates</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>Ã°Å¸â€œâ€¹ Best Templates</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {professionalTemplates.slice(0, 8).map(template => (
                   <div key={template.id} style={{ 
@@ -375,7 +375,7 @@ export default function MinimalistVsProfessional() {
             </div>
 
             <div style={{ background: '#eef2ff', padding: '16px', borderRadius: '12px' }}>
-              <strong style={{ color: '#1e40af' }}>ðŸ’¼ Best Industries:</strong>
+              <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¼ Best Industries:</strong>
               <p style={{ marginTop: '8px', color: '#475569', fontSize: '0.9rem' }}>Corporate, Finance, Banking, Law, Healthcare, Government, Education, Non-Profit</p>
             </div>
 
@@ -395,7 +395,7 @@ export default function MinimalistVsProfessional() {
                 marginTop: '24px'
               }}
             >
-              Browse Professional Templates â†’
+              Browse Professional Templates Ã¢â€ â€™
             </Link>
           </div>
         </div>
@@ -403,7 +403,7 @@ export default function MinimalistVsProfessional() {
         {/* Detailed Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Detailed Comparison: Minimalist vs Professional
+            Ã°Å¸â€œÅ  Detailed Comparison: Minimalist vs Professional
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -427,7 +427,7 @@ export default function MinimalistVsProfessional() {
                   <td style={{ padding: '12px', fontWeight: '500' }}>ATS Compatibility</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>96-99%</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>94-98%</td>
-                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Minimalist âœ“</td>
+                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Minimalist Ã¢Å“â€œ</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '12px', fontWeight: '500' }}>Visual Appeal</td>
@@ -439,13 +439,13 @@ export default function MinimalistVsProfessional() {
                   <td style={{ padding: '12px', fontWeight: '500' }}>Corporate Acceptance</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>Medium</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>High</td>
-                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Professional âœ“</td>
+                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Professional Ã¢Å“â€œ</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '12px', fontWeight: '500' }}>Tech Industry Appeal</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>High</td>
                   <td style={{ padding: '12px', textAlign: 'center' }}>Medium</td>
-                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Minimalist âœ“</td>
+                  <td style={{ padding: '12px', textAlign: 'center', color: '#10b981' }}>Minimalist Ã¢Å“â€œ</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '12px', fontWeight: '500' }}>Print Quality</td>
@@ -472,12 +472,12 @@ export default function MinimalistVsProfessional() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸŽ¯ When to Use Minimalist vs Professional
+            Ã°Å¸Å½Â¯ When to Use Minimalist vs Professional
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>âœ¨</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã¢Å“Â¨</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Use Minimalist Templates When:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Applying to tech companies or startups</li>
@@ -488,12 +488,12 @@ export default function MinimalistVsProfessional() {
                 <li>You have strong portfolio to accompany resume</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ“Š Success Rate:</strong> 23% higher in tech and creative industries
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€œÅ  Success Rate:</strong> 23% higher in tech and creative industries
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ’¼</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€™Â¼</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Use Professional Templates When:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Applying to corporate Fortune 500 companies</li>
@@ -504,7 +504,7 @@ export default function MinimalistVsProfessional() {
                 <li>Traditional industries prefer formal appearance</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ“Š Success Rate:</strong> 31% higher in corporate and traditional industries
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€œÅ  Success Rate:</strong> 31% higher in corporate and traditional industries
               </div>
             </div>
           </div>
@@ -513,11 +513,11 @@ export default function MinimalistVsProfessional() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            âš–ï¸ Pros & Cons Analysis
+            Ã¢Å¡â€“Ã¯Â¸Â Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Minimalist Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Minimalist Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>Highest ATS compatibility (up to 99%)</li>
                 <li>Modern, clean aesthetic</li>
@@ -526,7 +526,7 @@ export default function MinimalistVsProfessional() {
                 <li>Fast loading and parsing</li>
                 <li>Shows design awareness</li>
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Minimalist Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Minimalist Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>May feel too simple for conservative industries</li>
                 <li>Less traditional appearance</li>
@@ -535,7 +535,7 @@ export default function MinimalistVsProfessional() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Professional Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Professional Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>Trusted by corporate recruiters</li>
                 <li>Traditional, formal appearance</li>
@@ -544,7 +544,7 @@ export default function MinimalistVsProfessional() {
                 <li>High acceptance in conservative industries</li>
                 <li>Clear section hierarchy</li>
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Professional Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Professional Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 <li>May feel dated for creative roles</li>
                 <li>Less modern aesthetic</li>
@@ -558,32 +558,32 @@ export default function MinimalistVsProfessional() {
         {/* Industry Success Rates */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Industry Success Rates (2026 Data)
+            Ã°Å¸â€œÅ  Industry Success Rates (2026 Data)
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ’»</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€™Â»</div>
               <strong>Tech & Software</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Minimalist: 23% higher interview rate
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ¦</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸ÂÂ¦</div>
               <strong>Finance & Banking</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Professional: 31% higher success rate
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸŽ¨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
               <strong>Creative & Design</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Minimalist: 35% higher response rate
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>âš–ï¸</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã¢Å¡â€“Ã¯Â¸Â</div>
               <strong>Legal & Government</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Professional: 28% higher success rate
@@ -595,7 +595,7 @@ export default function MinimalistVsProfessional() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            â“ Frequently Asked Questions
+            Ã¢Ââ€œ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <details style={{ background: 'white', padding: '16px 20px', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
@@ -644,7 +644,7 @@ export default function MinimalistVsProfessional() {
         {/* Related Resources */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            ðŸ” Explore More Comparisons
+            Ã°Å¸â€Â Explore More Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             <Link href="/templates/compare/5-vs-6" style={{ padding: '12px 20px', background: 'white', borderRadius: '12px', textDecoration: 'none', color: '#1e293b', fontSize: '0.875rem', border: '1px solid #e2e8f0' }}>

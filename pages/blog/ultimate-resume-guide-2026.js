@@ -1,4 +1,4 @@
-// pages/blog/ultimate-resume-guide-2026.js
+﻿// pages/blog/ultimate-resume-guide-2026.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -191,9 +191,9 @@ export default function UltimateResumeGuide2026() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Ultimate Resume Guide 2026</span>
         </div>
 
@@ -209,7 +209,7 @@ export default function UltimateResumeGuide2026() {
             display: 'inline-block',
             boxShadow: '0 4px 10px rgba(0,112,243,0.3)'
           }}>
-            MOST READ Â· 2026 EDITION
+            MOST READ Ã‚Â· 2026 EDITION
           </span>
         </div>
 
@@ -635,21 +635,21 @@ export default function UltimateResumeGuide2026() {
                 gap: '15px'
               }}>
                 {[
-                  'âœ“ Contact information is correct',
-                  'âœ“ Summary is relevant to the job',
-                  'âœ“ Experience uses action verbs',
-                  'âœ“ Skills are well-organized',
-                  'âœ“ Formatting is consistent',
-                  'âœ“ No spelling or grammar errors',
-                  'âœ“ Saved as PDF (unless DOCX requested)',
-                  'âœ“ File name is professional'
+                  'Ã¢Å“â€œ Contact information is correct',
+                  'Ã¢Å“â€œ Summary is relevant to the job',
+                  'Ã¢Å“â€œ Experience uses action verbs',
+                  'Ã¢Å“â€œ Skills are well-organized',
+                  'Ã¢Å“â€œ Formatting is consistent',
+                  'Ã¢Å“â€œ No spelling or grammar errors',
+                  'Ã¢Å“â€œ Saved as PDF (unless DOCX requested)',
+                  'Ã¢Å“â€œ File name is professional'
                 ].map((item, index) => (
                   <div key={index} style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px'
                   }}>
-                    <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
+                    <span style={{ color: '#2e7d32', fontSize: '18px' }}>Ã¢Å“â€œ</span>
                     <span style={{ fontSize: '14px' }}>{item}</span>
                   </div>
                 ))}
@@ -719,7 +719,7 @@ export default function UltimateResumeGuide2026() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Writing Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes all essential elements.
@@ -802,10 +802,10 @@ export default function UltimateResumeGuide2026() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('The Ultimate Guide to Writing a Resume in 2026')}&url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Ultimate Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026')}` }
+              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('The Ultimate Guide to Writing a Resume in 2026')}&url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Ultimate Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -892,7 +892,7 @@ export default function UltimateResumeGuide2026() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -978,7 +978,7 @@ export default function UltimateResumeGuide2026() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 15, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 15, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

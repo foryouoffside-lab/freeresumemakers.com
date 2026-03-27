@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template17.js
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER - FIXED DATE POSITIONING
 // UPDATED: Date positioning fixed to stay constant (like Template19)
@@ -23,35 +23,35 @@ import LoadingSpinner from '../LoadingSpinner';
 const SECTION_TYPES = Object.freeze({
   internship: { 
     label: "Internships", 
-    icon: "ðŸŽ“", 
+    icon: "Ã°Å¸Å½â€œ", 
     color: "#4f46e5",
     lightColor: "#eef2ff",
     borderColor: "#c7d2fe"
   },
   project: { 
     label: "Projects", 
-    icon: "âš¡", 
+    icon: "Ã¢Å¡Â¡", 
     color: "#db2777",
     lightColor: "#fdf2f8",
     borderColor: "#fbcfe8"
   },
   education: { 
     label: "Education", 
-    icon: "ðŸ“–", 
+    icon: "Ã°Å¸â€œâ€“", 
     color: "#2563eb",
     lightColor: "#eff6ff",
     borderColor: "#bfdbfe"
   },
   certification: { 
     label: "Certifications", 
-    icon: "ðŸ“œ", 
+    icon: "Ã°Å¸â€œÅ“", 
     color: "#16a34a",
     lightColor: "#f0fdf4",
     borderColor: "#bbf7d0"
   },
   award: {
     label: "Awards & Honors", 
-    icon: "ðŸ†", 
+    icon: "Ã°Å¸Ââ€ ", 
     color: "#e11d48",
     lightColor: "#fff1f2",
     borderColor: "#fecdd3"
@@ -139,28 +139,28 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (startDate && !endDate) return startDate;
     if (!startDate && endDate) return endDate;
-    return `${startDate} â€“ ${endDate}`;
+    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
   },
 
   // Icon mapping for PDF-friendly icons
   icons: Object.freeze({
-    email: 'âœ‰',
-    phone: 'ðŸ“ž',
-    location: 'ðŸ“',
+    email: 'Ã¢Å“â€°',
+    phone: 'Ã°Å¸â€œÅ¾',
+    location: 'Ã°Å¸â€œÂ',
     linkedin: 'in',
-    github: 'âŒ¨',
-    portfolio: 'ðŸŒ',
-    briefcase: 'ðŸ’¼',
-    project: 'âš¡',
-    education: 'ðŸŽ“',
-    certification: 'ðŸ“œ',
-    award: 'ðŸ†',
-    bullet: 'â€”',
-    dot: 'â€¢',
-    triangle: 'â–¹',
-    link: 'ðŸ”—',
-    role: 'ðŸ‘¤',
-    calendar: 'ðŸ“…'
+    github: 'Ã¢Å’Â¨',
+    portfolio: 'Ã°Å¸Å’Â',
+    briefcase: 'Ã°Å¸â€™Â¼',
+    project: 'Ã¢Å¡Â¡',
+    education: 'Ã°Å¸Å½â€œ',
+    certification: 'Ã°Å¸â€œÅ“',
+    award: 'Ã°Å¸Ââ€ ',
+    bullet: 'Ã¢â‚¬â€',
+    dot: 'Ã¢â‚¬Â¢',
+    triangle: 'Ã¢â€“Â¹',
+    link: 'Ã°Å¸â€â€”',
+    role: 'Ã°Å¸â€˜Â¤',
+    calendar: 'Ã°Å¸â€œâ€¦'
   })
 });
 
@@ -198,7 +198,7 @@ const Template17 = ({
     
     let displayDate = '';
     if (formattedStart && formattedEnd) {
-      displayDate = `${formattedStart} â€“ ${formattedEnd}`;
+      displayDate = `${formattedStart} Ã¢â‚¬â€œ ${formattedEnd}`;
     } else if (formattedStart) {
       displayDate = formattedStart;
     } else if (formattedEnd) {
@@ -1001,7 +1001,7 @@ const Template17 = ({
             <span style={styles.internshipCompany}>{internship.company}</span>
             {internship.location && (
               <>
-                <span>â€¢</span>
+                <span>Ã¢â‚¬Â¢</span>
                 <span style={styles.locationWrapper}>
                   <span style={styles.locationIcon}>{TemplateHelpers.icons.location}</span>
                   <span>{internship.location}</span>
@@ -1012,7 +1012,7 @@ const Template17 = ({
         </div>
         {(internship.startDate || internship.endDate) && (
           <div style={styles.dateBadge}>
-            {internship.startDate} â€“ {internship.endDate}
+            {internship.startDate} Ã¢â‚¬â€œ {internship.endDate}
           </div>
         )}
       </div>
@@ -1055,7 +1055,7 @@ const Template17 = ({
         </div>
         {(project.startDate || project.endDate) && (
           <div style={styles.dateBadge}>
-            {project.startDate} â€“ {project.endDate}
+            {project.startDate} Ã¢â‚¬â€œ {project.endDate}
           </div>
         )}
       </div>
@@ -1112,7 +1112,7 @@ const Template17 = ({
           {edu.displayDate && (
             <div style={styles.educationDate}>
               {edu.displayDate}
-              {edu.current && <span> â€¢ Current</span>}
+              {edu.current && <span> Ã¢â‚¬Â¢ Current</span>}
             </div>
           )}
           
@@ -1240,7 +1240,7 @@ const Template17 = ({
             {processedData.hasData.summary && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>âœ¨</span>
+                  <span style={styles.sectionIcon}>Ã¢Å“Â¨</span>
                   About Me
                 </h3>
                 <div style={styles.summaryCard}>
@@ -1295,7 +1295,7 @@ const Template17 = ({
             {processedData.hasData.skills && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>âš¡</span>
+                  <span style={styles.sectionIcon}>Ã¢Å¡Â¡</span>
                   Skills
                 </h3>
                 <div style={styles.skillsContainer}>

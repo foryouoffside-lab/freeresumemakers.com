@@ -1,4 +1,4 @@
-// client/src/components/forms/Projects.js
+﻿// client/src/components/forms/Projects.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 
@@ -234,7 +234,7 @@ const roleProjects = {
         title: 'Fitness Tracking App',
         role: 'Mobile Developer',
         bulletPoints: [
-          "Built React Native fitness app with 50K+ downloads and 4.8⭐ rating",
+          "Built React Native fitness app with 50K+ downloads and 4.8â­ rating",
           "Integrated Apple HealthKit and Google Fit tracking 20+ health metrics",
           "Implemented offline sync with 100% functionality without internet connection"
         ]
@@ -952,7 +952,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '16px'
-                }}>📁</span>
+                }}>📄</span>
                 Add Project
               </h2>
               <InfoIcon tooltip="Include live demos and quantifiable achievements. 3 bullet points max, 140 chars each. Only bullet points/achievements are used." />
@@ -972,7 +972,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                 margin: '0 0 12px 0',
                 fontWeight: 600
               }}>
-                👔 Project Templates
+                📄‘” Project Templates
               </h4>
               <div style={{
                 display: 'grid',
@@ -1165,7 +1165,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                         <InfoIcon tooltip="Describe specific achievements with metrics. Max 140 characters per bullet point." />
                       </div>
                       <small style={{ fontSize: '12px', color: '#718096' }}>
-                        {newAchievementCount}/{MAX_BULLET_POINTS} added • Max {MAX_CHARS} characters each
+                        {newAchievementCount}/{MAX_BULLET_POINTS} added â€¢ Max {MAX_CHARS} characters each
                       </small>
                     </div>
                     
@@ -1175,7 +1175,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                         gap: '8px',
                         marginBottom: '12px'
                       }}>
-                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>•</span>
+                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>â€¢</span>
                         <div style={{ flex: 1 }}>
                           <textarea
                             value={bullet}
@@ -1274,7 +1274,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                 border: '1px solid #fed7aa',
                 textAlign: 'center'
               }}>
-                <div style={{ fontSize: '32px', marginBottom: '12px' }}>⚠️</div>
+                <div style={{ fontSize: '32px', marginBottom: '12px' }}>âš ï¸</div>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#c05621', marginBottom: '8px' }}>
                   Limit Reached
                 </h4>
@@ -1308,7 +1308,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>📋</span>
+                  <span>📄‹</span>
                   Your Projects
                 </h3>
                 <div style={{
@@ -1330,7 +1330,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📦</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📄¦</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No projects added yet
                   </p>
@@ -1387,7 +1387,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   padding: '4px 8px',
                                   borderRadius: '20px'
                                 }}>
-                                  🟢 In Progress
+                                  📄Ÿ¢ In Progress
                                 </span>
                               )}
                             </div>
@@ -1423,7 +1423,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                                 padding: '4px 8px',
                                 borderRadius: '20px'
                               }}>
-                                📅 {formatDate(project.startDate)} - {project.current ? 'Present' : formatDate(project.endDate)}
+                                📄… {formatDate(project.startDate)} - {project.current ? 'Present' : formatDate(project.endDate)}
                               </span>
                             )}
                             {project.projectUrl && (
@@ -1443,7 +1443,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                                   gap: '4px'
                                 }}
                               >
-                                🔗 Live Demo
+                                📄”— Live Demo
                               </a>
                             )}
                           </div>
@@ -1506,7 +1506,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
                                     gap: '8px',
                                     marginBottom: '10px'
                                   }}>
-                                    <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>•</span>
+                                    <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>â€¢</span>
                                     <div style={{ flex: 1 }}>
                                       <textarea
                                         value={bullet || ''}

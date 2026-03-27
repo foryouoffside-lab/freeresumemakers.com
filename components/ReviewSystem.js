@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/ReviewSystem.js
 // SIMPLE REVIEW SYSTEM - NO RATINGS AT ALL
 // ============================================
@@ -217,7 +217,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                   <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{comment.name}</span>
-                  <span style={{ fontSize: '12px', color: '#64748b' }}>â€¢ {formatDate(comment.date)}</span>
+                  <span style={{ fontSize: '12px', color: '#64748b' }}>Ã¢â‚¬Â¢ {formatDate(comment.date)}</span>
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
                   fontWeight: '500'
                 }}
               >
-                {isExpanded ? 'â–¼' : 'â–¶'} {comment.replies.length} {comment.replies.length === 1 ? 'reply' : 'replies'}
+                {isExpanded ? 'Ã¢â€“Â¼' : 'Ã¢â€“Â¶'} {comment.replies.length} {comment.replies.length === 1 ? 'reply' : 'replies'}
               </button>
             )}
           </div>
@@ -356,7 +356,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
       }}>
         <div>
           <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: 'bold' }}>
-            ðŸ’¬ Reviews
+            Ã°Å¸â€™Â¬ Reviews
           </h2>
           <p style={{ margin: 0, opacity: 0.9, fontSize: '14px' }}>
             Share your experience with this template
@@ -389,7 +389,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
             transition: 'all 0.2s'
           }}
         >
-          {showForm ? 'âœ– Cancel' : 'âœï¸ Write a Review'}
+          {showForm ? 'Ã¢Å“â€“ Cancel' : 'Ã¢Å“ÂÃ¯Â¸Â Write a Review'}
         </button>
       </div>
 
@@ -493,7 +493,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
             padding: '60px 20px',
             color: '#6c757d'
           }}>
-            <div style={{ fontSize: '64px', marginBottom: '16px' }}>ðŸ’¬</div>
+            <div style={{ fontSize: '64px', marginBottom: '16px' }}>Ã°Å¸â€™Â¬</div>
             <h3 style={{ margin: '0 0 8px 0' }}>No reviews yet</h3>
             <p style={{ margin: 0 }}>Be the first to share your experience!</p>
           </div>

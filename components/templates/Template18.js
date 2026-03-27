@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/templates/Template18.js
 // OPTIMIZED: Contact info styling from Template1
 // - LinkedIn "in" icon with blue color
@@ -19,14 +19,14 @@ import LoadingSpinner from '../LoadingSpinner';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T18_ICON_MAPPING = Object.freeze({
-  email: 'âœ‰',
-  phone: 'ðŸ“ž',
-  location: 'ðŸ“',
+  email: 'Ã¢Å“â€°',
+  phone: 'Ã°Å¸â€œÅ¾',
+  location: 'Ã°Å¸â€œÂ',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'âŒ¨',
-  portfolio: 'ðŸŒ',
-  website: 'ðŸŒ',
-  default: 'ðŸ“Œ'
+  github: 'Ã¢Å’Â¨',
+  portfolio: 'Ã°Å¸Å’Â',
+  website: 'Ã°Å¸Å’Â',
+  default: 'Ã°Å¸â€œÅ’'
 });
 
 // CONSTANTS - IMMUTABLE
@@ -44,29 +44,29 @@ const CONTENT_LIMITS = Object.freeze({
 
 // Icon mapping - IMMUTABLE
 const ICONS = Object.freeze({
-  email: 'âœ‰',
-  phone: 'ðŸ“ž',
-  location: 'ðŸ“',
+  email: 'Ã¢Å“â€°',
+  phone: 'Ã°Å¸â€œÅ¾',
+  location: 'Ã°Å¸â€œÂ',
   linkedin: 'in',
-  github: 'âŒ¨',
-  portfolio: 'ðŸŒ',
-  education: 'ðŸŽ“',
-  internship: 'ðŸ’¼',
-  project: 'âš¡',
-  skill: 'âš¡',
-  certification: 'ðŸ“œ',
-  language: 'ðŸ—£ï¸',
-  about: 'ðŸ“',
-  calendar: 'ðŸ“…',
-  code: 'âŒ¨ï¸',
-  demo: 'ðŸ”—',
-  gpa: 'ðŸ“Š',
-  badge: 'â€¢',
-  bullet: 'â€¢',
-  triangle: 'â–¹',
-  dot: 'â€¢',
-  default: 'â€¢',
-  link: 'ðŸ”—'
+  github: 'Ã¢Å’Â¨',
+  portfolio: 'Ã°Å¸Å’Â',
+  education: 'Ã°Å¸Å½â€œ',
+  internship: 'Ã°Å¸â€™Â¼',
+  project: 'Ã¢Å¡Â¡',
+  skill: 'Ã¢Å¡Â¡',
+  certification: 'Ã°Å¸â€œÅ“',
+  language: 'Ã°Å¸â€”Â£Ã¯Â¸Â',
+  about: 'Ã°Å¸â€œÂ',
+  calendar: 'Ã°Å¸â€œâ€¦',
+  code: 'Ã¢Å’Â¨Ã¯Â¸Â',
+  demo: 'Ã°Å¸â€â€”',
+  gpa: 'Ã°Å¸â€œÅ ',
+  badge: 'Ã¢â‚¬Â¢',
+  bullet: 'Ã¢â‚¬Â¢',
+  triangle: 'Ã¢â€“Â¹',
+  dot: 'Ã¢â‚¬Â¢',
+  default: 'Ã¢â‚¬Â¢',
+  link: 'Ã°Å¸â€â€”'
 });
 
 // Helper functions - Immutable
@@ -105,7 +105,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} â€“ ${endDate}`;
+    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
   },
 
   formatGPA: (gpa) => {

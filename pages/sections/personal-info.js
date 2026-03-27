@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -163,62 +163,62 @@ export default function PersonalInfoSectionGuide() {
   const internationalGuidelines = [
     {
       region: "USA & Canada",
-      photo: "âŒ Not recommended",
-      personalDetails: "âŒ Avoid age, marital status, nationality",
+      photo: "Ã¢ÂÅ’ Not recommended",
+      personalDetails: "Ã¢ÂÅ’ Avoid age, marital status, nationality",
       notes: "Focus on skills and experience. Photo can lead to discrimination claims."
     },
     {
       region: "United Kingdom",
-      photo: "âš ï¸ Usually not required",
-      personalDetails: "âŒ Avoid personal details",
+      photo: "Ã¢Å¡Â Ã¯Â¸Â Usually not required",
+      personalDetails: "Ã¢ÂÅ’ Avoid personal details",
       notes: "Equal opportunity laws discourage personal information beyond contact details."
     },
     {
       region: "Germany & Austria",
-      photo: "âœ… Often expected",
-      personalDetails: "âš ï¸ Photo, age, marital status sometimes included",
+      photo: "Ã¢Å“â€¦ Often expected",
+      personalDetails: "Ã¢Å¡Â Ã¯Â¸Â Photo, age, marital status sometimes included",
       notes: "Traditional resumes often include professional photo and date of birth. Check company culture."
     },
     {
       region: "France & Belgium",
-      photo: "âš ï¸ Optional but common",
-      personalDetails: "âš ï¸ Age sometimes included",
+      photo: "Ã¢Å¡Â Ã¯Â¸Â Optional but common",
+      personalDetails: "Ã¢Å¡Â Ã¯Â¸Â Age sometimes included",
       notes: "Modern resumes often omit photo. Photo laws are changing to prevent discrimination."
     },
     {
       region: "Netherlands & Scandinavia",
-      photo: "âŒ Not recommended",
-      personalDetails: "âŒ Avoid personal details",
+      photo: "Ã¢ÂÅ’ Not recommended",
+      personalDetails: "Ã¢ÂÅ’ Avoid personal details",
       notes: "Focus on qualifications. Photos are increasingly seen as outdated."
     },
     {
       region: "Australia & New Zealand",
-      photo: "âŒ Not recommended",
-      personalDetails: "âŒ Avoid personal details",
+      photo: "Ã¢ÂÅ’ Not recommended",
+      personalDetails: "Ã¢ÂÅ’ Avoid personal details",
       notes: "Similar to US/UK standards. Anti-discrimination laws protect candidates."
     },
     {
       region: "United Arab Emirates (UAE)",
-      photo: "âœ… Often expected",
-      personalDetails: "âœ… Photo, nationality sometimes included",
+      photo: "Ã¢Å“â€¦ Often expected",
+      personalDetails: "Ã¢Å“â€¦ Photo, nationality sometimes included",
       notes: "Professional photo is common. Include nationality if relevant to work visa."
     },
     {
       region: "India",
-      photo: "âš ï¸ Varies by industry",
-      personalDetails: "âš ï¸ Age sometimes included",
+      photo: "Ã¢Å¡Â Ã¯Â¸Â Varies by industry",
+      personalDetails: "Ã¢Å¡Â Ã¯Â¸Â Age sometimes included",
       notes: "IT/tech roles often omit photo; traditional industries may expect it. Check company norms."
     },
     {
       region: "Japan & South Korea",
-      photo: "âœ… Standard practice",
-      personalDetails: "âœ… Photo, age, sometimes marital status",
+      photo: "Ã¢Å“â€¦ Standard practice",
+      personalDetails: "Ã¢Å“â€¦ Photo, age, sometimes marital status",
       notes: "Resumes often include professional photo, birth date, and other personal details on standardized forms."
     },
     {
       region: "China & Hong Kong",
-      photo: "âœ… Often expected",
-      personalDetails: "âœ… Photo, age common",
+      photo: "Ã¢Å“â€¦ Often expected",
+      personalDetails: "Ã¢Å“â€¦ Photo, age common",
       notes: "Professional photo is standard. Age and sometimes gender are typically included."
     }
   ];
@@ -236,8 +236,8 @@ linkedin.com/in/johnsmith | github.com/johnsmith`
       title: "Creative Professional Format",
       style: "creative",
       content: `JOHN SMITH
-ðŸ“ San Francisco, CA  |  ðŸ“ž (555) 123-4567  |  âœ‰ï¸ john.smith@email.com
-ðŸŽ¨ Portfolio: jsmithdesign.com  |  ðŸ’¼ LinkedIn: /in/johnsmith`
+Ã°Å¸â€œÂ San Francisco, CA  |  Ã°Å¸â€œÅ¾ (555) 123-4567  |  Ã¢Å“â€°Ã¯Â¸Â john.smith@email.com
+Ã°Å¸Å½Â¨ Portfolio: jsmithdesign.com  |  Ã°Å¸â€™Â¼ LinkedIn: /in/johnsmith`
     },
     {
       title: "Modern Tech Format",
@@ -253,9 +253,9 @@ GitHub: github.com/jsmith  |  LinkedIn: /in/johnsmith`
       content: `[Professional Photo]
 
 JOHN SMITH
-ðŸ“ž +49 123 4567890  |  âœ‰ï¸ john.smith@email.com
-ðŸ“ Berlin, Germany
-ðŸ“… Born: 15.05.1990  |  ðŸ  Married`
+Ã°Å¸â€œÅ¾ +49 123 4567890  |  Ã¢Å“â€°Ã¯Â¸Â john.smith@email.com
+Ã°Å¸â€œÂ Berlin, Germany
+Ã°Å¸â€œâ€¦ Born: 15.05.1990  |  Ã°Å¸ÂÂ  Married`
     }
   ];
 
@@ -286,9 +286,9 @@ JOHN SMITH
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">â€º</span>
+          <span aria-hidden="true">Ã¢â‚¬Âº</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">â€º</span>
+          <span aria-hidden="true">Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Personal Info Guide</span>
         </nav>
 
@@ -298,14 +298,14 @@ JOHN SMITH
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>ðŸ“… Updated: March 23, 2026</span>
-            <span>â±ï¸ 8 min read</span>
-            <span>ðŸ‘ï¸ 32,000+ readers</span>
-            <span>ðŸŒ 10+ Country Guidelines</span>
+            <span>Ã°Å¸â€œâ€¦ Updated: March 23, 2026</span>
+            <span>Ã¢ÂÂ±Ã¯Â¸Â 8 min read</span>
+            <span>Ã°Å¸â€˜ÂÃ¯Â¸Â 32,000+ readers</span>
+            <span>Ã°Å¸Å’Â 10+ Country Guidelines</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
-            Your resume's personal information section is the headerâ€”the first thing a recruiter sees. 
+            Your resume's personal information section is the headerÃ¢â‚¬â€the first thing a recruiter sees. 
             <strong>Well-formatted headers with professional contact details increase response rates by 25%</strong>. 
             Learn exactly what to include, what to avoid, and how to format for your target country.
           </p>
@@ -319,13 +319,13 @@ JOHN SMITH
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Ã°Å¸â€œâ€“ Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#what-to-include" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ What to Include</a>
-            <a href="#what-to-avoid" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ What to Avoid</a>
-            <a href="#international" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ International Guidelines</a>
-            <a href="#samples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Sample Headers</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
+            <a href="#what-to-include" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ What to Include</a>
+            <a href="#what-to-avoid" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ What to Avoid</a>
+            <a href="#international" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ International Guidelines</a>
+            <a href="#samples" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Sample Headers</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ FAQ</a>
           </div>
         </div>
 
@@ -338,7 +338,7 @@ JOHN SMITH
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>ðŸ’¡ Pro Tip:</strong> Ensure your email and LinkedIn profile are up-to-date and professional. 
+            <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> Ensure your email and LinkedIn profile are up-to-date and professional. 
             Recruiters check these within 30 seconds of reviewing your resume. A customized LinkedIn URL (linkedin.com/in/yourname) looks more professional than the default random string.
           </p>
         </div>
@@ -346,7 +346,7 @@ JOHN SMITH
         {/* What to Include Section */}
         <section id="what-to-include">
           <h2 style={{ fontSize: '32px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px', borderBottom: '2px solid #0070f3', paddingBottom: '8px', display: 'inline-block' }}>
-            âœ… What to Include in Your Resume Header
+            Ã¢Å“â€¦ What to Include in Your Resume Header
           </h2>
           
           <div style={{
@@ -359,19 +359,19 @@ JOHN SMITH
             <div style={{ background: '#e8f5e9', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #2e7d32' }}>
               <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#2e7d32' }}>Essential Information</h3>
               <ul style={{ margin: 0, lineHeight: '1.8' }}>
-                <li><strong>âœ“ Full Name</strong> - Use your legal name; professional nickname optional</li>
-                <li><strong>âœ“ Professional Email</strong> - firstname.lastname@domain.com format</li>
-                <li><strong>âœ“ Phone Number</strong> - Include country code for international roles</li>
-                <li><strong>âœ“ Location</strong> - City and state/country only (no street address)</li>
+                <li><strong>Ã¢Å“â€œ Full Name</strong> - Use your legal name; professional nickname optional</li>
+                <li><strong>Ã¢Å“â€œ Professional Email</strong> - firstname.lastname@domain.com format</li>
+                <li><strong>Ã¢Å“â€œ Phone Number</strong> - Include country code for international roles</li>
+                <li><strong>Ã¢Å“â€œ Location</strong> - City and state/country only (no street address)</li>
               </ul>
             </div>
             <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ed6c02' }}>
               <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#ed6c02' }}>Optional but Recommended</h3>
               <ul style={{ margin: 0, lineHeight: '1.8' }}>
-                <li><strong>âœ“ LinkedIn Profile</strong> - Custom URL: linkedin.com/in/yourname</li>
-                <li><strong>âœ“ Professional Website/Portfolio</strong> - Essential for creative roles</li>
-                <li><strong>âœ“ GitHub/GitLab Profile</strong> - Required for developer roles</li>
-                <li><strong>âœ“ Portfolio/Behance/Dribbble</strong> - For designers and creatives</li>
+                <li><strong>Ã¢Å“â€œ LinkedIn Profile</strong> - Custom URL: linkedin.com/in/yourname</li>
+                <li><strong>Ã¢Å“â€œ Professional Website/Portfolio</strong> - Essential for creative roles</li>
+                <li><strong>Ã¢Å“â€œ GitHub/GitLab Profile</strong> - Required for developer roles</li>
+                <li><strong>Ã¢Å“â€œ Portfolio/Behance/Dribbble</strong> - For designers and creatives</li>
               </ul>
             </div>
           </div>
@@ -380,24 +380,24 @@ JOHN SMITH
         {/* What NOT to Include Section */}
         <section id="what-to-avoid">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            âŒ What NOT to Include on Your Resume
+            Ã¢ÂÅ’ What NOT to Include on Your Resume
           </h2>
           <div style={{ background: '#ffebee', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #dc2626' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
               <div>
-                <p><strong>âœ— Photo</strong> - Not required in US/UK/Canada; can lead to bias</p>
-                <p><strong>âœ— Age or Birth Date</strong> - Age discrimination risk</p>
-                <p><strong>âœ— Marital Status</strong> - Completely irrelevant</p>
+                <p><strong>Ã¢Å“â€” Photo</strong> - Not required in US/UK/Canada; can lead to bias</p>
+                <p><strong>Ã¢Å“â€” Age or Birth Date</strong> - Age discrimination risk</p>
+                <p><strong>Ã¢Å“â€” Marital Status</strong> - Completely irrelevant</p>
               </div>
               <div>
-                <p><strong>âœ— Social Security Number</strong> - Major security risk</p>
-                <p><strong>âœ— Full Street Address</strong> - City/state only needed</p>
-                <p><strong>âœ— Unprofessional Email</strong> - Avoid nicknames/numbers</p>
+                <p><strong>Ã¢Å“â€” Social Security Number</strong> - Major security risk</p>
+                <p><strong>Ã¢Å“â€” Full Street Address</strong> - City/state only needed</p>
+                <p><strong>Ã¢Å“â€” Unprofessional Email</strong> - Avoid nicknames/numbers</p>
               </div>
               <div>
-                <p><strong>âœ— Nationality</strong> - Unless visa sponsorship required</p>
-                <p><strong>âœ— Religious Affiliation</strong> - Illegal discrimination in many countries</p>
-                <p><strong>âœ— Political Views</strong> - Never relevant to qualifications</p>
+                <p><strong>Ã¢Å“â€” Nationality</strong> - Unless visa sponsorship required</p>
+                <p><strong>Ã¢Å“â€” Religious Affiliation</strong> - Illegal discrimination in many countries</p>
+                <p><strong>Ã¢Å“â€” Political Views</strong> - Never relevant to qualifications</p>
               </div>
             </div>
           </div>
@@ -406,7 +406,7 @@ JOHN SMITH
         {/* International Guidelines Section */}
         <section id="international">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            ðŸŒ International Resume Formatting Guidelines
+            Ã°Å¸Å’Â International Resume Formatting Guidelines
           </h2>
           <p style={{ marginBottom: '20px' }}>
             Personal information expectations vary by country. Research your target country's norms before applying:
@@ -465,16 +465,16 @@ JOHN SMITH
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ðŸ¤– ATS-Friendly Header Formatting
+            Ã°Å¸Â¤â€“ ATS-Friendly Header Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>Keep formatting simple:</strong> Avoid tables, text boxes, or columns in your headerâ€”ATS systems may not parse them correctly</li>
+              <li><strong>Keep formatting simple:</strong> Avoid tables, text boxes, or columns in your headerÃ¢â‚¬â€ATS systems may not parse them correctly</li>
               <li><strong>Use standard fonts:</strong> Arial, Calibri, Helvetica, or Times New Roman for best compatibility</li>
               <li><strong>Place contact info on one line:</strong> Use pipes (|) or commas to separate items for easy parsing</li>
               <li><strong>Include full name at top:</strong> Make it the largest text (18-24pt) for clear identification</li>
               <li><strong>Avoid graphics:</strong> No icons, logos, or decorative elements that may confuse ATS parsers</li>
-              <li><strong>Use standard section order:</strong> Name â†’ Contact Info â†’ Professional Summary</li>
+              <li><strong>Use standard section order:</strong> Name Ã¢â€ â€™ Contact Info Ã¢â€ â€™ Professional Summary</li>
             </ul>
           </div>
         </section>
@@ -525,7 +525,7 @@ JOHN SMITH
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now â†’
+            Build Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 
@@ -536,12 +536,12 @@ JOHN SMITH
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ¡ Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide â†’</Link>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 â†’</Link>
-            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume â†’</Link>
+            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide Ã¢â€ â€™</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide Ã¢â€ â€™</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 Ã¢â€ â€™</Link>
+            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume Ã¢â€ â€™</Link>
           </div>
         </div>
       </main>

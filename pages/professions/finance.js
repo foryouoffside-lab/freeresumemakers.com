@@ -1,4 +1,4 @@
-// pages/professions/finance.js
+﻿// pages/professions/finance.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -85,7 +85,7 @@ export default function FinanceExamples() {
           {
             title: 'Acquisition of TechSolutions Pvt Ltd',
             role: 'Analyst',
-            value: 'â‚¹150Cr',
+            value: 'Ã¢â€šÂ¹150Cr',
             year: '2025',
             description: 'Advised ABC Corp on strategic acquisition of TechSolutions, a leading SaaS provider. Led financial modeling and due diligence.',
             outcome: 'Deal closed 2 months ahead of schedule with favorable terms'
@@ -93,7 +93,7 @@ export default function FinanceExamples() {
           {
             title: 'Series B Funding for HealthTech Startup',
             role: 'Analyst',
-            value: 'â‚¹80Cr',
+            value: 'Ã¢â€šÂ¹80Cr',
             year: '2024',
             description: 'Assisted in raising growth capital from PE investors for healthcare technology platform.',
             outcome: 'Oversubscribed by 2.5x with top-tier investors'
@@ -101,7 +101,7 @@ export default function FinanceExamples() {
           {
             title: 'Sell-side Advisory for Manufacturing Co',
             role: 'Analyst',
-            value: 'â‚¹70Cr',
+            value: 'Ã¢â€šÂ¹70Cr',
             year: '2023',
             description: 'Advised promoters on strategic sale to international strategic buyer. Built valuation models and managed data room.',
             outcome: 'Achieved 3x EBITDA multiple premium'
@@ -170,11 +170,11 @@ export default function FinanceExamples() {
             company: 'Deloitte India, Gurugram',
             period: '2020-Present',
             points: [
-              'Lead audit and assurance engagements for 15+ clients including listed companies and private enterprises with revenues up to â‚¹500Cr',
+              'Lead audit and assurance engagements for 15+ clients including listed companies and private enterprises with revenues up to Ã¢â€šÂ¹500Cr',
               'Successfully led Ind AS implementation for 5 manufacturing companies, ensuring smooth transition',
-              'Managed client portfolio of â‚¹3Cr in annual audit fees, achieving 95% client retention',
+              'Managed client portfolio of Ã¢â€šÂ¹3Cr in annual audit fees, achieving 95% client retention',
               'Conducted 20+ training sessions on Ind AS and audit standards for 50+ team members',
-              'Identified â‚¹25Cr in tax savings for clients through strategic tax planning',
+              'Identified Ã¢â€šÂ¹25Cr in tax savings for clients through strategic tax planning',
               'Received "Exceptional Performance" rating for 3 consecutive years'
             ]
           },
@@ -185,14 +185,14 @@ export default function FinanceExamples() {
             points: [
               'Managed statutory audits for 12+ clients across manufacturing, real estate, and services sectors',
               'Prepared financial statements in compliance with Ind AS and Schedule III requirements for 8 clients',
-              'Handled direct tax assessments for 10 corporate clients, successfully resolving â‚¹15Cr in tax disputes',
+              'Handled direct tax assessments for 10 corporate clients, successfully resolving Ã¢â€šÂ¹15Cr in tax disputes',
               'Mentored and trained 15 article assistants, with 5 receiving ICAI All India Ranks',
               'Reduced audit turnaround time by 25% through process optimization'
             ]
           }
         ],
         clients: [
-          'ABC Manufacturing Ltd (Listed) - Revenue â‚¹350Cr',
+          'ABC Manufacturing Ltd (Listed) - Revenue Ã¢â€šÂ¹350Cr',
           'XYZ Realty Pvt Ltd - Portfolio of 12 projects',
           'PQR Healthcare Ltd - Chain of 25 hospitals',
           'TechStart Solutions Inc - Series B funded startup'
@@ -294,11 +294,11 @@ export default function FinanceExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <Link href="/professions/finance" style={{ color: '#666', textDecoration: 'none' }}>Finance Resumes</Link>
-            <span>â€º</span>
+            <span>Ã¢â‚¬Âº</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -329,7 +329,7 @@ export default function FinanceExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Finance Resume Examples
+            Ã¢â€ Â Back to All Finance Resume Examples
           </button>
 
           {/* Template Header */}
@@ -596,7 +596,7 @@ export default function FinanceExamples() {
                       </p>
                       {deal.outcome && (
                         <p style={{ color: '#0070f3', fontSize: '12px', margin: '4px 0 0 0' }}>
-                          âœ“ {deal.outcome}
+                          Ã¢Å“â€œ {deal.outcome}
                         </p>
                       )}
                     </div>
@@ -729,9 +729,9 @@ export default function FinanceExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Finance Resumes</span>
         </nav>
 
@@ -802,7 +802,7 @@ export default function FinanceExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Deal Transaction Value</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CFA â€¢ CA â€¢ CPA</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CFA Ã¢â‚¬Â¢ CA Ã¢â‚¬Â¢ CPA</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -941,7 +941,7 @@ export default function FinanceExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume â†’
+                  View Complete Resume Ã¢â€ â€™
                 </span>
               </div>
             </div>
@@ -970,7 +970,7 @@ export default function FinanceExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Financial Impact</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "$300M+ deal value", "Identified â‚¹25Cr in tax savings", "Managed â‚¹3Cr audit portfolio", "Achieved 95% client retention". Numbers demonstrate tangible value to employers.</p>
+              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "$300M+ deal value", "Identified Ã¢â€šÂ¹25Cr in tax savings", "Managed Ã¢â€šÂ¹3Cr audit portfolio", "Achieved 95% client retention". Numbers demonstrate tangible value to employers.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Technical Expertise</h3>
@@ -1025,7 +1025,7 @@ export default function FinanceExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now â†’
+            Create Your Resume Now Ã¢â€ â€™
           </Link>
         </div>
 

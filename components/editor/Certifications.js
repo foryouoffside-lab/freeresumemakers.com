@@ -1,4 +1,4 @@
-// client/src/components/forms/Certifications.js
+﻿// client/src/components/forms/Certifications.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 
@@ -121,7 +121,7 @@ const certificationCategories = {
       { name: "Certified Kubernetes Administrator (CKA)", issuer: "Cloud Native Computing Foundation" },
       { name: "Cisco Certified Network Professional (CCNP)", issuer: "Cisco" },
       { name: "CompTIA Security+", issuer: "CompTIA" },
-      { name: "Certified Information Systems Security Professional (CISSP)", issuer: "ISCÂ²" },
+      { name: "Certified Information Systems Security Professional (CISSP)", issuer: "ISCÃ‚Â²" },
       { name: "AWS Certified Developer", issuer: "Amazon Web Services" }
     ]
   },
@@ -1093,7 +1093,7 @@ const Certifications = ({
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>ðŸ“œ</span>
+                  <span>Ã°Å¸â€œÅ“</span>
                   Your Certifications
                 </h2>
                 <div style={{
@@ -1115,7 +1115,7 @@ const Certifications = ({
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>ðŸ“œ</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>Ã°Å¸â€œÅ“</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No certifications added yet
                   </p>
@@ -1170,7 +1170,7 @@ const Certifications = ({
                             fontSize: '14px'
                           }}
                         >
-                          âœ•
+                          Ã¢Å“â€¢
                         </button>
                       </div>
                       
@@ -1188,7 +1188,7 @@ const Certifications = ({
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            ðŸ“… {cert.date}
+                            Ã°Å¸â€œâ€¦ {cert.date}
                           </span>
                         )}
                       </div>
@@ -1283,7 +1283,7 @@ const Certifications = ({
                     transition: 'all 0.2s'
                   }}
                 >
-                  <span>{category.icon || 'ðŸ“œ'}</span>
+                  <span>{category.icon || 'Ã°Å¸â€œÅ“'}</span>
                   <span>{category.label}</span>
                 </button>
               ))}
@@ -1306,7 +1306,7 @@ const Certifications = ({
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>â­</span>
+                <span>Ã¢Â­Â</span>
                 Popular {certificationCategories[selectedCategory]?.label} Certifications
               </h2>
               <p style={{
@@ -1314,7 +1314,7 @@ const Certifications = ({
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add â€¢ These certifications are highly valued by employers
+                Click to add Ã¢â‚¬Â¢ These certifications are highly valued by employers
               </p>
               
               <div style={{
@@ -1355,7 +1355,7 @@ const Certifications = ({
                       title={!canAdd && !isAdded ? `Max ${maxCertificationsLimit} certifications reached` : ""}
                     >
                       {cert.name}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>âœ“</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>Ã¢Å“â€œ</span>}
                     </button>
                   );
                 })}
@@ -1420,7 +1420,7 @@ const Certifications = ({
                       >
                         <div style={{ fontWeight: 600, fontSize: '13px', color: '#2d3748' }}>{cert.name}</div>
                         <div style={{ fontSize: '11px', color: '#718096', marginTop: '4px' }}>{cert.issuer}</div>
-                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>âœ“ Added</div>}
+                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>Ã¢Å“â€œ Added</div>}
                       </button>
                     );
                   })}

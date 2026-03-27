@@ -1,4 +1,4 @@
-// client/src/components/forms/Awards.js
+﻿// client/src/components/forms/Awards.js
 // STABLE VERSION - Fixed infinite save loop, proper layout, and functionality
 // ============================================
 
@@ -1098,7 +1098,7 @@ const Awards = ({
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>ðŸ†</span>
+                  <span>Ã°Å¸Ââ€ </span>
                   Your Awards
                 </h2>
                 <div style={{
@@ -1120,7 +1120,7 @@ const Awards = ({
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>ðŸ†</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>Ã°Å¸Ââ€ </div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No awards added yet
                   </p>
@@ -1175,7 +1175,7 @@ const Awards = ({
                             fontSize: '14px'
                           }}
                         >
-                          âœ•
+                          Ã¢Å“â€¢
                         </button>
                       </div>
                       
@@ -1193,7 +1193,7 @@ const Awards = ({
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            ðŸ“… {award.date}
+                            Ã°Å¸â€œâ€¦ {award.date}
                           </span>
                         )}
                       </div>
@@ -1288,7 +1288,7 @@ const Awards = ({
                     transition: 'all 0.2s'
                   }}
                 >
-                  <span>{category.icon || 'ðŸ†'}</span>
+                  <span>{category.icon || 'Ã°Å¸Ââ€ '}</span>
                   <span>{category.label}</span>
                 </button>
               ))}
@@ -1311,7 +1311,7 @@ const Awards = ({
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>â­</span>
+                <span>Ã¢Â­Â</span>
                 Popular {awardCategories[selectedCategory]?.label} Awards
               </h2>
               <p style={{
@@ -1319,7 +1319,7 @@ const Awards = ({
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add â€¢ These awards are highly valued by employers
+                Click to add Ã¢â‚¬Â¢ These awards are highly valued by employers
               </p>
               
               <div style={{
@@ -1360,7 +1360,7 @@ const Awards = ({
                       title={!canAdd && !isAdded ? `Max ${maxAwardsLimit} awards reached` : ""}
                     >
                       {award.title}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>âœ“</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>Ã¢Å“â€œ</span>}
                     </button>
                   );
                 })}
@@ -1425,7 +1425,7 @@ const Awards = ({
                       >
                         <div style={{ fontWeight: 600, fontSize: '13px', color: '#2d3748' }}>{award.title}</div>
                         <div style={{ fontSize: '11px', color: '#718096', marginTop: '4px' }}>{award.issuer}</div>
-                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>âœ“ Added</div>}
+                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>Ã¢Å“â€œ Added</div>}
                       </button>
                     );
                   })}

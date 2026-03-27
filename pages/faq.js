@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -152,7 +152,7 @@ export default function FAQ() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>FAQ</span>
         </nav>
 
@@ -283,7 +283,7 @@ export default function FAQ() {
                       transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s'
                     }}>
-                      â–¼
+                      Ã¢â€“Â¼
                     </span>
                   </button>
                   
@@ -301,21 +301,21 @@ export default function FAQ() {
                       {faq.q.includes("template") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Browse all templates â†’
+                            Browse all templates Ã¢â€ â€™
                           </Link>
                         </p>
                       )}
                       {faq.q.includes("download") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Start building your resume â†’
+                            Start building your resume Ã¢â€ â€™
                           </Link>
                         </p>
                       )}
                       {faq.q.includes("start building") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Create your resume now â†’
+                            Create your resume now Ã¢â€ â€™
                           </Link>
                         </p>
                       )}
@@ -464,7 +464,7 @@ export default function FAQ() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '24px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | 100% Free | ATS-Friendly</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | 100% Free | ATS-Friendly</p>
         </div>
       </main>
     </>

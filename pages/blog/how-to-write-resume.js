@@ -1,4 +1,4 @@
-// pages/blog/how-to-write-resume.js
+﻿// pages/blog/how-to-write-resume.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -202,9 +202,9 @@ export default function HowToWriteResume() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>How to Write a Resume</span>
         </div>
 
@@ -459,7 +459,7 @@ export default function HowToWriteResume() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>âœ“</span>
+                    <span style={{ color: '#0070f3' }}>Ã¢Å“â€œ</span>
                     <span style={{ fontSize: '15px' }}>{item}</span>
                   </div>
                 ))}
@@ -747,7 +747,7 @@ export default function HowToWriteResume() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>âœ“</span>
+                    <span style={{ color: '#0070f3' }}>Ã¢Å“â€œ</span>
                     <span style={{ fontSize: '14px' }}>{tip}</span>
                   </div>
                 ))}
@@ -817,7 +817,7 @@ export default function HowToWriteResume() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Writing Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes all essential elements.
@@ -901,10 +901,10 @@ export default function HowToWriteResume() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('How to Write a Resume: Complete Step-by-Step Guide')}&url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/how-to-write-resume` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('How to Write a Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/how-to-write-resume')}` }
+              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('How to Write a Resume: Complete Step-by-Step Guide')}&url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('How to Write a Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/how-to-write-resume')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -991,7 +991,7 @@ export default function HowToWriteResume() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1077,7 +1077,7 @@ export default function HowToWriteResume() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 15, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 15, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

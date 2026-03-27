@@ -1,4 +1,4 @@
-// pages/api/verify-payment.js
+﻿// pages/api/verify-payment.js
 import crypto from 'crypto';
 
 export default async function handler(req, res) {

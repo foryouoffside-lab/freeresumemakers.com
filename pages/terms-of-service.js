@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -102,7 +102,7 @@ export default function TermsOfService() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Terms of Service</span>
         </nav>
 
@@ -487,7 +487,7 @@ export default function TermsOfService() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                Contact Form â†’
+                Contact Form Ã¢â€ â€™
               </Link>
             </div>
           </div>
@@ -538,7 +538,7 @@ export default function TermsOfService() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '24px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | Free Forever</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | Free Forever</p>
           <div style={{
             display: 'flex',
             justifyContent: 'center',

@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+﻿import React, { useRef, useMemo } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== CONTENT LIMITS =====
@@ -30,13 +30,13 @@ const SPACING_CONFIG = {
 
 // ===== ICON MAPPING - Using Template12 original icons =====
 const ICON_MAPPING = {
-  email: 'âœ‰',
-  phone: 'ðŸ“ž',
-  address: 'ðŸ“',
+  email: 'Ã¢Å“â€°',
+  phone: 'Ã°Å¸â€œÅ¾',
+  address: 'Ã°Å¸â€œÂ',
   linkedin: { icon: 'in', color: '#0077b5' },
-  github: 'âŒ¨',
-  portfolio: 'ðŸŒ',
-  default: 'ðŸ“Œ'
+  github: 'Ã¢Å’Â¨',
+  portfolio: 'Ã°Å¸Å’Â',
+  default: 'Ã°Å¸â€œÅ’'
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -175,9 +175,9 @@ const formatEducationDateRange = (edu) => {
   const end = current ? 'Present' : formatWithMonth(endDate);
   
   if (start && end && end !== 'Present') {
-    return `${start} â€“ ${end}`;
+    return `${start} Ã¢â‚¬â€œ ${end}`;
   } else if (start && current) {
-    return `${start} â€“ Present`;
+    return `${start} Ã¢â‚¬â€œ Present`;
   } else if (start) {
     return start;
   } else if (end) {
@@ -1142,7 +1142,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.expPosition}>{safeString(exp.position) || 'Position Not Specified'}</h3>
             <div style={styles.dateStyle}>
-              {exp.startDate ? formatDate(exp.startDate) : 'Start'} â€“ {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
+              {exp.startDate ? formatDate(exp.startDate) : 'Start'} Ã¢â‚¬â€œ {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
             </div>
           </div>
           
@@ -1150,7 +1150,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
             <span style={styles.expCompany}>{safeString(exp.company) || 'Company Not Specified'}</span>
             {exp.companyLocation && exp.companyLocation.trim() && (
               <span style={styles.expLocation}>
-                <span style={styles.locationIcon}>ðŸ“</span>
+                <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span>
                 <span>{exp.companyLocation}</span>
               </span>
             )}
@@ -1198,7 +1198,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.projectName}>{project.name || 'Project Name'}</h3>
             <div style={styles.projectDates}>
-              {project.startDate ? formatDate(project.startDate) : 'Start'} â€“ {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
+              {project.startDate ? formatDate(project.startDate) : 'Start'} Ã¢â‚¬â€œ {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
             </div>
           </div>
           
@@ -1250,7 +1250,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
         
         {edu.location && (
           <div style={styles.eduLocationLeft}>
-            <span>ðŸ“</span> {edu.location}
+            <span>Ã°Å¸â€œÂ</span> {edu.location}
           </div>
         )}
         
@@ -1475,7 +1475,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
               <div style={styles.skillsContent}>
                 {contentAnalysis.skills.map((skill, index) => (
                   <div key={index} style={styles.skillLine}>
-                    <div style={styles.skillBullet}>â—</div>
+                    <div style={styles.skillBullet}>Ã¢â€”Â</div>
                     <div style={styles.skillName}>{skill}</div>
                   </div>
                 ))}

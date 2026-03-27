@@ -1,4 +1,4 @@
-// components/templates/TemplateSelector.js
+﻿// components/templates/TemplateSelector.js
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -324,7 +324,7 @@ const TemplateSelector = ({ onTemplateSelect }) => {
               e.currentTarget.style.boxShadow = 'none';
             }}
             >
-              <span style={{ fontSize: '1.2rem', marginRight: '12px', color: '#667eea' }}>ðŸ”</span>
+              <span style={{ fontSize: '1.2rem', marginRight: '12px', color: '#667eea' }}>Ã°Å¸â€Â</span>
               <input
                 type="text"
                 placeholder="Search templates by name, features, or description..."
@@ -365,7 +365,7 @@ const TemplateSelector = ({ onTemplateSelect }) => {
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  Ã—
+                  Ãƒâ€”
                 </button>
               )}
             </div>
@@ -419,7 +419,7 @@ const TemplateSelector = ({ onTemplateSelect }) => {
           <div style={{ 
             fontSize: '4rem', 
             marginBottom: '20px'
-          }}>ðŸ˜•</div>
+          }}>Ã°Å¸Ëœâ€¢</div>
           <h3 style={{ marginBottom: '15px', color: '#333' }}>No templates found</h3>
           <p style={{ marginBottom: '25px', color: '#666' }}>
             Try adjusting your search term
@@ -529,7 +529,7 @@ const TemplateSelector = ({ onTemplateSelect }) => {
                           box-sizing: border-box;
                         `;
                         fallback.innerHTML = `
-                          <div style="font-size: 3rem; margin-bottom: 15px;">ðŸ“„</div>
+                          <div style="font-size: 3rem; margin-bottom: 15px;">Ã°Å¸â€œâ€ž</div>
                           <div style="font-weight: bold; font-size: 1.3rem; margin-bottom: 8px;">${template.name}</div>
                           <div style="font-size: 0.9rem; opacity: 0.9;">${template.description.substring(0, 50)}...</div>
                         `;

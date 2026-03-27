@@ -1,4 +1,4 @@
-// pages/blog/resume-for-career-change.js
+﻿// pages/blog/resume-for-career-change.js
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -179,9 +179,9 @@ export default function ResumeForCareerChange() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Resume for Career Change</span>
         </div>
 
@@ -653,7 +653,7 @@ export default function ResumeForCareerChange() {
               padding: '25px',
               margin: '20px 0'
             }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>Sales â†’ Customer Success</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>Sales Ã¢â€ â€™ Customer Success</h3>
               <p><strong>Summary:</strong> "Sales professional with 5+ years of experience in client relationships, transitioning to Customer Success to focus on long-term client partnerships."</p>
               <p><strong>Relevant Skills:</strong> Client relationship management, communication, problem-solving, CRM tools</p>
             </div>
@@ -664,7 +664,7 @@ export default function ResumeForCareerChange() {
               padding: '25px',
               margin: '20px 0'
             }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>Teaching â†’ Corporate Training</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>Teaching Ã¢â€ â€™ Corporate Training</h3>
               <p><strong>Summary:</strong> "Educator with 8+ years of experience in curriculum development and public speaking, transitioning to corporate training to apply instructional skills in a business setting."</p>
               <p><strong>Relevant Skills:</strong> Curriculum design, public speaking, assessment, stakeholder communication</p>
             </div>
@@ -752,7 +752,7 @@ export default function ResumeForCareerChange() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Career Change Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your career change resume includes all essential elements.
@@ -837,10 +837,10 @@ export default function ResumeForCareerChange() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume for Career Change: Complete Guide (2026)')}&url=https://freeresumemaker.xyz/blog/resume-for-career-change` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-for-career-change` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-for-career-change` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Career Change Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-for-career-change')}` }
+              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume for Career Change: Complete Guide (2026)')}&url=https://freeresumemaker.xyz/blog/resume-for-career-change` },
+              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-for-career-change` },
+              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-for-career-change` },
+              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Career Change Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-for-career-change')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -927,7 +927,7 @@ export default function ResumeForCareerChange() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1013,7 +1013,7 @@ export default function ResumeForCareerChange() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 5, 2026 | Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 5, 2026 | Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

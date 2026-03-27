@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -188,11 +188,11 @@ export default function Compare1Vs4() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>â€º</li>
+            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 1 vs Template 4</li>
           </ol>
         </nav>
@@ -209,7 +209,7 @@ export default function Compare1Vs4() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              ðŸŽ¯ COMPREHENSIVE vs TIMELINE SHOWDOWN
+              Ã°Å¸Å½Â¯ COMPREHENSIVE vs TIMELINE SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -241,13 +241,13 @@ export default function Compare1Vs4() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“Š Updated: March 2026
+              Ã°Å¸â€œÅ  Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              â­ 10+ Years Experience
+              Ã¢Â­Â 10+ Years Experience
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ðŸ“ˆ 3-8 Years Experience
+              Ã°Å¸â€œË† 3-8 Years Experience
             </div>
           </div>
         </header>
@@ -262,7 +262,7 @@ export default function Compare1Vs4() {
           border: '1px solid #e2e8f0'
         }}>
           <p style={{ fontSize: '1rem', color: '#1e293b', margin: 0 }}>
-            <strong>ðŸ’¡ Quick Guide:</strong> Choose <strong>Template 1 (Obsidian)</strong> if you have <strong>10+ years of experience</strong> or extensive career history. 
+            <strong>Ã°Å¸â€™Â¡ Quick Guide:</strong> Choose <strong>Template 1 (Obsidian)</strong> if you have <strong>10+ years of experience</strong> or extensive career history. 
             Choose <strong>Template 4 (The Strategist)</strong> if you have <strong>3-8 years of experience</strong> and want to showcase career progression visually.
           </p>
         </div>
@@ -295,10 +295,10 @@ export default function Compare1Vs4() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸ‘” COMPREHENSIVE EXECUTIVE
+              Ã°Å¸â€˜â€ COMPREHENSIVE EXECUTIVE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ“Š</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸â€œÅ </div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[1].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 1)</span>
@@ -308,7 +308,7 @@ export default function Compare1Vs4() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template1Sections.map(section => (
@@ -321,7 +321,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[1].features.map(feature => (
@@ -334,7 +334,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[1].bestFor.map(role => (
@@ -347,7 +347,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“Š Experience Level
+                Ã°Å¸â€œÅ  Experience Level
               </h3>
               <div style={{ 
                 background: '#eef2ff', 
@@ -378,7 +378,7 @@ export default function Compare1Vs4() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 1 â†’
+              View Template 1 Ã¢â€ â€™
             </Link>
           </div>
 
@@ -403,10 +403,10 @@ export default function Compare1Vs4() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ðŸ“ˆ TIMELINE FOCUSED
+              Ã°Å¸â€œË† TIMELINE FOCUSED
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>â±ï¸</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã¢ÂÂ±Ã¯Â¸Â</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[4].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 4)</span>
@@ -416,7 +416,7 @@ export default function Compare1Vs4() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“‹ Sections Included
+                Ã°Å¸â€œâ€¹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template4Sections.map(section => (
@@ -429,7 +429,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                âœ¨ Key Features
+                Ã¢Å“Â¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[4].features.map(feature => (
@@ -442,7 +442,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸŽ¯ Best For
+                Ã°Å¸Å½Â¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[4].bestFor.map(role => (
@@ -455,7 +455,7 @@ export default function Compare1Vs4() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ðŸ“Š Experience Level
+                Ã°Å¸â€œÅ  Experience Level
               </h3>
               <div style={{ 
                 background: '#eef2ff', 
@@ -486,7 +486,7 @@ export default function Compare1Vs4() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 4 â†’
+              View Template 4 Ã¢â€ â€™
             </Link>
           </div>
         </div>
@@ -494,7 +494,7 @@ export default function Compare1Vs4() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸ“Š Feature Comparison: Comprehensive Executive vs Timeline-Based
+            Ã°Å¸â€œÅ  Feature Comparison: Comprehensive Executive vs Timeline-Based
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -520,23 +520,23 @@ export default function Compare1Vs4() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Image/Avatar Support</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Experience Filtering</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… By Type</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ Single List</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ By Type</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ Single List</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Projects Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes (up to 4)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes (up to 4)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Timeline Visualization</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Square Markers</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Square Markers</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -576,12 +576,12 @@ export default function Compare1Vs4() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸŽ¯ Choose Based on Your Experience Level
+            Ã°Å¸Å½Â¯ Choose Based on Your Experience Level
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ‘”</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€˜â€</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 1 (Obsidian) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You have 10+ years of professional experience</li>
@@ -593,12 +593,12 @@ export default function Compare1Vs4() {
                 <li>You're a career changer needing to highlight transferable skills</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ’¼ Best for:</strong> Directors, VPs, C-Suite, Senior Managers, Experienced Consultants
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¼ Best for:</strong> Directors, VPs, C-Suite, Senior Managers, Experienced Consultants
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ“ˆ</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€œË†</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 4 (The Strategist) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You have 3-8 years of professional experience</li>
@@ -610,7 +610,7 @@ export default function Compare1Vs4() {
                 <li>You want a focused, easy-to-scan resume format</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>ðŸ“Š Best for:</strong> Project Managers, Consultants, Mid-Level Professionals, Career Progression Focus
+                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€œÅ  Best for:</strong> Project Managers, Consultants, Mid-Level Professionals, Career Progression Focus
               </div>
             </div>
           </div>
@@ -619,17 +619,17 @@ export default function Compare1Vs4() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            âš–ï¸ Pros & Cons Analysis
+            Ã¢Å¡â€“Ã¯Â¸Â Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 1 (Obsidian) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 1 (Obsidian) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 1 (Obsidian) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 1 (Obsidian) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -637,13 +637,13 @@ export default function Compare1Vs4() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 4 (The Strategist) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 4 (The Strategist) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[4].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 4 (The Strategist) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 4 (The Strategist) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[4].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -656,28 +656,28 @@ export default function Compare1Vs4() {
         {/* Career Scenario Guide */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ðŸŽ¯ Career Scenario Guide
+            Ã°Å¸Å½Â¯ Career Scenario Guide
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ‘¨â€ðŸ’¼</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€™Â¼</div>
               <strong>Senior Executive (15+ years)</strong>
-              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>â†’ Template 1 (Obsidian) - Comprehensive layout to showcase extensive leadership history</p>
+              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>Ã¢â€ â€™ Template 1 (Obsidian) - Comprehensive layout to showcase extensive leadership history</p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ“Š</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€œÅ </div>
               <strong>Project Manager (6 years)</strong>
-              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>â†’ Template 4 (The Strategist) - Timeline markers show project milestones</p>
+              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>Ã¢â€ â€™ Template 4 (The Strategist) - Timeline markers show project milestones</p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ”„</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€â€ž</div>
               <strong>Career Changer (12 years, switching industries)</strong>
-              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>â†’ Template 1 (Obsidian) - Experience filtering to highlight relevant skills</p>
+              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>Ã¢â€ â€™ Template 1 (Obsidian) - Experience filtering to highlight relevant skills</p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ“ˆ</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€œË†</div>
               <strong>Rapid Career Growth (5 years, multiple promotions)</strong>
-              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>â†’ Template 4 (The Strategist) - Visual timeline showcases progression</p>
+              <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>Ã¢â€ â€™ Template 4 (The Strategist) - Visual timeline showcases progression</p>
             </div>
           </div>
         </div>
@@ -685,7 +685,7 @@ export default function Compare1Vs4() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            â“ Frequently Asked Questions
+            Ã¢Ââ€œ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -738,7 +738,7 @@ export default function Compare1Vs4() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            ðŸ” Explore More Template Comparisons
+            Ã°Å¸â€Â Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

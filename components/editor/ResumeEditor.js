@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // components/editor/ResumeEditor.js
 // COMPLETE VERSION - WITH PROPER DOWNLOAD TRACKING
 // ============================================
@@ -64,7 +64,7 @@ const ResumeEditor = () => {
     }, 3000);
   };
 
-  // âœ… Track download - ONLY called when PDF is actually downloaded
+  // Ã¢Å“â€¦ Track download - ONLY called when PDF is actually downloaded
   const trackDownload = async (tid = selectedTemplateId) => {
     const templateToTrack = tid || selectedTemplateId;
     
@@ -95,7 +95,7 @@ const ResumeEditor = () => {
       
       return data;
     } catch (error) {
-      console.error('âŒ Error tracking download:', error);
+      console.error('Ã¢ÂÅ’ Error tracking download:', error);
     } finally {
       setIsTracking(false);
     }
@@ -186,8 +186,8 @@ const ResumeEditor = () => {
   };
 
   const getSafeSectionIcon = (section) => {
-    if (section === 'preview') return 'ðŸ‘ï¸';
-    return getSectionIcon(section) || 'ðŸ“„';
+    if (section === 'preview') return 'Ã°Å¸â€˜ÂÃ¯Â¸Â';
+    return getSectionIcon(section) || 'Ã°Å¸â€œâ€ž';
   };
 
   const handleSectionClick = (section, index) => {
@@ -329,7 +329,7 @@ const ResumeEditor = () => {
   if (!templateSectionsList || templateSectionsList.length === 0) {
     return (
       <div className="error-container">
-        <h2>âš ï¸ No sections defined for Template #{selectedTemplateId}</h2>
+        <h2>Ã¢Å¡Â Ã¯Â¸Â No sections defined for Template #{selectedTemplateId}</h2>
         <p>This template doesn't have any sections configured. Please select a different template.</p>
         <div className="error-actions">
           <button onClick={handleChangeTemplate} className="btn-change-template">
@@ -346,7 +346,7 @@ const ResumeEditor = () => {
       {showNotification && (
         <div className="notification-toast">
           <div className="notification-content">
-            <span className="notification-icon">âœ“</span>
+            <span className="notification-icon">Ã¢Å“â€œ</span>
             <div className="notification-text">
               <strong>Template Selected!</strong>
               <p>You can now start filling your resume details.</p>
@@ -359,7 +359,7 @@ const ResumeEditor = () => {
       {showReviewModal && (
         <div className="review-modal-overlay" onClick={() => setShowReviewModal(false)}>
           <div className="review-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setShowReviewModal(false)}>Ã—</button>
+            <button className="modal-close" onClick={() => setShowReviewModal(false)}>Ãƒâ€”</button>
             <ReviewSystem templateId={selectedTemplateId} />
           </div>
         </div>
@@ -403,7 +403,7 @@ const ResumeEditor = () => {
                       </div>
                     </div>
                     {isInfoSection && (
-                      <div className="section-action-arrow">â†’</div>
+                      <div className="section-action-arrow">Ã¢â€ â€™</div>
                     )}
                   </div>
 
@@ -467,7 +467,7 @@ const ResumeEditor = () => {
               isInfoSection={currentSection === 'preview'}
               onGoToPreview={handleGoToPreview}
               onChangeTemplate={handleChangeTemplate}
-              onDownloadComplete={trackDownload}  // â† Pass the download tracking callback
+              onDownloadComplete={trackDownload}  // Ã¢â€ Â Pass the download tracking callback
             />
           </div>
         </div>
