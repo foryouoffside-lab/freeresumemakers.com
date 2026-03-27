@@ -223,19 +223,19 @@ export default function ProfessionPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": profession?.name || "Profession",
-        "item": `https://freeresumemakers.com/professions/${slug}`
+        "item": `https://freeresumemaker.xyz/professions/${slug}`
       }
     ]
   };
@@ -278,7 +278,7 @@ export default function ProfessionPage() {
           title="Profession Not Found | Resume Examples"
           description="We couldn't find resume examples for this profession. Browse our other profession guides for resume templates and examples."
           keywords="resume examples, resume templates, career guides"
-          canonical={`https://freeresumemakers.com/professions/${slug}`}
+          canonical={`https://freeresumemaker.xyz/professions/${slug}`}
           noindex={true}
         />
         
@@ -320,8 +320,8 @@ export default function ProfessionPage() {
         title={profession.title}
         description={profession.description}
         keywords={profession.keywords}
-        canonical={`https://freeresumemakers.com/professions/${slug}`}
-        image={`https://freeresumemakers.com/images/professions/${slug}.jpg`}
+        canonical={`https://freeresumemaker.xyz/professions/${slug}`}
+        image={`https://freeresumemaker.xyz/images/professions/${slug}.jpg`}
         type="website"
       />
       

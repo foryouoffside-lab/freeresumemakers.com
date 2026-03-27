@@ -597,25 +597,25 @@ export default function TemplateDynamicSectionPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Builder",
-        "item": "https://freeresumemakers.com/editor"
+        "item": "https://freeresumemaker.xyz/editor"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": templateName,
-        "item": `https://freeresumemakers.com/editor/${id}`
+        "item": `https://freeresumemaker.xyz/editor/${id}`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": displayName,
-        "item": `https://freeresumemakers.com/editor/${id}/${sectionName}`
+        "item": `https://freeresumemaker.xyz/editor/${id}/${sectionName}`
       }
     ]
   };
@@ -656,8 +656,8 @@ export default function TemplateDynamicSectionPage() {
         title={`Edit ${displayName} - ${templateName} Resume Builder | Free ATS-Friendly Tool`}
         description={`Add your ${displayName.toLowerCase()} to ${templateName}. ${sectionDescription} Create your professional resume with our free builder. No sign-up required.`}
         keywords={`${displayName.toLowerCase()} section, resume ${displayName.toLowerCase()}, ${templateName.toLowerCase()} resume, edit resume ${displayName.toLowerCase()}, resume builder ${displayName.toLowerCase()}`}
-        canonical={`https://freeresumemakers.com/editor/${id}/${sectionName}`}
-        image={`https://freeresumemakers.com/assets/template-previews/template-${id}.png`}
+        canonical={`https://freeresumemaker.xyz/editor/${id}/${sectionName}`}
+        image={`https://freeresumemaker.xyz/assets/template-previews/template-${id}.png`}
         type="website"
       />
       

@@ -169,7 +169,7 @@ export default function BlogPostPage() {
       <SEO 
         title={post.title}
         description={post.metaDescription || post.description}
-        canonical={`https://freeresumemakers.com/blog/${slug}`}
+        canonical={`https://freeresumemaker.xyz/blog/${slug}`}
         image={post.featuredImage}
         type="article"
         publishedTime={post.date}
@@ -189,7 +189,7 @@ export default function BlogPostPage() {
               "@type": "Article",
               "headline": post.title,
               "description": post.metaDescription || post.description,
-              "image": post.featuredImage || "https://freeresumemakers.com/images/blog/default.jpg",
+              "image": post.featuredImage || "https://freeresumemaker.xyz/images/blog/default.jpg",
               "author": {
                 "@type": "Person",
                 "name": post.author,
@@ -200,14 +200,14 @@ export default function BlogPostPage() {
                 "name": "Free Resume Maker",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://freeresumemakers.com/logo.png"
+                  "url": "https://freeresumemaker.xyz/logo.png"
                 }
               },
               "datePublished": post.date,
               "dateModified": post.updatedDate,
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": `https://freeresumemakers.com/blog/${slug}`
+                "@id": `https://freeresumemaker.xyz/blog/${slug}`
               },
               "wordCount": post.content.split(/\s+/).length,
               "timeRequired": `PT${estimatedReadingTime}M`
@@ -380,10 +380,10 @@ export default function BlogPostPage() {
             flexWrap: 'wrap'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', color: '#1DA1F2', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://freeresumemakers.com/blog/${slug}` },
-              { name: 'LinkedIn', icon: '💼', color: '#0077B5', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/${slug}` },
-              { name: 'Facebook', icon: '📘', color: '#1877F2', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/${slug}` },
-              { name: 'Email', icon: '📧', color: '#666', url: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: https://freeresumemakers.com/blog/${slug}`)}` }
+              { name: 'Twitter', icon: '🐦', color: '#1DA1F2', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'LinkedIn', icon: '💼', color: '#0077B5', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'Facebook', icon: '📘', color: '#1877F2', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'Email', icon: '📧', color: '#666', url: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: https://freeresumemaker.xyz/blog/${slug}`)}` }
             ].map((social, index) => (
               <a
                 key={index}

@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>Create Professional, ATS-Friendly Resumes in Minutes</h3>
-  <p>17+ templates • Real-time preview • PDF download • No signup required</p>
+  <p>20+ templates • Real-time preview • PDF download • No signup required</p>
 </div>
 
 ---
@@ -11,7 +11,7 @@
 
 | | |
 |---|---|
-| 🎨 **17+ Templates** | Professionally designed, ATS-optimized templates for every industry |
+| 🎨 **20+ Templates** | Professionally designed, ATS-optimized templates for every industry |
 | ⚡ **Real-time Preview** | See changes instantly as you type |
 | 📄 **PDF Export** | High-quality 8K PDF generation with jsPDF + html2canvas |
 | 📱 **Mobile Responsive** | Works perfectly on all devices |
@@ -30,7 +30,7 @@
 
   ash
 # Clone the repository
-git clone https://github.com/yourusername/resume-builder.git
+git clone https://github.com/foryouoffside-lab/freeresumemaker.xyz.git
 
 # Navigate to project directory
 cd resume-builder
@@ -63,7 +63,7 @@ resume-builder/
 ├── pages/              # Next.js pages & routes
 ├── components/         # Reusable React components
 │   ├── editor/        # Resume editor components
-│   ├── templates/     # 17+ resume templates
+│   ├── templates/     # 20+ resume templates
 │   └── export/        # PDF export functionality
 ├── context/           # State management
 ├── lib/               # Utilities & configurations
@@ -113,8 +113,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Made with ❤️ for job seekers everywhere</p>
   <p>
-    <a href="https://freeresumemakers.com">Website</a> •
-    <a href="https://github.com/yourusername/resume-builder">GitHub</a> •
+    <a href="https://freeresumemaker.xyz">Website</a> •
+    <a href="https://github.com/foryouoffside-lab/freeresumemaker.xyz">GitHub</a> •
     <a href="https://twitter.com/yourhandle">Twitter</a>
   </p>
 </div>

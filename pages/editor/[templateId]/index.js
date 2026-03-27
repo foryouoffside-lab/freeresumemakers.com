@@ -129,19 +129,19 @@ export default function TemplateEditorHome() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Builder",
-        "item": "https://freeresumemakers.com/editor"
+        "item": "https://freeresumemaker.xyz/editor"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": templateName,
-        "item": `https://freeresumemakers.com/editor/${templateId}`
+        "item": `https://freeresumemaker.xyz/editor/${templateId}`
       }
     ]
   };
@@ -166,8 +166,8 @@ export default function TemplateEditorHome() {
         title={`${templateName} Resume Template Editor | Free ATS-Friendly Resume Builder`}
         description={`Edit your ${templateName} resume template online. Add personal information, work experience, skills, and customize each section. ${templateDescription} Best for ${bestFor}. Free PDF download.`}
         keywords={`${templateName.toLowerCase()} resume template, ${templateName.toLowerCase()} editor, resume builder, edit resume, ATS-friendly resume, ${bestFor} resume template`}
-        canonical={`https://freeresumemakers.com/editor/${templateId}`}
-        image={`https://freeresumemakers.com/assets/template-previews/template-${templateId}.png`}
+        canonical={`https://freeresumemaker.xyz/editor/${templateId}`}
+        image={`https://freeresumemaker.xyz/assets/template-previews/template-${templateId}.png`}
         type="website"
       />
       

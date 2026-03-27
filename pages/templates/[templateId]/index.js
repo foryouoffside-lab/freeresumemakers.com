@@ -454,19 +454,19 @@ export default function TemplateDynamicPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": templateInfo.name,
-        "item": `https://freeresumemakers.com/templates/${id}`
+        "item": `https://freeresumemaker.xyz/templates/${id}`
       }
     ]
   };
@@ -477,7 +477,7 @@ export default function TemplateDynamicPage() {
         title={`${templateInfo.name} Resume Template - Free ATS-Friendly Download | Professional CV`}
         description={templateInfo.metaDescription}
         keywords={`${templateInfo.name.toLowerCase()} resume template, free resume template ${id}, ${templateInfo.bestFor.toLowerCase()} resume, ATS-friendly resume template, professional CV template, ${templateInfo.layout.toLowerCase()} resume`}
-        canonical={`https://freeresumemakers.com/templates/${id}`}
+        canonical={`https://freeresumemaker.xyz/templates/${id}`}
         image={imageSrc}
         type="website"
       />

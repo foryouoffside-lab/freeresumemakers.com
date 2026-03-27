@@ -109,19 +109,19 @@ export default function TemplateInfoPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": templateName,
-        "item": `https://freeresumemakers.com/template-info/${templateId}`
+        "item": `https://freeresumemaker.xyz/template-info/${templateId}`
       }
     ]
   };
@@ -151,8 +151,8 @@ export default function TemplateInfoPage() {
         title={`${templateName} Resume Template - Sections Required & Complete Guide 2026`}
         description={`Complete guide to ${templateName} resume template. Learn what sections are needed: ${sections.map(s => getSectionDisplayName(s)).join(', ')}. ${description} Best for ${bestFor}. ATS Score: ${atsScore}%.`}
         keywords={`${templateName.toLowerCase()} resume, ${templateName.toLowerCase()} template, ${bestFor.toLowerCase()} resume template, ATS friendly resume, resume sections guide, template ${templateId} requirements`}
-        canonical={`https://freeresumemakers.com/template-info/${templateId}`}
-        image={`https://freeresumemakers.com/assets/template-previews/template-${templateId}.png`}
+        canonical={`https://freeresumemaker.xyz/template-info/${templateId}`}
+        image={`https://freeresumemaker.xyz/assets/template-previews/template-${templateId}.png`}
         type="article"
       />
       

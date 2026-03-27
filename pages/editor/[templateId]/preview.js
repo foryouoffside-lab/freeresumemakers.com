@@ -72,20 +72,20 @@ export default function TemplatePreviewPage() {
         <meta name="robots" content="noindex, nofollow" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href={`https://freeresumemakers.com/editor/${templateId}/preview`} />
+        <link rel="canonical" href={`https://freeresumemaker.xyz/editor/${templateId}/preview`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://freeresumemakers.com/editor/${templateId}/preview`} />
+        <meta property="og:url" content={`https://freeresumemaker.xyz/editor/${templateId}/preview`} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={fullDescription} />
-        <meta property="og:image" content={`https://freeresumemakers.com/assets/template-previews/template-${templateId}.png`} />
+        <meta property="og:image" content={`https://freeresumemaker.xyz/assets/template-previews/template-${templateId}.png`} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={fullDescription} />
-        <meta name="twitter:image" content={`https://freeresumemakers.com/assets/template-previews/template-${templateId}.png`} />
+        <meta name="twitter:image" content={`https://freeresumemaker.xyz/assets/template-previews/template-${templateId}.png`} />
       </Head>
       
       <div style={{ 

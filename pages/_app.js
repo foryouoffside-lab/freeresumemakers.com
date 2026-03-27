@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     "name": "Free Resume Maker",
     "url": "https://freeresumemaker.xyz",
     "logo": "https://freeresumemaker.xyz/logo.png",
-    "description": "Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download.",
+    "description": "Create professional ATS-friendly resumes instantly with our Free Resume Maker. No sign up required. 20+ templates, real-time editing, and PDF download.",
     "sameAs": [
       "https://twitter.com/freeresumemaker",
       "https://www.linkedin.com/company/free-resume-maker",
@@ -137,12 +137,12 @@ function MyApp({ Component, pageProps }) {
   // Default SEO for pages without custom SEO
   const defaultSEO = {
     title: isHomePage 
-      ? 'Free Resume Builder - Create Professional Resumes Online Instantly' 
-      : 'Free Resume Builder - Professional Resume Templates & Examples',
-    description: 'Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download. Trusted by 100,000+ job seekers.',
+      ? 'Free Resume Maker - Create Professional Resumes Online Instantly' 
+      : 'Free Resume Maker - Professional Resume Templates & Examples',
+    description: 'Create professional ATS-friendly resumes instantly with our Free Resume Maker. No sign up required. 20+ templates, real-time editing, and PDF download. Trusted by 100,000+ job seekers.',
     image: 'https://freeresumemaker.xyz/images/default-og-image.jpg',
     type: 'website',
-    keywords: 'resume builder, free resume builder, online resume maker, resume templates, ATS friendly resume, professional resume, CV maker, resume creator'
+    keywords: 'resume builder, Free Resume Maker, online resume maker, resume templates, ATS friendly resume, professional resume, CV maker, resume creator'
   };
 
   return (
@@ -327,6 +327,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
 
 
 
