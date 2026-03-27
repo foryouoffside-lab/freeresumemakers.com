@@ -1,332 +1,203 @@
-// pages/editor/template-selector.js
+// pages/editor/[templateId]/index.js
 import { useRouter } from 'next/router';
-import Head from 'next/head';
-import TemplateSelectorComponent from '../../components/templates/TemplateSelector';
+import { useEffect } from 'react';
+import SEO from '../../../components/SEO';
+import { getTemplateSections, getSectionDisplayName } from '../../../lib/templateConfig';
 
-export default function TemplateSelectorPage() {
-  const router = useRouter();
-
-  const handleTemplateSelect = (templateId) => {
-    // Navigate to the editor with the selected template
-    router.push(`/editor/${templateId}`);
+// Template names matching your TEMPLATES array
+const getTemplateName = (id) => {
+  const names = {
+    1: 'The Professional',
+    2: 'The Innovator',
+    3: 'The Executive',
+    4: 'The Strategist',
+    5: 'The Minimalist',
+    6: 'The Architect',
+    7: 'The Scholar',
+    8: 'The Traditionalist',
+    9: 'The Modernist',
+    10: 'The Essential',
+    11: 'The Composer',
+    12: 'The Blueprint',
+    13: 'The Timeline',
+    14: 'The Monochrome',
+    15: 'The Compact',
+    16: 'The Minimal',
+    17: 'The Innovator 2.0',
+    18: 'The Code',
+    19: 'The Scholar 2.0',
+    20: 'The Engineer'
   };
+  return names[parseInt(id)] || `Template ${id}`;
+};
 
-  // Template names for structured data
-  const templateNames = [
-    "The Professional", "The Innovator", "The Executive", "The Strategist", "The Minimalist",
-    "The Architect", "The Scholar", "The Traditionalist", "The Modernist", "The Essential",
-    "The Composer", "The Blueprint", "The Timeline", "The Monochrome", "The Compact",
-    "The Minimal", "The Innovator 2.0", "The Code", "The Scholar 2.0", "The Engineer"
-  ];
+// Get template description for SEO
+const getTemplateDescription = (id) => {
+  const descriptions = {
+    1: 'Classic two-column layout with gradient header and experience type filtering. Perfect for business, finance, and law professionals.',
+    2: 'Modern two-column design with visual connectors and centered header. Ideal for tech, marketing, and creative roles.',
+    3: 'Sophisticated dark theme with sidebar focus on certifications. Designed for senior executives and directors.',
+    4: 'Timeline-based layout with square markers showing career progression. Perfect for consultants and project managers.',
+    5: 'Ultra-clean isolated sections with perfect contrast. Optimized for ATS and modern tech companies.',
+    6: 'Structured technical template with side-by-side education boxes and professional timeline. Built for engineers and architects.',
+    7: 'Elegant geometric design with sidebar achievements and professional timeline. Perfect for academics and researchers.',
+    8: 'Clean black & white design with side-by-side education layout. Trusted by traditional industries and government roles.',
+    9: 'Fresh contemporary design with equal spacing and modern typography. Balanced layout for all industries.',
+    10: 'Clean, focused design showing exactly one experience. Ideal for students, interns, and entry-level professionals.',
+    11: 'Elegant serif-based design with clear hierarchy and professional spacing. Perfect for humanities, arts, and traditional roles.',
+    12: 'Structured blueprint-style layout with color-coded sections. Designed for engineers, architects, and technical roles.',
+    13: 'Visual timeline-based design with clear progression markers. Perfect for project managers and career progression focus.',
+    14: 'Bold black & white design with strong visual hierarchy. Ideal for legal, government, and formal roles.',
+    15: 'Space-efficient design with tight spacing and streamlined sections. Perfect for experienced professionals with lots of content.',
+    16: 'Ultra-minimalist design with avatar initials and clean layout. Focuses purely on content with no distractions.',
+    17: 'Modern card-based design with internship and project focus. Perfect for students, interns, and junior developers.',
+    18: 'Developer-focused template with project links, tech tags, and code-friendly icons. Built for software engineers.',
+    19: 'Education-focused design with white-box education styling. Perfect for academics, researchers, and educators.',
+    20: 'Software engineering optimized template with project-first layout. Designed for developers, programmers, and tech leads.'
+  };
+  return descriptions[parseInt(id)] || `Professional ATS-friendly resume template with customizable sections.`;
+};
 
-  // Complete structured data for SEO
-  const structuredData = {
+// Get best for info for SEO
+const getBestFor = (id) => {
+  const bestFor = {
+    1: 'business, finance, law, management',
+    2: 'tech, marketing, design, creative roles',
+    3: 'senior executives, directors, leadership roles',
+    4: 'consultants, project managers, strategists',
+    5: 'software engineers, UX/UI designers, recent graduates',
+    6: 'engineers, architects, technical professionals',
+    7: 'academics, researchers, educators, PhD candidates',
+    8: 'legal, government, traditional industries',
+    9: 'all industries, versatile professionals',
+    10: 'students, interns, entry-level professionals',
+    11: 'humanities, arts, traditional roles',
+    12: 'engineers, architects, technical roles',
+    13: 'project managers, operations professionals',
+    14: 'legal, government, formal roles',
+    15: 'experienced professionals, senior roles',
+    16: 'minimalists, content-focused professionals',
+    17: 'students, interns, junior developers',
+    18: 'software engineers, developers, programmers',
+    19: 'academics, researchers, educators',
+    20: 'developers, programmers, tech leads'
+  };
+  return bestFor[parseInt(id)] || 'all professions';
+};
+
+export default function TemplateEditorHome() {
+  const router = useRouter();
+  const { templateId } = router.query;
+
+  useEffect(() => {
+    if (templateId) {
+      const id = parseInt(templateId);
+      const sections = getTemplateSections(id);
+      if (sections && sections.length > 0) {
+        router.replace(`/editor/${templateId}/${sections[0]}`);
+      }
+    }
+  }, [templateId, router]);
+
+  if (!templateId) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        flexDirection: 'column',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
+      }}>
+        <div style={{ fontSize: '48px', marginBottom: '20px' }}>📝</div>
+        <h2 style={{ color: '#0f172a', marginBottom: '10px' }}>Loading Editor...</h2>
+        <p style={{ color: '#64748b' }}>Preparing your template</p>
+      </div>
+    );
+  }
+
+  const templateName = getTemplateName(templateId);
+  const templateDescription = getTemplateDescription(templateId);
+  const bestFor = getBestFor(templateId);
+
+  // Breadcrumb schema
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "BreadcrumbList",
+    "itemListElement": [
       {
-        "@type": "WebPage",
-        "@id": "https://freeresumemaker.xyz/editor/template-selector",
-        "name": "Resume Template Selector | Choose Your Perfect Design 2026",
-        "description": "Browse and select from 20 professionally designed, ATS-friendly resume templates. Find the perfect template for your career - whether you are in technology, business, creative, or executive roles.",
-        "url": "https://freeresumemaker.xyz/editor/template-selector",
-        "inLanguage": "en-US",
-        "datePublished": "2026-01-15T08:00:00+00:00",
-        "dateModified": "2026-03-24T10:00:00+00:00",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "Free Resume Builder",
-          "url": "https://freeresumemaker.xyz/"
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg",
-          "width": "1200",
-          "height": "630"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://freeresumemaker.xyz/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Resume Builder",
-              "item": "https://freeresumemaker.xyz/editor"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Choose Template",
-              "item": "https://freeresumemaker.xyz/editor/template-selector"
-            }
-          ]
-        }
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeresumemaker.xyz"
       },
       {
-        "@type": "ItemList",
-        "name": "Professional Resume Templates 2026",
-        "description": "Collection of 20 ATS-friendly resume templates optimized for 2026 hiring trends. Each template is professionally designed and customizable for any industry.",
-        "numberOfItems": 20,
-        "itemListOrder": "https://schema.org/ItemListOrderAscending",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://freeresumemaker.xyz/editor/template-selector"
-        },
-        "itemListElement": templateNames.map((name, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "name": name,
-          "url": `https://freeresumemaker.xyz/templates/${name.toLowerCase().replace(/ /g, '-').replace(/\./g, '')}`
-        }))
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resume Builder",
+        "item": "https://freeresumemaker.xyz/editor"
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://freeresumemaker.xyz/editor/template-selector#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is an ATS-friendly resume template?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An ATS-friendly resume template is designed to be easily parsed by Applicant Tracking Systems. Our templates use clean formatting, standard fonts, and simple layouts that ensure your resume gets through automated screening systems."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I choose the right resume template?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Consider your industry and career level. The Professional is great for business roles, The Innovator for creative positions, The Executive for senior leaders, and The Code for software engineers. Browse our collection to find the perfect match for your career path."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are these resume templates free to use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, all 20 resume templates are completely free to use. You can customize them in our builder, download as PDF, and use them for your job applications. No sign-up required."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I customize these resume templates?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. Once you select a template, you can customize all content, including personal information, work experience, skills, education, and more. Each template is fully editable to match your needs."
-            }
-          }
-        ]
+        "@type": "ListItem",
+        "position": 3,
+        "name": templateName,
+        "item": `https://freeresumemaker.xyz/editor/${templateId}`
       }
     ]
   };
 
+  // Product schema for the template
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": templateName,
+    "description": templateDescription,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/OnlineOnly"
+    }
+  };
+
   return (
     <>
-      <Head>
-        {/* Primary Meta Tags */}
-        <title>Choose Resume Template 2026 | 20 ATS-Friendly Designs | Free Resume Builder</title>
-        <meta name="description" content="Browse and select from 20 professionally designed, ATS-friendly resume templates for 2026. Find the perfect template for your career - technology, business, creative, executive, and more. 100% free to use." />
-        <meta name="keywords" content="resume templates 2026, ATS-friendly resume, professional resume templates, free resume builder, choose resume template, best resume templates, The Professional template, The Innovator template, executive resume template, technology resume template, creative resume design" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="author" content="Free Resume Builder" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#0070f3" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemaker.xyz/editor/template-selector" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://freeresumemaker.xyz/editor/template-selector" />
-        <meta property="og:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
-        <meta property="og:description" content="Browse 20 professionally designed resume templates optimized for 2026. Find the perfect template for your career - from executive to creative, technology to traditional. All templates are ATS-friendly and free." />
-        <meta property="og:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="20 professional resume templates preview collection" />
-        <meta property="og:site_name" content="Free Resume Builder" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
-        <meta name="twitter:description" content="Browse 20 professionally designed resume templates. Find the perfect design for your career - technology, business, creative, executive roles. All templates are ATS-friendly and free." />
-        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
-        <meta name="twitter:site" content="@freeresumemaker" />
-        <meta name="twitter:creator" content="@freeresumemaker" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="application-name" content="Free Resume Builder" />
-        <meta name="apple-mobile-web-app-title" content="Resume Templates" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        
-        {/* Geo and Language */}
-        <meta name="geo.region" content="US" />
-        <meta name="language" content="English" />
-        <link rel="alternate" hrefLang="en-us" href="https://freeresumemaker.xyz/editor/template-selector" />
-        
-        {/* Preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Resource Hints */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      </Head>
-      
-      {/* Structured Data Scripts */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      <SEO 
+        title={`${templateName} Resume Template Editor | Free ATS-Friendly Resume Builder`}
+        description={`Edit your ${templateName} resume template online. Add personal information, work experience, skills, and customize each section. ${templateDescription} Best for ${bestFor}. Free PDF download.`}
+        keywords={`${templateName.toLowerCase()} resume template, ${templateName.toLowerCase()} editor, resume builder, edit resume, ATS-friendly resume, ${bestFor} resume template`}
+        canonical={`https://freeresumemaker.xyz/editor/${templateId}`}
+        image={`https://freeresumemaker.xyz/assets/template-previews/template-${templateId}.png`}
+        type="website"
       />
       
-      {/* Page Header */}
-      <div style={{
-        maxWidth: '1400px',
-        margin: '0 auto',
-        padding: '40px 24px 20px 24px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        flexDirection: 'column',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
       }}>
-        {/* Breadcrumb Navigation */}
-        <nav style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          marginBottom: '30px',
-          fontSize: '14px',
-          color: '#666'
-        }}>
-          <a href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</a>
-          <span>›</span>
-          <a href="/editor" style={{ color: '#666', textDecoration: 'none' }}>Resume Builder</a>
-          <span>›</span>
-          <span style={{ color: '#0070f3' }}>Choose Template</span>
-        </nav>
-
-        {/* Header Section */}
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <h1 style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            marginBottom: '16px',
-            color: '#1a1a1a',
-            fontWeight: 700,
-            lineHeight: '1.2'
-          }}>
-            Choose Your Perfect Resume Template
-          </h1>
-          <p style={{
-            fontSize: '18px',
-            color: '#666',
-            maxWidth: '700px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
-            Select from 20 professionally designed, ATS-friendly templates. Find the perfect design for your career path.
-          </p>
-        </div>
-
-        {/* Stats Bar - No Emojis */}
+        <div style={{ fontSize: '48px', marginBottom: '20px' }}>📝</div>
+        <h2 style={{ color: '#0f172a', marginBottom: '10px' }}>Loading {templateName} Editor...</h2>
+        <p style={{ color: '#64748b' }}>Preparing your template sections</p>
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
-          marginBottom: '48px',
-          padding: '20px',
-          background: '#f8fafc',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          flexWrap: 'wrap'
-        }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>20+</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Templates</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>ATS</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Friendly</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>100%</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Free</div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Template Selector Component */}
-      <TemplateSelectorComponent onTemplateSelect={handleTemplateSelect} />
-      
-      {/* Footer Section */}
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '40px 24px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        borderTop: '1px solid #e9ecef',
-        marginTop: '40px'
-      }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '32px',
-          marginBottom: '40px'
-        }}>
-          {/* Template Categories */}
-          <div>
-            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
-              Template Categories
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/tech" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/academic" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/entry-level" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</a></li>
-            </ul>
-          </div>
-          
-          {/* Helpful Links */}
-          <div>
-            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
-              Helpful Resources
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/how-to-make-resume" style={{ color: '#666', textDecoration: 'none' }}>How to Make a Resume</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/ats-resume-tips-2026" style={{ color: '#666', textDecoration: 'none' }}>ATS Resume Tips 2026</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/action-verbs-for-resume" style={{ color: '#666', textDecoration: 'none' }}>200+ Action Verbs</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/resume-formatting-guide" style={{ color: '#666', textDecoration: 'none' }}>Resume Formatting Guide</a></li>
-            </ul>
-          </div>
-          
-          {/* About Us */}
-          <div>
-            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
-              About Us
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/about" style={{ color: '#666', textDecoration: 'none' }}>About Free Resume Builder</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/contact" style={{ color: '#666', textDecoration: 'none' }}>Contact Us</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/privacy-policy" style={{ color: '#666', textDecoration: 'none' }}>Privacy Policy</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/terms-of-service" style={{ color: '#666', textDecoration: 'none' }}>Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
+          marginTop: '30px',
+          width: '40px',
+          height: '40px',
+          border: '3px solid #e2e8f0',
+          borderTop: '3px solid #667eea',
+          borderRadius: '50%',
+          animation: 'spin 1s linear infinite'
+        }}></div>
         
-        {/* Footer Copyright */}
-        <div style={{
-          textAlign: 'center',
-          color: '#999',
-          fontSize: '0.85rem',
-          borderTop: '1px solid #e9ecef',
-          paddingTop: '24px'
-        }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
-        </div>
+        <style jsx>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
       </div>
     </>
   );
