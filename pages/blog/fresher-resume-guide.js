@@ -1,4 +1,4 @@
-﻿// pages/blog/fresher-resume-guide.js
+// pages/blog/fresher-resume-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

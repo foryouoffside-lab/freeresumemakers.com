@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/Summary.js
 // ENHANCED VERSION - 10+ EXAMPLES PER CATEGORY
 // WITH ALL FUNCTIONALITY FIXES AND IMPROVEMENTS

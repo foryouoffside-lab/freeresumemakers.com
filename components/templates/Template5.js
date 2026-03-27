@@ -3,22 +3,22 @@ import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T5I_ICON_MAPPING = Object.freeze({
-  email: '✉️',
-  phone: '📱',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“±',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: '⌨️',
-  portfolio: '🌐',
-  default: '📌'
+  github: 'âŒ¨ï¸',
+  portfolio: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 // ===== PRIVATE CONSTANTS - NAMESPACED =====
 const T5I_EXPERIENCE_TYPES = Object.freeze({
-  job: { label: "Work Experience", icon: "💼", color: "#2c578b" },
-  internship: { label: "Internship", icon: "🎓", color: "#28a745" },
-  project: { label: "Project", icon: "🚀", color: "#ff6b6b" },
-  freelance: { label: "Freelance", icon: "💻", color: "#ffa726" },
-  research: { label: "Research", icon: "🔬", color: "#9c27b0" }
+  job: { label: "Work Experience", icon: "ðŸ’¼", color: "#2c578b" },
+  internship: { label: "Internship", icon: "ðŸŽ“", color: "#28a745" },
+  project: { label: "Project", icon: "ðŸš€", color: "#ff6b6b" },
+  freelance: { label: "Freelance", icon: "ðŸ’»", color: "#ffa726" },
+  research: { label: "Research", icon: "ðŸ”¬", color: "#9c27b0" }
 });
 
 const T5I_CONTENT_LIMITS = Object.freeze({
@@ -305,14 +305,14 @@ const T5I_Helpers = Object.freeze({
 
 // ===== SECTION ICONS =====
 const T5I_SECTION_ICONS = Object.freeze({
-  'PROFESSIONAL SUMMARY': '📝',
-  'WORK EXPERIENCE': '💼',
-  'EDUCATION': '🎓',
-  'KEY SKILLS': '⚡',
-  'CERTIFICATIONS': '🏆',
-  'HOBBIES': '🎯',
-  'CONTACT': '📞',
-  'PROJECTS': '🚀'
+  'PROFESSIONAL SUMMARY': 'ðŸ“',
+  'WORK EXPERIENCE': 'ðŸ’¼',
+  'EDUCATION': 'ðŸŽ“',
+  'KEY SKILLS': 'âš¡',
+  'CERTIFICATIONS': 'ðŸ†',
+  'HOBBIES': 'ðŸŽ¯',
+  'CONTACT': 'ðŸ“ž',
+  'PROJECTS': 'ðŸš€'
 });
 
 // ===== MAIN TEMPLATE COMPONENT =====
@@ -531,7 +531,7 @@ const Template5Isolated = ({
     
     const cleanedBulletPoints = bulletPoints.map(bullet => {
       let cleaned = T5I_Helpers.safeString(bullet);
-      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
       cleaned = cleaned.replace(/\.\.+/g, '.');
       return cleaned;
     });
@@ -584,7 +584,7 @@ const Template5Isolated = ({
     
     const cleanedBulletPoints = bulletPoints.map(bullet => {
       let cleaned = T5I_Helpers.safeString(bullet);
-      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
       return cleaned;
     });
     
@@ -722,7 +722,7 @@ const Template5Isolated = ({
     if (!formattedStart && !formattedEnd) return '';
     if (formattedStart && !formattedEnd) return formattedStart;
     if (!formattedStart && formattedEnd) return formattedEnd;
-    return `${formattedStart} – ${formattedEnd}`;
+    return `${formattedStart} â€“ ${formattedEnd}`;
   }, []);
 
   // ===== RENDER FUNCTIONS =====
@@ -776,7 +776,7 @@ const Template5Isolated = ({
                 margin: '0 6px',
                 opacity: 1
               }}> | </span>
-              📍 {T5I_Helpers.safeString(edu.location)}
+              ðŸ“ {T5I_Helpers.safeString(edu.location)}
             </span>
           )}
         </div>
@@ -795,7 +795,7 @@ const Template5Isolated = ({
           {/* GPA display - now without icon and border, just normal text */}
           {edu.gpaDisplay && (
             <>
-              <span style={{ color: '#818cf8' }}>•</span>
+              <span style={{ color: '#818cf8' }}>â€¢</span>
               <span style={{
                 color: '#d1d5db',
                 fontWeight: 600
@@ -820,7 +820,7 @@ const Template5Isolated = ({
             color: '#f3f4f6',
             borderLeft: '3px solid #818cf8'
           }}>
-            <span style={{ fontSize: '12px' }}>🏆</span>
+            <span style={{ fontSize: '12px' }}>ðŸ†</span>
             <span>{T5I_Helpers.safeString(edu.honors)}</span>
           </div>
         )}
@@ -891,7 +891,7 @@ const Template5Isolated = ({
               fontWeight: 600,
               flexShrink: 0
             }}>
-              {T5I_Helpers.formatDate(project.startDate) || 'Start'} – {T5I_Helpers.formatDate(project.endDate) || 'Present'}
+              {T5I_Helpers.formatDate(project.startDate) || 'Start'} â€“ {T5I_Helpers.formatDate(project.endDate) || 'Present'}
             </div>
           )}
         </div>
@@ -923,7 +923,7 @@ const Template5Isolated = ({
                   flexShrink: 0,
                   marginTop: '2px',
                   lineHeight: 1
-                }}>•</span>
+                }}>â€¢</span>
                 <span style={{
                   flex: 1,
                   lineHeight: 1.5,
@@ -1037,7 +1037,7 @@ const Template5Isolated = ({
                     margin: '0 6px',
                     opacity: 1
                   }}> | </span>
-                  📍 {T5I_Helpers.safeString(exp.location)}
+                  ðŸ“ {T5I_Helpers.safeString(exp.location)}
                 </span>
               )}
             </div>
@@ -1053,7 +1053,7 @@ const Template5Isolated = ({
             fontWeight: 600,
             flexShrink: 0
           }}>
-            {T5I_Helpers.formatDate(exp.startDate) || 'Start'} – {T5I_Helpers.formatDate(exp.endDate) || 'Present'}
+            {T5I_Helpers.formatDate(exp.startDate) || 'Start'} â€“ {T5I_Helpers.formatDate(exp.endDate) || 'Present'}
           </div>
         </div>
         
@@ -1084,7 +1084,7 @@ const Template5Isolated = ({
                   flexShrink: 0,
                   marginTop: '2px',
                   lineHeight: 1
-                }}>•</span>
+                }}>â€¢</span>
                 <span style={{
                   flex: 1,
                   lineHeight: 1.5,
@@ -1260,7 +1260,7 @@ const Template5Isolated = ({
               color: '#818cf8',
               fontSize: '16px',
               fontWeight: 'bold'
-            }}>•</span>
+            }}>â€¢</span>
             <span style={{
               fontSize: '12px',
               color: '#ffffff',
@@ -1720,7 +1720,7 @@ const Template5Isolated = ({
               ) : (
                 <div style={baseStyles.noExperience}>
                   <div style={baseStyles.noExperienceIcon}>
-                    {T5I_EXPERIENCE_TYPES[selectedExperienceType]?.icon || '💼'}
+                    {T5I_EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'ðŸ’¼'}
                   </div>
                   <p style={baseStyles.noExperienceP}>No {T5I_EXPERIENCE_TYPES[selectedExperienceType]?.label.toLowerCase() || 'experience'} added yet</p>
                 </div>

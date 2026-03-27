@@ -1,4 +1,4 @@
-﻿// pages/api/create-order.js
+// pages/api/create-order.js
 import Razorpay from 'razorpay';
 
 // Initialize Razorpay with environment variables

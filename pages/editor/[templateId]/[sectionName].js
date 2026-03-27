@@ -1,681 +1,333 @@
-// pages/editor/[templateId]/[sectionName].js
-import Head from 'next/head';
+// pages/editor/template-selector.js
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { ResumeProvider, useResume } from '../../../context/ResumeContext';
-import SEO from '../../../components/SEO';
-import { 
-  getSectionDisplayName, 
-  templateExists,
-  getTemplateSections,
-  getTemplateOptionalSections 
-} from '../../../lib/templateConfig';
+import Head from 'next/head';
+import TemplateSelectorComponent from '../../components/templates/TemplateSelector';
 
-// Import all section components directly for rendering
-import PersonalInfo from '../../../components/editor/PersonalInfo';
-import Summary from '../../../components/editor/Summary';
-import Experience from '../../../components/editor/Experience';
-import Education from '../../../components/editor/Education';
-import Skills from '../../../components/editor/Skills';
-import Projects from '../../../components/editor/Projects';
-import Internships from '../../../components/editor/Internships';
-import Certifications from '../../../components/editor/Certifications';
-import Awards from '../../../components/editor/Awards';
-import ImageSection from '../../../components/editor/ImageSection';
-import Preview from '../../../components/editor/Preview';
-
-// Template names for SEO
-const TEMPLATE_NAMES = {
-  1: "The Professional",
-  2: "The Innovator",
-  3: "The Executive",
-  4: "The Strategist",
-  5: "The Minimalist",
-  6: "The Architect",
-  7: "The Scholar",
-  8: "The Traditionalist",
-  9: "The Modernist",
-  10: "The Essential",
-  11: "The Composer",
-  12: "The Blueprint",
-  13: "The Timeline",
-  14: "The Monochrome",
-  15: "The Compact",
-  16: "The Minimal",
-  17: "The Innovator 2.0",
-  18: "The Code",
-  19: "The Scholar 2.0",
-  20: "The Engineer"
-};
-
-// Section descriptions for SEO
-const SECTION_DESCRIPTIONS = {
-  personalInfo: "Add your contact information, name, email, phone number, location, and LinkedIn profile to your resume.",
-  imageSection: "Add a professional profile photo to your resume for personal branding.",
-  summary: "Write a compelling professional summary that highlights your experience, skills, and career goals.",
-  experience: "List your work experience with achievements, responsibilities, and quantifiable results.",
-  education: "Add your educational background including degrees, institutions, and honors.",
-  skills: "Showcase your technical and soft skills relevant to the job you're applying for.",
-  projects: "Highlight your projects with technologies used, your role, and outcomes.",
-  internships: "List internship experiences to demonstrate practical skills and industry exposure.",
-  certifications: "Display professional certifications and credentials that validate your expertise.",
-  awards: "Showcase awards, honors, and recognitions that demonstrate excellence.",
-  preview: "Preview your complete resume before downloading as PDF."
-};
-
-// Inner component that uses the resume context
-function SectionEditorContent() {
+export default function TemplateSelectorPage() {
   const router = useRouter();
-  const { templateId, sectionName } = router.query;
-  const { setTemplate, state, updateTemplateSection } = useResume();
-  const [sectionsList, setSectionsList] = useState([]);
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [availableSections, setAvailableSections] = useState([]);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const handleTemplateSelect = (templateId) => {
+    // Navigate to the editor with the selected template
+    router.push(`/editor/${templateId}`);
+  };
 
-  useEffect(() => {
-    if (templateId && sectionName) {
-      try {
-        const id = parseInt(templateId);
-        console.log(`🔍 Loading Template ${id}, Section: ${sectionName}`);
-        
-        setTemplate(id);
-        
-        const requiredSections = getTemplateSections(id);
-        const optionalSections = getTemplateOptionalSections(id);
-        const allAvailableSections = [...requiredSections, ...optionalSections];
-        setAvailableSections(allAvailableSections);
-        
-        if (!allAvailableSections.includes(sectionName)) {
-          console.error(`❌ Section "${sectionName}" not found in Template ${id}`);
-          setError(`Section "${sectionName}" is not available in Template ${id}. Available sections: ${allAvailableSections.join(', ')}`);
-          setIsLoading(false);
-          return;
+  // Template names for structured data
+  const templateNames = [
+    "The Professional", "The Innovator", "The Executive", "The Strategist", "The Minimalist",
+    "The Architect", "The Scholar", "The Traditionalist", "The Modernist", "The Essential",
+    "The Composer", "The Blueprint", "The Timeline", "The Monochrome", "The Compact",
+    "The Minimal", "The Innovator 2.0", "The Code", "The Scholar 2.0", "The Engineer"
+  ];
+
+  // Complete structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://freeresumemaker.xyz/editor/template-selector",
+        "name": "Resume Template Selector | Choose Your Perfect Design 2026",
+        "description": "Browse and select from 20 professionally designed, ATS-friendly resume templates. Find the perfect template for your career - whether you are in technology, business, creative, or executive roles.",
+        "url": "https://freeresumemaker.xyz/editor/template-selector",
+        "inLanguage": "en-US",
+        "datePublished": "2026-01-15T08:00:00+00:00",
+        "dateModified": "2026-03-24T10:00:00+00:00",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Free Resume Builder",
+          "url": "https://freeresumemaker.xyz/"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg",
+          "width": "1200",
+          "height": "630"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://freeresumemaker.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resume Builder",
+              "item": "https://freeresumemaker.xyz/editor"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Choose Template",
+              "item": "https://freeresumemaker.xyz/editor/template-selector"
+            }
+          ]
         }
-        
-        const fullSectionsList = [...requiredSections, 'preview'];
-        setSectionsList(fullSectionsList);
-        
-        const sectionIndex = requiredSections.indexOf(sectionName);
-        setCurrentStep(sectionIndex >= 0 ? sectionIndex : requiredSections.length);
-        setIsLoading(false);
-      } catch (err) {
-        console.error('Error loading section:', err);
-        setError('Failed to load section: ' + err.message);
-        setIsLoading(false);
-      }
-    }
-  }, [templateId, sectionName, setTemplate]);
-
-  const handleContinue = () => {
-    if (currentStep < sectionsList.length - 1) {
-      const nextSection = sectionsList[currentStep + 1];
-      if (nextSection === 'preview') {
-        router.push(`/editor/${templateId}/preview`);
-      } else {
-        router.push(`/editor/${templateId}/${nextSection}`);
-      }
-    }
-  };
-
-  const handleBack = () => {
-    if (currentStep > 0) {
-      const prevSection = sectionsList[currentStep - 1];
-      router.push(`/editor/${templateId}/${prevSection}`);
-    }
-  };
-
-  const handlePreview = () => {
-    router.push(`/editor/${templateId}/preview`);
-  };
-
-  const handleChangeTemplate = () => {
-    router.push('/editor');
-  };
-
-  const handleSectionChange = (data) => {
-    console.log(`📝 Saving ${sectionName}:`, data);
-    updateTemplateSection(sectionName, data);
-  };
-
-  const getSectionData = () => {
-    switch(sectionName) {
-      case 'personalInfo':
-        return state.personalInfo || {};
-      case 'imageSection':
-        return state.personalInfo || {};
-      case 'summary':
-        return state.professionalSummary || '';
-      case 'experience':
-        return state.experience || [];
-      case 'education':
-        return state.education || [];
-      case 'skills':
-        return state.skills || [];
-      case 'projects':
-        return state.projects || [];
-      case 'internships':
-        return state.internships || [];
-      case 'certifications':
-        return state.certifications || [];
-      case 'awards':
-        return state.awards || [];
-      case 'preview':
-        return state;
-      default:
-        return null;
-    }
-  };
-
-  const renderSectionComponent = () => {
-    const data = getSectionData();
-    
-    const componentMap = {
-      'personalInfo': PersonalInfo,
-      'imageSection': ImageSection,
-      'summary': Summary,
-      'experience': Experience,
-      'education': Education,
-      'skills': Skills,
-      'projects': Projects,
-      'internships': Internships,
-      'certifications': Certifications,
-      'awards': Awards,
-      'preview': Preview
-    };
-    
-    const SectionComponent = componentMap[sectionName];
-    
-    if (!SectionComponent) {
-      return (
-        <div style={{
-          padding: '60px 40px',
-          textAlign: 'center',
-          background: '#f8f9fa',
-          borderRadius: '12px'
-        }}>
-          <span style={{ fontSize: '48px', display: 'block', marginBottom: '16px' }}>📋</span>
-          <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '8px', color: '#333' }}>
-            Section: {sectionName}
-          </h3>
-          <p style={{ color: '#666' }}>
-            Component not found for this section.
-          </p>
-        </div>
-      );
-    }
-    
-    if (sectionName === 'preview') {
-      return <SectionComponent templateId={parseInt(templateId)} isInline={true} />;
-    }
-    
-    const navigationButtons = (
-      <div style={{
-        display: 'flex',
-        flexDirection: windowWidth < 768 ? 'column' : 'row',
-        gap: windowWidth < 768 ? '8px' : '12px',
-        width: '100%',
-        marginTop: windowWidth < 768 ? '8px' : '16px'
-      }}>
-        <button
-          onClick={handleBack}
-          disabled={currentStep === 0}
-          style={{
-            padding: windowWidth < 768 ? '14px 16px' : '14px 28px',
-            background: currentStep === 0 ? '#f8f9fa' : 'white',
-            color: currentStep === 0 ? '#999' : '#333',
-            border: '2px solid #e1e5e9',
-            borderRadius: '10px',
-            fontSize: windowWidth < 768 ? '16px' : '16px',
-            fontWeight: 600,
-            cursor: currentStep === 0 ? 'not-allowed' : 'pointer',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            transition: 'all 0.2s',
-            opacity: currentStep === 0 ? 0.5 : 1,
-            flex: 1,
-            width: '100%',
-            minHeight: '48px'
-          }}
-        >
-          <span>←</span> Back
-        </button>
-        
-        <button
-          onClick={handlePreview}
-          style={{
-            padding: windowWidth < 768 ? '14px 16px' : '14px 28px',
-            background: '#6c5ce7',
-            color: 'white',
-            border: 'none',
-            borderRadius: '10px',
-            fontSize: windowWidth < 768 ? '16px' : '16px',
-            fontWeight: 600,
-            cursor: 'pointer',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            transition: 'all 0.2s',
-            transform: 'translateY(0)',
-            boxShadow: '0 4px 12px rgba(108, 92, 231, 0.3)',
-            flex: 1,
-            width: '100%',
-            minHeight: '48px'
-          }}
-          onMouseEnter={(e) => {
-            if (windowWidth >= 768) {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(108, 92, 231, 0.4)';
+      },
+      {
+        "@type": "ItemList",
+        "name": "Professional Resume Templates 2026",
+        "description": "Collection of 20 ATS-friendly resume templates optimized for 2026 hiring trends. Each template is professionally designed and customizable for any industry.",
+        "numberOfItems": 20,
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://freeresumemaker.xyz/editor/template-selector"
+        },
+        "itemListElement": templateNames.map((name, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": name,
+          "url": `https://freeresumemaker.xyz/templates/${name.toLowerCase().replace(/ /g, '-').replace(/\./g, '')}`
+        }))
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://freeresumemaker.xyz/editor/template-selector#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is an ATS-friendly resume template?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An ATS-friendly resume template is designed to be easily parsed by Applicant Tracking Systems. Our templates use clean formatting, standard fonts, and simple layouts that ensure your resume gets through automated screening systems."
             }
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 92, 231, 0.3)';
-          }}
-        >
-          <span>👁️</span> {windowWidth < 768 ? 'Preview' : 'Preview Resume'}
-        </button>
-        
-        <button
-          onClick={handleContinue}
-          style={{
-            padding: windowWidth < 768 ? '14px 16px' : '14px 28px',
-            background: '#0070f3',
-            color: 'white',
-            border: 'none',
-            borderRadius: '10px',
-            fontSize: windowWidth < 768 ? '16px' : '16px',
-            fontWeight: 600,
-            cursor: 'pointer',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            transition: 'all 0.2s',
-            transform: 'translateY(0)',
-            boxShadow: '0 4px 12px rgba(0,112,243,0.2)',
-            flex: 1,
-            width: '100%',
-            minHeight: '48px'
-          }}
-          onMouseEnter={(e) => {
-            if (windowWidth >= 768) {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,112,243,0.3)';
+          },
+          {
+            "@type": "Question",
+            "name": "How do I choose the right resume template?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Consider your industry and career level. The Professional is great for business roles, The Innovator for creative positions, The Executive for senior leaders, and The Code for software engineers. Browse our collection to find the perfect match for your career path."
             }
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,112,243,0.2)';
-          }}
-        >
-          {windowWidth < 768 ? 'Continue' : 'Continue'} <span>→</span>
-        </button>
-      </div>
-    );
-
-    return (
-      <SectionComponent 
-        onDataChange={handleSectionChange} 
-        data={data} 
-        templateId={parseInt(templateId)}
-        navigationButtons={navigationButtons}
-      />
-    );
-  };
-
-  if (error) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        background: '#f8f9fa',
-        padding: '20px'
-      }}>
-        <div style={{
-          background: 'white',
-          padding: '40px',
-          borderRadius: '12px',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-          maxWidth: '600px',
-          textAlign: 'center'
-        }}>
-          <div style={{ fontSize: '3rem', marginBottom: '20px' }}>⚠️</div>
-          <h2 style={{ color: '#dc3545', marginBottom: '15px' }}>Section Not Found</h2>
-          <p style={{ color: '#666', marginBottom: '25px' }}>{error}</p>
-          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-            <button
-              onClick={() => router.push(`/editor/${templateId}`)}
-              style={{
-                background: '#667eea',
-                color: 'white',
-                border: 'none',
-                padding: '12px 25px',
-                borderRadius: '8px',
-                fontSize: '16px',
-                cursor: 'pointer'
-              }}
-            >
-              Go to Template Overview
-            </button>
-            <button
-              onClick={() => router.push('/editor')}
-              style={{
-                background: '#e9ecef',
-                color: '#333',
-                border: 'none',
-                padding: '12px 25px',
-                borderRadius: '8px',
-                fontSize: '16px',
-                cursor: 'pointer'
-              }}
-            >
-              Back to Templates
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        background: '#f8f9fa'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ 
-            width: '50px', 
-            height: '50px', 
-            border: '3px solid #f3f3f3',
-            borderTop: '3px solid #667eea',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            margin: '0 auto 20px'
-          }} />
-          <style jsx>{`
-            @keyframes spin {
-              0% { transform: rotate(0deg); }
-              100% { transform: rotate(360deg); }
+          },
+          {
+            "@type": "Question",
+            "name": "Are these resume templates free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all 20 resume templates are completely free to use. You can customize them in our builder, download as PDF, and use them for your job applications. No sign-up required."
             }
-          `}</style>
-          <p style={{ color: '#666' }}>Loading {getSectionDisplayName(sectionName)} section...</p>
-        </div>
-      </div>
-    );
-  }
-
-  const isMobile = windowWidth < 768;
-
-  return (
-    <div style={{
-      width: '100%',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: isMobile ? '8px' : '20px',
-      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      background: '#ffffff',
-      minHeight: '100vh',
-      boxSizing: 'border-box',
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: isMobile ? '8px' : '24px',
-        padding: isMobile ? '10px 12px' : '16px 20px',
-        background: 'white',
-        borderRadius: '12px',
-        border: '1px solid #e9ecef'
-      }}>
-        <div>
-          <h1 style={{ 
-            fontSize: isMobile ? '18px' : '24px', 
-            fontWeight: 700, 
-            margin: '0 0 2px 0',
-            color: '#1a1a1a',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px',
-            flexWrap: 'wrap'
-          }}>
-            <span>T{templateId}</span>
-            <span style={{ color: '#666', fontWeight: 400 }}>/</span>
-            <span style={{ color: '#667eea', fontSize: isMobile ? '16px' : '24px' }}>
-              {getSectionDisplayName(sectionName).split(' ').map(word => 
-                isMobile && word.length > 8 ? word.substring(0, 6) + '…' : word
-              ).join(' ')}
-            </span>
-          </h1>
-          <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>
-            Step {currentStep + 1}/{sectionsList.length}
-          </p>
-        </div>
-        <button
-          onClick={handleChangeTemplate}
-          style={{
-            padding: isMobile ? '6px 10px' : '10px 20px',
-            background: 'white',
-            border: '1px solid #e9ecef',
-            borderRadius: '6px',
-            fontSize: isMobile ? '12px' : '14px',
-            fontWeight: 500,
-            cursor: 'pointer',
-            transition: 'all 0.2s',
-            whiteSpace: 'nowrap'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.background = '#f8f9fa'}
-          onMouseLeave={(e) => e.currentTarget.style.background = 'white'}
-        >
-          {isMobile ? 'Change' : 'Change Template'}
-        </button>
-      </div>
-
-      <div style={{
-        width: '100%',
-        height: isMobile ? '4px' : '6px',
-        background: '#e9ecef',
-        borderRadius: '3px',
-        overflow: 'hidden',
-        marginBottom: isMobile ? '8px' : '24px'
-      }}>
-        <div style={{
-          width: `${((currentStep + 1) / sectionsList.length) * 100}%`,
-          height: '100%',
-          background: 'linear-gradient(90deg, #667eea, #764ba2)',
-          borderRadius: '3px',
-          transition: 'width 0.3s ease'
-        }} />
-      </div>
-
-      <div style={{
-        background: 'white',
-        borderRadius: '16px',
-        border: '1px solid #e9ecef',
-        overflow: 'hidden',
-        flex: '1 0 auto',
-        marginBottom: 0
-      }}>
-        {renderSectionComponent()}
-      </div>
-    </div>
-  );
-}
-
-// Main page component with provider
-export default function TemplateDynamicSectionPage() {
-  const router = useRouter();
-  const { templateId, sectionName } = router.query;
-  
-  const id = parseInt(templateId);
-  const displayName = sectionName ? getSectionDisplayName(sectionName) : '';
-  const templateName = TEMPLATE_NAMES[id] || `Template ${id}`;
-  const sectionDescription = SECTION_DESCRIPTIONS[sectionName] || `Edit your ${displayName} section to create a professional resume.`;
-  
-  if (!templateId || !sectionName) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '50vh',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⏳</div>
-          <div style={{ color: '#666' }}>Loading section...</div>
-        </div>
-      </div>
-    );
-  }
-  
-  if (!templateExists(id)) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '50vh',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-      }}>
-        <div style={{
-          background: '#fff3cd',
-          padding: '40px',
-          borderRadius: '12px',
-          borderLeft: '5px solid #ffc107',
-          maxWidth: '500px',
-          textAlign: 'center'
-        }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
-          <h2 style={{ color: '#856404', marginBottom: '1rem' }}>Template Not Found</h2>
-          <p style={{ color: '#856404', marginBottom: '1.5rem' }}>
-            We couldn't find template {id}. Available templates: 1-20
-          </p>
-          <a 
-            href="/editor"
-            style={{
-              display: 'inline-block',
-              background: '#667eea',
-              color: 'white',
-              padding: '10px 20px',
-              borderRadius: '6px',
-              textDecoration: 'none'
-            }}
-          >
-            Browse All Templates
-          </a>
-        </div>
-      </div>
-    );
-  }
-
-  // Breadcrumb schema for rich results
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://freeresumemaker.xyz"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resume Builder",
-        "item": "https://freeresumemaker.xyz/editor"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": templateName,
-        "item": `https://freeresumemaker.xyz/editor/${id}`
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": displayName,
-        "item": `https://freeresumemaker.xyz/editor/${id}/${sectionName}`
-      }
-    ]
-  };
-
-  // HowTo schema for the section editing process - FIXED: removed the typo
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": `How to Edit Your ${displayName} Section`,
-    "description": `Step-by-step guide to adding your ${displayName.toLowerCase()} to your resume.`,
-    "estimatedCost": {
-      "@type": "MonetaryAmount",
-      "currency": "USD",
-      "value": "0"
-    },
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "Fill in Your Details",
-        "text": `Enter your ${displayName.toLowerCase()} information in the fields below.`
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Review Your Entry",
-        "text": "Check that all information is accurate and complete."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Continue to Next Section",
-        "text": "Click Continue to move to the next section of your resume."
+          },
+          {
+            "@type": "Question",
+            "name": "Can I customize these resume templates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Once you select a template, you can customize all content, including personal information, work experience, skills, education, and more. Each template is fully editable to match your needs."
+            }
+          }
+        ]
       }
     ]
   };
 
   return (
     <>
-      <SEO 
-        title={`Edit ${displayName} - ${templateName} Resume Builder | Free ATS-Friendly Tool`}
-        description={`Add your ${displayName.toLowerCase()} to ${templateName}. ${sectionDescription} Create your professional resume with our free builder. No sign-up required.`}
-        keywords={`${displayName.toLowerCase()} section, resume ${displayName.toLowerCase()}, ${templateName.toLowerCase()} resume, edit resume ${displayName.toLowerCase()}, resume builder ${displayName.toLowerCase()}`}
-        canonical={`https://freeresumemaker.xyz/editor/${id}/${sectionName}`}
-        image={`https://freeresumemaker.xyz/assets/template-previews/template-${id}.png`}
-        type="website"
-      />
-      
       <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        />
-        <meta name="robots" content="index, follow" />
+        {/* Primary Meta Tags */}
+        <title>Choose Resume Template 2026 | 20 ATS-Friendly Designs | Free Resume Builder</title>
+        <meta name="description" content="Browse and select from 20 professionally designed, ATS-friendly resume templates for 2026. Find the perfect template for your career - technology, business, creative, executive, and more. 100% free to use." />
+        <meta name="keywords" content="resume templates 2026, ATS-friendly resume, professional resume templates, free resume builder, choose resume template, best resume templates, The Professional template, The Innovator template, executive resume template, technology resume template, creative resume design" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="Free Resume Builder" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#0070f3" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://freeresumemaker.xyz/editor/template-selector" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/editor/template-selector" />
+        <meta property="og:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
+        <meta property="og:description" content="Browse 20 professionally designed resume templates optimized for 2026. Find the perfect template for your career - from executive to creative, technology to traditional. All templates are ATS-friendly and free." />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="20 professional resume templates preview collection" />
+        <meta property="og:site_name" content="Free Resume Builder" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
+        <meta name="twitter:description" content="Browse 20 professionally designed resume templates. Find the perfect design for your career - technology, business, creative, executive roles. All templates are ATS-friendly and free." />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
+        <meta name="twitter:site" content="@freeresumemaker" />
+        <meta name="twitter:creator" content="@freeresumemaker" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="application-name" content="Free Resume Builder" />
+        <meta name="apple-mobile-web-app-title" content="Resume Templates" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        {/* Geo and Language */}
+        <meta name="geo.region" content="US" />
+        <meta name="language" content="English" />
+        <link rel="alternate" hrefLang="en-us" href="https://freeresumemaker.xyz/editor/template-selector" />
+        
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Resource Hints */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </Head>
       
-      <ResumeProvider>
-        <SectionEditorContent />
-      </ResumeProvider>
+      {/* Structured Data Scripts */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      {/* Page Header */}
+      <div style={{
+        maxWidth: '1400px',
+        margin: '0 auto',
+        padding: '40px 24px 20px 24px',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+      }}>
+        {/* Breadcrumb Navigation */}
+        <nav style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          marginBottom: '30px',
+          fontSize: '14px',
+          color: '#666'
+        }}>
+          <a href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</a>
+          <span>›</span>
+          <a href="/editor" style={{ color: '#666', textDecoration: 'none' }}>Resume Builder</a>
+          <span>›</span>
+          <span style={{ color: '#0070f3' }}>Choose Template</span>
+        </nav>
+
+        {/* Header Section */}
+        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <h1 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            marginBottom: '16px',
+            color: '#1a1a1a',
+            fontWeight: 700,
+            lineHeight: '1.2'
+          }}>
+            Choose Your Perfect Resume Template
+          </h1>
+          <p style={{
+            fontSize: '18px',
+            color: '#666',
+            maxWidth: '700px',
+            margin: '0 auto',
+            lineHeight: '1.6'
+          }}>
+            Select from 20 professionally designed, ATS-friendly templates. Find the perfect design for your career path.
+          </p>
+        </div>
+
+        {/* Stats Bar - No Emojis */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '40px',
+          marginBottom: '48px',
+          padding: '20px',
+          background: '#f8fafc',
+          borderRadius: '16px',
+          border: '1px solid #e9ecef',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>20+</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Templates</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>ATS</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Friendly</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>100%</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Free</div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Template Selector Component */}
+      <TemplateSelectorComponent onTemplateSelect={handleTemplateSelect} />
+      
+      {/* Footer Section */}
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '40px 24px',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        borderTop: '1px solid #e9ecef',
+        marginTop: '40px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '32px',
+          marginBottom: '40px'
+        }}>
+          {/* Template Categories */}
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
+              Template Categories
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '8px' }}><a href="/templates/category/executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/templates/category/tech" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/templates/category/creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/templates/category/academic" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/templates/category/entry-level" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</a></li>
+            </ul>
+          </div>
+          
+          {/* Helpful Links */}
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
+              Helpful Resources
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '8px' }}><a href="/how-to-make-resume" style={{ color: '#666', textDecoration: 'none' }}>How to Make a Resume</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/blog/ats-resume-tips-2026" style={{ color: '#666', textDecoration: 'none' }}>ATS Resume Tips 2026</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/blog/action-verbs-for-resume" style={{ color: '#666', textDecoration: 'none' }}>200+ Action Verbs</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/blog/resume-formatting-guide" style={{ color: '#666', textDecoration: 'none' }}>Resume Formatting Guide</a></li>
+            </ul>
+          </div>
+          
+          {/* About Us */}
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: '#1a1a1a' }}>
+              About Us
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '8px' }}><a href="/about" style={{ color: '#666', textDecoration: 'none' }}>About Free Resume Builder</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/contact" style={{ color: '#666', textDecoration: 'none' }}>Contact Us</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/privacy-policy" style={{ color: '#666', textDecoration: 'none' }}>Privacy Policy</a></li>
+              <li style={{ marginBottom: '8px' }}><a href="/terms-of-service" style={{ color: '#666', textDecoration: 'none' }}>Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* Footer Copyright */}
+        <div style={{
+          textAlign: 'center',
+          color: '#999',
+          fontSize: '0.85rem',
+          borderTop: '1px solid #e9ecef',
+          paddingTop: '24px'
+        }}>
+          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/GuidedForm.js
 // UPDATED: Added onDownloadComplete prop and passes it to Preview
 // ============================================

@@ -85,7 +85,7 @@ export default function Contact() {
     }
 
     // Here you would send to your API
-    console.log('Form submitted:', formData);
+    // console.log removed for production
     
     // Show success message
     setSubmitted(true);
@@ -127,7 +127,7 @@ export default function Contact() {
               fontWeight: 'bold',
               color: 'white'
             }}>
-              âœ“
+              Ã¢Å“â€œ
             </div>
             <h1 style={{
               fontSize: '2.2rem',
@@ -238,7 +238,7 @@ export default function Contact() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>Ã¢â‚¬Âº</span>
           <span style={{ color: '#0070f3' }}>Contact Us</span>
         </nav>
 
@@ -426,7 +426,7 @@ export default function Contact() {
                   display: 'inline-block'
                 }}
               >
-                View all FAQs â†’
+                View all FAQs Ã¢â€ â€™
               </Link>
             </div>
           </div>
@@ -819,7 +819,7 @@ export default function Contact() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
           <p style={{fontSize: '0.8rem', marginTop: '5px'}}>
             20+ Templates | ATS-Friendly | 100% Free
           </p>

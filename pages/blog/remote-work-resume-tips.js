@@ -1,4 +1,4 @@
-﻿// pages/blog/remote-work-resume-tips.js
+// pages/blog/remote-work-resume-tips.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

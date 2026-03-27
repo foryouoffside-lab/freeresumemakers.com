@@ -1,4 +1,4 @@
-﻿// pages/blog/resume-sections-guide.js
+// pages/blog/resume-sections-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

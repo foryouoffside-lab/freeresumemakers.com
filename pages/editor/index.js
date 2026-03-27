@@ -1,4 +1,4 @@
-﻿// pages/editor/index.js - SEO OPTIMIZED VERSION (2026 Update)
+// pages/editor/index.js - SEO OPTIMIZED VERSION (2026 Update)
 import TemplateSelector from '../../components/templates/TemplateSelector';
 import { useRouter } from 'next/router';
 import Link from 'next/link';

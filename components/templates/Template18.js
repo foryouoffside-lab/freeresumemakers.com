@@ -19,14 +19,14 @@ import LoadingSpinner from '../LoadingSpinner';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T18_ICON_MAPPING = Object.freeze({
-  email: '✉',
-  phone: '📞',
-  location: '📍',
+  email: 'âœ‰',
+  phone: 'ðŸ“ž',
+  location: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: '⌨',
-  portfolio: '🌐',
-  website: '🌐',
-  default: '📌'
+  github: 'âŒ¨',
+  portfolio: 'ðŸŒ',
+  website: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 // CONSTANTS - IMMUTABLE
@@ -44,29 +44,29 @@ const CONTENT_LIMITS = Object.freeze({
 
 // Icon mapping - IMMUTABLE
 const ICONS = Object.freeze({
-  email: '✉',
-  phone: '📞',
-  location: '📍',
+  email: 'âœ‰',
+  phone: 'ðŸ“ž',
+  location: 'ðŸ“',
   linkedin: 'in',
-  github: '⌨',
-  portfolio: '🌐',
-  education: '🎓',
-  internship: '💼',
-  project: '⚡',
-  skill: '⚡',
-  certification: '📜',
-  language: '🗣️',
-  about: '📝',
-  calendar: '📅',
-  code: '⌨️',
-  demo: '🔗',
-  gpa: '📊',
-  badge: '•',
-  bullet: '•',
-  triangle: '▹',
-  dot: '•',
-  default: '•',
-  link: '🔗'
+  github: 'âŒ¨',
+  portfolio: 'ðŸŒ',
+  education: 'ðŸŽ“',
+  internship: 'ðŸ’¼',
+  project: 'âš¡',
+  skill: 'âš¡',
+  certification: 'ðŸ“œ',
+  language: 'ðŸ—£ï¸',
+  about: 'ðŸ“',
+  calendar: 'ðŸ“…',
+  code: 'âŒ¨ï¸',
+  demo: 'ðŸ”—',
+  gpa: 'ðŸ“Š',
+  badge: 'â€¢',
+  bullet: 'â€¢',
+  triangle: 'â–¹',
+  dot: 'â€¢',
+  default: 'â€¢',
+  link: 'ðŸ”—'
 });
 
 // Helper functions - Immutable
@@ -105,7 +105,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   },
 
   formatGPA: (gpa) => {

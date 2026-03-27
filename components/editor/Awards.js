@@ -1098,7 +1098,7 @@ const Awards = ({
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>🏆</span>
+                  <span>ðŸ†</span>
                   Your Awards
                 </h2>
                 <div style={{
@@ -1120,7 +1120,7 @@ const Awards = ({
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏆</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>ðŸ†</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No awards added yet
                   </p>
@@ -1175,7 +1175,7 @@ const Awards = ({
                             fontSize: '14px'
                           }}
                         >
-                          ✕
+                          âœ•
                         </button>
                       </div>
                       
@@ -1193,7 +1193,7 @@ const Awards = ({
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            📅 {award.date}
+                            ðŸ“… {award.date}
                           </span>
                         )}
                       </div>
@@ -1288,7 +1288,7 @@ const Awards = ({
                     transition: 'all 0.2s'
                   }}
                 >
-                  <span>{category.icon || '🏆'}</span>
+                  <span>{category.icon || 'ðŸ†'}</span>
                   <span>{category.label}</span>
                 </button>
               ))}
@@ -1311,7 +1311,7 @@ const Awards = ({
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>⭐</span>
+                <span>â­</span>
                 Popular {awardCategories[selectedCategory]?.label} Awards
               </h2>
               <p style={{
@@ -1319,7 +1319,7 @@ const Awards = ({
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add • These awards are highly valued by employers
+                Click to add â€¢ These awards are highly valued by employers
               </p>
               
               <div style={{
@@ -1360,7 +1360,7 @@ const Awards = ({
                       title={!canAdd && !isAdded ? `Max ${maxAwardsLimit} awards reached` : ""}
                     >
                       {award.title}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>✓</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>âœ“</span>}
                     </button>
                   );
                 })}
@@ -1425,7 +1425,7 @@ const Awards = ({
                       >
                         <div style={{ fontWeight: 600, fontSize: '13px', color: '#2d3748' }}>{award.title}</div>
                         <div style={{ fontSize: '11px', color: '#718096', marginTop: '4px' }}>{award.issuer}</div>
-                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>✓ Added</div>}
+                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>âœ“ Added</div>}
                       </button>
                     );
                   })}

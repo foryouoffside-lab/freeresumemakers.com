@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import Head from 'next/head';
 

@@ -1,4 +1,4 @@
-﻿// pages/blog/how-to-write-resume.js
+// pages/blog/how-to-write-resume.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

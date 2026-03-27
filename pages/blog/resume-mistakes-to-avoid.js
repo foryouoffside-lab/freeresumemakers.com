@@ -1,4 +1,4 @@
-﻿// pages/blog/resume-mistakes-to-avoid.js
+// pages/blog/resume-mistakes-to-avoid.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

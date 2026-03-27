@@ -1,4 +1,4 @@
-﻿// pages/_app.js
+// pages/_app.js
 import { ResumeProvider } from '../context/ResumeContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';

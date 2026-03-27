@@ -1,4 +1,4 @@
-﻿// pages/professions/healthcare.js
+// pages/professions/healthcare.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

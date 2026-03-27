@@ -1,4 +1,4 @@
-﻿// pages/templates/compare/9-vs-10.js
+// pages/templates/compare/9-vs-10.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

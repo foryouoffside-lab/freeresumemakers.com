@@ -288,9 +288,9 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
     const endDate = formatDate(exp.endDate);
     
     if (startDate && endDate) {
-      return `${startDate} – ${endDate}`;
+      return `${startDate} â€“ ${endDate}`;
     } else if (startDate) {
-      return `${startDate} – Present`;
+      return `${startDate} â€“ Present`;
     } else if (endDate) {
       return endDate;
     }
@@ -324,12 +324,12 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
       if (value) contacts.push({ value: safeString(value), icon });
     };
 
-    addContact(personalInfo.email, '✉');
-    addContact(personalInfo.phone, '☏');
-    addContact(personalInfo.address, '📍');
-    addContact(personalInfo.linkedin, '🔗');
-    addContact(personalInfo.website, '🌐');
-    addContact(personalInfo.github, '⚡');
+    addContact(personalInfo.email, 'âœ‰');
+    addContact(personalInfo.phone, 'â˜');
+    addContact(personalInfo.address, 'ðŸ“');
+    addContact(personalInfo.linkedin, 'ðŸ”—');
+    addContact(personalInfo.website, 'ðŸŒ');
+    addContact(personalInfo.github, 'âš¡');
 
     return contacts;
   }, [personalInfo, safeString]);
@@ -813,7 +813,7 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
             
             {location && (
               <div style={{...styles.expLocation, ...styles.textWrapFix}}>
-                <span style={styles.locationIcon}>📍</span> {location}
+                <span style={styles.locationIcon}>ðŸ“</span> {location}
               </div>
             )}
           </div>
@@ -870,7 +870,7 @@ const LockedTemplate11 = React.memo(({ isExporting = false, ...props }) => {
             
             {location && (
               <div style={{...styles.eduLocation, ...styles.textWrapFix}}>
-                <span style={styles.locationIcon}>📍</span> {location}
+                <span style={styles.locationIcon}>ðŸ“</span> {location}
               </div>
             )}
           </div>

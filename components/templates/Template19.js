@@ -63,7 +63,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   },
 
   formatGPA: (gpa, scale) => {
@@ -275,22 +275,22 @@ const TemplateHelpers = Object.freeze({
   },
 
   icons: Object.freeze({
-    email: '✉',
-    phone: '📞',
-    location: '📍',
+    email: 'âœ‰',
+    phone: 'ðŸ“ž',
+    location: 'ðŸ“',
     linkedin: 'in',
-    github: '⌨',
-    portfolio: '🌐',
-    calendar: '📅',
-    briefcase: '💼',
-    project: '⚡',
-    education: '🎓',
-    internship: '🌟',
-    certification: '📜',
-    award: '🏆',
-    bullet: '—',
-    dot: '•',
-    triangle: '▹'
+    github: 'âŒ¨',
+    portfolio: 'ðŸŒ',
+    calendar: 'ðŸ“…',
+    briefcase: 'ðŸ’¼',
+    project: 'âš¡',
+    education: 'ðŸŽ“',
+    internship: 'ðŸŒŸ',
+    certification: 'ðŸ“œ',
+    award: 'ðŸ†',
+    bullet: 'â€”',
+    dot: 'â€¢',
+    triangle: 'â–¹'
   })
 });
 

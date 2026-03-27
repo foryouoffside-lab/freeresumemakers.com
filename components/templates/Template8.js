@@ -3,14 +3,14 @@ import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - LinkedIn icon with blue color only =====
 const T8_ICON_MAPPING = Object.freeze({
-  email: '✉️',
-  phone: '📱',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“±',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color ONLY for the icon
-  github: '⌨️',
-  portfolio: '🌐',
-  website: '🌐',
-  default: '📌'
+  github: 'âŒ¨ï¸',
+  portfolio: 'ðŸŒ',
+  website: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 // ===== CONSTANTS - LOCKED VALUES =====
@@ -75,7 +75,7 @@ const Helpers = Object.freeze({
       return startDate;
     }
     
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   },
 
   formatEducationDate: (startYear, endYear, isCurrent) => {
@@ -105,7 +105,7 @@ const Helpers = Object.freeze({
     if (formattedStart && !formattedEnd) return formattedStart;
     if (!formattedStart && formattedEnd) return formattedEnd;
     
-    return `${formattedStart} – ${formattedEnd}`;
+    return `${formattedStart} â€“ ${formattedEnd}`;
   },
 
   getSkillName: (skill) => {
@@ -121,7 +121,7 @@ const Helpers = Object.freeze({
 
   cleanBullet: (bullet) => {
     let cleaned = Helpers.safeString(bullet);
-    cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+    cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
     return cleaned;
   },
 
@@ -1248,7 +1248,7 @@ const Template8 = ({
             {exp.company}
             {exp.location && (
               <span style={styles.experienceLocation}>
-                <span style={styles.locationIcon}>📍</span> {exp.location}
+                <span style={styles.locationIcon}>ðŸ“</span> {exp.location}
               </span>
             )}
           </div>
@@ -1260,7 +1260,7 @@ const Template8 = ({
         <ul style={styles.bulletList}>
           {exp.achievements.map((achievement, idx) => (
             <li key={idx} style={styles.bulletItem}>
-              <span style={styles.bulletPoint}>•</span>
+              <span style={styles.bulletPoint}>â€¢</span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -1288,7 +1288,7 @@ const Template8 = ({
         <ul style={styles.bulletList}>
           {project.achievements.map((achievement, idx) => (
             <li key={idx} style={styles.bulletItem}>
-              <span style={styles.bulletPoint}>•</span>
+              <span style={styles.bulletPoint}>â€¢</span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -1342,7 +1342,7 @@ const Template8 = ({
       <div style={styles.locationGpaRow}>
         {edu.location && (
           <span style={styles.educationLocation}>
-            <span style={styles.locationIcon}>📍</span> {edu.location}
+            <span style={styles.locationIcon}>ðŸ“</span> {edu.location}
           </span>
         )}
         
@@ -1355,7 +1355,7 @@ const Template8 = ({
 
       {edu.honors && (
         <div style={styles.honorsContainer}>
-          <span>🏆</span> {edu.honors}
+          <span>ðŸ†</span> {edu.honors}
         </div>
       )}
     </div>
@@ -1372,8 +1372,8 @@ const Template8 = ({
         {ref.company && <div style={styles.referenceDetails}>{ref.company}</div>}
         {(ref.email || ref.phone) && (
           <div style={styles.referenceContact}>
-            {ref.email && <div>✉ {ref.email}</div>}
-            {ref.phone && <div>📱 {ref.phone}</div>}
+            {ref.email && <div>âœ‰ {ref.email}</div>}
+            {ref.phone && <div>ðŸ“± {ref.phone}</div>}
           </div>
         )}
       </div>

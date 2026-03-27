@@ -69,13 +69,13 @@ const BASE_SPACING = Object.freeze({
 
 // ICON MAPPING - Using Template1 style icons
 const ICON_MAPPING = Object.freeze({
-  email: '✉️',
-  phone: '📱',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“±',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: '⌨️',
-  portfolio: '🌐',
-  default: '📌'
+  github: 'âŒ¨ï¸',
+  portfolio: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 const Template3 = ({ 
@@ -148,10 +148,10 @@ const Template3 = ({
   });
 
   const EXPERIENCE_TYPES = Object.freeze({
-    job: { label: "Work Experience", icon: "💼", color: "#2c578b" },
-    internship: { label: "Internship", icon: "🎓", color: "#28a745" },
-    freelance: { label: "Freelance", icon: "💻", color: "#ffa726" },
-    research: { label: "Research", icon: "🔬", color: "#9c27b0" }
+    job: { label: "Work Experience", icon: "ðŸ’¼", color: "#2c578b" },
+    internship: { label: "Internship", icon: "ðŸŽ“", color: "#28a745" },
+    freelance: { label: "Freelance", icon: "ðŸ’»", color: "#ffa726" },
+    research: { label: "Research", icon: "ðŸ”¬", color: "#9c27b0" }
   });
 
   // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -252,7 +252,7 @@ const Template3 = ({
       if (!start && !end) return '';
       if (start && !end) return start;
       if (!start && end) return end;
-      return `${start} – ${end}`;
+      return `${start} â€“ ${end}`;
     },
 
     // Format GPA exactly like Template1
@@ -512,7 +512,7 @@ const Template3 = ({
       if (!bullet) return '';
       let cleaned = TemplateHelpers.safeString(bullet);
       // Remove bullet characters if they exist
-      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
       // Remove excessive periods
       cleaned = cleaned.replace(/\.\.+/g, '.');
       return cleaned;
@@ -545,7 +545,7 @@ const Template3 = ({
     
     const cleanedBulletPoints = bulletPoints.map(bullet => {
       let cleaned = TemplateHelpers.safeString(bullet);
-      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
       return cleaned;
     }).filter(bullet => bullet.length > 0);
     
@@ -796,15 +796,15 @@ const Template3 = ({
   // Localized text
   const getLocalizedText = useMemo(() => (key, lang = language) => {
     const translations = {
-      present: { en: 'Present', es: 'Actual', fr: 'Actuel', de: 'Aktuell', zh: '至今', ja: '現在' },
-      contact: { en: 'CONTACT', es: 'CONTACTO', fr: 'CONTACT', de: 'KONTAKT', zh: '联系方式', ja: '連絡先' },
-      skills: { en: 'SKILLS', es: 'HABILIDADES', fr: 'COMPÉTENCES', de: 'FÄHIGKEITEN', zh: '技能', ja: 'スキル' },
-      certifications: { en: 'CERTIFICATIONS', es: 'CERTIFICACIONES', fr: 'CERTIFICATIONS', de: 'ZERTIFIZIERUNGEN', zh: '认证', ja: '認定' },
-      awards: { en: 'AWARDS', es: 'PREMIOS', fr: 'PRIX', de: 'AUSZEICHNUNGEN', zh: '奖项', ja: '受賞' },
-      projects: { en: 'PROJECTS', es: 'PROYECTOS', fr: 'PROJETS', de: 'PROJEKTE', zh: '项目', ja: 'プロジェクト' },
-      professionalSummary: { en: 'PROFESSIONAL SUMMARY', es: 'RESUMEN PROFESIONAL', fr: 'RÉSUMÉ PROFESSIONNEL', de: 'PROFESSIONELLE ZUSAMMENFASSUNG', zh: '专业概述', ja: 'プロフェッショナルサマリー' },
-      workExperience: { en: 'WORK EXPERIENCE', es: 'EXPERIENCIA LABORAL', fr: 'EXPÉRIENCE PROFESSIONNELLE', de: 'BERUFSERFAHRUNG', zh: '工作经历', ja: '職務経験' },
-      education: { en: 'EDUCATION', es: 'EDUCACIÓN', fr: 'ÉDUCATION', de: 'BILDUNG', zh: '教育背景', ja: '学歴' }
+      present: { en: 'Present', es: 'Actual', fr: 'Actuel', de: 'Aktuell', zh: 'è‡³ä»Š', ja: 'ç¾åœ¨' },
+      contact: { en: 'CONTACT', es: 'CONTACTO', fr: 'CONTACT', de: 'KONTAKT', zh: 'è”ç³»æ–¹å¼', ja: 'é€£çµ¡å…ˆ' },
+      skills: { en: 'SKILLS', es: 'HABILIDADES', fr: 'COMPÃ‰TENCES', de: 'FÃ„HIGKEITEN', zh: 'æŠ€èƒ½', ja: 'ã‚¹ã‚­ãƒ«' },
+      certifications: { en: 'CERTIFICATIONS', es: 'CERTIFICACIONES', fr: 'CERTIFICATIONS', de: 'ZERTIFIZIERUNGEN', zh: 'è®¤è¯', ja: 'èªå®š' },
+      awards: { en: 'AWARDS', es: 'PREMIOS', fr: 'PRIX', de: 'AUSZEICHNUNGEN', zh: 'å¥–é¡¹', ja: 'å—è³ž' },
+      projects: { en: 'PROJECTS', es: 'PROYECTOS', fr: 'PROJETS', de: 'PROJEKTE', zh: 'é¡¹ç›®', ja: 'ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ' },
+      professionalSummary: { en: 'PROFESSIONAL SUMMARY', es: 'RESUMEN PROFESIONAL', fr: 'RÃ‰SUMÃ‰ PROFESSIONNEL', de: 'PROFESSIONELLE ZUSAMMENFASSUNG', zh: 'ä¸“ä¸šæ¦‚è¿°', ja: 'ãƒ—ãƒ­ãƒ•ã‚§ãƒƒã‚·ãƒ§ãƒŠãƒ«ã‚µãƒžãƒªãƒ¼' },
+      workExperience: { en: 'WORK EXPERIENCE', es: 'EXPERIENCIA LABORAL', fr: 'EXPÃ‰RIENCE PROFESSIONNELLE', de: 'BERUFSERFAHRUNG', zh: 'å·¥ä½œç»åŽ†', ja: 'è·å‹™çµŒé¨“' },
+      education: { en: 'EDUCATION', es: 'EDUCACIÃ“N', fr: 'Ã‰DUCATION', de: 'BILDUNG', zh: 'æ•™è‚²èƒŒæ™¯', ja: 'å­¦æ­´' }
     };
     return translations[key]?.[lang] || translations[key]?.en || key;
   }, [language]);
@@ -1382,14 +1382,14 @@ const Template3 = ({
                 {exp.location && (
                   <span style={baseStyles.location}>
                     <span> | </span>
-                    <span>📍</span> {TemplateHelpers.safeString(exp.location)}
+                    <span>ðŸ“</span> {TemplateHelpers.safeString(exp.location)}
                   </span>
                 )}
               </div>
             </div>
             <div>
               <div style={baseStyles.period}>
-                {TemplateHelpers.formatDate(exp.startDate)} – {TemplateHelpers.formatDate(exp.endDate)}
+                {TemplateHelpers.formatDate(exp.startDate)} â€“ {TemplateHelpers.formatDate(exp.endDate)}
               </div>
             </div>
           </div>
@@ -1401,7 +1401,7 @@ const Template3 = ({
                 <div style={baseStyles.achievementsList}>
                   {exp.bulletPoints.map((bullet, idx) => (
                     <div key={idx} style={baseStyles.achievementItem}>
-                      <span style={baseStyles.achievementBullet}>•</span>
+                      <span style={baseStyles.achievementBullet}>â€¢</span>
                       <span style={baseStyles.achievementText}>
                         {TemplateHelpers.safeString(bullet)}
                       </span>
@@ -1619,13 +1619,13 @@ const Template3 = ({
             <div>
               <div>
                 <h4 style={baseStyles.title}>
-                  🎓 {TemplateHelpers.safeString(edu.degree)}
+                  ðŸŽ“ {TemplateHelpers.safeString(edu.degree)}
                 </h4>
               </div>
             </div>
             <div>
               <div style={baseStyles.period}>
-                {TemplateHelpers.formatDate(edu.startDate)} – {TemplateHelpers.formatDate(edu.endDate)}
+                {TemplateHelpers.formatDate(edu.startDate)} â€“ {TemplateHelpers.formatDate(edu.endDate)}
               </div>
             </div>
           </div>
@@ -1640,7 +1640,7 @@ const Template3 = ({
               {/* Location - WITH ICON, white color */}
               {edu.location && edu.location.trim() && (
                 <span style={baseStyles.location}>
-                  <span>📍</span> {TemplateHelpers.safeString(edu.location)}
+                  <span>ðŸ“</span> {TemplateHelpers.safeString(edu.location)}
                 </span>
               )}
               
@@ -1648,7 +1648,7 @@ const Template3 = ({
               {edu.gpaDisplay && edu.gpaDisplay.trim() && (
                 <>
                   {edu.location && edu.location.trim() && (
-                    <span style={{ color: colorSchemeConfig.gray }}>•</span>
+                    <span style={{ color: colorSchemeConfig.gray }}>â€¢</span>
                   )}
                   <span style={baseStyles.gpa}>
                     {edu.gpaDisplay}
@@ -1679,7 +1679,7 @@ const Template3 = ({
                 <div style={baseStyles.achievementsList}>
                   {edu.bulletPoints.map((bullet, idx) => (
                     <div key={idx} style={baseStyles.achievementItem}>
-                      <span style={baseStyles.achievementBullet}>•</span>
+                      <span style={baseStyles.achievementBullet}>â€¢</span>
                       <span style={baseStyles.achievementText}>
                         {TemplateHelpers.safeString(bullet)}
                       </span>
@@ -1900,7 +1900,7 @@ const Template3 = ({
     return (
       <section style={baseStyles.section} className="template3-print-section">
         <div style={baseStyles.header}>
-          <div style={baseStyles.headerIcon}>—</div>
+          <div style={baseStyles.headerIcon}>â€”</div>
           <h2 style={baseStyles.headerTitle}>{getLocalizedText('professionalSummary')}</h2>
         </div>
         <div style={baseStyles.box}>
@@ -2138,7 +2138,7 @@ const Template3 = ({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}>—</div>
+                }}>â€”</div>
                 <MainSectionTitle text={getLocalizedText('workExperience')} />
               </div>
               <div style={{
@@ -2171,7 +2171,7 @@ const Template3 = ({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}>—</div>
+                }}>â€”</div>
                 <MainSectionTitle text={getLocalizedText('education')} />
               </div>
               <div style={{

@@ -1,4 +1,4 @@
-﻿import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '../../components/SEO';

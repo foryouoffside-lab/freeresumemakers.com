@@ -27,18 +27,18 @@ const CONTENT_LIMITS = Object.freeze({
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: '✉',
-  phone: '📞',
+  email: 'âœ‰',
+  phone: 'ðŸ“ž',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: '⌨',
-  portfolio: '🌐',
-  location: '📍',
-  calendar: '📅',
-  bullet: '—',
-  dot: '•',
-  triangle: '▹',
-  award: '🏆',
-  default: '📌'
+  github: 'âŒ¨',
+  portfolio: 'ðŸŒ',
+  location: 'ðŸ“',
+  calendar: 'ðŸ“…',
+  bullet: 'â€”',
+  dot: 'â€¢',
+  triangle: 'â–¹',
+  award: 'ðŸ†',
+  default: 'ðŸ“Œ'
 });
 
 // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -302,7 +302,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   },
 
   formatBulletPoints: (points, charLimit = null) => {
@@ -330,17 +330,17 @@ const TemplateHelpers = Object.freeze({
   },
 
   icons: Object.freeze({
-    location: '📍',
-    bullet: '—',
-    dot: '•',
-    triangle: '▹',
-    email: '✉',
-    phone: '📞',
-    linkedin: '🔗',
-    github: '⌨',
-    portfolio: '🌐',
-    calendar: '📅',
-    award: '🏆'
+    location: 'ðŸ“',
+    bullet: 'â€”',
+    dot: 'â€¢',
+    triangle: 'â–¹',
+    email: 'âœ‰',
+    phone: 'ðŸ“ž',
+    linkedin: 'ðŸ”—',
+    github: 'âŒ¨',
+    portfolio: 'ðŸŒ',
+    calendar: 'ðŸ“…',
+    award: 'ðŸ†'
   })
 });
 
@@ -851,7 +851,7 @@ const Template20 = ({
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                {processedData.skills.join(' • ')}
+                {processedData.skills.join(' â€¢ ')}
               </div>
             </div>
           </section>

@@ -1,4 +1,4 @@
-﻿// pages/blog/resume-for-career-change.js
+// pages/blog/resume-for-career-change.js
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';

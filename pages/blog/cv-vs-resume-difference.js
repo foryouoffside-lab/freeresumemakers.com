@@ -1,4 +1,4 @@
-﻿// pages/blog/cv-vs-resume-difference.js
+// pages/blog/cv-vs-resume-difference.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

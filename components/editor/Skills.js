@@ -1,4 +1,4 @@
-﻿// client/src/components/forms/Skills.js
+// client/src/components/forms/Skills.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 

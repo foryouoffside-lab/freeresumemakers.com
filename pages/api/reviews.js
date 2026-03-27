@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 
 const REVIEWS_FILE = path.join(process.cwd(), 'data', 'reviews.json');

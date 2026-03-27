@@ -1,4 +1,4 @@
-﻿// pages/blog/resume-objective-vs-summary.js
+// pages/blog/resume-objective-vs-summary.js
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';

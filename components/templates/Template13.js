@@ -336,8 +336,8 @@ const Template13 = ({ isExporting = false, ...props }) => {
     const end = current ? 'Present' : formatDate(endDate);
     
     if (!start && !end) return '';
-    if (start && end) return `${start} – ${end}`;
-    if (start) return `${start} – Present`;
+    if (start && end) return `${start} â€“ ${end}`;
+    if (start) return `${start} â€“ Present`;
     return end;
   };
 
@@ -433,7 +433,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                 border: 'none',
                 flexShrink: 0
               }}>
-                {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
+                {formatDate(exp.startDate)} â€“ {formatDate(exp.endDate)}
               </div>
             </div>
           </div>
@@ -471,7 +471,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                   gap: '2px',
                   fontSize: '10pt' // Reduced from 11pt to 10pt (1px smaller)
                 }}>
-                  <span style={{ fontSize: '9.5pt' }}>📍</span>
+                  <span style={{ fontSize: '9.5pt' }}>ðŸ“</span>
                   {safeString(exp.location)}
                 </span>
               )}
@@ -617,7 +617,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                 alignItems: 'center',
                 gap: '2px'
               }}>
-                <span style={{ fontSize: '9pt' }}>📍</span>
+                <span style={{ fontSize: '9pt' }}>ðŸ“</span>
                 {safeString(edu.location)}
               </div>
             </div>

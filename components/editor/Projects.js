@@ -1,4 +1,4 @@
-﻿// client/src/components/forms/Projects.js
+// client/src/components/forms/Projects.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 

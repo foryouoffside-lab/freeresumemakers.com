@@ -1,4 +1,4 @@
-﻿// client/src/components/forms/Education.js
+// client/src/components/forms/Education.js
 // STABLE VERSION - Fixed infinite save loop with proper data persistence
 // GPA SCALES: 5.0, 10.0, 100 only
 // ============================================

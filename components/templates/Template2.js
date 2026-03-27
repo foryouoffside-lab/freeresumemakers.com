@@ -13,10 +13,10 @@ import LoadingSpinner from '../LoadingSpinner';
 
 // EXPERIENCE TYPES - unchanged
 const EXPERIENCE_TYPES = Object.freeze({
-  job: { label: "Work Experience", icon: "💼", color: "#2563eb" },
-  project: { label: "Project", icon: "⚡", color: "#db2777" },
-  freelance: { label: "Freelance", icon: "💻", color: "#ea580c" },
-  research: { label: "Research", icon: "🔬", color: "#16a34a" }
+  job: { label: "Work Experience", icon: "ðŸ’¼", color: "#2563eb" },
+  project: { label: "Project", icon: "âš¡", color: "#db2777" },
+  freelance: { label: "Freelance", icon: "ðŸ’»", color: "#ea580c" },
+  research: { label: "Research", icon: "ðŸ”¬", color: "#16a34a" }
 });
 
 // CONTENT LIMITS - achievementsPerExperience set to 3
@@ -256,7 +256,7 @@ const TemplateHelpers = Object.freeze({
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} – ${end}`;
+    return `${start} â€“ ${end}`;
   },
 
   formatFullUrl: (url) => {
@@ -418,20 +418,20 @@ const TemplateHelpers = Object.freeze({
 
   // UPDATED: Icons with LinkedIn using "in" in blue
   icons: Object.freeze({
-    email: '✉️',
-    phone: '📞',
-    location: '📍',
+    email: 'âœ‰ï¸',
+    phone: 'ðŸ“ž',
+    location: 'ðŸ“',
     linkedin: 'in',  // Using "in" like Template17
-    github: '🐙',
-    portfolio: '🌐',
-    briefcase: '💼',
-    education: '🎓',
-    skills: '⚡',
-    projects: '🚀',
-    certificate: '📜',
-    bullet: '•',
-    triangle: '▹',
-    gpa: '📊'
+    github: 'ðŸ™',
+    portfolio: 'ðŸŒ',
+    briefcase: 'ðŸ’¼',
+    education: 'ðŸŽ“',
+    skills: 'âš¡',
+    projects: 'ðŸš€',
+    certificate: 'ðŸ“œ',
+    bullet: 'â€¢',
+    triangle: 'â–¹',
+    gpa: 'ðŸ“Š'
   }),
 
   // ===== NAME OPTIMIZATION FUNCTION (like Template1) =====
@@ -1584,7 +1584,7 @@ const Template2 = ({
               {processedData.hasData.summary && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>📝</span>
+                    <span style={styles.sectionIcon}>ðŸ“</span>
                     ABOUT ME
                   </h3>
                   <div style={getDynamicStyles.summaryCard}>
@@ -1621,7 +1621,7 @@ const Template2 = ({
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
                     <span style={styles.sectionIcon}>
-                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || '💼'}
+                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'ðŸ’¼'}
                     </span>
                     {EXPERIENCE_TYPES[selectedExperienceType]?.label || 'EXPERIENCE'}
                   </h3>
@@ -1659,7 +1659,7 @@ const Template2 = ({
                           </div>
                           {(exp.startDate || exp.endDate) && (
                             <div style={getDynamicStyles.experienceDates}>
-                              {exp.startDate} – {exp.endDate}
+                              {exp.startDate} â€“ {exp.endDate}
                             </div>
                           )}
                         </div>
@@ -1694,7 +1694,7 @@ const Template2 = ({
               {processedData.hasData.projects && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>🚀</span>
+                    <span style={styles.sectionIcon}>ðŸš€</span>
                     PROJECTS
                   </h3>
                   <div style={getDynamicStyles.projectList}>
@@ -1722,7 +1722,7 @@ const Template2 = ({
                           </div>
                           {(project.startDate || project.endDate) && (
                             <div style={getDynamicStyles.projectDates}>
-                              {project.startDate} – {project.endDate}
+                              {project.startDate} â€“ {project.endDate}
                             </div>
                           )}
                         </div>
@@ -1753,7 +1753,7 @@ const Template2 = ({
                             onMouseEnter={() => setHoveredItem(`${project.id}-link`)}
                             onMouseLeave={() => setHoveredItem(null)}
                           >
-                            🔗 {project.displayLink}
+                            ðŸ”— {project.displayLink}
                           </a>
                         )}
                       </div>
@@ -1768,7 +1768,7 @@ const Template2 = ({
               {processedData.hasData.skills && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>⚡</span>
+                    <span style={styles.sectionIcon}>âš¡</span>
                     KEY SKILLS
                   </h3>
                   <div style={getDynamicStyles.skillsContainer}>
@@ -1794,7 +1794,7 @@ const Template2 = ({
               {processedData.hasData.education && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>🎓</span>
+                    <span style={styles.sectionIcon}>ðŸŽ“</span>
                     EDUCATION
                   </h3>
                   <div style={getDynamicStyles.educationList}>
@@ -1827,7 +1827,7 @@ const Template2 = ({
                             {edu.displayDate && (
                               <div style={getDynamicStyles.educationDateBadge}>
                                 {edu.displayDate}
-                                {edu.current && <span> • Current</span>}
+                                {edu.current && <span> â€¢ Current</span>}
                               </div>
                             )}
                             
@@ -1859,7 +1859,7 @@ const Template2 = ({
               {processedData.hasData.certifications && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>📜</span>
+                    <span style={styles.sectionIcon}>ðŸ“œ</span>
                     CERTIFICATION
                   </h3>
                   <div style={getDynamicStyles.certificationList}>

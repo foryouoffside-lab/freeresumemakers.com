@@ -1,4 +1,4 @@
-﻿// pages/blog/action-verbs-for-resume.js
+// pages/blog/action-verbs-for-resume.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';

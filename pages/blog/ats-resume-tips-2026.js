@@ -1,4 +1,4 @@
-﻿// pages/blog/ats-resume-tips-2026.js
+// pages/blog/ats-resume-tips-2026.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';

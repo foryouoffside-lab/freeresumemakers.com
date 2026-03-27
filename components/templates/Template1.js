@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/templates/Template1.js 
 // UPDATED: LinkedIn "in" icon in blue color
 // - Shows username instead of full URL

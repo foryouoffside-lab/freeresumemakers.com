@@ -6,13 +6,13 @@ const DEBUG_MODE = false; // Disabled in production
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = {
-  email: '✉️',
-  phone: '📱',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“±',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: '🐙',
-  website: '🌐',
-  default: '📌'
+  github: 'ðŸ™',
+  website: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 };
 
 // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -456,7 +456,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} – ${end}`;
+    return `${start} â€“ ${end}`;
   };
 
   const displayProfessionalTitle = () => {
@@ -1353,7 +1353,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               )}
               {(exp.startDate || exp.endDate) && (
                 <div style={styles.expDates}>
-                  {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
+                  {formatDate(exp.startDate)} â€“ {formatDate(exp.endDate)}
                 </div>
               )}
             </div>
@@ -1367,7 +1367,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               )}
               {exp.location && (
                 <span style={styles.expLocation}>
-                  <span style={styles.locationIcon}>📍</span>
+                  <span style={styles.locationIcon}>ðŸ“</span>
                   {safeString(exp.location)}
                 </span>
               )}
@@ -1380,7 +1380,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               <div style={styles.achievements}>
                 {achievements.map((achievement, idx) => (
                   <div key={idx} style={styles.achievement}>
-                    <span style={styles.achievementBullet}>•</span>
+                    <span style={styles.achievementBullet}>â€¢</span>
                     <span style={styles.achievementText}>{achievement}</span>
                   </div>
                 ))}
@@ -1436,7 +1436,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
           </span>
           {edu.location && (
             <span style={styles.eduLocation}>
-              <span>📍</span> {safeString(edu.location)}
+              <span>ðŸ“</span> {safeString(edu.location)}
             </span>
           )}
         </div>
@@ -1451,7 +1451,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
           <div style={styles.eduAchievements}>
             {edu.achievements.map((achievement, idx) => (
               <div key={idx} style={styles.eduAchievementItem}>
-                <span style={styles.eduAchievementBullet}>•</span>
+                <span style={styles.eduAchievementBullet}>â€¢</span>
                 <span style={styles.eduAchievementText}>{achievement}</span>
               </div>
             ))}
@@ -1488,7 +1488,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
         {(issuer || date) && (
           <div style={styles.awardMeta}>
             {issuer && <span style={styles.awardIssuer}>{issuer}</span>}
-            {issuer && date && <span style={styles.awardSeparator}>•</span>}
+            {issuer && date && <span style={styles.awardSeparator}>â€¢</span>}
             {date && <span style={styles.awardDate}>{date}</span>}
           </div>
         )}
@@ -1671,7 +1671,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
             </section>
           ) : (
             <div style={styles.noExperience}>
-              <div style={styles.noExperienceIcon}>💼</div>
+              <div style={styles.noExperienceIcon}>ðŸ’¼</div>
               <p style={styles.noExperienceText}>No experience added yet</p>
               <small style={styles.noExperienceHint}>Add your first experience to showcase here</small>
             </div>

@@ -1,4 +1,4 @@
-﻿// pages/professions/education.js
+// pages/professions/education.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

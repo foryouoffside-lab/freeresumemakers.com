@@ -1,4 +1,4 @@
-﻿// pages/professions/administrative.js
+// pages/professions/administrative.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

@@ -1,4 +1,4 @@
-﻿// pages/examples/index.js
+// pages/examples/index.js
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';

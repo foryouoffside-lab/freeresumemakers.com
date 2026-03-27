@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/Preview.js
 // UPI PAYMENT - KEEP PAY VIA UPI BUTTON FOR ALL
 // REMOVED DOWNLOAD COUNTER

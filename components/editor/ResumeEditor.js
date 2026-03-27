@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/ResumeEditor.js
 // COMPLETE VERSION - WITH PROPER DOWNLOAD TRACKING
 // ============================================

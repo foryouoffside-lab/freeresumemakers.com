@@ -1,4 +1,4 @@
-﻿// pages/professions/software-engineering.js
+// pages/professions/software-engineering.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';

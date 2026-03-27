@@ -7,7 +7,7 @@ export const TEMPLATE7_LIMITS = {
   experiences: 2,           // Maximum number of work experience entries
   projects: 1,              // Maximum number of project entries
   education: 1,             // Maximum number of education entries
-  skills: 7,                // Maximum number of skills to display (UPDATED: 6 → 7)
+  skills: 7,                // Maximum number of skills to display (UPDATED: 6 â†’ 7)
   languages: 0,             // Maximum number of languages to display
   certifications: 1,        // Maximum number of certifications to display
   awards: 1,                // Maximum number of awards to display
@@ -89,14 +89,14 @@ export const TEMPLATE7_FORMATTING = {
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: '✉️',
-  phone: '📱',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“±',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: '🐙',
-  portfolio: '🌐',
-  website: '🌐',
-  default: '📌'
+  github: 'ðŸ™',
+  portfolio: 'ðŸŒ',
+  website: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 // ===== TEMPLATE7 FIELD MAPPINGS - GLOBALLY DEFINED =====
@@ -163,10 +163,10 @@ export const TEMPLATE7_EMPTY_STATES = {
   },
   
   contactInfo: [
-    { icon: '✉️', placeholder: 'email@example.com' },
-    { icon: '📱', placeholder: '+1 (123) 456-7890' },
-    { icon: '📍', placeholder: 'City, State' },
-    { icon: '💼', placeholder: 'linkedin.com/in/username' }
+    { icon: 'âœ‰ï¸', placeholder: 'email@example.com' },
+    { icon: 'ðŸ“±', placeholder: '+1 (123) 456-7890' },
+    { icon: 'ðŸ“', placeholder: 'City, State' },
+    { icon: 'ðŸ’¼', placeholder: 'linkedin.com/in/username' }
   ],
   
   messages: {
@@ -616,7 +616,7 @@ const Template7 = ({
     // Create display date with month and year
     let displayDate = '';
     if (formattedStartDate && formattedEndDate) {
-      displayDate = `${formattedStartDate} – ${formattedEndDate}`;
+      displayDate = `${formattedStartDate} â€“ ${formattedEndDate}`;
     } else if (formattedStartDate) {
       displayDate = formattedStartDate;
     } else if (formattedEndDate) {
@@ -957,7 +957,7 @@ const Template7 = ({
             <div style={styles.achievementsList}>
               {validAchievements.map((achievement, idx) => (
                 <div key={idx} style={styles.achievementItem}>
-                  <span style={styles.achievementBullet}>•</span>
+                  <span style={styles.achievementBullet}>â€¢</span>
                   <span style={styles.achievementText}>{safeString(achievement)}</span>
                 </div>
               ))}
@@ -998,7 +998,7 @@ const Template7 = ({
             <div style={styles.titleDatesRow}>
               <h3 style={styles.roleTitle}>{exp.position || 'Position'}</h3>
               <span style={styles.datePeriod}>
-                {formatExperienceDate(exp.startDate)} – {formatExperienceDate(exp.endDate)}
+                {formatExperienceDate(exp.startDate)} â€“ {formatExperienceDate(exp.endDate)}
               </span>
             </div>
             
@@ -1009,7 +1009,7 @@ const Template7 = ({
                 <>
                   <span style={styles.locationSeparator}> | </span>
                   <span style={styles.experienceLocation}>
-                    <span style={styles.locationIcon}>📍</span> {safeString(exp.location)}
+                    <span style={styles.locationIcon}>ðŸ“</span> {safeString(exp.location)}
                   </span>
                 </>
               )}
@@ -1050,7 +1050,7 @@ const Template7 = ({
       </div>
       {edu.location && (
         <div style={styles.educationSidebarLocation}>
-          📍 {safeString(edu.location)}
+          ðŸ“ {safeString(edu.location)}
         </div>
       )}
       
@@ -1075,7 +1075,7 @@ const Template7 = ({
       {/* Honors display */}
       {edu.honors && (
         <div style={styles.educationSidebarHonors}>
-          <span style={styles.honorsIcon}>🏆</span>
+          <span style={styles.honorsIcon}>ðŸ†</span>
           <span>{safeString(edu.honors)}</span>
         </div>
       )}
@@ -1165,7 +1165,7 @@ const Template7 = ({
             </div>
             {(project.startDate || project.endDate) && (
               <div style={styles.projectDates}>
-                {formatExperienceDate(project.startDate)} – {formatExperienceDate(project.endDate)}
+                {formatExperienceDate(project.startDate)} â€“ {formatExperienceDate(project.endDate)}
               </div>
             )}
           </div>
@@ -1181,7 +1181,7 @@ const Template7 = ({
             <div style={styles.projectBulletPoints}>
               {project.bulletPoints.map((bullet, idx) => (
                 <div key={idx} style={styles.projectBulletItem}>
-                  <span style={styles.projectBullet}>•</span>
+                  <span style={styles.projectBullet}>â€¢</span>
                   <span style={styles.projectBulletText}>{safeString(bullet)}</span>
                 </div>
               ))}
@@ -1216,7 +1216,7 @@ const Template7 = ({
 
   const renderSkillItem = useCallback((skill, index) => (
     <div key={index} style={styles.skillItem}>
-      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>•</span>
+      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>â€¢</span>
       <span style={styles.skillText}>{safeString(skill)}</span>
     </div>
   ), [safeString]);
@@ -1956,21 +1956,21 @@ const Template7 = ({
   // Helper component for before pseudo-elements
   const SkillItemWithBullet = ({ children }) => (
     <div style={styles.skillItem}>
-      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>•</span>
+      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>â€¢</span>
       <span style={styles.skillText}>{children}</span>
     </div>
   );
 
   const LanguageItemWithBullet = ({ children }) => (
     <div style={styles.languageItem}>
-      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>•</span>
+      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>â€¢</span>
       <span style={styles.languageText}>{children}</span>
     </div>
   );
 
   const OptionalItemWithBullet = ({ children, style }) => (
     <div style={styles.optionalItem}>
-      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>•</span>
+      <span style={{ position: 'absolute', left: 0, color: TEMPLATE7_FORMATTING.colors.accent, fontSize: '16px', lineHeight: 1.4 }}>â€¢</span>
       <span style={style || styles.optionalText}>{children}</span>
     </div>
   );
@@ -2023,7 +2023,7 @@ const Template7 = ({
             {/* Contact Info with LinkedIn optimization */}
             {contactInfo.length > 0 && (
               <div style={styles.contactSection}>
-                <SidebarHeading icon="📞" text="CONTACT" />
+                <SidebarHeading icon="ðŸ“ž" text="CONTACT" />
                 <div style={styles.contactList}>
                   {contactInfo.map(renderContactItem)}
                 </div>
@@ -2033,7 +2033,7 @@ const Template7 = ({
             {/* Skills - 7 skills max (UPDATED) */}
             {contentAnalysis.limitedSkills.length > 0 && (
               <section style={styles.skillsSection}>
-                <SidebarHeading icon="⚡" text="KEY SKILLS" />
+                <SidebarHeading icon="âš¡" text="KEY SKILLS" />
                 <div style={styles.skillsList}>
                   {contentAnalysis.limitedSkills.map((skill, index) => (
                     <SkillItemWithBullet key={index}>
@@ -2047,7 +2047,7 @@ const Template7 = ({
             {/* Languages - Hidden (0 limit) */}
             {CONTENT_LIMITS.languages > 0 && layoutConfig.showLanguages && contentAnalysis.limitedLanguages.length > 0 && (
               <section style={styles.languagesSection}>
-                <SidebarHeading icon="🌐" text="LANGUAGES" />
+                <SidebarHeading icon="ðŸŒ" text="LANGUAGES" />
                 <div style={styles.languagesList}>
                   {contentAnalysis.limitedLanguages.map((lang, index) => (
                     <LanguageItemWithBullet key={index}>
@@ -2061,7 +2061,7 @@ const Template7 = ({
             {/* Education - 1 max with GPA */}
             {layoutConfig.showEducation && contentAnalysis.limitedEducation.length > 0 && (
               <section style={styles.educationSidebarSection}>
-                <SidebarHeading icon="🎓" text="EDUCATION" />
+                <SidebarHeading icon="ðŸŽ“" text="EDUCATION" />
                 <div style={styles.educationSidebarList}>
                   {contentAnalysis.limitedEducation.map(renderEducationSidebarItem)}
                 </div>
@@ -2071,7 +2071,7 @@ const Template7 = ({
             {/* Certifications - 1 max */}
             {layoutConfig.showCertifications && contentAnalysis.limitedCertifications.length > 0 && (
               <section style={styles.educationSidebarSection}>
-                <SidebarHeading icon="🏆" text="CERTIFICATIONS" />
+                <SidebarHeading icon="ðŸ†" text="CERTIFICATIONS" />
                 <div style={styles.educationSidebarList}>
                   {contentAnalysis.limitedCertifications.map(renderCertificationSidebarItem)}
                 </div>
@@ -2081,7 +2081,7 @@ const Template7 = ({
             {/* Awards - 1 max */}
             {layoutConfig.showAwards && contentAnalysis.limitedAwards.length > 0 && (
               <section style={styles.educationSidebarSection}>
-                <SidebarHeading icon="⭐" text="AWARDS" />
+                <SidebarHeading icon="â­" text="AWARDS" />
                 <div style={styles.educationSidebarList}>
                   {contentAnalysis.limitedAwards.map(renderAwardSidebarItem)}
                 </div>
@@ -2091,7 +2091,7 @@ const Template7 = ({
             {/* Core Strengths - Hidden (0 limit) */}
             {CONTENT_LIMITS.coreStrengths > 0 && layoutConfig.showCoreStrengths && contentAnalysis.limitedCoreStrengths.length > 0 && (
               <section style={styles.optionalSection}>
-                <SidebarHeading icon="💪" text="CORE STRENGTHS" />
+                <SidebarHeading icon="ðŸ’ª" text="CORE STRENGTHS" />
                 <div style={styles.optionalList}>
                   {contentAnalysis.limitedCoreStrengths.map((strength, index) => (
                     <OptionalItemWithBullet key={index} style={styles.coreStrengthText}>
@@ -2105,7 +2105,7 @@ const Template7 = ({
             {/* Tools - Hidden (0 limit) */}
             {CONTENT_LIMITS.tools > 0 && layoutConfig.showTools && contentAnalysis.limitedTools.length > 0 && (
               <section style={styles.optionalSection}>
-                <SidebarHeading icon="🛠️" text="TOOLS" />
+                <SidebarHeading icon="ðŸ› ï¸" text="TOOLS" />
                 <div style={styles.optionalList}>
                   {contentAnalysis.limitedTools.map((tool, index) => (
                     <OptionalItemWithBullet key={index} style={styles.toolText}>

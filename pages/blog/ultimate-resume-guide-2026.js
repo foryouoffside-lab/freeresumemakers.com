@@ -1,4 +1,4 @@
-﻿// pages/blog/ultimate-resume-guide-2026.js
+// pages/blog/ultimate-resume-guide-2026.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

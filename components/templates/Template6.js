@@ -3,21 +3,21 @@ import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T6_ICON_MAPPING = Object.freeze({
-  email: '✉',
-  phone: '📞',
-  address: '📍',
+  email: 'âœ‰',
+  phone: 'ðŸ“ž',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: '⌨',
-  portfolio: '🌐',
-  default: '📌'
+  github: 'âŒ¨',
+  portfolio: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 const EXPERIENCE_TYPES = {
-  job: { label: "Experience", icon: "💼", color: "#1a3a5f" },
-  internship: { label: "Internships", icon: "🎓", color: "#1e6f5c" },
-  project: { label: "Projects", icon: "🚀", color: "#c13535" },
-  freelance: { label: "Freelance", icon: "💻", color: "#d35400" },
-  research: { label: "Research", icon: "🔬", color: "#5e35b1" }
+  job: { label: "Experience", icon: "ðŸ’¼", color: "#1a3a5f" },
+  internship: { label: "Internships", icon: "ðŸŽ“", color: "#1e6f5c" },
+  project: { label: "Projects", icon: "ðŸš€", color: "#c13535" },
+  freelance: { label: "Freelance", icon: "ðŸ’»", color: "#d35400" },
+  research: { label: "Research", icon: "ðŸ”¬", color: "#5e35b1" }
 };
 
 const Template6 = ({ isExporting = false, ...props }) => {
@@ -362,7 +362,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
     if (!startDate && !endDate) return '';
     if (startDate && !endDate) return startDate;
     if (!startDate && endDate) return endDate;
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   };
 
   const formatEducationDate = (dateString) => {
@@ -406,7 +406,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
   const processEducation = (edu) => {
     const startDate = formatEducationDate(edu.startDate || edu.startYear);
     const endDate = edu.current ? 'Present' : formatEducationDate(edu.endDate || edu.endYear || edu.graduationYear);
-    const dateDisplay = startDate && endDate ? `${startDate} – ${endDate}` : (startDate || endDate || '');
+    const dateDisplay = startDate && endDate ? `${startDate} â€“ ${endDate}` : (startDate || endDate || '');
     
     const gpaDisplay = edu.gpa ? formatGPA(edu.gpa, edu.gpaScale) : '';
     
@@ -731,14 +731,14 @@ const Template6 = ({ isExporting = false, ...props }) => {
               <span style={styles.expBoxCompany}>{safeString(exp.company)}</span>
               {exp.location && (
                 <span style={styles.expBoxLocation}>
-                  <span style={styles.locationIcon}>📍</span>
+                  <span style={styles.locationIcon}>ðŸ“</span>
                   {safeString(exp.location)}
                 </span>
               )}
             </div>
           </div>
           <div style={styles.expBoxDates}>
-            {formatDate(exp.startDate)} – {exp.current ? 'Present' : formatDate(exp.endDate)}
+            {formatDate(exp.startDate)} â€“ {exp.current ? 'Present' : formatDate(exp.endDate)}
           </div>
         </div>
         
@@ -746,7 +746,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
           <ul style={styles.expBoxAchievements}>
             {exp.bulletPoints.map((achievement, idx) => (
               <li key={idx} style={styles.expBoxAchievement}>
-                <span style={styles.achievementBullet}>•</span>
+                <span style={styles.achievementBullet}>â€¢</span>
                 {safeString(achievement)}
               </li>
             ))}
@@ -763,7 +763,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
         <span style={styles.eduBoxInstitution}>{safeString(edu.institution)}</span>
         {edu.location && (
           <span style={styles.eduBoxLocation}>
-            <span>📍</span>
+            <span>ðŸ“</span>
             {safeString(edu.location)}
           </span>
         )}
@@ -839,7 +839,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
     if (!name || name.length < 2) return null;
     return (
       <div key={index} style={styles.skillItem}>
-        <span>✦</span>
+        <span>âœ¦</span>
         <span>{name}</span>
       </div>
     );
@@ -1430,7 +1430,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.summary && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   PROFESSIONAL SUMMARY
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1445,7 +1445,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
               <section style={styles.section}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>✦</span>
+                    <span style={styles.sectionIcon}>âœ¦</span>
                     {getSectionTitle("WORK EXPERIENCE", selectedExperienceType)}
                   </h3>
                   
@@ -1477,7 +1477,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
                   </div>
                 ) : (
                   <div style={styles.emptyState}>
-                    <div style={styles.emptyIcon}>{EXPERIENCE_TYPES[selectedExperienceType]?.icon || '💼'}</div>
+                    <div style={styles.emptyIcon}>{EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'ðŸ’¼'}</div>
                     <p style={styles.emptyStateP}>No {EXPERIENCE_TYPES[selectedExperienceType]?.label.toLowerCase() || 'experience'} entries available</p>
                   </div>
                 )}
@@ -1487,7 +1487,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.education && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   EDUCATION
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1504,7 +1504,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.skills && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   KEY SKILLS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1518,7 +1518,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.projects && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   PROJECT
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1532,7 +1532,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.certifications && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   CERTIFICATIONS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1546,7 +1546,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.awards && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✦</span>
+                  <span style={styles.sectionIcon}>âœ¦</span>
                   AWARDS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>

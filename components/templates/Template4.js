@@ -147,13 +147,13 @@ const TEMPLATE4_CONSTANTS = Object.freeze({
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: '✉️',
-  phone: '📞',
-  address: '📍',
+  email: 'âœ‰ï¸',
+  phone: 'ðŸ“ž',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: '🐙',
-  portfolio: '🌐',
-  default: '📌'
+  github: 'ðŸ™',
+  portfolio: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 });
 
 // ===== COLOR SCHEMES with MAXIMUM CONTRAST for PDF =====
@@ -248,7 +248,7 @@ const TemplateHelpers = Object.freeze({
 
   cleanBullet: (bullet) => {
     let cleaned = TemplateHelpers.safeString(bullet);
-    cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
+    cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
     cleaned = cleaned.replace(/\.\.+/g, '.');
     return cleaned;
   },
@@ -2096,13 +2096,13 @@ const Template4 = ({
                       ...styles.locationSeparator,
                       ...(isMobile ? styles.mobileStyles.locationSeparator : {})
                     }}> | </span>
-                    📍 {getSafeText(exp.location)}
+                    ðŸ“ {getSafeText(exp.location)}
                   </span>
                 )}
               </div>
             </div>
             <span style={styles.period}>
-              {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
+              {formatDate(exp.startDate)} â€“ {formatDate(exp.endDate)}
             </span>
           </div>
           
@@ -2117,7 +2117,7 @@ const Template4 = ({
                     ...styles.descriptionItem,
                     ...(isMobile ? styles.mobileStyles.descriptionItem : {})
                   }}>
-                    <span style={styles.descriptionBullet}>•</span>
+                    <span style={styles.descriptionBullet}>â€¢</span>
                     <span style={styles.descriptionText}>
                       {getSafeText(bullet)}
                     </span>
@@ -2147,7 +2147,7 @@ const Template4 = ({
       if (!formattedStart && !formattedEnd) return '';
       if (formattedStart && !formattedEnd) return formattedStart;
       if (!formattedStart && formattedEnd) return formattedEnd;
-      return `${formattedStart} – ${formattedEnd}`;
+      return `${formattedStart} â€“ ${formattedEnd}`;
     };
     
     const gpaFormatted = edu.gpa ? formatGPA(edu.gpa, edu.gpaScale) : null;
@@ -2197,7 +2197,7 @@ const Template4 = ({
                       alignItems: 'center',
                       gap: '2px'
                     }}>
-                      <span>📍</span> {edu.location}
+                      <span>ðŸ“</span> {edu.location}
                     </span>
                   )}
                   
@@ -2287,7 +2287,7 @@ const Template4 = ({
             </div>
             {(project.startDate || project.endDate) && (
               <span style={styles.period}>
-                {formatDate(project.startDate)} – {formatDate(project.endDate)}
+                {formatDate(project.startDate)} â€“ {formatDate(project.endDate)}
               </span>
             )}
           </div>
@@ -2303,7 +2303,7 @@ const Template4 = ({
                     ...styles.projectBulletItem,
                     ...(isMobile ? styles.mobileStyles.projectBulletItem : {})
                   }}>
-                    <span style={styles.projectBullet}>•</span>
+                    <span style={styles.projectBullet}>â€¢</span>
                     <span style={styles.projectBulletText}>
                       {getSafeText(bullet)}
                     </span>
@@ -2423,7 +2423,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 CONTACT
               </h3>
             </div>
@@ -2441,7 +2441,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 SKILLS
               </h3>
             </div>
@@ -2461,7 +2461,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 CERTIFICATIONS
               </h3>
             </div>
@@ -2481,7 +2481,7 @@ const Template4 = ({
               ...styles.sidebarSectionHeading
             }}>
               <h3 style={styles.sectionTitle}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 AWARDS
               </h3>
             </div>
@@ -2510,7 +2510,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 PROFESSIONAL SUMMARY
               </h3>
             </div>
@@ -2529,7 +2529,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 EXPERIENCE
               </h3>
             </div>
@@ -2555,7 +2555,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 PROJECTS
               </h3>
             </div>
@@ -2581,7 +2581,7 @@ const Template4 = ({
                 ...styles.sectionTitle,
                 ...styles.mainSectionTitle
               }}>
-                <span style={styles.sectionIcon}>✦</span>
+                <span style={styles.sectionIcon}>âœ¦</span>
                 EDUCATION
               </h3>
             </div>

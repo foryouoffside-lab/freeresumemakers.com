@@ -1,4 +1,4 @@
-﻿import SEO from '../../../components/SEO';
+import SEO from '../../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

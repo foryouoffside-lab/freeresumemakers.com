@@ -1,4 +1,4 @@
-﻿// pages/templates/compare/17-vs-18.js
+// pages/templates/compare/17-vs-18.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

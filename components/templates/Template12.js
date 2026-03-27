@@ -30,13 +30,13 @@ const SPACING_CONFIG = {
 
 // ===== ICON MAPPING - Using Template12 original icons =====
 const ICON_MAPPING = {
-  email: '✉',
-  phone: '📞',
-  address: '📍',
+  email: 'âœ‰',
+  phone: 'ðŸ“ž',
+  address: 'ðŸ“',
   linkedin: { icon: 'in', color: '#0077b5' },
-  github: '⌨',
-  portfolio: '🌐',
-  default: '📌'
+  github: 'âŒ¨',
+  portfolio: 'ðŸŒ',
+  default: 'ðŸ“Œ'
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -175,9 +175,9 @@ const formatEducationDateRange = (edu) => {
   const end = current ? 'Present' : formatWithMonth(endDate);
   
   if (start && end && end !== 'Present') {
-    return `${start} – ${end}`;
+    return `${start} â€“ ${end}`;
   } else if (start && current) {
-    return `${start} – Present`;
+    return `${start} â€“ Present`;
   } else if (start) {
     return start;
   } else if (end) {
@@ -1142,7 +1142,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.expPosition}>{safeString(exp.position) || 'Position Not Specified'}</h3>
             <div style={styles.dateStyle}>
-              {exp.startDate ? formatDate(exp.startDate) : 'Start'} – {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
+              {exp.startDate ? formatDate(exp.startDate) : 'Start'} â€“ {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
             </div>
           </div>
           
@@ -1150,7 +1150,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
             <span style={styles.expCompany}>{safeString(exp.company) || 'Company Not Specified'}</span>
             {exp.companyLocation && exp.companyLocation.trim() && (
               <span style={styles.expLocation}>
-                <span style={styles.locationIcon}>📍</span>
+                <span style={styles.locationIcon}>ðŸ“</span>
                 <span>{exp.companyLocation}</span>
               </span>
             )}
@@ -1198,7 +1198,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.projectName}>{project.name || 'Project Name'}</h3>
             <div style={styles.projectDates}>
-              {project.startDate ? formatDate(project.startDate) : 'Start'} – {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
+              {project.startDate ? formatDate(project.startDate) : 'Start'} â€“ {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
             </div>
           </div>
           
@@ -1250,7 +1250,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
         
         {edu.location && (
           <div style={styles.eduLocationLeft}>
-            <span>📍</span> {edu.location}
+            <span>ðŸ“</span> {edu.location}
           </div>
         )}
         
@@ -1475,7 +1475,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
               <div style={styles.skillsContent}>
                 {contentAnalysis.skills.map((skill, index) => (
                   <div key={index} style={styles.skillLine}>
-                    <div style={styles.skillBullet}>●</div>
+                    <div style={styles.skillBullet}>â—</div>
                     <div style={styles.skillName}>{skill}</div>
                   </div>
                 ))}

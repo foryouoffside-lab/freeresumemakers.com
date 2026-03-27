@@ -1,4 +1,4 @@
-﻿// pages/templates/index.js
+// pages/templates/index.js
 import React from 'react';
 import Head from 'next/head';
 import SEO from '../../components/SEO';

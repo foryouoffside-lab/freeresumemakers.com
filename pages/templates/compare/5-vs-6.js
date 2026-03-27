@@ -1,4 +1,4 @@
-﻿// pages/templates/compare/5-vs-6.js
+// pages/templates/compare/5-vs-6.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

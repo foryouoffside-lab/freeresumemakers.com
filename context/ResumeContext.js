@@ -204,7 +204,7 @@ const cleanCertificationsData = (certifications) => {
       name: cert.name || cert.title || '',
       issuer: cert.issuer || cert.organization || '',
       date: cert.date || cert.issueDate || cert.completionDate || '',
-      icon: cert.icon || '📜',
+      icon: cert.icon || 'ðŸ“œ',
       current: Boolean(cert.current),
       link: cert.link || cert.url || ''
     }));
@@ -221,7 +221,7 @@ const cleanAwardsData = (awards) => {
       title: award.title || award.name || '',
       issuer: award.issuer || award.organization || '',
       date: award.date || award.year || '',
-      icon: award.icon || '🏆'
+      icon: award.icon || 'ðŸ†'
     }));
 };
 
@@ -279,7 +279,7 @@ const getInitialState = () => ({
 });
 
 const resumeReducer = (state, action) => {
-  console.log('🔥 REDUCER ACTION:', action.type, action.payload);
+  // console.log removed for production
   
   switch (action.type) {
     case ACTION_TYPES.SET_PERSONAL_INFO:
@@ -415,7 +415,7 @@ const resumeReducer = (state, action) => {
       }
     
     case ACTION_TYPES.IMPORT_DATA:
-      console.log('📥 IMPORT_DATA - Loading:', action.payload);
+      // console.log removed for production
       
       const importedData = action.payload || {};
       
@@ -477,11 +477,11 @@ export const ResumeProvider = ({ children }) => {
   useEffect(() => {
     const loadFromLocalStorage = () => {
       try {
-        console.log('🔍 Checking localStorage...');
+        // console.log removed for production
         const savedData = localStorage.getItem('resumeData');
         
         if (savedData) {
-          console.log('✅ Found data in localStorage');
+          // console.log removed for production
           const parsedData = JSON.parse(savedData);
           
           if (parsedData && typeof parsedData === 'object') {
@@ -491,7 +491,7 @@ export const ResumeProvider = ({ children }) => {
             
             if (summary && summary.includes('Software Engineer') && 
                 professionalSummary && !professionalSummary.includes('Software Engineer')) {
-              console.log('🔧 Fixing: Using correct summary from summary field');
+              // console.log removed for production
               professionalSummary = summary;
             }
             
@@ -524,7 +524,7 @@ export const ResumeProvider = ({ children }) => {
           }
         }
       } catch (error) {
-        console.error('❌ Error loading from localStorage:', error);
+        console.error('âŒ Error loading from localStorage:', error);
         localStorage.removeItem('resumeData');
       } finally {
         setIsLoading(false);
@@ -543,7 +543,7 @@ export const ResumeProvider = ({ children }) => {
       if (Object.keys(data.personalInfo).length === 0 && 
           data.experience.length === 0 && 
           data.education.length === 0) {
-        console.log('⏸️ Skipping save - empty state');
+        // console.log removed for production
         return false;
       }
       
@@ -565,12 +565,12 @@ export const ResumeProvider = ({ children }) => {
       };
       
       localStorage.setItem('resumeData', JSON.stringify(dataToSave));
-      console.log('✅ Saved to localStorage with both summary fields');
+      // console.log removed for production
       
       setTimeout(() => setIsSaving(false), 500);
       return true;
     } catch (error) {
-      console.error('❌ Error saving to localStorage:', error);
+      console.error('âŒ Error saving to localStorage:', error);
       setIsSaving(false);
       return false;
     }
@@ -608,7 +608,7 @@ export const ResumeProvider = ({ children }) => {
 
   const setSummary = useCallback((summary) => {
     const cleanedSummary = cleanSummaryData(summary);
-    console.log('📝 Setting summary:', cleanedSummary.substring(0, 100));
+    // console.log removed for production);
     
     enhancedDispatch({
       type: ACTION_TYPES.SET_SUMMARY,
@@ -622,9 +622,9 @@ export const ResumeProvider = ({ children }) => {
   }, [enhancedDispatch, state, saveToLocalStorage]);
 
   const setProjects = useCallback((projects) => {
-    console.log('📊 Setting projects:', projects);
+    // console.log removed for production
     const cleanedProjects = cleanProjectsData(projects);
-    console.log('📊 Cleaned projects:', cleanedProjects);
+    // console.log removed for production
     
     enhancedDispatch({
       type: ACTION_TYPES.SET_PROJECTS,
@@ -871,7 +871,7 @@ export const ResumeProvider = ({ children }) => {
     try {
       return localStorage.getItem('resumeData');
     } catch (error) {
-      console.error('❌ Error checking localStorage:', error);
+      console.error('âŒ Error checking localStorage:', error);
       return null;
     }
   }, []);
@@ -896,7 +896,7 @@ export const ResumeProvider = ({ children }) => {
       console.error('Error fixing summary:', error);
     }
     
-    console.log('✅ Summary fixed!');
+    // console.log removed for production
     return correctSummary;
   }, [enhancedDispatch]);
 
@@ -937,7 +937,7 @@ export const ResumeProvider = ({ children }) => {
     debug: {
       getCurrentState: () => state,
       getLocalStorage: checkLocalStorage,
-      logState: () => console.log('📊 Current Context State:', state),
+      logState: () => // console.log removed for production,
       saveNow: forceSaveNow,
       fixSummary,
       cleanSkills: (skills) => cleanSkillsData(skills),
@@ -974,26 +974,21 @@ export const useResumeDebug = () => {
   return {
     ...context,
     debugState: () => {
-      console.group('🔍 Resume Context Debug');
-      console.log('State:', context.state);
-      console.log('Personal Info:', context.state.personalInfo);
-      console.log('Professional Summary:', context.state.professionalSummary);
-      console.log('Skills:', context.state.skills);
-      console.log('Education:', context.state.education);
-      console.log('Experience:', context.state.experience);
-      console.log('Projects:', context.state.projects);
+      console.group('ðŸ” Resume Context Debug');
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
       context.state.projects.forEach((project, i) => {
-        console.log(`Project ${i}:`, {
-          name: project.name,
-          bulletPoints: project.bulletPoints,
-          achievements: project.achievements,
-          highlights: project.highlights
-        });
+        // console.log removed for production
       });
-      console.log('Internships:', context.state.internships);
-      console.log('Certifications:', context.state.certifications);
-      console.log('Awards:', context.state.awards);
-      console.log('Languages:', context.state.languages);
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
+      // console.log removed for production
       console.groupEnd();
       return context.state;
     },
@@ -1026,7 +1021,7 @@ export const useResumeDebug = () => {
           
           localStorage.setItem('resumeData', JSON.stringify(cleaned));
           context.importData(cleaned);
-          console.log('✅ Fixed corrupted data');
+          // console.log removed for production
         }
       } catch (e) {
         console.error('Error fixing data:', e);

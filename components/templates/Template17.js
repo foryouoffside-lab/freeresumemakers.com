@@ -23,35 +23,35 @@ import LoadingSpinner from '../LoadingSpinner';
 const SECTION_TYPES = Object.freeze({
   internship: { 
     label: "Internships", 
-    icon: "🎓", 
+    icon: "ðŸŽ“", 
     color: "#4f46e5",
     lightColor: "#eef2ff",
     borderColor: "#c7d2fe"
   },
   project: { 
     label: "Projects", 
-    icon: "⚡", 
+    icon: "âš¡", 
     color: "#db2777",
     lightColor: "#fdf2f8",
     borderColor: "#fbcfe8"
   },
   education: { 
     label: "Education", 
-    icon: "📖", 
+    icon: "ðŸ“–", 
     color: "#2563eb",
     lightColor: "#eff6ff",
     borderColor: "#bfdbfe"
   },
   certification: { 
     label: "Certifications", 
-    icon: "📜", 
+    icon: "ðŸ“œ", 
     color: "#16a34a",
     lightColor: "#f0fdf4",
     borderColor: "#bbf7d0"
   },
   award: {
     label: "Awards & Honors", 
-    icon: "🏆", 
+    icon: "ðŸ†", 
     color: "#e11d48",
     lightColor: "#fff1f2",
     borderColor: "#fecdd3"
@@ -139,28 +139,28 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (startDate && !endDate) return startDate;
     if (!startDate && endDate) return endDate;
-    return `${startDate} – ${endDate}`;
+    return `${startDate} â€“ ${endDate}`;
   },
 
   // Icon mapping for PDF-friendly icons
   icons: Object.freeze({
-    email: '✉',
-    phone: '📞',
-    location: '📍',
+    email: 'âœ‰',
+    phone: 'ðŸ“ž',
+    location: 'ðŸ“',
     linkedin: 'in',
-    github: '⌨',
-    portfolio: '🌐',
-    briefcase: '💼',
-    project: '⚡',
-    education: '🎓',
-    certification: '📜',
-    award: '🏆',
-    bullet: '—',
-    dot: '•',
-    triangle: '▹',
-    link: '🔗',
-    role: '👤',
-    calendar: '📅'
+    github: 'âŒ¨',
+    portfolio: 'ðŸŒ',
+    briefcase: 'ðŸ’¼',
+    project: 'âš¡',
+    education: 'ðŸŽ“',
+    certification: 'ðŸ“œ',
+    award: 'ðŸ†',
+    bullet: 'â€”',
+    dot: 'â€¢',
+    triangle: 'â–¹',
+    link: 'ðŸ”—',
+    role: 'ðŸ‘¤',
+    calendar: 'ðŸ“…'
   })
 });
 
@@ -198,7 +198,7 @@ const Template17 = ({
     
     let displayDate = '';
     if (formattedStart && formattedEnd) {
-      displayDate = `${formattedStart} – ${formattedEnd}`;
+      displayDate = `${formattedStart} â€“ ${formattedEnd}`;
     } else if (formattedStart) {
       displayDate = formattedStart;
     } else if (formattedEnd) {
@@ -1001,7 +1001,7 @@ const Template17 = ({
             <span style={styles.internshipCompany}>{internship.company}</span>
             {internship.location && (
               <>
-                <span>•</span>
+                <span>â€¢</span>
                 <span style={styles.locationWrapper}>
                   <span style={styles.locationIcon}>{TemplateHelpers.icons.location}</span>
                   <span>{internship.location}</span>
@@ -1012,7 +1012,7 @@ const Template17 = ({
         </div>
         {(internship.startDate || internship.endDate) && (
           <div style={styles.dateBadge}>
-            {internship.startDate} – {internship.endDate}
+            {internship.startDate} â€“ {internship.endDate}
           </div>
         )}
       </div>
@@ -1055,7 +1055,7 @@ const Template17 = ({
         </div>
         {(project.startDate || project.endDate) && (
           <div style={styles.dateBadge}>
-            {project.startDate} – {project.endDate}
+            {project.startDate} â€“ {project.endDate}
           </div>
         )}
       </div>
@@ -1112,7 +1112,7 @@ const Template17 = ({
           {edu.displayDate && (
             <div style={styles.educationDate}>
               {edu.displayDate}
-              {edu.current && <span> • Current</span>}
+              {edu.current && <span> â€¢ Current</span>}
             </div>
           )}
           
@@ -1240,7 +1240,7 @@ const Template17 = ({
             {processedData.hasData.summary && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>✨</span>
+                  <span style={styles.sectionIcon}>âœ¨</span>
                   About Me
                 </h3>
                 <div style={styles.summaryCard}>
@@ -1295,7 +1295,7 @@ const Template17 = ({
             {processedData.hasData.skills && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>⚡</span>
+                  <span style={styles.sectionIcon}>âš¡</span>
                   Skills
                 </h3>
                 <div style={styles.skillsContainer}>

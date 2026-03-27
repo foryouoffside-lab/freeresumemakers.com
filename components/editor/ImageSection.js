@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/ImageSection.js
 // OPTIMIZED VERSION - DYNAMIC SPACING FOR ALL DEVICES
 // WITH ADAPTIVE BUTTON POSITIONING - FIXED FUNCTIONALITY

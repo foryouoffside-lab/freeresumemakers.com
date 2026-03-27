@@ -1,4 +1,4 @@
-﻿// pages/editor/template-selector.js
+// pages/editor/template-selector.js
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import TemplateSelectorComponent from '../../components/templates/TemplateSelector';
