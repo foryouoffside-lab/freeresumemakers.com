@@ -79,25 +79,25 @@ export default function BySectionImageSection() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Image Section",
-        "item": "https://freeresumemakers.com/templates/by-section/image-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section/image-section"
       }
     ]
   };
@@ -114,7 +114,7 @@ export default function BySectionImageSection() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -135,7 +135,7 @@ export default function BySectionImageSection() {
           title={`${selectedTemplate.name} | Resume Template with Image Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features ${selectedTemplate.imagePlacement}. Perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes professional photo placement and visual branding elements.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with photo, resume with image section, professional resume template with photo, ${selectedTemplate.style} resume, photo resume template, resume with headshot`}
-          canonical={`https://freeresumemakers.com/templates/by-section/image-section/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/image-section/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -416,8 +416,8 @@ export default function BySectionImageSection() {
         title="Resume Templates with Image Section | Professional Photo & Portfolio Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated image section for professional photos, portfolio pieces, and personal branding. Choose from corporate, creative, technical, and executive layouts designed to add visual impact to your resume. Perfect for professionals who want to stand out with a polished visual presence."
         keywords="resume templates with photo, resume with image section, professional photo resume, resume with headshot, portfolio resume templates, creative resume templates, visual resume, photo resume layout, resume with profile picture, professional resume with photo"
-        canonical="https://freeresumemakers.com/templates/by-section/image-section"
-        image="https://freeresumemakers.com/images/templates/image-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/image-section"
+        image="https://freeresumemaker.xyz/images/templates/image-section-og.jpg"
         type="website"
       />
       

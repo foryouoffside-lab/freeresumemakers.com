@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function ProjectsSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/projects#article",
+        "@id": "https://freeresumemaker.xyz/sections/projects#article",
         "headline": "How to List Projects on Resume: Complete Guide with Examples 2026",
         "description": "Expert guide on showcasing projects on your resume. Learn how to format projects for developers, designers, and engineers with GitHub links, technical details, and quantifiable results. Perfect for freshers and portfolio careers.",
-        "image": "https://freeresumemakers.com/images/projects-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/projects-guide-2026.jpg",
         "datePublished": "2026-02-15T08:00:00+00:00",
         "dateModified": "2026-03-24T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/projects"
+          "@id": "https://freeresumemaker.xyz/sections/projects"
         },
         "keywords": "projects on resume, portfolio projects, GitHub resume, project section, technical projects, developer portfolio, design portfolio, how to list projects on resume"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/projects#howto",
+        "@id": "https://freeresumemaker.xyz/sections/projects#howto",
         "name": "How to List Projects on Your Resume",
         "description": "A step-by-step guide to showcasing projects on your resume with examples for developers, designers, and engineers.",
         "estimatedCost": {
@@ -85,31 +85,31 @@ export default function ProjectsSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/projects#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/projects#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Projects Guide",
-            "item": "https://freeresumemakers.com/sections/projects"
+            "item": "https://freeresumemaker.xyz/sections/projects"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/projects#faq",
+        "@id": "https://freeresumemaker.xyz/sections/projects#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -172,7 +172,7 @@ export default function ProjectsSectionGuide() {
   const projectExamples = [
     {
       field: "Software Development",
-      icon: "💻",
+      icon: "ðŸ’»",
       projects: [
         {
           name: "E-Commerce Platform",
@@ -185,7 +185,7 @@ export default function ProjectsSectionGuide() {
             "Deployed on AWS EC2 with CI/CD pipeline using GitHub Actions"
           ],
           link: "github.com/username/ecommerce-platform",
-          stats: "⭐ 250+ GitHub stars | 1,200+ monthly users"
+          stats: "â­ 250+ GitHub stars | 1,200+ monthly users"
         },
         {
           name: "Task Management SaaS",
@@ -204,7 +204,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "UI/UX Design",
-      icon: "🎨",
+      icon: "ðŸŽ¨",
       projects: [
         {
           name: "Healthcare App Redesign",
@@ -235,7 +235,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "Data Science",
-      icon: "📊",
+      icon: "ðŸ“Š",
       projects: [
         {
           name: "Sales Forecasting Model",
@@ -266,7 +266,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "Mobile Development",
-      icon: "📱",
+      icon: "ðŸ“±",
       projects: [
         {
           name: "Fitness Tracker App",
@@ -309,7 +309,7 @@ export default function ProjectsSectionGuide() {
         title="How to List Projects on Resume: Complete Guide with Examples 2026 | FreeResumeMakers"
         description="Expert guide on showcasing projects on your resume. Learn how to format projects for developers, designers, and engineers with GitHub links, technical details, and quantifiable results. Perfect for freshers and portfolio careers."
         keywords="projects on resume, portfolio projects, GitHub resume, project section, technical projects, developer portfolio, design portfolio, how to list projects on resume, personal projects resume"
-        canonical="https://freeresumemakers.com/sections/projects"
+        canonical="https://freeresumemaker.xyz/sections/projects"
         type="article"
         publishedTime="2026-02-15T08:00:00+00:00"
         modifiedTime="2026-03-24T10:00:00+00:00"
@@ -322,7 +322,7 @@ export default function ProjectsSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/projects" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/projects" />
         <meta name="description" content="Learn how to showcase projects on your resume with expert examples for software developers, designers, and engineers. Includes GitHub links, technical details, and formatting tips." />
       </Head>
 
@@ -330,9 +330,9 @@ export default function ProjectsSectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Projects Guide</span>
         </nav>
 
@@ -342,10 +342,10 @@ export default function ProjectsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 10 min read</span>
-            <span>👁️ 38,000+ readers</span>
-            <span>💻 20+ Project Examples</span>
+            <span>ðŸ“… Updated: March 24, 2026</span>
+            <span>â±ï¸ 10 min read</span>
+            <span>ðŸ‘ï¸ 38,000+ readers</span>
+            <span>ðŸ’» 20+ Project Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -363,13 +363,13 @@ export default function ProjectsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Project Format</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Field</a>
-            <a href="#fresher-ideas" style={{ color: '#0070f3', textDecoration: 'none' }}>• Project Ideas for Freshers</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Project Format</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Examples by Field</a>
+            <a href="#fresher-ideas" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Project Ideas for Freshers</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Placement Strategy</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -382,7 +382,7 @@ export default function ProjectsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
+            <strong>ðŸ’¡ Pro Tip:</strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
             Make sure your repositories have clear README files, screenshots, and setup instructions. A well-documented project shows attention to detail and professionalism.
           </p>
         </div>
@@ -396,11 +396,11 @@ export default function ProjectsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #e9ecef' }}>
             <div style={{ fontFamily: 'monospace', fontSize: '14px', lineHeight: '1.8' }}>
               <strong style={{ fontSize: '16px' }}>[Project Name]</strong> | <em>[Technologies Used]</em> | [Year]<br />
-              • <strong>Problem:</strong> What challenge did you solve?<br />
-              • <strong>Solution:</strong> Your approach and technical implementation<br />
-              • <strong>Role:</strong> Your specific contribution (for team projects)<br />
-              • <strong>Result:</strong> Quantifiable impact (users, performance, revenue)<br />
-              • <strong>Link:</strong> GitHub | Live Demo | Portfolio
+              â€¢ <strong>Problem:</strong> What challenge did you solve?<br />
+              â€¢ <strong>Solution:</strong> Your approach and technical implementation<br />
+              â€¢ <strong>Role:</strong> Your specific contribution (for team projects)<br />
+              â€¢ <strong>Result:</strong> Quantifiable impact (users, performance, revenue)<br />
+              â€¢ <strong>Link:</strong> GitHub | Live Demo | Portfolio
             </div>
           </div>
         </section>
@@ -428,10 +428,10 @@ export default function ProjectsSectionGuide() {
                   </ul>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginTop: '12px' }}>
                     <a href="#" style={{ color: '#0070f3', textDecoration: 'none', fontSize: '14px' }}>
-                      🔗 {project.link}
+                      ðŸ”— {project.link}
                     </a>
                     <span style={{ background: '#e3f2fd', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', color: '#0070f3' }}>
-                      📊 {project.stats}
+                      ðŸ“Š {project.stats}
                     </span>
                   </div>
                 </div>
@@ -443,7 +443,7 @@ export default function ProjectsSectionGuide() {
         {/* Fresher Project Ideas Section */}
         <section id="fresher-ideas">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            💡 Project Ideas for Freshers (No Experience)
+            ðŸ’¡ Project Ideas for Freshers (No Experience)
           </h2>
           <div style={{ background: '#fff3e0', padding: '24px', borderRadius: '16px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <p style={{ margin: '0 0 16px 0', fontSize: '16px' }}>
@@ -476,22 +476,22 @@ export default function ProjectsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>🎯</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸŽ¯</div>
               <strong>Problem</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>What challenge did you solve?</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>⚙️</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>âš™ï¸</div>
               <strong>Technologies</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Tools, languages, frameworks used</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>👤</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸ‘¤</div>
               <strong>Your Role</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Individual contribution (for team projects)</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📈</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸ“ˆ</div>
               <strong>Results</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Quantifiable outcomes (users, performance, revenue)</p>
             </div>
@@ -501,7 +501,7 @@ export default function ProjectsSectionGuide() {
         {/* Placement Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            📍 Where to Place Projects on Your Resume
+            ðŸ“ Where to Place Projects on Your Resume
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #e9ecef' }}>
@@ -528,7 +528,7 @@ export default function ProjectsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Project Formatting
+            ðŸ¤– ATS-Friendly Project Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -587,7 +587,7 @@ export default function ProjectsSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -598,12 +598,12 @@ export default function ProjectsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
-            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide →</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide â†’</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide â†’</Link>
+            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide â†’</Link>
           </div>
         </div>
       </main>

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -89,13 +89,13 @@ export default function FAQ() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://freeresumemakers.com/faq"
+        "item": "https://freeresumemaker.xyz/faq"
       }
     ]
   };
@@ -106,7 +106,7 @@ export default function FAQ() {
     "@type": "WebPage",
     "name": "Frequently Asked Questions - Free Resume Builder",
     "description": "Find answers to common questions about our free resume builder. Learn about templates, privacy, downloading, and more.",
-    "url": "https://freeresumemakers.com/faq"
+    "url": "https://freeresumemaker.xyz/faq"
   };
 
   return (
@@ -115,8 +115,8 @@ export default function FAQ() {
         title="FAQ - Frequently Asked Questions About Free Resume Builder | Get Help"
         description="Find answers to common questions about our free resume builder. Learn about templates, ATS optimization, privacy, PDF downloads, and more. Get the help you need to create your professional resume."
         keywords="resume builder FAQ, resume questions, ATS questions, free resume help, resume builder help, resume template questions, how to use resume builder"
-        canonical="https://freeresumemakers.com/faq"
-        image="https://freeresumemakers.com/images/faq/og-faq.jpg"
+        canonical="https://freeresumemaker.xyz/faq"
+        image="https://freeresumemaker.xyz/images/faq/og-faq.jpg"
         type="website"
       />
       
@@ -152,7 +152,7 @@ export default function FAQ() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>FAQ</span>
         </nav>
 
@@ -283,7 +283,7 @@ export default function FAQ() {
                       transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s'
                     }}>
-                      ▼
+                      â–¼
                     </span>
                   </button>
                   
@@ -301,21 +301,21 @@ export default function FAQ() {
                       {faq.q.includes("template") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Browse all templates →
+                            Browse all templates â†’
                           </Link>
                         </p>
                       )}
                       {faq.q.includes("download") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Start building your resume →
+                            Start building your resume â†’
                           </Link>
                         </p>
                       )}
                       {faq.q.includes("start building") && (
                         <p style={{marginTop: '16px', fontSize: '0.85rem'}}>
                           <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                            Create your resume now →
+                            Create your resume now â†’
                           </Link>
                         </p>
                       )}
@@ -464,7 +464,7 @@ export default function FAQ() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '24px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | 100% Free | ATS-Friendly</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | 100% Free | ATS-Friendly</p>
         </div>
       </main>
     </>

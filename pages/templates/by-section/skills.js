@@ -79,25 +79,25 @@ export default function BySectionSkills() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Skills Section",
-        "item": "https://freeresumemakers.com/templates/by-section/skills"
+        "item": "https://freeresumemaker.xyz/templates/by-section/skills"
       }
     ]
   };
@@ -114,7 +114,7 @@ export default function BySectionSkills() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -135,7 +135,7 @@ export default function BySectionSkills() {
           title={`${selectedTemplate.name} | Resume Template with Skills Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features ${selectedTemplate.skillsFormat}. Perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes skill categorization, proficiency indicators, and professional competencies.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with skills section, skills-focused resume, ${selectedTemplate.style} resume, technical skills resume, professional skills template, competency-based resume`}
-          canonical={`https://freeresumemakers.com/templates/by-section/skills/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/skills/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -445,8 +445,8 @@ export default function BySectionSkills() {
         title="Resume Templates with Skills Section | Professional Skills-Focused Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated skills section for showcasing your technical expertise, soft skills, and professional competencies. Choose from technical, creative, business, soft skills, academic, and comprehensive layouts designed to highlight your unique skill set, proficiency levels, and qualifications. Perfect for developers, designers, managers, and professionals across all industries."
         keywords="resume templates with skills section, skills-focused resume, technical skills resume, professional skills template, competency-based resume, skills matrix template, soft skills resume, developer skills resume, creative skills portfolio, business skills resume, ATS friendly skills resume"
-        canonical="https://freeresumemakers.com/templates/by-section/skills"
-        image="https://freeresumemakers.com/images/templates/skills-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/skills"
+        image="https://freeresumemaker.xyz/images/templates/skills-section-og.jpg"
         type="website"
       />
       

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -61,7 +61,7 @@ export default function Support() {
     "@context": "https://schema.org",
     "@type": "NonprofitOrganization",
     "name": "Free Resume Builder",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "description": "Free, ad-free resume builder helping job seekers create professional resumes.",
     "funding": {
       "@type": "FundingAgency",
@@ -80,13 +80,13 @@ export default function Support() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Support",
-        "item": "https://freeresumemakers.com/support"
+        "item": "https://freeresumemaker.xyz/support"
       }
     ]
   };
@@ -97,8 +97,8 @@ export default function Support() {
         title="Support Our Project - Help Keep Resume Builder Free | Community Supported"
         description="Support the development of our free resume builder. Your contribution helps us keep this tool free, add new features, and help more job seekers create professional resumes. 100% optional, one-time support."
         keywords="support resume builder, donate, contribute, keep it free, resume builder support, community supported, free resume builder"
-        canonical="https://freeresumemakers.com/support"
-        image="https://freeresumemakers.com/images/support-og.jpg"
+        canonical="https://freeresumemaker.xyz/support"
+        image="https://freeresumemaker.xyz/images/support-og.jpg"
         type="website"
       />
       
@@ -134,7 +134,7 @@ export default function Support() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Support</span>
         </nav>
 
@@ -152,7 +152,7 @@ export default function Support() {
             fontWeight: 'bold',
             color: '#0070f3'
           }}>
-            ❤
+            â¤
           </div>
           <h1 style={{
             fontSize: '42px',
@@ -444,7 +444,7 @@ export default function Support() {
                 fontWeight: 500
               }}
             >
-              Share Feedback →
+              Share Feedback â†’
             </Link>
             <span style={{ color: '#ddd' }}>|</span>
             <Link 
@@ -455,7 +455,7 @@ export default function Support() {
                 fontWeight: 500
               }}
             >
-              Browse Templates →
+              Browse Templates â†’
             </Link>
           </div>
         </div>
@@ -469,7 +469,7 @@ export default function Support() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 100% Free | Community Supported</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 100% Free | Community Supported</p>
         </div>
       </div>
     </>

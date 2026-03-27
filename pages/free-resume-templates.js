@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -72,13 +72,13 @@ export default function FreeTemplatesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Free Resume Templates",
-        "item": "https://freeresumemakers.com/free-resume-templates"
+        "item": "https://freeresumemaker.xyz/free-resume-templates"
       }
     ]
   };
@@ -95,7 +95,7 @@ export default function FreeTemplatesPage() {
       "position": num,
       "name": templateNames[num],
       "description": templateDescriptions[num],
-      "url": `https://freeresumemakers.com/templates/${num}`
+      "url": `https://freeresumemaker.xyz/templates/${num}`
     }))
   };
 
@@ -105,13 +105,13 @@ export default function FreeTemplatesPage() {
     "@type": "CollectionPage",
     "name": "Free Resume Templates Collection",
     "description": "Browse and download 20+ free, professionally designed resume templates for 2026. All templates are ATS-friendly and ready for instant PDF download.",
-    "url": "https://freeresumemakers.com/free-resume-templates",
+    "url": "https://freeresumemaker.xyz/free-resume-templates",
     "numberOfItems": 20,
     "hasPart": templates.map(num => ({
       "@type": "CreativeWork",
       "name": templateNames[num],
       "description": templateDescriptions[num],
-      "url": `https://freeresumemakers.com/templates/${num}`
+      "url": `https://freeresumemaker.xyz/templates/${num}`
     }))
   };
 
@@ -121,8 +121,8 @@ export default function FreeTemplatesPage() {
         title="20+ Free Resume Templates 2026 | ATS-Friendly Professional Designs | Instant Download"
         description="Download 20+ free, professionally designed resume templates for 2026. All templates are ATS-friendly, customizable, and perfect for technology, business, healthcare, and creative professionals. No sign-up required. Instant PDF download."
         keywords="free resume templates 2026, professional resume templates, ATS-friendly resume, free CV templates, downloadable resume templates, resume templates for technology, resume templates for business, modern resume templates"
-        canonical="https://freeresumemakers.com/free-resume-templates"
-        image="https://freeresumemakers.com/assets/og-free-templates.jpg"
+        canonical="https://freeresumemaker.xyz/free-resume-templates"
+        image="https://freeresumemaker.xyz/assets/og-free-templates.jpg"
         type="website"
       />
       
@@ -157,7 +157,7 @@ export default function FreeTemplatesPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Free Resume Templates</span>
         </nav>
 
@@ -395,7 +395,7 @@ export default function FreeTemplatesPage() {
                   onMouseEnter={(e) => e.currentTarget.style.color = '#0060d6'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#0070f3'}
                 >
-                  Use This Template →
+                  Use This Template â†’
                 </Link>
               </div>
             </div>
@@ -464,7 +464,7 @@ export default function FreeTemplatesPage() {
                     fontWeight: 500
                   }}
                 >
-                  View Templates →
+                  View Templates â†’
                 </Link>
               </div>
             ))}
@@ -539,7 +539,7 @@ export default function FreeTemplatesPage() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
           <div style={{ marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/templates" style={{ color: '#999', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

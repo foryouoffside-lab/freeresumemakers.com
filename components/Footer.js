@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // src/components/common/Footer.js
 // UPDATED - Added FAQ link
 // ============================================
@@ -247,12 +247,12 @@ const Footer = () => {
 
   // Share buttons
   const shareButtons = [
-    { platform: 'whatsapp', icon: '📱', label: 'Share on WhatsApp' },
-    { platform: 'facebook', icon: '📘', label: 'Share on Facebook' },
-    { platform: 'twitter', icon: '🐦', label: 'Share on Twitter' },
-    { platform: 'linkedin', icon: '💼', label: 'Share on LinkedIn' },
-    { platform: 'email', icon: '📧', label: 'Share via Email' },
-    { platform: 'copy', icon: '🔗', label: 'Copy link' }
+    { platform: 'whatsapp', icon: 'ðŸ“±', label: 'Share on WhatsApp' },
+    { platform: 'facebook', icon: 'ðŸ“˜', label: 'Share on Facebook' },
+    { platform: 'twitter', icon: 'ðŸ¦', label: 'Share on Twitter' },
+    { platform: 'linkedin', icon: 'ðŸ’¼', label: 'Share on LinkedIn' },
+    { platform: 'email', icon: 'ðŸ“§', label: 'Share via Email' },
+    { platform: 'copy', icon: 'ðŸ”—', label: 'Copy link' }
   ];
 
   return (
@@ -347,7 +347,7 @@ const Footer = () => {
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                📧 Contact Us
+                ðŸ“§ Contact Us
               </Link>
             </div>
           </div>
@@ -357,7 +357,7 @@ const Footer = () => {
         <div style={styles.bottomBar}>
           <div>
             <p style={styles.copyright}>
-              © {currentYear} Resume Builder. All rights reserved. | 20+ Templates
+              Â© {currentYear} Resume Builder. All rights reserved. | 20+ Templates
             </p>
             {/* Legal Links */}
             <div style={styles.legalLinks}>
@@ -371,13 +371,13 @@ const Footer = () => {
                   >
                     {page.name}
                   </Link>
-                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>•</span>}
+                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>â€¢</span>}
                 </React.Fragment>
               ))}
             </div>
           </div>
           <p style={styles.version}>
-            <span>Made with ❤️ for job seekers</span>
+            <span>Made with â¤ï¸ for job seekers</span>
             <span>Version 2.0</span>
           </p>
         </div>
@@ -391,8 +391,8 @@ const Footer = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Resume Builder",
-            "url": "https://freeresumemakers.com",
-            "logo": "https://freeresumemakers.com/logo.png",
+            "url": "https://freeresumemaker.xyz",
+            "logo": "https://freeresumemaker.xyz/logo.png",
             "sameAs": [
               "https://facebook.com/yourpage",
               "https://twitter.com/yourpage",
@@ -402,7 +402,7 @@ const Footer = () => {
               "@type": "ContactPoint",
               "contactType": "customer support",
               "email": "foryouoffside@gmail.com",
-              "url": "https://freeresumemakers.com/contact"
+              "url": "https://freeresumemaker.xyz/contact"
             }
           })
         }}
@@ -412,3 +412,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

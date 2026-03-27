@@ -53,19 +53,19 @@ export default function CompareIndex() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       }
     ]
   };
@@ -81,7 +81,7 @@ export default function CompareIndex() {
       "@type": "ListItem",
       "position": idx + 1,
       "name": comp.title,
-      "url": `https://freeresumemakers.com/templates/compare/${comp.id}`
+      "url": `https://freeresumemaker.xyz/templates/compare/${comp.id}`
     }))
   };
 
@@ -91,7 +91,7 @@ export default function CompareIndex() {
         title="Compare Resume Templates | Find the Best ATS-Friendly Template for Your Career 2026"
         description="Compare professional resume templates side by side. Find the perfect ATS-friendly template for your industry - corporate, creative, tech, executive, and more. See which template suits your career best."
         keywords="compare resume templates, resume template comparison, best resume template, ATS friendly templates, professional resume comparison, resume template reviews"
-        canonical="https://freeresumemakers.com/templates/compare"
+        canonical="https://freeresumemaker.xyz/templates/compare"
         type="website"
       />
       

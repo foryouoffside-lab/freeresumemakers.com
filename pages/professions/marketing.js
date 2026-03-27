@@ -1,4 +1,4 @@
-// pages/professions/marketing.js
+﻿// pages/professions/marketing.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -209,19 +209,19 @@ export default function MarketingExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Marketing Resumes",
-        "item": "https://freeresumemakers.com/professions/marketing"
+        "item": "https://freeresumemaker.xyz/professions/marketing"
       }
     ]
   };
@@ -238,7 +238,7 @@ export default function MarketingExamples() {
       "position": index + 1,
       "name": example.title,
       "description": example.description,
-      "url": `https://freeresumemakers.com/professions/marketing/${example.id}`
+      "url": `https://freeresumemaker.xyz/professions/marketing/${example.id}`
     }))
   };
 
@@ -259,7 +259,7 @@ export default function MarketingExamples() {
           title={`${selectedExample.title} | Marketing Resume Example 2026 | Professional Sample`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience in ${selectedExample.specialization === 'digital-marketing' ? 'digital marketing, SEO, PPC' : 'content marketing, SEO writing'}. Includes certifications, campaign results, and quantifiable achievements. Customize with our free resume builder.`}
           keywords={`${selectedExample.title.toLowerCase()}, marketing resume, digital marketing resume example, content marketing resume, ${selectedExample.specialization} resume, marketing CV, professional resume sample, marketing resume 2026, ATS friendly marketing resume`}
-          canonical={`https://freeresumemakers.com/professions/marketing/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/marketing/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -286,11 +286,11 @@ export default function MarketingExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/marketing" style={{ color: '#666', textDecoration: 'none' }}>Marketing Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -321,7 +321,7 @@ export default function MarketingExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Marketing Resume Examples
+            â† Back to All Marketing Resume Examples
           </button>
 
           {/* Template Header */}
@@ -664,8 +664,8 @@ export default function MarketingExamples() {
         title="Marketing Resume Examples | Digital Marketing & Content Marketing Resumes 2026"
         description="Browse 20+ professional marketing resume examples for digital marketing managers, content marketing specialists, SEO experts, and PPC specialists. Sample resumes with campaign metrics, organic traffic growth, ROAS improvements, and SEO expertise. Learn from real examples to create your winning marketing resume for the 2026 hiring season."
         keywords="marketing resume, digital marketing resume, content marketing resume, marketing manager resume, SEO resume, PPC specialist resume, social media marketing resume, marketing CV examples, digital marketing CV, content strategist resume, marketing resume 2026, ATS friendly marketing resume"
-        canonical="https://freeresumemakers.com/professions/marketing"
-        image="https://freeresumemakers.com/images/professions/marketing-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/marketing"
+        image="https://freeresumemaker.xyz/images/professions/marketing-og.jpg"
         type="website"
       />
       
@@ -696,9 +696,9 @@ export default function MarketingExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Marketing Resumes</span>
         </nav>
 
@@ -765,11 +765,11 @@ export default function MarketingExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Digital • Content</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Digital â€¢ Content</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Specializations</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>ROAS • SEO • Traffic</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>ROAS â€¢ SEO â€¢ Traffic</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Quantifiable Metrics</div>
           </div>
         </div>
@@ -908,7 +908,7 @@ export default function MarketingExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -992,7 +992,7 @@ export default function MarketingExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

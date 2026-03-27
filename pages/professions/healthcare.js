@@ -1,4 +1,4 @@
-// pages/professions/healthcare.js
+﻿// pages/professions/healthcare.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -132,7 +132,7 @@ export default function HealthcareExamples() {
             period: '2020-Present',
             points: [
               'Oversee daily operations of 350-bed multi-specialty hospital with 500+ staff members',
-              'Assist in managing ₹150Cr annual budget and identified ₹5Cr cost savings opportunities',
+              'Assist in managing â‚¹150Cr annual budget and identified â‚¹5Cr cost savings opportunities',
               'Reduced patient wait times by 35% through workflow redesign and process optimization',
               'Ensure compliance with NABH accreditation standards, achieving 95% compliance score',
               'Led implementation of new electronic health record system across 5 departments',
@@ -184,19 +184,19 @@ export default function HealthcareExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Healthcare Resumes",
-        "item": "https://freeresumemakers.com/professions/healthcare"
+        "item": "https://freeresumemaker.xyz/professions/healthcare"
       }
     ]
   };
@@ -233,7 +233,7 @@ export default function HealthcareExamples() {
           title={`${selectedExample.title} | Healthcare Resume Example 2026 | Free Sample Template`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience. Includes ${selectedExample.skills.slice(0, 3).join(', ')} and more. Download as template or customize with our free resume builder for healthcare professionals.`}
           keywords={`${selectedExample.title.toLowerCase()}, healthcare resume, nursing resume, registered nurse resume, ICU nurse resume, hospital administrator resume, medical resume, clinical resume, healthcare management CV, RN resume examples, healthcare resume 2026, CCRN resume`}
-          canonical={`https://freeresumemakers.com/professions/healthcare/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/healthcare/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -253,11 +253,11 @@ export default function HealthcareExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/healthcare" style={{ color: '#666', textDecoration: 'none' }}>Healthcare Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -288,7 +288,7 @@ export default function HealthcareExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Healthcare Resume Examples
+            â† Back to All Healthcare Resume Examples
           </button>
 
           {/* Template Header */}
@@ -619,8 +619,8 @@ export default function HealthcareExamples() {
         title="Healthcare Resume Examples | Professional Nursing & Medical Resumes 2026 | Free Samples"
         description="Browse 20+ professional healthcare resume examples for registered nurses, ICU nurses, nurse practitioners, and healthcare administrators. Sample resumes with clinical skills, certifications (CCRN, ACLS, BLS), patient care metrics, and operational achievements. Learn from real examples to create your winning healthcare resume for 2026 hiring season."
         keywords="healthcare resume, nursing resume, registered nurse resume, ICU nurse resume, hospital administrator resume, medical resume, clinical resume, healthcare management CV, RN resume examples, nursing CV, critical care nurse resume, nurse practitioner resume, healthcare resume 2026, CCRN resume, ACLS certification resume"
-        canonical="https://freeresumemakers.com/professions/healthcare"
-        image="https://freeresumemakers.com/images/professions/healthcare-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/healthcare"
+        image="https://freeresumemaker.xyz/images/professions/healthcare-og.jpg"
         type="website"
       />
       
@@ -651,9 +651,9 @@ export default function HealthcareExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Healthcare Resumes</span>
         </nav>
 
@@ -720,11 +720,11 @@ export default function HealthcareExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>RN • ICU • ER</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>RN â€¢ ICU â€¢ ER</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Clinical & Admin Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CCRN • ACLS • BLS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CCRN â€¢ ACLS â€¢ BLS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -863,7 +863,7 @@ export default function HealthcareExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -947,7 +947,7 @@ export default function HealthcareExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

@@ -15,7 +15,7 @@ const SUPPORTED_PAYMENT_METHODS = ['card', 'netbanking', 'upi', 'wallet'];
 
 export default async function handler(req, res) {
   // Set CORS headers for security
-  res.setHeader('Access-Control-Allow-Origin', 'https://freeresumemakers.com');
+  res.setHeader('Access-Control-Allow-Origin', 'https://freeresumemaker.xyz');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
@@ -176,3 +176,4 @@ export async function verifyPayment(req, res) {
     });
   }
 }
+

@@ -1,4 +1,4 @@
-// pages/blog/action-verbs-for-resume.js
+﻿// pages/blog/action-verbs-for-resume.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,26 +14,26 @@ export default function ActionVerbsForResume() {
     "@type": "Article",
     "headline": "200+ Powerful Action Verbs for Resume & CV [2026 Guide]",
     "description": "Discover 200+ powerful action verbs for your resume and CV. Use strong words like 'achieved', 'managed', 'developed' to make your experience stand out to recruiters and ATS systems.",
-    "image": "https://freeresumemakers.com/images/blog/action-verbs.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/action-verbs.jpg",
     "author": {
       "@type": "Person",
       "name": "David Kim",
       "jobTitle": "Resume Expert",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Free Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-10",
     "dateModified": "2026-02-10",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/action-verbs-for-resume"
+      "@id": "https://freeresumemaker.xyz/blog/action-verbs-for-resume"
     },
     "keywords": "action verbs, resume verbs, CV action words, powerful resume words, strong verbs, resume writing tips",
     "articleSection": "Resume Writing",
@@ -49,19 +49,19 @@ export default function ActionVerbsForResume() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Action Verbs for Resume",
-        "item": "https://freeresumemakers.com/blog/action-verbs-for-resume"
+        "item": "https://freeresumemaker.xyz/blog/action-verbs-for-resume"
       }
     ]
   };
@@ -106,8 +106,8 @@ export default function ActionVerbsForResume() {
         title="200+ Powerful Action Verbs for Resume & CV [2026 Guide] | Free Printable List"
         description="Discover 200+ powerful action verbs for your resume and CV. Use strong words like 'achieved', 'managed', 'developed' to make your experience stand out to recruiters and ATS systems. Free printable list included."
         keywords="action verbs for resume, resume verbs, CV action words, powerful resume words, strong verbs for CV, resume writing tips, action words for resume"
-        canonical="https://freeresumemakers.com/blog/action-verbs-for-resume"
-        image="https://freeresumemakers.com/images/blog/action-verbs.jpg"
+        canonical="https://freeresumemaker.xyz/blog/action-verbs-for-resume"
+        image="https://freeresumemaker.xyz/images/blog/action-verbs.jpg"
         type="article"
         publishedTime="2026-02-10"
         author="David Kim"
@@ -144,9 +144,9 @@ export default function ActionVerbsForResume() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Action Verbs for Resume</span>
         </div>
 
@@ -963,7 +963,7 @@ export default function ActionVerbsForResume() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Download Free Action Verbs List</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Get a printable PDF version of all 200+ action verbs organized by category. Perfect for reference while writing your resume.
@@ -1012,10 +1012,10 @@ export default function ActionVerbsForResume() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('200+ Powerful Action Verbs for Your Resume')}&url=https://freeresumemakers.com/blog/action-verbs-for-resume` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/action-verbs-for-resume` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/action-verbs-for-resume` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('200+ Powerful Action Verbs for Resume')}&body=${encodeURIComponent('Check out this article: https://freeresumemakers.com/blog/action-verbs-for-resume')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('200+ Powerful Action Verbs for Your Resume')}&url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('200+ Powerful Action Verbs for Resume')}&body=${encodeURIComponent('Check out this article: https://freeresumemaker.xyz/blog/action-verbs-for-resume')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1102,7 +1102,7 @@ export default function ActionVerbsForResume() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1188,7 +1188,7 @@ export default function ActionVerbsForResume() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 10, 2026 | © {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 10, 2026 | Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

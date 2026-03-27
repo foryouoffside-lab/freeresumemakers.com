@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const SEO = ({
@@ -15,7 +15,7 @@ const SEO = ({
   article = false
 }) => {
   const router = useRouter();
-  const siteUrl = 'https://freeresumemakers.com'; // Replace with your actual domain
+  const siteUrl = 'https://freeresumemaker.xyz'; // Replace with your actual domain
   const siteTitle = 'Free Resume Builder - Create Professional Resumes Online';
   const siteDescription = 'Create professional ATS-friendly resumes with our free resume builder. No sign up required. 20+ templates, instant download.';
   

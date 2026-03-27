@@ -469,7 +469,7 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Resume Builder - Personal Information" />
         <meta name="twitter:description" content="Build your professional resume with our guided form. Start with your personal details." />
-        <link rel="canonical" href="https://freeresumemakers.com/resume-builder/personal-info" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/resume-builder/personal-info" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

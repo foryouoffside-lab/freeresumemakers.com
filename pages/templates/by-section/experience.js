@@ -73,25 +73,25 @@ export default function BySectionExperience() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Experience Section",
-        "item": "https://freeresumemakers.com/templates/by-section/experience"
+        "item": "https://freeresumemaker.xyz/templates/by-section/experience"
       }
     ]
   };
@@ -108,7 +108,7 @@ export default function BySectionExperience() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -129,7 +129,7 @@ export default function BySectionExperience() {
           title={`${selectedTemplate.name} | Resume Template with Experience Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features a ${selectedTemplate.experienceFormat} format, perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes achievement-focused bullet points and ATS-friendly design.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with experience section, professional resume template, ${selectedTemplate.style} resume, experience section template, resume layout, ATS friendly resume template`}
-          canonical={`https://freeresumemakers.com/templates/by-section/experience/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/experience/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -413,8 +413,8 @@ export default function BySectionExperience() {
         title="Resume Templates with Experience Section | Professional Experience-Focused Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated experience section. Choose from chronological, metrics-driven, executive, and technical layouts designed to showcase your work history, career progression, and quantifiable achievements. All templates are ATS-friendly and optimized for 2026 hiring standards."
         keywords="resume templates with experience section, professional resume templates, experience section resume, chronological resume template, metrics-driven resume, executive resume template, technical resume template, ATS friendly resume templates, resume layout with experience, work history resume templates"
-        canonical="https://freeresumemakers.com/templates/by-section/experience"
-        image="https://freeresumemakers.com/images/templates/experience-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/experience"
+        image="https://freeresumemaker.xyz/images/templates/experience-section-og.jpg"
         type="website"
       />
       

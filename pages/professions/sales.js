@@ -1,4 +1,4 @@
-// pages/professions/sales.js
+﻿// pages/professions/sales.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -200,19 +200,19 @@ export default function SalesExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Sales Resumes",
-        "item": "https://freeresumemakers.com/professions/sales"
+        "item": "https://freeresumemaker.xyz/professions/sales"
       }
     ]
   };
@@ -229,7 +229,7 @@ export default function SalesExamples() {
       "position": index + 1,
       "name": example.title,
       "description": example.description,
-      "url": `https://freeresumemakers.com/professions/sales/${example.id}`
+      "url": `https://freeresumemaker.xyz/professions/sales/${example.id}`
     }))
   };
 
@@ -250,7 +250,7 @@ export default function SalesExamples() {
           title={`${selectedExample.title} | Sales Resume Example 2026 | Professional Sample`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience in ${selectedExample.specialization === 'enterprise-sales' ? 'enterprise B2B sales, C-level negotiations' : 'SaaS sales, consultative selling'}. Includes quota history, revenue metrics, and sales certifications. Customize with our free resume builder.`}
           keywords={`${selectedExample.title.toLowerCase()}, sales resume, enterprise sales resume, SaaS sales resume, account executive resume, B2B sales resume, sales manager resume, sales CV, professional sales resume, sales resume 2026, ATS friendly sales resume`}
-          canonical={`https://freeresumemakers.com/professions/sales/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/sales/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -277,11 +277,11 @@ export default function SalesExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/sales" style={{ color: '#666', textDecoration: 'none' }}>Sales Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -312,7 +312,7 @@ export default function SalesExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Sales Resume Examples
+            â† Back to All Sales Resume Examples
           </button>
 
           {/* Template Header */}
@@ -670,8 +670,8 @@ export default function SalesExamples() {
         title="Sales Resume Examples | Enterprise & SaaS Sales Resumes 2026 | Professional Samples"
         description="Browse 20+ professional sales resume examples for enterprise sales managers, SaaS account executives, B2B sales professionals, and business development managers. Sample resumes with quota attainment, revenue generation metrics, President's Club achievements, and sales methodology certifications. Learn from real examples to create your winning sales resume for the 2026 hiring season."
         keywords="sales resume, enterprise sales resume, SaaS sales resume, account executive resume, B2B sales resume, sales manager resume, business development resume, sales CV examples, sales resume 2026, sales professional resume, quota attainment resume, President's Club resume"
-        canonical="https://freeresumemakers.com/professions/sales"
-        image="https://freeresumemakers.com/images/professions/sales-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/sales"
+        image="https://freeresumemaker.xyz/images/professions/sales-og.jpg"
         type="website"
       />
       
@@ -702,9 +702,9 @@ export default function SalesExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Sales Resumes</span>
         </nav>
 
@@ -771,7 +771,7 @@ export default function SalesExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Enterprise • SaaS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Enterprise â€¢ SaaS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Specializations</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -914,7 +914,7 @@ export default function SalesExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -998,7 +998,7 @@ export default function SalesExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

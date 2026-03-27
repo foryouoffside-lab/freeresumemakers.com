@@ -1,4 +1,4 @@
-// pages/blog/cv-vs-resume-difference.js
+﻿// pages/blog/cv-vs-resume-difference.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -14,26 +14,26 @@ export default function CVvsResumeDifference() {
     "@type": "Article",
     "headline": "CV vs Resume: Key Differences, Length, Format & When to Use Each (2026 Guide)",
     "description": "Complete guide to CV vs Resume differences. Learn about length (CV: 2+ pages, Resume: 1-2 pages), content, format, and when to use each for jobs in US, Europe, and academia.",
-    "image": "https://freeresumemakers.com/images/blog/cv-vs-resume-difference.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/cv-vs-resume-difference.jpg",
     "author": {
       "@type": "Person",
       "name": "Patricia Garcia",
       "jobTitle": "Career Advisor",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Free Resume Maker",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-12",
     "dateModified": "2026-02-12",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/cv-vs-resume-difference"
+      "@id": "https://freeresumemaker.xyz/blog/cv-vs-resume-difference"
     },
     "keywords": "CV vs resume, curriculum vitae difference, resume vs CV, CV format, resume format, job application documents, academic CV, industry resume",
     "articleSection": "Career Advice"
@@ -48,19 +48,19 @@ export default function CVvsResumeDifference() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "CV vs Resume Difference",
-        "item": "https://freeresumemakers.com/blog/cv-vs-resume-difference"
+        "item": "https://freeresumemaker.xyz/blog/cv-vs-resume-difference"
       }
     ]
   };
@@ -116,8 +116,8 @@ export default function CVvsResumeDifference() {
         title="CV vs Resume: Key Differences, Length, Format & When to Use Each (2026 Guide)"
         description="Complete guide to CV vs Resume differences. Learn about length (CV: 2+ pages, Resume: 1-2 pages), content, format, and when to use each for jobs in US, Europe, and academia. Free comparison table included."
         keywords="CV vs resume, curriculum vitae difference, resume vs CV, CV format, resume format, job application documents, academic CV, industry resume, CV length, resume length, international job applications"
-        canonical="https://freeresumemakers.com/blog/cv-vs-resume-difference"
-        image="https://freeresumemakers.com/images/blog/cv-vs-resume-difference.jpg"
+        canonical="https://freeresumemaker.xyz/blog/cv-vs-resume-difference"
+        image="https://freeresumemaker.xyz/images/blog/cv-vs-resume-difference.jpg"
         type="article"
         publishedTime="2026-02-12"
         author="Patricia Garcia"
@@ -154,9 +154,9 @@ export default function CVvsResumeDifference() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>CV vs Resume Difference</span>
         </div>
 
@@ -390,7 +390,7 @@ export default function CVvsResumeDifference() {
             </h2>
             <p>
               <strong>Curriculum Vitae</strong> is Latin for "course of life." A CV is a comprehensive document that details your 
-              entire academic and professional history. Unlike a resume, there's no page limit—CVs can be 2, 5, or even 10+ pages 
+              entire academic and professional history. Unlike a resume, there's no page limitâ€”CVs can be 2, 5, or even 10+ pages 
               depending on your experience and achievements.
             </p>
             
@@ -429,7 +429,7 @@ export default function CVvsResumeDifference() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>✓</span>
+                    <span style={{ color: '#0070f3' }}>âœ“</span>
                     {item}
                   </div>
                 ))}
@@ -486,7 +486,7 @@ export default function CVvsResumeDifference() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>✓</span>
+                    <span style={{ color: '#0070f3' }}>âœ“</span>
                     {item}
                   </div>
                 ))}
@@ -699,7 +699,7 @@ export default function CVvsResumeDifference() {
                 <li style={{ marginBottom: '12px' }}><strong>Summarize publications:</strong> Replace detailed lists with "Authored 10+ peer-reviewed publications"</li>
                 <li style={{ marginBottom: '12px' }}><strong>Focus on transferable skills:</strong> Leadership, project management, communication, data analysis</li>
                 <li style={{ marginBottom: '12px' }}><strong>Add a professional summary:</strong> 2-3 sentences highlighting your value proposition</li>
-                <li style={{ marginBottom: '12px' }}><strong>Quantify achievements:</strong> "Secured $500K in research funding" → "Managed $500K budget and resources"</li>
+                <li style={{ marginBottom: '12px' }}><strong>Quantify achievements:</strong> "Secured $500K in research funding" â†’ "Managed $500K budget and resources"</li>
                 <li style={{ marginBottom: '12px' }}><strong>Use industry keywords:</strong> Research job descriptions and incorporate relevant terms</li>
                 <li style={{ marginBottom: '12px' }}><strong>Remove academic jargon:</strong> Translate for non-academic readers</li>
                 <li style={{ marginBottom: '12px' }}><strong>Add skills section:</strong> Technical skills, software, tools, languages</li>
@@ -785,9 +785,9 @@ export default function CVvsResumeDifference() {
                   
                   <p><strong>EXPERIENCE</strong><br />
                   Senior ML Engineer, TechCorp, 2022-Present<br />
-                  • Developed recommendation system increasing user engagement by 35%<br />
-                  • Led team of 5 engineers on computer vision projects<br />
-                  • Managed $500K research budget, delivered 3 patents</p>
+                  â€¢ Developed recommendation system increasing user engagement by 35%<br />
+                  â€¢ Led team of 5 engineers on computer vision projects<br />
+                  â€¢ Managed $500K research budget, delivered 3 patents</p>
                   
                   <p><strong>SKILLS</strong><br />
                   Languages: Python, Java, C++<br />
@@ -849,7 +849,7 @@ export default function CVvsResumeDifference() {
               </div>
             </div>
             <p style={{ fontSize: '16px', marginTop: '25px', opacity: 0.9, fontStyle: 'italic' }}>
-              When in doubt, check the job posting—it will usually specify whether they want a CV or resume. 
+              When in doubt, check the job postingâ€”it will usually specify whether they want a CV or resume. 
               If it's unclear, you can reach out to the recruiter or hiring manager to ask.
             </p>
           </section>
@@ -916,7 +916,7 @@ export default function CVvsResumeDifference() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free CV vs Resume Comparison Guide</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable comparison guide with country-specific requirements and templates.
@@ -1011,10 +1011,10 @@ export default function CVvsResumeDifference() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('CV vs Resume: Key Differences - Complete Guide 2026')}&url=https://freeresumemakers.com/blog/cv-vs-resume-difference` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/cv-vs-resume-difference` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/cv-vs-resume-difference` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('CV vs Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/cv-vs-resume-difference')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('CV vs Resume: Key Differences - Complete Guide 2026')}&url=https://freeresumemaker.xyz/blog/cv-vs-resume-difference` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/cv-vs-resume-difference` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/cv-vs-resume-difference` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('CV vs Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/cv-vs-resume-difference')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1101,7 +1101,7 @@ export default function CVvsResumeDifference() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1187,7 +1187,7 @@ export default function CVvsResumeDifference() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 12, 2026 | © {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
+          <p>Last updated: February 12, 2026 | Â© {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
         </div>
       </div>
     </>

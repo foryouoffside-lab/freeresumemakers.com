@@ -63,25 +63,25 @@ export default function MinimalistVsProfessional() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Minimalist vs Professional",
-        "item": "https://freeresumemakers.com/templates/compare/minimalist-vs-professional"
+        "item": "https://freeresumemaker.xyz/templates/compare/minimalist-vs-professional"
       }
     ]
   };
@@ -91,7 +91,7 @@ export default function MinimalistVsProfessional() {
       <SEO 
         title="Minimalist vs Professional Resume Templates: Which Style Gets Hired? (2026)"
         description="Compare minimalist and professional resume templates side by side. Learn when to use clean, simple designs vs traditional professional layouts for maximum impact. Includes ATS scores and industry recommendations."
-        canonical="https://freeresumemakers.com/templates/compare/minimalist-vs-professional"
+        canonical="https://freeresumemaker.xyz/templates/compare/minimalist-vs-professional"
         type="article"
         keywords="minimalist resume, professional resume, resume style comparison, clean resume design, corporate resume template, ATS friendly resume"
       />

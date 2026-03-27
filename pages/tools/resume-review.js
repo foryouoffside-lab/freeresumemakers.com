@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -102,19 +102,19 @@ export default function ResumeReview() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Tools",
-        "item": "https://freeresumemakers.com/tools"
+        "item": "https://freeresumemaker.xyz/tools"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Resume Review",
-        "item": "https://freeresumemakers.com/tools/resume-review"
+        "item": "https://freeresumemaker.xyz/tools/resume-review"
       }
     ]
   };
@@ -165,7 +165,7 @@ export default function ResumeReview() {
         title="Free AI Resume Review 2026 - Get Professional Feedback & Score | Resume Analysis Tool"
         description="Get a free professional AI-powered resume review. Our tool analyzes your resume and provides actionable feedback on content, formatting, ATS compatibility, and keyword optimization. Used by 50,000+ job seekers to improve their resumes."
         keywords="resume review, resume feedback, CV review, professional resume review, free resume critique, resume analysis, resume evaluation, AI resume review, resume grader, resume scoring tool"
-        canonical="https://freeresumemakers.com/tools/resume-review"
+        canonical="https://freeresumemaker.xyz/tools/resume-review"
         type="website"
       />
       
@@ -200,15 +200,15 @@ export default function ResumeReview() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/tools" style={{ color: '#666', textDecoration: 'none' }}>Tools</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Review</span>
         </nav>
 
         {/* Header */}
         <header style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>⭐</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>â­</div>
           <h1 style={{
             fontSize: '48px',
             marginBottom: '16px',
@@ -238,7 +238,7 @@ export default function ResumeReview() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>💡 Pro Tip:</strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
+            <strong>ðŸ’¡ Pro Tip:</strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
             Our AI tool gives you instant, detailed feedback to help you stand out from other candidates.
           </p>
         </div>
@@ -251,9 +251,9 @@ export default function ResumeReview() {
             textAlign: 'center',
             border: '2px dashed #cbd5e1'
           }}>
-            <div style={{ fontSize: '64px', marginBottom: '20px' }}>📄</div>
+            <div style={{ fontSize: '64px', marginBottom: '20px' }}>ðŸ“„</div>
             <h2 style={{ fontSize: '28px', marginBottom: '12px' }}>Upload Your Resume for Review</h2>
-            <p style={{ color: '#666', marginBottom: '20px', fontSize: '16px' }}>PDF or DOCX files up to 5MB • 100% Secure & Private</p>
+            <p style={{ color: '#666', marginBottom: '20px', fontSize: '16px' }}>PDF or DOCX files up to 5MB â€¢ 100% Secure & Private</p>
             
             <label htmlFor="resume-upload" style={{ 
               display: 'inline-block',
@@ -268,7 +268,7 @@ export default function ResumeReview() {
             }}
             onMouseEnter={(e) => e.currentTarget.style.background = '#0060d6'}
             onMouseLeave={(e) => e.currentTarget.style.background = '#0070f3'}>
-              📁 Choose File
+              ðŸ“ Choose File
               <input
                 type="file"
                 id="resume-upload"
@@ -279,14 +279,14 @@ export default function ResumeReview() {
             </label>
             
             <p style={{ marginTop: '24px', fontSize: '14px', color: '#999' }}>
-              🔒 Your file is encrypted and will be processed anonymously. We never share your data.
+              ðŸ”’ Your file is encrypted and will be processed anonymously. We never share your data.
             </p>
           </div>
         ) : (
           <div>
             {reviews.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '60px', background: '#f8fafc', borderRadius: '16px' }}>
-                <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'pulse 1.5s infinite' }}>⏳</div>
+                <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'pulse 1.5s infinite' }}>â³</div>
                 <h3 style={{ marginBottom: '12px', fontSize: '24px' }}>Analyzing your resume...</h3>
                 <p style={{ color: '#666', fontSize: '16px' }}>Our AI is reviewing your resume for content, formatting, and ATS compatibility</p>
                 <p style={{ fontSize: '14px', color: '#999', marginTop: '16px' }}>File: {fileName}</p>
@@ -309,10 +309,10 @@ export default function ResumeReview() {
                   </p>
                   <p style={{ color: '#666', fontSize: '16px' }}>
                     {overallScore >= 80 
-                      ? '🎉 Excellent! Your resume is well-optimized. Minor improvements can make it perfect.'
+                      ? 'ðŸŽ‰ Excellent! Your resume is well-optimized. Minor improvements can make it perfect.'
                       : overallScore >= 60
-                      ? '📈 Good foundation! Implement the suggestions below to boost your score.'
-                      : '⚡ Needs significant improvement. Follow our detailed recommendations to transform your resume.'}
+                      ? 'ðŸ“ˆ Good foundation! Implement the suggestions below to boost your score.'
+                      : 'âš¡ Needs significant improvement. Follow our detailed recommendations to transform your resume.'}
                   </p>
                 </div>
 
@@ -343,7 +343,7 @@ export default function ResumeReview() {
                       </div>
 
                       <div style={{ marginBottom: '24px' }}>
-                        <h4 style={{ color: '#059669', marginBottom: '12px', fontSize: '18px' }}>✅ Strengths</h4>
+                        <h4 style={{ color: '#059669', marginBottom: '12px', fontSize: '18px' }}>âœ… Strengths</h4>
                         <ul style={{ margin: 0, paddingLeft: '20px', color: '#555', lineHeight: '1.8' }}>
                           {review.strengths.map((item, i) => (
                             <li key={i}>{item}</li>
@@ -352,7 +352,7 @@ export default function ResumeReview() {
                       </div>
 
                       <div>
-                        <h4 style={{ color: '#b45309', marginBottom: '12px', fontSize: '18px' }}>📈 Areas for Improvement</h4>
+                        <h4 style={{ color: '#b45309', marginBottom: '12px', fontSize: '18px' }}>ðŸ“ˆ Areas for Improvement</h4>
                         <ul style={{ margin: 0, paddingLeft: '20px', color: '#555', lineHeight: '1.8' }}>
                           {review.improvements.map((item, i) => (
                             <li key={i}>{item}</li>
@@ -390,7 +390,7 @@ export default function ResumeReview() {
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                     onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                      ✏️ Build Your Optimized Resume →
+                      âœï¸ Build Your Optimized Resume â†’
                     </Link>
                     <Link href="/tools/ats-scanner" style={{ 
                       display: 'inline-block',
@@ -402,7 +402,7 @@ export default function ResumeReview() {
                       fontSize: '16px',
                       fontWeight: '500'
                     }}>
-                      🤖 Check ATS Score →
+                      ðŸ¤– Check ATS Score â†’
                     </Link>
                   </div>
                 </div>
@@ -475,9 +475,9 @@ export default function ResumeReview() {
         }}>
           <h3 style={{ fontSize: '22px', marginBottom: '20px' }}>More Free Resume Optimization Tools</h3>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🤖 ATS Scanner →</Link>
-            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🔑 Keywords Finder →</Link>
-            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>✓ Resume Checker →</Link>
+            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ¤– ATS Scanner â†’</Link>
+            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ”‘ Keywords Finder â†’</Link>
+            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>âœ“ Resume Checker â†’</Link>
           </div>
         </div>
 

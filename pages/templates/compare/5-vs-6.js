@@ -1,4 +1,4 @@
-// pages/templates/compare/5-vs-6.js
+﻿// pages/templates/compare/5-vs-6.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -40,25 +40,25 @@ export default function CompareTemplate5vs6() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "The Minimalist vs The Architect",
-        "item": "https://freeresumemakers.com/templates/compare/5-vs-6"
+        "item": "https://freeresumemaker.xyz/templates/compare/5-vs-6"
       }
     ]
   };
@@ -162,18 +162,18 @@ export default function CompareTemplate5vs6() {
         {/* Open Graph */}
         <meta property="og:title" content="Template 5 vs 6: The Minimalist vs The Architect | Compare Modern Resume Templates" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/compare-5-vs-6.jpg" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/5-vs-6" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/compare-5-vs-6.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/5-vs-6" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 5 vs 6: The Minimalist vs The Architect" />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/compare-5-vs-6.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/compare-5-vs-6.jpg" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/5-vs-6" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/5-vs-6" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -195,11 +195,11 @@ export default function CompareTemplate5vs6() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Minimalist vs The Architect</span>
         </div>
 
@@ -261,11 +261,11 @@ export default function CompareTemplate5vs6() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'ðŸ“‹ Overview'}
+              {tab === 'features' && 'âš¡ Features'}
+              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
+              {tab === 'industry' && 'ðŸ¢ Industry Fit'}
+              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
             </button>
           ))}
         </div>
@@ -546,28 +546,28 @@ export default function CompareTemplate5vs6() {
                     { feature: 'Layout Style', t1: 'Ultra-clean isolated sections', t2: 'Technical grid with timeline' },
                     { feature: 'Maximum Experience Entries', t1: '1', t2: '3' },
                     { feature: 'Maximum Skills', t1: '7', t2: '8' },
-                    { feature: 'Languages Section', t1: '✗ No', t2: '✓ Yes (5 max)' },
-                    { feature: 'Projects Section', t1: '✓ Yes (1 max)', t2: '✓ Yes (3 max)' },
+                    { feature: 'Languages Section', t1: 'âœ— No', t2: 'âœ“ Yes (5 max)' },
+                    { feature: 'Projects Section', t1: 'âœ“ Yes (1 max)', t2: 'âœ“ Yes (3 max)' },
                     { feature: 'Education Entries', t1: '1', t2: '3' },
-                    { feature: 'Certifications Section', t1: '✗ No', t2: '✓ Yes (3 max)' },
-                    { feature: 'Awards Section', t1: '✗ No', t2: '✓ Yes (2 max)' },
-                    { feature: 'Tools Section', t1: '✗ No', t2: '✓ Yes (6 max)' },
-                    { feature: 'Core Strengths Section', t1: '✗ No', t2: '✓ Yes (4 max)' },
-                    { feature: 'Timeline Connectors', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Type Badges', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Side-by-Side Education', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Certifications Section', t1: 'âœ— No', t2: 'âœ“ Yes (3 max)' },
+                    { feature: 'Awards Section', t1: 'âœ— No', t2: 'âœ“ Yes (2 max)' },
+                    { feature: 'Tools Section', t1: 'âœ— No', t2: 'âœ“ Yes (6 max)' },
+                    { feature: 'Core Strengths Section', t1: 'âœ— No', t2: 'âœ“ Yes (4 max)' },
+                    { feature: 'Timeline Connectors', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Type Badges', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Side-by-Side Education', t1: 'âœ— No', t2: 'âœ“ Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 12 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('âœ“') ? (
                           <span style={{ color: '#6b7280', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('âœ“') ? (
                           <span style={{ color: '#2563eb', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -587,7 +587,7 @@ export default function CompareTemplate5vs6() {
               borderRadius: '12px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '15px', color: '#333' }}>
-                📊 Total Sections Available
+                ðŸ“Š Total Sections Available
               </h3>
               <div style={{
                 display: 'grid',
@@ -597,34 +597,34 @@ export default function CompareTemplate5vs6() {
                 <div>
                   <h4 style={{ color: '#6b7280', marginBottom: '10px' }}>The Minimalist includes:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>✓ Personal Info</li>
-                    <li>✓ Image Section</li>
-                    <li>✓ Professional Summary</li>
-                    <li>✓ Experience (1)</li>
-                    <li>✓ Education (1)</li>
-                    <li>✓ Skills (7)</li>
-                    <li>✓ Projects (1)</li>
-                    <li style={{ color: '#999' }}>✗ Languages</li>
-                    <li style={{ color: '#999' }}>✗ Certifications</li>
-                    <li style={{ color: '#999' }}>✗ Awards</li>
-                    <li style={{ color: '#999' }}>✗ Tools</li>
-                    <li style={{ color: '#999' }}>✗ Core Strengths</li>
+                    <li>âœ“ Personal Info</li>
+                    <li>âœ“ Image Section</li>
+                    <li>âœ“ Professional Summary</li>
+                    <li>âœ“ Experience (1)</li>
+                    <li>âœ“ Education (1)</li>
+                    <li>âœ“ Skills (7)</li>
+                    <li>âœ“ Projects (1)</li>
+                    <li style={{ color: '#999' }}>âœ— Languages</li>
+                    <li style={{ color: '#999' }}>âœ— Certifications</li>
+                    <li style={{ color: '#999' }}>âœ— Awards</li>
+                    <li style={{ color: '#999' }}>âœ— Tools</li>
+                    <li style={{ color: '#999' }}>âœ— Core Strengths</li>
                   </ul>
                   <div style={{ marginTop: '10px', fontWeight: 'bold' }}>Total: 7 sections</div>
                 </div>
                 <div>
                   <h4 style={{ color: '#2563eb', marginBottom: '10px' }}>The Architect includes:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>✓ Personal Info</li>
-                    <li>✓ Experience (3)</li>
-                    <li>✓ Skills (8)</li>
-                    <li>✓ Languages (5)</li>
-                    <li>✓ Education (3)</li>
-                    <li>✓ Certifications (3)</li>
-                    <li>✓ Projects (3)</li>
-                    <li>✓ Awards (2)</li>
-                    <li>✓ Tools (6)</li>
-                    <li>✓ Core Strengths (4)</li>
+                    <li>âœ“ Personal Info</li>
+                    <li>âœ“ Experience (3)</li>
+                    <li>âœ“ Skills (8)</li>
+                    <li>âœ“ Languages (5)</li>
+                    <li>âœ“ Education (3)</li>
+                    <li>âœ“ Certifications (3)</li>
+                    <li>âœ“ Projects (3)</li>
+                    <li>âœ“ Awards (2)</li>
+                    <li>âœ“ Tools (6)</li>
+                    <li>âœ“ Core Strengths (4)</li>
                   </ul>
                   <div style={{ marginTop: '10px', fontWeight: 'bold' }}>Total: 10 sections</div>
                 </div>
@@ -640,7 +640,7 @@ export default function CompareTemplate5vs6() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#6b7280', marginBottom: '15px' }}>
-                  ✅ The Minimalist - Pros
+                  âœ… The Minimalist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template5.pros.map((item, index) => (
@@ -648,7 +648,7 @@ export default function CompareTemplate5vs6() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#6b7280', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Minimalist - Cons
+                  âš ï¸ The Minimalist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template5.cons.map((item, index) => (
@@ -658,7 +658,7 @@ export default function CompareTemplate5vs6() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginBottom: '15px' }}>
-                  ✅ The Architect - Pros
+                  âœ… The Architect - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template6.pros.map((item, index) => (
@@ -666,7 +666,7 @@ export default function CompareTemplate5vs6() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Architect - Cons
+                  âš ï¸ The Architect - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template6.cons.map((item, index) => (
@@ -716,7 +716,7 @@ export default function CompareTemplate5vs6() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/5" style={{ color: '#6b7280', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -744,7 +744,7 @@ export default function CompareTemplate5vs6() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/6" style={{ color: '#2563eb', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -930,7 +930,7 @@ export default function CompareTemplate5vs6() {
                 padding: '30px',
                 border: '1px solid #d1d5db'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>✨</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>âœ¨</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#6b7280', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Minimalist
                 </h3>
@@ -960,7 +960,7 @@ export default function CompareTemplate5vs6() {
                 padding: '30px',
                 border: '1px solid #bfdbfe'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🏗️</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ—ï¸</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2563eb', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Architect
                 </h3>
@@ -994,7 +994,7 @@ export default function CompareTemplate5vs6() {
               marginBottom: '40px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: Experience Level Matters Most
+                ðŸ’¡ Expert Tip: Experience Level Matters Most
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 The single biggest factor in choosing between these templates is your experience level. If you have 0-5 years of experience, The Minimalist's focused design highlights your potential. If you have 5+ years with multiple roles, The Architect's comprehensive structure better showcases your career progression. Choose based on your story, not just the design.
@@ -1022,24 +1022,24 @@ export default function CompareTemplate5vs6() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#2563eb' }}>The Architect</div>
                 
                 <div>Entry Level (0-2 years)</div>
-                <div style={{ color: '#6b7280' }}>✓✓ Perfect</div>
-                <div style={{ color: '#999' }}>✗ Too complex</div>
+                <div style={{ color: '#6b7280' }}>âœ“âœ“ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Too complex</div>
                 
                 <div>Junior (2-4 years)</div>
-                <div style={{ color: '#6b7280' }}>✓ Great choice</div>
-                <div style={{ color: '#2563eb' }}>✓ Also works</div>
+                <div style={{ color: '#6b7280' }}>âœ“ Great choice</div>
+                <div style={{ color: '#2563eb' }}>âœ“ Also works</div>
                 
                 <div>Mid-Level (4-8 years)</div>
-                <div style={{ color: '#6b7280' }}>✓ Good option</div>
-                <div style={{ color: '#2563eb' }}>✓✓ Ideal</div>
+                <div style={{ color: '#6b7280' }}>âœ“ Good option</div>
+                <div style={{ color: '#2563eb' }}>âœ“âœ“ Ideal</div>
                 
                 <div>Senior (8-15 years)</div>
-                <div style={{ color: '#999' }}>✗ Too limited</div>
-                <div style={{ color: '#2563eb' }}>✓✓ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Too limited</div>
+                <div style={{ color: '#2563eb' }}>âœ“âœ“ Perfect</div>
                 
                 <div>Lead/Principal (15+ years)</div>
-                <div style={{ color: '#999' }}>✗ Not enough space</div>
-                <div style={{ color: '#2563eb' }}>✓✓ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Not enough space</div>
+                <div style={{ color: '#2563eb' }}>âœ“âœ“ Perfect</div>
               </div>
             </div>
           </div>
@@ -1154,7 +1154,7 @@ export default function CompareTemplate5vs6() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

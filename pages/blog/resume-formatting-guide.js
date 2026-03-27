@@ -1,4 +1,4 @@
-// pages/blog/resume-formatting-guide.js
+﻿// pages/blog/resume-formatting-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -11,7 +11,7 @@ export default function ResumeFormattingGuide() {
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    setCopySuccess('✓ Copied!');
+    setCopySuccess('âœ“ Copied!');
     setTimeout(() => setCopySuccess(''), 2000);
   };
 
@@ -21,26 +21,26 @@ export default function ResumeFormattingGuide() {
     "@type": "Article",
     "headline": "Resume Formatting Guide: Best Practices for 2026 | ATS-Friendly Tips & Examples",
     "description": "Complete guide to resume formatting. Learn about font sizes, margins, file types, section order, and ATS-friendly formatting with examples. Updated for 2026 job market.",
-    "image": "https://freeresumemakers.com/images/blog/resume-formatting-guide.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/resume-formatting-guide.jpg",
     "author": {
       "@type": "Person",
       "name": "Lisa Thompson",
       "jobTitle": "Resume Formatting Expert",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Free Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-18",
     "dateModified": "2026-03-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/resume-formatting-guide"
+      "@id": "https://freeresumemaker.xyz/blog/resume-formatting-guide"
     },
     "keywords": "resume formatting, resume format, ATS-friendly format, resume layout, resume margins, resume fonts",
     "articleSection": "Resume Formatting",
@@ -56,19 +56,19 @@ export default function ResumeFormattingGuide() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Resume Formatting Guide",
-        "item": "https://freeresumemakers.com/blog/resume-formatting-guide"
+        "item": "https://freeresumemaker.xyz/blog/resume-formatting-guide"
       }
     ]
   };
@@ -129,7 +129,7 @@ export default function ResumeFormattingGuide() {
 
   const atsDoDont = [
     { do: "Use standard section headings (Work Experience, Education, Skills)", dont: "Use creative headings like 'Where I've Worked'" },
-    { do: "Use simple bullet points (• or -)", dont: "Use special symbols or icons for bullets" },
+    { do: "Use simple bullet points (â€¢ or -)", dont: "Use special symbols or icons for bullets" },
     { do: "Save as PDF or simple DOCX", dont: "Save as JPEG, PNG, or password-protected files" },
     { do: "Keep contact info in body", dont: "Put contact info in headers or footers" },
     { do: "Use single-column layout", dont: "Use tables, columns, or text boxes" }
@@ -141,8 +141,8 @@ export default function ResumeFormattingGuide() {
         title="Resume Formatting Guide: Best Practices for 2026 | ATS-Friendly Tips & Examples"
         description="Complete guide to resume formatting. Learn about font sizes, margins, file types, section order, and ATS-friendly formatting with examples. Updated for 2026 job market."
         keywords="resume formatting, resume format, ATS-friendly format, resume layout, resume margins, resume fonts"
-        canonical="https://freeresumemakers.com/blog/resume-formatting-guide"
-        image="https://freeresumemakers.com/images/blog/resume-formatting-guide.jpg"
+        canonical="https://freeresumemaker.xyz/blog/resume-formatting-guide"
+        image="https://freeresumemaker.xyz/images/blog/resume-formatting-guide.jpg"
         type="article"
         publishedTime="2026-02-18"
         modifiedTime="2026-03-24"
@@ -180,9 +180,9 @@ export default function ResumeFormattingGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Formatting Guide</span>
         </div>
 
@@ -260,7 +260,7 @@ export default function ResumeFormattingGuide() {
             }}>
               For a professional, ATS-friendly resume in 2026, use <strong>standard fonts</strong> (Arial, Calibri, 10-12pt body text), 
               <strong> 0.7-0.8 inch margins</strong>, save as <strong>PDF</strong>, organize sections: 
-              <strong> Contact Info → Summary → Skills → Experience → Education</strong>, avoid <strong>tables and columns</strong>.
+              <strong> Contact Info â†’ Summary â†’ Skills â†’ Experience â†’ Education</strong>, avoid <strong>tables and columns</strong>.
             </p>
           </div>
         </header>
@@ -376,7 +376,7 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #e9ecef'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>✓ Recommended Fonts</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>âœ“ Recommended Fonts</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   {fontOptions.map((font, idx) => (
                     <li key={idx}><strong>{font.name}</strong> ({font.type}) - {font.bestFor}</li>
@@ -390,7 +390,7 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #ef9a9a'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>✗ Fonts to Avoid</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>âœ— Fonts to Avoid</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li>Comic Sans - Unprofessional</li>
                   <li>Papyrus - Overused, informal</li>
@@ -407,7 +407,7 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0',
               border: '1px solid #bbdefb'
             }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#667eea' }}>📏 Font Sizes (2026 Standard)</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#667eea' }}>ðŸ“ Font Sizes (2026 Standard)</h3>
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -431,7 +431,7 @@ export default function ResumeFormattingGuide() {
                   cursor: 'pointer'
                 }}
               >
-                📋 Copy Font Guidelines
+                ðŸ“‹ Copy Font Guidelines
               </button>
             </div>
           </section>
@@ -459,13 +459,13 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #e9ecef'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>📐 Margins</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>ðŸ“ Margins</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   {marginOptions.map((opt, idx) => (
                     <li key={idx}><strong>{opt.margin}:</strong> {opt.pros} {opt.cons && `- ${opt.cons}`}</li>
                   ))}
                 </ul>
-                <p style={{ marginTop: '12px', fontSize: '14px', fontWeight: 'bold', color: '#2e7d32' }}>✓ Recommended: 0.7-0.8 inches</p>
+                <p style={{ marginTop: '12px', fontSize: '14px', fontWeight: 'bold', color: '#2e7d32' }}>âœ“ Recommended: 0.7-0.8 inches</p>
               </div>
 
               <div style={{
@@ -474,7 +474,7 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #e9ecef'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>📏 Line Spacing</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#667eea' }}>ðŸ“ Line Spacing</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   <li><strong>Body text:</strong> 1.0 to 1.15</li>
                   <li><strong>Between sections:</strong> 1.5 to 2.0</li>
@@ -508,9 +508,9 @@ export default function ResumeFormattingGuide() {
                 border: '2px solid #2e7d32'
               }}>
                 <h3 style={{ fontSize: '24px', marginBottom: '12px', color: '#2e7d32' }}>PDF</h3>
-                <p><strong>✓ Pros:</strong> Preserves formatting, professional, universal</p>
-                <p><strong>✗ Cons:</strong> Some old ATS may struggle</p>
-                <p><strong>📌 Best for:</strong> Most applications</p>
+                <p><strong>âœ“ Pros:</strong> Preserves formatting, professional, universal</p>
+                <p><strong>âœ— Cons:</strong> Some old ATS may struggle</p>
+                <p><strong>ðŸ“Œ Best for:</strong> Most applications</p>
               </div>
 
               <div style={{
@@ -520,9 +520,9 @@ export default function ResumeFormattingGuide() {
                 border: '1px solid #e9ecef'
               }}>
                 <h3 style={{ fontSize: '24px', marginBottom: '12px', color: '#667eea' }}>DOCX</h3>
-                <p><strong>✓ Pros:</strong> ATS-friendly, easily parsed</p>
-                <p><strong>✗ Cons:</strong> Formatting may shift</p>
-                <p><strong>📌 Best for:</strong> When specifically requested</p>
+                <p><strong>âœ“ Pros:</strong> ATS-friendly, easily parsed</p>
+                <p><strong>âœ— Cons:</strong> Formatting may shift</p>
+                <p><strong>ðŸ“Œ Best for:</strong> When specifically requested</p>
               </div>
             </div>
 
@@ -533,7 +533,7 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0',
               border: '1px solid #ef9a9a'
             }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#c62828' }}>⚠️ Avoid These Formats</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '12px', color: '#c62828' }}>âš ï¸ Avoid These Formats</h3>
               <ul style={{ margin: 0 }}>
                 <li>JPEG/PNG (images)</li>
                 <li>Pages (Mac-only)</li>
@@ -548,7 +548,7 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>💡 Rule of thumb:</strong> Use PDF unless the employer specifically requests another format.
+                <strong>ðŸ’¡ Rule of thumb:</strong> Use PDF unless the employer specifically requests another format.
               </p>
             </div>
           </section>
@@ -639,7 +639,7 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #a5d6a7'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#2e7d32' }}>✓ DO</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#2e7d32' }}>âœ“ DO</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   {atsDoDont.map((item, idx) => (
                     <li key={idx}>{item.do}</li>
@@ -653,7 +653,7 @@ export default function ResumeFormattingGuide() {
                 padding: '24px',
                 border: '1px solid #ef9a9a'
               }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>✗ DON'T</h3>
+                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>âœ— DON'T</h3>
                 <ul style={{ margin: 0, lineHeight: '1.8' }}>
                   {atsDoDont.map((item, idx) => (
                     <li key={idx}>{item.dont}</li>
@@ -681,19 +681,19 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0'
             }}>
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>🎓</div>
+                <div style={{ fontSize: '48px', marginBottom: '10px' }}>ðŸŽ“</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Entry Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>1 page</div>
               </div>
 
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>💼</div>
+                <div style={{ fontSize: '48px', marginBottom: '10px' }}>ðŸ’¼</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Mid-Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>1-2 pages</div>
               </div>
 
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>👔</div>
+                <div style={{ fontSize: '48px', marginBottom: '10px' }}>ðŸ‘”</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Senior Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>2 pages</div>
               </div>
@@ -738,7 +738,7 @@ export default function ResumeFormattingGuide() {
             margin: '50px 0',
             border: '1px solid #bbdefb'
           }}>
-            <h3 style={{ fontSize: '24px', marginBottom: '20px', color: '#667eea' }}>✅ Resume Formatting Checklist</h3>
+            <h3 style={{ fontSize: '24px', marginBottom: '20px', color: '#667eea' }}>âœ… Resume Formatting Checklist</h3>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
@@ -751,7 +751,7 @@ export default function ResumeFormattingGuide() {
                 'Clear, standard section headings',
                 'No tables, columns, or graphics',
                 'Contact info outside headers/footers',
-                'Standard bullet points (• or -)',
+                'Standard bullet points (â€¢ or -)',
                 'Saved as PDF (unless DOCX requested)',
                 'Professional file name',
                 'Spell-checked and proofread'
@@ -765,7 +765,7 @@ export default function ResumeFormattingGuide() {
                   borderRadius: '10px',
                   border: '1px solid #e9ecef'
                 }}>
-                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>✓</span>
+                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
                   <span style={{ fontSize: '14px' }}>{item}</span>
                 </div>
               ))}
@@ -783,7 +783,7 @@ export default function ResumeFormattingGuide() {
                 cursor: 'pointer'
               }}
             >
-              📋 Copy Checklist
+              ðŸ“‹ Copy Checklist
             </button>
           </section>
 
@@ -794,7 +794,7 @@ export default function ResumeFormattingGuide() {
               margin: '0 0 20px 0',
               color: '#333'
             }}>
-              ❓ Frequently Asked Questions
+              â“ Frequently Asked Questions
             </h2>
             
             <div style={{
@@ -845,7 +845,7 @@ export default function ResumeFormattingGuide() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Formatting Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable formatting checklist to review your resume before submitting.
@@ -883,7 +883,7 @@ export default function ResumeFormattingGuide() {
                 fontSize: '14px',
                 display: 'inline-block'
               }}>
-                ✓ PDF download coming soon!
+                âœ“ PDF download coming soon!
               </div>
             )}
             {copySuccess && (
@@ -947,10 +947,10 @@ export default function ResumeFormattingGuide() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume Formatting Guide: Best Practices for 2026')}&url=https://freeresumemakers.com/blog/resume-formatting-guide` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/resume-formatting-guide` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/resume-formatting-guide` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Resume Formatting Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/resume-formatting-guide')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume Formatting Guide: Best Practices for 2026')}&url=https://freeresumemaker.xyz/blog/resume-formatting-guide` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-formatting-guide` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-formatting-guide` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Resume Formatting Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-formatting-guide')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1037,7 +1037,7 @@ export default function ResumeFormattingGuide() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1123,7 +1123,7 @@ export default function ResumeFormattingGuide() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: March 24, 2026 | © {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: March 24, 2026 | Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

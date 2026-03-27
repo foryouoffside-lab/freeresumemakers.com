@@ -1,4 +1,4 @@
-// pages/blog/resume-sections-guide.js
+﻿// pages/blog/resume-sections-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -7,26 +7,26 @@ import { getAllTemplateIds, getTemplateSections } from '../../lib/templateConfig
 
 // Template data for best-for descriptions
 const templateData = {
-  1: { name: 'The Professional', bestFor: 'Business, Finance, Law, Management', icon: '📊' },
-  2: { name: 'The Innovator', bestFor: 'Tech, Marketing, Creative, Design', icon: '💡' },
-  3: { name: 'The Executive', bestFor: 'Senior Executives, Directors, Leadership', icon: '👔' },
-  4: { name: 'The Strategist', bestFor: 'Consultants, Project Managers, Analysts', icon: '📈' },
-  5: { name: 'The Minimalist', bestFor: 'Tech, Startups, Modern Companies', icon: '⚪' },
-  6: { name: 'The Architect', bestFor: 'Engineers, Architects, Technical Roles', icon: '🏗️' },
-  7: { name: 'The Scholar', bestFor: 'Academics, Researchers, Educators', icon: '📚' },
-  8: { name: 'The Traditionalist', bestFor: 'Government, Legal, Conservative Industries', icon: '🏛️' },
-  9: { name: 'The Modernist', bestFor: 'Creative, Marketing, General Professional', icon: '✨' },
-  10: { name: 'The Essential', bestFor: 'Students, Interns, Entry-Level', icon: '🎓' },
-  11: { name: 'The Composer', bestFor: 'Humanities, Arts, Writing, Traditional Roles', icon: '🎵' },
-  12: { name: 'The Blueprint', bestFor: 'Engineers, Architects, Technical Designers', icon: '📐' },
-  13: { name: 'The Timeline', bestFor: 'Project Managers, Career Progression Focus', icon: '⏱️' },
-  14: { name: 'The Monochrome', bestFor: 'Legal, Government, Formal Roles', icon: '⚫' },
-  15: { name: 'The Compact', bestFor: 'Experienced Professionals, Dense Content', icon: '📦' },
-  16: { name: 'The Minimal', bestFor: 'Creative, Design, Content-Focused Roles', icon: '🌙' },
-  17: { name: 'The Innovator 2.0', bestFor: 'Students, Interns, Junior Developers', icon: '🚀' },
-  18: { name: 'The Code', bestFor: 'Software Engineers, Developers, Programmers', icon: '👨‍💻' },
-  19: { name: 'The Scholar 2.0', bestFor: 'Academics, Researchers, Educators', icon: '📖' },
-  20: { name: 'The Engineer', bestFor: 'Software Engineers, Tech Leads, Developers', icon: '⚙️' },
+  1: { name: 'The Professional', bestFor: 'Business, Finance, Law, Management', icon: 'ðŸ“Š' },
+  2: { name: 'The Innovator', bestFor: 'Tech, Marketing, Creative, Design', icon: 'ðŸ’¡' },
+  3: { name: 'The Executive', bestFor: 'Senior Executives, Directors, Leadership', icon: 'ðŸ‘”' },
+  4: { name: 'The Strategist', bestFor: 'Consultants, Project Managers, Analysts', icon: 'ðŸ“ˆ' },
+  5: { name: 'The Minimalist', bestFor: 'Tech, Startups, Modern Companies', icon: 'âšª' },
+  6: { name: 'The Architect', bestFor: 'Engineers, Architects, Technical Roles', icon: 'ðŸ—ï¸' },
+  7: { name: 'The Scholar', bestFor: 'Academics, Researchers, Educators', icon: 'ðŸ“š' },
+  8: { name: 'The Traditionalist', bestFor: 'Government, Legal, Conservative Industries', icon: 'ðŸ›ï¸' },
+  9: { name: 'The Modernist', bestFor: 'Creative, Marketing, General Professional', icon: 'âœ¨' },
+  10: { name: 'The Essential', bestFor: 'Students, Interns, Entry-Level', icon: 'ðŸŽ“' },
+  11: { name: 'The Composer', bestFor: 'Humanities, Arts, Writing, Traditional Roles', icon: 'ðŸŽµ' },
+  12: { name: 'The Blueprint', bestFor: 'Engineers, Architects, Technical Designers', icon: 'ðŸ“' },
+  13: { name: 'The Timeline', bestFor: 'Project Managers, Career Progression Focus', icon: 'â±ï¸' },
+  14: { name: 'The Monochrome', bestFor: 'Legal, Government, Formal Roles', icon: 'âš«' },
+  15: { name: 'The Compact', bestFor: 'Experienced Professionals, Dense Content', icon: 'ðŸ“¦' },
+  16: { name: 'The Minimal', bestFor: 'Creative, Design, Content-Focused Roles', icon: 'ðŸŒ™' },
+  17: { name: 'The Innovator 2.0', bestFor: 'Students, Interns, Junior Developers', icon: 'ðŸš€' },
+  18: { name: 'The Code', bestFor: 'Software Engineers, Developers, Programmers', icon: 'ðŸ‘¨â€ðŸ’»' },
+  19: { name: 'The Scholar 2.0', bestFor: 'Academics, Researchers, Educators', icon: 'ðŸ“–' },
+  20: { name: 'The Engineer', bestFor: 'Software Engineers, Tech Leads, Developers', icon: 'âš™ï¸' },
 };
 
 export default function ResumeSectionsGuide() {
@@ -40,26 +40,26 @@ export default function ResumeSectionsGuide() {
     "@type": "Article",
     "headline": "Complete Guide to Resume Sections: What to Include in Your Resume (2026)",
     "description": "Comprehensive guide to all resume sections: personal info, experience, education, skills, projects, and more. Learn what each template includes and get expert tips.",
-    "image": "https://freeresumemakers.com/images/blog/resume-sections-guide.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/resume-sections-guide.jpg",
     "author": {
       "@type": "Person",
       "name": "Lisa Thompson",
       "jobTitle": "Resume Formatting Expert",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "dateModified": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/resume-sections-guide"
+      "@id": "https://freeresumemaker.xyz/blog/resume-sections-guide"
     },
     "keywords": "resume sections, resume parts, CV sections, what to include in resume, resume structure, resume format sections",
     "articleSection": "Resume Structure"
@@ -74,19 +74,19 @@ export default function ResumeSectionsGuide() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Resume Sections Guide",
-        "item": "https://freeresumemakers.com/blog/resume-sections-guide"
+        "item": "https://freeresumemaker.xyz/blog/resume-sections-guide"
       }
     ]
   };
@@ -230,8 +230,8 @@ export default function ResumeSectionsGuide() {
         title="Complete Guide to Resume Sections: What to Include in Your Resume (2026)"
         description="Comprehensive guide to all resume sections: personal info, experience, education, skills, projects, and more. Learn what each section is for and get tips on what to include."
         keywords="resume sections, resume parts, CV sections, what to include in resume, resume structure, resume format sections, resume organization"
-        canonical="https://freeresumemakers.com/blog/resume-sections-guide"
-        image="https://freeresumemakers.com/images/blog/resume-sections-guide.jpg"
+        canonical="https://freeresumemaker.xyz/blog/resume-sections-guide"
+        image="https://freeresumemaker.xyz/images/blog/resume-sections-guide.jpg"
         type="article"
         publishedTime="2026-02-24"
         author="Lisa Thompson"
@@ -268,9 +268,9 @@ export default function ResumeSectionsGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Sections Guide</span>
         </div>
 
@@ -513,7 +513,7 @@ export default function ResumeSectionsGuide() {
               </thead>
               <tbody>
                 {templateIds.map((id, index) => {
-                  const template = templateData[id] || { name: `Template ${id}`, bestFor: 'General Professional', icon: '📄' };
+                  const template = templateData[id] || { name: `Template ${id}`, bestFor: 'General Professional', icon: 'ðŸ“„' };
                   const sectionsList = getTemplateSections(id);
                   
                   return (
@@ -570,7 +570,7 @@ export default function ResumeSectionsGuide() {
             marginBottom: '40px'
           }}>
             {templateIds.map(id => {
-              const template = templateData[id] || { name: `Template ${id}`, icon: '📄' };
+              const template = templateData[id] || { name: `Template ${id}`, icon: 'ðŸ“„' };
               const sectionsList = getTemplateSections(id);
               
               return (
@@ -748,33 +748,33 @@ export default function ResumeSectionsGuide() {
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Essential Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>✓ Contact Information</li>
-                  <li>✓ Education</li>
-                  <li>✓ Skills</li>
+                  <li>âœ“ Contact Information</li>
+                  <li>âœ“ Education</li>
+                  <li>âœ“ Skills</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Common Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>✓ Work Experience</li>
-                  <li>✓ Professional Summary</li>
+                  <li>âœ“ Work Experience</li>
+                  <li>âœ“ Professional Summary</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Optional Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>✓ Projects</li>
-                  <li>✓ Certifications</li>
-                  <li>✓ Languages</li>
-                  <li>✓ Awards</li>
-                  <li>✓ Volunteer Experience</li>
+                  <li>âœ“ Projects</li>
+                  <li>âœ“ Certifications</li>
+                  <li>âœ“ Languages</li>
+                  <li>âœ“ Awards</li>
+                  <li>âœ“ Volunteer Experience</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Industry-Specific</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>✓ Publications (academic)</li>
-                  <li>✓ References (executive)</li>
+                  <li>âœ“ Publications (academic)</li>
+                  <li>âœ“ References (executive)</li>
                 </ul>
               </div>
             </div>
@@ -843,7 +843,7 @@ export default function ResumeSectionsGuide() {
           color: 'white',
           textAlign: 'center'
         }}>
-          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+          <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
           <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Sections Checklist</h2>
           <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
             Download our printable checklist to ensure your resume includes all relevant sections for your target role.
@@ -952,7 +952,7 @@ export default function ResumeSectionsGuide() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 24, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 24, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

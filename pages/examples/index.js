@@ -1,4 +1,4 @@
-// pages/examples/index.js
+﻿// pages/examples/index.js
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -14,13 +14,13 @@ export default function ExamplesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       }
     ]
   };
@@ -50,8 +50,8 @@ export default function ExamplesPage() {
         title="Resume Examples by Profession | Industry-Specific Resume Samples 2026"
         description="Browse real resume examples for different professions and industries. Get inspired by our collection of successful resumes for software engineering, marketing, sales, healthcare, education, finance, design, and administrative roles."
         keywords="resume examples, resume samples, professional resumes, CV examples, job resume templates, industry-specific resumes, resume by profession"
-        canonical="https://freeresumemakers.com/examples"
-        image="https://freeresumemakers.com/images/examples/resume-examples-og.jpg"
+        canonical="https://freeresumemaker.xyz/examples"
+        image="https://freeresumemaker.xyz/images/examples/resume-examples-og.jpg"
         type="website"
       />
       
@@ -82,7 +82,7 @@ export default function ExamplesPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Examples</span>
         </nav>
 
@@ -117,14 +117,14 @@ export default function ExamplesPage() {
           marginBottom: '48px'
         }}>
           {[
-            { title: 'Software Engineering', icon: '💻', count: '2 examples', slug: 'software-engineering', color: '#e3f2fd', description: 'React, Python, Java, AWS, DevOps' },
-            { title: 'Marketing', icon: '📱', count: '2 examples', slug: 'marketing', color: '#f3e5f5', description: 'SEO, Social Media, Content Strategy, Analytics' },
-            { title: 'Sales', icon: '🤝', count: '2 examples', slug: 'sales', color: '#e8f5e8', description: 'B2B, Account Management, Business Development' },
-            { title: 'Healthcare', icon: '🏥', count: '2 examples', slug: 'healthcare', color: '#fff3e0', description: 'Nursing, Administration, Clinical Roles' },
-            { title: 'Education', icon: '📚', count: '2 examples', slug: 'education', color: '#e1f5fe', description: 'Teaching, Administration, Curriculum Design' },
-            { title: 'Finance', icon: '💰', count: '2 examples', slug: 'finance', color: '#fce4ec', description: 'Accounting, Investment Banking, Analysis' },
-            { title: 'Design', icon: '🎨', count: '2 examples', slug: 'design', color: '#e0f2f1', description: 'UI/UX, Graphic Design, Product Design' },
-            { title: 'Administrative', icon: '📋', count: '2 examples', slug: 'administrative', color: '#fff3e0', description: 'Executive Assistant, Office Management' }
+            { title: 'Software Engineering', icon: 'ðŸ’»', count: '2 examples', slug: 'software-engineering', color: '#e3f2fd', description: 'React, Python, Java, AWS, DevOps' },
+            { title: 'Marketing', icon: 'ðŸ“±', count: '2 examples', slug: 'marketing', color: '#f3e5f5', description: 'SEO, Social Media, Content Strategy, Analytics' },
+            { title: 'Sales', icon: 'ðŸ¤', count: '2 examples', slug: 'sales', color: '#e8f5e8', description: 'B2B, Account Management, Business Development' },
+            { title: 'Healthcare', icon: 'ðŸ¥', count: '2 examples', slug: 'healthcare', color: '#fff3e0', description: 'Nursing, Administration, Clinical Roles' },
+            { title: 'Education', icon: 'ðŸ“š', count: '2 examples', slug: 'education', color: '#e1f5fe', description: 'Teaching, Administration, Curriculum Design' },
+            { title: 'Finance', icon: 'ðŸ’°', count: '2 examples', slug: 'finance', color: '#fce4ec', description: 'Accounting, Investment Banking, Analysis' },
+            { title: 'Design', icon: 'ðŸŽ¨', count: '2 examples', slug: 'design', color: '#e0f2f1', description: 'UI/UX, Graphic Design, Product Design' },
+            { title: 'Administrative', icon: 'ðŸ“‹', count: '2 examples', slug: 'administrative', color: '#fff3e0', description: 'Executive Assistant, Office Management' }
           ].map((category, index) => (
             <Link
               key={index}
@@ -199,7 +199,7 @@ export default function ExamplesPage() {
                   fontSize: '14px',
                   fontWeight: 500
                 }}>
-                  View Examples →
+                  View Examples â†’
                 </span>
               </div>
             </Link>
@@ -222,7 +222,7 @@ export default function ExamplesPage() {
             gap: '10px',
             color: '#1a1a1a'
           }}>
-            <span style={{ fontSize: '32px' }}>💡</span>
+            <span style={{ fontSize: '32px' }}>ðŸ’¡</span>
             Tips for Using These Examples
           </h2>
           <div style={{
@@ -232,22 +232,22 @@ export default function ExamplesPage() {
           }}>
             {[
               { 
-                icon: '✏️', 
+                icon: 'âœï¸', 
                 title: 'Customize Content',
                 tip: 'Adapt the examples to match your unique experience and achievements. Don\'t copy-paste directly.' 
               },
               { 
-                icon: '🎯', 
+                icon: 'ðŸŽ¯', 
                 title: 'Focus on Achievements',
                 tip: 'Notice how each example highlights quantifiable results and specific accomplishments, not just duties.' 
               },
               { 
-                icon: '📊', 
+                icon: 'ðŸ“Š', 
                 title: 'Use Metrics',
                 tip: 'Include numbers, percentages, and data to demonstrate your impact, just like in these examples.' 
               },
               { 
-                icon: '🔍', 
+                icon: 'ðŸ”', 
                 title: 'Industry Keywords',
                 tip: 'Pay attention to industry-specific keywords and incorporate them into your own resume.' 
               }
@@ -325,7 +325,7 @@ export default function ExamplesPage() {
             alignItems: 'center',
             gap: '8px'
           }}>
-            <span>🔍</span>
+            <span>ðŸ”</span>
             Browse by Industry
           </h3>
           <div style={{
@@ -334,14 +334,14 @@ export default function ExamplesPage() {
             gap: '12px'
           }}>
             {[
-              { name: 'Software Engineering', slug: 'software-engineering', icon: '💻' },
-              { name: 'Marketing', slug: 'marketing', icon: '📱' },
-              { name: 'Sales', slug: 'sales', icon: '🤝' },
-              { name: 'Healthcare', slug: 'healthcare', icon: '🏥' },
-              { name: 'Education', slug: 'education', icon: '📚' },
-              { name: 'Finance', slug: 'finance', icon: '💰' },
-              { name: 'Design', slug: 'design', icon: '🎨' },
-              { name: 'Administrative', slug: 'administrative', icon: '📋' }
+              { name: 'Software Engineering', slug: 'software-engineering', icon: 'ðŸ’»' },
+              { name: 'Marketing', slug: 'marketing', icon: 'ðŸ“±' },
+              { name: 'Sales', slug: 'sales', icon: 'ðŸ¤' },
+              { name: 'Healthcare', slug: 'healthcare', icon: 'ðŸ¥' },
+              { name: 'Education', slug: 'education', icon: 'ðŸ“š' },
+              { name: 'Finance', slug: 'finance', icon: 'ðŸ’°' },
+              { name: 'Design', slug: 'design', icon: 'ðŸŽ¨' },
+              { name: 'Administrative', slug: 'administrative', icon: 'ðŸ“‹' }
             ].map((item, index) => (
               <Link
                 key={index}
@@ -432,7 +432,7 @@ export default function ExamplesPage() {
             marginTop: '20px',
             opacity: 0.8
           }}>
-            No sign-up required • 100% Free • PDF Download
+            No sign-up required â€¢ 100% Free â€¢ PDF Download
           </p>
         </div>
       </div>

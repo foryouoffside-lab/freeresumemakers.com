@@ -145,7 +145,7 @@ export default function TemplateInfoPage() {
         <SEO 
           title="Resume Template Not Found | Free Resume Makers"
           description="The requested resume template could not be found. Browse our collection of professional ATS-friendly resume templates."
-          canonical="https://freeresumemakers.com/templates/"
+          canonical="https://freeresumemaker.xyz/templates/"
           type="website"
         />
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
@@ -169,7 +169,7 @@ export default function TemplateInfoPage() {
       <SEO 
         title={`${templateName} Resume Template | Professional ${sectionListItems.length}-Section ATS-Friendly CV`}
         description={`${description} ${benefits.slice(0, 2).join(" ")} Complete guide with ${sectionListItems.length} sections: ${sectionListItems.map(s => s.name).join(", ")}.`}
-        canonical={`https://freeresumemakers.com/template-info/${id}`}
+        canonical={`https://freeresumemaker.xyz/template-info/${id}`}
         type="article"
         keywords={keywords}
       />
@@ -178,21 +178,21 @@ export default function TemplateInfoPage() {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Free Resume Makers" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={`https://freeresumemakers.com/template-info/${id}`} />
+        <link rel="canonical" href={`https://freeresumemaker.xyz/template-info/${id}`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://freeresumemakers.com/template-info/${id}`} />
+        <meta property="og:url" content={`https://freeresumemaker.xyz/template-info/${id}`} />
         <meta property="og:title" content={`${templateName} Resume Template - ${sectionListItems.length} Section ATS-Friendly Design`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={`https://freeresumemakers.com/images/templates/${id}-preview.jpg`} />
+        <meta property="og:image" content={`https://freeresumemaker.xyz/images/templates/${id}-preview.jpg`} />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://freeresumemakers.com/template-info/${id}`} />
+        <meta property="twitter:url" content={`https://freeresumemaker.xyz/template-info/${id}`} />
         <meta property="twitter:title" content={`${templateName} Resume Template - Professional ATS-Friendly CV`} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={`https://freeresumemakers.com/images/templates/${id}-preview.jpg`} />
+        <meta property="twitter:image" content={`https://freeresumemaker.xyz/images/templates/${id}-preview.jpg`} />
         
         {/* Structured Data */}
         <script

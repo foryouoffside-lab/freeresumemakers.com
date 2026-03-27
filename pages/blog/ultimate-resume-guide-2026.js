@@ -1,4 +1,4 @@
-// pages/blog/ultimate-resume-guide-2026.js
+﻿// pages/blog/ultimate-resume-guide-2026.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -13,26 +13,26 @@ export default function UltimateResumeGuide2026() {
     "@type": "Article",
     "headline": "The Ultimate Guide to Writing a Resume in 2026 | Complete Resume Writing Guide with Expert Tips",
     "description": "Master the art of resume writing in 2026 with our comprehensive guide. Learn ATS optimization, formatting tips, keyword strategies, and see before/after examples. Updated for 2026 job market.",
-    "image": "https://freeresumemakers.com/images/blog/ultimate-resume-guide-2026.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/ultimate-resume-guide-2026.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah Johnson",
       "jobTitle": "Career Expert",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-15",
     "dateModified": "2026-02-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/ultimate-resume-guide-2026"
+      "@id": "https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
     },
     "keywords": "resume writing guide 2026, how to write a resume, ATS-friendly resume, resume tips, professional resume, CV writing, job search 2026, resume examples, resume format, career advice",
     "articleSection": "Resume Tips"
@@ -47,19 +47,19 @@ export default function UltimateResumeGuide2026() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Ultimate Resume Guide 2026",
-        "item": "https://freeresumemakers.com/blog/ultimate-resume-guide-2026"
+        "item": "https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
       }
     ]
   };
@@ -149,8 +149,8 @@ export default function UltimateResumeGuide2026() {
         title="The Ultimate Guide to Writing a Resume in 2026 | Complete Resume Writing Guide with Expert Tips"
         description="Master the art of resume writing in 2026 with our comprehensive guide. Learn ATS optimization, formatting tips, keyword strategies, and see before/after examples. Updated for 2026."
         keywords="resume writing guide 2026, how to write a resume, ATS-friendly resume, resume tips, professional resume, CV writing, job search 2026, resume examples, resume format, career advice, resume writing tips"
-        canonical="https://freeresumemakers.com/blog/ultimate-resume-guide-2026"
-        image="https://freeresumemakers.com/images/blog/ultimate-resume-guide-2026.jpg"
+        canonical="https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
+        image="https://freeresumemaker.xyz/images/blog/ultimate-resume-guide-2026.jpg"
         type="article"
         publishedTime="2026-02-15"
         author="Sarah Johnson"
@@ -191,9 +191,9 @@ export default function UltimateResumeGuide2026() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Ultimate Resume Guide 2026</span>
         </div>
 
@@ -209,7 +209,7 @@ export default function UltimateResumeGuide2026() {
             display: 'inline-block',
             boxShadow: '0 4px 10px rgba(0,112,243,0.3)'
           }}>
-            MOST READ · 2026 EDITION
+            MOST READ Â· 2026 EDITION
           </span>
         </div>
 
@@ -635,21 +635,21 @@ export default function UltimateResumeGuide2026() {
                 gap: '15px'
               }}>
                 {[
-                  '✓ Contact information is correct',
-                  '✓ Summary is relevant to the job',
-                  '✓ Experience uses action verbs',
-                  '✓ Skills are well-organized',
-                  '✓ Formatting is consistent',
-                  '✓ No spelling or grammar errors',
-                  '✓ Saved as PDF (unless DOCX requested)',
-                  '✓ File name is professional'
+                  'âœ“ Contact information is correct',
+                  'âœ“ Summary is relevant to the job',
+                  'âœ“ Experience uses action verbs',
+                  'âœ“ Skills are well-organized',
+                  'âœ“ Formatting is consistent',
+                  'âœ“ No spelling or grammar errors',
+                  'âœ“ Saved as PDF (unless DOCX requested)',
+                  'âœ“ File name is professional'
                 ].map((item, index) => (
                   <div key={index} style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px'
                   }}>
-                    <span style={{ color: '#2e7d32', fontSize: '18px' }}>✓</span>
+                    <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
                     <span style={{ fontSize: '14px' }}>{item}</span>
                   </div>
                 ))}
@@ -719,7 +719,7 @@ export default function UltimateResumeGuide2026() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Writing Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes all essential elements.
@@ -802,10 +802,10 @@ export default function UltimateResumeGuide2026() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('The Ultimate Guide to Writing a Resume in 2026')}&url=https://freeresumemakers.com/blog/ultimate-resume-guide-2026` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/ultimate-resume-guide-2026` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/ultimate-resume-guide-2026` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Ultimate Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/ultimate-resume-guide-2026')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('The Ultimate Guide to Writing a Resume in 2026')}&url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Ultimate Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -892,7 +892,7 @@ export default function UltimateResumeGuide2026() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -978,7 +978,7 @@ export default function UltimateResumeGuide2026() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 15, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 15, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

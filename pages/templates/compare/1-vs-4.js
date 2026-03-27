@@ -1,4 +1,4 @@
-// pages/templates/compare/1-vs-4.js
+﻿// pages/templates/compare/1-vs-4.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -40,25 +40,25 @@ export default function CompareTemplate1vs4() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "The Professional vs The Strategist",
-        "item": "https://freeresumemakers.com/templates/compare/1-vs-4"
+        "item": "https://freeresumemaker.xyz/templates/compare/1-vs-4"
       }
     ]
   };
@@ -149,18 +149,18 @@ export default function CompareTemplate1vs4() {
         {/* Open Graph */}
         <meta property="og:title" content="Template 1 vs 4: The Professional vs The Strategist | Compare Resume Templates" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/compare-1-vs-4.jpg" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/1-vs-4" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/compare-1-vs-4.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/1-vs-4" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 1 vs 4: The Professional vs The Strategist" />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/compare-1-vs-4.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/compare-1-vs-4.jpg" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/1-vs-4" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/1-vs-4" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -182,11 +182,11 @@ export default function CompareTemplate1vs4() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Professional vs The Strategist</span>
         </div>
 
@@ -248,11 +248,11 @@ export default function CompareTemplate1vs4() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'ðŸ“‹ Overview'}
+              {tab === 'features' && 'âš¡ Features'}
+              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
+              {tab === 'industry' && 'ðŸ¢ Industry Fit'}
+              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
             </button>
           ))}
         </div>
@@ -524,26 +524,26 @@ export default function CompareTemplate1vs4() {
                     { feature: 'Experience Display', t1: 'Standard cards', t2: 'Timeline markers with visual connectors' },
                     { feature: 'Maximum Experience Entries', t1: '2', t2: '4' },
                     { feature: 'Maximum Skills', t1: '9', t2: '20' },
-                    { feature: 'Languages Section', t1: '✓ Yes (4 max)', t2: '✗ No' },
-                    { feature: 'Experience Filtering', t1: '✓ Yes (job, internship, project)', t2: '✗ No' },
-                    { feature: 'Career Progression Visualization', t1: '✗ No', t2: '✓ Yes (timeline markers)' },
+                    { feature: 'Languages Section', t1: 'âœ“ Yes (4 max)', t2: 'âœ— No' },
+                    { feature: 'Experience Filtering', t1: 'âœ“ Yes (job, internship, project)', t2: 'âœ— No' },
+                    { feature: 'Career Progression Visualization', t1: 'âœ— No', t2: 'âœ“ Yes (timeline markers)' },
                     { feature: 'Sidebar Layout', t1: 'Standard sidebar', t2: 'Clean sidebar focus' },
-                    { feature: 'Gradient Header', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'ATS-Optimized', t1: '✓ Yes', t2: '✓ Yes' },
-                    { feature: 'Experience Badges', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Professional Summary Box', t1: '✓ Yes', t2: '✓ Yes' },
+                    { feature: 'Gradient Header', t1: 'âœ“ Yes', t2: 'âœ— No' },
+                    { feature: 'ATS-Optimized', t1: 'âœ“ Yes', t2: 'âœ“ Yes' },
+                    { feature: 'Experience Badges', t1: 'âœ“ Yes', t2: 'âœ— No' },
+                    { feature: 'Professional Summary Box', t1: 'âœ“ Yes', t2: 'âœ“ Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('âœ“') ? (
                           <span style={{ color: '#0070f3', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('âœ“') ? (
                           <span style={{ color: '#00a86b', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -564,7 +564,7 @@ export default function CompareTemplate1vs4() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginBottom: '15px' }}>
-                  ✅ The Professional - Pros
+                  âœ… The Professional - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.pros.map((item, index) => (
@@ -572,7 +572,7 @@ export default function CompareTemplate1vs4() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Professional - Cons
+                  âš ï¸ The Professional - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.cons.map((item, index) => (
@@ -582,7 +582,7 @@ export default function CompareTemplate1vs4() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#00a86b', marginBottom: '15px' }}>
-                  ✅ The Strategist - Pros
+                  âœ… The Strategist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template4.pros.map((item, index) => (
@@ -590,7 +590,7 @@ export default function CompareTemplate1vs4() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#00a86b', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Strategist - Cons
+                  âš ï¸ The Strategist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template4.cons.map((item, index) => (
@@ -640,7 +640,7 @@ export default function CompareTemplate1vs4() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/1" style={{ color: '#0070f3', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -668,7 +668,7 @@ export default function CompareTemplate1vs4() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/4" style={{ color: '#00a86b', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -848,7 +848,7 @@ export default function CompareTemplate1vs4() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>💼</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ’¼</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0070f3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Professional
                 </h3>
@@ -878,7 +878,7 @@ export default function CompareTemplate1vs4() {
                 padding: '30px',
                 border: '1px solid #a3e0c0'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📊</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ“Š</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#00a86b', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Strategist
                 </h3>
@@ -912,7 +912,7 @@ export default function CompareTemplate1vs4() {
               marginBottom: '40px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: Consider Your Experience Count
+                ðŸ’¡ Expert Tip: Consider Your Experience Count
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 The biggest difference between these templates is capacity. If you have 3-4 key experiences you want to highlight, The Strategist is the better choice. If you have 2 or fewer experiences but need to showcase languages, The Professional is ideal. Choose based on your content, not just aesthetics.
@@ -940,20 +940,20 @@ export default function CompareTemplate1vs4() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#00a86b' }}>The Strategist</div>
                 
                 <div>1-2 experiences</div>
-                <div style={{ color: '#0070f3' }}>✓ Perfect</div>
-                <div style={{ color: '#00a86b' }}>✓ Also works</div>
+                <div style={{ color: '#0070f3' }}>âœ“ Perfect</div>
+                <div style={{ color: '#00a86b' }}>âœ“ Also works</div>
                 
                 <div>3 experiences</div>
-                <div style={{ color: '#999' }}>✗ Limited space</div>
-                <div style={{ color: '#00a86b' }}>✓✓ Ideal</div>
+                <div style={{ color: '#999' }}>âœ— Limited space</div>
+                <div style={{ color: '#00a86b' }}>âœ“âœ“ Ideal</div>
                 
                 <div>4 experiences</div>
-                <div style={{ color: '#999' }}>✗ Not enough space</div>
-                <div style={{ color: '#00a86b' }}>✓✓ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Not enough space</div>
+                <div style={{ color: '#00a86b' }}>âœ“âœ“ Perfect</div>
                 
                 <div>Need languages section</div>
-                <div style={{ color: '#0070f3' }}>✓✓ Yes</div>
-                <div style={{ color: '#999' }}>✗ Not available</div>
+                <div style={{ color: '#0070f3' }}>âœ“âœ“ Yes</div>
+                <div style={{ color: '#999' }}>âœ— Not available</div>
               </div>
             </div>
           </div>
@@ -1068,7 +1068,7 @@ export default function CompareTemplate1vs4() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

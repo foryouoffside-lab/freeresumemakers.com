@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,33 +9,33 @@ export default function AwardsSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/awards#article",
+        "@id": "https://freeresumemaker.xyz/sections/awards#article",
         "headline": "How to List Awards on Your Resume: Complete Guide with Examples 2026",
         "description": "Learn how to showcase awards, honors, and achievements on your resume effectively. Includes professional, academic award examples, formatting tips, and expert advice to boost your job search success.",
-        "image": "https://freeresumemakers.com/images/awards-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/awards-guide-2026.jpg",
         "datePublished": "2026-01-15T08:00:00+00:00",
         "dateModified": "2026-03-23T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/awards"
+          "@id": "https://freeresumemaker.xyz/sections/awards"
         }
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/awards#howto",
+        "@id": "https://freeresumemaker.xyz/sections/awards#howto",
         "name": "How to List Awards on Your Resume",
         "description": "Complete step-by-step guide to showcasing awards, honors, and achievements on your resume with examples and formatting tips.",
         "estimatedCost": {
@@ -103,31 +103,31 @@ export default function AwardsSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/awards#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/awards#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Awards on Resume Guide",
-            "item": "https://freeresumemakers.com/sections/awards"
+            "item": "https://freeresumemaker.xyz/sections/awards"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/awards#faq",
+        "@id": "https://freeresumemaker.xyz/sections/awards#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -188,7 +188,7 @@ export default function AwardsSectionGuide() {
         title="How to List Awards on Resume: Complete Guide with Examples 2026 | FreeResumeMakers"
         description="Expert guide on showcasing awards, honors, and achievements on your resume. Learn formatting, placement strategies, and see real examples for professional and academic awards. Boost your job application success."
         keywords="awards on resume, honors resume, achievements, professional recognition, academic awards, employee of the month, industry awards, resume achievements section, how to list awards"
-        canonical="https://freeresumemakers.com/sections/awards"
+        canonical="https://freeresumemaker.xyz/sections/awards"
         type="article"
         publishedTime="2026-01-15T08:00:00+00:00"
         modifiedTime="2026-03-23T10:00:00+00:00"
@@ -201,7 +201,7 @@ export default function AwardsSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/awards" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/awards" />
       </Head>
 
       <main style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
@@ -215,9 +215,9 @@ export default function AwardsSectionGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Awards Guide</span>
         </nav>
 
@@ -227,9 +227,9 @@ export default function AwardsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 8 min read</span>
-            <span>👁️ 25,000+ readers</span>
+            <span>ðŸ“… Updated: March 23, 2026</span>
+            <span>â±ï¸ 8 min read</span>
+            <span>ðŸ‘ï¸ 25,000+ readers</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -245,14 +245,14 @@ export default function AwardsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Award Format</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Category</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
-            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>• Common Mistakes</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
-            <a href="#ats" style={{ color: '#0070f3', textDecoration: 'none' }}>• ATS Optimization</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Award Format</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Examples by Category</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Placement Strategy</a>
+            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Common Mistakes</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
+            <a href="#ats" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ ATS Optimization</a>
           </div>
         </div>
 
@@ -264,7 +264,7 @@ export default function AwardsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Awards show third-party validation of your skills. They add credibility beyond your own claims. Include 3-5 of your most impressive awards with context and metrics.
+            <strong>ðŸ’¡ Pro Tip:</strong> Awards show third-party validation of your skills. They add credibility beyond your own claims. Include 3-5 of your most impressive awards with context and metrics.
           </p>
         </div>
 
@@ -277,10 +277,10 @@ export default function AwardsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #e9ecef' }}>
             <div style={{ fontFamily: 'monospace', fontSize: '14px', lineHeight: '1.8' }}>
               <strong style={{ fontSize: '16px' }}>[Award Name]</strong> | <em>[Issuing Organization]</em> | [Year]<br/>
-              • <strong>What:</strong> Brief description of achievement<br/>
-              • <strong>Scope:</strong> National / State / Company-wide / Departmental<br/>
-              • <strong>Impact:</strong> Quantifiable result (e.g., "Selected from 500+ applicants")<br/>
-              • <strong>Significance:</strong> Why this award matters
+              â€¢ <strong>What:</strong> Brief description of achievement<br/>
+              â€¢ <strong>Scope:</strong> National / State / Company-wide / Departmental<br/>
+              â€¢ <strong>Impact:</strong> Quantifiable result (e.g., "Selected from 500+ applicants")<br/>
+              â€¢ <strong>Significance:</strong> Why this award matters
             </div>
           </div>
         </section>
@@ -291,36 +291,36 @@ export default function AwardsSectionGuide() {
             Award Examples by Category
           </h2>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>🏆 Professional & Work Awards</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>ðŸ† Professional & Work Awards</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Employee of the Year</strong> – <em>Google</em> | 2023<br/>Recognized for exceptional contributions to cloud infrastructure, leading a team that reduced operational costs by 35% and mentored 12 junior engineers</li>
-              <li><strong>Sales Excellence Award</strong> – <em>Salesforce</em> | 2022<br/>Top 1% performer among 500+ sales representatives nationwide; exceeded annual quota by 150% and closed $8M in new business</li>
-              <li><strong>Innovation Award</strong> – <em>Microsoft</em> | 2021<br/>For developing an AI-powered code review tool that saved 10,000+ engineering hours annually across 3 product teams</li>
-              <li><strong>President's Award</strong> – <em>JPMorgan Chase</em> | 2023<br/>Recognized for outstanding client satisfaction (98% positive rating) and revenue growth (+45% YoY)</li>
-              <li><strong>Rising Star Award</strong> – <em>Deloitte</em> | 2023<br/>Selected as top performer among 200+ consultants in first 2 years; led digital transformation project for Fortune 500 client</li>
+              <li><strong>Employee of the Year</strong> â€“ <em>Google</em> | 2023<br/>Recognized for exceptional contributions to cloud infrastructure, leading a team that reduced operational costs by 35% and mentored 12 junior engineers</li>
+              <li><strong>Sales Excellence Award</strong> â€“ <em>Salesforce</em> | 2022<br/>Top 1% performer among 500+ sales representatives nationwide; exceeded annual quota by 150% and closed $8M in new business</li>
+              <li><strong>Innovation Award</strong> â€“ <em>Microsoft</em> | 2021<br/>For developing an AI-powered code review tool that saved 10,000+ engineering hours annually across 3 product teams</li>
+              <li><strong>President's Award</strong> â€“ <em>JPMorgan Chase</em> | 2023<br/>Recognized for outstanding client satisfaction (98% positive rating) and revenue growth (+45% YoY)</li>
+              <li><strong>Rising Star Award</strong> â€“ <em>Deloitte</em> | 2023<br/>Selected as top performer among 200+ consultants in first 2 years; led digital transformation project for Fortune 500 client</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>🎓 Academic & Educational Awards</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>ðŸŽ“ Academic & Educational Awards</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Summa Cum Laude</strong> – <em>Stanford University</em> | 2023<br/>Graduated top 2% of class with 3.9 GPA; recognized for academic excellence across all semesters</li>
-              <li><strong>National Merit Scholar</strong> – <em>National Merit Scholarship Corporation</em> | 2019<br/>Selected from 1.5 million applicants based on PSAT scores and academic achievement</li>
-              <li><strong>Dean's List</strong> – <em>MIT Sloan School of Management</em> | 6 consecutive semesters (2020-2023)<br/>Maintained GPA above 3.7 while completing full course load and research commitments</li>
-              <li><strong>Best Undergraduate Research Award</strong> – <em>MIT Energy Initiative</em> | 2022<br/>For research on renewable energy storage solutions; findings presented at national conference</li>
-              <li><strong>Full Tuition Presidential Scholarship</strong> – <em>University of California, Berkeley</em> | 2019-2023<br/>Awarded to top 3% of incoming freshmen based on academic merit and leadership</li>
+              <li><strong>Summa Cum Laude</strong> â€“ <em>Stanford University</em> | 2023<br/>Graduated top 2% of class with 3.9 GPA; recognized for academic excellence across all semesters</li>
+              <li><strong>National Merit Scholar</strong> â€“ <em>National Merit Scholarship Corporation</em> | 2019<br/>Selected from 1.5 million applicants based on PSAT scores and academic achievement</li>
+              <li><strong>Dean's List</strong> â€“ <em>MIT Sloan School of Management</em> | 6 consecutive semesters (2020-2023)<br/>Maintained GPA above 3.7 while completing full course load and research commitments</li>
+              <li><strong>Best Undergraduate Research Award</strong> â€“ <em>MIT Energy Initiative</em> | 2022<br/>For research on renewable energy storage solutions; findings presented at national conference</li>
+              <li><strong>Full Tuition Presidential Scholarship</strong> â€“ <em>University of California, Berkeley</em> | 2019-2023<br/>Awarded to top 3% of incoming freshmen based on academic merit and leadership</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>🏅 Industry & Professional Recognition</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>ðŸ… Industry & Professional Recognition</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Forbes 30 Under 30</strong> – <em>Forbes Magazine</em> | 2024<br/>Recognized in Enterprise Technology category for innovative SaaS platform serving 500+ businesses</li>
-              <li><strong>Best Paper Award</strong> – <em>ACM Conference on Human Factors</em> | 2023<br/>For research on quantum computing algorithms; paper selected from 1,200+ submissions</li>
-              <li><strong>Top 10 Under 10</strong> – <em>Young Entrepreneurs Council</em> | 2023<br/>Recognized for innovative startup leadership and community impact among entrepreneurs under 10 years of experience</li>
-              <li><strong>Webby Award Winner</strong> – <em>International Academy of Digital Arts</em> | 2022<br/>For excellence in digital experience design; judged against 13,000+ global entries</li>
-              <li><strong>Award of Excellence</strong> – <em>American Institute of Graphic Arts</em> | 2023<br/>Recognized for outstanding branding work featured in national design publication</li>
+              <li><strong>Forbes 30 Under 30</strong> â€“ <em>Forbes Magazine</em> | 2024<br/>Recognized in Enterprise Technology category for innovative SaaS platform serving 500+ businesses</li>
+              <li><strong>Best Paper Award</strong> â€“ <em>ACM Conference on Human Factors</em> | 2023<br/>For research on quantum computing algorithms; paper selected from 1,200+ submissions</li>
+              <li><strong>Top 10 Under 10</strong> â€“ <em>Young Entrepreneurs Council</em> | 2023<br/>Recognized for innovative startup leadership and community impact among entrepreneurs under 10 years of experience</li>
+              <li><strong>Webby Award Winner</strong> â€“ <em>International Academy of Digital Arts</em> | 2022<br/>For excellence in digital experience design; judged against 13,000+ global entries</li>
+              <li><strong>Award of Excellence</strong> â€“ <em>American Institute of Graphic Arts</em> | 2023<br/>Recognized for outstanding branding work featured in national design publication</li>
             </ul>
           </div>
         </section>
@@ -333,11 +333,11 @@ export default function AwardsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <p><strong>A dedicated awards section is recommended when:</strong></p>
             <ul style={{ lineHeight: '1.8', marginBottom: '0' }}>
-              <li>✓ You have 3+ significant, relevant awards</li>
-              <li>✓ Awards are prestigious or industry-recognized (e.g., Forbes 30 Under 30, National Awards)</li>
-              <li>✓ You're in academia, research, or competitive fields where recognition matters</li>
-              <li>✓ Awards directly demonstrate skills required for your target role</li>
-              <li>✓ You want to highlight third-party validation early in your resume</li>
+              <li>âœ“ You have 3+ significant, relevant awards</li>
+              <li>âœ“ Awards are prestigious or industry-recognized (e.g., Forbes 30 Under 30, National Awards)</li>
+              <li>âœ“ You're in academia, research, or competitive fields where recognition matters</li>
+              <li>âœ“ Awards directly demonstrate skills required for your target role</li>
+              <li>âœ“ You want to highlight third-party validation early in your resume</li>
             </ul>
           </div>
 
@@ -351,17 +351,17 @@ export default function AwardsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>📌 Dedicated Awards Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ“Œ Dedicated Awards Section</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> 3+ significant awards</p>
               <p style={{ fontSize: '14px', color: '#666' }}>Place after work experience or education, titled "Awards & Honors" or "Recognition"</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>🎓 Under Education Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸŽ“ Under Education Section</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> Academic awards, scholarships, honors</p>
               <p style={{ fontSize: '14px', color: '#666' }}>List as sub-bullets under your degree for relevant academic achievements</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>💼 Within Experience Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ’¼ Within Experience Section</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> Work-related awards like Employee of the Month</p>
               <p style={{ fontSize: '14px', color: '#666' }}>Include as bullet points under the specific job where you earned the award</p>
             </div>
@@ -371,7 +371,7 @@ export default function AwardsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Award Formatting
+            ðŸ¤– ATS-Friendly Award Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <p><strong>To ensure your awards pass Applicant Tracking Systems (ATS):</strong></p>
@@ -388,7 +388,7 @@ export default function AwardsSectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ 7 Common Award Mistakes to Avoid
+            âŒ 7 Common Award Mistakes to Avoid
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -449,7 +449,7 @@ export default function AwardsSectionGuide() {
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -460,12 +460,12 @@ export default function AwardsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
-            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume →</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide â†’</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide â†’</Link>
+            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume â†’</Link>
           </div>
         </div>
       </main>

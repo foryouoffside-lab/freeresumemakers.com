@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -124,10 +124,10 @@ export default function Compare2Vs3() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemakers.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemakers.com/templates" },
-      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemakers.com/templates/compare" },
-      { "@type": "ListItem", "position": 4, "name": "Template 2 vs Template 3", "item": "https://freeresumemakers.com/templates/compare/2-vs-3" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemaker.xyz/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemaker.xyz/templates" },
+      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemaker.xyz/templates/compare" },
+      { "@type": "ListItem", "position": 4, "name": "Template 2 vs Template 3", "item": "https://freeresumemaker.xyz/templates/compare/2-vs-3" }
     ]
   };
 
@@ -143,14 +143,14 @@ export default function Compare2Vs3() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/2-vs-3" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/2-vs-3" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Template 2 vs Template 3: Classic Horizon vs Global Pro - Traditional vs Modern Resume Comparison" />
         <meta property="og:description" content="Traditional vs Modern resume showdown! Compare Classic Horizon and Global Pro side-by-side. See which design style gets more interviews in healthcare, tech, and creative industries." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/2-vs-3" />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/template-comparison-2vs3.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/2-vs-3" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-2vs3.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="FreeResumeMakers" />
@@ -160,7 +160,7 @@ export default function Compare2Vs3() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 2 vs Template 3: Traditional vs Modern Resume Comparison" />
         <meta name="twitter:description" content="Find your perfect resume style! Compare Classic Horizon (Traditional) vs Global Pro (Modern) templates with industry-specific recommendations." />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/template-comparison-2vs3.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-2vs3.jpg" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content={comparisonDate} />
@@ -188,11 +188,11 @@ export default function Compare2Vs3() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 2 vs Template 3</li>
           </ol>
         </nav>
@@ -209,7 +209,7 @@ export default function Compare2Vs3() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              🎨 TRADITIONAL vs MODERN SHOWDOWN
+              ðŸŽ¨ TRADITIONAL vs MODERN SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -241,13 +241,13 @@ export default function Compare2Vs3() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              📊 Updated: March 2026
+              ðŸ“Š Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              📄 Traditional: 95% ATS Score
+              ðŸ“„ Traditional: 95% ATS Score
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              🌙 Modern: 96% ATS Score
+              ðŸŒ™ Modern: 96% ATS Score
             </div>
           </div>
         </header>
@@ -262,7 +262,7 @@ export default function Compare2Vs3() {
           border: '1px solid #e2e8f0'
         }}>
           <p style={{ fontSize: '1rem', color: '#1e293b', margin: 0 }}>
-            <strong>💡 2026 Hiring Trend Insight:</strong> Traditional resumes (Template 2) have <strong>31% higher success rate</strong> in healthcare, legal, and government roles. 
+            <strong>ðŸ’¡ 2026 Hiring Trend Insight:</strong> Traditional resumes (Template 2) have <strong>31% higher success rate</strong> in healthcare, legal, and government roles. 
             Modern resumes (Template 3) have <strong>23% higher interview rate</strong> in tech, creative, and startup environments.
           </p>
         </div>
@@ -295,10 +295,10 @@ export default function Compare2Vs3() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              📜 TRADITIONAL STYLE
+              ðŸ“œ TRADITIONAL STYLE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>📄</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ“„</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[2].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 2)</span>
@@ -308,7 +308,7 @@ export default function Compare2Vs3() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template2Sections.map(section => (
@@ -321,7 +321,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ✨ Key Features
+                âœ¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[2].features.map(feature => (
@@ -334,7 +334,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[2].bestFor.map(role => (
@@ -347,7 +347,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -381,7 +381,7 @@ export default function Compare2Vs3() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 2 →
+              View Template 2 â†’
             </Link>
           </div>
 
@@ -407,10 +407,10 @@ export default function Compare2Vs3() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              🚀 MODERN STYLE
+              ðŸš€ MODERN STYLE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>🌙</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸŒ™</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: 'white' }}>
                 {templates[3].name}
                 <span style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 'normal', marginLeft: '8px' }}>(Template 3)</span>
@@ -420,7 +420,7 @@ export default function Compare2Vs3() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template3Sections.map(section => (
@@ -433,7 +433,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                ✨ Key Features
+                âœ¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].features.map(feature => (
@@ -446,7 +446,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[3].bestFor.map(role => (
@@ -459,7 +459,7 @@ export default function Compare2Vs3() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'white' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: 'rgba(255,255,255,0.1)', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -493,7 +493,7 @@ export default function Compare2Vs3() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 3 →
+              View Template 3 â†’
             </Link>
           </div>
         </div>
@@ -501,7 +501,7 @@ export default function Compare2Vs3() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📊 Feature Comparison: Traditional vs Modern Resume
+            ðŸ“Š Feature Comparison: Traditional vs Modern Resume
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -532,23 +532,23 @@ export default function Compare2Vs3() {
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Languages Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Certifications Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Image/Avatar Support</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Density Scaling</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -562,8 +562,8 @@ export default function Compare2Vs3() {
                  </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Print Friendly</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Excellent</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>⚠️ Good (uses more ink)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Excellent</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âš ï¸ Good (uses more ink)</td>
                  </tr>
                 <tr style={{ background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Ideal Industries</td>
@@ -583,12 +583,12 @@ export default function Compare2Vs3() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            🏢 Choose Based on Your Industry
+            ðŸ¢ Choose Based on Your Industry
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🏥</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ¥</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 2 (Traditional) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Healthcare & Medical Fields</li>
@@ -600,12 +600,12 @@ export default function Compare2Vs3() {
                 <li>Conservative Corporate Environments</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>📊 Success Rate:</strong> 31% higher in traditional industries
+                <strong style={{ color: '#1e40af' }}>ðŸ“Š Success Rate:</strong> 31% higher in traditional industries
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>💻</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ’»</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 3 (Modern) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Tech & Software Development</li>
@@ -617,7 +617,7 @@ export default function Compare2Vs3() {
                 <li>Artificial Intelligence & Data Science</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>📊 Success Rate:</strong> 23% higher in tech & creative industries
+                <strong style={{ color: '#1e40af' }}>ðŸ“Š Success Rate:</strong> 23% higher in tech & creative industries
               </div>
             </div>
           </div>
@@ -626,17 +626,17 @@ export default function Compare2Vs3() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ⚖️ Pros & Cons Analysis
+            âš–ï¸ Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 2 (Traditional) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 2 (Traditional) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[2].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 2 (Traditional) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 2 (Traditional) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[2].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -644,13 +644,13 @@ export default function Compare2Vs3() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 3 (Modern) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 3 (Modern) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 3 (Modern) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 3 (Modern) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[3].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -663,21 +663,21 @@ export default function Compare2Vs3() {
         {/* 2026 Hiring Trends */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📈 2026 Resume Design Trends
+            ðŸ“ˆ 2026 Resume Design Trends
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>📊</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ“Š</div>
               <strong>Traditional Still Wins in Conservative Fields</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>Healthcare, legal, and government roles prefer classic designs by 31%</p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🚀</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸš€</div>
               <strong>Modern Designs Rising in Tech</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>67% of tech companies view modern dark-themed resumes positively</p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🎨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸŽ¨</div>
               <strong>Hybrid Approach Growing</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>34% of recruiters prefer modern elements in traditional structures</p>
             </div>
@@ -687,7 +687,7 @@ export default function Compare2Vs3() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ❓ Frequently Asked Questions
+            â“ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -740,7 +740,7 @@ export default function Compare2Vs3() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            🔍 Explore More Template Comparisons
+            ðŸ” Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

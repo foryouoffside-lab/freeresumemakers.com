@@ -84,13 +84,13 @@ export default function HowToMakeResume() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "How to Make a Resume",
-        "item": "https://freeresumemakers.com/how-to-make-resume"
+        "item": "https://freeresumemaker.xyz/how-to-make-resume"
       }
     ]
   };
@@ -110,14 +110,14 @@ export default function HowToMakeResume() {
       "name": "Free Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-01-01",
     "dateModified": "2026-03-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/how-to-make-resume"
+      "@id": "https://freeresumemaker.xyz/how-to-make-resume"
     }
   };
 
@@ -127,8 +127,8 @@ export default function HowToMakeResume() {
         title="How to Make a Resume in 2026: Complete Step-by-Step Guide | Free Templates"
         description="Learn how to make a professional resume that gets interviews. Includes 7 easy steps, free ATS-friendly templates, formatting tips, and examples for every section. Updated for 2026 hiring standards."
         keywords="how to make a resume 2026, create resume, resume writing guide, build resume, professional resume tips, resume step by step, resume format 2026, resume writing tutorial"
-        canonical="https://freeresumemakers.com/how-to-make-resume"
-        image="https://freeresumemakers.com/assets/guides/how-to-make-resume.jpg"
+        canonical="https://freeresumemaker.xyz/how-to-make-resume"
+        image="https://freeresumemaker.xyz/assets/guides/how-to-make-resume.jpg"
         type="article"
       />
       

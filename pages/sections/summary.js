@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function SummarySectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/summary#article",
+        "@id": "https://freeresumemaker.xyz/sections/summary#article",
         "headline": "How to Write a Resume Summary: Complete Guide with Examples 2026",
         "description": "Learn how to write a powerful resume summary that grabs attention in 3-5 seconds. Includes examples for different industries, tips for experienced professionals, and common mistakes to avoid.",
-        "image": "https://freeresumemakers.com/images/summary-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/summary-guide-2026.jpg",
         "datePublished": "2026-01-20T08:00:00+00:00",
         "dateModified": "2026-03-24T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/summary"
+          "@id": "https://freeresumemaker.xyz/sections/summary"
         },
         "keywords": "resume summary, professional summary, CV summary, resume objective, career summary, profile summary, executive summary, how to write resume summary"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/summary#howto",
+        "@id": "https://freeresumemaker.xyz/sections/summary#howto",
         "name": "How to Write a Resume Summary",
         "description": "Step-by-step guide to writing a powerful resume summary with examples for different industries.",
         "estimatedCost": {
@@ -78,7 +78,7 @@ export default function SummarySectionGuide() {
             "position": 4,
             "itemListElement": {
               "@type": "HowToDirection",
-              "text": "Limit your summary to 3-4 sentences or 2-3 bullet points. Recruiters spend only 6-7 seconds scanning your resume—make every word count."
+              "text": "Limit your summary to 3-4 sentences or 2-3 bullet points. Recruiters spend only 6-7 seconds scanning your resumeâ€”make every word count."
             }
           },
           {
@@ -94,14 +94,14 @@ export default function SummarySectionGuide() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/summary#faq",
+        "@id": "https://freeresumemaker.xyz/sections/summary#faq",
         "mainEntity": [
           {
             "@type": "Question",
             "name": "What's the difference between a resume summary and a resume objective?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A resume summary highlights your experience, skills, and achievements—what you offer the employer. A resume objective states your career goals—what you're seeking. Summaries are best for experienced professionals; objectives are better for freshers and career changers."
+              "text": "A resume summary highlights your experience, skills, and achievementsâ€”what you offer the employer. A resume objective states your career goalsâ€”what you're seeking. Summaries are best for experienced professionals; objectives are better for freshers and career changers."
             }
           },
           {
@@ -124,25 +124,25 @@ export default function SummarySectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/summary#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/summary#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Summary Guide",
-            "item": "https://freeresumemakers.com/sections/summary"
+            "item": "https://freeresumemaker.xyz/sections/summary"
           }
         ]
       }
@@ -153,7 +153,7 @@ export default function SummarySectionGuide() {
   const faqItems = [
     {
       q: "What's the difference between a resume summary and a resume objective?",
-      a: "A resume summary highlights your experience, skills, and achievements—what you offer the employer. A resume objective states your career goals—what you're seeking. Summaries are best for experienced professionals (3+ years); objectives are better for freshers, career changers, and recent graduates."
+      a: "A resume summary highlights your experience, skills, and achievementsâ€”what you offer the employer. A resume objective states your career goalsâ€”what you're seeking. Summaries are best for experienced professionals (3+ years); objectives are better for freshers, career changers, and recent graduates."
     },
     {
       q: "How long should a resume summary be?",
@@ -173,50 +173,50 @@ export default function SummarySectionGuide() {
     },
     {
       q: "What if I have gaps in my employment history?",
-      a: "Focus your summary on skills, achievements, and what you bring to the role. You don't need to address employment gaps in the summary—address them in your cover letter or interview if asked. Keep the summary positive and forward-focused."
+      a: "Focus your summary on skills, achievements, and what you bring to the role. You don't need to address employment gaps in the summaryâ€”address them in your cover letter or interview if asked. Keep the summary positive and forward-focused."
     }
   ];
 
   // Industry examples expanded with more roles
   const industryExamples = [
     {
-      title: "👨‍💻 Software Engineer / Developer",
+      title: "ðŸ‘¨â€ðŸ’» Software Engineer / Developer",
       summary: "Results-driven Software Engineer with 7+ years of experience in full-stack development. Proven track record of delivering scalable applications used by 2M+ users. Expert in React, Node.js, Python, and AWS cloud architecture. Reduced server costs by 35% through optimization. Seeking to leverage technical expertise to build innovative solutions at a forward-thinking tech company."
     },
     {
-      title: "💼 Marketing Manager / Director",
+      title: "ðŸ’¼ Marketing Manager / Director",
       summary: "Creative Marketing Manager with 8 years of experience driving brand growth and customer engagement. Increased social media engagement by 150% and generated $2.8M in revenue through integrated digital campaigns. Expertise in content strategy, SEO/SEM, and team leadership of 12+ marketing professionals. MBA from Northwestern University."
     },
     {
-      title: "🏥 Registered Nurse / Healthcare",
+      title: "ðŸ¥ Registered Nurse / Healthcare",
       summary: "Compassionate Registered Nurse with 6 years of critical care experience at Level 1 trauma center. Maintained 100% patient satisfaction score while managing 5+ patients per shift. BLS, ACLS, and CCRN certified. Recognized with 'Nurse of the Year' award (2024). Seeking to provide exceptional patient care in a fast-paced hospital environment."
     },
     {
-      title: "📊 Data Analyst / Data Scientist",
+      title: "ðŸ“Š Data Analyst / Data Scientist",
       summary: "Analytical Data Analyst with 4 years of experience turning complex data into actionable insights. Improved operational efficiency by 25% ($1.2M savings) through data-driven recommendations. Proficient in SQL, Python, Tableau, and advanced Excel. Passionate about using machine learning to solve business problems."
     },
     {
-      title: "📈 Sales Executive / Account Manager",
+      title: "ðŸ“ˆ Sales Executive / Account Manager",
       summary: "High-performing Sales Executive with 10+ years of experience in B2B SaaS. Exceeded annual quota by 45% for 3 consecutive years, generating $8.5M in new revenue. Expertise in enterprise account management, strategic negotiations, and building C-level relationships. Top 5% performer nationally."
     },
     {
-      title: "🎓 Entry-Level / Recent Graduate",
+      title: "ðŸŽ“ Entry-Level / Recent Graduate",
       summary: "Recent Computer Science graduate with honors (3.8 GPA) from Stanford University. Developed 3 full-stack applications during internships at Google and Amazon. Proficient in Python, React, TypeScript, and AWS. Hackathon winner (2025). Seeking software engineering role to apply technical skills and passion for innovation."
     },
     {
-      title: "📋 Project Manager / PMP",
+      title: "ðŸ“‹ Project Manager / PMP",
       summary: "Certified Project Manager (PMP) with 9 years of experience leading complex IT projects. Successfully delivered 15+ projects valued at $20M+, completing 95% on time and under budget. Expert in Agile, Scrum, and stakeholder management. Improved team velocity by 40% through process optimization."
     },
     {
-      title: "💰 Financial Analyst / Accountant",
+      title: "ðŸ’° Financial Analyst / Accountant",
       summary: "Detail-oriented Financial Analyst with 5 years of experience in corporate finance. Reduced operational costs by 18% ($3.2M) through financial modeling and budget optimization. CPA certified. Proficient in SAP, Excel (advanced), and Power BI. Strong background in forecasting and variance analysis."
     },
     {
-      title: "🎨 UX/UI Designer",
+      title: "ðŸŽ¨ UX/UI Designer",
       summary: "Creative UX/UI Designer with 6 years of experience designing user-centered digital products. Increased user engagement by 65% through redesign of mobile app used by 500K+ customers. Expert in Figma, Adobe XD, and user research. Portfolio includes work for Fortune 500 clients."
     },
     {
-      title: "📚 Human Resources Manager",
+      title: "ðŸ“š Human Resources Manager",
       summary: "Strategic HR Manager with 8 years of experience in talent acquisition, employee relations, and organizational development. Reduced turnover by 35% through engagement initiatives. Implemented DEI program increasing diverse hires by 50%. SHRM-SCP certified."
     }
   ];
@@ -256,7 +256,7 @@ export default function SummarySectionGuide() {
         title="How to Write a Resume Summary: Complete Guide with Examples 2026 | FreeResumeMakers"
         description="Learn how to write a powerful resume summary that grabs attention in 3-5 seconds. Includes examples for software engineers, marketing managers, nurses, entry-level roles, and more. ATS-friendly tips included."
         keywords="resume summary, professional summary, CV summary, resume objective, career summary, profile summary, executive summary, how to write resume summary, resume summary examples"
-        canonical="https://freeresumemakers.com/sections/summary"
+        canonical="https://freeresumemaker.xyz/sections/summary"
         type="article"
         publishedTime="2026-01-20T08:00:00+00:00"
         modifiedTime="2026-03-24T10:00:00+00:00"
@@ -269,7 +269,7 @@ export default function SummarySectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/summary" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/summary" />
         <meta name="description" content="Complete guide to writing a powerful resume summary. Learn the formula, see examples for 10+ industries, and avoid common mistakes. Boost your interview rate with a compelling professional summary." />
       </Head>
 
@@ -277,9 +277,9 @@ export default function SummarySectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Summary Guide</span>
         </nav>
 
@@ -289,16 +289,16 @@ export default function SummarySectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 9 min read</span>
-            <span>👁️ 45,000+ readers</span>
-            <span>⭐ 10+ Industry Examples</span>
+            <span>ðŸ“… Updated: March 24, 2026</span>
+            <span>â±ï¸ 9 min read</span>
+            <span>ðŸ‘ï¸ 45,000+ readers</span>
+            <span>â­ 10+ Industry Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
             A strong resume summary grabs attention in 3-5 seconds and convinces recruiters to read further. 
             <strong>Resumes with targeted professional summaries receive 35% more interview calls</strong>. 
-            Learn how to write one that gets results—whether you're an experienced professional or just starting your career.
+            Learn how to write one that gets resultsâ€”whether you're an experienced professional or just starting your career.
           </p>
         </header>
 
@@ -310,14 +310,14 @@ export default function SummarySectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#summary-vs-objective" style={{ color: '#0070f3', textDecoration: 'none' }}>• Summary vs Objective</a>
-            <a href="#formula" style={{ color: '#0070f3', textDecoration: 'none' }}>• The Winning Formula</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Industry Examples</a>
-            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>• Common Mistakes</a>
-            <a href="#ats-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>• ATS Optimization</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#summary-vs-objective" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Summary vs Objective</a>
+            <a href="#formula" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ The Winning Formula</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Industry Examples</a>
+            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Common Mistakes</a>
+            <a href="#ats-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ ATS Optimization</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -330,8 +330,8 @@ export default function SummarySectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 2026 Pro Tip:</strong> Place your summary at the top of your resume, right under your contact information. 
-            It's the first thing recruiters see—make it compelling. Use keywords from the job description to improve ATS match rate. 
+            <strong>ðŸ’¡ 2026 Pro Tip:</strong> Place your summary at the top of your resume, right under your contact information. 
+            It's the first thing recruiters seeâ€”make it compelling. Use keywords from the job description to improve ATS match rate. 
             For senior roles, consider using a "Professional Profile" heading instead of "Summary."
           </p>
         </div>
@@ -413,25 +413,25 @@ export default function SummarySectionGuide() {
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '30px' }}>
             <div style={{ background: '#e8f5e9', padding: '20px', borderRadius: '12px', border: '1px solid #c8e6c9' }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#2e7d32' }}>🎓 Entry-Level / Fresher</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#2e7d32' }}>ðŸŽ“ Entry-Level / Fresher</h3>
               <p style={{ margin: 0, fontStyle: 'italic', lineHeight: '1.6' }}>
                 "Recent Computer Science graduate with honors (3.8 GPA) from Stanford University. 
                 Completed 3 internships developing full-stack applications. Proficient in Python, React, and AWS. 
                 Seeking software engineering role to apply technical skills and passion for innovation."
               </p>
               <p style={{ marginTop: '12px', fontSize: '13px', color: '#2e7d32' }}>
-                ✅ Focus: Education, internships, skills, potential
+                âœ… Focus: Education, internships, skills, potential
               </p>
             </div>
             <div style={{ background: '#e3f2fd', padding: '20px', borderRadius: '12px', border: '1px solid #bbdef5' }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#0070f3' }}>💼 Experienced Professional</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#0070f3' }}>ðŸ’¼ Experienced Professional</h3>
               <p style={{ margin: 0, fontStyle: 'italic', lineHeight: '1.6' }}>
                 "Senior Software Engineer with 8+ years of experience building scalable applications used by 5M+ users. 
                 Led team of 12 engineers, reduced server costs by 35%, and delivered 15+ successful product launches. 
                 Expert in React, Node.js, and AWS architecture. Seeking to drive technical innovation as Lead Engineer."
               </p>
               <p style={{ marginTop: '12px', fontSize: '13px', color: '#0070f3' }}>
-                ✅ Focus: Years of experience, leadership, quantifiable results, expertise
+                âœ… Focus: Years of experience, leadership, quantifiable results, expertise
               </p>
             </div>
           </div>
@@ -440,18 +440,18 @@ export default function SummarySectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Resume Summary Mistakes to Avoid
+            âŒ Common Resume Summary Mistakes to Avoid
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Too vague:</strong> "Hardworking professional seeking opportunities" — adds no value</li>
-              <li><strong>❌ Too long:</strong> Keep it to 3-4 lines maximum; recruiters won't read paragraphs</li>
-              <li><strong>❌ Generic and not tailored:</strong> Same summary for every job application misses opportunities</li>
-              <li><strong>❌ Missing keywords:</strong> Not including terms from job description reduces ATS match rate</li>
-              <li><strong>❌ Using first person:</strong> Remove "I," "my," and "me" from your summary</li>
-              <li><strong>❌ Listing responsibilities:</strong> Focus on achievements and results instead of duties</li>
-              <li><strong>❌ No numbers or metrics:</strong> "Increased sales" vs "Increased sales by 45% ($2.3M)" — always quantify</li>
-              <li><strong>❌ Using clichés:</strong> Avoid "go-getter," "team player," "think outside the box" without evidence</li>
+              <li><strong>âŒ Too vague:</strong> "Hardworking professional seeking opportunities" â€” adds no value</li>
+              <li><strong>âŒ Too long:</strong> Keep it to 3-4 lines maximum; recruiters won't read paragraphs</li>
+              <li><strong>âŒ Generic and not tailored:</strong> Same summary for every job application misses opportunities</li>
+              <li><strong>âŒ Missing keywords:</strong> Not including terms from job description reduces ATS match rate</li>
+              <li><strong>âŒ Using first person:</strong> Remove "I," "my," and "me" from your summary</li>
+              <li><strong>âŒ Listing responsibilities:</strong> Focus on achievements and results instead of duties</li>
+              <li><strong>âŒ No numbers or metrics:</strong> "Increased sales" vs "Increased sales by 45% ($2.3M)" â€” always quantify</li>
+              <li><strong>âŒ Using clichÃ©s:</strong> Avoid "go-getter," "team player," "think outside the box" without evidence</li>
             </ul>
           </div>
         </section>
@@ -459,15 +459,15 @@ export default function SummarySectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats-tips">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Summary Optimization
+            ðŸ¤– ATS-Friendly Summary Optimization
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>Use standard section heading:</strong> "Professional Summary" or "Executive Summary" — avoid creative headings</li>
+              <li><strong>Use standard section heading:</strong> "Professional Summary" or "Executive Summary" â€” avoid creative headings</li>
               <li><strong>Include keywords from job description:</strong> Mirror the exact terminology used in the posting</li>
               <li><strong>Place summary at the top:</strong> Right after contact information for maximum ATS visibility</li>
               <li><strong>Keep formatting simple:</strong> Avoid tables, columns, or special characters in the summary section</li>
-              <li><strong>Use sentence case:</strong> Not all caps — "Professional Summary" not "PROFESSIONAL SUMMARY"</li>
+              <li><strong>Use sentence case:</strong> Not all caps â€” "Professional Summary" not "PROFESSIONAL SUMMARY"</li>
               <li><strong>Include job title keywords:</strong> If you're a "Marketing Manager," include that exact phrase</li>
             </ul>
           </div>
@@ -519,7 +519,7 @@ export default function SummarySectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -530,12 +530,12 @@ export default function SummarySectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs →</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 →</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide â†’</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs â†’</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 â†’</Link>
           </div>
         </div>
       </main>

@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
     "@type": "WebPage",
     "name": "Privacy Policy - Free Resume Builder",
     "description": "Our privacy policy explains how we handle your data. We prioritize your privacy with no data storage and no account required.",
-    "url": "https://freeresumemakers.com/privacy-policy",
+    "url": "https://freeresumemaker.xyz/privacy-policy",
     "mainEntity": {
       "@type": "PrivacyPolicy",
       "name": "Privacy Policy",
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Free Resume Builder",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "email": "freeresumeemaker@gmail.com",
     "description": "Free, privacy-focused resume builder with 20+ ATS-friendly templates",
     "sameAs": [
@@ -48,13 +48,13 @@ export default function PrivacyPolicy() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Privacy Policy",
-        "item": "https://freeresumemakers.com/privacy-policy"
+        "item": "https://freeresumemaker.xyz/privacy-policy"
       }
     ]
   };
@@ -65,8 +65,8 @@ export default function PrivacyPolicy() {
         title="Privacy Policy - Free Resume Builder | Your Data Stays Private and Secure"
         description="Read our privacy policy to understand how we protect your data. No account required, no resume storage, and complete privacy. We do not store or sell your personal information. 100% privacy-focused resume builder."
         keywords="privacy policy, data privacy, resume builder privacy, free resume builder privacy, GDPR compliant, privacy first resume builder, data protection, no data storage"
-        canonical="https://freeresumemakers.com/privacy-policy"
-        image="https://freeresumemakers.com/images/privacy-policy-og.jpg"
+        canonical="https://freeresumemaker.xyz/privacy-policy"
+        image="https://freeresumemaker.xyz/images/privacy-policy-og.jpg"
         type="website"
       />
       

@@ -1,4 +1,4 @@
-// pages/blog/fresher-resume-guide.js
+﻿// pages/blog/fresher-resume-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -15,7 +15,7 @@ export default function FresherResumeGuide() {
     "description": "Complete guide for freshers to write a resume with no work experience. Includes templates, examples for fresh graduates, and tips to land your first job in 2026.",
     "image": {
       "@type": "ImageObject",
-      "url": "https://freeresumemakers.com/images/blog/fresher-resume-guide.jpg",
+      "url": "https://freeresumemaker.xyz/images/blog/fresher-resume-guide.jpg",
       "width": "1200",
       "height": "630"
     },
@@ -23,7 +23,7 @@ export default function FresherResumeGuide() {
       "@type": "Person",
       "name": "Kevin Zhang",
       "jobTitle": "Career Coach",
-      "url": "https://freeresumemakers.com/about",
+      "url": "https://freeresumemaker.xyz/about",
       "sameAs": [
         "https://www.linkedin.com/in/kevin-zhang-career-coach",
         "https://twitter.com/kevinzhangcareer"
@@ -34,11 +34,11 @@ export default function FresherResumeGuide() {
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png",
+        "url": "https://freeresumemaker.xyz/logo.png",
         "width": "200",
         "height": "60"
       },
-      "url": "https://freeresumemakers.com",
+      "url": "https://freeresumemaker.xyz",
       "sameAs": [
         "https://www.facebook.com/freeresumemakers",
         "https://twitter.com/resumebuilder"
@@ -48,7 +48,7 @@ export default function FresherResumeGuide() {
     "dateModified": "2026-02-26",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/fresher-resume-guide"
+      "@id": "https://freeresumemaker.xyz/blog/fresher-resume-guide"
     },
     "keywords": "fresher resume, resume for freshers, no experience resume, fresh graduate resume, entry level resume, first job resume, college student resume, internship resume, campus placement resume",
     "articleSection": "Freshers Guide",
@@ -78,19 +78,19 @@ export default function FresherResumeGuide() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com/"
+        "item": "https://freeresumemaker.xyz/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog/"
+        "item": "https://freeresumemaker.xyz/blog/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Fresher Resume Guide",
-        "item": "https://freeresumemakers.com/blog/fresher-resume-guide"
+        "item": "https://freeresumemaker.xyz/blog/fresher-resume-guide"
       }
     ]
   };
@@ -177,8 +177,8 @@ export default function FresherResumeGuide() {
         title="Fresher Resume Guide: How to Write Resume with No Experience (2026)"
         description="Complete guide for freshers to write a resume with no work experience. Includes templates, examples for fresh graduates, and tips to land your first job in 2026. Free sample included."
         keywords="fresher resume, resume for freshers, no experience resume, fresh graduate resume, entry level resume, first job resume, college student resume, internship resume, campus placement resume, graduate CV"
-        canonical="https://freeresumemakers.com/blog/fresher-resume-guide"
-        image="https://freeresumemakers.com/images/blog/fresher-resume-guide.jpg"
+        canonical="https://freeresumemaker.xyz/blog/fresher-resume-guide"
+        image="https://freeresumemaker.xyz/images/blog/fresher-resume-guide.jpg"
         type="article"
         publishedTime="2026-02-26"
         author="Kevin Zhang"
@@ -215,9 +215,9 @@ export default function FresherResumeGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Fresher Resume Guide</span>
         </div>
 
@@ -409,7 +409,7 @@ export default function FresherResumeGuide() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
+                    <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
                     <span style={{ fontSize: '15px' }}>{item}</span>
                   </div>
                 ))}
@@ -476,8 +476,8 @@ export default function FresherResumeGuide() {
               margin: '20px 0'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>Example Bullet Points:</strong> "Assisted in developing company website using React" • 
-                "Fixed bugs and contributed to code documentation" • "Created test cases for quality assurance"
+                <strong>Example Bullet Points:</strong> "Assisted in developing company website using React" â€¢ 
+                "Fixed bugs and contributed to code documentation" â€¢ "Created test cases for quality assurance"
               </p>
             </div>
           </section>
@@ -620,12 +620,12 @@ export default function FresherResumeGuide() {
               margin: '20px 0'
             }}>
               {[
-                { activity: 'College Club Leadership', example: 'President of Coding Club • Organized hackathons with 200+ participants' },
+                { activity: 'College Club Leadership', example: 'President of Coding Club â€¢ Organized hackathons with 200+ participants' },
                 { activity: 'Volunteer Work', example: 'Taught programming to underprivileged students through NGO' },
-                { activity: 'Sports Teams', example: 'Captain, University Cricket Team • Led team to championship' },
+                { activity: 'Sports Teams', example: 'Captain, University Cricket Team â€¢ Led team to championship' },
                 { activity: 'Cultural Events', example: 'Coordinated annual cultural fest with 1000+ attendees' },
-                { activity: 'Competitions', example: 'Winner, National Hackathon • Competed against 500+ teams' },
-                { activity: 'Student Government', example: 'Class Representative • Managed student concerns' }
+                { activity: 'Competitions', example: 'Winner, National Hackathon â€¢ Competed against 500+ teams' },
+                { activity: 'Student Government', example: 'Class Representative â€¢ Managed student concerns' }
               ].map((item, index) => (
                 <div key={index} style={{
                   background: '#f8f9fa',
@@ -663,68 +663,68 @@ export default function FresherResumeGuide() {
             }}>
               <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
 {`RAHUL SHARMA
-📞 +91 98765 43210 | ✉️ rahul.sharma@email.com | 🔗 linkedin.com/in/rahulsharma | 💻 github.com/rahulsharma
+ðŸ“ž +91 98765 43210 | âœ‰ï¸ rahul.sharma@email.com | ðŸ”— linkedin.com/in/rahulsharma | ðŸ’» github.com/rahulsharma
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 EDUCATION
 Bachelor of Technology in Computer Science
 Indian Institute of Technology (IIT), Delhi | Expected 2026
 CGPA: 8.7/10 | Relevant Courses: Data Structures, Algorithms, DBMS, Web Development, Machine Learning
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 TECHNICAL SKILLS
-• Languages: Java, Python, JavaScript, TypeScript, SQL
-• Frameworks: React, Node.js, Express, Django, Spring Boot
-• Tools: Git, Docker, VS Code, PostgreSQL, MongoDB, Postman, AWS
-• AI/ML: TensorFlow, Scikit-learn, Pandas
+â€¢ Languages: Java, Python, JavaScript, TypeScript, SQL
+â€¢ Frameworks: React, Node.js, Express, Django, Spring Boot
+â€¢ Tools: Git, Docker, VS Code, PostgreSQL, MongoDB, Postman, AWS
+â€¢ AI/ML: TensorFlow, Scikit-learn, Pandas
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 PROJECTS
 E-Learning Platform | React, Node.js, MongoDB
-• Built full-stack platform with user authentication and course management system
-• Implemented payment gateway integration with Stripe API
-• Deployed on AWS EC2, serving 500+ active users during testing
+â€¢ Built full-stack platform with user authentication and course management system
+â€¢ Implemented payment gateway integration with Stripe API
+â€¢ Deployed on AWS EC2, serving 500+ active users during testing
 
 Portfolio Website | HTML, CSS, JavaScript, Three.js
-• Designed responsive personal portfolio website with 3D animations
-• Optimized for performance achieving 95+ Lighthouse scores
-• Featured in university showcase for design excellence
+â€¢ Designed responsive personal portfolio website with 3D animations
+â€¢ Optimized for performance achieving 95+ Lighthouse scores
+â€¢ Featured in university showcase for design excellence
 
 Task Management App | MERN Stack
-• Developed collaborative task management tool with real-time updates using WebSockets
-• Implemented drag-drop interface for task organization
-• Reduced team coordination time by 40% during beta testing
+â€¢ Developed collaborative task management tool with real-time updates using WebSockets
+â€¢ Implemented drag-drop interface for task organization
+â€¢ Reduced team coordination time by 40% during beta testing
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 INTERNSHIPS
 Web Development Intern | TechSolutions Pvt Ltd | Summer 2024
-• Developed reusable component library using React, reducing development time by 25%
-• Fixed 30+ bugs and contributed to code documentation
-• Collaborated with senior developers on client projects
+â€¢ Developed reusable component library using React, reducing development time by 25%
+â€¢ Fixed 30+ bugs and contributed to code documentation
+â€¢ Collaborated with senior developers on client projects
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 ACHIEVEMENTS & EXTRACURRICULARS
-• Winner, National Hackathon 2025 (500+ teams participated)
-• Captain, College Cricket Team (2024-2025) - Led team to inter-college championship
-• Teaching Volunteer, Teach for India - Taught coding to 50+ underprivileged students
-• Academic Excellence Scholarship (2023-2025)
+â€¢ Winner, National Hackathon 2025 (500+ teams participated)
+â€¢ Captain, College Cricket Team (2024-2025) - Led team to inter-college championship
+â€¢ Teaching Volunteer, Teach for India - Taught coding to 50+ underprivileged students
+â€¢ Academic Excellence Scholarship (2023-2025)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 CERTIFICATIONS
-• Meta Frontend Developer Certificate (Coursera) - 2025
-• AWS Cloud Practitioner (in progress)
-• Google Analytics Individual Qualification - 2024
+â€¢ Meta Frontend Developer Certificate (Coursera) - 2025
+â€¢ AWS Cloud Practitioner (in progress)
+â€¢ Google Analytics Individual Qualification - 2024
 
 LANGUAGES
-• English: Fluent
-• Hindi: Native
-• Spanish: Conversational`}
+â€¢ English: Fluent
+â€¢ Hindi: Native
+â€¢ Spanish: Conversational`}
               </pre>
             </div>
           </section>
@@ -882,7 +882,7 @@ LANGUAGES
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Fresher Resume Template (2026)</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable fresher resume template with pre-filled sections and formatting tips. Updated for 2026 hiring trends.
@@ -966,10 +966,10 @@ LANGUAGES
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Fresher Resume Guide: Land Your First Job with No Experience (2026)')}&url=https://freeresumemakers.com/blog/fresher-resume-guide` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/fresher-resume-guide` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/fresher-resume-guide` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Fresher Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/fresher-resume-guide')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Fresher Resume Guide: Land Your First Job with No Experience (2026)')}&url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Fresher Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/fresher-resume-guide')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1056,7 +1056,7 @@ LANGUAGES
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1142,7 +1142,7 @@ LANGUAGES
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 26, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 26, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

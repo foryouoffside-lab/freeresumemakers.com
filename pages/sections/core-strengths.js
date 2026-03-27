@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function CoreStrengthsSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/core-strengths#article",
+        "@id": "https://freeresumemaker.xyz/sections/core-strengths#article",
         "headline": "Core Strengths on Resume: How to List Key Strengths with Examples 2026",
         "description": "Expert guide on listing core strengths on your resume. Learn how to choose professional strengths by industry, format them effectively, and back them with evidence to land more interviews.",
-        "image": "https://freeresumemakers.com/images/core-strengths-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/core-strengths-guide-2026.jpg",
         "datePublished": "2026-02-01T08:00:00+00:00",
         "dateModified": "2026-03-23T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/core-strengths"
+          "@id": "https://freeresumemaker.xyz/sections/core-strengths"
         },
         "keywords": "core strengths resume, key strengths, professional strengths, resume strengths, personal strengths, strengths examples, core competencies resume"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/core-strengths#howto",
+        "@id": "https://freeresumemaker.xyz/sections/core-strengths#howto",
         "name": "How to List Core Strengths on Your Resume",
         "description": "Step-by-step guide to identifying, selecting, and showcasing your core strengths on a resume for maximum impact.",
         "estimatedCost": {
@@ -104,31 +104,31 @@ export default function CoreStrengthsSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/core-strengths#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/core-strengths#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Core Strengths Guide",
-            "item": "https://freeresumemakers.com/sections/core-strengths"
+            "item": "https://freeresumemaker.xyz/sections/core-strengths"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/core-strengths#faq",
+        "@id": "https://freeresumemaker.xyz/sections/core-strengths#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -151,7 +151,7 @@ export default function CoreStrengthsSectionGuide() {
             "name": "Where should I put core strengths on my resume?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Place core strengths near the top of your resume—either in your professional summary, a dedicated 'Core Strengths' section, or integrated into your skills section. This ensures recruiters see them during the 6-7 second initial scan."
+              "text": "Place core strengths near the top of your resumeâ€”either in your professional summary, a dedicated 'Core Strengths' section, or integrated into your skills section. This ensures recruiters see them during the 6-7 second initial scan."
             }
           },
           {
@@ -175,11 +175,11 @@ export default function CoreStrengthsSectionGuide() {
     },
     {
       q: "How many core strengths should I list on my resume?",
-      a: "List 5-8 core strengths on your resume. This is enough to showcase your key qualities without overwhelming the reader. Quality and relevance matter more than quantity—choose strengths that directly align with the job description and your authentic abilities."
+      a: "List 5-8 core strengths on your resume. This is enough to showcase your key qualities without overwhelming the reader. Quality and relevance matter more than quantityâ€”choose strengths that directly align with the job description and your authentic abilities."
     },
     {
       q: "Where should I put core strengths on my resume?",
-      a: "Place core strengths near the top of your resume—either in your professional summary, a dedicated 'Core Strengths' section, or integrated into your skills section. This ensures recruiters see them during the 6-7 second initial scan. For visual impact, consider a sidebar or two-column layout."
+      a: "Place core strengths near the top of your resumeâ€”either in your professional summary, a dedicated 'Core Strengths' section, or integrated into your skills section. This ensures recruiters see them during the 6-7 second initial scan. For visual impact, consider a sidebar or two-column layout."
     },
     {
       q: "What are the best core strengths to put on a resume?",
@@ -195,39 +195,39 @@ export default function CoreStrengthsSectionGuide() {
   const strengthCategories = [
     {
       title: "Leadership Strengths",
-      icon: "💪",
+      icon: "ðŸ’ª",
       color: "#0070f3",
       strengths: ["Strategic Planning", "Team Leadership", "Decision Making", "Mentoring & Coaching", "Conflict Resolution", "Project Management", "Delegation", "Visionary Thinking", "Change Management", "Stakeholder Management"]
     },
     {
       title: "Analytical Strengths",
-      icon: "🧠",
+      icon: "ðŸ§ ",
       color: "#10b981",
       strengths: ["Problem Solving", "Critical Thinking", "Data Analysis", "Research Skills", "Strategic Analysis", "Attention to Detail", "Financial Analysis", "Process Improvement", "Root Cause Analysis", "Business Intelligence"]
     },
     {
       title: "Interpersonal Strengths",
-      icon: "🤝",
+      icon: "ðŸ¤",
       color: "#f59e0b",
       strengths: ["Communication", "Teamwork", "Relationship Building", "Empathy", "Negotiation", "Presentation Skills", "Customer Service", "Collaboration", "Active Listening", "Networking"]
     },
     {
       title: "Personal Strengths",
-      icon: "⚡",
+      icon: "âš¡",
       color: "#8b5cf6",
       strengths: ["Time Management", "Adaptability", "Self-Motivation", "Creativity", "Resilience", "Organizational Skills", "Work Ethic", "Initiative", "Stress Management", "Continuous Learning"]
     }
   ];
 
   const industryExamples = [
-    { industry: "Management/Executive", icon: "👨‍💼", strengths: "Strategic Planning, Team Leadership, Change Management, Financial Acumen, Mentoring, Decision Making, Stakeholder Management, Business Development, P&L Management" },
-    { industry: "Technology/IT", icon: "💻", strengths: "Problem Solving, Analytical Thinking, Innovation, Attention to Detail, Agile Methodology, System Architecture, Debugging, Performance Optimization, DevOps, Cloud Architecture" },
-    { industry: "Sales/Marketing", icon: "📊", strengths: "Communication, Negotiation, Relationship Building, Persuasion, Market Analysis, Campaign Management, Lead Generation, Brand Strategy, Customer Acquisition, ROI Analysis" },
-    { industry: "Healthcare", icon: "🏥", strengths: "Empathy, Patient Care, Attention to Detail, Crisis Management, Team Collaboration, Clinical Knowledge, Documentation, Stress Management, Critical Care, HIPAA Compliance" },
-    { industry: "Education", icon: "🎓", strengths: "Curriculum Development, Classroom Management, Student Engagement, Adaptability, Communication, Assessment Design, Mentorship, Patience, Educational Technology, Differentiated Instruction" },
-    { industry: "Finance", icon: "💰", strengths: "Financial Analysis, Risk Management, Regulatory Compliance, Attention to Detail, Strategic Planning, Data Modeling, Forecasting, Audit, Investment Strategy, Tax Planning" },
-    { industry: "Customer Service", icon: "🎧", strengths: "Conflict Resolution, Active Listening, Empathy, Problem Solving, Patience, Communication, Customer Advocacy, De-escalation, Multitasking, Service Recovery" },
-    { industry: "Engineering", icon: "🔧", strengths: "Technical Problem Solving, Innovation, Precision, Project Management, Systems Thinking, Quality Control, Cross-functional Collaboration, Design Thinking, Safety Compliance" }
+    { industry: "Management/Executive", icon: "ðŸ‘¨â€ðŸ’¼", strengths: "Strategic Planning, Team Leadership, Change Management, Financial Acumen, Mentoring, Decision Making, Stakeholder Management, Business Development, P&L Management" },
+    { industry: "Technology/IT", icon: "ðŸ’»", strengths: "Problem Solving, Analytical Thinking, Innovation, Attention to Detail, Agile Methodology, System Architecture, Debugging, Performance Optimization, DevOps, Cloud Architecture" },
+    { industry: "Sales/Marketing", icon: "ðŸ“Š", strengths: "Communication, Negotiation, Relationship Building, Persuasion, Market Analysis, Campaign Management, Lead Generation, Brand Strategy, Customer Acquisition, ROI Analysis" },
+    { industry: "Healthcare", icon: "ðŸ¥", strengths: "Empathy, Patient Care, Attention to Detail, Crisis Management, Team Collaboration, Clinical Knowledge, Documentation, Stress Management, Critical Care, HIPAA Compliance" },
+    { industry: "Education", icon: "ðŸŽ“", strengths: "Curriculum Development, Classroom Management, Student Engagement, Adaptability, Communication, Assessment Design, Mentorship, Patience, Educational Technology, Differentiated Instruction" },
+    { industry: "Finance", icon: "ðŸ’°", strengths: "Financial Analysis, Risk Management, Regulatory Compliance, Attention to Detail, Strategic Planning, Data Modeling, Forecasting, Audit, Investment Strategy, Tax Planning" },
+    { industry: "Customer Service", icon: "ðŸŽ§", strengths: "Conflict Resolution, Active Listening, Empathy, Problem Solving, Patience, Communication, Customer Advocacy, De-escalation, Multitasking, Service Recovery" },
+    { industry: "Engineering", icon: "ðŸ”§", strengths: "Technical Problem Solving, Innovation, Precision, Project Management, Systems Thinking, Quality Control, Cross-functional Collaboration, Design Thinking, Safety Compliance" }
   ];
 
   return (
@@ -236,7 +236,7 @@ export default function CoreStrengthsSectionGuide() {
         title="Core Strengths on Resume: How to List Key Strengths with Examples 2026 | FreeResumeMakers"
         description="Expert guide on listing core strengths on your resume. Learn how to choose professional strengths by industry, format them effectively, and back them with evidence. Includes 100+ strength examples and ATS optimization tips."
         keywords="core strengths resume, key strengths, professional strengths, resume strengths, personal strengths, strengths examples, core competencies resume, how to list strengths on resume"
-        canonical="https://freeresumemakers.com/sections/core-strengths"
+        canonical="https://freeresumemaker.xyz/sections/core-strengths"
         type="article"
         publishedTime="2026-02-01T08:00:00+00:00"
         modifiedTime="2026-03-23T10:00:00+00:00"
@@ -249,7 +249,7 @@ export default function CoreStrengthsSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/core-strengths" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/core-strengths" />
         <meta name="description" content="Learn how to list core strengths on your resume with expert examples by industry. Discover how to choose professional strengths that impress recruiters and pass ATS systems." />
       </Head>
 
@@ -264,9 +264,9 @@ export default function CoreStrengthsSectionGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Core Strengths Guide</span>
         </nav>
 
@@ -276,10 +276,10 @@ export default function CoreStrengthsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 9 min read</span>
-            <span>👁️ 22,000+ readers</span>
-            <span>💪 100+ Strength Examples</span>
+            <span>ðŸ“… Updated: March 23, 2026</span>
+            <span>â±ï¸ 9 min read</span>
+            <span>ðŸ‘ï¸ 22,000+ readers</span>
+            <span>ðŸ’ª 100+ Strength Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -297,14 +297,14 @@ export default function CoreStrengthsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#categories" style={{ color: '#0070f3', textDecoration: 'none' }}>• Strength Categories</a>
-            <a href="#how-to-choose" style={{ color: '#0070f3', textDecoration: 'none' }}>• How to Choose Strengths</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
-            <a href="#industry" style={{ color: '#0070f3', textDecoration: 'none' }}>• By Industry</a>
-            <a href="#formatting" style={{ color: '#0070f3', textDecoration: 'none' }}>• Formatting Examples</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#categories" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Strength Categories</a>
+            <a href="#how-to-choose" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ How to Choose Strengths</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Placement Strategy</a>
+            <a href="#industry" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ By Industry</a>
+            <a href="#formatting" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Formatting Examples</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -317,7 +317,7 @@ export default function CoreStrengthsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Employers scan resumes for 6-7 seconds. Your core strengths should be immediately visible—place them near the top of your resume. 
+            <strong>ðŸ’¡ Pro Tip:</strong> Employers scan resumes for 6-7 seconds. Your core strengths should be immediately visibleâ€”place them near the top of your resume. 
             Recruiters look for strengths that match their job requirements, so customize this section for each application.
           </p>
         </div>
@@ -438,12 +438,12 @@ export default function CoreStrengthsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <p><strong style={{ fontSize: '16px' }}>Core Strengths</strong></p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', marginTop: '12px' }}>
-              <div>✓ Strategic Planning</div>
-              <div>✓ Team Leadership</div>
-              <div>✓ Problem Solving</div>
-              <div>✓ Cross-functional Communication</div>
-              <div>✓ Project Management</div>
-              <div>✓ Data-driven Decision Making</div>
+              <div>âœ“ Strategic Planning</div>
+              <div>âœ“ Team Leadership</div>
+              <div>âœ“ Problem Solving</div>
+              <div>âœ“ Cross-functional Communication</div>
+              <div>âœ“ Project Management</div>
+              <div>âœ“ Data-driven Decision Making</div>
             </div>
           </div>
 
@@ -451,12 +451,12 @@ export default function CoreStrengthsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <p><strong style={{ fontSize: '16px' }}>CORE STRENGTHS</strong></p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginTop: '12px' }}>
-              <div>🚀 Strategic Planning</div>
-              <div>👥 Team Leadership</div>
-              <div>💡 Creative Problem Solving</div>
-              <div>🗣️ Executive Communication</div>
-              <div>📊 Data Analysis</div>
-              <div>🔄 Change Management</div>
+              <div>ðŸš€ Strategic Planning</div>
+              <div>ðŸ‘¥ Team Leadership</div>
+              <div>ðŸ’¡ Creative Problem Solving</div>
+              <div>ðŸ—£ï¸ Executive Communication</div>
+              <div>ðŸ“Š Data Analysis</div>
+              <div>ðŸ”„ Change Management</div>
             </div>
           </div>
 
@@ -478,12 +478,12 @@ export default function CoreStrengthsSectionGuide() {
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Listing too many strengths</strong> - Keep to 5-8 focused strengths. More than 10 looks cluttered and loses impact.</li>
-              <li><strong>❌ Generic strengths without context</strong> - Avoid terms like "hardworking" or "team player" without specifying what makes you unique.</li>
-              <li><strong>❌ Not matching strengths to job requirements</strong> - Generic strengths that don't align with the role won't impress recruiters.</li>
-              <li><strong>❌ Listing strengths without evidence</strong> - Every strength should be backed by achievements in your experience section.</li>
-              <li><strong>❌ Using clichés and buzzwords</strong> - "Out-of-the-box thinker," "synergy," and "go-getter" are overused and add little value.</li>
-              <li><strong>❌ Including strengths you can't demonstrate</strong> - Be prepared to discuss every strength in interviews with specific examples.</li>
+              <li><strong>âŒ Listing too many strengths</strong> - Keep to 5-8 focused strengths. More than 10 looks cluttered and loses impact.</li>
+              <li><strong>âŒ Generic strengths without context</strong> - Avoid terms like "hardworking" or "team player" without specifying what makes you unique.</li>
+              <li><strong>âŒ Not matching strengths to job requirements</strong> - Generic strengths that don't align with the role won't impress recruiters.</li>
+              <li><strong>âŒ Listing strengths without evidence</strong> - Every strength should be backed by achievements in your experience section.</li>
+              <li><strong>âŒ Using clichÃ©s and buzzwords</strong> - "Out-of-the-box thinker," "synergy," and "go-getter" are overused and add little value.</li>
+              <li><strong>âŒ Including strengths you can't demonstrate</strong> - Be prepared to discuss every strength in interviews with specific examples.</li>
             </ul>
           </div>
         </section>
@@ -491,7 +491,7 @@ export default function CoreStrengthsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Strength Formatting
+            ðŸ¤– ATS-Friendly Strength Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8' }}>
@@ -550,7 +550,7 @@ export default function CoreStrengthsSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -561,12 +561,12 @@ export default function CoreStrengthsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide →</Link>
-            <Link href="/sections/awards" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Awards Section Guide →</Link>
-            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs →</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide â†’</Link>
+            <Link href="/sections/awards" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Awards Section Guide â†’</Link>
+            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs â†’</Link>
           </div>
         </div>
       </main>

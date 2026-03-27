@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -29,7 +29,7 @@ export default function Custom404() {
     "@type": "WebPage",
     "name": "Page Not Found - 404 Error",
     "description": "The page you're looking for doesn't exist or may have been moved. Return to our resume builder homepage to continue your job search journey.",
-    "url": "https://freeresumemakers.com/404",
+    "url": "https://freeresumemaker.xyz/404",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -37,13 +37,13 @@ export default function Custom404() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://freeresumemakers.com"
+          "item": "https://freeresumemaker.xyz"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "404 - Page Not Found",
-          "item": "https://freeresumemakers.com/404"
+          "item": "https://freeresumemaker.xyz/404"
         }
       ]
     }
@@ -55,37 +55,37 @@ export default function Custom404() {
     "@type": "SiteNavigationElement",
     "name": "404 Page Navigation Options",
     "description": "Alternative navigation options for users who encountered a 404 error",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "hasPart": [
       {
         "@type": "WebPage",
         "name": "Resume Templates",
-        "url": "https://freeresumemakers.com/templates"
+        "url": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "WebPage",
         "name": "Resume Builder",
-        "url": "https://freeresumemakers.com/editor"
+        "url": "https://freeresumemaker.xyz/editor"
       },
       {
         "@type": "WebPage",
         "name": "Resume Tips",
-        "url": "https://freeresumemakers.com/blog"
+        "url": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "WebPage",
         "name": "ATS Scanner",
-        "url": "https://freeresumemakers.com/tools/ats-scanner"
+        "url": "https://freeresumemaker.xyz/tools/ats-scanner"
       },
       {
         "@type": "WebPage",
         "name": "FAQ",
-        "url": "https://freeresumemakers.com/faq"
+        "url": "https://freeresumemaker.xyz/faq"
       },
       {
         "@type": "WebPage",
         "name": "Contact Support",
-        "url": "https://freeresumemakers.com/contact"
+        "url": "https://freeresumemaker.xyz/contact"
       }
     ]
   };
@@ -97,15 +97,15 @@ export default function Custom404() {
         <meta name="description" content="Page not found. The page you're looking for doesn't exist or may have been moved. Return to our free resume builder to create your professional resume. We'll redirect you to the homepage automatically." />
         <meta name="robots" content="noindex, follow" />
         <meta name="keywords" content="404 error, page not found, resume builder, free resume maker" />
-        <link rel="canonical" href="https://freeresumemakers.com/404" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/404" />
         
         {/* Open Graph */}
         <meta property="og:title" content="404 - Page Not Found | Free Resume Builder" />
         <meta property="og:description" content="The page you're looking for doesn't exist. Return to our resume builder to continue creating your professional resume." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://freeresumemakers.com/404" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/404" />
         <meta property="og:site_name" content="Free Resume Builder" />
-        <meta property="og:image" content="https://freeresumemakers.com/images/404-og.jpg" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/images/404-og.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
@@ -113,7 +113,7 @@ export default function Custom404() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="404 - Page Not Found" />
         <meta name="twitter:description" content="Page not found. Return to our resume builder." />
-        <meta name="twitter:image" content="https://freeresumemakers.com/images/404-og.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/images/404-og.jpg" />
         <meta name="twitter:site" content="@freeresumemaker" />
         
         {/* Schema */}
@@ -256,7 +256,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = '#0070f3';
               }}
             >
-              <span>🏠</span> Return to Home
+              <span>ðŸ </span> Return to Home
             </Link>
 
             <Link
@@ -284,7 +284,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = 'white';
               }}
             >
-              <span>📝</span> Build Your Resume
+              <span>ðŸ“</span> Build Your Resume
             </Link>
           </div>
 

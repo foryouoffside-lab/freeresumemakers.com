@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function EducationSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/education#article",
+        "@id": "https://freeresumemaker.xyz/sections/education#article",
         "headline": "How to List Education on Resume: Complete Format & Examples Guide 2026",
         "description": "Expert guide on formatting education on your resume. Learn how to list degrees, GPAs, honors, and relevant coursework with examples for recent graduates, experienced professionals, and current students.",
-        "image": "https://freeresumemakers.com/images/education-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/education-guide-2026.jpg",
         "datePublished": "2026-01-10T08:00:00+00:00",
         "dateModified": "2026-03-23T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/education"
+          "@id": "https://freeresumemaker.xyz/sections/education"
         },
         "keywords": "education on resume, listing education, degree on resume, college on resume, GPA on resume, education section, how to list education, resume education format"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/education#howto",
+        "@id": "https://freeresumemaker.xyz/sections/education#howto",
         "name": "How to List Education on Your Resume",
         "description": "Step-by-step guide to formatting your education section on a resume, including degree details, honors, GPA, and relevant coursework.",
         "estimatedCost": {
@@ -94,31 +94,31 @@ export default function EducationSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/education#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/education#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Education Guide",
-            "item": "https://freeresumemakers.com/sections/education"
+            "item": "https://freeresumemaker.xyz/sections/education"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/education#faq",
+        "@id": "https://freeresumemaker.xyz/sections/education#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -188,7 +188,7 @@ export default function EducationSectionGuide() {
   // Education scenarios for different career stages
   const educationScenarios = [
     {
-      title: "🎓 Recent Graduate (0-2 Years Experience)",
+      title: "ðŸŽ“ Recent Graduate (0-2 Years Experience)",
       description: "Emphasize GPA, honors, relevant coursework, and extracurriculars",
       example: `Bachelor of Science in Computer Science
 Stanford University, Stanford, CA
@@ -198,7 +198,7 @@ Relevant Coursework: Machine Learning, Data Structures, Algorithms, Database Sys
 Thesis: "AI-Powered Recommendation Systems for E-Commerce"`
     },
     {
-      title: "💼 Experienced Professional (5+ Years)",
+      title: "ðŸ’¼ Experienced Professional (5+ Years)",
       description: "Keep it concise; omit GPA and coursework; focus on degrees and institutions",
       example: `Master of Business Administration (MBA)
 University of Chicago Booth School of Business
@@ -209,7 +209,7 @@ University of California, Berkeley
 Graduated: 2012 | Cum Laude`
     },
     {
-      title: "📚 Current Student / In Progress",
+      title: "ðŸ“š Current Student / In Progress",
       description: "Include expected graduation date and highlight coursework completed",
       example: `Bachelor of Arts in Marketing
 New York University (NYU), New York, NY
@@ -218,7 +218,7 @@ Honors: Dean's List (2024, 2025)
 Relevant Coursework: Digital Marketing, Consumer Behavior, Marketing Analytics, Brand Management`
     },
     {
-      title: "🏫 High School Student / Graduate",
+      title: "ðŸ« High School Student / Graduate",
       description: "Focus on GPA, honors, AP courses, and extracurriculars",
       example: `High School Diploma
 Lincoln High School, Portland, OR
@@ -227,7 +227,7 @@ Honors: National Honor Society, AP Scholar with Distinction, Valedictorian
 AP Courses: Calculus BC (5), Physics C (5), Computer Science A (5)`
     },
     {
-      title: "🔄 Career Changer",
+      title: "ðŸ”„ Career Changer",
       description: "Highlight recent education or certifications relevant to new field",
       example: `Certificate in Full Stack Web Development
 University of Washington Professional & Continuing Education
@@ -259,7 +259,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
         title="How to List Education on Resume: Complete Format & Examples Guide 2026 | FreeResumeMakers"
         description="Expert guide on formatting education on your resume. Learn how to list degrees, GPAs, honors, and relevant coursework with examples for recent graduates, experienced professionals, and current students. ATS-friendly tips included."
         keywords="education on resume, listing education, degree on resume, college on resume, GPA on resume, education section, how to list education, resume education format, high school on resume, multiple degrees resume"
-        canonical="https://freeresumemakers.com/sections/education"
+        canonical="https://freeresumemaker.xyz/sections/education"
         type="article"
         publishedTime="2026-01-10T08:00:00+00:00"
         modifiedTime="2026-03-23T10:00:00+00:00"
@@ -272,7 +272,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/education" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/education" />
         <meta name="description" content="Learn how to list education on your resume with expert examples for recent graduates, experienced professionals, and current students. Includes GPA, honors, and coursework tips." />
       </Head>
 
@@ -287,9 +287,9 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Education Guide</span>
         </nav>
 
@@ -299,10 +299,10 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 8 min read</span>
-            <span>👁️ 35,000+ readers</span>
-            <span>🎓 5+ Education Scenarios</span>
+            <span>ðŸ“… Updated: March 23, 2026</span>
+            <span>â±ï¸ 8 min read</span>
+            <span>ðŸ‘ï¸ 35,000+ readers</span>
+            <span>ðŸŽ“ 5+ Education Scenarios</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -320,14 +320,14 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Standard Format</a>
-            <a href="#scenarios" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Scenario</a>
-            <a href="#elements" style={{ color: '#0070f3', textDecoration: 'none' }}>• What to Include</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
-            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>• Common Mistakes</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Standard Format</a>
+            <a href="#scenarios" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Examples by Scenario</a>
+            <a href="#elements" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ What to Include</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Placement Strategy</a>
+            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Common Mistakes</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -340,7 +340,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> For experienced professionals with 5+ years of experience, move your education section below work experience. 
+            <strong>ðŸ’¡ Pro Tip:</strong> For experienced professionals with 5+ years of experience, move your education section below work experience. 
             For recent graduates and current students, education should be above experience to highlight your academic achievements. 
             Always customize based on what makes you strongest.
           </p>
@@ -413,7 +413,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
         {/* Placement Strategy Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            📍 Where to Place Education on Your Resume
+            ðŸ“ Where to Place Education on Your Resume
           </h2>
           <div style={{
             display: 'grid',
@@ -422,17 +422,17 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>🎓 Recent Graduates (0-2 years)</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸŽ“ Recent Graduates (0-2 years)</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Place above work experience</strong></p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Your education is your strongest qualification. Highlight GPA, honors, and relevant coursework first.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>💼 Experienced Professionals (5+ years)</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ’¼ Experienced Professionals (5+ years)</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Place below work experience</strong></p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Your work achievements are most important. Keep education concise with degree and institution only.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>📚 Current Students</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ“š Current Students</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Place above experience</strong></p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Include expected graduation date and highlight completed relevant coursework.</p>
             </div>
@@ -442,7 +442,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Education Formatting
+            ðŸ¤– ATS-Friendly Education Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8' }}>
@@ -459,17 +459,17 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Education Section Mistakes to Avoid
+            âŒ Common Education Section Mistakes to Avoid
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Listing high school after earning a college degree</strong> - Once you have a college degree, omit high school entirely</li>
-              <li><strong>❌ Including irrelevant or outdated coursework</strong> - Only list courses relevant to the job after 2+ years of experience</li>
-              <li><strong>❌ Using inconsistent date formats</strong> - Stick to one format throughout (e.g., "May 2025" or "2025")</li>
-              <li><strong>❌ Forgetting expected graduation date for current students</strong> - Always include "Expected May 2026"</li>
-              <li><strong>❌ Including GPA below 3.5</strong> - Only include GPA if it's 3.5+ (unless employer specifically requires it)</li>
-              <li><strong>❌ Listing education without degree name</strong> - Always include the full degree name and field of study</li>
-              <li><strong>❌ Omitting honors like Cum Laude</strong> - These demonstrate academic excellence and should be highlighted</li>
+              <li><strong>âŒ Listing high school after earning a college degree</strong> - Once you have a college degree, omit high school entirely</li>
+              <li><strong>âŒ Including irrelevant or outdated coursework</strong> - Only list courses relevant to the job after 2+ years of experience</li>
+              <li><strong>âŒ Using inconsistent date formats</strong> - Stick to one format throughout (e.g., "May 2025" or "2025")</li>
+              <li><strong>âŒ Forgetting expected graduation date for current students</strong> - Always include "Expected May 2026"</li>
+              <li><strong>âŒ Including GPA below 3.5</strong> - Only include GPA if it's 3.5+ (unless employer specifically requires it)</li>
+              <li><strong>âŒ Listing education without degree name</strong> - Always include the full degree name and field of study</li>
+              <li><strong>âŒ Omitting honors like Cum Laude</strong> - These demonstrate academic excellence and should be highlighted</li>
             </ul>
           </div>
         </section>
@@ -520,7 +520,7 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -531,12 +531,12 @@ Graduated: 2015 | GPA: 3.6/4.0 | Cum Laude`
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
-            <Link href="/sections/certifications" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Certifications Guide →</Link>
-            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide →</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide â†’</Link>
+            <Link href="/sections/certifications" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Certifications Guide â†’</Link>
+            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide â†’</Link>
           </div>
         </div>
       </main>

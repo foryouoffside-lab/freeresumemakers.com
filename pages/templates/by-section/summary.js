@@ -79,25 +79,25 @@ export default function BySectionSummary() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Summary Section",
-        "item": "https://freeresumemakers.com/templates/by-section/summary"
+        "item": "https://freeresumemaker.xyz/templates/by-section/summary"
       }
     ]
   };
@@ -114,7 +114,7 @@ export default function BySectionSummary() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -135,7 +135,7 @@ export default function BySectionSummary() {
           title={`${selectedTemplate.name} | Resume Template with Summary Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features ${selectedTemplate.summaryFormat}. Perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes professional summary placement and career highlights.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with summary section, professional summary resume, ${selectedTemplate.style} resume, executive summary resume, career summary template, professional profile resume`}
-          canonical={`https://freeresumemakers.com/templates/by-section/summary/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/summary/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -406,8 +406,8 @@ export default function BySectionSummary() {
         title="Resume Templates with Summary Section | Professional Summary Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated summary section for showcasing your professional brand, career highlights, and key achievements. Choose from executive, modern, technical, creative, academic, and results-focused layouts designed to make a strong first impression and capture recruiter attention. Perfect for senior executives, mid-level professionals, technical experts, creative professionals, and career changers who need to showcase their unique value proposition."
         keywords="resume templates with summary section, professional summary resume, executive summary template, career summary resume, professional profile template, resume summary examples, summary section layout, executive resume template, modern summary resume, technical summary resume, creative summary resume"
-        canonical="https://freeresumemakers.com/templates/by-section/summary"
-        image="https://freeresumemakers.com/images/templates/summary-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/summary"
+        image="https://freeresumemaker.xyz/images/templates/summary-section-og.jpg"
         type="website"
       />
       

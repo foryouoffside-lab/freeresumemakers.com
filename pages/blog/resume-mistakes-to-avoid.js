@@ -1,4 +1,4 @@
-// pages/blog/resume-mistakes-to-avoid.js
+﻿// pages/blog/resume-mistakes-to-avoid.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -14,26 +14,26 @@ export default function ResumeMistakesToAvoid() {
     "@type": "Article",
     "headline": "15 Resume Mistakes to Avoid in 2026 | Common CV Errors That Cost Interviews",
     "description": "Learn the most common resume mistakes that can affect your job applications. Avoid typos, poor formatting, irrelevant information, and other errors with our comprehensive guide.",
-    "image": "https://freeresumemakers.com/images/blog/resume-mistakes-to-avoid.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/resume-mistakes-to-avoid.jpg",
     "author": {
       "@type": "Person",
       "name": "Emily Rodriguez",
       "jobTitle": "Resume Review Specialist",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-20",
     "dateModified": "2026-02-20",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/resume-mistakes-to-avoid"
+      "@id": "https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid"
     },
     "keywords": "resume mistakes, CV errors, resume tips, common resume mistakes, avoid resume errors, resume writing mistakes",
     "articleSection": "Resume Tips"
@@ -48,19 +48,19 @@ export default function ResumeMistakesToAvoid() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Resume Mistakes to Avoid",
-        "item": "https://freeresumemakers.com/blog/resume-mistakes-to-avoid"
+        "item": "https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid"
       }
     ]
   };
@@ -251,8 +251,8 @@ export default function ResumeMistakesToAvoid() {
         title="15 Resume Mistakes to Avoid in 2026 | Common CV Errors That Cost Interviews"
         description="Learn the most common resume mistakes that can affect your job applications. Avoid typos, poor formatting, irrelevant information, and other errors with our comprehensive guide."
         keywords="resume mistakes, CV errors, resume tips, common resume mistakes, avoid resume errors, resume writing mistakes, resume advice, CV mistakes"
-        canonical="https://freeresumemakers.com/blog/resume-mistakes-to-avoid"
-        image="https://freeresumemakers.com/images/blog/resume-mistakes-to-avoid.jpg"
+        canonical="https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid"
+        image="https://freeresumemaker.xyz/images/blog/resume-mistakes-to-avoid.jpg"
         type="article"
         publishedTime="2026-02-20"
         author="Emily Rodriguez"
@@ -289,9 +289,9 @@ export default function ResumeMistakesToAvoid() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Mistakes to Avoid</span>
         </div>
 
@@ -502,7 +502,7 @@ export default function ResumeMistakesToAvoid() {
                   borderRadius: '8px',
                   border: '1px solid #e9ecef'
                 }}>
-                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>✓</span>
+                  <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
                   <span style={{ fontSize: '14px' }}>{item}</span>
                 </div>
               ))}
@@ -571,7 +571,7 @@ export default function ResumeMistakesToAvoid() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Review Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to review your resume for common mistakes before submitting applications.
@@ -676,10 +676,10 @@ export default function ResumeMistakesToAvoid() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('15 Resume Mistakes to Avoid in 2026')}&url=https://freeresumemakers.com/blog/resume-mistakes-to-avoid` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/resume-mistakes-to-avoid` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/resume-mistakes-to-avoid` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Resume Mistakes to Avoid')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/resume-mistakes-to-avoid')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('15 Resume Mistakes to Avoid in 2026')}&url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Resume Mistakes to Avoid')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-mistakes-to-avoid')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -761,7 +761,7 @@ export default function ResumeMistakesToAvoid() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -847,7 +847,7 @@ export default function ResumeMistakesToAvoid() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 20, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 20, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

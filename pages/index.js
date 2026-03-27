@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -56,8 +56,8 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Free Resume Maker",
-    "url": "https://freeresumemakers.com",
-    "logo": "https://freeresumemakers.com/logo.png",
+    "url": "https://freeresumemaker.xyz",
+    "logo": "https://freeresumemaker.xyz/logo.png",
     "description": "Free online resume builder to create professional ATS-friendly resumes.",
     "sameAs": [
       "https://twitter.com/freeresumemaker",
@@ -71,7 +71,7 @@ export default function HomePage() {
         title="Free Resume Maker - Create Professional Resumes Online in Minutes"
         description="Build professional, ATS-friendly resumes instantly with our free resume builder. No sign-up required. Choose from 20+ templates, edit in real-time, and download as PDF. Trusted by job seekers worldwide."
         keywords="free resume builder, online resume maker, ATS friendly resume, professional resume templates, CV builder, resume creator, job application tool, free CV maker"
-        canonical="https://freeresumemakers.com/"
+        canonical="https://freeresumemaker.xyz/"
         type="website"
       />
       
@@ -353,7 +353,7 @@ export default function HomePage() {
           </div>
           <div style={{textAlign: 'center', marginTop: '30px'}}>
             <Link href="/templates" style={{color: '#0070f3', textDecoration: 'none', fontWeight: 500}}>
-              View All 20+ Templates →
+              View All 20+ Templates â†’
             </Link>
           </div>
         </section>
@@ -437,7 +437,7 @@ export default function HomePage() {
                     {post.title}
                   </h3>
                   <span style={{color: '#0070f3', fontWeight: 500, fontSize: '0.9rem'}}>
-                    Read More →
+                    Read More â†’
                   </span>
                 </div>
               </Link>
@@ -445,7 +445,7 @@ export default function HomePage() {
           </div>
           <div style={{textAlign: 'center', marginTop: '30px'}}>
             <Link href="/blog" style={{color: '#0070f3', textDecoration: 'none', fontWeight: 500}}>
-              Read All Articles →
+              Read All Articles â†’
             </Link>
           </div>
         </section>
@@ -493,7 +493,7 @@ export default function HomePage() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create My Resume Now →
+            Create My Resume Now â†’
           </Link>
         </section>
 
@@ -506,7 +506,7 @@ export default function HomePage() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Maker. Create professional resumes instantly.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Maker. Create professional resumes instantly.</p>
           <div style={{
             marginTop: '12px',
             display: 'flex',

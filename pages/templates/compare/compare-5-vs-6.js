@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -124,10 +124,10 @@ export default function Compare5Vs6() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemakers.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemakers.com/templates" },
-      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemakers.com/templates/compare" },
-      { "@type": "ListItem", "position": 4, "name": "Template 5 vs Template 6", "item": "https://freeresumemakers.com/templates/compare/5-vs-6" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemaker.xyz/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemaker.xyz/templates" },
+      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemaker.xyz/templates/compare" },
+      { "@type": "ListItem", "position": 4, "name": "Template 5 vs Template 6", "item": "https://freeresumemaker.xyz/templates/compare/5-vs-6" }
     ]
   };
 
@@ -143,14 +143,14 @@ export default function Compare5Vs6() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/5-vs-6" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/5-vs-6" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Template 5 vs Template 6: The Minimalist vs The Architect - Ultra-Clean vs Comprehensive Technical Resume" />
         <meta property="og:description" content="Minimalist vs Comprehensive Technical showdown! Compare The Minimalist and The Architect side-by-side. See which resume style gets past ATS and impresses recruiters." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/5-vs-6" />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/template-comparison-5vs6.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/5-vs-6" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-5vs6.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="FreeResumeMakers" />
@@ -160,7 +160,7 @@ export default function Compare5Vs6() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 5 vs Template 6: Minimalist vs Comprehensive Technical Resume" />
         <meta name="twitter:description" content="Find your perfect resume style! Compare The Minimalist (Ultra-Clean ATS-Friendly) vs The Architect (Comprehensive Technical) with role-specific recommendations." />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/template-comparison-5vs6.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-5vs6.jpg" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content={comparisonDate} />
@@ -188,11 +188,11 @@ export default function Compare5Vs6() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 5 vs Template 6</li>
           </ol>
         </nav>
@@ -209,7 +209,7 @@ export default function Compare5Vs6() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              ✨ ULTRA-CLEAN vs COMPREHENSIVE TECHNICAL SHOWDOWN
+              âœ¨ ULTRA-CLEAN vs COMPREHENSIVE TECHNICAL SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -241,13 +241,13 @@ export default function Compare5Vs6() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              📊 Updated: March 2026
+              ðŸ“Š Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ✨ Minimalist: 99% ATS Score
+              âœ¨ Minimalist: 99% ATS Score
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              🏗️ Architect: 92% ATS Score
+              ðŸ—ï¸ Architect: 92% ATS Score
             </div>
           </div>
         </header>
@@ -262,7 +262,7 @@ export default function Compare5Vs6() {
           border: '1px solid #10b98130'
         }}>
           <p style={{ fontSize: '1rem', color: '#065f46', margin: 0 }}>
-            <strong>🤖 ATS Compatibility Alert:</strong> 
+            <strong>ðŸ¤– ATS Compatibility Alert:</strong> 
             <span style={{ display: 'inline-block', marginLeft: '12px' }}>
               Template 5 (The Minimalist) has <strong>99% ATS score</strong> - highest among all templates. 
               Template 6 (The Architect) has <strong>92% ATS score</strong> - still good, but best for direct applications.
@@ -298,10 +298,10 @@ export default function Compare5Vs6() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ✨ BEST ATS SCORE
+              âœ¨ BEST ATS SCORE
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>✨</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>âœ¨</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[5].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 5)</span>
@@ -311,7 +311,7 @@ export default function Compare5Vs6() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template5Sections.map(section => (
@@ -324,7 +324,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ✨ Key Features
+                âœ¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[5].features.map(feature => (
@@ -337,7 +337,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[5].bestFor.map(role => (
@@ -350,7 +350,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -384,7 +384,7 @@ export default function Compare5Vs6() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 5 →
+              View Template 5 â†’
             </Link>
           </div>
 
@@ -409,10 +409,10 @@ export default function Compare5Vs6() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              🏗️ TECHNICAL FOCUS
+              ðŸ—ï¸ TECHNICAL FOCUS
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>🏗️</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>ðŸ—ï¸</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[6].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 6)</span>
@@ -422,7 +422,7 @@ export default function Compare5Vs6() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template6Sections.map(section => (
@@ -435,7 +435,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                ✨ Key Features
+                âœ¨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[6].features.map(feature => (
@@ -448,7 +448,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[6].bestFor.map(role => (
@@ -461,7 +461,7 @@ export default function Compare5Vs6() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -495,7 +495,7 @@ export default function Compare5Vs6() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 6 →
+              View Template 6 â†’
             </Link>
           </div>
         </div>
@@ -503,7 +503,7 @@ export default function Compare5Vs6() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📊 Feature Comparison: Minimalist vs Comprehensive Technical
+            ðŸ“Š Feature Comparison: Minimalist vs Comprehensive Technical
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -534,7 +534,7 @@ export default function Compare5Vs6() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>ATS Compatibility</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>🏆 99% (Highest)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>ðŸ† 99% (Highest)</td>
                   <td style={{ padding: '16px', textAlign: 'center' }}>92% (Good)</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
@@ -544,13 +544,13 @@ export default function Compare5Vs6() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Timeline Visualization</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Professional Timeline</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Professional Timeline</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Type Badges</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -564,8 +564,8 @@ export default function Compare5Vs6() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Print Friendly</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Excellent (Minimal Ink)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Good (Standard Ink)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Excellent (Minimal Ink)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Good (Standard Ink)</td>
                 </tr>
                 <tr style={{ background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Best For</td>
@@ -585,12 +585,12 @@ export default function Compare5Vs6() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            🎯 How to Choose: Minimalist Simplicity vs Technical Depth
+            ðŸŽ¯ How to Choose: Minimalist Simplicity vs Technical Depth
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>✨</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>âœ¨</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 5 (The Minimalist) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You're applying through online portals/ATS systems</li>
@@ -602,12 +602,12 @@ export default function Compare5Vs6() {
                 <li>You want a resume that prints perfectly</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>💡 Perfect for:</strong> ATS-heavy applications, entry-level roles, career changers
+                <strong style={{ color: '#1e40af' }}>ðŸ’¡ Perfect for:</strong> ATS-heavy applications, entry-level roles, career changers
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🏗️</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ—ï¸</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 6 (The Architect) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You're a software engineer, architect, or technical professional</li>
@@ -619,7 +619,7 @@ export default function Compare5Vs6() {
                 <li>You're applying to startups or tech companies</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>💡 Perfect for:</strong> Software Engineers, System Architects, Technical Leads
+                <strong style={{ color: '#1e40af' }}>ðŸ’¡ Perfect for:</strong> Software Engineers, System Architects, Technical Leads
               </div>
             </div>
           </div>
@@ -628,11 +628,11 @@ export default function Compare5Vs6() {
         {/* When to Use Each Template */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📋 When to Use Each Template
+            ðŸ“‹ When to Use Each Template
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
-              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#10b981', marginBottom: '12px' }}>✨ Template 5 Scenarios</div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#10b981', marginBottom: '12px' }}>âœ¨ Template 5 Scenarios</div>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Large corporate applications (Google, Amazon, Microsoft)</li>
                 <li>Government positions</li>
@@ -643,7 +643,7 @@ export default function Compare5Vs6() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
-              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>🏗️ Template 6 Scenarios</div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>ðŸ—ï¸ Template 6 Scenarios</div>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Technical roles (Engineer, Architect, Developer)</li>
                 <li>Startup and tech company applications</li>
@@ -659,17 +659,17 @@ export default function Compare5Vs6() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ⚖️ Pros & Cons Analysis
+            âš–ï¸ Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 5 (Minimalist) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 5 (Minimalist) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[5].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 5 (Minimalist) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 5 (Minimalist) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[5].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -677,13 +677,13 @@ export default function Compare5Vs6() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 6 (Architect) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 6 (Architect) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[6].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 6 (Architect) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 6 (Architect) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[6].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -696,11 +696,11 @@ export default function Compare5Vs6() {
         {/* ATS Deep Dive */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            🤖 ATS Compatibility Deep Dive
+            ðŸ¤– ATS Compatibility Deep Dive
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>✨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>âœ¨</div>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#10b981' }}>99%</div>
               <strong>Template 5 ATS Score</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
@@ -708,7 +708,7 @@ export default function Compare5Vs6() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🏗️</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ—ï¸</div>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#667eea' }}>92%</div>
               <strong>Template 6 ATS Score</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
@@ -716,7 +716,7 @@ export default function Compare5Vs6() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>📊</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>ðŸ“Š</div>
               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#f59e0b' }}>Industry Avg</div>
               <strong>85% ATS Score</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
@@ -729,7 +729,7 @@ export default function Compare5Vs6() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ❓ Frequently Asked Questions
+            â“ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -782,7 +782,7 @@ export default function Compare5Vs6() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            🔍 Explore More Template Comparisons
+            ðŸ” Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

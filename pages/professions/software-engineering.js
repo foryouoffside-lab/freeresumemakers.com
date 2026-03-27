@@ -1,4 +1,4 @@
-// pages/professions/software-engineering.js
+﻿// pages/professions/software-engineering.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -226,19 +226,19 @@ export default function SoftwareEngineeringExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Software Engineering Resumes",
-        "item": "https://freeresumemakers.com/professions/software-engineering"
+        "item": "https://freeresumemaker.xyz/professions/software-engineering"
       }
     ]
   };
@@ -255,7 +255,7 @@ export default function SoftwareEngineeringExamples() {
       "position": index + 1,
       "name": example.title,
       "description": example.description,
-      "url": `https://freeresumemakers.com/professions/software-engineering/${example.id}`
+      "url": `https://freeresumemaker.xyz/professions/software-engineering/${example.id}`
     }))
   };
 
@@ -276,7 +276,7 @@ export default function SoftwareEngineeringExamples() {
           title={`${selectedExample.title} | Software Engineering Resume Example 2026 | Professional Sample`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience in ${selectedExample.specialization === 'frontend' ? 'frontend development with React, TypeScript' : 'full stack development with MERN stack, AWS'}. Includes projects, technical skills, and professional achievements. Customize with our free resume builder.`}
           keywords={`${selectedExample.title.toLowerCase()}, software engineer resume, frontend developer resume, full stack developer resume, ${selectedExample.specialization} developer resume, tech resume, software engineering CV, programming resume, developer resume 2026, ATS friendly tech resume`}
-          canonical={`https://freeresumemakers.com/professions/software-engineering/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/software-engineering/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -303,11 +303,11 @@ export default function SoftwareEngineeringExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/software-engineering" style={{ color: '#666', textDecoration: 'none' }}>Software Engineering Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -338,7 +338,7 @@ export default function SoftwareEngineeringExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Software Engineering Resume Examples
+            â† Back to All Software Engineering Resume Examples
           </button>
 
           {/* Template Header */}
@@ -650,8 +650,8 @@ export default function SoftwareEngineeringExamples() {
         title="Software Engineering Resume Examples | Frontend & Full Stack Developer Resumes 2026"
         description="Browse professional software engineering resume examples for frontend engineers, full stack developers, backend engineers, and DevOps professionals. Sample resumes with React, TypeScript, Node.js, AWS, system design, and microservices architecture. Learn from real examples to create your winning software engineering resume for the 2026 hiring season."
         keywords="software engineer resume, frontend developer resume, full stack developer resume, backend engineer resume, programming resume, tech resume, software engineering CV, React developer resume, Node.js developer resume, AWS developer resume, developer resume examples, software engineer resume 2026"
-        canonical="https://freeresumemakers.com/professions/software-engineering"
-        image="https://freeresumemakers.com/images/professions/software-engineering-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/software-engineering"
+        image="https://freeresumemaker.xyz/images/professions/software-engineering-og.jpg"
         type="website"
       />
       
@@ -682,9 +682,9 @@ export default function SoftwareEngineeringExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Software Engineering Resumes</span>
         </nav>
 
@@ -751,7 +751,7 @@ export default function SoftwareEngineeringExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>React • Node.js • AWS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>React â€¢ Node.js â€¢ AWS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Modern Tech Stack</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -894,7 +894,7 @@ export default function SoftwareEngineeringExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -978,7 +978,7 @@ export default function SoftwareEngineeringExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

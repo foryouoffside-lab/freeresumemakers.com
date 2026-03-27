@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -60,7 +60,7 @@ export default function ResumeChecker() {
     }
 
     // Formatting check
-    const hasBulletPoints = (resumeText.match(/[•\-\*]\s/g) || []).length > 3;
+    const hasBulletPoints = (resumeText.match(/[â€¢\-\*]\s/g) || []).length > 3;
     const hasNumbers = (resumeText.match(/[0-9]+%/g) || []).length > 0 || (resumeText.match(/[0-9]+[,]?[0-9]*/g) || []).length > 2;
     const hasSectionHeaders = /(experience|education|skills|summary|work history|employment|qualifications|achievements)/i.test(resumeText);
     
@@ -92,9 +92,9 @@ export default function ResumeChecker() {
   };
 
   const getScoreEmoji = (score) => {
-    if (score >= 80) return '✅';
-    if (score >= 60) return '⚠️';
-    return '❌';
+    if (score >= 80) return 'âœ…';
+    if (score >= 60) return 'âš ï¸';
+    return 'âŒ';
   };
 
   // HowTo schema for resume checking
@@ -146,19 +146,19 @@ export default function ResumeChecker() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Tools",
-        "item": "https://freeresumemakers.com/tools"
+        "item": "https://freeresumemaker.xyz/tools"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Resume Checker",
-        "item": "https://freeresumemakers.com/tools/resume-checker"
+        "item": "https://freeresumemaker.xyz/tools/resume-checker"
       }
     ]
   };
@@ -209,7 +209,7 @@ export default function ResumeChecker() {
         title="Free Resume Checker 2026 - Analyze Your Resume for Errors & Get Instant Feedback | AI-Powered Tool"
         description="Free AI-powered resume checker that analyzes your resume for length, contact info, action verbs, and formatting issues. Get instant feedback and improvement tips to land more interviews. Used by 100,000+ job seekers."
         keywords="resume checker, resume analyzer, resume review, CV checker, resume feedback, resume evaluation, resume scanner, resume critique, resume grader, free resume checker online"
-        canonical="https://freeresumemakers.com/tools/resume-checker"
+        canonical="https://freeresumemaker.xyz/tools/resume-checker"
         type="website"
       />
       
@@ -244,15 +244,15 @@ export default function ResumeChecker() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/tools" style={{ color: '#666', textDecoration: 'none' }}>Tools</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Resume Checker</span>
         </nav>
 
         {/* Header */}
         <header style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>🔍</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>ðŸ”</div>
           <h1 style={{
             fontSize: '48px',
             marginBottom: '16px',
@@ -282,7 +282,7 @@ export default function ResumeChecker() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>💡 Pro Tip:</strong> Recruiters spend an average of <strong>6-7 seconds scanning each resume</strong>. 
+            <strong>ðŸ’¡ Pro Tip:</strong> Recruiters spend an average of <strong>6-7 seconds scanning each resume</strong>. 
             Our checker helps ensure your resume passes the test and makes a strong first impression.
           </p>
         </div>
@@ -296,7 +296,7 @@ export default function ResumeChecker() {
           border: '1px solid #e9ecef' 
         }}>
           <h2 style={{ fontSize: '28px', marginBottom: '12px', color: '#1a1a1a' }}>
-            📝 Paste Your Resume for Analysis
+            ðŸ“ Paste Your Resume for Analysis
           </h2>
           <p style={{ marginBottom: '20px', color: '#666', fontSize: '16px' }}>
             Paste your resume text below and get a comprehensive analysis with actionable improvements.
@@ -340,7 +340,7 @@ export default function ResumeChecker() {
               transition: 'all 0.2s'
             }}
           >
-            🔍 Check Resume
+            ðŸ” Check Resume
           </button>
         </div>
 
@@ -394,10 +394,10 @@ export default function ResumeChecker() {
               overflowX: 'auto'
             }}>
               {[
-                { id: 'length', label: '📏 Length', score: results.checks.length.score, tip: 'Ideal: 300-800 words' },
-                { id: 'contact', label: '📞 Contact Info', score: results.checks.contact.score, tip: 'Email, phone, LinkedIn' },
-                { id: 'actionVerbs', label: '⚡ Action Verbs', score: results.checks.actionVerbs.score, tip: 'Use strong verbs' },
-                { id: 'formatting', label: '📋 Formatting', score: results.checks.formatting.score, tip: 'Bullets & numbers' }
+                { id: 'length', label: 'ðŸ“ Length', score: results.checks.length.score, tip: 'Ideal: 300-800 words' },
+                { id: 'contact', label: 'ðŸ“ž Contact Info', score: results.checks.contact.score, tip: 'Email, phone, LinkedIn' },
+                { id: 'actionVerbs', label: 'âš¡ Action Verbs', score: results.checks.actionVerbs.score, tip: 'Use strong verbs' },
+                { id: 'formatting', label: 'ðŸ“‹ Formatting', score: results.checks.formatting.score, tip: 'Bullets & numbers' }
               ].map(tab => (
                 <button 
                   key={tab.id}
@@ -433,21 +433,21 @@ export default function ResumeChecker() {
               {activeTab === 'length' && (
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                    <div style={{ fontSize: '48px' }}>📏</div>
+                    <div style={{ fontSize: '48px' }}>ðŸ“</div>
                     <div>
                       <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Length Score: {results.checks.length.score}%</h3>
                       <p>Your resume has <strong>{results.wordCount}</strong> words</p>
-                      <p style={{ fontSize: '14px', color: '#666' }}>✓ Target: 300-800 words (1-2 pages) for optimal recruiter attention</p>
+                      <p style={{ fontSize: '14px', color: '#666' }}>âœ“ Target: 300-800 words (1-2 pages) for optimal recruiter attention</p>
                     </div>
                   </div>
                   {results.checks.length.issues.map((issue, i) => (
                     <div key={i} style={{ background: '#fef3c7', padding: '14px', borderRadius: '10px', marginBottom: '10px', borderLeft: '3px solid #f59e0b' }}>
-                      ⚠️ {issue}
+                      âš ï¸ {issue}
                     </div>
                   ))}
                   {results.checks.length.issues.length === 0 && (
                     <div style={{ background: '#d1fae5', padding: '14px', borderRadius: '10px', borderLeft: '3px solid #10b981' }}>
-                      ✅ Perfect length! Your resume is well-proportioned and recruiters will appreciate the concise format.
+                      âœ… Perfect length! Your resume is well-proportioned and recruiters will appreciate the concise format.
                     </div>
                   )}
                 </div>
@@ -456,20 +456,20 @@ export default function ResumeChecker() {
               {activeTab === 'contact' && (
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                    <div style={{ fontSize: '48px' }}>📞</div>
+                    <div style={{ fontSize: '48px' }}>ðŸ“ž</div>
                     <div>
                       <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Contact Info Score: {results.checks.contact.score}%</h3>
-                      <p style={{ fontSize: '14px', color: '#666' }}>✓ Include email, phone, and LinkedIn for maximum recruiter reach</p>
+                      <p style={{ fontSize: '14px', color: '#666' }}>âœ“ Include email, phone, and LinkedIn for maximum recruiter reach</p>
                     </div>
                   </div>
                   {results.checks.contact.issues.map((issue, i) => (
                     <div key={i} style={{ background: '#fee2e2', padding: '14px', borderRadius: '10px', marginBottom: '10px', borderLeft: '3px solid #ef4444' }}>
-                      ❌ {issue}
+                      âŒ {issue}
                     </div>
                   ))}
                   {results.checks.contact.issues.length === 0 && (
                     <div style={{ background: '#d1fae5', padding: '14px', borderRadius: '10px', borderLeft: '3px solid #10b981' }}>
-                      ✅ All contact information is present! Recruiters can easily reach you.
+                      âœ… All contact information is present! Recruiters can easily reach you.
                     </div>
                   )}
                 </div>
@@ -478,20 +478,20 @@ export default function ResumeChecker() {
               {activeTab === 'actionVerbs' && (
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                    <div style={{ fontSize: '48px' }}>⚡</div>
+                    <div style={{ fontSize: '48px' }}>âš¡</div>
                     <div>
                       <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Action Verbs Score: {results.checks.actionVerbs.score}%</h3>
                       <p>Found <strong>{results.actionVerbCount}</strong> strong action verbs</p>
-                      <p style={{ fontSize: '14px', color: '#666' }}>✓ Strong action verbs make your achievements stand out to recruiters</p>
+                      <p style={{ fontSize: '14px', color: '#666' }}>âœ“ Strong action verbs make your achievements stand out to recruiters</p>
                     </div>
                   </div>
                   {results.checks.actionVerbs.issues.map((issue, i) => (
                     <div key={i} style={{ background: '#fef3c7', padding: '14px', borderRadius: '10px', marginBottom: '10px', borderLeft: '3px solid #f59e0b' }}>
-                      ⚠️ {issue}
+                      âš ï¸ {issue}
                     </div>
                   ))}
                   <div style={{ marginTop: '16px', padding: '16px', background: '#f0f7ff', borderRadius: '10px' }}>
-                    <strong>💡 Top Action Verbs to Use:</strong> Achieved, Managed, Developed, Created, Implemented, Led, Increased, Improved, Designed, Built, Launched, Optimized
+                    <strong>ðŸ’¡ Top Action Verbs to Use:</strong> Achieved, Managed, Developed, Created, Implemented, Led, Increased, Improved, Designed, Built, Launched, Optimized
                   </div>
                 </div>
               )}
@@ -499,20 +499,20 @@ export default function ResumeChecker() {
               {activeTab === 'formatting' && (
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                    <div style={{ fontSize: '48px' }}>📋</div>
+                    <div style={{ fontSize: '48px' }}>ðŸ“‹</div>
                     <div>
                       <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Formatting Score: {results.checks.formatting.score}%</h3>
-                      <p style={{ fontSize: '14px', color: '#666' }}>✓ Good formatting helps recruiters scan your resume in 6-7 seconds</p>
+                      <p style={{ fontSize: '14px', color: '#666' }}>âœ“ Good formatting helps recruiters scan your resume in 6-7 seconds</p>
                     </div>
                   </div>
                   {results.checks.formatting.issues.map((issue, i) => (
                     <div key={i} style={{ background: '#fef3c7', padding: '14px', borderRadius: '10px', marginBottom: '10px', borderLeft: '3px solid #f59e0b' }}>
-                      ⚠️ {issue}
+                      âš ï¸ {issue}
                     </div>
                   ))}
                   {results.checks.formatting.issues.length === 0 && (
                     <div style={{ background: '#d1fae5', padding: '14px', borderRadius: '10px', borderLeft: '3px solid #10b981' }}>
-                      ✅ Great formatting! Your resume is well-structured and ATS-friendly.
+                      âœ… Great formatting! Your resume is well-structured and ATS-friendly.
                     </div>
                   )}
                 </div>
@@ -528,7 +528,7 @@ export default function ResumeChecker() {
               padding: '24px',
               borderRadius: '12px'
             }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>🚀 Next Steps to Improve Your Resume</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>ðŸš€ Next Steps to Improve Your Resume</h3>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                 <Link href="/tools/ats-scanner" style={{ 
                   padding: '12px 24px', 
@@ -539,7 +539,7 @@ export default function ResumeChecker() {
                   fontWeight: '500',
                   transition: 'transform 0.2s'
                 }}>
-                  📊 Check ATS Compatibility →
+                  ðŸ“Š Check ATS Compatibility â†’
                 </Link>
                 <Link href="/tools/keywords-finder" style={{ 
                   padding: '12px 24px', 
@@ -549,7 +549,7 @@ export default function ResumeChecker() {
                   borderRadius: '10px',
                   fontWeight: '500'
                 }}>
-                  🔑 Find Keywords →
+                  ðŸ”‘ Find Keywords â†’
                 </Link>
                 <Link href="/editor" style={{ 
                   padding: '12px 24px', 
@@ -559,7 +559,7 @@ export default function ResumeChecker() {
                   borderRadius: '10px',
                   fontWeight: '500'
                 }}>
-                  ✏️ Build ATS-Friendly Resume →
+                  âœï¸ Build ATS-Friendly Resume â†’
                 </Link>
               </div>
             </div>
@@ -630,9 +630,9 @@ export default function ResumeChecker() {
         }}>
           <h3 style={{ fontSize: '22px', marginBottom: '20px' }}>More Free Resume Tools</h3>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🤖 ATS Scanner →</Link>
-            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🔑 Keywords Finder →</Link>
-            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>📝 Resume Review →</Link>
+            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ¤– ATS Scanner â†’</Link>
+            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ”‘ Keywords Finder â†’</Link>
+            <Link href="/tools/resume-review" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>ðŸ“ Resume Review â†’</Link>
           </div>
         </div>
 
@@ -659,7 +659,7 @@ export default function ResumeChecker() {
             fontWeight: '600',
             fontSize: '16px'
           }}>
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 

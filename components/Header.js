@@ -1,4 +1,4 @@
-// components/Header.js
+﻿// components/Header.js
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -221,7 +221,7 @@ const Header = () => {
           style={styles.logoContainer}
           onClick={(e) => handleLinkClick(e, '/')}
         >
-          <span style={styles.logoIcon}>📄</span>
+          <span style={styles.logoIcon}>ðŸ“„</span>
           <span style={styles.logoText}>
             Free<span style={styles.logoHighlight}>ResumeMaker</span>
           </span>
@@ -259,7 +259,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? '✕' : '☰'}
+          {isMenuOpen ? 'âœ•' : 'â˜°'}
         </button>
 
         {/* Mobile Menu */}

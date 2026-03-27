@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -22,7 +22,7 @@ export default function Contact() {
     "@type": "ContactPage",
     "name": "Contact Us - Free Resume Builder",
     "description": "Get in touch with our team. Have questions about our free resume builder? We are here to help with templates, ATS optimization, and more.",
-    "url": "https://freeresumemakers.com/contact",
+    "url": "https://freeresumemaker.xyz/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "Free Resume Builder",
@@ -51,13 +51,13 @@ export default function Contact() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact Us",
-        "item": "https://freeresumemakers.com/contact"
+        "item": "https://freeresumemaker.xyz/contact"
       }
     ]
   };
@@ -97,7 +97,7 @@ export default function Contact() {
         <SEO 
           title="Thank You - Message Received | Free Resume Builder"
           description="Thank you for contacting us. We have received your message and will get back to you within 24-48 hours."
-          canonical="https://freeresumemakers.com/contact/thank-you"
+          canonical="https://freeresumemaker.xyz/contact/thank-you"
           noindex={true}
         />
         <main style={{
@@ -127,7 +127,7 @@ export default function Contact() {
               fontWeight: 'bold',
               color: 'white'
             }}>
-              ✓
+              âœ“
             </div>
             <h1 style={{
               fontSize: '2.2rem',
@@ -205,8 +205,8 @@ export default function Contact() {
         title="Contact Us - Free Resume Builder Support | Get Help with Your Resume"
         description="Get in touch with our team for questions about our free resume builder, templates, ATS optimization, or any issues you are experiencing. We are here to help job seekers create professional resumes."
         keywords="contact resume builder, resume builder support, help with resume, template support, ATS questions, resume help, free resume builder contact"
-        canonical="https://freeresumemakers.com/contact"
-        image="https://freeresumemakers.com/images/contact/og-contact.jpg"
+        canonical="https://freeresumemaker.xyz/contact"
+        image="https://freeresumemaker.xyz/images/contact/og-contact.jpg"
         type="website"
       />
       
@@ -238,7 +238,7 @@ export default function Contact() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Contact Us</span>
         </nav>
 
@@ -426,7 +426,7 @@ export default function Contact() {
                   display: 'inline-block'
                 }}
               >
-                View all FAQs →
+                View all FAQs â†’
               </Link>
             </div>
           </div>
@@ -819,7 +819,7 @@ export default function Contact() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
           <p style={{fontSize: '0.8rem', marginTop: '5px'}}>
             20+ Templates | ATS-Friendly | 100% Free
           </p>

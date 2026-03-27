@@ -1,4 +1,4 @@
-// pages/professions/education.js
+﻿// pages/professions/education.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -177,7 +177,7 @@ export default function EducationExamples() {
               'Teach Microeconomics and Development Economics to 500+ undergraduate and postgraduate students annually',
               'Supervise 8 PhD scholars, with 3 completed and 5 in progress',
               'Published 18 research papers in Scopus/WoS indexed journals with 500+ citations',
-              'Secured ₹50 Lakh in research grants from ICSSR, UGC, and Ministry of Education',
+              'Secured â‚¹50 Lakh in research grants from ICSSR, UGC, and Ministry of Education',
               'Designed and launched new curriculum for MA Economics program',
               'Organized 5 national and 2 international conferences with 1,000+ participants'
             ]
@@ -241,9 +241,9 @@ export default function EducationExamples() {
           'Recipient of ICSSR Senior Research Fellowship (2023)'
         ],
         grants: [
-          'ICSSR Research Grant: ₹25 Lakh for project on "Digital Economy and Employment" (2022-24)',
-          'UGC Major Research Project: ₹15 Lakh for "Microfinance Impact Study" (2019-22)',
-          'Ministry of Education Grant: ₹10 Lakh for curriculum development (2021)'
+          'ICSSR Research Grant: â‚¹25 Lakh for project on "Digital Economy and Employment" (2022-24)',
+          'UGC Major Research Project: â‚¹15 Lakh for "Microfinance Impact Study" (2019-22)',
+          'Ministry of Education Grant: â‚¹10 Lakh for curriculum development (2021)'
         ]
       }
     }
@@ -258,19 +258,19 @@ export default function EducationExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Education",
-        "item": "https://freeresumemakers.com/professions/education"
+        "item": "https://freeresumemaker.xyz/professions/education"
       }
     ]
   };
@@ -307,7 +307,7 @@ export default function EducationExamples() {
           title={`${selectedExample.title} | Education Resume Example 2026 | Free Sample Template`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience. Includes ${selectedExample.skills.slice(0, 3).join(', ')} and more. Download as template or customize with our free resume builder.`}
           keywords={`${selectedExample.title.toLowerCase()}, education resume, teaching resume, ${selectedExample.specialization} resume, school teacher CV, university professor resume, academic CV sample, teacher resume example, professor CV template, education resume 2026`}
-          canonical={`https://freeresumemakers.com/professions/education/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/education/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -327,11 +327,11 @@ export default function EducationExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/education" style={{ color: '#666', textDecoration: 'none' }}>Education Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -362,7 +362,7 @@ export default function EducationExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Education Resume Examples
+            â† Back to All Education Resume Examples
           </button>
 
           {/* Template Header */}
@@ -747,8 +747,8 @@ export default function EducationExamples() {
         title="Education Resume Examples | Professional Teaching & Academic Resumes 2026"
         description="Browse 20+ professional education resume examples for school teachers, university professors, administrators, and academic professionals. Sample resumes with teaching experience, curriculum development, research publications, student achievement metrics, and certifications like CTET, UGC-NET. Learn from real examples to create your winning education resume and land your dream teaching or academic job in 2026."
         keywords="education resume, teaching resume, teacher resume, professor resume, academic resume, school teacher resume, university professor CV, mathematics teacher resume, economics professor resume, curriculum vitae, teacher CV example, academic CV, CTET resume, B.Ed resume, higher education resume, education resume examples 2026, teacher resume samples"
-        canonical="https://freeresumemakers.com/professions/education"
-        image="https://freeresumemakers.com/images/professions/education-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/education"
+        image="https://freeresumemaker.xyz/images/professions/education-og.jpg"
         type="website"
       />
       
@@ -779,9 +779,9 @@ export default function EducationExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Education Resumes</span>
         </nav>
 
@@ -848,11 +848,11 @@ export default function EducationExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>K-12 • Higher Ed</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>K-12 â€¢ Higher Ed</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Teaching & Research Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CTET • UGC-NET • PhD</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CTET â€¢ UGC-NET â€¢ PhD</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -991,7 +991,7 @@ export default function EducationExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -1075,7 +1075,7 @@ export default function EducationExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

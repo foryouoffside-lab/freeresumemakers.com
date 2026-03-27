@@ -1,4 +1,4 @@
-// pages/templates/compare/ats-friendly-vs-creative.js
+﻿// pages/templates/compare/ats-friendly-vs-creative.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -40,25 +40,25 @@ export default function CompareATSFriendlyVsCreative() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "ATS-Friendly vs Creative Templates",
-        "item": "https://freeresumemakers.com/templates/compare/ats-friendly-vs-creative"
+        "item": "https://freeresumemaker.xyz/templates/compare/ats-friendly-vs-creative"
       }
     ]
   };
@@ -154,8 +154,8 @@ export default function CompareATSFriendlyVsCreative() {
         {/* Open Graph */}
         <meta property="og:title" content="ATS-Friendly vs Creative Resume Templates: Complete Comparison Guide" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/ats-friendly-vs-creative.jpg" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/ats-friendly-vs-creative" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/ats-friendly-vs-creative.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/ats-friendly-vs-creative" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Free Resume Builder" />
         
@@ -163,11 +163,11 @@ export default function CompareATSFriendlyVsCreative() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ATS-Friendly vs Creative Resume Templates: Complete Comparison Guide" />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/ats-friendly-vs-creative.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/ats-friendly-vs-creative.jpg" />
         <meta name="twitter:creator" content="@freeresumebuilder" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/ats-friendly-vs-creative" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/ats-friendly-vs-creative" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -194,11 +194,11 @@ export default function CompareATSFriendlyVsCreative() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <span style={{ color: '#333', fontWeight: 500 }}>ATS-Friendly vs Creative</span>
         </div>
 
@@ -261,11 +261,11 @@ export default function CompareATSFriendlyVsCreative() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'comparison' && '⚡ Key Differences'}
-              {tab === 'industry' && '🏢 Industry Guide'}
-              {tab === 'templates' && '🎨 Template Examples'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'ðŸ“‹ Overview'}
+              {tab === 'comparison' && 'âš¡ Key Differences'}
+              {tab === 'industry' && 'ðŸ¢ Industry Guide'}
+              {tab === 'templates' && 'ðŸŽ¨ Template Examples'}
+              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
             </button>
           ))}
         </div>
@@ -309,7 +309,7 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '25px',
                 border: '2px solid #0056b3'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🤖</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ¤–</div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0056b3', textAlign: 'center', marginBottom: '15px' }}>
                   ATS-Friendly Templates
                 </h2>
@@ -325,7 +325,7 @@ export default function CompareATSFriendlyVsCreative() {
                     <li>No text boxes, graphics, or images in content areas</li>
                     <li>Clear section headers (EXPERIENCE, EDUCATION, etc.)</li>
                     <li>Standard date formats (MMM YYYY - MMM YYYY)</li>
-                    <li>Simple bullet points (• or - characters)</li>
+                    <li>Simple bullet points (â€¢ or - characters)</li>
                     <li>No tables or complex formatting</li>
                   </ul>
                 </div>
@@ -350,7 +350,7 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '25px',
                 border: '2px solid #8b5cf6'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎨</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸŽ¨</div>
                 <h2 style={{ fontSize: '1.8rem', color: '#8b5cf6', textAlign: 'center', marginBottom: '15px' }}>
                   Creative Templates
                 </h2>
@@ -507,7 +507,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <div style={{ fontWeight: 'bold', marginTop: '15px' }}>EXPERIENCE</div>
                   <div style={{ marginLeft: '10px' }}>
                     <div style={{ fontWeight: 'bold' }}>Software Engineer</div>
-                    <div>Tech Company • Jan 2020 - Present</div>
+                    <div>Tech Company â€¢ Jan 2020 - Present</div>
                     <div style={{ marginLeft: '15px' }}>- Developed web applications using React</div>
                     <div style={{ marginLeft: '15px' }}>- Led team of 5 junior developers</div>
                   </div>
@@ -515,7 +515,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <div style={{ fontWeight: 'bold', marginTop: '15px' }}>EDUCATION</div>
                   <div style={{ marginLeft: '10px' }}>
                     <div>BS in Computer Science</div>
-                    <div>University • 2016 - 2020</div>
+                    <div>University â€¢ 2016 - 2020</div>
                   </div>
                 </div>
                 <p style={{ marginTop: '15px', color: '#666', fontSize: '0.95rem' }}>
@@ -559,20 +559,20 @@ export default function CompareATSFriendlyVsCreative() {
                   </div>
                   
                   <div style={{ marginBottom: '15px', padding: '10px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '6px' }}>
-                    <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}>✉</span> john.smith@email.com • 
-                    <span style={{ fontWeight: 'bold', color: '#8b5cf6', marginLeft: '8px' }}>📱</span> (555) 123-4567
+                    <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}>âœ‰</span> john.smith@email.com â€¢ 
+                    <span style={{ fontWeight: 'bold', color: '#8b5cf6', marginLeft: '8px' }}>ðŸ“±</span> (555) 123-4567
                   </div>
                   
                   <div style={{ marginBottom: '15px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-                      <span style={{ fontSize: '1.2rem' }}>💼</span>
+                      <span style={{ fontSize: '1.2rem' }}>ðŸ’¼</span>
                       <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>EXPERIENCE</span>
                     </div>
                     <div style={{ paddingLeft: '15px', borderLeft: '2px solid #8b5cf6' }}>
                       <div style={{ fontWeight: 'bold' }}>Software Engineer</div>
-                      <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '5px' }}>Tech Company • 2020 - Present</div>
-                      <div style={{ fontSize: '0.95rem' }}>• Developed web applications using React</div>
-                      <div style={{ fontSize: '0.95rem' }}>• Led team of 5 junior developers</div>
+                      <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '5px' }}>Tech Company â€¢ 2020 - Present</div>
+                      <div style={{ fontSize: '0.95rem' }}>â€¢ Developed web applications using React</div>
+                      <div style={{ fontSize: '0.95rem' }}>â€¢ Led team of 5 junior developers</div>
                     </div>
                   </div>
                 </div>
@@ -592,7 +592,7 @@ export default function CompareATSFriendlyVsCreative() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0056b3', marginBottom: '15px' }}>
-                  ✅ ATS-Friendly Pros
+                  âœ… ATS-Friendly Pros
                 </h3>
                 <ul style={{ marginBottom: '25px' }}>
                   <li style={{ marginBottom: '8px' }}>Guaranteed ATS compatibility</li>
@@ -602,7 +602,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <li style={{ marginBottom: '8px' }}>Printer-friendly</li>
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0056b3', marginBottom: '15px' }}>
-                  ⚠️ ATS-Friendly Cons
+                  âš ï¸ ATS-Friendly Cons
                 </h3>
                 <ul>
                   <li style={{ marginBottom: '8px' }}>May look generic</li>
@@ -613,7 +613,7 @@ export default function CompareATSFriendlyVsCreative() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginBottom: '15px' }}>
-                  ✅ Creative Pros
+                  âœ… Creative Pros
                 </h3>
                 <ul style={{ marginBottom: '25px' }}>
                   <li style={{ marginBottom: '8px' }}>Stands out to human readers</li>
@@ -623,7 +623,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <li style={{ marginBottom: '8px' }}>Can showcase design skills</li>
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginBottom: '15px' }}>
-                  ⚠️ Creative Cons
+                  âš ï¸ Creative Cons
                 </h3>
                 <ul>
                   <li style={{ marginBottom: '8px' }}>ATS rejection risk</li>
@@ -658,7 +658,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🏢</span>
+                  <span style={{ fontSize: '2rem' }}>ðŸ¢</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Corporate / Business</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -697,7 +697,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>💻</span>
+                  <span style={{ fontSize: '2rem' }}>ðŸ’»</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Technology / Startups</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -736,7 +736,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🎨</span>
+                  <span style={{ fontSize: '2rem' }}>ðŸŽ¨</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Creative / Design</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -765,7 +765,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>⚖️</span>
+                  <span style={{ fontSize: '2rem' }}>âš–ï¸</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Government / Legal</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -794,7 +794,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🏥</span>
+                  <span style={{ fontSize: '2rem' }}>ðŸ¥</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Healthcare</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -832,7 +832,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>📚</span>
+                  <span style={{ fontSize: '2rem' }}>ðŸ“š</span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Education / Academic</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -899,7 +899,7 @@ export default function CompareATSFriendlyVsCreative() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginLeft: '55px' }}>
-                  <span style={{ fontWeight: 'bold', color: '#0056b3' }}>YES →</span>
+                  <span style={{ fontWeight: 'bold', color: '#0056b3' }}>YES â†’</span>
                   <span style={{ background: '#0056b3', color: 'white', padding: '8px 16px', borderRadius: '8px' }}>
                     Choose ATS-Friendly
                   </span>
@@ -922,7 +922,7 @@ export default function CompareATSFriendlyVsCreative() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginLeft: '55px' }}>
-                  <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}>YES →</span>
+                  <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}>YES â†’</span>
                   <span style={{ background: '#8b5cf6', color: 'white', padding: '8px 16px', borderRadius: '8px' }}>
                     Choose Creative
                   </span>
@@ -945,13 +945,13 @@ export default function CompareATSFriendlyVsCreative() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginLeft: '55px' }}>
-                  <span style={{ fontWeight: 'bold', color: '#f59e0b' }}>Large/Corporate →</span>
+                  <span style={{ fontWeight: 'bold', color: '#f59e0b' }}>Large/Corporate â†’</span>
                   <span style={{ background: '#0056b3', color: 'white', padding: '8px 16px', borderRadius: '8px' }}>
                     ATS-Friendly
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginLeft: '55px' }}>
-                  <span style={{ fontWeight: 'bold', color: '#f59e0b' }}>Small/Startup →</span>
+                  <span style={{ fontWeight: 'bold', color: '#f59e0b' }}>Small/Startup â†’</span>
                   <span style={{ background: '#8b5cf6', color: 'white', padding: '8px 16px', borderRadius: '8px' }}>
                     Creative
                   </span>
@@ -971,7 +971,7 @@ export default function CompareATSFriendlyVsCreative() {
             {/* ATS-Friendly Templates */}
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '1.5rem', color: '#0056b3', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>🤖</span> Top ATS-Friendly Templates
+                <span>ðŸ¤–</span> Top ATS-Friendly Templates
               </h3>
               <div style={{
                 display: 'grid',
@@ -1051,7 +1051,7 @@ export default function CompareATSFriendlyVsCreative() {
             {/* Creative Templates */}
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '1.5rem', color: '#8b5cf6', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>🎨</span> Top Creative Templates
+                <span>ðŸŽ¨</span> Top Creative Templates
               </h3>
               <div style={{
                 display: 'grid',
@@ -1136,7 +1136,7 @@ export default function CompareATSFriendlyVsCreative() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '15px', color: '#856404', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>💡</span> The Hybrid Approach: Best of Both Worlds
+                <span>ðŸ’¡</span> The Hybrid Approach: Best of Both Worlds
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', marginBottom: '15px' }}>
                 Many job seekers create two versions of their resume:
@@ -1177,16 +1177,16 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🤖</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ¤–</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0056b3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose ATS-Friendly If...
                 </h3>
                 <ul style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying to large corporations</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're in government, legal, or healthcare</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying through online portals</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You want guaranteed ATS compatibility</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're unsure about the company's ATS</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're applying to large corporations</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're in government, legal, or healthcare</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're applying through online portals</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You want guaranteed ATS compatibility</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're unsure about the company's ATS</li>
                 </ul>
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
                   <Link href="/templates/1" style={{
@@ -1209,16 +1209,16 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '30px',
                 border: '1px solid #d8b4fe'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎨</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸŽ¨</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#8b5cf6', textAlign: 'center', marginBottom: '15px' }}>
                   Choose Creative If...
                 </h3>
                 <ul style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                  <li style={{ marginBottom: '10px' }}>✓ You're in design, creative, or tech</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying to startups or agencies</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're emailing your resume directly</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You want to stand out visually</li>
-                  <li style={{ marginBottom: '10px' }}>✓ Your resume IS a design portfolio</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're in design, creative, or tech</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're applying to startups or agencies</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You're emailing your resume directly</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ You want to stand out visually</li>
+                  <li style={{ marginBottom: '10px' }}>âœ“ Your resume IS a design portfolio</li>
                 </ul>
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
                   <Link href="/templates/2" style={{
@@ -1284,35 +1284,35 @@ export default function CompareATSFriendlyVsCreative() {
                 gap: '20px'
               }}>
                 <div>
-                  <h4 style={{ color: '#0056b3', marginBottom: '10px' }}>✅ ATS-Friendly Checklist</h4>
+                  <h4 style={{ color: '#0056b3', marginBottom: '10px' }}>âœ… ATS-Friendly Checklist</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
-                    <li>☐ Simple, standard layout</li>
-                    <li>☐ Common fonts (Arial, Calibri, Times)</li>
-                    <li>☐ No text boxes or graphics</li>
-                    <li>☐ Standard section headers</li>
-                    <li>☐ Simple bullet points</li>
-                    <li>☐ Save as .docx or PDF</li>
+                    <li>â˜ Simple, standard layout</li>
+                    <li>â˜ Common fonts (Arial, Calibri, Times)</li>
+                    <li>â˜ No text boxes or graphics</li>
+                    <li>â˜ Standard section headers</li>
+                    <li>â˜ Simple bullet points</li>
+                    <li>â˜ Save as .docx or PDF</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 style={{ color: '#8b5cf6', marginBottom: '10px' }}>✅ Creative Checklist</h4>
+                  <h4 style={{ color: '#8b5cf6', marginBottom: '10px' }}>âœ… Creative Checklist</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
-                    <li>☐ Company uses modern ATS</li>
-                    <li>☐ Applying directly to hiring manager</li>
-                    <li>☐ Creative industry expected</li>
-                    <li>☐ Tested ATS compatibility</li>
-                    <li>☐ Have plain version as backup</li>
-                    <li>☐ Save as PDF for formatting</li>
+                    <li>â˜ Company uses modern ATS</li>
+                    <li>â˜ Applying directly to hiring manager</li>
+                    <li>â˜ Creative industry expected</li>
+                    <li>â˜ Tested ATS compatibility</li>
+                    <li>â˜ Have plain version as backup</li>
+                    <li>â˜ Save as PDF for formatting</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 style={{ color: '#f59e0b', marginBottom: '10px' }}>⚠️ Red Flags</h4>
+                  <h4 style={{ color: '#f59e0b', marginBottom: '10px' }}>âš ï¸ Red Flags</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
-                    <li>✗ Tables for layout</li>
-                    <li>✗ Text in header/footer</li>
-                    <li>✗ Important info in images</li>
-                    <li>✗ Columns that don't reflow</li>
-                    <li>✗ Unusual date formats</li>
+                    <li>âœ— Tables for layout</li>
+                    <li>âœ— Text in header/footer</li>
+                    <li>âœ— Important info in images</li>
+                    <li>âœ— Columns that don't reflow</li>
+                    <li>âœ— Unusual date formats</li>
                   </ul>
                 </div>
               </div>
@@ -1434,7 +1434,7 @@ export default function CompareATSFriendlyVsCreative() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

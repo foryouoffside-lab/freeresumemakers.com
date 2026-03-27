@@ -1,4 +1,4 @@
-// pages/blog/remote-work-resume-tips.js
+﻿// pages/blog/remote-work-resume-tips.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -14,26 +14,26 @@ export default function RemoteWorkResumeTips() {
     "@type": "Article",
     "headline": "Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs (2026 Guide)",
     "description": "Essential tips for remote work resumes. Learn how to highlight remote skills, self-management, and virtual collaboration to apply for work-from-home jobs in 2026.",
-    "image": "https://freeresumemakers.com/images/blog/remote-work-resume-tips.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/remote-work-resume-tips.jpg",
     "author": {
       "@type": "Person",
       "name": "Amanda Lee",
       "jobTitle": "Remote Work Specialist",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-08",
     "dateModified": "2026-02-08",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/remote-work-resume-tips"
+      "@id": "https://freeresumemaker.xyz/blog/remote-work-resume-tips"
     },
     "keywords": "remote work resume, work from home resume, remote job tips, virtual work, telecommuting resume, remote skills, hybrid work",
     "articleSection": "Remote Work"
@@ -48,19 +48,19 @@ export default function RemoteWorkResumeTips() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Remote Work Resume Tips",
-        "item": "https://freeresumemakers.com/blog/remote-work-resume-tips"
+        "item": "https://freeresumemaker.xyz/blog/remote-work-resume-tips"
       }
     ]
   };
@@ -116,8 +116,8 @@ export default function RemoteWorkResumeTips() {
         title="Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs (2026 Guide)"
         description="Essential tips for remote work resumes. Learn how to highlight remote skills, self-management, and virtual collaboration to apply for work-from-home jobs in 2026. Includes examples and tool lists."
         keywords="remote work resume, work from home resume, remote job tips, virtual work, telecommuting resume, remote skills, hybrid work, distributed teams, remote collaboration"
-        canonical="https://freeresumemakers.com/blog/remote-work-resume-tips"
-        image="https://freeresumemakers.com/images/blog/remote-work-resume-tips.jpg"
+        canonical="https://freeresumemaker.xyz/blog/remote-work-resume-tips"
+        image="https://freeresumemaker.xyz/images/blog/remote-work-resume-tips.jpg"
         type="article"
         publishedTime="2026-02-08"
         author="Amanda Lee"
@@ -154,9 +154,9 @@ export default function RemoteWorkResumeTips() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Remote Work Resume Tips</span>
         </div>
 
@@ -732,7 +732,7 @@ export default function RemoteWorkResumeTips() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Remote Resume Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes key remote work elements.
@@ -826,10 +826,10 @@ export default function RemoteWorkResumeTips() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs')}&url=https://freeresumemakers.com/blog/remote-work-resume-tips` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/remote-work-resume-tips` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/remote-work-resume-tips` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Remote Work Resume Tips')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/remote-work-resume-tips')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs')}&url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Remote Work Resume Tips')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/remote-work-resume-tips')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -916,7 +916,7 @@ export default function RemoteWorkResumeTips() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1002,7 +1002,7 @@ export default function RemoteWorkResumeTips() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 8, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 8, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

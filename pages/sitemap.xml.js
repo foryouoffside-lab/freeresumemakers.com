@@ -1,5 +1,5 @@
 ﻿// pages/sitemap.xml.js
-const EXTERNAL_DATA_URL = 'https://freeresumemakers.com';
+const EXTERNAL_DATA_URL = 'https://freeresumemaker.xyz';
 
 function generateSiteMap() {
   // Get current date for lastmod
@@ -306,3 +306,4 @@ export async function getServerSideProps({ res }) {
 export default function Sitemap() {
   return null;
 }
+

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -10,8 +10,8 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Free Resume Builder",
-    "url": "https://freeresumemakers.com/about",
-    "logo": "https://freeresumemakers.com/logo.png",
+    "url": "https://freeresumemaker.xyz/about",
+    "logo": "https://freeresumemaker.xyz/logo.png",
     "description": "A free, privacy-focused resume builder helping job seekers create professional, ATS-friendly resumes without any cost or sign-up requirements.",
     "foundingDate": "2026",
     "foundingLocation": "Global",
@@ -24,7 +24,7 @@ export default function About() {
     ],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://freeresumemakers.com/search?q={search_term_string}",
+      "target": "https://freeresumemaker.xyz/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -38,13 +38,13 @@ export default function About() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About Us",
-        "item": "https://freeresumemakers.com/about"
+        "item": "https://freeresumemaker.xyz/about"
       }
     ]
   };
@@ -103,7 +103,7 @@ export default function About() {
     "@type": "AboutPage",
     "name": "About Free Resume Builder",
     "description": "Learn about our free resume builder project. We are building a privacy-focused tool to help job seekers create professional, ATS-friendly resumes without any cost or sign-up requirements.",
-    "url": "https://freeresumemakers.com/about",
+    "url": "https://freeresumemaker.xyz/about",
     "mainEntity": organizationSchema
   };
 
@@ -113,8 +113,8 @@ export default function About() {
         title="About Us - Free Resume Builder | Privacy-Focused & ATS-Friendly Resume Tool"
         description="Learn about our free resume builder project. We are building a privacy-focused tool to help job seekers create professional, ATS-friendly resumes without any cost or sign-up requirements. 100% free forever."
         keywords="about resume builder, free resume tool, resume builder project, privacy focused resume builder, ATS friendly resume builder, free resume maker, online resume builder"
-        canonical="https://freeresumemakers.com/about"
-        image="https://freeresumemakers.com/images/about/og-about.jpg"
+        canonical="https://freeresumemaker.xyz/about"
+        image="https://freeresumemaker.xyz/images/about/og-about.jpg"
         type="website"
       />
       
@@ -160,7 +160,7 @@ export default function About() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>About Us</span>
         </nav>
 
@@ -592,7 +592,7 @@ export default function About() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {currentYear} Free Resume Builder. Helping job seekers create professional resumes that get noticed.</p>
+          <p>Â© {currentYear} Free Resume Builder. Helping job seekers create professional resumes that get noticed.</p>
           <div style={{marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <Link href="/privacy-policy" style={{color: '#999', textDecoration: 'none', fontSize: '0.8rem'}}>Privacy Policy</Link>
             <span style={{color: '#ddd'}}>|</span>

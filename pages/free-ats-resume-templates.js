@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -44,13 +44,13 @@ export default function FreeATSResumeTemplates() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Free ATS Resume Templates",
-        "item": "https://freeresumemakers.com/free-ats-resume-templates"
+        "item": "https://freeresumemaker.xyz/free-ats-resume-templates"
       }
     ]
   };
@@ -111,7 +111,7 @@ export default function FreeATSResumeTemplates() {
       "@type": "ListItem",
       "position": index + 1,
       "name": name,
-      "url": `https://freeresumemakers.com/templates/${id}`
+      "url": `https://freeresumemaker.xyz/templates/${id}`
     }))
   };
 
@@ -121,8 +121,8 @@ export default function FreeATSResumeTemplates() {
         title="Free ATS Resume Templates 2026 | ATS-Friendly Professional Designs | Instant Download"
         description="Download 20+ free ATS-friendly resume templates for 2026. Professionally designed templates that pass Applicant Tracking Systems. Includes templates for technology, business, healthcare, and creative roles. No sign-up required. Instant PDF download."
         keywords="free ATS resume templates 2026, ATS-friendly resume, free resume templates 2026, applicant tracking system templates, professional resume download, ATS resume templates, resume templates for job applications"
-        canonical="https://freeresumemakers.com/free-ats-resume-templates"
-        image="https://freeresumemakers.com/assets/og-ats-templates.jpg"
+        canonical="https://freeresumemaker.xyz/free-ats-resume-templates"
+        image="https://freeresumemaker.xyz/assets/og-ats-templates.jpg"
         type="website"
       />
       
@@ -157,7 +157,7 @@ export default function FreeATSResumeTemplates() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Free ATS Resume Templates</span>
         </nav>
 
@@ -387,7 +387,7 @@ export default function FreeATSResumeTemplates() {
                     textDecoration: 'none'
                   }}
                 >
-                  View All Templates →
+                  View All Templates â†’
                 </Link>
               </div>
             ))}
@@ -478,7 +478,7 @@ export default function FreeATSResumeTemplates() {
                 textDecoration: 'none'
               }}
             >
-              Read Complete ATS Guide →
+              Read Complete ATS Guide â†’
             </Link>
           </div>
         </div>
@@ -575,7 +575,7 @@ export default function FreeATSResumeTemplates() {
                   textDecoration: 'none'
                 }}
               >
-                {industry.linkText} →
+                {industry.linkText} â†’
               </Link>
             </div>
           ))}
@@ -624,7 +624,7 @@ export default function FreeATSResumeTemplates() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Browse All Templates →
+            Browse All Templates â†’
           </Link>
         </div>
 
@@ -636,7 +636,7 @@ export default function FreeATSResumeTemplates() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
           <div style={{ marginTop: '12px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/templates" style={{ color: '#999', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

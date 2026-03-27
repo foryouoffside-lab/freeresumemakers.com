@@ -79,25 +79,25 @@ export default function BySectionLanguages() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Languages Section",
-        "item": "https://freeresumemakers.com/templates/by-section/languages"
+        "item": "https://freeresumemaker.xyz/templates/by-section/languages"
       }
     ]
   };
@@ -114,7 +114,7 @@ export default function BySectionLanguages() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -135,7 +135,7 @@ export default function BySectionLanguages() {
           title={`${selectedTemplate.name} | Resume Template with Languages Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features ${selectedTemplate.languageFormat}. Perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes proficiency scales and language certification integration.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with languages section, multilingual resume template, bilingual resume, language proficiency resume, ${selectedTemplate.style} resume, language skills resume, professional resume with languages`}
-          canonical={`https://freeresumemakers.com/templates/by-section/languages/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/languages/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -432,8 +432,8 @@ export default function BySectionLanguages() {
         title="Resume Templates with Languages Section | Multilingual Resume Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated languages section for showcasing multilingual capabilities. Choose from modern, executive, technical, creative, academic, and customer-focused layouts designed to highlight your language proficiency, certifications, and global experience. Perfect for international business professionals, translators, global executives, and bilingual candidates."
         keywords="resume templates with languages section, multilingual resume template, bilingual resume, language proficiency resume, resume with language skills, languages section resume, international resume template, global executive resume, translator resume template, language skills resume"
-        canonical="https://freeresumemakers.com/templates/by-section/languages"
-        image="https://freeresumemakers.com/images/templates/languages-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/languages"
+        image="https://freeresumemaker.xyz/images/templates/languages-section-og.jpg"
         type="website"
       />
       

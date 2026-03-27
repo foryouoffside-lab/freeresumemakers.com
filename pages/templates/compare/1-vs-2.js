@@ -1,4 +1,4 @@
-// pages/templates/compare/1-vs-2.js
+﻿// pages/templates/compare/1-vs-2.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -40,25 +40,25 @@ export default function CompareTemplate1vs2() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "The Professional vs The Innovator",
-        "item": "https://freeresumemakers.com/templates/compare/1-vs-2"
+        "item": "https://freeresumemaker.xyz/templates/compare/1-vs-2"
       }
     ]
   };
@@ -149,18 +149,18 @@ export default function CompareTemplate1vs2() {
         {/* Open Graph */}
         <meta property="og:title" content="Template 1 vs 2: The Professional vs The Innovator | Compare Resume Templates" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/compare-1-vs-2.jpg" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/1-vs-2" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/compare-1-vs-2.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/1-vs-2" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 1 vs 2: The Professional vs The Innovator" />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/compare-1-vs-2.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/compare-1-vs-2.jpg" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/1-vs-2" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/1-vs-2" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -182,11 +182,11 @@ export default function CompareTemplate1vs2() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Professional vs The Innovator</span>
         </div>
 
@@ -248,11 +248,11 @@ export default function CompareTemplate1vs2() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'ðŸ“‹ Overview'}
+              {tab === 'features' && 'âš¡ Features'}
+              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
+              {tab === 'industry' && 'ðŸ¢ Industry Fit'}
+              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
             </button>
           ))}
         </div>
@@ -512,26 +512,26 @@ export default function CompareTemplate1vs2() {
                   {[
                     { feature: 'Layout Style', t1: 'Two-column with gradient header', t2: 'Two-column with visual connectors' },
                     { feature: 'Typography', t1: 'Classic serif fonts', t2: 'Modern sans-serif' },
-                    { feature: 'Experience Filtering', t1: '✓ Yes (job, internship, project)', t2: '✗ No' },
-                    { feature: 'Visual Connectors', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Centered Header', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Experience Filtering', t1: 'âœ“ Yes (job, internship, project)', t2: 'âœ— No' },
+                    { feature: 'Visual Connectors', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Centered Header', t1: 'âœ— No', t2: 'âœ“ Yes' },
                     { feature: 'Contact Pills/Badges', t1: 'Standard contact section', t2: 'Modern contact pills' },
                     { feature: 'Skills Display', t1: 'Grid layout (9 skills)', t2: 'Tags layout (5 skills)' },
-                    { feature: 'Experience Badges', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Professional Summary Box', t1: '✓ Yes', t2: '✓ Yes' },
-                    { feature: 'Languages Section', t1: '✓ Yes (4 max)', t2: '✓ Yes (2 max)' },
+                    { feature: 'Experience Badges', t1: 'âœ“ Yes', t2: 'âœ— No' },
+                    { feature: 'Professional Summary Box', t1: 'âœ“ Yes', t2: 'âœ“ Yes' },
+                    { feature: 'Languages Section', t1: 'âœ“ Yes (4 max)', t2: 'âœ“ Yes (2 max)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 9 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('âœ“') ? (
                           <span style={{ color: '#0070f3', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('âœ“') ? (
                           <span style={{ color: '#7928ca', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -552,7 +552,7 @@ export default function CompareTemplate1vs2() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginBottom: '15px' }}>
-                  ✅ The Professional - Pros
+                  âœ… The Professional - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.pros.map((item, index) => (
@@ -560,7 +560,7 @@ export default function CompareTemplate1vs2() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Professional - Cons
+                  âš ï¸ The Professional - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.cons.map((item, index) => (
@@ -570,7 +570,7 @@ export default function CompareTemplate1vs2() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginBottom: '15px' }}>
-                  ✅ The Innovator - Pros
+                  âœ… The Innovator - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.pros.map((item, index) => (
@@ -578,7 +578,7 @@ export default function CompareTemplate1vs2() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Innovator - Cons
+                  âš ï¸ The Innovator - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.cons.map((item, index) => (
@@ -628,7 +628,7 @@ export default function CompareTemplate1vs2() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/1" style={{ color: '#0070f3', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -656,7 +656,7 @@ export default function CompareTemplate1vs2() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/2" style={{ color: '#7928ca', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -836,7 +836,7 @@ export default function CompareTemplate1vs2() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🏢</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ¢</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0070f3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Professional
                 </h3>
@@ -866,7 +866,7 @@ export default function CompareTemplate1vs2() {
                 padding: '30px',
                 border: '1px solid #e5ccff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🚀</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸš€</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#7928ca', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Innovator
                 </h3>
@@ -899,7 +899,7 @@ export default function CompareTemplate1vs2() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: You Can Have Both
+                ðŸ’¡ Expert Tip: You Can Have Both
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Many professionals create multiple versions of their resume. Consider keeping both templates in your toolkit - use The Professional for corporate applications and The Innovator for creative roles. Our free resume builder lets you create unlimited resumes, so you can experiment with both!
@@ -1017,7 +1017,7 @@ export default function CompareTemplate1vs2() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

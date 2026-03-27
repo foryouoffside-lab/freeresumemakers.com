@@ -79,25 +79,25 @@ export default function BySectionProjects() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Templates by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Projects Section",
-        "item": "https://freeresumemakers.com/templates/by-section/projects"
+        "item": "https://freeresumemaker.xyz/templates/by-section/projects"
       }
     ]
   };
@@ -114,7 +114,7 @@ export default function BySectionProjects() {
       "position": index + 1,
       "name": template.name,
       "description": template.description,
-      "url": `https://freeresumemakers.com/templates/${template.id}`
+      "url": `https://freeresumemaker.xyz/templates/${template.id}`
     }))
   };
 
@@ -135,7 +135,7 @@ export default function BySectionProjects() {
           title={`${selectedTemplate.name} | Resume Template with Projects Section | Professional Layout`}
           description={`${selectedTemplate.description} This ${selectedTemplate.style} template features ${selectedTemplate.projectFormat}. Perfect for ${selectedTemplate.bestFor.toLowerCase()}. Includes project showcases, technology stacks, and measurable outcomes.`}
           keywords={`${selectedTemplate.name.toLowerCase()}, resume template with projects section, project portfolio resume, technical project resume, ${selectedTemplate.style} resume, project showcase template, portfolio resume template, developer resume template`}
-          canonical={`https://freeresumemakers.com/templates/by-section/projects/${selectedTemplate.id}`}
+          canonical={`https://freeresumemaker.xyz/templates/by-section/projects/${selectedTemplate.id}`}
           noindex={false}
         />
 
@@ -449,8 +449,8 @@ export default function BySectionProjects() {
         title="Resume Templates with Projects Section | Project Portfolio & Technical Showcase Layouts 2026"
         description="Browse 20+ professional resume templates that feature a dedicated projects section for showcasing your work, portfolio, and technical achievements. Choose from technical, creative, academic, business, engineering, and open source layouts designed to highlight your project experience, technology stacks, and measurable outcomes. Perfect for developers, designers, engineers, project managers, and creative professionals."
         keywords="resume templates with projects section, project portfolio resume, technical project resume, developer portfolio resume, creative project showcase, engineering project resume, open source contributions resume, project management resume, portfolio resume template, projects section resume"
-        canonical="https://freeresumemakers.com/templates/by-section/projects"
-        image="https://freeresumemakers.com/images/templates/projects-section-og.jpg"
+        canonical="https://freeresumemaker.xyz/templates/by-section/projects"
+        image="https://freeresumemaker.xyz/images/templates/projects-section-og.jpg"
         type="website"
       />
       

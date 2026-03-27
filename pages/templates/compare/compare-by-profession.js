@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { getAllTemplateIds, getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
@@ -9,7 +9,7 @@ export default function ByProfession() {
   const professionMap = {
     tech: {
       ids: [1, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 18, 20],
-      icon: "💻",
+      icon: "ðŸ’»",
       title: "Tech & IT",
       description: "Software developers, engineers, IT professionals, and tech specialists",
       keyFeatures: ["Technical skills showcase", "Project highlights", "Certifications section", "Modern design", "Code-friendly layout"],
@@ -20,7 +20,7 @@ export default function ByProfession() {
     },
     business: {
       ids: [1, 2, 4, 7, 8, 11, 12, 14, 15, 17, 19],
-      icon: "💼",
+      icon: "ðŸ’¼",
       title: "Business & Management",
       description: "Business analysts, managers, consultants, and corporate professionals",
       keyFeatures: ["Professional layout", "Achievement focus", "Clean typography", "ATS-optimized", "Leadership highlights"],
@@ -31,7 +31,7 @@ export default function ByProfession() {
     },
     healthcare: {
       ids: [2, 6, 7, 8, 11, 12, 14, 19],
-      icon: "🏥",
+      icon: "ðŸ¥",
       title: "Healthcare",
       description: "Doctors, nurses, medical professionals, and healthcare administrators",
       keyFeatures: ["Certifications section", "Clean layout", "Professional design", "Experience focus", "Licensing display"],
@@ -42,7 +42,7 @@ export default function ByProfession() {
     },
     legal: {
       ids: [2, 4, 7, 8, 11, 12, 14],
-      icon: "⚖️",
+      icon: "âš–ï¸",
       title: "Legal",
       description: "Lawyers, attorneys, paralegals, and legal professionals",
       keyFeatures: ["Conservative design", "Black & white", "Publications section", "Professional tone", "High ATS score"],
@@ -53,7 +53,7 @@ export default function ByProfession() {
     },
     creative: {
       ids: [3, 5, 7, 8, 9, 11, 13, 15, 16, 17],
-      icon: "🎨",
+      icon: "ðŸŽ¨",
       title: "Creative & Design",
       description: "Graphic designers, artists, copywriters, and creative professionals",
       keyFeatures: ["Visual design elements", "Color accents", "Portfolio showcase", "Modern typography", "Creative layouts"],
@@ -64,7 +64,7 @@ export default function ByProfession() {
     },
     executive: {
       ids: [1, 4, 7, 8, 11, 12, 14, 15, 17, 20],
-      icon: "👔",
+      icon: "ðŸ‘”",
       title: "Executive & Leadership",
       description: "C-suite executives, directors, and senior leadership roles",
       keyFeatures: ["Comprehensive layout", "Achievement metrics", "Leadership focus", "Strategic highlights", "Professional polish"],
@@ -75,7 +75,7 @@ export default function ByProfession() {
     },
     student: {
       ids: [2, 5, 6, 9, 10, 12, 16, 17],
-      icon: "🎓",
+      icon: "ðŸŽ“",
       title: "Students & Entry-Level",
       description: "College students, recent graduates, interns, and entry-level professionals",
       keyFeatures: ["Education focus", "Skills grid", "Project showcase", "Internship highlights", "ATS-friendly"],
@@ -86,7 +86,7 @@ export default function ByProfession() {
     },
     academic: {
       ids: [7, 11, 19],
-      icon: "📚",
+      icon: "ðŸ“š",
       title: "Academic & Research",
       description: "Professors, researchers, PhD candidates, and academic professionals",
       keyFeatures: ["Publications section", "Research highlights", "Conference presentations", "Academic timeline", "Citations ready"],
@@ -97,7 +97,7 @@ export default function ByProfession() {
     },
     engineering: {
       ids: [1, 6, 12, 18, 20],
-      icon: "🔧",
+      icon: "ðŸ”§",
       title: "Engineering",
       description: "Civil, mechanical, electrical, and software engineers",
       keyFeatures: ["Technical skills", "Project portfolio", "Certifications", "Timeline view", "Technical depth"],
@@ -108,7 +108,7 @@ export default function ByProfession() {
     },
     marketing: {
       ids: [3, 5, 9, 11, 13, 16, 17],
-      icon: "📢",
+      icon: "ðŸ“¢",
       title: "Marketing & Communications",
       description: "Marketing managers, content creators, social media specialists, and PR professionals",
       keyFeatures: ["Creative layout", "Campaign highlights", "Metrics focus", "Modern design", "Portfolio ready"],
@@ -139,9 +139,9 @@ export default function ByProfession() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemakers.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemakers.com/templates" },
-      { "@type": "ListItem", "position": 3, "name": "Templates by Profession", "item": "https://freeresumemakers.com/templates/compare/by-profession" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemaker.xyz/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemaker.xyz/templates" },
+      { "@type": "ListItem", "position": 3, "name": "Templates by Profession", "item": "https://freeresumemaker.xyz/templates/compare/by-profession" }
     ]
   };
 
@@ -195,12 +195,12 @@ export default function ByProfession() {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/by-profession" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/by-profession" />
         
         <meta property="og:title" content="Best Resume Templates by Profession: Industry-Specific Recommendations (2026)" />
         <meta property="og:description" content="Find your perfect resume template based on your profession. Expert-curated recommendations for 10+ professions." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/by-profession" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/by-profession" />
         <meta property="og:site_name" content="FreeResumeMakers" />
         
         <meta name="twitter:card" content="summary_large_image" />
@@ -223,11 +223,11 @@ export default function ByProfession() {
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
           <Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>â€º</span>
           <span style={{ color: '#1e293b', fontWeight: '500' }}>By Profession</span>
         </nav>
 
@@ -317,7 +317,7 @@ export default function ByProfession() {
                     fontSize: '0.75rem',
                     fontWeight: '500'
                   }}>
-                    📊 ATS Score: {profession.atsScore}%
+                    ðŸ“Š ATS Score: {profession.atsScore}%
                   </span>
                   <span style={{ 
                     background: '#eef2ff', 
@@ -327,7 +327,7 @@ export default function ByProfession() {
                     fontSize: '0.75rem',
                     fontWeight: '500'
                   }}>
-                    ⭐ Experience: {profession.averageExperience}
+                    â­ Experience: {profession.averageExperience}
                   </span>
                 </div>
               </div>
@@ -337,7 +337,7 @@ export default function ByProfession() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {profession.keyFeatures.slice(0, 4).map((feature, idx) => (
                     <span key={idx} style={{ background: '#f1f5f9', padding: '4px 10px', borderRadius: '20px', fontSize: '0.75rem', color: '#475569' }}>
-                      ✓ {feature}
+                      âœ“ {feature}
                     </span>
                   ))}
                 </div>
@@ -398,7 +398,7 @@ export default function ByProfession() {
                     fontSize: '0.9rem'
                   }}
                 >
-                  View All {profession.title} Templates →
+                  View All {profession.title} Templates â†’
                 </Link>
               </div>
             </div>
@@ -408,7 +408,7 @@ export default function ByProfession() {
         {/* Quick Comparison Table */}
         <div style={{ marginTop: '56px', marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📊 Quick Comparison: Best Template by Profession
+            ðŸ“Š Quick Comparison: Best Template by Profession
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -471,27 +471,27 @@ export default function ByProfession() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            💡 Industry-Specific Resume Tips
+            ðŸ’¡ Industry-Specific Resume Tips
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>💻</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ’»</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Tech & IT</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Highlight technical skills, GitHub projects, and certifications. Use modern templates that show design awareness.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>💼</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ’¼</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Business</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Focus on achievements and metrics. Use clean, ATS-friendly templates with professional typography.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🏥</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸ¥</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Healthcare</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Include certifications, licenses, and clinical experience. Use clean, conservative templates.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🎨</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ðŸŽ¨</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Creative</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Show your design skills through template choice. Include portfolio links and visual projects.</p>
             </div>
@@ -501,7 +501,7 @@ export default function ByProfession() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ❓ Frequently Asked Questions
+            â“ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <details style={{ 
@@ -566,7 +566,7 @@ export default function ByProfession() {
         {/* Related Resources */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            🔍 Explore More Resources
+            ðŸ” Explore More Resources
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             <Link href="/templates/compare/ats-friendly-vs-creative" style={{ padding: '12px 24px', background: 'white', borderRadius: '12px', textDecoration: 'none', color: '#1e293b', fontSize: '0.875rem', fontWeight: '500', border: '1px solid #e2e8f0', display: 'inline-block' }}>

@@ -1,4 +1,4 @@
-// pages/professions/finance.js
+﻿// pages/professions/finance.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -85,7 +85,7 @@ export default function FinanceExamples() {
           {
             title: 'Acquisition of TechSolutions Pvt Ltd',
             role: 'Analyst',
-            value: '₹150Cr',
+            value: 'â‚¹150Cr',
             year: '2025',
             description: 'Advised ABC Corp on strategic acquisition of TechSolutions, a leading SaaS provider. Led financial modeling and due diligence.',
             outcome: 'Deal closed 2 months ahead of schedule with favorable terms'
@@ -93,7 +93,7 @@ export default function FinanceExamples() {
           {
             title: 'Series B Funding for HealthTech Startup',
             role: 'Analyst',
-            value: '₹80Cr',
+            value: 'â‚¹80Cr',
             year: '2024',
             description: 'Assisted in raising growth capital from PE investors for healthcare technology platform.',
             outcome: 'Oversubscribed by 2.5x with top-tier investors'
@@ -101,7 +101,7 @@ export default function FinanceExamples() {
           {
             title: 'Sell-side Advisory for Manufacturing Co',
             role: 'Analyst',
-            value: '₹70Cr',
+            value: 'â‚¹70Cr',
             year: '2023',
             description: 'Advised promoters on strategic sale to international strategic buyer. Built valuation models and managed data room.',
             outcome: 'Achieved 3x EBITDA multiple premium'
@@ -170,11 +170,11 @@ export default function FinanceExamples() {
             company: 'Deloitte India, Gurugram',
             period: '2020-Present',
             points: [
-              'Lead audit and assurance engagements for 15+ clients including listed companies and private enterprises with revenues up to ₹500Cr',
+              'Lead audit and assurance engagements for 15+ clients including listed companies and private enterprises with revenues up to â‚¹500Cr',
               'Successfully led Ind AS implementation for 5 manufacturing companies, ensuring smooth transition',
-              'Managed client portfolio of ₹3Cr in annual audit fees, achieving 95% client retention',
+              'Managed client portfolio of â‚¹3Cr in annual audit fees, achieving 95% client retention',
               'Conducted 20+ training sessions on Ind AS and audit standards for 50+ team members',
-              'Identified ₹25Cr in tax savings for clients through strategic tax planning',
+              'Identified â‚¹25Cr in tax savings for clients through strategic tax planning',
               'Received "Exceptional Performance" rating for 3 consecutive years'
             ]
           },
@@ -185,14 +185,14 @@ export default function FinanceExamples() {
             points: [
               'Managed statutory audits for 12+ clients across manufacturing, real estate, and services sectors',
               'Prepared financial statements in compliance with Ind AS and Schedule III requirements for 8 clients',
-              'Handled direct tax assessments for 10 corporate clients, successfully resolving ₹15Cr in tax disputes',
+              'Handled direct tax assessments for 10 corporate clients, successfully resolving â‚¹15Cr in tax disputes',
               'Mentored and trained 15 article assistants, with 5 receiving ICAI All India Ranks',
               'Reduced audit turnaround time by 25% through process optimization'
             ]
           }
         ],
         clients: [
-          'ABC Manufacturing Ltd (Listed) - Revenue ₹350Cr',
+          'ABC Manufacturing Ltd (Listed) - Revenue â‚¹350Cr',
           'XYZ Realty Pvt Ltd - Portfolio of 12 projects',
           'PQR Healthcare Ltd - Chain of 25 hospitals',
           'TechStart Solutions Inc - Series B funded startup'
@@ -218,19 +218,19 @@ export default function FinanceExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Finance Resumes",
-        "item": "https://freeresumemakers.com/professions/finance"
+        "item": "https://freeresumemaker.xyz/professions/finance"
       }
     ]
   };
@@ -267,7 +267,7 @@ export default function FinanceExamples() {
           title={`${selectedExample.title} | Finance Resume Example 2026 | Free Sample Template`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience. Includes ${selectedExample.skills.slice(0, 3).join(', ')} and more. Download as template or customize with our free resume builder for finance professionals.`}
           keywords={`${selectedExample.title.toLowerCase()}, finance resume, investment banking resume, chartered accountant CV, financial analyst resume, M&A resume, financial modeling resume, audit resume, taxation resume, CFA resume, CA resume sample, finance resume 2026`}
-          canonical={`https://freeresumemakers.com/professions/finance/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/finance/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -294,11 +294,11 @@ export default function FinanceExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/finance" style={{ color: '#666', textDecoration: 'none' }}>Finance Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -329,7 +329,7 @@ export default function FinanceExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Finance Resume Examples
+            â† Back to All Finance Resume Examples
           </button>
 
           {/* Template Header */}
@@ -596,7 +596,7 @@ export default function FinanceExamples() {
                       </p>
                       {deal.outcome && (
                         <p style={{ color: '#0070f3', fontSize: '12px', margin: '4px 0 0 0' }}>
-                          ✓ {deal.outcome}
+                          âœ“ {deal.outcome}
                         </p>
                       )}
                     </div>
@@ -697,8 +697,8 @@ export default function FinanceExamples() {
         title="Finance Resume Examples | Investment Banking & CA Resumes 2026 | Professional Samples"
         description="Browse 20+ professional finance resume examples for investment banking analysts, chartered accountants, financial analysts, and finance professionals. Sample resumes with financial modeling, M&A deals, audit experience, taxation expertise, and Ind AS implementation. Learn from real examples to create your winning finance resume for 2026 hiring season."
         keywords="finance resume, investment banking resume, CA resume, chartered accountant resume, financial analyst resume, M&A resume, financial modeling resume, audit resume, taxation resume, CFA resume, investment banking CV, accounting resume, finance professional resume, finance resume 2026, CA final resume"
-        canonical="https://freeresumemakers.com/professions/finance"
-        image="https://freeresumemakers.com/images/professions/finance-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/finance"
+        image="https://freeresumemaker.xyz/images/professions/finance-og.jpg"
         type="website"
       />
       
@@ -729,9 +729,9 @@ export default function FinanceExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Finance Resumes</span>
         </nav>
 
@@ -802,7 +802,7 @@ export default function FinanceExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Deal Transaction Value</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CFA • CA • CPA</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CFA â€¢ CA â€¢ CPA</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -941,7 +941,7 @@ export default function FinanceExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -970,7 +970,7 @@ export default function FinanceExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Financial Impact</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "$300M+ deal value", "Identified ₹25Cr in tax savings", "Managed ₹3Cr audit portfolio", "Achieved 95% client retention". Numbers demonstrate tangible value to employers.</p>
+              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "$300M+ deal value", "Identified â‚¹25Cr in tax savings", "Managed â‚¹3Cr audit portfolio", "Achieved 95% client retention". Numbers demonstrate tangible value to employers.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Technical Expertise</h3>
@@ -1025,7 +1025,7 @@ export default function FinanceExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

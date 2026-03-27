@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
@@ -140,10 +140,10 @@ export default function Compare1Vs2() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemakers.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemakers.com/templates" },
-      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemakers.com/templates/compare" },
-      { "@type": "ListItem", "position": 4, "name": "Template 1 vs Template 2", "item": "https://freeresumemakers.com/templates/compare/1-vs-2" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeresumemaker.xyz/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Templates", "item": "https://freeresumemaker.xyz/templates" },
+      { "@type": "ListItem", "position": 3, "name": "Template Comparisons", "item": "https://freeresumemaker.xyz/templates/compare" },
+      { "@type": "ListItem", "position": 4, "name": "Template 1 vs Template 2", "item": "https://freeresumemaker.xyz/templates/compare/1-vs-2" }
     ]
   };
 
@@ -159,14 +159,14 @@ export default function Compare1Vs2() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/1-vs-2" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/1-vs-2" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Template 1 vs Template 2: Obsidian vs Classic Horizon - Complete Resume Template Comparison" />
         <meta property="og:description" content="Which resume template is better for your career? Compare Obsidian and Classic Horizon side-by-side with detailed feature analysis, pros & cons, and expert recommendations." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/1-vs-2" />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/template-comparison-1vs2.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/1-vs-2" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-1vs2.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="FreeResumeMakers" />
@@ -176,7 +176,7 @@ export default function Compare1Vs2() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 1 vs Template 2: Obsidian vs Classic Horizon Comparison" />
         <meta name="twitter:description" content="Find the perfect resume template with our detailed comparison of Obsidian and Classic Horizon. Features, limits, and expert recommendations included." />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/template-comparison-1vs2.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-1vs2.jpg" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content={comparisonDate} />
@@ -209,11 +209,11 @@ export default function Compare1Vs2() {
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>›</li>
+            <li style={{ color: '#64748b' }}>â€º</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 1 vs Template 2</li>
           </ol>
         </nav>
@@ -230,7 +230,7 @@ export default function Compare1Vs2() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              🔥 2026 UPDATED COMPARISON
+              ðŸ”¥ 2026 UPDATED COMPARISON
             </span>
           </div>
           <h1 style={{ 
@@ -262,13 +262,13 @@ export default function Compare1Vs2() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              📊 Updated: March 2026
+              ðŸ“Š Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              ⭐ 4.9/5 Average Rating
+              â­ 4.9/5 Average Rating
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              📄 Both ATS-Friendly
+              ðŸ“„ Both ATS-Friendly
             </div>
           </div>
         </header>
@@ -301,7 +301,7 @@ export default function Compare1Vs2() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              ⚡ MOST POPULAR
+              âš¡ MOST POPULAR
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
@@ -313,7 +313,7 @@ export default function Compare1Vs2() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template1Sections.map(section => (
@@ -326,7 +326,7 @@ export default function Compare1Vs2() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '16px', borderRadius: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid #e2e8f0' }}>
@@ -350,7 +350,7 @@ export default function Compare1Vs2() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[1].bestFor.map(role => (
@@ -377,7 +377,7 @@ export default function Compare1Vs2() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 1 →
+              View Template 1 â†’
             </Link>
           </div>
 
@@ -402,7 +402,7 @@ export default function Compare1Vs2() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              🌟 GREAT FOR BEGINNERS
+              ðŸŒŸ GREAT FOR BEGINNERS
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
@@ -414,7 +414,7 @@ export default function Compare1Vs2() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📋 Sections Included
+                ðŸ“‹ Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template2Sections.map(section => (
@@ -427,7 +427,7 @@ export default function Compare1Vs2() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                📊 Content Limits
+                ðŸ“Š Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '16px', borderRadius: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid #e2e8f0' }}>
@@ -451,7 +451,7 @@ export default function Compare1Vs2() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                🎯 Best For
+                ðŸŽ¯ Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[2].bestFor.map(role => (
@@ -478,7 +478,7 @@ export default function Compare1Vs2() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 2 →
+              View Template 2 â†’
             </Link>
           </div>
         </div>
@@ -486,7 +486,7 @@ export default function Compare1Vs2() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            📊 Feature Comparison Table
+            ðŸ“Š Feature Comparison Table
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -512,23 +512,23 @@ export default function Compare1Vs2() {
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Image/Avatar Support</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Experience Filtering</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ By type (work, internship)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ Single list</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… By type (work, internship)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ Single list</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Languages Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Projects Section</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>✅ Yes (up to 4)</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>❌ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âœ… Yes (up to 4)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>âŒ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Maximum Skills</td>
@@ -558,12 +558,12 @@ export default function Compare1Vs2() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            🤔 Which Template Should You Choose?
+            ðŸ¤” Which Template Should You Choose?
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>💼</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ’¼</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 1 (Obsidian) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You have 5+ years of professional experience</li>
@@ -576,7 +576,7 @@ export default function Compare1Vs2() {
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🎓</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸŽ“</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 2 (Classic Horizon) If:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>You're a student, intern, or recent graduate</li>
@@ -589,15 +589,15 @@ export default function Compare1Vs2() {
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🤝</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>ðŸ¤</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Both Templates Excel At:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
-                <li>✅ ATS-Friendly formatting (95%+ compatibility)</li>
-                <li>✅ Professional PDF export with proper formatting</li>
-                <li>✅ Mobile-responsive design for viewing on any device</li>
-                <li>✅ Easy customization through our resume builder</li>
-                <li>✅ Clean, professional typography</li>
-                <li>✅ Free to use with no hidden costs</li>
+                <li>âœ… ATS-Friendly formatting (95%+ compatibility)</li>
+                <li>âœ… Professional PDF export with proper formatting</li>
+                <li>âœ… Mobile-responsive design for viewing on any device</li>
+                <li>âœ… Easy customization through our resume builder</li>
+                <li>âœ… Clean, professional typography</li>
+                <li>âœ… Free to use with no hidden costs</li>
               </ul>
             </div>
           </div>
@@ -606,17 +606,17 @@ export default function Compare1Vs2() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            ⚖️ Pros & Cons Analysis
+            âš–ï¸ Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 1 (Obsidian) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 1 (Obsidian) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 1 (Obsidian) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 1 (Obsidian) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[1].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -624,13 +624,13 @@ export default function Compare1Vs2() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✅ Template 2 (Classic Horizon) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>âœ… Template 2 (Classic Horizon) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[2].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>❌ Template 2 (Classic Horizon) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>âŒ Template 2 (Classic Horizon) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[2].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -643,7 +643,7 @@ export default function Compare1Vs2() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            ❓ Frequently Asked Questions
+            â“ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -696,7 +696,7 @@ export default function Compare1Vs2() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            🔍 Explore More Template Comparisons
+            ðŸ” Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

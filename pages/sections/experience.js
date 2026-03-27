@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function ExperienceSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/experience#article",
+        "@id": "https://freeresumemaker.xyz/sections/experience#article",
         "headline": "How to Write Work Experience on Resume: Complete Guide with Examples 2026",
         "description": "Expert guide on writing work experience on your resume. Learn the STAR method, powerful action verbs, and how to quantify achievements with real examples. Land more interviews with a compelling experience section.",
-        "image": "https://freeresumemakers.com/images/work-experience-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/work-experience-guide-2026.jpg",
         "datePublished": "2026-01-05T08:00:00+00:00",
         "dateModified": "2026-03-23T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/experience"
+          "@id": "https://freeresumemaker.xyz/sections/experience"
         },
         "keywords": "work experience resume, resume experience section, job history resume, employment history, achievements resume, STAR method resume, how to write work experience"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/experience#howto",
+        "@id": "https://freeresumemaker.xyz/sections/experience#howto",
         "name": "How to Write Work Experience on Your Resume",
         "description": "Step-by-step guide to writing compelling work experience bullet points that showcase your achievements and land interviews.",
         "estimatedCost": {
@@ -105,31 +105,31 @@ export default function ExperienceSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/experience#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/experience#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Work Experience Guide",
-            "item": "https://freeresumemakers.com/sections/experience"
+            "item": "https://freeresumemaker.xyz/sections/experience"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/experience#faq",
+        "@id": "https://freeresumemaker.xyz/sections/experience#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -144,7 +144,7 @@ export default function ExperienceSectionGuide() {
             "name": "How many bullet points per job should I include?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Use 4-6 bullet points for your current or most recent role, 3-4 for previous roles, and 2-3 for older positions. Focus on quality over quantity—each bullet should demonstrate a significant achievement."
+              "text": "Use 4-6 bullet points for your current or most recent role, 3-4 for previous roles, and 2-3 for older positions. Focus on quality over quantityâ€”each bullet should demonstrate a significant achievement."
             }
           },
           {
@@ -176,7 +176,7 @@ export default function ExperienceSectionGuide() {
     },
     {
       q: "How many bullet points per job should I include?",
-      a: "Use 4-6 bullet points for your current or most recent role, 3-4 for previous roles, and 2-3 for older positions. Focus on quality over quantity—each bullet should demonstrate a significant, quantifiable achievement rather than routine duties."
+      a: "Use 4-6 bullet points for your current or most recent role, 3-4 for previous roles, and 2-3 for older positions. Focus on quality over quantityâ€”each bullet should demonstrate a significant, quantifiable achievement rather than routine duties."
     },
     {
       q: "How do I write work experience with no experience?",
@@ -277,7 +277,7 @@ export default function ExperienceSectionGuide() {
         title="How to Write Work Experience on Resume: Complete Guide with Examples 2026 | FreeResumeMakers"
         description="Expert guide on writing work experience on your resume. Learn the STAR method, powerful action verbs, and how to quantify achievements with real examples. Improve your job applications and land more interviews."
         keywords="work experience resume, resume experience section, job history resume, employment history, achievements resume, STAR method resume, how to write work experience, resume bullet points"
-        canonical="https://freeresumemakers.com/sections/experience"
+        canonical="https://freeresumemaker.xyz/sections/experience"
         type="article"
         publishedTime="2026-01-05T08:00:00+00:00"
         modifiedTime="2026-03-23T10:00:00+00:00"
@@ -290,7 +290,7 @@ export default function ExperienceSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/experience" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/experience" />
       </Head>
 
       <main style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
@@ -304,9 +304,9 @@ export default function ExperienceSectionGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Work Experience Guide</span>
         </nav>
 
@@ -316,14 +316,14 @@ export default function ExperienceSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 12 min read</span>
-            <span>👁️ 45,000+ readers</span>
-            <span>📊 40% More Interviews</span>
+            <span>ðŸ“… Updated: March 23, 2026</span>
+            <span>â±ï¸ 12 min read</span>
+            <span>ðŸ‘ï¸ 45,000+ readers</span>
+            <span>ðŸ“Š 40% More Interviews</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
-            Your work experience section is the most important part of your resume—it's where you prove your value to employers. 
+            Your work experience section is the most important part of your resumeâ€”it's where you prove your value to employers. 
             <strong>Resumes with quantified achievements receive 40% more interview calls</strong> than those listing only job duties. 
             Learn how to write compelling bullet points that showcase your accomplishments and land interviews.
           </p>
@@ -337,14 +337,14 @@ export default function ExperienceSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#star-method" style={{ color: '#0070f3', textDecoration: 'none' }}>• STAR Method</a>
-            <a href="#action-verbs" style={{ color: '#0070f3', textDecoration: 'none' }}>• Action Verbs</a>
-            <a href="#formula" style={{ color: '#0070f3', textDecoration: 'none' }}>• The Formula</a>
-            <a href="#before-after" style={{ color: '#0070f3', textDecoration: 'none' }}>• Before vs After</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Complete Examples</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#star-method" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ STAR Method</a>
+            <a href="#action-verbs" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Action Verbs</a>
+            <a href="#formula" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ The Formula</a>
+            <a href="#before-after" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Before vs After</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Complete Examples</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -415,7 +415,7 @@ export default function ExperienceSectionGuide() {
 
           <div style={{ background: '#f0f7ff', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.6' }}>
-              <strong>💡 Pro Tip:</strong> Not every bullet needs to include all four STAR elements. Focus on Action and Result—these are what employers care about most. 
+              <strong>ðŸ’¡ Pro Tip:</strong> Not every bullet needs to include all four STAR elements. Focus on Action and Resultâ€”these are what employers care about most. 
               Combine them with quantifiable metrics for maximum impact.
             </p>
           </div>
@@ -441,7 +441,7 @@ export default function ExperienceSectionGuide() {
           
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <p style={{ margin: 0, fontFamily: 'monospace', fontSize: '15px', lineHeight: '1.6' }}>
-              ✅ <strong>Led</strong> cross-functional team of 12 <strong>to implement</strong> agile methodology, <strong>resulting in</strong> 35% faster delivery times and $500K cost savings.
+              âœ… <strong>Led</strong> cross-functional team of 12 <strong>to implement</strong> agile methodology, <strong>resulting in</strong> 35% faster delivery times and $500K cost savings.
             </p>
           </div>
         </section>
@@ -475,11 +475,11 @@ export default function ExperienceSectionGuide() {
           {beforeAfterExamples.map((example, idx) => (
             <div key={idx} style={{ marginBottom: '24px' }}>
               <div style={{ background: '#fee2e2', padding: '16px', borderRadius: '12px', marginBottom: '12px', borderLeft: '4px solid #dc2626' }}>
-                <p style={{ margin: 0, fontWeight: '600', color: '#991b1b' }}>❌ Before (Weak):</p>
+                <p style={{ margin: 0, fontWeight: '600', color: '#991b1b' }}>âŒ Before (Weak):</p>
                 <p style={{ margin: '8px 0 0 0', fontStyle: 'italic' }}>"{example.before}"</p>
               </div>
               <div style={{ background: '#d1fae5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                <p style={{ margin: 0, fontWeight: '600', color: '#065f46' }}>✅ After (Strong):</p>
+                <p style={{ margin: 0, fontWeight: '600', color: '#065f46' }}>âœ… After (Strong):</p>
                 <p style={{ margin: '8px 0 0 0', fontStyle: 'italic' }}>"{example.after}"</p>
               </div>
             </div>
@@ -509,7 +509,7 @@ export default function ExperienceSectionGuide() {
         {/* Formatting Tips Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            📝 Formatting Best Practices
+            ðŸ“ Formatting Best Practices
           </h2>
           <div style={{
             display: 'grid',
@@ -518,19 +518,19 @@ export default function ExperienceSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px' }}>
-              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>✓ Reverse Chronological Order</h4>
+              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>âœ“ Reverse Chronological Order</h4>
               <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>List your most recent job first, working backwards through your career history.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px' }}>
-              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>✓ Include Key Details</h4>
+              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>âœ“ Include Key Details</h4>
               <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Company name, location, job title, and dates (month/year format recommended).</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px' }}>
-              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>✓ Tailor to Job Description</h4>
+              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>âœ“ Tailor to Job Description</h4>
               <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Highlight achievements that match keywords and requirements from the job posting.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px' }}>
-              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>✓ Be Consistent</h4>
+              <h4 style={{ margin: '0 0 8px 0', color: '#0070f3' }}>âœ“ Be Consistent</h4>
               <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Use consistent formatting for dates, punctuation, and bullet style throughout.</p>
             </div>
           </div>
@@ -539,13 +539,13 @@ export default function ExperienceSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Experience Formatting
+            ðŸ¤– ATS-Friendly Experience Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
               <li><strong>Use standard section heading:</strong> "Work Experience" or "Professional Experience"</li>
               <li><strong>Include job titles exactly as they appear:</strong> Matches keyword searches in ATS databases</li>
-              <li><strong>Use simple bullet points (•):</strong> Avoid complex symbols that may not parse correctly</li>
+              <li><strong>Use simple bullet points (â€¢):</strong> Avoid complex symbols that may not parse correctly</li>
               <li><strong>Include months for dates:</strong> ATS systems prefer "January 2022 - Present" over "2022 - Present"</li>
               <li><strong>Avoid graphics and tables:</strong> Stick to simple text formatting for ATS parsing</li>
               <li><strong>Use standard fonts:</strong> Arial, Calibri, Helvetica, or Times New Roman for best compatibility</li>
@@ -599,7 +599,7 @@ export default function ExperienceSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -610,12 +610,12 @@ export default function ExperienceSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs →</Link>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 →</Link>
+            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>200+ Action Verbs â†’</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide â†’</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 â†’</Link>
           </div>
         </div>
       </main>

@@ -1,4 +1,4 @@
-// pages/blog/how-to-write-resume.js
+﻿// pages/blog/how-to-write-resume.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -13,26 +13,26 @@ export default function HowToWriteResume() {
     "@type": "Article",
     "headline": "How to Write a Resume: Step-by-Step Guide with Examples (2026)",
     "description": "Learn how to write a professional resume step by step. Includes examples for each section, formatting tips, and expert advice for 2026.",
-    "image": "https://freeresumemakers.com/images/blog/how-to-write-resume.jpg",
+    "image": "https://freeresumemaker.xyz/images/blog/how-to-write-resume.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah Johnson",
       "jobTitle": "Resume Expert",
-      "url": "https://freeresumemakers.com/about"
+      "url": "https://freeresumemaker.xyz/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": "2026-02-15",
     "dateModified": "2026-02-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://freeresumemakers.com/blog/how-to-write-resume"
+      "@id": "https://freeresumemaker.xyz/blog/how-to-write-resume"
     },
     "keywords": "how to write resume, resume writing guide, resume tips, resume format, resume examples, professional resume",
     "articleSection": "Resume Writing"
@@ -47,19 +47,19 @@ export default function HowToWriteResume() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemakers.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "How to Write a Resume",
-        "item": "https://freeresumemakers.com/blog/how-to-write-resume"
+        "item": "https://freeresumemaker.xyz/blog/how-to-write-resume"
       }
     ]
   };
@@ -160,8 +160,8 @@ export default function HowToWriteResume() {
         title="How to Write a Resume: Step-by-Step Guide with Examples (2026)"
         description="Learn how to write a professional resume step by step. Includes examples for each section, formatting tips, and expert advice for 2026. Free templates included."
         keywords="how to write resume, resume writing guide, resume tips, resume format, resume examples, professional resume, resume writing tips, resume help, create resume, build resume"
-        canonical="https://freeresumemakers.com/blog/how-to-write-resume"
-        image="https://freeresumemakers.com/images/blog/how-to-write-resume.jpg"
+        canonical="https://freeresumemaker.xyz/blog/how-to-write-resume"
+        image="https://freeresumemaker.xyz/images/blog/how-to-write-resume.jpg"
         type="article"
         publishedTime="2026-02-15"
         author="Sarah Johnson"
@@ -202,9 +202,9 @@ export default function HowToWriteResume() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>How to Write a Resume</span>
         </div>
 
@@ -459,7 +459,7 @@ export default function HowToWriteResume() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>✓</span>
+                    <span style={{ color: '#0070f3' }}>âœ“</span>
                     <span style={{ fontSize: '15px' }}>{item}</span>
                   </div>
                 ))}
@@ -747,7 +747,7 @@ export default function HowToWriteResume() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3' }}>✓</span>
+                    <span style={{ color: '#0070f3' }}>âœ“</span>
                     <span style={{ fontSize: '14px' }}>{tip}</span>
                   </div>
                 ))}
@@ -817,7 +817,7 @@ export default function HowToWriteResume() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Writing Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes all essential elements.
@@ -901,10 +901,10 @@ export default function HowToWriteResume() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('How to Write a Resume: Complete Step-by-Step Guide')}&url=https://freeresumemakers.com/blog/how-to-write-resume` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemakers.com/blog/how-to-write-resume` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemakers.com/blog/how-to-write-resume` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('How to Write a Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemakers.com/blog/how-to-write-resume')}` }
+              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('How to Write a Resume: Complete Step-by-Step Guide')}&url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/how-to-write-resume` },
+              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('How to Write a Resume Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/how-to-write-resume')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -991,7 +991,7 @@ export default function HowToWriteResume() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} • {post.readTime} read
+                    By {post.author} â€¢ {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1077,7 +1077,7 @@ export default function HowToWriteResume() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 15, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 15, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-// pages/templates/compare/2-vs-3.js
+﻿// pages/templates/compare/2-vs-3.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -40,25 +40,25 @@ export default function CompareTemplate2vs3() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compare Templates",
-        "item": "https://freeresumemakers.com/templates/compare"
+        "item": "https://freeresumemaker.xyz/templates/compare"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "The Innovator vs The Executive",
-        "item": "https://freeresumemakers.com/templates/compare/2-vs-3"
+        "item": "https://freeresumemaker.xyz/templates/compare/2-vs-3"
       }
     ]
   };
@@ -157,18 +157,18 @@ export default function CompareTemplate2vs3() {
         {/* Open Graph */}
         <meta property="og:title" content="Template 2 vs 3: The Innovator vs The Executive | Compare Modern Resume Templates" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/og/compare-2-vs-3.jpg" />
-        <meta property="og:url" content="https://freeresumemakers.com/templates/compare/2-vs-3" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/compare-2-vs-3.jpg" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/2-vs-3" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 2 vs 3: The Innovator vs The Executive" />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/og/compare-2-vs-3.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/compare-2-vs-3.jpg" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/templates/compare/2-vs-3" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/2-vs-3" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -190,11 +190,11 @@ export default function CompareTemplate2vs3() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>â€º</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Innovator vs The Executive</span>
         </div>
 
@@ -256,11 +256,11 @@ export default function CompareTemplate2vs3() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'ðŸ“‹ Overview'}
+              {tab === 'features' && 'âš¡ Features'}
+              {tab === 'visual' && 'ðŸŽ¨ Visual Comparison'}
+              {tab === 'industry' && 'ðŸ¢ Industry Fit'}
+              {tab === 'verdict' && 'âš–ï¸ Final Verdict'}
             </button>
           ))}
         </div>
@@ -531,29 +531,29 @@ export default function CompareTemplate2vs3() {
                     { feature: 'Layout Style', t1: 'Two-column with visual connectors', t2: 'Dark premium with sidebar focus' },
                     { feature: 'Color Theme', t1: 'Light/Creative Purple', t2: 'Dark Navy with accent colors' },
                     { feature: 'Typography', t1: 'Modern sans-serif', t2: 'Modern sans-serif' },
-                    { feature: 'Visual Connectors', t1: '✓ Yes (between experiences)', t2: '✗ No' },
-                    { feature: 'Centered Header', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Contact Pills/Badges', t1: '✓ Yes', t2: '✗ No (standard contact)' },
-                    { feature: 'Certifications Section', t1: '✗ Limited', t2: '✓ Dedicated certifications focus' },
-                    { feature: 'Core Strengths Display', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Density Scaling', t1: '✗ No', t2: '✓ Yes (ultra-compact to spacious)' },
+                    { feature: 'Visual Connectors', t1: 'âœ“ Yes (between experiences)', t2: 'âœ— No' },
+                    { feature: 'Centered Header', t1: 'âœ“ Yes', t2: 'âœ— No' },
+                    { feature: 'Contact Pills/Badges', t1: 'âœ“ Yes', t2: 'âœ— No (standard contact)' },
+                    { feature: 'Certifications Section', t1: 'âœ— Limited', t2: 'âœ“ Dedicated certifications focus' },
+                    { feature: 'Core Strengths Display', t1: 'âœ— No', t2: 'âœ“ Yes' },
+                    { feature: 'Density Scaling', t1: 'âœ— No', t2: 'âœ“ Yes (ultra-compact to spacious)' },
                     { feature: 'Skills Display', t1: 'Tags layout (5 skills)', t2: 'Tags layout (8 skills)' },
-                    { feature: 'Languages Section', t1: '✓ Yes (2 max)', t2: '✓ Yes (3 max)' },
-                    { feature: 'Projects Section', t1: '✓ Yes (1 max)', t2: '✓ Yes (2 max)' },
-                    { feature: 'Awards Section', t1: '✓ Yes (2 max)', t2: '✓ Yes (2 max)' },
-                    { feature: 'Tools Section', t1: '✓ Yes (4 max)', t2: '✓ Yes (4 max)' },
+                    { feature: 'Languages Section', t1: 'âœ“ Yes (2 max)', t2: 'âœ“ Yes (3 max)' },
+                    { feature: 'Projects Section', t1: 'âœ“ Yes (1 max)', t2: 'âœ“ Yes (2 max)' },
+                    { feature: 'Awards Section', t1: 'âœ“ Yes (2 max)', t2: 'âœ“ Yes (2 max)' },
+                    { feature: 'Tools Section', t1: 'âœ“ Yes (4 max)', t2: 'âœ“ Yes (4 max)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 13 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('âœ“') ? (
                           <span style={{ color: '#7928ca', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('âœ“') ? (
                           <span style={{ color: '#1a2634', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -574,7 +574,7 @@ export default function CompareTemplate2vs3() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginBottom: '15px' }}>
-                  ✅ The Innovator - Pros
+                  âœ… The Innovator - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.pros.map((item, index) => (
@@ -582,7 +582,7 @@ export default function CompareTemplate2vs3() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Innovator - Cons
+                  âš ï¸ The Innovator - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.cons.map((item, index) => (
@@ -592,7 +592,7 @@ export default function CompareTemplate2vs3() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#1a2634', marginBottom: '15px' }}>
-                  ✅ The Executive - Pros
+                  âœ… The Executive - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template3.pros.map((item, index) => (
@@ -600,7 +600,7 @@ export default function CompareTemplate2vs3() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#1a2634', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Executive - Cons
+                  âš ï¸ The Executive - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template3.cons.map((item, index) => (
@@ -650,7 +650,7 @@ export default function CompareTemplate2vs3() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/2" style={{ color: '#7928ca', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -678,7 +678,7 @@ export default function CompareTemplate2vs3() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/3" style={{ color: '#1a2634', textDecoration: 'underline' }}>
-                      View Full Details →
+                      View Full Details â†’
                     </Link>
                   </div>
                 </div>
@@ -732,7 +732,7 @@ export default function CompareTemplate2vs3() {
               border: '1px solid #ffc107'
             }}>
               <p style={{ margin: 0, color: '#856404', fontSize: '0.95rem' }}>
-                <strong>📝 Print Note:</strong> The Executive's dark theme may use more ink when printing. Consider digital submission or test print before mass distribution. The Innovator's light theme is more printer-friendly.
+                <strong>ðŸ“ Print Note:</strong> The Executive's dark theme may use more ink when printing. Consider digital submission or test print before mass distribution. The Innovator's light theme is more printer-friendly.
               </p>
             </div>
           </div>
@@ -877,7 +877,7 @@ export default function CompareTemplate2vs3() {
                 padding: '30px',
                 border: '1px solid #e5ccff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🚀</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸš€</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#7928ca', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Innovator
                 </h3>
@@ -907,7 +907,7 @@ export default function CompareTemplate2vs3() {
                 padding: '30px',
                 border: '1px solid #1a2634'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>👑</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>ðŸ‘‘</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#1a2634', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Executive
                 </h3>
@@ -941,7 +941,7 @@ export default function CompareTemplate2vs3() {
               marginBottom: '40px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: Consider Your Industry Norms
+                ðŸ’¡ Expert Tip: Consider Your Industry Norms
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 The biggest factor in choosing between these templates is your industry. The Innovator excels in creative fields where standing out is valued. The Executive is preferred in traditional corporate environments where authority matters. Research the company culture before deciding - some startups love creative designs, while others prefer more conservative approaches even for creative roles.
@@ -969,24 +969,24 @@ export default function CompareTemplate2vs3() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#1a2634' }}>The Executive</div>
                 
                 <div>Tech / Startup (0-5 yrs)</div>
-                <div style={{ color: '#7928ca' }}>✓✓ Perfect</div>
-                <div style={{ color: '#999' }}>✗ Too formal</div>
+                <div style={{ color: '#7928ca' }}>âœ“âœ“ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Too formal</div>
                 
                 <div>Marketing / Creative (any level)</div>
-                <div style={{ color: '#7928ca' }}>✓✓ Perfect</div>
-                <div style={{ color: '#999' }}>✗ Too formal</div>
+                <div style={{ color: '#7928ca' }}>âœ“âœ“ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Too formal</div>
                 
                 <div>Mid-Level Corporate (5-10 yrs)</div>
-                <div style={{ color: '#7928ca' }}>✓ Great choice</div>
-                <div style={{ color: '#1a2634' }}>✓ Also works well</div>
+                <div style={{ color: '#7928ca' }}>âœ“ Great choice</div>
+                <div style={{ color: '#1a2634' }}>âœ“ Also works well</div>
                 
                 <div>Senior Manager (10-15 yrs)</div>
-                <div style={{ color: '#7928ca' }}>✓ Good option</div>
-                <div style={{ color: '#1a2634' }}>✓✓ Excellent</div>
+                <div style={{ color: '#7928ca' }}>âœ“ Good option</div>
+                <div style={{ color: '#1a2634' }}>âœ“âœ“ Excellent</div>
                 
                 <div>Director / C-Suite (15+ yrs)</div>
-                <div style={{ color: '#999' }}>✗ Too creative</div>
-                <div style={{ color: '#1a2634' }}>✓✓ Perfect</div>
+                <div style={{ color: '#999' }}>âœ— Too creative</div>
+                <div style={{ color: '#1a2634' }}>âœ“âœ“ Perfect</div>
               </div>
             </div>
           </div>
@@ -1101,7 +1101,7 @@ export default function CompareTemplate2vs3() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

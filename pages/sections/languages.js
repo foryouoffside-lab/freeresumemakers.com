@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function LanguagesSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/languages#article",
+        "@id": "https://freeresumemaker.xyz/sections/languages#article",
         "headline": "How to List Languages on Resume: Proficiency Levels & Examples 2026",
         "description": "Master the art of listing languages on your resume. Learn about CEFR & ILR proficiency levels, see formatting examples, and discover which languages to highlight for bilingual and global roles.",
-        "image": "https://freeresumemakers.com/images/languages-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/languages-guide-2026.jpg",
         "datePublished": "2026-02-10T08:00:00+00:00",
         "dateModified": "2026-03-23T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/languages"
+          "@id": "https://freeresumemaker.xyz/sections/languages"
         },
         "keywords": "languages on resume, language skills, bilingual resume, fluency levels, CEFR levels, language proficiency, ILR scale, resume language examples"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/languages#howto",
+        "@id": "https://freeresumemaker.xyz/sections/languages#howto",
         "name": "How to List Languages on Your Resume",
         "description": "A step-by-step guide to listing languages on your resume, including proficiency levels (CEFR, ILR), formatting examples, and industry-specific tips.",
         "estimatedCost": {
@@ -51,7 +51,7 @@ export default function LanguagesSectionGuide() {
             "position": 1,
             "itemListElement": {
               "@type": "HowToDirection",
-              "text": "Use standard frameworks like CEFR (A1-C2) or ILR to accurately describe your speaking, writing, reading, and listening skills. Be honest—exaggeration can backfire during interviews."
+              "text": "Use standard frameworks like CEFR (A1-C2) or ILR to accurately describe your speaking, writing, reading, and listening skills. Be honestâ€”exaggeration can backfire during interviews."
             }
           },
           {
@@ -85,38 +85,38 @@ export default function LanguagesSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/languages#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/languages#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Languages Guide",
-            "item": "https://freeresumemakers.com/sections/languages"
+            "item": "https://freeresumemaker.xyz/sections/languages"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/languages#faq",
+        "@id": "https://freeresumemaker.xyz/sections/languages#faq",
         "mainEntity": [
           {
             "@type": "Question",
             "name": "Should I list languages on my resume if I'm not fluent?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, you can list languages at any level. Use accurate descriptors like 'Conversational,' 'Intermediate,' or 'Basic.' Just be honest about your proficiency—you may be tested during interviews."
+              "text": "Yes, you can list languages at any level. Use accurate descriptors like 'Conversational,' 'Intermediate,' or 'Basic.' Just be honest about your proficiencyâ€”you may be tested during interviews."
             }
           },
           {
@@ -144,7 +144,7 @@ export default function LanguagesSectionGuide() {
   const faqItems = [
     {
       q: "Should I list languages on my resume if I'm not fluent?",
-      a: "Yes, you can list languages at any level. Use accurate descriptors like 'Conversational,' 'Intermediate,' or 'Basic.' Being honest about your proficiency is crucial—you may be tested during interviews, and overstating skills can damage your credibility."
+      a: "Yes, you can list languages at any level. Use accurate descriptors like 'Conversational,' 'Intermediate,' or 'Basic.' Being honest about your proficiency is crucialâ€”you may be tested during interviews, and overstating skills can damage your credibility."
     },
     {
       q: "How do I describe my language proficiency level?",
@@ -181,13 +181,13 @@ export default function LanguagesSectionGuide() {
   // Language certifications by language
   const languageCertifications = [
     { language: "English", certifications: "TOEFL (Test of English as a Foreign Language), IELTS (International English Language Testing System), Cambridge English: CPE (Proficiency), CAE (Advanced), FCE (First)" },
-    { language: "Spanish", certifications: "DELE (Diplomas of Spanish as a Foreign Language) - A1 to C2, SIELE (Servicio Internacional de Evaluación de la Lengua Española)" },
-    { language: "French", certifications: "DELF (A1-B2), DALF (C1-C2), TCF (Test de connaissance du français), TEF (Test d'évaluation de français)" },
-    { language: "German", certifications: "Goethe-Zertifikat (A1-C2), TestDaF (Test Deutsch als Fremdsprache), DSH (Deutsche Sprachprüfung für den Hochschulzugang)" },
+    { language: "Spanish", certifications: "DELE (Diplomas of Spanish as a Foreign Language) - A1 to C2, SIELE (Servicio Internacional de EvaluaciÃ³n de la Lengua EspaÃ±ola)" },
+    { language: "French", certifications: "DELF (A1-B2), DALF (C1-C2), TCF (Test de connaissance du franÃ§ais), TEF (Test d'Ã©valuation de franÃ§ais)" },
+    { language: "German", certifications: "Goethe-Zertifikat (A1-C2), TestDaF (Test Deutsch als Fremdsprache), DSH (Deutsche SprachprÃ¼fung fÃ¼r den Hochschulzugang)" },
     { language: "Japanese", certifications: "JLPT (Japanese-Language Proficiency Test) - N5 to N1, J-TEST, BJT (Business Japanese Proficiency Test)" },
     { language: "Chinese (Mandarin)", certifications: "HSK (Hanyu Shuiping Kaoshi) - Levels 1-6, HSKK (HSK Speaking Test)" },
     { language: "Italian", certifications: "CILS (Certificazione di Italiano come Lingua Straniera), CELI (Certificato di Conoscenza della Lingua Italiana), PLIDA" },
-    { language: "Portuguese", certifications: "CELPE-Bras (Certificado de Proficiência em Língua Portuguesa para Estrangeiros), CAPLE (Centro de Avaliação de Português Língua Estrangeira)" },
+    { language: "Portuguese", certifications: "CELPE-Bras (Certificado de ProficiÃªncia em LÃ­ngua Portuguesa para Estrangeiros), CAPLE (Centro de AvaliaÃ§Ã£o de PortuguÃªs LÃ­ngua Estrangeira)" },
     { language: "Russian", certifications: "TORFL (Test of Russian as a Foreign Language) - A1 to C2" },
     { language: "Arabic", certifications: "ALPT (Arabic Language Proficiency Test), CIMA (Certificate in Modern Arabic)" }
   ];
@@ -197,10 +197,10 @@ export default function LanguagesSectionGuide() {
     {
       title: "Simple Bulleted Format",
       style: "compact",
-      content: `• English: Native / Bilingual
-• Spanish: Fluent (C1 - DELE certified)
-• French: Professional Working (B2)
-• Mandarin: Conversational (HSK 3)`
+      content: `â€¢ English: Native / Bilingual
+â€¢ Spanish: Fluent (C1 - DELE certified)
+â€¢ French: Professional Working (B2)
+â€¢ Mandarin: Conversational (HSK 3)`
     },
     {
       title: "Detailed Table Format",
@@ -220,11 +220,11 @@ export default function LanguagesSectionGuide() {
     {
       title: "Sidebar/Column Format (Modern)",
       style: "sidebar",
-      content: `🌍 LANGUAGES
-🇺🇸 English: Native
-🇪🇸 Spanish: Fluent (DELE C1)
-🇫🇷 French: Professional Working
-🇯🇵 Japanese: Conversational`
+      content: `ðŸŒ LANGUAGES
+ðŸ‡ºðŸ‡¸ English: Native
+ðŸ‡ªðŸ‡¸ Spanish: Fluent (DELE C1)
+ðŸ‡«ðŸ‡· French: Professional Working
+ðŸ‡¯ðŸ‡µ Japanese: Conversational`
     }
   ];
 
@@ -244,7 +244,7 @@ export default function LanguagesSectionGuide() {
         title="How to List Languages on Resume: Proficiency Levels & Examples 2026 | FreeResumeMakers"
         description="Master the art of listing languages on your resume. Learn CEFR & ILR proficiency levels, see formatting examples, and discover which languages to highlight for bilingual and global roles. Includes certification guides and industry tips."
         keywords="languages on resume, language skills, bilingual resume, fluency levels, CEFR levels, language proficiency, ILR scale, resume language examples, how to list languages on resume, language certifications"
-        canonical="https://freeresumemakers.com/sections/languages"
+        canonical="https://freeresumemaker.xyz/sections/languages"
         type="article"
         publishedTime="2026-02-10T08:00:00+00:00"
         modifiedTime="2026-03-23T10:00:00+00:00"
@@ -256,7 +256,7 @@ export default function LanguagesSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/languages" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/languages" />
         <meta name="description" content="Learn how to list languages on your resume with CEFR proficiency levels, formatting examples, and certification guides. Boost your job applications with expert language skills presentation." />
       </Head>
 
@@ -264,9 +264,9 @@ export default function LanguagesSectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Languages Guide</span>
         </nav>
 
@@ -276,10 +276,10 @@ export default function LanguagesSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 10 min read</span>
-            <span>👁️ 28,000+ readers</span>
-            <span>🌍 50+ Languages</span>
+            <span>ðŸ“… Updated: March 23, 2026</span>
+            <span>â±ï¸ 10 min read</span>
+            <span>ðŸ‘ï¸ 28,000+ readers</span>
+            <span>ðŸŒ 50+ Languages</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -297,14 +297,14 @@ export default function LanguagesSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#cefr" style={{ color: '#0070f3', textDecoration: 'none' }}>• CEFR Proficiency Levels</a>
-            <a href="#format-examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Format Examples</a>
-            <a href="#certifications" style={{ color: '#0070f3', textDecoration: 'none' }}>• Language Certifications</a>
-            <a href="#industry-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>• Industry Tips</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#cefr" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ CEFR Proficiency Levels</a>
+            <a href="#format-examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Format Examples</a>
+            <a href="#certifications" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Language Certifications</a>
+            <a href="#industry-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Industry Tips</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Placement Strategy</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -317,7 +317,7 @@ export default function LanguagesSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Never overstate your proficiency. During interviews, you may be tested in the language. 
+            <strong>ðŸ’¡ Pro Tip:</strong> Never overstate your proficiency. During interviews, you may be tested in the language. 
             Honesty about your level is crucial for credibility. Instead, focus on highlighting the languages where you have genuine, demonstrable skills.
           </p>
         </div>
@@ -355,7 +355,7 @@ export default function LanguagesSectionGuide() {
 
           <div style={{ background: '#f0f7ff', padding: '16px', borderRadius: '12px', marginBottom: '30px' }}>
             <p style={{ margin: 0, fontSize: '14px' }}>
-              <strong>📌 Quick Reference:</strong> Native/Bilingual ≈ C2 | Fluent ≈ C1 | Professional Working ≈ B2 | Conversational ≈ B1 | Intermediate ≈ A2-B1 | Basic ≈ A1
+              <strong>ðŸ“Œ Quick Reference:</strong> Native/Bilingual â‰ˆ C2 | Fluent â‰ˆ C1 | Professional Working â‰ˆ B2 | Conversational â‰ˆ B1 | Intermediate â‰ˆ A2-B1 | Basic â‰ˆ A1
             </p>
           </div>
         </section>
@@ -424,7 +424,7 @@ export default function LanguagesSectionGuide() {
         {/* Placement Strategy Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            📍 Where to Place Languages on Your Resume
+            ðŸ“ Where to Place Languages on Your Resume
           </h2>
           <div style={{
             display: 'grid',
@@ -433,17 +433,17 @@ export default function LanguagesSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>🌍 Dedicated Languages Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸŒ Dedicated Languages Section</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Best for:</strong> 2+ languages or when language skills are job-critical</p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Place after Skills or Education. Use a clear heading: "Languages" or "Language Skills."</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>📝 Integrated in Professional Summary</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ“ Integrated in Professional Summary</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Best for:</strong> Highlighting bilingual status upfront</p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Example: "Bilingual marketing professional fluent in English and Spanish with 8+ years experience."</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>💼 Within Experience Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>ðŸ’¼ Within Experience Section</h3>
               <p style={{ fontSize: '14px', color: '#666' }}><strong>Best for:</strong> Demonstrating language use in specific roles</p>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Include bullet points showing how you used languages: "Conducted client presentations in Spanish for Latin American markets."</p>
             </div>
@@ -453,12 +453,12 @@ export default function LanguagesSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Language Formatting
+            ðŸ¤– ATS-Friendly Language Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
               <li><strong>Use standard section heading:</strong> "Languages" or "Language Skills" for optimal ATS parsing</li>
-              <li><strong>Include language names exactly:</strong> "Spanish" not "Español" for keyword matching</li>
+              <li><strong>Include language names exactly:</strong> "Spanish" not "EspaÃ±ol" for keyword matching</li>
               <li><strong>Use recognized proficiency terms:</strong> Native, Bilingual, Fluent, Professional Working, Conversational, Basic</li>
               <li><strong>Include certifications:</strong> "DELE C1" or "JLPT N2" are recognized by ATS systems</li>
               <li><strong>Avoid icons and flags:</strong> Stick to text for best ATS compatibility</li>
@@ -513,7 +513,7 @@ export default function LanguagesSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -524,12 +524,12 @@ export default function LanguagesSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide →</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 →</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide â†’</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide â†’</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 â†’</Link>
           </div>
         </div>
       </main>

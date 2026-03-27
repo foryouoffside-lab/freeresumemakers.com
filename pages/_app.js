@@ -32,8 +32,8 @@ function MyApp({ Component, pageProps }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Free Resume Maker",
-    "url": "https://freeresumemakers.com",
-    "logo": "https://freeresumemakers.com/logo.png",
+    "url": "https://freeresumemaker.xyz",
+    "logo": "https://freeresumemaker.xyz/logo.png",
     "description": "Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download.",
     "sameAs": [
       "https://twitter.com/freeresumemaker",
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://freeresumemakers.com/search?q={search_term_string}",
+      "target": "https://freeresumemaker.xyz/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -58,13 +58,13 @@ function MyApp({ Component, pageProps }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Free Resume Maker",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "description": "Free online resume builder to create professional ATS-friendly resumes. Choose from 20+ templates, customize in real-time, and download as PDF.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://freeresumemakers.com/search?q={search_term_string}"
+        "urlTemplate": "https://freeresumemaker.xyz/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }) {
     "@type": "LocalBusiness",
     "name": "Free Resume Maker",
     "description": "Professional resume builder service offering free resume templates, cover letter builder, and career resources.",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "priceRange": "Free",
     "areaServed": "Worldwide",
     "hasOfferCatalog": {
@@ -120,13 +120,13 @@ function MyApp({ Component, pageProps }) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       }
     ]
   };
 
   // Get current page URL for canonical
-  const canonicalUrl = `https://freeresumemakers.com${router.asPath === '/' ? '' : router.asPath}`;
+  const canonicalUrl = `https://freeresumemaker.xyz${router.asPath === '/' ? '' : router.asPath}`;
   
   // Get current path for conditional meta
   const isHomePage = router.pathname === '/';
@@ -140,7 +140,7 @@ function MyApp({ Component, pageProps }) {
       ? 'Free Resume Builder - Create Professional Resumes Online Instantly' 
       : 'Free Resume Builder - Professional Resume Templates & Examples',
     description: 'Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download. Trusted by 100,000+ job seekers.',
-    image: 'https://freeresumemakers.com/images/default-og-image.jpg',
+    image: 'https://freeresumemaker.xyz/images/default-og-image.jpg',
     type: 'website',
     keywords: 'resume builder, free resume builder, online resume maker, resume templates, ATS friendly resume, professional resume, CV maker, resume creator'
   };
@@ -327,6 +327,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
 
 
 

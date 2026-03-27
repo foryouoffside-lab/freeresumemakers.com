@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -9,34 +9,34 @@ export default function PublicationsSectionGuide() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://freeresumemakers.com/sections/publications#article",
+        "@id": "https://freeresumemaker.xyz/sections/publications#article",
         "headline": "How to List Publications on Resume: APA Format & Examples (2026 Guide)",
         "description": "Complete guide to citing publications on your resume with APA format examples for journals, books, and conferences. Updated for 2026 academic and research standards.",
-        "image": "https://freeresumemakers.com/images/publications-guide-2026.jpg",
+        "image": "https://freeresumemaker.xyz/images/publications-guide-2026.jpg",
         "datePublished": "2026-02-28T08:00:00+00:00",
         "dateModified": "2026-03-24T10:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
-          "url": "https://freeresumemakers.com"
+          "url": "https://freeresumemaker.xyz"
         },
         "publisher": {
           "@type": "Organization",
           "name": "FreeResumeMakers",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://freeresumemakers.com/logo.png"
+            "url": "https://freeresumemaker.xyz/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/sections/publications"
+          "@id": "https://freeresumemaker.xyz/sections/publications"
         },
         "keywords": "publications on resume, academic publications, research papers, citing publications, APA format resume, journal articles, conference papers 2026, academic CV publications"
       },
       {
         "@type": "HowTo",
-        "@id": "https://freeresumemakers.com/sections/publications#howto",
+        "@id": "https://freeresumemaker.xyz/sections/publications#howto",
         "name": "How to List Publications on Your Resume (2026 Guide)",
         "description": "Complete guide to citing publications on your resume with APA format examples for journals, books, and conferences. Updated for 2026 academic and research standards.",
         "totalTime": "PT20M",
@@ -114,7 +114,7 @@ export default function PublicationsSectionGuide() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/sections/publications#faq",
+        "@id": "https://freeresumemaker.xyz/sections/publications#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -129,7 +129,7 @@ export default function PublicationsSectionGuide() {
             "name": "How do I cite a publication that is 'under review'?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Cite it as 'Under review at [Journal Name]' or list as 'Manuscript submitted for publication.' Be honest about the status—do not claim a paper is published if it's still under review. Update immediately when accepted."
+              "text": "Cite it as 'Under review at [Journal Name]' or list as 'Manuscript submitted for publication.' Be honest about the statusâ€”do not claim a paper is published if it's still under review. Update immediately when accepted."
             }
           },
           {
@@ -160,25 +160,25 @@ export default function PublicationsSectionGuide() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://freeresumemakers.com/sections/publications#breadcrumb",
+        "@id": "https://freeresumemaker.xyz/sections/publications#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://freeresumemakers.com/"
+            "item": "https://freeresumemaker.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Resume Sections",
-            "item": "https://freeresumemakers.com/sections"
+            "item": "https://freeresumemaker.xyz/sections"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Publications Guide",
-            "item": "https://freeresumemakers.com/sections/publications"
+            "item": "https://freeresumemaker.xyz/sections/publications"
           }
         ]
       }
@@ -193,11 +193,11 @@ export default function PublicationsSectionGuide() {
     },
     {
       q: "How do I cite a publication that is 'under review'?",
-      a: "Cite it as 'Under review at [Journal Name]' or 'Manuscript submitted for publication.' Be honest about the status—do not claim a paper is published if it's still under review. Once accepted, update the citation immediately to 'Forthcoming in [Journal Name]' or with the full citation including volume/issue if available."
+      a: "Cite it as 'Under review at [Journal Name]' or 'Manuscript submitted for publication.' Be honest about the statusâ€”do not claim a paper is published if it's still under review. Once accepted, update the citation immediately to 'Forthcoming in [Journal Name]' or with the full citation including volume/issue if available."
     },
     {
       q: "What citation format should I use for publications on a resume?",
-      a: "APA 7th edition (American Psychological Association) format is the most common and widely accepted for academic and research resumes in 2026. MLA is standard in humanities, and Chicago is acceptable for some fields. Consistency throughout your publications section is most important—never mix different citation styles."
+      a: "APA 7th edition (American Psychological Association) format is the most common and widely accepted for academic and research resumes in 2026. MLA is standard in humanities, and Chicago is acceptable for some fields. Consistency throughout your publications section is most importantâ€”never mix different citation styles."
     },
     {
       q: "How do I highlight my name in multi-author publications?",
@@ -217,14 +217,14 @@ export default function PublicationsSectionGuide() {
     },
     {
       q: "How many publications should I list on my resume?",
-      a: "For academic positions (PhD, postdoc, faculty), list all peer-reviewed publications (10-30+). For industry positions, select 3-8 most relevant publications. Quality matters more than quantity—highlight prestigious journals and first-author papers."
+      a: "For academic positions (PhD, postdoc, faculty), list all peer-reviewed publications (10-30+). For industry positions, select 3-8 most relevant publications. Quality matters more than quantityâ€”highlight prestigious journals and first-author papers."
     }
   ];
 
   // Publication examples by category
   const publicationCategories = [
     {
-      title: "📄 Peer-Reviewed Journal Articles",
+      title: "ðŸ“„ Peer-Reviewed Journal Articles",
       examples: [
         {
           citation: "<strong>Smith, J.</strong>, Johnson, M., & Williams, R. (2024). Machine learning applications in healthcare: A systematic review. <em>Journal of Artificial Intelligence Research</em>, 48(2), 112-128.",
@@ -241,7 +241,7 @@ export default function PublicationsSectionGuide() {
       ]
     },
     {
-      title: "📚 Books & Book Chapters",
+      title: "ðŸ“š Books & Book Chapters",
       examples: [
         {
           citation: "Williams, R., & <strong>Smith, J.</strong> (2025). Data visualization best practices. In K. Brown (Ed.), <em>The Handbook of Data Science</em> (3rd ed., pp. 245-278). Academic Press.",
@@ -254,7 +254,7 @@ export default function PublicationsSectionGuide() {
       ]
     },
     {
-      title: "🎤 Conference Papers (Peer-Reviewed)",
+      title: "ðŸŽ¤ Conference Papers (Peer-Reviewed)",
       examples: [
         {
           citation: "Chen, L., Garcia, P., & <strong>Smith, J.</strong> (2025). Quantum computing algorithms for optimization problems. In <em>Proceedings of the 2025 International Conference on Computer Science</em> (pp. 342-350), San Francisco, CA.",
@@ -267,7 +267,7 @@ export default function PublicationsSectionGuide() {
       ]
     },
     {
-      title: "🌐 Preprints & Under Review (2026 Best Practices)",
+      title: "ðŸŒ Preprints & Under Review (2026 Best Practices)",
       examples: [
         {
           citation: "Patel, S., & <strong>Smith, J.</strong> (2025). Diffusion models for medical image synthesis. <em>arXiv preprint</em> arXiv:2501.12345.",
@@ -287,7 +287,7 @@ export default function PublicationsSectionGuide() {
     { stage: "Assistant Professor", guidance: "Include all publications, highlight recent and prestigious publications, separate peer-reviewed from conference proceedings. Consider adding a separate section for 'In Preparation' manuscripts." },
     { stage: "Industry Researcher (R&D)", guidance: "Include relevant publications, focus on those demonstrating expertise for the role. Limit to 5-8 most impactful publications unless applying for senior research positions." },
     { stage: "Graduate Student", guidance: "Include any publications, preprints, and 'under review' submissions. Add conference presentations, posters, and thesis work if publications are limited." },
-    { stage: "Undergraduate Student", guidance: "Include research papers, honors theses, conference presentations, and poster sessions. Quality matters more than quantity—highlight your best work." }
+    { stage: "Undergraduate Student", guidance: "Include research papers, honors theses, conference presentations, and poster sessions. Quality matters more than quantityâ€”highlight your best work." }
   ];
 
   return (
@@ -296,7 +296,7 @@ export default function PublicationsSectionGuide() {
         title="How to List Publications on Resume: APA Format & Examples (2026 Guide) | FreeResumeMakers"
         description="Complete guide to citing publications on your resume with APA format examples for journals, books, and conferences. Learn how to highlight your name, add DOIs, and organize publications for academic and research roles in 2026."
         keywords="publications on resume, academic publications, research papers, citing publications, APA format resume, journal articles, conference papers 2026, academic CV publications, how to list publications on resume"
-        canonical="https://freeresumemakers.com/sections/publications"
+        canonical="https://freeresumemaker.xyz/sections/publications"
         type="article"
         publishedTime="2026-02-28T08:00:00+00:00"
         modifiedTime="2026-03-24T10:00:00+00:00"
@@ -309,16 +309,16 @@ export default function PublicationsSectionGuide() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="FreeResumeMakers" />
-        <link rel="canonical" href="https://freeresumemakers.com/sections/publications" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/sections/publications" />
       </Head>
 
       <main style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Publications Guide</span>
         </nav>
 
@@ -328,10 +328,10 @@ export default function PublicationsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 12 min read</span>
-            <span>👁️ 28,000+ readers</span>
-            <span>📚 APA 7th Edition Standards</span>
+            <span>ðŸ“… Updated: March 24, 2026</span>
+            <span>â±ï¸ 12 min read</span>
+            <span>ðŸ‘ï¸ 28,000+ readers</span>
+            <span>ðŸ“š APA 7th Edition Standards</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -349,14 +349,14 @@ export default function PublicationsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📖 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>ðŸ“– Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#apa-format" style={{ color: '#0070f3', textDecoration: 'none' }}>• APA Format (2026)</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Type</a>
-            <a href="#organization" style={{ color: '#0070f3', textDecoration: 'none' }}>• How to Organize</a>
-            <a href="#career-stage" style={{ color: '#0070f3', textDecoration: 'none' }}>• By Career Stage</a>
-            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>• Common Mistakes</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#apa-format" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ APA Format (2026)</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Examples by Type</a>
+            <a href="#organization" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ How to Organize</a>
+            <a href="#career-stage" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ By Career Stage</a>
+            <a href="#mistakes" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ Common Mistakes</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>â€¢ FAQ</a>
           </div>
         </div>
 
@@ -369,8 +369,8 @@ export default function PublicationsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 2026 Pro Tip:</strong> In multi-author publications, <strong>bold your name</strong> to make it easy for recruiters to identify your contribution. 
-            For first-author papers, highlight your name. For corresponding author papers, add an asterisk with a note. Include DOIs for all publications—this adds credibility and provides easy access.
+            <strong>ðŸ’¡ 2026 Pro Tip:</strong> In multi-author publications, <strong>bold your name</strong> to make it easy for recruiters to identify your contribution. 
+            For first-author papers, highlight your name. For corresponding author papers, add an asterisk with a note. Include DOIs for all publicationsâ€”this adds credibility and provides easy access.
           </p>
         </div>
 
@@ -404,7 +404,7 @@ export default function PublicationsSectionGuide() {
                 <div key={eIdx} style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '16px', border: '1px solid #e9ecef' }}>
                   <p style={{ margin: 0, lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: example.citation }} />
                   <p style={{ marginTop: '12px', fontSize: '14px', color: '#0070f3', background: '#e3f2fd', padding: '6px 12px', borderRadius: '8px', display: 'inline-block' }}>
-                    📊 {example.note}
+                    ðŸ“Š {example.note}
                   </p>
                 </div>
               ))}
@@ -424,22 +424,22 @@ export default function PublicationsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📅</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸ“…</div>
               <strong>Reverse Chronological Order</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>List most recent publications first. This is the preferred method for academic and research resumes, highlighting current productivity.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📂</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸ“‚</div>
               <strong>By Category</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Separate into Journal Articles, Conference Papers, Books, Chapters, Preprints for clarity. Best for longer publication lists (10+).</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>⭐</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>â­</div>
               <strong>Highlight Your Name</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Bold or underline your name in multi-author publications. Add asterisk for corresponding author status.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>🔗</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>ðŸ”—</div>
               <strong>Include DOIs/URLs</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Provide permanent links for easy access. DOIs are preferred over generic URLs for academic publications.</p>
             </div>
@@ -474,17 +474,17 @@ export default function PublicationsSectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Mistakes to Avoid (2026)
+            âŒ Common Mistakes to Avoid (2026)
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Using inconsistent citation formats</strong> - Mixing APA, MLA, and Chicago styles within the same section looks unprofessional</li>
-              <li><strong>❌ Including publications where you're not an author</strong> - Only list your own scholarly work</li>
-              <li><strong>❌ Forgetting to update citations</strong> - Changing "under review" to "published" after acceptance is critical</li>
-              <li><strong>❌ Not highlighting your name</strong> - Your name should stand out in multi-author publications</li>
-              <li><strong>❌ Including predatory journals</strong> - List only reputable, peer-reviewed venues to maintain credibility</li>
-              <li><strong>❌ Missing DOIs or incomplete citations</strong> - Always include full citation information for easy verification</li>
-              <li><strong>❌ Overwhelming non-academic resumes</strong> - For industry roles, limit to 3-5 most relevant publications</li>
+              <li><strong>âŒ Using inconsistent citation formats</strong> - Mixing APA, MLA, and Chicago styles within the same section looks unprofessional</li>
+              <li><strong>âŒ Including publications where you're not an author</strong> - Only list your own scholarly work</li>
+              <li><strong>âŒ Forgetting to update citations</strong> - Changing "under review" to "published" after acceptance is critical</li>
+              <li><strong>âŒ Not highlighting your name</strong> - Your name should stand out in multi-author publications</li>
+              <li><strong>âŒ Including predatory journals</strong> - List only reputable, peer-reviewed venues to maintain credibility</li>
+              <li><strong>âŒ Missing DOIs or incomplete citations</strong> - Always include full citation information for easy verification</li>
+              <li><strong>âŒ Overwhelming non-academic resumes</strong> - For industry roles, limit to 3-5 most relevant publications</li>
             </ul>
           </div>
         </section>
@@ -492,7 +492,7 @@ export default function PublicationsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Publication Formatting
+            ðŸ¤– ATS-Friendly Publication Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -551,7 +551,7 @@ export default function PublicationsSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now →
+            Build Your Resume Now â†’
           </Link>
         </div>
 
@@ -562,12 +562,12 @@ export default function PublicationsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>ðŸ“š Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
-            <Link href="/blog/cv-vs-resume-difference" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>CV vs Resume Guide →</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide â†’</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide â†’</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide â†’</Link>
+            <Link href="/blog/cv-vs-resume-difference" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>CV vs Resume Guide â†’</Link>
           </div>
         </div>
       </main>

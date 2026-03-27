@@ -25,21 +25,21 @@ export default function TemplateSelectorPage() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://freeresumemakers.com/editor/template-selector",
+        "@id": "https://freeresumemaker.xyz/editor/template-selector",
         "name": "Resume Template Selector | Choose Your Perfect Design 2026",
         "description": "Browse and select from 20 professionally designed, ATS-friendly resume templates. Find the perfect template for your career - whether you are in technology, business, creative, or executive roles.",
-        "url": "https://freeresumemakers.com/editor/template-selector",
+        "url": "https://freeresumemaker.xyz/editor/template-selector",
         "inLanguage": "en-US",
         "datePublished": "2026-01-15T08:00:00+00:00",
         "dateModified": "2026-03-24T10:00:00+00:00",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Free Resume Builder",
-          "url": "https://freeresumemakers.com/"
+          "url": "https://freeresumemaker.xyz/"
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://freeresumemakers.com/assets/template-previews/all-templates-2026.jpg",
+          "url": "https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg",
           "width": "1200",
           "height": "630"
         },
@@ -50,19 +50,19 @@ export default function TemplateSelectorPage() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://freeresumemakers.com/"
+              "item": "https://freeresumemaker.xyz/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Resume Builder",
-              "item": "https://freeresumemakers.com/editor"
+              "item": "https://freeresumemaker.xyz/editor"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Choose Template",
-              "item": "https://freeresumemakers.com/editor/template-selector"
+              "item": "https://freeresumemaker.xyz/editor/template-selector"
             }
           ]
         }
@@ -75,18 +75,18 @@ export default function TemplateSelectorPage() {
         "itemListOrder": "https://schema.org/ItemListOrderAscending",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://freeresumemakers.com/editor/template-selector"
+          "@id": "https://freeresumemaker.xyz/editor/template-selector"
         },
         "itemListElement": templateNames.map((name, index) => ({
           "@type": "ListItem",
           "position": index + 1,
           "name": name,
-          "url": `https://freeresumemakers.com/templates/${name.toLowerCase().replace(/ /g, '-').replace(/\./g, '')}`
+          "url": `https://freeresumemaker.xyz/templates/${name.toLowerCase().replace(/ /g, '-').replace(/\./g, '')}`
         }))
       },
       {
         "@type": "FAQPage",
-        "@id": "https://freeresumemakers.com/editor/template-selector#faq",
+        "@id": "https://freeresumemaker.xyz/editor/template-selector#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -138,14 +138,14 @@ export default function TemplateSelectorPage() {
         <meta name="theme-color" content="#0070f3" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://freeresumemakers.com/editor/template-selector" />
+        <link rel="canonical" href="https://freeresumemaker.xyz/editor/template-selector" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://freeresumemakers.com/editor/template-selector" />
+        <meta property="og:url" content="https://freeresumemaker.xyz/editor/template-selector" />
         <meta property="og:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
         <meta property="og:description" content="Browse 20 professionally designed resume templates optimized for 2026. Find the perfect template for your career - from executive to creative, technology to traditional. All templates are ATS-friendly and free." />
-        <meta property="og:image" content="https://freeresumemakers.com/assets/template-previews/all-templates-2026.jpg" />
+        <meta property="og:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="20 professional resume templates preview collection" />
@@ -156,7 +156,7 @@ export default function TemplateSelectorPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Choose Your Perfect Resume Template | 20 ATS-Friendly Designs 2026" />
         <meta name="twitter:description" content="Browse 20 professionally designed resume templates. Find the perfect design for your career - technology, business, creative, executive roles. All templates are ATS-friendly and free." />
-        <meta name="twitter:image" content="https://freeresumemakers.com/assets/template-previews/all-templates-2026.jpg" />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/template-previews/all-templates-2026.jpg" />
         <meta name="twitter:site" content="@freeresumemaker" />
         <meta name="twitter:creator" content="@freeresumemaker" />
         
@@ -169,7 +169,7 @@ export default function TemplateSelectorPage() {
         {/* Geo and Language */}
         <meta name="geo.region" content="US" />
         <meta name="language" content="English" />
-        <link rel="alternate" hrefLang="en-us" href="https://freeresumemakers.com/editor/template-selector" />
+        <link rel="alternate" hrefLang="en-us" href="https://freeresumemaker.xyz/editor/template-selector" />
         
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

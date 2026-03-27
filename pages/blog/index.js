@@ -1,4 +1,4 @@
-// pages/blog/index.js
+﻿// pages/blog/index.js
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -11,13 +11,13 @@ export default function BlogPage() {
     "@type": "Blog",
     "name": "Resume Writing Blog | Expert Career Advice & Resume Tips",
     "description": "Expert advice on resume writing, career development, and job search strategies. Learn how to create an effective resume that helps you land your dream job.",
-    "url": "https://freeresumemakers.com/blog",
+    "url": "https://freeresumemaker.xyz/blog",
     "publisher": {
       "@type": "Organization",
       "name": "Free Resume Maker",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://freeresumemakers.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "mainEntity": {
@@ -126,8 +126,8 @@ export default function BlogPage() {
         title="Resume Writing Blog | Expert Career Advice & Resume Tips"
         description="Expert advice on resume writing, career development, and job search strategies. Learn how to create an effective resume that helps you land your dream job. Free tips from career experts."
         keywords="resume blog, resume tips, career advice, job search tips, resume writing, interview tips, career guidance, ATS tips, resume formatting, cover letter tips, career development"
-        canonical="https://freeresumemakers.com/blog"
-        image="https://freeresumemakers.com/images/blog/og-blog.jpg"
+        canonical="https://freeresumemaker.xyz/blog"
+        image="https://freeresumemaker.xyz/images/blog/og-blog.jpg"
         type="website"
       />
       
@@ -158,7 +158,7 @@ export default function BlogPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">â€º</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Resume Writing Blog</span>
         </nav>
 
@@ -198,7 +198,7 @@ export default function BlogPage() {
           margin: '0 auto 40px'
         }}>
           <p style={{margin: 0, color: '#856404'}}>
-            🚧 New articles are being added regularly. Check back soon for more content.
+            ðŸš§ New articles are being added regularly. Check back soon for more content.
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default function BlogPage() {
               borderRadius: '20px',
               padding: '20px'
             }}>
-              📘
+              ðŸ“˜
             </div>
             <div>
               <span style={{
@@ -285,7 +285,7 @@ export default function BlogPage() {
                   }}
                 >
                   Read Full Guide
-                  <span style={{ fontSize: '20px' }}>→</span>
+                  <span style={{ fontSize: '20px' }}>â†’</span>
                 </Link>
                 <span style={{ color: 'rgba(255,255,255,0.8)' }}>12 min read</span>
               </div>
@@ -411,7 +411,7 @@ export default function BlogPage() {
                         day: 'numeric', 
                         year: 'numeric' 
                       })}</span>
-                      <span>•</span>
+                      <span>â€¢</span>
                       <span>{post.readTime}</span>
                     </div>
                   </div>
@@ -430,7 +430,7 @@ export default function BlogPage() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📬</div>
+          <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¬</div>
           <h2 style={{
             fontSize: '28px',
             marginBottom: '16px',
@@ -509,7 +509,7 @@ export default function BlogPage() {
           borderTop: '1px solid #eee',
           paddingTop: '30px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
         </div>
       </div>
     </>

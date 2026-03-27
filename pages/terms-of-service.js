@@ -1,4 +1,4 @@
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -15,7 +15,7 @@ export default function TermsOfService() {
     "@type": "WebPage",
     "name": "Terms of Service - Free Resume Builder",
     "description": "Terms of service for using our free resume builder. Learn about your rights and responsibilities when using our service with 20+ free templates.",
-    "url": "https://freeresumemakers.com/terms-of-service",
+    "url": "https://freeresumemaker.xyz/terms-of-service",
     "mainEntity": {
       "@type": "TermsOfService",
       "name": "Terms of Service",
@@ -29,7 +29,7 @@ export default function TermsOfService() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Free Resume Builder",
-    "url": "https://freeresumemakers.com",
+    "url": "https://freeresumemaker.xyz",
     "email": "freeresumeemaker@gmail.com",
     "description": "Free, privacy-focused resume builder with 20+ ATS-friendly templates",
     "sameAs": [
@@ -47,13 +47,13 @@ export default function TermsOfService() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Terms of Service",
-        "item": "https://freeresumemakers.com/terms-of-service"
+        "item": "https://freeresumemaker.xyz/terms-of-service"
       }
     ]
   };
@@ -64,8 +64,8 @@ export default function TermsOfService() {
         title="Terms of Service - Free Resume Builder | Legal Terms & Conditions"
         description="Read our terms of service for using the free resume builder. Understand your rights, responsibilities, and our policies. 20+ free ATS-friendly templates. No account required. Updated for 2026."
         keywords="terms of service, terms and conditions, resume builder terms, free resume builder terms, legal terms, service agreement, terms of use"
-        canonical="https://freeresumemakers.com/terms-of-service"
-        image="https://freeresumemakers.com/images/terms-og.jpg"
+        canonical="https://freeresumemaker.xyz/terms-of-service"
+        image="https://freeresumemaker.xyz/images/terms-og.jpg"
         type="website"
       />
       
@@ -102,7 +102,7 @@ export default function TermsOfService() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Terms of Service</span>
         </nav>
 
@@ -487,7 +487,7 @@ export default function TermsOfService() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                Contact Form →
+                Contact Form â†’
               </Link>
             </div>
           </div>
@@ -538,7 +538,7 @@ export default function TermsOfService() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '24px'
         }}>
-          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | Free Forever</p>
+          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ Templates | Free Forever</p>
           <div style={{
             display: 'flex',
             justifyContent: 'center',

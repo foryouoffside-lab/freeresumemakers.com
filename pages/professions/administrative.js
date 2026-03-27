@@ -1,4 +1,4 @@
-// pages/professions/administrative.js
+﻿// pages/professions/administrative.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -73,7 +73,7 @@ export default function AdministrativeExamples() {
             period: '2014-2018',
             points: [
               'Supported 3 senior directors in the Corporate Strategy department',
-              'Processed and tracked expense reports worth ₹2Cr annually, ensuring 100% compliance',
+              'Processed and tracked expense reports worth â‚¹2Cr annually, ensuring 100% compliance',
               'Organized quarterly town halls for 500+ employees and annual team offsites',
               'Created and maintained filing systems improving document retrieval efficiency by 50%',
               'Received "Employee of the Quarter" award for exceptional performance in 2016'
@@ -117,7 +117,7 @@ export default function AdministrativeExamples() {
         phone: '+91 98765 43225',
         linkedin: 'linkedin.com/in/rajeshkumar',
         location: 'Bangalore, India',
-        summary: 'Office Manager with 8+ years of experience in facilities management, vendor coordination, and team supervision. Skilled in optimizing office operations, managing budgets up to ₹2Cr, and improving workplace efficiency by 35%.',
+        summary: 'Office Manager with 8+ years of experience in facilities management, vendor coordination, and team supervision. Skilled in optimizing office operations, managing budgets up to â‚¹2Cr, and improving workplace efficiency by 35%.',
         education: [
           {
             degree: 'MBA in Operations Management',
@@ -152,7 +152,7 @@ export default function AdministrativeExamples() {
             period: '2019-Present',
             points: [
               'Oversee daily operations of 200,000 sq. ft. corporate office serving 2,500+ employees',
-              'Assist in managing facilities budget of ₹2Cr, identifying cost savings of ₹25L annually',
+              'Assist in managing facilities budget of â‚¹2Cr, identifying cost savings of â‚¹25L annually',
               'Coordinate with 15+ vendors for maintenance, catering, security, and supplies',
               'Lead team of 12 administrative staff including receptionists and facility coordinators',
               'Implemented inventory management system reducing supply costs by 20% and waste by 30%',
@@ -195,19 +195,19 @@ export default function AdministrativeExamples() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Examples",
-        "item": "https://freeresumemakers.com/examples"
+        "item": "https://freeresumemaker.xyz/examples"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Administrative Resumes",
-        "item": "https://freeresumemakers.com/professions/administrative"
+        "item": "https://freeresumemaker.xyz/professions/administrative"
       }
     ]
   };
@@ -244,7 +244,7 @@ export default function AdministrativeExamples() {
           title={`${selectedExample.title} | Administrative Resume Example 2026 | Free Sample Template`}
           description={`${selectedExample.description} View a complete ${selectedExample.title.toLowerCase()} with ${selectedExample.experience} of experience. Includes ${selectedExample.skills.slice(0, 3).join(', ')} and more. Download as template or customize with our free resume builder.`}
           keywords={`${selectedExample.title.toLowerCase()}, administrative resume, executive assistant resume, office manager CV, admin resume, office administration resume, executive support resume, administrative assistant CV, facilities management resume, executive assistant 2026`}
-          canonical={`https://freeresumemakers.com/professions/administrative/${selectedExample.id}`}
+          canonical={`https://freeresumemaker.xyz/professions/administrative/${selectedExample.id}`}
           noindex={false}
         />
 
@@ -271,11 +271,11 @@ export default function AdministrativeExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>›</span>
+            <span>â€º</span>
             <Link href="/professions/administrative" style={{ color: '#666', textDecoration: 'none' }}>Administrative Resumes</Link>
-            <span>›</span>
+            <span>â€º</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -306,7 +306,7 @@ export default function AdministrativeExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            ← Back to All Administrative Resume Examples
+            â† Back to All Administrative Resume Examples
           </button>
 
           {/* Template Header */}
@@ -631,8 +631,8 @@ export default function AdministrativeExamples() {
         title="Administrative Resume Examples | Executive Assistant & Office Manager Resumes 2026"
         description="Browse 20+ professional administrative resume examples for executive assistants, office managers, administrative assistants, and executive support professionals. Sample resumes with calendar management, travel coordination, facilities management, team supervision, vendor management, and budget optimization expertise. Learn from real examples to create your winning administrative resume for 2026 hiring season."
         keywords="administrative resume, executive assistant resume, office manager resume, administrative assistant resume, executive support resume, office administration resume, admin resume, facilities management resume, C-suite support resume, administrative CV, office manager CV, executive assistant 2026"
-        canonical="https://freeresumemakers.com/professions/administrative"
-        image="https://freeresumemakers.com/images/professions/administrative-og.jpg"
+        canonical="https://freeresumemaker.xyz/professions/administrative"
+        image="https://freeresumemaker.xyz/images/professions/administrative-og.jpg"
         type="website"
       />
       
@@ -663,9 +663,9 @@ export default function AdministrativeExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span style={{ color: '#0070f3' }}>Administrative Resumes</span>
         </nav>
 
@@ -732,11 +732,11 @@ export default function AdministrativeExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>C-Suite • Corporate</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>C-Suite â€¢ Corporate</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Executive Support Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CEA • COM • MOS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CEA â€¢ COM â€¢ MOS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -875,7 +875,7 @@ export default function AdministrativeExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume →
+                  View Complete Resume â†’
                 </span>
               </div>
             </div>
@@ -904,7 +904,7 @@ export default function AdministrativeExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Efficiency Improvements</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "Improved executive efficiency by 40%", "Reduced document retrieval time by 60%", "Saved 200+ hours annually through calendar optimization", "Managed ₹2Cr budget with 15% cost reduction".</p>
+              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "Improved executive efficiency by 40%", "Reduced document retrieval time by 60%", "Saved 200+ hours annually through calendar optimization", "Managed â‚¹2Cr budget with 15% cost reduction".</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Highlight Technical Expertise</h3>
@@ -959,7 +959,7 @@ export default function AdministrativeExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now →
+            Create Your Resume Now â†’
           </Link>
         </div>
 

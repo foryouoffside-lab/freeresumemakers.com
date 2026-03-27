@@ -72,19 +72,19 @@ export default function BySectionIndex() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Templates",
-        "item": "https://freeresumemakers.com/templates"
+        "item": "https://freeresumemaker.xyz/templates"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Browse by Section",
-        "item": "https://freeresumemakers.com/templates/by-section"
+        "item": "https://freeresumemaker.xyz/templates/by-section"
       }
     ]
   };
@@ -100,7 +100,7 @@ export default function BySectionIndex() {
       "@type": "ListItem",
       "position": idx + 1,
       "name": section.name,
-      "url": `https://freeresumemakers.com/templates/by-section/${section.id}`
+      "url": `https://freeresumemaker.xyz/templates/by-section/${section.id}`
     }))
   };
 
@@ -110,7 +110,7 @@ export default function BySectionIndex() {
         title="Browse Resume Templates by Section | Find Templates with Experience, Skills & More"
         description="Browse and filter resume templates by the sections you need. Find templates with work experience, skills, education, projects, languages, certifications, and profile photo sections. Choose the perfect layout for your career."
         keywords="resume templates by section, resume sections, work experience templates, skills section, education section, resume by section, CV sections, professional summary templates, project portfolio templates, certification resume templates"
-        canonical="https://freeresumemakers.com/templates/by-section"
+        canonical="https://freeresumemaker.xyz/templates/by-section"
         type="website"
       />
       

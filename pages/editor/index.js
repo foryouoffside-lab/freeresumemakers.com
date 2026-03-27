@@ -24,7 +24,7 @@ export default function EditorIndex() {
       "@type": "ListItem",
       "position": i + 1,
       "name": `Template ${i + 1}`,
-      "url": `https://freeresumemakers.com/editor/${i + 1}/personalInfo`,
+      "url": `https://freeresumemaker.xyz/editor/${i + 1}/personalInfo`,
       "description": `ATS-optimized resume template ${i + 1} with clean formatting and professional design`
     }))
   };
@@ -38,19 +38,19 @@ export default function EditorIndex() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemakers.com/"
+        "item": "https://freeresumemaker.xyz/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Resume Builder",
-        "item": "https://freeresumemakers.com/editor/"
+        "item": "https://freeresumemaker.xyz/editor/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Choose Template",
-        "item": "https://freeresumemakers.com/editor/"
+        "item": "https://freeresumemaker.xyz/editor/"
       }
     ]
   };
@@ -61,8 +61,8 @@ export default function EditorIndex() {
     "@type": "LocalBusiness",
     "name": "Free Resume Builder",
     "description": "Free online resume builder with 20+ ATS-friendly templates. Create and download professional resumes instantly.",
-    "url": "https://freeresumemakers.com/editor/",
-    "logo": "https://freeresumemakers.com/logo.png",
+    "url": "https://freeresumemaker.xyz/editor/",
+    "logo": "https://freeresumemaker.xyz/logo.png",
     "priceRange": "$0",
     "areaServed": {
       "@type": "Country",
@@ -107,21 +107,21 @@ export default function EditorIndex() {
         "name": "Choose Template",
         "position": 1,
         "text": "Select from 20+ professional ATS-friendly resume templates",
-        "image": "https://freeresumemakers.com/assets/howto/step1-choose-template.jpg"
+        "image": "https://freeresumemaker.xyz/assets/howto/step1-choose-template.jpg"
       },
       {
         "@type": "HowToStep",
         "name": "Fill Your Details",
         "position": 2,
         "text": "Add your personal information, work experience, education, skills, and achievements",
-        "image": "https://freeresumemakers.com/assets/howto/step2-fill-details.jpg"
+        "image": "https://freeresumemaker.xyz/assets/howto/step2-fill-details.jpg"
       },
       {
         "@type": "HowToStep",
         "name": "Download PDF",
         "position": 3,
         "text": "Download your professional resume as a PDF file, ready to send to employers",
-        "image": "https://freeresumemakers.com/assets/howto/step3-download-pdf.jpg"
+        "image": "https://freeresumemaker.xyz/assets/howto/step3-download-pdf.jpg"
       }
     ]
   };
@@ -132,8 +132,8 @@ export default function EditorIndex() {
         title="Choose Resume Template 2026 | 20+ ATS-Friendly Designs | Free Resume Builder"
         description="Select from 20+ professional ATS-friendly resume templates for 2026. All templates are optimized for Applicant Tracking Systems, fully customizable, and ready for instant PDF download. Start building your resume today - no sign up required."
         keywords="resume template selector, choose resume template, ATS-friendly templates, free resume builder, professional CV templates, best resume templates 2026, resume templates 2026, modern resume templates, ATS resume templates"
-        canonical="https://freeresumemakers.com/editor/"
-        image="https://freeresumemakers.com/assets/template-previews/all-templates-collection.jpg"
+        canonical="https://freeresumemaker.xyz/editor/"
+        image="https://freeresumemaker.xyz/assets/template-previews/all-templates-collection.jpg"
         type="website"
       />
       
