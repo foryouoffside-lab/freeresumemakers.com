@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -137,7 +138,7 @@ export default function ResumeBuilderPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Resume Builder Guide</span>
         </nav>
 
@@ -255,7 +256,7 @@ export default function ResumeBuilderPage() {
                 </div>
                 
                 <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  Browse All 20+ Templates Ã¢â€ â€™
+                  Browse All 20+ Templates →
                 </Link>
               </div>
             </section>
@@ -295,7 +296,7 @@ export default function ResumeBuilderPage() {
                   <li><strong>Portfolio or GitHub</strong> - Include if relevant to your role</li>
                 </ul>
                 <Link href="/sections/personal-info" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  Learn More About Contact Information Ã¢â€ â€™
+                  Learn More About Contact Information →
                 </Link>
               </div>
             </section>
@@ -334,7 +335,7 @@ export default function ResumeBuilderPage() {
                   </p>
                 </div>
                 <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  More Summary Examples by Industry Ã¢â€ â€™
+                  More Summary Examples by Industry →
                 </Link>
               </div>
             </section>
@@ -388,7 +389,7 @@ export default function ResumeBuilderPage() {
                 </div>
                 
                 <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  Learn to Write Better Experience Bullets Ã¢â€ â€™
+                  Learn to Write Better Experience Bullets →
                 </Link>
               </div>
             </section>
@@ -427,7 +428,7 @@ export default function ResumeBuilderPage() {
                   <li>Honors, awards, and relevant coursework</li>
                 </ul>
                 <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  Education Section Examples Ã¢â€ â€™
+                  Education Section Examples →
                 </Link>
               </div>
             </section>
@@ -484,7 +485,7 @@ export default function ResumeBuilderPage() {
                   </div>
                 </div>
                 <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  Skills Examples by Industry Ã¢â€ â€™
+                  Skills Examples by Industry →
                 </Link>
               </div>
             </section>
@@ -536,7 +537,7 @@ export default function ResumeBuilderPage() {
                   ))}
                 </div>
                 <Link href="/sections" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>
-                  All Resume Sections Guide Ã¢â€ â€™
+                  All Resume Sections Guide →
                 </Link>
               </div>
             </section>
@@ -625,22 +626,22 @@ export default function ResumeBuilderPage() {
                 gap: '12px' 
               }}>
                 <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  200+ Action Verbs for Resume Ã¢â€ â€™
+                  200+ Action Verbs for Resume →
                 </Link>
                 <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  ATS Resume Tips 2026 Ã¢â€ â€™
+                  ATS Resume Tips 2026 →
                 </Link>
                 <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  Resume Formatting Guide Ã¢â€ â€™
+                  Resume Formatting Guide →
                 </Link>
                 <Link href="/blog/resume-mistakes-to-avoid" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  Common Resume Mistakes Ã¢â€ â€™
+                  Common Resume Mistakes →
                 </Link>
                 <Link href="/professions/software-engineering" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  Technology Resume Examples Ã¢â€ â€™
+                  Technology Resume Examples →
                 </Link>
                 <Link href="/blog/ultimate-resume-guide-2026" style={{ color: '#0070f3', textDecoration: 'none' }}>
-                  Complete Resume Guide 2026 Ã¢â€ â€™
+                  Complete Resume Guide 2026 →
                 </Link>
               </div>
             </div>
@@ -730,7 +731,7 @@ export default function ResumeBuilderPage() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                Start Building Your Resume Now Ã¢â€ â€™
+                Start Building Your Resume Now →
               </Link>
             </div>
           </>

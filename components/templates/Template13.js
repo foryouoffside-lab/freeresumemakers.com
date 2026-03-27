@@ -1,4 +1,5 @@
-﻿import React, { useRef, useMemo, useEffect, useState } from 'react';
+﻿import Head from 'next/head';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== DEBUG MODE =====
@@ -21,7 +22,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
       } else if (level === 'warn') {
         console.warn(logMessage, data);
       } else {
-
+        // Info level - no console log by default
       }
     }
   };
@@ -336,8 +337,8 @@ const Template13 = ({ isExporting = false, ...props }) => {
     const end = current ? 'Present' : formatDate(endDate);
     
     if (!start && !end) return '';
-    if (start && end) return `${start} Ã¢â‚¬â€œ ${end}`;
-    if (start) return `${start} Ã¢â‚¬â€œ Present`;
+    if (start && end) return `${start} – ${end}`;
+    if (start) return `${start} – Present`;
     return end;
   };
 
@@ -433,7 +434,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                 border: 'none',
                 flexShrink: 0
               }}>
-                {formatDate(exp.startDate)} Ã¢â‚¬â€œ {formatDate(exp.endDate)}
+                {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
               </div>
             </div>
           </div>
@@ -471,7 +472,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                   gap: '2px',
                   fontSize: '10pt' // Reduced from 11pt to 10pt (1px smaller)
                 }}>
-                  <span style={{ fontSize: '9.5pt' }}>Ã°Å¸â€œÂ</span>
+                  <span style={{ fontSize: '9.5pt' }}>📍</span>
                   {safeString(exp.location)}
                 </span>
               )}
@@ -617,7 +618,7 @@ const Template13 = ({ isExporting = false, ...props }) => {
                 alignItems: 'center',
                 gap: '2px'
               }}>
-                <span style={{ fontSize: '9pt' }}>Ã°Å¸â€œÂ</span>
+                <span style={{ fontSize: '9pt' }}>📍</span>
                 {safeString(edu.location)}
               </div>
             </div>

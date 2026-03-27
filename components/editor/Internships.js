@@ -995,7 +995,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                         <InfoIcon tooltip="Use the STAR method: Situation, Task, Action, Result. Include metrics and numbers." />
                       </div>
                       <small style={{ fontSize: '12px', color: '#718096' }}>
-                        {newAchievementCount}/{MAX_ACHIEVEMENTS} added Ã¢â‚¬Â¢ Max {MAX_CHARS} characters each
+                        {newAchievementCount}/{MAX_ACHIEVEMENTS} added • Max {MAX_CHARS} characters each
                       </small>
                     </div>
                     
@@ -1005,7 +1005,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                         gap: '8px',
                         marginBottom: '12px'
                       }}>
-                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>Ã¢â‚¬Â¢</span>
+                        <span style={{ fontSize: '14px', color: '#4299e1', marginTop: '10px' }}>•</span>
                         <div style={{ flex: 1 }}>
                           <textarea
                             value={bullet}
@@ -1048,7 +1048,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                               fontSize: '12px'
                             }}
                           >
-                            Ã¢Å“â€¢
+                            ✕
                           </button>
                         )}
                       </div>
@@ -1104,7 +1104,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                 border: '1px solid #fed7aa',
                 textAlign: 'center'
               }}>
-                <div style={{ fontSize: '32px', marginBottom: '12px' }}>Ã¢Å¡Â Ã¯Â¸Â</div>
+                <div style={{ fontSize: '32px', marginBottom: '12px' }}>⚠️</div>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#c05621', marginBottom: '8px' }}>
                   Limit Reached
                 </h4>
@@ -1138,7 +1138,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>Ã°Å¸â€œâ€¹</span>
+                  <span>📋</span>
                   Your Internships
                 </h3>
                 <div style={{
@@ -1160,7 +1160,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>Ã°Å¸â€™Â¼</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>💼</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No internship entries yet
                   </p>
@@ -1216,7 +1216,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                                   padding: '4px 8px',
                                   borderRadius: '20px'
                                 }}>
-                                  Ã°Å¸Å¸Â¢ Current
+                                  🔵 Current
                                 </span>
                               )}
                             </div>
@@ -1234,7 +1234,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                               fontSize: '14px'
                             }}
                           >
-                            Ã¢Å“â€¢
+                            ✕
                           </button>
                         </div>
                         
@@ -1252,7 +1252,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                               padding: '4px 8px',
                               borderRadius: '20px'
                             }}>
-                              Ã°Å¸â€œâ€¦ {formatDate(intern.startDate)} - {intern.current ? 'Present' : formatDate(intern.endDate)}
+                              📅 {formatDate(intern.startDate)} - {intern.current ? 'Present' : formatDate(intern.endDate)}
                             </span>
                             {intern.location && (
                               <span style={{
@@ -1262,7 +1262,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                                 padding: '4px 8px',
                                 borderRadius: '20px'
                               }}>
-                                Ã°Å¸â€œÂ {intern.location}
+                                📍 {intern.location}
                               </span>
                             )}
                           </div>
@@ -1326,7 +1326,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                                   gap: '8px',
                                   marginBottom: '10px'
                                 }}>
-                                  <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>Ã¢â‚¬Â¢</span>
+                                  <span style={{ fontSize: '13px', color: '#4299e1', marginTop: '6px' }}>•</span>
                                   <div style={{ flex: 1 }}>
                                     <textarea
                                       value={bullet || ''}
@@ -1369,7 +1369,7 @@ const Internship = ({ data = [], navigationButtons, onDataChange, templateId }) 
                                         fontSize: '11px'
                                       }}
                                     >
-                                      Ã¢Å“â€¢
+                                      ✕
                                     </button>
                                   )}
                                 </div>

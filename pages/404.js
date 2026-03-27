@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -256,7 +257,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = '#0070f3';
               }}
             >
-              <span>Ã°Å¸ÂÂ </span> Return to Home
+              <span>🏠</span> Return to Home
             </Link>
 
             <Link
@@ -284,7 +285,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = 'white';
               }}
             >
-              <span>Ã°Å¸â€œÂ</span> Build Your Resume
+              <span>📝</span> Build Your Resume
             </Link>
           </div>
 

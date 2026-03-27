@@ -204,7 +204,7 @@ const cleanCertificationsData = (certifications) => {
       name: cert.name || cert.title || '',
       issuer: cert.issuer || cert.organization || '',
       date: cert.date || cert.issueDate || cert.completionDate || '',
-      icon: cert.icon || 'ðŸ“œ',
+      icon: cert.icon || '',
       current: Boolean(cert.current),
       link: cert.link || cert.url || ''
     }));
@@ -221,7 +221,7 @@ const cleanAwardsData = (awards) => {
       title: award.title || award.name || '',
       issuer: award.issuer || award.organization || '',
       date: award.date || award.year || '',
-      icon: award.icon || 'ðŸ†'
+      icon: award.icon || ''
     }));
 };
 
@@ -524,7 +524,7 @@ export const ResumeProvider = ({ children }) => {
           }
         }
       } catch (error) {
-        console.error('âŒ Error loading from localStorage:', error);
+        console.error('Error loading from localStorage:', error);
         localStorage.removeItem('resumeData');
       } finally {
         setIsLoading(false);
@@ -570,7 +570,7 @@ export const ResumeProvider = ({ children }) => {
       setTimeout(() => setIsSaving(false), 500);
       return true;
     } catch (error) {
-      console.error('âŒ Error saving to localStorage:', error);
+      console.error('Error saving to localStorage:', error);
       setIsSaving(false);
       return false;
     }
@@ -871,7 +871,7 @@ export const ResumeProvider = ({ children }) => {
     try {
       return localStorage.getItem('resumeData');
     } catch (error) {
-      console.error('âŒ Error checking localStorage:', error);
+      console.error('Error checking localStorage:', error);
       return null;
     }
   }, []);
@@ -974,7 +974,7 @@ export const useResumeDebug = () => {
   return {
     ...context,
     debugState: () => {
-      console.group('ðŸ” Resume Context Debug');
+      console.group('Resume Context Debug');
       // console.log removed for production
       // console.log removed for production
       // console.log removed for production

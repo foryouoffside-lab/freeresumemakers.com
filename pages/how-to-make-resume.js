@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -163,7 +164,7 @@ export default function HowToMakeResume() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>How to Make a Resume</span>
         </nav>
 
@@ -247,7 +248,7 @@ export default function HowToMakeResume() {
               <li><strong>Combination:</strong> Perfect for those with strong skills and experience</li>
             </ul>
             <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              Browse templates by format â†’
+              Browse templates by format →
             </Link>
           </div>
         </div>
@@ -287,7 +288,7 @@ export default function HowToMakeResume() {
               <li>Portfolio or GitHub (if relevant to your role)</li>
             </ul>
             <Link href="/sections/personal-info" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              Learn more about contact information â†’
+              Learn more about contact information →
             </Link>
           </div>
         </div>
@@ -333,7 +334,7 @@ export default function HowToMakeResume() {
               </p>
             </div>
             <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              See more summary examples by industry â†’
+              See more summary examples by industry →
             </Link>
           </div>
         </div>
@@ -372,7 +373,7 @@ export default function HowToMakeResume() {
               </p>
             </div>
             <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              Learn to write better experience bullets â†’
+              Learn to write better experience bullets →
             </Link>
           </div>
         </div>
@@ -411,7 +412,7 @@ export default function HowToMakeResume() {
               <li>Honors, awards, or relevant coursework</li>
             </ul>
             <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              Education section examples â†’
+              Education section examples →
             </Link>
           </div>
         </div>
@@ -468,7 +469,7 @@ export default function HowToMakeResume() {
               </div>
             </div>
             <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              See skills examples by industry â†’
+              See skills examples by industry →
             </Link>
           </div>
         </div>
@@ -517,7 +518,7 @@ export default function HowToMakeResume() {
               <li>Professional Memberships</li>
             </ul>
             <Link href="/sections" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>
-              All resume sections guide â†’
+              All resume sections guide →
             </Link>
           </div>
         </div>
@@ -583,7 +584,7 @@ export default function HowToMakeResume() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Your Resume Now â†’
+            Start Building Your Resume Now →
           </Link>
         </div>
 
@@ -609,22 +610,22 @@ export default function HowToMakeResume() {
             gap: '12px'
           }}>
             <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Resume Formatting Guide â†’
+              Resume Formatting Guide →
             </Link>
             <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              ATS Tips 2026 â†’
+              ATS Tips 2026 →
             </Link>
             <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              200+ Action Verbs â†’
+              200+ Action Verbs →
             </Link>
             <Link href="/blog/resume-mistakes-to-avoid" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Common Mistakes to Avoid â†’
+              Common Mistakes to Avoid →
             </Link>
             <Link href="/blog/resume-sections-guide" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Complete Sections Guide â†’
+              Complete Sections Guide →
             </Link>
             <Link href="/blog/ultimate-resume-guide-2026" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Ultimate Resume Guide 2026 â†’
+              Ultimate Resume Guide 2026 →
             </Link>
           </div>
         </div>
@@ -638,7 +639,7 @@ export default function HowToMakeResume() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | Step-by-Step Resume Guide | 100% Free</p>
+          <p>© {new Date().getFullYear()} Free Resume Builder | Step-by-Step Resume Guide | 100% Free</p>
         </div>
       </div>
     </>

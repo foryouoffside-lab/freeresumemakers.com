@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿import Head from 'next/head';
+// ============================================
 // components/templates/Template1.js 
 // UPDATED: LinkedIn "in" icon in blue color
 // - Shows username instead of full URL
@@ -40,15 +41,15 @@ const SPACING_CONFIG = Object.freeze({
   photoSize: '160px'
 });
 
-// ICON MAPPING - Using Template17 style icons
+// ICON MAPPING - Fixed characters
 const ICON_MAPPING = Object.freeze({
-  email: 'âœ‰',
-  phone: '📄ž',
-  address: '📄',
+  email: '✉️',
+  phone: '📞',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color
-  github: 'âŒ¨',
-  portfolio: '📄Œ',
-  default: '📄Œ'
+  github: '🐙',
+  portfolio: '🌐',
+  default: '📄'
 });
 
 // Helper functions
@@ -400,7 +401,7 @@ const Template1 = ({
     
     const cleanedBulletPoints = bulletPoints.map(bullet => {
       let cleaned = TemplateHelpers.safeString(bullet);
-      cleaned = cleaned.replace(/^[â€¢\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
       cleaned = cleaned.replace(/\.\.+/g, '.');
       return cleaned;
     });
@@ -434,7 +435,7 @@ const Template1 = ({
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} â€“ ${end}`;
+    return `${start} – ${end}`;
   };
 
   const processEducation = useMemo(() => (edu) => {
@@ -641,7 +642,7 @@ const Template1 = ({
     const isMobile = windowWidth < 768;
     
     const dateDisplay = edu.formattedStartDate && edu.formattedEndDate 
-      ? `${edu.formattedStartDate} â€“ ${edu.formattedEndDate}`
+      ? `${edu.formattedStartDate} – ${edu.formattedEndDate}`
       : edu.displayDate;
     
     return (
@@ -674,7 +675,7 @@ const Template1 = ({
               ...(isMobile ? styles.mobileEducationDates : {})
             }}>
               {dateDisplay}
-              {edu.current && <span style={styles.educationCurrent}>â€¢ Current</span>}
+              {edu.current && <span style={styles.educationCurrent}>• Current</span>}
             </div>
           )}
         </div>
@@ -693,7 +694,7 @@ const Template1 = ({
           }}>
             {edu.location && edu.location.trim() && (
               <span style={styles.institutionLocation}>
-                <span style={styles.locationIcon}>📄</span> {edu.location}
+                <span style={styles.locationIcon}>📍</span> {edu.location}
               </span>
             )}
             
@@ -702,7 +703,7 @@ const Template1 = ({
                 ...styles.gpaBadge,
                 ...(isMobile ? styles.mobileGpaBadge : {})
               }}>
-                <span style={styles.gpaIcon}>📄Š</span>
+                <span style={styles.gpaIcon}>⭐</span>
                 <span style={styles.gpaText}>{edu.gpaDisplay}</span>
               </span>
             )}
@@ -714,7 +715,7 @@ const Template1 = ({
             ...styles.honorsContainer,
             ...(isMobile ? styles.mobileHonorsContainer : {})
           }}>
-            <span style={styles.honorsIcon}>📄†</span>
+            <span style={styles.honorsIcon}>🏆</span>
             <span style={styles.honorsText}>{edu.honors}</span>
           </div>
         )}
@@ -728,8 +729,8 @@ const Template1 = ({
     const isMobile = windowWidth < 768;
     
     const dateDisplay = exp.formattedStartDate && exp.formattedEndDate 
-      ? `${exp.formattedStartDate} â€“ ${exp.formattedEndDate}`
-      : `${TemplateHelpers.formatDate(exp.startDate)} â€“ ${TemplateHelpers.formatDate(exp.endDate)}`;
+      ? `${exp.formattedStartDate} – ${exp.formattedEndDate}`
+      : `${TemplateHelpers.formatDate(exp.startDate)} – ${TemplateHelpers.formatDate(exp.endDate)}`;
     
     const locationValue = exp.location && typeof exp.location === 'string' ? exp.location.trim() : '';
     const hasLocation = locationValue.length > 0;
@@ -763,7 +764,7 @@ const Template1 = ({
               </span>
               {hasLocation && (
                 <span style={styles.companyLocation}>
-                  <span style={styles.locationIcon}>📄</span> {locationValue}
+                  <span style={styles.locationIcon}>📍</span> {locationValue}
                 </span>
               )}
             </div>
@@ -781,7 +782,7 @@ const Template1 = ({
             <ul style={styles.achievementsList}>
               {exp.bulletPoints.map((bullet, idx) => (
                 <li key={idx} style={styles.achievementItem}>
-                  <span style={styles.bulletPoint}>â€¢</span>
+                  <span style={styles.bulletPoint}>•</span>
                   <span style={styles.achievementText}>
                     {TemplateHelpers.safeString(bullet)}
                   </span>
@@ -1077,7 +1078,7 @@ const Template1 = ({
                   ...styles.expBadge,
                   ...(isMobile ? styles.mobileExpBadge : { alignSelf: 'flex-start' })
                 }}>
-                  <span style={styles.badgeIcon}>â±ï¸</span>
+                  <span style={styles.badgeIcon}>⏱️</span>
                   {displayTotalExperience()} Years Experience
                 </div>
               )}
@@ -1098,7 +1099,7 @@ const Template1 = ({
               margin: SPACING_CONFIG.sectionTitleMargin,
               padding: SPACING_CONFIG.sectionTitlePadding
             }}>
-              <span style={styles.sectionIcon}>📄</span>
+              <span style={styles.sectionIcon}>📝</span>
               PROFESSIONAL SUMMARY
             </h3>
             <div style={{
@@ -1115,7 +1116,7 @@ const Template1 = ({
               margin: SPACING_CONFIG.sectionTitleMargin,
               padding: SPACING_CONFIG.sectionTitlePadding
             }}>
-              <span style={styles.sectionIcon}>📄’¼</span>
+              <span style={styles.sectionIcon}>💼</span>
               PROFESSIONAL EXPERIENCE
             </h3>
             
@@ -1127,7 +1128,7 @@ const Template1 = ({
               </div>
             ) : (
               <div style={styles.noExperienceMessage}>
-                <div style={styles.noExperienceIcon}>📄’¼</div>
+                <div style={styles.noExperienceIcon}>💼</div>
                 <p style={styles.noExperienceP}>
                   No work experience added yet
                 </p>
@@ -1145,7 +1146,7 @@ const Template1 = ({
                 margin: SPACING_CONFIG.sectionTitleMargin,
                 padding: SPACING_CONFIG.sectionTitlePadding
               }}>
-                <span style={styles.sectionIcon}>📄Ž“</span>
+                <span style={styles.sectionIcon}>🎓</span>
                 EDUCATION
               </h3>
               <div style={styles.educationList}>
@@ -1163,7 +1164,7 @@ const Template1 = ({
                 margin: SPACING_CONFIG.sectionTitleMargin,
                 padding: SPACING_CONFIG.sectionTitlePadding
               }}>
-                <span style={styles.sectionIcon}>📄ž</span>
+                <span style={styles.sectionIcon}>📞</span>
                 CONTACT
               </h3>
               <div style={styles.contactList}>
@@ -1179,7 +1180,7 @@ const Template1 = ({
                 margin: SPACING_CONFIG.sectionTitleMargin,
                 padding: SPACING_CONFIG.sectionTitlePadding
               }}>
-                <span style={styles.sectionIcon}>âš¡</span>
+                <span style={styles.sectionIcon}>⚡</span>
                 KEY SKILLS
               </h3>
               <div style={styles.skillsGrid}>
@@ -1195,7 +1196,7 @@ const Template1 = ({
                 margin: SPACING_CONFIG.sectionTitleMargin,
                 padding: SPACING_CONFIG.sectionTitlePadding
               }}>
-                <span style={styles.sectionIcon}>📄œ</span>
+                <span style={styles.sectionIcon}>📜</span>
                 CERTIFICATION
               </h3>
               <div style={styles.certificationsList}>

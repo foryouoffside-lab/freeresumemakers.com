@@ -1,22 +1,23 @@
-﻿import React, { useRef, useMemo, useEffect, useState } from 'react';
+﻿import Head from 'next/head';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T15_ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°Ã¯Â¸Â',
-  phone: 'Ã°Å¸â€œÂ±',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉️',
+  phone: '📱',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'Ã¢Å’Â¨Ã¯Â¸Â',
-  portfolio: 'Ã°Å¸Å’Â',
-  website: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨️',
+  portfolio: '🌐',
+  website: '🌐',
+  default: '📌'
 });
 
 // ===== CONFIGURATION =====
 // Keeping only job experience
 const EXPERIENCE_TYPES = {
-  job: { label: "Professional Experience", icon: "Ã°Å¸â€™Â¼", color: "#2563eb" }
+  job: { label: "Professional Experience", icon: "💼", color: "#2563eb" }
 };
 
 // A4 Dimensions for print optimization
@@ -73,7 +74,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
     if (!s && !e) return '';
     if (s && !e) return s;
     if (!s && e) return e;
-    return `${s} Ã¢â‚¬â€œ ${e}`;
+    return `${s} – ${e}`;
   };
 
   // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -466,7 +467,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
 
     const summaryWords = safeString(professionalSummary).split(/\s+/).filter(w => w);
     const limitedSummary = summaryWords.length > CONTENT_LIMITS.summaryWords
-      ? summaryWords.slice(0, CONTENT_LIMITS.summaryWords).join(' ') + 'Ã¢â‚¬Â¦'
+      ? summaryWords.slice(0, CONTENT_LIMITS.summaryWords).join(' ') + '…'
       : safeString(professionalSummary);
 
     const sections = {
@@ -902,7 +903,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {/* Location on its own line */}
         {exp.location && (
           <div style={styles.locationText}>
-            <span>Ã°Å¸â€œÂ</span> {exp.location}
+            <span>📍</span> {exp.location}
           </div>
         )}
         
@@ -945,7 +946,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
           <div style={styles.locationGpaRow}>
             {edu.location && (
               <div style={styles.locationText}>
-                <span>Ã°Å¸â€œÂ</span> {edu.location}
+                <span>📍</span> {edu.location}
               </div>
             )}
             {formattedGPA && (
@@ -978,7 +979,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         
         {project.location && (
           <div style={styles.locationText}>
-            <span>Ã°Å¸â€œÂ</span> {project.location}
+            <span>📍</span> {project.location}
           </div>
         )}
         
@@ -1114,7 +1115,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {contentAnalysis.sections.summary && (
           <section style={styles.section}>
             <h2 style={styles.sectionTitle}>
-              <span style={styles.sectionIcon}>Ã¢Å“Â¨</span>
+              <span style={styles.sectionIcon}>✨</span>
               Professional Summary
             </h2>
             <div style={styles.summaryContent}>
@@ -1127,7 +1128,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {contentAnalysis.sections.skills && (
           <section style={styles.section}>
             <h2 style={styles.sectionTitle}>
-              <span style={styles.sectionIcon}>Ã¢Å¡Â¡</span>
+              <span style={styles.sectionIcon}>⚡</span>
               Core Skills
             </h2>
             <div style={styles.skillsGrid}>
@@ -1140,7 +1141,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {contentAnalysis.sections.education && (
           <section style={styles.section}>
             <h2 style={styles.sectionTitle}>
-              <span style={styles.sectionIcon}>Ã°Å¸Å½â€œ</span>
+              <span style={styles.sectionIcon}>🎓</span>
               Education
             </h2>
             <div>
@@ -1153,7 +1154,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {contentAnalysis.sections.hasAnyExperience && (
           <section style={styles.section}>
             <h2 style={styles.sectionTitle}>
-              <span style={styles.sectionIcon}>Ã°Å¸â€™Â¼</span>
+              <span style={styles.sectionIcon}>💼</span>
               Professional Experience
             </h2>
             
@@ -1163,7 +1164,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
               </div>
             ) : (
               <div style={styles.emptyState}>
-                <div style={styles.emptyIcon}>Ã°Å¸â€™Â¼</div>
+                <div style={styles.emptyIcon}>💼</div>
                 <p style={styles.emptyText}>No professional experience yet</p>
               </div>
             )}
@@ -1174,7 +1175,7 @@ const Template15 = ({ isExporting = false, ...props }) => {
         {contentAnalysis.sections.projects && (
           <section style={styles.section}>
             <h2 style={styles.sectionTitle}>
-              <span style={styles.sectionIcon}>Ã°Å¸â€œÂ</span>
+              <span style={styles.sectionIcon}>📁</span>
               Projects
             </h2>
             <div>

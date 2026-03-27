@@ -217,7 +217,7 @@ function SectionEditorContent() {
           width: '100%',
           minHeight: '48px'
         }}>
-          👁️ {windowWidth < 768 ? 'Preview' : 'Preview Resume'}
+          Preview
         </button>
         <button onClick={handleContinue} style={{
           padding: windowWidth < 768 ? '14px 16px' : '14px 28px',
@@ -232,7 +232,7 @@ function SectionEditorContent() {
           width: '100%',
           minHeight: '48px'
         }}>
-          {windowWidth < 768 ? 'Continue' : 'Continue'} →
+          Continue →
         </button>
       </div>
     );

@@ -24,6 +24,7 @@
 // UPDATED - LinkedIn link formatting like Template1 (shows username instead of full URL)
 // UPDATED - LinkedIn icon now blue color matching Template1
 // FIXED - Skills display now uses vertical layout (one below another) with full width
+// FIXED - All corrupted characters replaced with proper Unicode icons
 // ============================================
 
 import React, { useRef, useMemo, useState, useEffect, useCallback } from 'react';
@@ -67,15 +68,15 @@ const BASE_SPACING = Object.freeze({
   bulletSpacing: '2mm'
 });
 
-// ICON MAPPING - Using Template1 style icons
+// ICON MAPPING - Using proper Unicode icons
 const ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°Ã¯Â¸Â',
-  phone: 'Ã°Å¸â€œÂ±',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉️',
+  phone: '📱',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'Ã¢Å’Â¨Ã¯Â¸Â',
-  portfolio: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨️',
+  portfolio: '🌐',
+  default: '📌'
 });
 
 const Template3 = ({ 
@@ -148,10 +149,10 @@ const Template3 = ({
   });
 
   const EXPERIENCE_TYPES = Object.freeze({
-    job: { label: "Work Experience", icon: "Ã°Å¸â€™Â¼", color: "#2c578b" },
-    internship: { label: "Internship", icon: "Ã°Å¸Å½â€œ", color: "#28a745" },
-    freelance: { label: "Freelance", icon: "Ã°Å¸â€™Â»", color: "#ffa726" },
-    research: { label: "Research", icon: "Ã°Å¸â€Â¬", color: "#9c27b0" }
+    job: { label: "Work Experience", icon: "💼", color: "#2c578b" },
+    internship: { label: "Internship", icon: "🎓", color: "#28a745" },
+    freelance: { label: "Freelance", icon: "💻", color: "#ffa726" },
+    research: { label: "Research", icon: "🔬", color: "#9c27b0" }
   });
 
   // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -252,7 +253,7 @@ const Template3 = ({
       if (!start && !end) return '';
       if (start && !end) return start;
       if (!start && end) return end;
-      return `${start} Ã¢â‚¬â€œ ${end}`;
+      return `${start} – ${end}`;
     },
 
     // Format GPA exactly like Template1
@@ -512,7 +513,7 @@ const Template3 = ({
       if (!bullet) return '';
       let cleaned = TemplateHelpers.safeString(bullet);
       // Remove bullet characters if they exist
-      cleaned = cleaned.replace(/^[Ã¢â‚¬Â¢\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
       // Remove excessive periods
       cleaned = cleaned.replace(/\.\.+/g, '.');
       return cleaned;
@@ -545,7 +546,7 @@ const Template3 = ({
     
     const cleanedBulletPoints = bulletPoints.map(bullet => {
       let cleaned = TemplateHelpers.safeString(bullet);
-      cleaned = cleaned.replace(/^[Ã¢â‚¬Â¢\*\-]\s*/, '');
+      cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
       return cleaned;
     }).filter(bullet => bullet.length > 0);
     
@@ -793,18 +794,18 @@ const Template3 = ({
     return rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
   }, []);
 
-  // Localized text
+  // Localized text - Fixed with proper Unicode characters
   const getLocalizedText = useMemo(() => (key, lang = language) => {
     const translations = {
-      present: { en: 'Present', es: 'Actual', fr: 'Actuel', de: 'Aktuell', zh: 'Ã¨â€¡Â³Ã¤Â»Å ', ja: 'Ã§ÂÂ¾Ã¥Å“Â¨' },
-      contact: { en: 'CONTACT', es: 'CONTACTO', fr: 'CONTACT', de: 'KONTAKT', zh: 'Ã¨Ââ€Ã§Â³Â»Ã¦â€“Â¹Ã¥Â¼Â', ja: 'Ã©â‚¬Â£Ã§ÂµÂ¡Ã¥â€¦Ë†' },
-      skills: { en: 'SKILLS', es: 'HABILIDADES', fr: 'COMPÃƒâ€°TENCES', de: 'FÃƒâ€žHIGKEITEN', zh: 'Ã¦Å â‚¬Ã¨Æ’Â½', ja: 'Ã£â€šÂ¹Ã£â€šÂ­Ã£Æ’Â«' },
-      certifications: { en: 'CERTIFICATIONS', es: 'CERTIFICACIONES', fr: 'CERTIFICATIONS', de: 'ZERTIFIZIERUNGEN', zh: 'Ã¨Â®Â¤Ã¨Â¯Â', ja: 'Ã¨ÂªÂÃ¥Â®Å¡' },
-      awards: { en: 'AWARDS', es: 'PREMIOS', fr: 'PRIX', de: 'AUSZEICHNUNGEN', zh: 'Ã¥Â¥â€“Ã©Â¡Â¹', ja: 'Ã¥Ââ€”Ã¨Â³Å¾' },
-      projects: { en: 'PROJECTS', es: 'PROYECTOS', fr: 'PROJETS', de: 'PROJEKTE', zh: 'Ã©Â¡Â¹Ã§â€ºÂ®', ja: 'Ã£Æ’â€”Ã£Æ’Â­Ã£â€šÂ¸Ã£â€šÂ§Ã£â€šÂ¯Ã£Æ’Ë†' },
-      professionalSummary: { en: 'PROFESSIONAL SUMMARY', es: 'RESUMEN PROFESIONAL', fr: 'RÃƒâ€°SUMÃƒâ€° PROFESSIONNEL', de: 'PROFESSIONELLE ZUSAMMENFASSUNG', zh: 'Ã¤Â¸â€œÃ¤Â¸Å¡Ã¦Â¦â€šÃ¨Â¿Â°', ja: 'Ã£Æ’â€”Ã£Æ’Â­Ã£Æ’â€¢Ã£â€šÂ§Ã£Æ’Æ’Ã£â€šÂ·Ã£Æ’Â§Ã£Æ’Å Ã£Æ’Â«Ã£â€šÂµÃ£Æ’Å¾Ã£Æ’ÂªÃ£Æ’Â¼' },
-      workExperience: { en: 'WORK EXPERIENCE', es: 'EXPERIENCIA LABORAL', fr: 'EXPÃƒâ€°RIENCE PROFESSIONNELLE', de: 'BERUFSERFAHRUNG', zh: 'Ã¥Â·Â¥Ã¤Â½Å“Ã§Â»ÂÃ¥Å½â€ ', ja: 'Ã¨ÂÂ·Ã¥â€¹â„¢Ã§ÂµÅ’Ã©Â¨â€œ' },
-      education: { en: 'EDUCATION', es: 'EDUCACIÃƒâ€œN', fr: 'Ãƒâ€°DUCATION', de: 'BILDUNG', zh: 'Ã¦â€¢â„¢Ã¨â€šÂ²Ã¨Æ’Å’Ã¦â„¢Â¯', ja: 'Ã¥Â­Â¦Ã¦Â­Â´' }
+      present: { en: 'Present', es: 'Actual', fr: 'Actuel', de: 'Aktuell', zh: '至今', ja: '現在' },
+      contact: { en: 'CONTACT', es: 'CONTACTO', fr: 'CONTACT', de: 'KONTAKT', zh: '联系方式', ja: '連絡先' },
+      skills: { en: 'SKILLS', es: 'HABILIDADES', fr: 'COMPÉTENCES', de: 'FÄHIGKEITEN', zh: '技能', ja: 'スキル' },
+      certifications: { en: 'CERTIFICATIONS', es: 'CERTIFICACIONES', fr: 'CERTIFICATIONS', de: 'ZERTIFIZIERUNGEN', zh: '认证', ja: '認定' },
+      awards: { en: 'AWARDS', es: 'PREMIOS', fr: 'PRIX', de: 'AUSZEICHNUNGEN', zh: '奖项', ja: '受賞' },
+      projects: { en: 'PROJECTS', es: 'PROYECTOS', fr: 'PROJETS', de: 'PROJEKTE', zh: '项目', ja: 'プロジェクト' },
+      professionalSummary: { en: 'PROFESSIONAL SUMMARY', es: 'RESUMEN PROFESIONAL', fr: 'RÉSUMÉ PROFESSIONNEL', de: 'PROFESSIONELLE ZUSAMMENFASSUNG', zh: '专业概要', ja: 'プロフェッショナルサマリー' },
+      workExperience: { en: 'WORK EXPERIENCE', es: 'EXPERIENCIA LABORAL', fr: 'EXPÉRIENCE PROFESSIONNELLE', de: 'BERUFSERFAHRUNG', zh: '工作经验', ja: '職務経験' },
+      education: { en: 'EDUCATION', es: 'EDUCACIÓN', fr: 'ÉDUCATION', de: 'BILDUNG', zh: '教育背景', ja: '学歴' }
     };
     return translations[key]?.[lang] || translations[key]?.en || key;
   }, [language]);
@@ -1382,14 +1383,14 @@ const Template3 = ({
                 {exp.location && (
                   <span style={baseStyles.location}>
                     <span> | </span>
-                    <span>Ã°Å¸â€œÂ</span> {TemplateHelpers.safeString(exp.location)}
+                    <span>📍</span> {TemplateHelpers.safeString(exp.location)}
                   </span>
                 )}
               </div>
             </div>
             <div>
               <div style={baseStyles.period}>
-                {TemplateHelpers.formatDate(exp.startDate)} Ã¢â‚¬â€œ {TemplateHelpers.formatDate(exp.endDate)}
+                {TemplateHelpers.formatDate(exp.startDate)} – {TemplateHelpers.formatDate(exp.endDate)}
               </div>
             </div>
           </div>
@@ -1401,7 +1402,7 @@ const Template3 = ({
                 <div style={baseStyles.achievementsList}>
                   {exp.bulletPoints.map((bullet, idx) => (
                     <div key={idx} style={baseStyles.achievementItem}>
-                      <span style={baseStyles.achievementBullet}>Ã¢â‚¬Â¢</span>
+                      <span style={baseStyles.achievementBullet}>•</span>
                       <span style={baseStyles.achievementText}>
                         {TemplateHelpers.safeString(bullet)}
                       </span>
@@ -1619,13 +1620,13 @@ const Template3 = ({
             <div>
               <div>
                 <h4 style={baseStyles.title}>
-                  Ã°Å¸Å½â€œ {TemplateHelpers.safeString(edu.degree)}
+                  🎓 {TemplateHelpers.safeString(edu.degree)}
                 </h4>
               </div>
             </div>
             <div>
               <div style={baseStyles.period}>
-                {TemplateHelpers.formatDate(edu.startDate)} Ã¢â‚¬â€œ {TemplateHelpers.formatDate(edu.endDate)}
+                {TemplateHelpers.formatDate(edu.startDate)} – {TemplateHelpers.formatDate(edu.endDate)}
               </div>
             </div>
           </div>
@@ -1640,7 +1641,7 @@ const Template3 = ({
               {/* Location - WITH ICON, white color */}
               {edu.location && edu.location.trim() && (
                 <span style={baseStyles.location}>
-                  <span>Ã°Å¸â€œÂ</span> {TemplateHelpers.safeString(edu.location)}
+                  <span>📍</span> {TemplateHelpers.safeString(edu.location)}
                 </span>
               )}
               
@@ -1648,7 +1649,7 @@ const Template3 = ({
               {edu.gpaDisplay && edu.gpaDisplay.trim() && (
                 <>
                   {edu.location && edu.location.trim() && (
-                    <span style={{ color: colorSchemeConfig.gray }}>Ã¢â‚¬Â¢</span>
+                    <span style={{ color: colorSchemeConfig.gray }}>•</span>
                   )}
                   <span style={baseStyles.gpa}>
                     {edu.gpaDisplay}
@@ -1679,7 +1680,7 @@ const Template3 = ({
                 <div style={baseStyles.achievementsList}>
                   {edu.bulletPoints.map((bullet, idx) => (
                     <div key={idx} style={baseStyles.achievementItem}>
-                      <span style={baseStyles.achievementBullet}>Ã¢â‚¬Â¢</span>
+                      <span style={baseStyles.achievementBullet}>•</span>
                       <span style={baseStyles.achievementText}>
                         {TemplateHelpers.safeString(bullet)}
                       </span>
@@ -1900,7 +1901,7 @@ const Template3 = ({
     return (
       <section style={baseStyles.section} className="template3-print-section">
         <div style={baseStyles.header}>
-          <div style={baseStyles.headerIcon}>Ã¢â‚¬â€</div>
+          <div style={baseStyles.headerIcon}>—</div>
           <h2 style={baseStyles.headerTitle}>{getLocalizedText('professionalSummary')}</h2>
         </div>
         <div style={baseStyles.box}>
@@ -2138,7 +2139,7 @@ const Template3 = ({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}>Ã¢â‚¬â€</div>
+                }}>—</div>
                 <MainSectionTitle text={getLocalizedText('workExperience')} />
               </div>
               <div style={{
@@ -2171,7 +2172,7 @@ const Template3 = ({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}>Ã¢â‚¬â€</div>
+                }}>—</div>
                 <MainSectionTitle text={getLocalizedText('education')} />
               </div>
               <div style={{

@@ -41,13 +41,13 @@ const getTemplateDescription = (id) => {
     5: 'Ultra-clean isolated sections with perfect contrast. Optimized for ATS and modern tech companies.',
     6: 'Structured technical template with side-by-side education boxes and professional timeline. Built for engineers and architects.',
     7: 'Elegant geometric design with sidebar achievements and professional timeline. Perfect for academics and researchers.',
-    8: 'Clean black & white design with side-by-side education layout. Trusted by traditional industries and government roles.',
+    8: 'Clean black and white design with side-by-side education layout. Trusted by traditional industries and government roles.',
     9: 'Fresh contemporary design with equal spacing and modern typography. Balanced layout for all industries.',
     10: 'Clean, focused design showing exactly one experience. Ideal for students, interns, and entry-level professionals.',
     11: 'Elegant serif-based design with clear hierarchy and professional spacing. Perfect for humanities, arts, and traditional roles.',
     12: 'Structured blueprint-style layout with color-coded sections. Designed for engineers, architects, and technical roles.',
     13: 'Visual timeline-based design with clear progression markers. Perfect for project managers and career progression focus.',
-    14: 'Bold black & white design with strong visual hierarchy. Ideal for legal, government, and formal roles.',
+    14: 'Bold black and white design with strong visual hierarchy. Ideal for legal, government, and formal roles.',
     15: 'Space-efficient design with tight spacing and streamlined sections. Perfect for experienced professionals with lots of content.',
     16: 'Ultra-minimalist design with avatar initials and clean layout. Focuses purely on content with no distractions.',
     17: 'Modern card-based design with internship and project focus. Perfect for students, interns, and junior developers.',
@@ -55,7 +55,7 @@ const getTemplateDescription = (id) => {
     19: 'Education-focused design with white-box education styling. Perfect for academics, researchers, and educators.',
     20: 'Software engineering optimized template with project-first layout. Designed for developers, programmers, and tech leads.'
   };
-  return descriptions[parseInt(id)] || `Professional ATS-friendly resume template with customizable sections.`;
+  return descriptions[parseInt(id)] || 'Professional ATS-friendly resume template with customizable sections.';
 };
 
 // Get best for info for SEO

@@ -1,5 +1,7 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
 import { getAllTemplateIds, getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
 export default function ByProfession() {
@@ -9,7 +11,7 @@ export default function ByProfession() {
   const professionMap = {
     tech: {
       ids: [1, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 18, 20],
-      icon: "Ã°Å¸â€™Â»",
+      icon: "💻",
       title: "Tech & IT",
       description: "Software developers, engineers, IT professionals, and tech specialists",
       keyFeatures: ["Technical skills showcase", "Project highlights", "Certifications section", "Modern design", "Code-friendly layout"],
@@ -20,7 +22,7 @@ export default function ByProfession() {
     },
     business: {
       ids: [1, 2, 4, 7, 8, 11, 12, 14, 15, 17, 19],
-      icon: "Ã°Å¸â€™Â¼",
+      icon: "💼",
       title: "Business & Management",
       description: "Business analysts, managers, consultants, and corporate professionals",
       keyFeatures: ["Professional layout", "Achievement focus", "Clean typography", "ATS-optimized", "Leadership highlights"],
@@ -31,7 +33,7 @@ export default function ByProfession() {
     },
     healthcare: {
       ids: [2, 6, 7, 8, 11, 12, 14, 19],
-      icon: "Ã°Å¸ÂÂ¥",
+      icon: "🏥",
       title: "Healthcare",
       description: "Doctors, nurses, medical professionals, and healthcare administrators",
       keyFeatures: ["Certifications section", "Clean layout", "Professional design", "Experience focus", "Licensing display"],
@@ -42,7 +44,7 @@ export default function ByProfession() {
     },
     legal: {
       ids: [2, 4, 7, 8, 11, 12, 14],
-      icon: "Ã¢Å¡â€“Ã¯Â¸Â",
+      icon: "⚖️",
       title: "Legal",
       description: "Lawyers, attorneys, paralegals, and legal professionals",
       keyFeatures: ["Conservative design", "Black & white", "Publications section", "Professional tone", "High ATS score"],
@@ -53,7 +55,7 @@ export default function ByProfession() {
     },
     creative: {
       ids: [3, 5, 7, 8, 9, 11, 13, 15, 16, 17],
-      icon: "Ã°Å¸Å½Â¨",
+      icon: "🎨",
       title: "Creative & Design",
       description: "Graphic designers, artists, copywriters, and creative professionals",
       keyFeatures: ["Visual design elements", "Color accents", "Portfolio showcase", "Modern typography", "Creative layouts"],
@@ -64,7 +66,7 @@ export default function ByProfession() {
     },
     executive: {
       ids: [1, 4, 7, 8, 11, 12, 14, 15, 17, 20],
-      icon: "Ã°Å¸â€˜â€",
+      icon: "👔",
       title: "Executive & Leadership",
       description: "C-suite executives, directors, and senior leadership roles",
       keyFeatures: ["Comprehensive layout", "Achievement metrics", "Leadership focus", "Strategic highlights", "Professional polish"],
@@ -75,7 +77,7 @@ export default function ByProfession() {
     },
     student: {
       ids: [2, 5, 6, 9, 10, 12, 16, 17],
-      icon: "Ã°Å¸Å½â€œ",
+      icon: "🎓",
       title: "Students & Entry-Level",
       description: "College students, recent graduates, interns, and entry-level professionals",
       keyFeatures: ["Education focus", "Skills grid", "Project showcase", "Internship highlights", "ATS-friendly"],
@@ -86,7 +88,7 @@ export default function ByProfession() {
     },
     academic: {
       ids: [7, 11, 19],
-      icon: "Ã°Å¸â€œÅ¡",
+      icon: "📚",
       title: "Academic & Research",
       description: "Professors, researchers, PhD candidates, and academic professionals",
       keyFeatures: ["Publications section", "Research highlights", "Conference presentations", "Academic timeline", "Citations ready"],
@@ -97,7 +99,7 @@ export default function ByProfession() {
     },
     engineering: {
       ids: [1, 6, 12, 18, 20],
-      icon: "Ã°Å¸â€Â§",
+      icon: "🔧",
       title: "Engineering",
       description: "Civil, mechanical, electrical, and software engineers",
       keyFeatures: ["Technical skills", "Project portfolio", "Certifications", "Timeline view", "Technical depth"],
@@ -108,7 +110,7 @@ export default function ByProfession() {
     },
     marketing: {
       ids: [3, 5, 9, 11, 13, 16, 17],
-      icon: "Ã°Å¸â€œÂ¢",
+      icon: "📢",
       title: "Marketing & Communications",
       description: "Marketing managers, content creators, social media specialists, and PR professionals",
       keyFeatures: ["Creative layout", "Campaign highlights", "Metrics focus", "Modern design", "Portfolio ready"],
@@ -187,47 +189,69 @@ export default function ByProfession() {
 
   return (
     <>
+      <SEO 
+        title="Best Resume Templates by Profession: Find Your Perfect Match 2026 | Free Resume Builder"
+        description="Find the best resume template for your profession. Expert recommendations for Tech, Business, Healthcare, Legal, Creative, Executive, Student, and more. Industry-specific templates with ATS scores. Choose the perfect template for your career path."
+        keywords="resume by profession, industry-specific resume, best template for tech, business resume, healthcare resume, legal resume, creative resume, executive resume, student resume template, professional resume by industry, ATS friendly resume by profession"
+        canonical="https://freeresumemaker.xyz/templates/compare/by-profession"
+        image="https://freeresumemaker.xyz/images/templates/by-profession-og.jpg"
+        type="website"
+      />
+      
       <Head>
-        <title>Best Resume Templates by Profession: Find Your Perfect Match (2026) | FreeResumeMakers</title>
-        <meta name="description" content="Find the best resume template for your profession. Expert recommendations for Tech, Business, Healthcare, Legal, Creative, Executive, Student, and more. Industry-specific templates with ATS scores." />
-        <meta name="keywords" content="resume by profession, industry-specific resume, best template for tech, business resume, healthcare resume, legal resume, creative resume, executive resume, student resume template" />
-        <meta name="author" content="FreeResumeMakers" />
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Free Resume Builder" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
         <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/by-profession" />
         
-        <meta property="og:title" content="Best Resume Templates by Profession: Industry-Specific Recommendations (2026)" />
-        <meta property="og:description" content="Find your perfect resume template based on your profession. Expert-curated recommendations for 10+ professions." />
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/by-profession" />
-        <meta property="og:site_name" content="FreeResumeMakers" />
+        <meta property="og:title" content="Best Resume Templates by Profession: Industry-Specific Recommendations 2026" />
+        <meta property="og:description" content="Find your perfect resume template based on your profession. Expert-curated recommendations for 10+ professions with ATS scores and key features." />
+        <meta property="og:image" content="https://freeresumemaker.xyz/images/templates/by-profession-og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Free Resume Builder" />
         
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Best Resume Templates by Profession: Industry-Specific Guide" />
         <meta name="twitter:description" content="Find the perfect resume template for your career. Expert recommendations for 10+ professions." />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/images/templates/by-profession-og.jpg" />
+        <meta name="twitter:site" content="@freeresumemaker" />
         
+        {/* Article Metadata */}
         <meta property="article:published_time" content="2026-03-24" />
         <meta property="article:modified_time" content={currentDate} />
+        <meta property="article:author" content="Free Resume Builder" />
+        <meta property="article:section" content="Resume Templates" />
         
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </Head>
 
       <div style={{ 
         maxWidth: '1400px', 
         margin: '0 auto', 
         padding: '40px 24px',
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
           <Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
           <Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
           <span style={{ color: '#1e293b', fontWeight: '500' }}>By Profession</span>
         </nav>
 
@@ -239,7 +263,7 @@ export default function ByProfession() {
             marginBottom: '20px',
             color: '#0f172a'
           }}>
-            Best Resume Templates <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>by Profession</span>
+            Best Resume Templates <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>by Profession</span>
           </h1>
           <p style={{ 
             fontSize: '1.2rem', 
@@ -317,7 +341,7 @@ export default function ByProfession() {
                     fontSize: '0.75rem',
                     fontWeight: '500'
                   }}>
-                    Ã°Å¸â€œÅ  ATS Score: {profession.atsScore}%
+                    📊 ATS Score: {profession.atsScore}%
                   </span>
                   <span style={{ 
                     background: '#eef2ff', 
@@ -327,7 +351,7 @@ export default function ByProfession() {
                     fontSize: '0.75rem',
                     fontWeight: '500'
                   }}>
-                    Ã¢Â­Â Experience: {profession.averageExperience}
+                    ⭐ Experience: {profession.averageExperience}
                   </span>
                 </div>
               </div>
@@ -337,7 +361,7 @@ export default function ByProfession() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {profession.keyFeatures.slice(0, 4).map((feature, idx) => (
                     <span key={idx} style={{ background: '#f1f5f9', padding: '4px 10px', borderRadius: '20px', fontSize: '0.75rem', color: '#475569' }}>
-                      Ã¢Å“â€œ {feature}
+                      ✓ {feature}
                     </span>
                   ))}
                 </div>
@@ -398,7 +422,7 @@ export default function ByProfession() {
                     fontSize: '0.9rem'
                   }}
                 >
-                  View All {profession.title} Templates Ã¢â€ â€™
+                  View All {profession.title} Templates →
                 </Link>
               </div>
             </div>
@@ -408,7 +432,7 @@ export default function ByProfession() {
         {/* Quick Comparison Table */}
         <div style={{ marginTop: '56px', marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€œÅ  Quick Comparison: Best Template by Profession
+            📊 Quick Comparison: Best Template by Profession
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -471,27 +495,27 @@ export default function ByProfession() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€™Â¡ Industry-Specific Resume Tips
+            💡 Industry-Specific Resume Tips
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€™Â»</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>💻</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Tech & IT</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Highlight technical skills, GitHub projects, and certifications. Use modern templates that show design awareness.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>💼</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Business</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Focus on achievements and metrics. Use clean, ATS-friendly templates with professional typography.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸ÂÂ¥</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🏥</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Healthcare</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Include certifications, licenses, and clinical experience. Use clean, conservative templates.</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
+              <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🎨</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Creative</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Show your design skills through template choice. Include portfolio links and visual projects.</p>
             </div>
@@ -501,7 +525,7 @@ export default function ByProfession() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            Ã¢Ââ€œ Frequently Asked Questions
+            ❓ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <details style={{ 
@@ -566,7 +590,7 @@ export default function ByProfession() {
         {/* Related Resources */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            Ã°Å¸â€Â Explore More Resources
+            🔍 Explore More Resources
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             <Link href="/templates/compare/ats-friendly-vs-creative" style={{ padding: '12px 24px', background: 'white', borderRadius: '12px', textDecoration: 'none', color: '#1e293b', fontSize: '0.875rem', fontWeight: '500', border: '1px solid #e2e8f0', display: 'inline-block' }}>

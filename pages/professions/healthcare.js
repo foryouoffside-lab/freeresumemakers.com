@@ -1,4 +1,5 @@
-﻿// pages/professions/healthcare.js
+﻿import React from 'react';
+// pages/professions/healthcare.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -132,7 +133,7 @@ export default function HealthcareExamples() {
             period: '2020-Present',
             points: [
               'Oversee daily operations of 350-bed multi-specialty hospital with 500+ staff members',
-              'Assist in managing Ã¢â€šÂ¹150Cr annual budget and identified Ã¢â€šÂ¹5Cr cost savings opportunities',
+              'Assist in managing ₹150Cr annual budget and identified ₹5Cr cost savings opportunities',
               'Reduced patient wait times by 35% through workflow redesign and process optimization',
               'Ensure compliance with NABH accreditation standards, achieving 95% compliance score',
               'Led implementation of new electronic health record system across 5 departments',
@@ -253,11 +254,11 @@ export default function HealthcareExamples() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>Ã¢â‚¬Âº</span>
+            <span>›</span>
             <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-            <span>Ã¢â‚¬Âº</span>
+            <span>›</span>
             <Link href="/professions/healthcare" style={{ color: '#666', textDecoration: 'none' }}>Healthcare Resumes</Link>
-            <span>Ã¢â‚¬Âº</span>
+            <span>›</span>
             <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
           </nav>
 
@@ -288,7 +289,7 @@ export default function HealthcareExamples() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            Ã¢â€ Â Back to All Healthcare Resume Examples
+            ← Back to All Healthcare Resume Examples
           </button>
 
           {/* Template Header */}
@@ -651,9 +652,9 @@ export default function HealthcareExamples() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Healthcare Resumes</span>
         </nav>
 
@@ -720,11 +721,11 @@ export default function HealthcareExamples() {
             <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>RN Ã¢â‚¬Â¢ ICU Ã¢â‚¬Â¢ ER</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>RN • ICU • ER</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Clinical & Admin Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CCRN Ã¢â‚¬Â¢ ACLS Ã¢â‚¬Â¢ BLS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CCRN • ACLS • BLS</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
           </div>
         </div>
@@ -863,7 +864,7 @@ export default function HealthcareExamples() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Complete Resume Ã¢â€ â€™
+                  View Complete Resume →
                 </span>
               </div>
             </div>
@@ -947,11 +948,9 @@ export default function HealthcareExamples() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create Your Resume Now Ã¢â€ â€™
+            Create Your Resume Now →
           </Link>
         </div>
-
-       
       </div>
     </>
   );

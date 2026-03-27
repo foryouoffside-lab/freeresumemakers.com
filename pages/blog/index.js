@@ -158,7 +158,7 @@ export default function BlogPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">&gt;</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Resume Writing Blog</span>
         </nav>
 
@@ -198,7 +198,7 @@ export default function BlogPage() {
           margin: '0 auto 40px'
         }}>
           <p style={{margin: 0, color: '#856404'}}>
-            Ã°Å¸Å¡Â§ New articles are being added regularly. Check back soon for more content.
+            🚧 New articles are being added regularly. Check back soon for more content.
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default function BlogPage() {
               borderRadius: '20px',
               padding: '20px'
             }}>
-              Ã°Å¸â€œËœ
+              📘
             </div>
             <div>
               <span style={{
@@ -285,7 +285,7 @@ export default function BlogPage() {
                   }}
                 >
                   Read Full Guide
-                  <span style={{ fontSize: '20px' }}>Ã¢â€ â€™</span>
+                  <span style={{ fontSize: '20px' }}>→</span>
                 </Link>
                 <span style={{ color: 'rgba(255,255,255,0.8)' }}>12 min read</span>
               </div>
@@ -411,7 +411,7 @@ export default function BlogPage() {
                         day: 'numeric', 
                         year: 'numeric' 
                       })}</span>
-                      <span>Ã¢â‚¬Â¢</span>
+                      <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
                   </div>
@@ -430,7 +430,7 @@ export default function BlogPage() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¬</div>
+          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📬</div>
           <h2 style={{
             fontSize: '28px',
             marginBottom: '16px',
@@ -509,7 +509,7 @@ export default function BlogPage() {
           borderTop: '1px solid #eee',
           paddingTop: '30px'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Free Resume Maker. All rights reserved.</p>
         </div>
       </div>
     </>

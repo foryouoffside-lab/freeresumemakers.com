@@ -1,9 +1,7 @@
-﻿// ============================================
+﻿import React from 'react';
 // components/ReviewSystem.js
-// SIMPLE REVIEW SYSTEM - NO RATINGS AT ALL
-// ============================================
-
 import { useState, useEffect } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 export default function ReviewSystem({ templateId = 'all' }) {
   const [reviews, setReviews] = useState([]);
@@ -12,66 +10,90 @@ export default function ReviewSystem({ templateId = 'all' }) {
     name: '',
     comment: ''
   });
-  const [replyingTo, setReplyingTo] = useState(null);
-  const [replyText, setReplyText] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [expandedReplies, setExpandedReplies] = useState(new Set());
 
   useEffect(() => {
     fetchReviews();
-    // Refresh every 30 seconds
-    const interval = setInterval(fetchReviews, 30000);
-    return () => clearInterval(interval);
   }, [templateId]);
 
   const fetchReviews = async () => {
+    setLoading(true);
     try {
-      const response = await fetch(`/api/reviews?templateId=${templateId}&limit=100`);
+      const response = await fetch(`/api/reviews?templateId=${templateId}&limit=50`);
       const data = await response.json();
-      const structuredComments = structureComments(data);
+      const structuredComments = structureComments(Array.isArray(data) ? data : []);
       setReviews(structuredComments);
     } catch (error) {
       console.error('Error fetching reviews:', error);
+      setReviews([]);
+    } finally {
+      setLoading(false);
     }
   };
 
   const structureComments = (comments) => {
+    if (!Array.isArray(comments)) return [];
+    
     const commentMap = new Map();
     const roots = [];
 
     comments.forEach(comment => {
-      commentMap.set(comment.id, {
-        ...comment,
-        replies: [],
-        createdAt: new Date(comment.date).getTime()
-      });
-    });
-
-    comments.forEach(comment => {
-      const node = commentMap.get(comment.id);
-      if (comment.parentId && commentMap.has(comment.parentId)) {
-        commentMap.get(comment.parentId).replies.push(node);
-      } else {
-        roots.push(node);
+      if (comment && comment.id) {
+        commentMap.set(comment.id, {
+          ...comment,
+          replies: [],
+          createdAt: comment.date ? new Date(comment.date).getTime() : Date.now()
+        });
       }
     });
 
-    // Sort by newest first (default)
+    comments.forEach(comment => {
+      if (!comment || !comment.id) return;
+      
+      const node = commentMap.get(comment.id);
+      if (node) {
+        if (comment.parentId && commentMap.has(comment.parentId)) {
+          commentMap.get(comment.parentId).replies.push(node);
+        } else {
+          roots.push(node);
+        }
+      }
+    });
+
     return roots.sort((a, b) => b.createdAt - a.createdAt);
   };
 
-  const handleSubmit = async (e, parentId = null) => {
+  const handleSubmit = async (e, parentId = null, replyText = null) => {
     e.preventDefault();
+    
+    const name = parentId ? (formData.name || 'Anonymous') : formData.name;
+    const comment = parentId ? replyText : formData.comment;
+    
+    // Validation
+    if (!comment || !comment.trim()) {
+      setMessage({ type: 'error', text: 'Please enter your review' });
+      setTimeout(() => setMessage(null), 3000);
+      return;
+    }
+    
+    if (!parentId && (!name || !name.trim())) {
+      setMessage({ type: 'error', text: 'Please enter your name' });
+      setTimeout(() => setMessage(null), 3000);
+      return;
+    }
+    
     setSubmitting(true);
     setMessage(null);
 
     const submitData = {
-      name: formData.name,
-      rating: 0, // No ratings
-      comment: parentId ? replyText : formData.comment,
+      name: name?.trim() || 'Anonymous',
+      comment: comment.trim(),
       templateId,
-      parentId: parentId || null
+      parentId: parentId || null,
+      rating: 0
     };
 
     try {
@@ -86,8 +108,6 @@ export default function ReviewSystem({ templateId = 'all' }) {
       if (response.ok) {
         setMessage({ type: 'success', text: parentId ? 'Reply posted!' : 'Thank you for your review!' });
         setFormData({ name: '', comment: '' });
-        setReplyText('');
-        setReplyingTo(null);
         setShowForm(false);
         fetchReviews();
         setTimeout(() => setMessage(null), 3000);
@@ -95,7 +115,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
         setMessage({ type: 'error', text: data.error || 'Something went wrong' });
       }
     } catch (error) {
-      setMessage({ type: 'error', text: 'Failed to submit' });
+      setMessage({ type: 'error', text: 'Failed to submit. Please try again.' });
     } finally {
       setSubmitting(false);
     }
@@ -114,7 +134,10 @@ export default function ReviewSystem({ templateId = 'all' }) {
   };
 
   const formatDate = (dateString) => {
+    if (!dateString) return 'Recently';
     const date = new Date(dateString);
+    if (isNaN(date.getTime())) return 'Recently';
+    
     const now = new Date();
     const diffMs = now - date;
     const diffMins = Math.floor(diffMs / 60000);
@@ -128,75 +151,38 @@ export default function ReviewSystem({ templateId = 'all' }) {
     return date.toLocaleDateString();
   };
 
-  const calculateStats = () => {
-    const allComments = [];
-    const flatten = (comments) => {
-      comments.forEach(comment => {
-        allComments.push(comment);
-        if (comment.replies?.length) flatten(comment.replies);
-      });
-    };
-    flatten(reviews);
-    
-    return { totalComments: allComments.length };
+  const getAvatarColor = (name) => {
+    const colors = ['#667eea', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#ec489a', '#06b6d4'];
+    const index = (name?.length || 0) % colors.length;
+    return colors[index];
   };
-
-  const stats = calculateStats();
 
   const Comment = ({ comment, depth = 0 }) => {
     const [showReplyForm, setShowReplyForm] = useState(false);
-    const [localReplyText, setLocalReplyText] = useState('');
-    const maxDepth = 5;
+    const [replyText, setReplyText] = useState('');
+    const maxDepth = 3;
+
+    if (!comment) return null;
 
     const handleLocalReply = async (e) => {
       e.preventDefault();
-      if (!localReplyText.trim()) return;
-      
-      setSubmitting(true);
-      try {
-        const response = await fetch('/api/reviews', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: formData.name || 'Anonymous',
-            rating: 0,
-            comment: localReplyText,
-            templateId,
-            parentId: comment.id
-          })
-        });
-        
-        if (response.ok) {
-          setLocalReplyText('');
-          setShowReplyForm(false);
-          fetchReviews();
-        }
-      } catch (error) {
-        console.error('Error posting reply:', error);
-      } finally {
-        setSubmitting(false);
-      }
+      if (!replyText.trim()) return;
+      await handleSubmit(e, comment.id, replyText);
+      setReplyText('');
+      setShowReplyForm(false);
     };
 
     const hasReplies = comment.replies && comment.replies.length > 0;
     const isExpanded = expandedReplies.has(comment.id);
     const canNest = depth < maxDepth;
 
-    const getAvatarColor = (name) => {
-      const colors = ['#667eea', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#ec489a', '#06b6d4'];
-      const index = name.length % colors.length;
-      return colors[index];
-    };
-
     return (
-      <div className="comment-thread" style={{ marginLeft: depth > 0 ? '48px' : '0' }}>
-        <div className="comment-item" style={{
+      <div style={{ marginLeft: depth > 0 ? '48px' : '0', marginTop: depth > 0 ? '12px' : '0' }}>
+        <div style={{
           background: depth === 0 ? 'white' : '#fafbfc',
           borderRadius: '12px',
           padding: '16px',
-          marginBottom: '12px',
-          border: depth === 0 ? '1px solid #e9ecef' : 'none',
-          transition: 'all 0.2s ease'
+          border: depth === 0 ? '1px solid #e9ecef' : 'none'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '8px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -212,45 +198,46 @@ export default function ReviewSystem({ templateId = 'all' }) {
                 fontWeight: 'bold',
                 fontSize: '16px'
               }}>
-                {comment.name.charAt(0).toUpperCase()}
+                {(comment.name?.charAt(0) || 'A').toUpperCase()}
               </div>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                  <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{comment.name}</span>
-                  <span style={{ fontSize: '12px', color: '#64748b' }}>Ã¢â‚¬Â¢ {formatDate(comment.date)}</span>
+                  <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{comment.name || 'Anonymous'}</span>
+                  <span style={{ fontSize: '12px', color: '#64748b' }}>• {formatDate(comment.date)}</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div style={{ marginLeft: '52px', marginBottom: '12px' }}>
-            <p style={{ margin: 0, color: '#334155', lineHeight: '1.5' }}>{comment.comment}</p>
+            <p style={{ margin: 0, color: '#334155', lineHeight: '1.5' }}>{comment.comment || ''}</p>
           </div>
 
           <div style={{ marginLeft: '52px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-            <button
-              onClick={() => setShowReplyForm(!showReplyForm)}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: '4px 8px',
-                borderRadius: '20px',
-                color: '#64748b',
-                fontSize: '13px',
-                transition: 'all 0.2s'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.background = '#f1f5f9'}
-              onMouseLeave={(e) => e.currentTarget.style.background = 'none'}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-              Reply
-            </button>
+            {canNest && (
+              <button
+                onClick={() => setShowReplyForm(!showReplyForm)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px 8px',
+                  borderRadius: '20px',
+                  color: '#64748b',
+                  fontSize: '13px'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = '#f1f5f9'}
+                onMouseLeave={(e) => e.currentTarget.style.background = 'none'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                Reply
+              </button>
+            )}
 
             {hasReplies && (
               <button
@@ -269,7 +256,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
                   fontWeight: '500'
                 }}
               >
-                {isExpanded ? 'Ã¢â€“Â¼' : 'Ã¢â€“Â¶'} {comment.replies.length} {comment.replies.length === 1 ? 'reply' : 'replies'}
+                {isExpanded ? '▼' : '▶'} {comment.replies.length} {comment.replies.length === 1 ? 'reply' : 'replies'}
               </button>
             )}
           </div>
@@ -277,8 +264,8 @@ export default function ReviewSystem({ templateId = 'all' }) {
           {showReplyForm && canNest && (
             <form onSubmit={handleLocalReply} style={{ marginLeft: '52px', marginTop: '12px' }}>
               <textarea
-                value={localReplyText}
-                onChange={(e) => setLocalReplyText(e.target.value)}
+                value={replyText}
+                onChange={(e) => setReplyText(e.target.value)}
                 placeholder={`Reply to ${comment.name}...`}
                 rows={2}
                 style={{
@@ -295,7 +282,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
               <div style={{ display: 'flex', gap: '8px' }}>
                 <button
                   type="submit"
-                  disabled={submitting || !localReplyText.trim()}
+                  disabled={submitting || !replyText.trim()}
                   style={{
                     padding: '6px 16px',
                     background: '#3b82f6',
@@ -305,7 +292,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
                     cursor: 'pointer',
                     fontSize: '12px',
                     fontWeight: '500',
-                    opacity: (submitting || !localReplyText.trim()) ? 0.5 : 1
+                    opacity: (submitting || !replyText.trim()) ? 0.5 : 1
                   }}
                 >
                   {submitting ? 'Posting...' : 'Reply'}
@@ -331,7 +318,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
         </div>
 
         {hasReplies && isExpanded && (
-          <div className="replies-container">
+          <div>
             {comment.replies.map(reply => (
               <Comment key={reply.id} comment={reply} depth={depth + 1} />
             ))}
@@ -341,8 +328,16 @@ export default function ReviewSystem({ templateId = 'all' }) {
     );
   };
 
+  if (loading) {
+    return (
+      <div style={{ padding: '60px', textAlign: 'center' }}>
+        <LoadingSpinner size="md" text="Loading reviews..." />
+      </div>
+    );
+  }
+
   return (
-    <div className="review-system" style={{
+    <div style={{
       background: 'white',
       borderRadius: '16px',
       boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
@@ -354,14 +349,12 @@ export default function ReviewSystem({ templateId = 'all' }) {
         padding: '24px',
         color: 'white'
       }}>
-        <div>
-          <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: 'bold' }}>
-            Ã°Å¸â€™Â¬ Reviews
-          </h2>
-          <p style={{ margin: 0, opacity: 0.9, fontSize: '14px' }}>
-            Share your experience with this template
-          </p>
-        </div>
+        <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: 'bold' }}>
+          Reviews
+        </h2>
+        <p style={{ margin: 0, opacity: 0.9, fontSize: '14px' }}>
+          Share your experience with this template
+        </p>
       </div>
 
       {/* Write Review Button */}
@@ -385,11 +378,10 @@ export default function ReviewSystem({ templateId = 'all' }) {
             fontSize: '14px',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
-            transition: 'all 0.2s'
+            gap: '8px'
           }}
         >
-          {showForm ? 'Ã¢Å“â€“ Cancel' : 'Ã¢Å“ÂÃ¯Â¸Â Write a Review'}
+          {showForm ? '✕ Cancel' : '✍ Write a Review'}
         </button>
       </div>
 
@@ -470,8 +462,7 @@ export default function ReviewSystem({ templateId = 'all' }) {
               borderRadius: '8px',
               cursor: 'pointer',
               fontWeight: '600',
-              opacity: submitting ? 0.5 : 1,
-              transition: 'background 0.2s'
+              opacity: submitting ? 0.5 : 1
             }}
           >
             {submitting ? 'Submitting...' : 'Post Review'}
@@ -481,19 +472,13 @@ export default function ReviewSystem({ templateId = 'all' }) {
 
       {/* Reviews Section */}
       <div style={{ padding: '24px' }}>
-        <div style={{ marginBottom: '16px' }}>
-          <span style={{ fontSize: '14px', color: '#64748b', fontWeight: '500' }}>
-            {stats.totalComments} {stats.totalComments === 1 ? 'Review' : 'Reviews'}
-          </span>
-        </div>
-
         {reviews.length === 0 ? (
           <div style={{
             textAlign: 'center',
             padding: '60px 20px',
             color: '#6c757d'
           }}>
-            <div style={{ fontSize: '64px', marginBottom: '16px' }}>Ã°Å¸â€™Â¬</div>
+            <div style={{ fontSize: '64px', marginBottom: '16px' }}>💬</div>
             <h3 style={{ margin: '0 0 8px 0' }}>No reviews yet</h3>
             <p style={{ margin: 0 }}>Be the first to share your experience!</p>
           </div>
@@ -505,34 +490,6 @@ export default function ReviewSystem({ templateId = 'all' }) {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        .review-system {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .comment-thread {
-          transition: all 0.2s ease;
-        }
-        
-        .comment-item {
-          transition: all 0.2s ease;
-        }
-        
-        .comment-item:hover {
-          background: #f8fafc;
-        }
-        
-        @media (max-width: 768px) {
-          .comment-item {
-            padding: 12px !important;
-          }
-          
-          .comment-thread {
-            margin-left: 24px !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

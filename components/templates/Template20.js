@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿import Head from 'next/head';
+// ============================================
 // components/templates/Template20.js
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER - FIXED HOOK ORDER
 // TEMPLATE 20 - SOFTWARE ENGINEERING FOCUSED
@@ -27,18 +28,18 @@ const CONTENT_LIMITS = Object.freeze({
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°',
-  phone: 'Ã°Å¸â€œÅ¾',
+  email: '✉',
+  phone: '📞',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: 'Ã¢Å’Â¨',
-  portfolio: 'Ã°Å¸Å’Â',
-  location: 'Ã°Å¸â€œÂ',
-  calendar: 'Ã°Å¸â€œâ€¦',
-  bullet: 'Ã¢â‚¬â€',
-  dot: 'Ã¢â‚¬Â¢',
-  triangle: 'Ã¢â€“Â¹',
-  award: 'Ã°Å¸Ââ€ ',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨',
+  portfolio: '🌐',
+  location: '📍',
+  calendar: '📅',
+  bullet: '—',
+  dot: '•',
+  triangle: '▹',
+  award: '🏆',
+  default: '📌'
 });
 
 // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -302,7 +303,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
+    return `${startDate} – ${endDate}`;
   },
 
   formatBulletPoints: (points, charLimit = null) => {
@@ -330,17 +331,17 @@ const TemplateHelpers = Object.freeze({
   },
 
   icons: Object.freeze({
-    location: 'Ã°Å¸â€œÂ',
-    bullet: 'Ã¢â‚¬â€',
-    dot: 'Ã¢â‚¬Â¢',
-    triangle: 'Ã¢â€“Â¹',
-    email: 'Ã¢Å“â€°',
-    phone: 'Ã°Å¸â€œÅ¾',
-    linkedin: 'Ã°Å¸â€â€”',
-    github: 'Ã¢Å’Â¨',
-    portfolio: 'Ã°Å¸Å’Â',
-    calendar: 'Ã°Å¸â€œâ€¦',
-    award: 'Ã°Å¸Ââ€ '
+    location: '📍',
+    bullet: '—',
+    dot: '•',
+    triangle: '▹',
+    email: '✉',
+    phone: '📞',
+    linkedin: '🔗',
+    github: '⌨',
+    portfolio: '🌐',
+    calendar: '📅',
+    award: '🏆'
   })
 });
 
@@ -851,7 +852,7 @@ const Template20 = ({
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                {processedData.skills.join(' Ã¢â‚¬Â¢ ')}
+                {processedData.skills.join(' • ')}
               </div>
             </div>
           </section>

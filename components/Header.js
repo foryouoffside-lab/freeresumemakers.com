@@ -179,6 +179,7 @@ const Header = () => {
       background: '#f0f7ff',
       color: '#0070f3'
     },
+    // Badge for new items
     newBadge: {
       background: '#ff5722',
       color: 'white',

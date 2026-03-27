@@ -114,6 +114,7 @@ const awardCategories = {
     label: "Academic",
     title: "Academic Awards",
     color: "#4299e1",
+    icon: "🏆",
     awards: [
       { title: "Dean's List", issuer: "University" },
       { title: "Graduated with Honors", issuer: "University" },
@@ -129,6 +130,7 @@ const awardCategories = {
     label: "Professional",
     title: "Professional Awards",
     color: "#48bb78",
+    icon: "💼",
     awards: [
       { title: "Employee of the Month", issuer: "Company" },
       { title: "Sales Excellence Award", issuer: "Organization" },
@@ -144,6 +146,7 @@ const awardCategories = {
     label: "Industry",
     title: "Industry Recognition",
     color: "#ed8936",
+    icon: "⭐",
     awards: [
       { title: "Best Paper Award", issuer: "Conference" },
       { title: "Industry Innovation Award", issuer: "Trade Association" },
@@ -157,6 +160,7 @@ const awardCategories = {
     label: "Community",
     title: "Community Service",
     color: "#9b59b6",
+    icon: "🤝",
     awards: [
       { title: "Volunteer of the Year", issuer: "Nonprofit Organization" },
       { title: "Community Leadership Award", issuer: "Local Government" },
@@ -1098,7 +1102,7 @@ const Awards = ({
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>Ã°Å¸Ââ€ </span>
+                  <span>🏆</span>
                   Your Awards
                 </h2>
                 <div style={{
@@ -1120,7 +1124,7 @@ const Awards = ({
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>Ã°Å¸Ââ€ </div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏆</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No awards added yet
                   </p>
@@ -1175,7 +1179,7 @@ const Awards = ({
                             fontSize: '14px'
                           }}
                         >
-                          Ã¢Å“â€¢
+                          ✕
                         </button>
                       </div>
                       
@@ -1193,7 +1197,7 @@ const Awards = ({
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            Ã°Å¸â€œâ€¦ {award.date}
+                            📅 {award.date}
                           </span>
                         )}
                       </div>
@@ -1288,7 +1292,7 @@ const Awards = ({
                     transition: 'all 0.2s'
                   }}
                 >
-                  <span>{category.icon || 'Ã°Å¸Ââ€ '}</span>
+                  <span>{category.icon || '🏆'}</span>
                   <span>{category.label}</span>
                 </button>
               ))}
@@ -1311,7 +1315,7 @@ const Awards = ({
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>Ã¢Â­Â</span>
+                <span>⭐</span>
                 Popular {awardCategories[selectedCategory]?.label} Awards
               </h2>
               <p style={{
@@ -1319,7 +1323,7 @@ const Awards = ({
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add Ã¢â‚¬Â¢ These awards are highly valued by employers
+                Click to add • These awards are highly valued by employers
               </p>
               
               <div style={{
@@ -1360,7 +1364,7 @@ const Awards = ({
                       title={!canAdd && !isAdded ? `Max ${maxAwardsLimit} awards reached` : ""}
                     >
                       {award.title}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>Ã¢Å“â€œ</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>✓</span>}
                     </button>
                   );
                 })}
@@ -1425,7 +1429,7 @@ const Awards = ({
                       >
                         <div style={{ fontWeight: 600, fontSize: '13px', color: '#2d3748' }}>{award.title}</div>
                         <div style={{ fontSize: '11px', color: '#718096', marginTop: '4px' }}>{award.issuer}</div>
-                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>Ã¢Å“â€œ Added</div>}
+                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>✓ Added</div>}
                       </button>
                     );
                   })}

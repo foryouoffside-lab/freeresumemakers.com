@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿import Head from 'next/head';
+// ============================================
 // components/templates/Template2.js 
 // ENHANCED: Name optimization like Template1
 // UPDATED: Auto-reduces font size for long names
@@ -11,12 +12,12 @@
 import React, { useRef, useMemo, useState, useEffect } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
-// EXPERIENCE TYPES - unchanged
+// EXPERIENCE TYPES - Fixed icons
 const EXPERIENCE_TYPES = Object.freeze({
-  job: { label: "Work Experience", icon: "Ã°Å¸â€™Â¼", color: "#2563eb" },
-  project: { label: "Project", icon: "Ã¢Å¡Â¡", color: "#db2777" },
-  freelance: { label: "Freelance", icon: "Ã°Å¸â€™Â»", color: "#ea580c" },
-  research: { label: "Research", icon: "Ã°Å¸â€Â¬", color: "#16a34a" }
+  job: { label: "Work Experience", icon: "💼", color: "#2563eb" },
+  project: { label: "Project", icon: "⚡", color: "#db2777" },
+  freelance: { label: "Freelance", icon: "💻", color: "#ea580c" },
+  research: { label: "Research", icon: "🔬", color: "#16a34a" }
 });
 
 // CONTENT LIMITS - achievementsPerExperience set to 3
@@ -102,7 +103,7 @@ const SPACING_CONFIG = Object.freeze({
     summaryPadding: '18px',
     skillsPadding: '18px',
     skillChipPadding: '8px 14px',
-    contactChipPadding: '10px 20px', // Increased for better readability
+    contactChipPadding: '10px 20px',
     educationDatePadding: '6px 14px',
     projectDatePadding: '6px 14px',
     experienceDatePadding: '6px 14px',
@@ -110,7 +111,7 @@ const SPACING_CONFIG = Object.freeze({
     bottomFillerHeight: '30px',
     marginBetweenSections: '8px',
     bulletSpacing: '8px',
-    contactGap: '14px' // Added for contact strip gap
+    contactGap: '14px'
   },
   default: {
     headerPadding: '30px 35px',
@@ -136,7 +137,7 @@ const SPACING_CONFIG = Object.freeze({
     bottomFillerHeight: '20px',
     marginBetweenSections: '4px',
     bulletSpacing: '4px',
-    contactGap: '12px' // Added for contact strip gap
+    contactGap: '12px'
   },
   compact: {
     headerPadding: '20px 25px',
@@ -162,7 +163,7 @@ const SPACING_CONFIG = Object.freeze({
     bottomFillerHeight: '10px',
     marginBetweenSections: '2px',
     bulletSpacing: '2px',
-    contactGap: '10px' // Added for contact strip gap
+    contactGap: '10px'
   },
   ultraCompact: {
     headerPadding: '15px 20px',
@@ -188,7 +189,7 @@ const SPACING_CONFIG = Object.freeze({
     bottomFillerHeight: '5px',
     marginBetweenSections: '1px',
     bulletSpacing: '1px',
-    contactGap: '8px' // Added for contact strip gap
+    contactGap: '8px'
   }
 });
 
@@ -214,7 +215,7 @@ const COLORS = Object.freeze({
   white: '#ffffff',
   darkGray: '#333333',
   lightGray: '#f0f0f0',
-  linkedinBlue: '#0077b5'  // LinkedIn official blue
+  linkedinBlue: '#0077b5'
 });
 
 // Helper functions with LinkedIn formatting (like Template17)
@@ -256,7 +257,7 @@ const TemplateHelpers = Object.freeze({
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} Ã¢â‚¬â€œ ${end}`;
+    return `${start} – ${end}`;
   },
 
   formatFullUrl: (url) => {
@@ -282,17 +283,14 @@ const TemplateHelpers = Object.freeze({
     
     let linkedinUrl = TemplateHelpers.safeString(linkedin);
     
-    // If it's already a full URL, format it properly
     if (linkedinUrl.startsWith('http://') || linkedinUrl.startsWith('https://')) {
       return linkedinUrl;
     }
     
-    // If it's just the domain path
     if (linkedinUrl.startsWith('linkedin.com')) {
       return `https://${linkedinUrl}`;
     }
     
-    // Default: assume it's a username
     return `https://linkedin.com/in/${linkedinUrl.replace(/^@/, '')}`;
   },
 
@@ -301,22 +299,18 @@ const TemplateHelpers = Object.freeze({
     
     let linkedinUrl = TemplateHelpers.safeString(linkedin);
     
-    // Remove protocol and www for display
     let displayValue = linkedinUrl
       .replace(/^https?:\/\//, '')
       .replace(/^www\./, '');
     
-    // Handle linkedin.com/in/username format
     if (displayValue.includes('linkedin.com/in/')) {
       displayValue = displayValue.replace(/linkedin\.com\/in\//, '');
     } else if (displayValue.includes('linkedin.com/')) {
       displayValue = displayValue.replace(/linkedin\.com\//, '');
     }
     
-    // Remove trailing slash
     displayValue = displayValue.replace(/\/$/, '');
     
-    // If it's still long, just show the username part
     if (displayValue.includes('/')) {
       displayValue = displayValue.split('/').pop();
     }
@@ -372,7 +366,6 @@ const TemplateHelpers = Object.freeze({
       .replace(/^www\./, '')
       .replace(/\/$/, '');
     
-    // Return full URL without truncation for project links
     return displayValue || 'Portfolio';
   },
 
@@ -416,22 +409,22 @@ const TemplateHelpers = Object.freeze({
     }
   },
 
-  // UPDATED: Icons with LinkedIn using "in" in blue
+  // UPDATED: Icons with LinkedIn using "in" in blue - All icons fixed
   icons: Object.freeze({
-    email: 'Ã¢Å“â€°Ã¯Â¸Â',
-    phone: 'Ã°Å¸â€œÅ¾',
-    location: 'Ã°Å¸â€œÂ',
-    linkedin: 'in',  // Using "in" like Template17
-    github: 'Ã°Å¸Ââ„¢',
-    portfolio: 'Ã°Å¸Å’Â',
-    briefcase: 'Ã°Å¸â€™Â¼',
-    education: 'Ã°Å¸Å½â€œ',
-    skills: 'Ã¢Å¡Â¡',
-    projects: 'Ã°Å¸Å¡â‚¬',
-    certificate: 'Ã°Å¸â€œÅ“',
-    bullet: 'Ã¢â‚¬Â¢',
-    triangle: 'Ã¢â€“Â¹',
-    gpa: 'Ã°Å¸â€œÅ '
+    email: '✉️',
+    phone: '📞',
+    location: '📍',
+    linkedin: 'in',
+    github: '🐙',
+    portfolio: '🌐',
+    briefcase: '💼',
+    education: '🎓',
+    skills: '⚡',
+    projects: '🚀',
+    certificate: '📜',
+    bullet: '•',
+    triangle: '▹',
+    gpa: '📊'
   }),
 
   // ===== NAME OPTIMIZATION FUNCTION (like Template1) =====
@@ -440,7 +433,6 @@ const TemplateHelpers = Object.freeze({
     
     const nameLength = name.length;
     
-    // Reduce font size for longer names
     if (nameLength > 30) {
       return Math.max(28, FONT_CONFIG.base.name - 18);
     } else if (nameLength > 25) {
@@ -676,7 +668,7 @@ const Template2 = ({
         startDate: TemplateHelpers.formatDate(proj.startDate || proj.start),
         endDate: proj.ongoing || proj.current ? 'Present' : TemplateHelpers.formatDate(proj.endDate || proj.end),
         link: TemplateHelpers.safeString(proj.link || proj.url || proj.github || ''),
-        displayLink: TemplateHelpers.safeString(proj.link || proj.url || proj.github || ''), // Show full URL
+        displayLink: TemplateHelpers.safeString(proj.link || proj.url || proj.github || ''),
         fullLink: TemplateHelpers.formatFullUrl(proj.link || proj.url || proj.github || ''),
         achievements: TemplateHelpers.safeArray(proj.achievements || proj.highlights || []).slice(0, 3)
       }));
@@ -803,7 +795,6 @@ const Template2 = ({
     const github = personalInfo.github || personalInfo.GitHub || personalInfo.Github || '';
     const portfolio = personalInfo.portfolio || personalInfo.Portfolio || personalInfo.website || personalInfo.Website || '';
     
-    // Email
     if (email) {
       contacts.push({ 
         icon: TemplateHelpers.icons.email, 
@@ -815,7 +806,6 @@ const Template2 = ({
       });
     }
     
-    // Phone
     if (phone) {
       contacts.push({ 
         icon: TemplateHelpers.icons.phone, 
@@ -827,7 +817,6 @@ const Template2 = ({
       });
     }
     
-    // Location (not clickable)
     if (location) {
       contacts.push({ 
         icon: TemplateHelpers.icons.location, 
@@ -838,7 +827,6 @@ const Template2 = ({
       });
     }
     
-    // LinkedIn - formatted like Template17 with blue color styling
     if (linkedin) {
       const linkedinUrl = TemplateHelpers.formatLinkedInLink(linkedin);
       const displayLinkedIn = TemplateHelpers.formatLinkedInDisplay(linkedin);
@@ -850,11 +838,10 @@ const Template2 = ({
         fullValue: linkedin,
         link: linkedinUrl,
         type: 'linkedin',
-        iconColor: COLORS.linkedinBlue  // Add blue color for LinkedIn icon
+        iconColor: COLORS.linkedinBlue
       });
     }
     
-    // GitHub
     if (github) {
       const githubUrl = TemplateHelpers.formatGitHubLink(github);
       const displayGitHub = TemplateHelpers.formatGitHubDisplay(github);
@@ -868,7 +855,6 @@ const Template2 = ({
       });
     }
     
-    // Portfolio
     if (portfolio) {
       const portfolioUrl = TemplateHelpers.formatPortfolioLink(portfolio);
       const displayPortfolio = TemplateHelpers.formatPortfolioDisplay(portfolio);
@@ -893,7 +879,6 @@ const Template2 = ({
 
   // Get dynamic styles with ENHANCED PDF-optimized colors and updated font family
   const getDynamicStyles = useMemo(() => {
-    // Calculate contact chip font size (minimum 12px for readability)
     const contactChipFontSize = Math.max(12, fontConfig.tinyText + 1);
     
     const baseStyles = {
@@ -1031,23 +1016,23 @@ const Template2 = ({
       contactChip: {
         display: 'inline-flex',
         alignItems: 'center',
-        gap: '8px',  // Increased from 6px for better spacing
+        gap: '8px',
         padding: spacingConfig.contactChipPadding,
         background: 'rgba(255, 255, 255, 0.2)',
         borderRadius: '40px',
         border: '1px solid rgba(255, 255, 255, 0.3)',
         color: COLORS.white,
         textDecoration: 'none',
-        fontSize: `${contactChipFontSize}px`, // Larger minimum font size
+        fontSize: `${contactChipFontSize}px`,
         fontWeight: 600,
         transition: 'all 0.2s ease',
-        maxWidth: '280px', // Increased from 250px
+        maxWidth: '280px',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
         backdropFilter: 'blur(2px)',
         fontFamily: '"Calibri", "Arial", "Helvetica", sans-serif',
-        lineHeight: 1.3, // Added for better vertical spacing
+        lineHeight: 1.3,
       },
       
       educationList: {
@@ -1565,7 +1550,7 @@ const Template2 = ({
                   <div style={{
                     ...styles.contactStrip,
                     gap: spacingConfig.contactGap || '12px',
-                    rowGap: '12px', // Specific vertical gap for better distribution
+                    rowGap: '12px',
                     ...(isMobile && styles.mobileContactStrip)
                   }}>
                     {contactInfo.map((contact, index) => renderContactChip(contact, index))}
@@ -1584,7 +1569,7 @@ const Template2 = ({
               {processedData.hasData.summary && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã°Å¸â€œÂ</span>
+                    <span style={styles.sectionIcon}>📝</span>
                     ABOUT ME
                   </h3>
                   <div style={getDynamicStyles.summaryCard}>
@@ -1621,7 +1606,7 @@ const Template2 = ({
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
                     <span style={styles.sectionIcon}>
-                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'Ã°Å¸â€™Â¼'}
+                      {EXPERIENCE_TYPES[selectedExperienceType]?.icon || '💼'}
                     </span>
                     {EXPERIENCE_TYPES[selectedExperienceType]?.label || 'EXPERIENCE'}
                   </h3>
@@ -1659,7 +1644,7 @@ const Template2 = ({
                           </div>
                           {(exp.startDate || exp.endDate) && (
                             <div style={getDynamicStyles.experienceDates}>
-                              {exp.startDate} Ã¢â‚¬â€œ {exp.endDate}
+                              {exp.startDate} – {exp.endDate}
                             </div>
                           )}
                         </div>
@@ -1694,7 +1679,7 @@ const Template2 = ({
               {processedData.hasData.projects && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã°Å¸Å¡â‚¬</span>
+                    <span style={styles.sectionIcon}>🚀</span>
                     PROJECTS
                   </h3>
                   <div style={getDynamicStyles.projectList}>
@@ -1722,7 +1707,7 @@ const Template2 = ({
                           </div>
                           {(project.startDate || project.endDate) && (
                             <div style={getDynamicStyles.projectDates}>
-                              {project.startDate} Ã¢â‚¬â€œ {project.endDate}
+                              {project.startDate} – {project.endDate}
                             </div>
                           )}
                         </div>
@@ -1753,7 +1738,7 @@ const Template2 = ({
                             onMouseEnter={() => setHoveredItem(`${project.id}-link`)}
                             onMouseLeave={() => setHoveredItem(null)}
                           >
-                            Ã°Å¸â€â€” {project.displayLink}
+                            🔗 {project.displayLink}
                           </a>
                         )}
                       </div>
@@ -1768,7 +1753,7 @@ const Template2 = ({
               {processedData.hasData.skills && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã¢Å¡Â¡</span>
+                    <span style={styles.sectionIcon}>⚡</span>
                     KEY SKILLS
                   </h3>
                   <div style={getDynamicStyles.skillsContainer}>
@@ -1794,7 +1779,7 @@ const Template2 = ({
               {processedData.hasData.education && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã°Å¸Å½â€œ</span>
+                    <span style={styles.sectionIcon}>🎓</span>
                     EDUCATION
                   </h3>
                   <div style={getDynamicStyles.educationList}>
@@ -1827,7 +1812,7 @@ const Template2 = ({
                             {edu.displayDate && (
                               <div style={getDynamicStyles.educationDateBadge}>
                                 {edu.displayDate}
-                                {edu.current && <span> Ã¢â‚¬Â¢ Current</span>}
+                                {edu.current && <span> • Current</span>}
                               </div>
                             )}
                             
@@ -1859,7 +1844,7 @@ const Template2 = ({
               {processedData.hasData.certifications && (
                 <section style={styles.section}>
                   <h3 style={getDynamicStyles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã°Å¸â€œÅ“</span>
+                    <span style={styles.sectionIcon}>📜</span>
                     CERTIFICATION
                   </h3>
                   <div style={getDynamicStyles.certificationList}>
@@ -2024,8 +2009,7 @@ const styles = {
   contactStrip: {
     display: 'flex',
     flexWrap: 'wrap',
-    marginTop: '8px', // Increased from 5px
-    // gap and rowGap are set dynamically now
+    marginTop: '8px',
   },
   
   section: {
@@ -2084,7 +2068,6 @@ const styles = {
     marginTop: '2px'
   },
   
-  // Mobile responsive overrides
   mobileHeader: {
     padding: '20px 20px'
   },

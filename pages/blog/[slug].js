@@ -1,44 +1,381 @@
-// pages/blog/ultimate-resume-guide-2026.js
+// pages/blog/[slug].js
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
-import SEO from '../../components/SEO';
+import { useState, useEffect } from 'react';
 
-export default function UltimateResumeGuide2026() {
-  const [authorImageError, setAuthorImageError] = useState(false);
+// Blog post data - In a real app, this would come from a CMS or API
+const blogPosts = {
+  'how-to-write-resume': {
+    title: 'How to Write a Resume: The Ultimate Step-by-Step Guide',
+    description: 'Learn how to write a professional resume that gets interviews. This comprehensive guide covers formatting, content, keywords, and proven strategies for 2024.',
+    keywords: 'how to write a resume, resume writing guide, resume tips, resume format, professional resume',
+    category: 'Resume Writing',
+    author: 'Resume Expert',
+    date: '2024-01-15',
+    readTime: '8 min read',
+    content: `
+      <h2>Introduction</h2>
+      <p>Writing a resume can feel overwhelming, but with the right approach, you can create a document that opens doors. This guide will walk you through every step of creating a professional resume that gets noticed.</p>
+      
+      <h2>Step 1: Choose the Right Format</h2>
+      <p>The first decision you'll make is which resume format to use. The three most common formats are:</p>
+      <ul>
+        <li><strong>Chronological:</strong> Lists your work history in reverse chronological order. Best for those with consistent work experience.</li>
+        <li><strong>Functional:</strong> Focuses on skills rather than work history. Ideal for career changers or those with gaps.</li>
+        <li><strong>Combination:</strong> Mixes both approaches. Good for experienced professionals with diverse skills.</li>
+      </ul>
+      
+      <h2>Step 2: Start with Your Contact Information</h2>
+      <p>Your resume should begin with your name, phone number, email, and location. Include your LinkedIn profile if relevant.</p>
+      
+      <h2>Step 3: Write a Compelling Summary</h2>
+      <p>A professional summary is a 2-3 sentence overview of your experience and key achievements. Tailor this to each job application.</p>
+      
+      <h2>Step 4: Detail Your Work Experience</h2>
+      <p>For each role, include your job title, company, dates, and 3-5 bullet points highlighting your achievements. Use action verbs and quantify results where possible.</p>
+      
+      <h2>Step 5: List Your Education</h2>
+      <p>Include your degrees, institutions, and graduation years. You can also list relevant coursework or academic achievements.</p>
+      
+      <h2>Step 6: Showcase Your Skills</h2>
+      <p>Create a skills section that highlights both technical and soft skills relevant to the job you're applying for.</p>
+      
+      <h2>Step 7: Add Optional Sections</h2>
+      <p>Depending on your background, you might include certifications, languages, projects, or volunteer work.</p>
+      
+      <h2>Step 8: Proofread and Format</h2>
+      <p>Review your resume for errors and ensure consistent formatting. Consider using our free resume builder for a professional result.</p>
+    `
+  },
+  'resume-formatting-guide': {
+    title: 'Resume Formatting Guide: Best Practices for 2024',
+    description: 'Master resume formatting with our expert guide. Learn about font choices, margins, file types, and ATS-friendly formatting tips.',
+    keywords: 'resume formatting, resume format, ATS-friendly resume, resume layout, resume design',
+    category: 'Resume Tips',
+    author: 'Resume Expert',
+    date: '2024-02-01',
+    readTime: '6 min read',
+    content: `
+      <h2>Why Formatting Matters</h2>
+      <p>Even the most impressive experience can be overlooked if your resume is poorly formatted. This guide covers everything you need to know about resume formatting.</p>
+      
+      <h2>Font Choices</h2>
+      <p>Stick to professional, readable fonts like Arial, Calibri, Helvetica, or Times New Roman. Use 10-12 point size for body text.</p>
+      
+      <h2>Margins and Spacing</h2>
+      <p>Use 0.5-1 inch margins and consistent spacing throughout. Aim for 1.15-1.5 line spacing for readability.</p>
+      
+      <h2>File Format</h2>
+      <p>PDF is the safest choice for preserving formatting. Save as PDF before submitting to employers.</p>
+      
+      <h2>ATS-Friendly Formatting</h2>
+      <p>Avoid tables, columns, and graphics that might confuse applicant tracking systems. Stick to simple, clean layouts.</p>
+    `
+  },
+  'action-verbs-for-resume': {
+    title: '200+ Powerful Action Verbs for Your Resume',
+    description: 'Enhance your resume with powerful action verbs. This comprehensive list includes verbs for leadership, achievement, communication, and more.',
+    keywords: 'action verbs for resume, resume verbs, resume power words, resume keywords',
+    category: 'Career Advice',
+    author: 'Resume Expert',
+    date: '2024-02-15',
+    readTime: '7 min read',
+    content: `
+      <h2>Why Action Verbs Matter</h2>
+      <p>Action verbs make your resume more dynamic and engaging. They help you stand out and demonstrate your impact.</p>
+      
+      <h2>Leadership Verbs</h2>
+      <ul>
+        <li>Led</li>
+        <li>Managed</li>
+        <li>Directed</li>
+        <li>Supervised</li>
+        <li>Coordinated</li>
+      </ul>
+      
+      <h2>Achievement Verbs</h2>
+      <ul>
+        <li>Accomplished</li>
+        <li>Achieved</li>
+        <li>Delivered</li>
+        <li>Generated</li>
+        <li>Improved</li>
+      </ul>
+      
+      <h2>Communication Verbs</h2>
+      <ul>
+        <li>Presented</li>
+        <li>Negotiated</li>
+        <li>Collaborated</li>
+        <li>Authored</li>
+        <li>Facilitated</li>
+      </ul>
+    `
+  },
+  'ats-resume-tips-2026': {
+    title: 'ATS Resume Tips for 2026: How to Pass Applicant Tracking Systems',
+    description: 'Learn how to optimize your resume for ATS in 2026. Expert tips on keywords, formatting, and strategies to get past automated screening.',
+    keywords: 'ATS resume, applicant tracking system, resume optimization, ATS tips, resume keywords',
+    category: 'ATS Tips',
+    author: 'Resume Expert',
+    date: '2024-03-01',
+    readTime: '9 min read',
+    content: `
+      <h2>Understanding ATS</h2>
+      <p>Applicant Tracking Systems (ATS) are used by most large employers to screen resumes. Learn how to optimize yours to get through.</p>
+      
+      <h2>Keyword Optimization</h2>
+      <p>Include relevant keywords from the job description. Use exact phrases and variations naturally throughout your resume.</p>
+      
+      <h2>Formatting for ATS</h2>
+      <p>Avoid complex formatting like tables, columns, and graphics. Stick to standard fonts and simple layouts.</p>
+      
+      <h2>File Type Matters</h2>
+      <p>PDF is generally safe, but check the job posting for preferred format. Some older ATS prefer Word documents.</p>
+    `
+  },
+  'cv-vs-resume-difference': {
+    title: 'CV vs Resume: What\'s the Difference?',
+    description: 'Understand the key differences between a CV and resume. Learn when to use each and what to include for international job applications.',
+    keywords: 'CV vs resume, curriculum vitae, resume difference, CV format, resume format',
+    category: 'Career Advice',
+    author: 'Resume Expert',
+    date: '2024-03-15',
+    readTime: '5 min read',
+    content: `
+      <h2>CV vs Resume: Key Differences</h2>
+      <p>While often used interchangeably, CVs and resumes serve different purposes. Learn which one you need.</p>
+      
+      <h2>Resume Basics</h2>
+      <p>A resume is a concise summary of your skills and experience, typically 1-2 pages. Used for most job applications.</p>
+      
+      <h2>CV Basics</h2>
+      <p>A CV is a comprehensive document detailing your entire career, often used in academia, research, or international applications.</p>
+      
+      <h2>International Considerations</h2>
+      <p>Different countries have different expectations. Research the standard in your target country before applying.</p>
+    `
+  },
+  'fresher-resume-guide': {
+    title: 'Fresher Resume Guide: How to Write Your First Resume',
+    description: 'New to the job market? Learn how to create a compelling fresher resume with no experience. Tips on format, content, and highlighting your potential.',
+    keywords: 'fresher resume, entry-level resume, no experience resume, student resume, graduate resume',
+    category: 'Freshers',
+    author: 'Resume Expert',
+    date: '2024-04-01',
+    readTime: '6 min read',
+    content: `
+      <h2>Starting from Scratch</h2>
+      <p>Writing your first resume can be daunting. This guide helps you highlight your potential even without work experience.</p>
+      
+      <h2>Focus on Education</h2>
+      <p>Your education is your strongest asset. Include your degree, institution, GPA, and relevant coursework.</p>
+      
+      <h2>Highlight Projects and Internships</h2>
+      <p>Include academic projects, internships, or volunteer work that demonstrate your skills.</p>
+      
+      <h2>Showcase Skills</h2>
+      <p>List technical skills, languages, and soft skills that are relevant to the job.</p>
+    `
+  },
+  'remote-work-resume-tips': {
+    title: 'Remote Work Resume Tips: How to Stand Out',
+    description: 'Learn how to tailor your resume for remote jobs. Highlight remote work skills, self-management, and virtual collaboration.',
+    keywords: 'remote work resume, work from home resume, remote job tips, virtual work, telecommuting',
+    category: 'Remote Work',
+    author: 'Resume Expert',
+    date: '2024-04-15',
+    readTime: '5 min read',
+    content: `
+      <h2>Remote Work is Different</h2>
+      <p>Remote jobs require different skills. Learn how to showcase your ability to work independently and collaborate virtually.</p>
+      
+      <h2>Highlight Remote-Ready Skills</h2>
+      <p>Emphasize self-management, communication tools proficiency, and experience with remote collaboration.</p>
+      
+      <h2>Show Remote Experience</h2>
+      <p>If you've worked remotely before, highlight that experience. Include tools you've used like Slack, Zoom, or Asana.</p>
+    `
+  },
+  'resume-for-career-change': {
+    title: 'Resume for Career Change: How to Pivot Successfully',
+    description: 'Switching careers? Learn how to write a resume that highlights transferable skills and convinces employers to take a chance on you.',
+    keywords: 'career change resume, career pivot, transferable skills, career transition, resume for career switcher',
+    category: 'Career Change',
+    author: 'Resume Expert',
+    date: '2024-05-01',
+    readTime: '7 min read',
+    content: `
+      <h2>Making the Leap</h2>
+      <p>Changing careers is exciting but challenging. Your resume needs to bridge the gap between your past and future.</p>
+      
+      <h2>Identify Transferable Skills</h2>
+      <p>Look for skills that apply to your new field, like communication, project management, or leadership.</p>
+      
+      <h2>Use a Functional or Combination Format</h2>
+      <p>These formats emphasize skills over chronological work history, making them ideal for career changers.</p>
+      
+      <h2>Address the Change</h2>
+      <p>Use your summary to explain your career change and show enthusiasm for your new path.</p>
+    `
+  },
+  'resume-mistakes-to-avoid': {
+    title: '10 Resume Mistakes to Avoid in 2024',
+    description: 'Don\'t let common resume mistakes cost you interviews. Learn the top 10 errors and how to fix them.',
+    keywords: 'resume mistakes, resume errors, resume tips, resume advice, common resume mistakes',
+    category: 'Resume Tips',
+    author: 'Resume Expert',
+    date: '2024-05-15',
+    readTime: '6 min read',
+    content: `
+      <h2>Mistake #1: Typos and Grammar Errors</h2>
+      <p>Nothing undermines your professionalism like spelling mistakes. Always proofread multiple times.</p>
+      
+      <h2>Mistake #2: Using an Unprofessional Email</h2>
+      <p>Create a professional email address using your name, not nicknames or numbers.</p>
+      
+      <h2>Mistake #3: Including Irrelevant Information</h2>
+      <p>Keep your resume focused on what matters for the job you want.</p>
+      
+      <h2>Mistake #4: Being Too Vague</h2>
+      <p>Use specific examples and metrics to demonstrate your achievements.</p>
+    `
+  },
+  'resume-objective-vs-summary': {
+    title: 'Resume Objective vs Summary: Which One Should You Use?',
+    description: 'Learn the difference between a resume objective and summary, and when to use each based on your career stage.',
+    keywords: 'resume objective, resume summary, professional summary, career objective, resume header',
+    category: 'Resume Writing',
+    author: 'Resume Expert',
+    date: '2024-06-01',
+    readTime: '4 min read',
+    content: `
+      <h2>Resume Summary</h2>
+      <p>A resume summary highlights your experience and key achievements. Best for experienced professionals.</p>
+      
+      <h2>Resume Objective</h2>
+      <p>A resume objective states your career goals. Ideal for entry-level candidates or career changers.</p>
+      
+      <h2>When to Use Each</h2>
+      <p>Choose based on your experience level and career situation. This guide helps you decide.</p>
+    `
+  },
+  'resume-sections-guide': {
+    title: 'Resume Sections Guide: What to Include and Why',
+    description: 'Complete guide to resume sections. Learn which sections are essential and which can help you stand out.',
+    keywords: 'resume sections, resume parts, resume structure, resume organization',
+    category: 'Resume Writing',
+    author: 'Resume Expert',
+    date: '2024-06-15',
+    readTime: '7 min read',
+    content: `
+      <h2>Essential Sections</h2>
+      <p>Contact Information, Summary, Work Experience, Education, Skills</p>
+      
+      <h2>Optional Sections</h2>
+      <p>Certifications, Languages, Projects, Volunteer Work, Awards</p>
+      
+      <h2>Industry-Specific Sections</h2>
+      <p>Some industries expect additional sections like publications for academia or portfolios for design.</p>
+    `
+  },
+  'ultimate-resume-guide-2026': {
+    title: 'The Ultimate Resume Guide for 2026',
+    description: 'The most comprehensive resume guide for 2026. Everything you need to create a resume that lands interviews.',
+    keywords: 'ultimate resume guide, complete resume guide, resume handbook, resume master guide',
+    category: 'Resume Writing',
+    author: 'Resume Expert',
+    date: '2024-07-01',
+    readTime: '12 min read',
+    content: `
+      <h2>Your Complete Resume Resource</h2>
+      <p>This guide combines everything you need to know about resume writing in one place.</p>
+      
+      <h2>Formatting</h2>
+      <p>Learn the best practices for resume formatting in 2026.</p>
+      
+      <h2>Content</h2>
+      <p>Master writing compelling content for every section.</p>
+      
+      <h2>Optimization</h2>
+      <p>Optimize your resume for both humans and ATS.</p>
+    `
+  }
+};
 
-  // Schema markup for rich results
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "The Ultimate Guide to Writing a Resume in 2026 | Complete Resume Writing Guide with Expert Tips",
-    "description": "Master the art of resume writing in 2026 with our comprehensive guide. Learn ATS optimization, formatting tips, keyword strategies, and see before/after examples. Updated for 2026 job market.",
-    "image": "https://freeresumemaker.xyz/images/blog/ultimate-resume-guide-2026.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Sarah Johnson",
-      "jobTitle": "Career Expert",
-      "url": "https://freeresumemaker.xyz/about"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Resume Builder",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://freeresumemaker.xyz/logo.png"
-      }
-    },
-    "datePublished": "2026-02-15",
-    "dateModified": "2026-02-15",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
-    },
-    "keywords": "resume writing guide 2026, how to write a resume, ATS-friendly resume, resume tips, professional resume, CV writing, job search 2026, resume examples, resume format, career advice",
-    "articleSection": "Resume Tips"
-  };
+export default function BlogPostPage() {
+  const router = useRouter();
+  const { slug } = router.query;
+  const [relatedPosts, setRelatedPosts] = useState([]);
 
-  // Breadcrumb schema
+  useEffect(() => {
+    if (slug && blogPosts[slug]) {
+      // Find related posts in the same category
+      const currentCategory = blogPosts[slug].category;
+      const related = Object.entries(blogPosts)
+        .filter(([key, post]) => key !== slug && post.category === currentCategory)
+        .slice(0, 3)
+        .map(([key, post]) => ({ slug: key, ...post }));
+      setRelatedPosts(related);
+    }
+  }, [slug]);
+
+  if (!slug) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '400px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📝</div>
+          <div style={{ color: '#666' }}>Loading article...</div>
+        </div>
+      </div>
+    );
+  }
+
+  const post = blogPosts[slug];
+
+  if (!post) {
+    return (
+      <div style={{
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '60px 20px',
+        textAlign: 'center',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+      }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>Article Not Found</h1>
+        <p style={{ color: '#666', marginBottom: '2rem' }}>
+          The blog post you're looking for doesn't exist or may have been moved.
+        </p>
+        <Link 
+          href="/blog"
+          style={{
+            display: 'inline-block',
+            padding: '12px 30px',
+            background: '#0070f3',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 500
+          }}
+        >
+          Browse All Articles
+        </Link>
+      </div>
+    );
+  }
+
+  // Format title for meta tags
+  const pageTitle = `${post.title} | Resume Writing Tips & Career Advice`;
+
+  // Generate breadcrumb schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -47,136 +384,93 @@ export default function UltimateResumeGuide2026() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://freeresumemaker.xyz"
+        "item": "https://yourdomain.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://freeresumemaker.xyz/blog"
+        "item": "https://yourdomain.com/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Ultimate Resume Guide 2026",
-        "item": "https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
+        "name": post.title,
+        "item": `https://yourdomain.com/blog/${slug}`
       }
     ]
   };
 
-  // HowTo schema for step-by-step guide
-  const howToSchema = {
+  // Generate article schema
+  const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Write a Professional Resume in 2026",
-    "description": "Follow these steps to create an effective resume that gets results.",
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "Choose the Right Format",
-        "text": "Select chronological, functional, or hybrid format based on your experience level."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Write a Professional Summary",
-        "text": "Craft a 2-3 sentence overview highlighting your experience and key skills."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Highlight Your Experience",
-        "text": "Use the STAR method to showcase achievements with quantifiable results."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Showcase Your Skills",
-        "text": "Organize technical and soft skills into clear categories."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Optimize for ATS",
-        "text": "Include keywords from the job description and use standard formatting."
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.description,
+    "image": `https://yourdomain.com/images/blog/${slug}.jpg`,
+    "author": {
+      "@type": "Organization",
+      "name": post.author,
+      "url": "https://yourdomain.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Resume Builder",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/logo.png"
       }
-    ]
-  };
-
-  // FAQ Schema for featured snippets
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I write a resume in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Start with a professional summary, list your experience with quantifiable achievements, include relevant skills, add education and certifications, and optimize for ATS by using keywords from the job description."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the best resume format for 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The hybrid/combination format works well for most professionals. It highlights skills upfront while showing career progression through work experience."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long should a resume be?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Entry-level: 1 page. Mid-level (3-10 years): 1-2 pages. Senior (10+ years): 2 pages max. Academic CVs may be longer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I make my resume ATS-friendly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use standard section headings, include keywords from the job description, avoid tables and columns, save as PDF or DOCX, and use simple formatting."
-        }
-      }
-    ]
-  };
-
-  const handleDownloadClick = () => {
-    alert('PDF download functionality coming soon!');
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://yourdomain.com/blog/${slug}`
+    }
   };
 
   return (
     <>
-      <SEO 
-        title="The Ultimate Guide to Writing a Resume in 2026 | Complete Resume Writing Guide with Expert Tips"
-        description="Master the art of resume writing in 2026 with our comprehensive guide. Learn ATS optimization, formatting tips, keyword strategies, and see before/after examples. Updated for 2026."
-        keywords="resume writing guide 2026, how to write a resume, ATS-friendly resume, resume tips, professional resume, CV writing, job search 2026, resume examples, resume format, career advice, resume writing tips"
-        canonical="https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026"
-        image="https://freeresumemaker.xyz/images/blog/ultimate-resume-guide-2026.jpg"
-        type="article"
-        publishedTime="2026-02-15"
-        author="Sarah Johnson"
-      />
-      
       <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-        />
+        {/* Primary Meta Tags */}
+        <title>{pageTitle}</title>
+        <meta name="description" content={post.description} />
+        <meta name="keywords" content={post.keywords} />
+        <meta name="author" content={post.author} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <link rel="canonical" href={`https://yourdomain.com/blog/${slug}`} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://yourdomain.com/blog/${slug}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:image" content={`https://yourdomain.com/images/blog/${slug}.jpg`} />
+        <meta property="og:site_name" content="Resume Builder" />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.description} />
+        <meta name="twitter:image" content={`https://yourdomain.com/images/blog/${slug}.jpg`} />
+        
+        {/* Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
       </Head>
 
       <div style={{
-        maxWidth: '1000px',
+        maxWidth: '900px',
         margin: '0 auto',
         padding: '40px 20px',
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
@@ -191,621 +485,96 @@ export default function UltimateResumeGuide2026() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>â€º</span>
-          <span style={{ color: '#0070f3' }}>Ultimate Resume Guide 2026</span>
-        </div>
-
-        {/* Featured Badge */}
-        <div style={{ marginBottom: '20px' }}>
-          <span style={{
-            background: '#0070f3',
-            color: 'white',
-            padding: '6px 16px',
-            borderRadius: '30px',
-            fontSize: '14px',
-            fontWeight: 600,
-            display: 'inline-block',
-            boxShadow: '0 4px 10px rgba(0,112,243,0.3)'
-          }}>
-            MOST READ Â· 2026 EDITION
-          </span>
+          <span>&gt;</span>
+          <span style={{ color: '#0070f3' }}>{post.category}</span>
         </div>
 
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '42px',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
-            fontWeight: 700,
-            maxWidth: '900px'
+            fontWeight: 700
           }}>
-            The Ultimate Guide to Writing a Resume in 2026
+            {post.title}
           </h1>
-          
+
+          <div style={{
+            display: 'flex',
+            gap: '20px',
+            marginBottom: '20px',
+            color: '#666',
+            fontSize: '14px'
+          }}>
+            <span>📅 {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span>⏱️ {post.readTime}</span>
+            <span>📂 Category: {post.category}</span>
+          </div>
+
+          {/* Author Bio */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '20px',
-            color: '#666',
-            fontSize: '14px',
-            marginBottom: '20px',
-            flexWrap: 'wrap'
+            gap: '12px',
+            padding: '16px',
+            background: '#f8f9fa',
+            borderRadius: '8px',
+            borderLeft: '4px solid #0070f3'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              {!authorImageError ? (
-                <img 
-                  src="/images/authors/sarah-johnson.jpg" 
-                  alt="Sarah Johnson" 
-                  style={{
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '50%',
-                    objectFit: 'cover'
-                  }}
-                  onError={() => setAuthorImageError(true)}
-                />
-              ) : (
-                <div style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '50%',
-                  background: '#0070f3',
-                  color: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: 'bold',
-                  fontSize: '16px'
-                }}>
-                  SJ
-                </div>
-              )}
-              <span><strong>Sarah Johnson</strong> | Career Expert</span>
-            </div>
-            <span>February 15, 2026</span>
-            <span>12 min read</span>
-            <span>Resume Tips</span>
-          </div>
-
-          {/* Featured Snippet Optimization */}
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '32px',
-            color: 'white',
-            marginTop: '20px'
-          }}>
-            <p style={{
-              fontSize: '20px',
-              lineHeight: '1.6',
-              margin: 0,
-              fontWeight: 500
+            <div style={{
+              width: '40px',
+              height: '40px',
+              background: '#0070f3',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: '20px'
             }}>
-              A well-written resume can help you present your qualifications effectively to employers. 
-              This guide covers key elements of resume writing, from choosing the right format to optimizing for ATS.
-            </p>
+              {post.author.charAt(0)}
+            </div>
+            <div>
+              <div style={{ fontWeight: 600, color: '#333' }}>{post.author}</div>
+              <div style={{ fontSize: '13px', color: '#666' }}>Resume Expert & Career Advisor</div>
+            </div>
           </div>
         </header>
 
-        {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
-            Table of Contents
-          </h2>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-            gap: '10px'
-          }}>
-            {[
-              { name: 'Why Your Resume Matters', href: '#why' },
-              { name: 'Choose the Right Format', href: '#format' },
-              { name: 'Write a Professional Summary', href: '#summary' },
-              { name: 'Highlight Your Experience', href: '#experience' },
-              { name: 'Showcase Your Skills', href: '#skills' },
-              { name: 'Education & Certifications', href: '#education' },
-              { name: 'Optimize for ATS', href: '#ats' },
-              { name: 'Common Mistakes', href: '#mistakes' },
-              { name: 'Final Checklist', href: '#checklist' }
-            ].map((item, index) => (
-              <a 
-                key={index}
-                href={item.href}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '10px',
-                  background: 'white',
-                  borderRadius: '8px',
-                  color: '#333',
-                  textDecoration: 'none',
-                  fontSize: '14px',
-                  transition: 'all 0.2s ease',
-                  border: '1px solid #e9ecef'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#e9ecef';
-                  e.currentTarget.style.borderColor = '#0070f3';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'white';
-                  e.currentTarget.style.borderColor = '#e9ecef';
-                }}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </nav>
+        {/* Article Content */}
+        <article 
+          style={{
+            lineHeight: '1.8',
+            color: '#333',
+            fontSize: '18px'
+          }}
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
 
-        {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
-          {/* Section 1 */}
-          <section id="why" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '0 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              1. Why Your Resume Matters
-            </h2>
-            <p>
-              Your resume is often the first document employers see when considering you for a position. It provides a summary 
-              of your qualifications, experience, and skills. Taking time to create a clear, well-organized resume can help 
-              you present your background effectively.
-            </p>
-          </section>
-
-          {/* Section 2 */}
-          <section id="format" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              2. Choose the Right Resume Format
-            </h2>
-            <p>
-              The format you choose affects how your information is presented. Here are common resume formats:
-            </p>
-            
-            <div style={{ marginBottom: '20px' }}>
-              <div style={{
-                background: '#f8f9fa',
-                borderRadius: '8px',
-                padding: '15px',
-                marginBottom: '15px'
-              }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '5px', color: '#0070f3' }}>Chronological</h3>
-                <p style={{ margin: '0' }}>Lists work experience in reverse chronological order. Suitable for those with consistent work history in the same field.</p>
-              </div>
-              <div style={{
-                background: '#f8f9fa',
-                borderRadius: '8px',
-                padding: '15px',
-                marginBottom: '15px'
-              }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '5px', color: '#0070f3' }}>Functional</h3>
-                <p style={{ margin: '0' }}>Focuses on skills rather than work history. May be used by career changers or those with employment gaps.</p>
-              </div>
-              <div style={{
-                background: '#f8f9fa',
-                borderRadius: '8px',
-                padding: '15px',
-                marginBottom: '15px'
-              }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '5px', color: '#0070f3' }}>Hybrid/Combination</h3>
-                <p style={{ margin: '0' }}>Blends skills and chronological formats. Works for many professionals.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 3 */}
-          <section id="summary" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              3. Write a Professional Summary
-            </h2>
-            <p>
-              A professional summary is a brief statement at the top of your resume that highlights your experience and skills.
-            </p>
-            
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
-              <p style={{ margin: '0 0 15px 0' }}>
-                <strong>Example:</strong> "Marketing professional with 8+ years of experience in digital strategy and brand management. Skilled in content creation, campaign analysis, and team collaboration."
-              </p>
-              <p style={{ margin: 0, fontSize: '15px', color: '#666' }}>
-                Keep your summary concise and focused on your relevant qualifications.
-              </p>
-            </div>
-          </section>
-
-          {/* Section 4 */}
-          <section id="experience" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              4. Highlight Your Experience
-            </h2>
-            <p>
-              When describing your work experience, focus on achievements rather than just listing responsibilities.
-            </p>
-            
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0'
-            }}>
-              <p style={{ margin: '0 0 10px 0' }}>
-                <strong>Responsibility-focused:</strong> "Managed social media accounts."
-              </p>
-              <p style={{ margin: 0 }}>
-                <strong>Achievement-focused:</strong> "Increased social media engagement through content strategy and community management."
-              </p>
-            </div>
-          </section>
-
-          {/* Section 5 */}
-          <section id="skills" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              5. Showcase Your Skills
-            </h2>
-            <p>
-              Create a skills section that highlights relevant abilities. Consider organizing them into categories:
-            </p>
-            
-            <div style={{
-              background: '#f8f9fa',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0'
-            }}>
-              <ul style={{ margin: 0 }}>
-                <li><strong>Technical Skills:</strong> Software, tools, programming languages</li>
-                <li><strong>Soft Skills:</strong> Communication, teamwork, problem-solving</li>
-                <li><strong>Languages:</strong> Additional languages with proficiency levels</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Section 6 */}
-          <section id="education" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              6. Education & Certifications
-            </h2>
-            <p>
-              List your highest degree first. Include institution name, degree, and graduation year. For recent graduates, 
-              you may include relevant coursework or GPA if notable.
-            </p>
-            
-            <div style={{
-              background: '#f8f9fa',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0'
-            }}>
-              <p style={{ margin: 0 }}>
-                <strong>Example:</strong> "Master of Business Administration (MBA) | University Name | 2020"
-              </p>
-            </div>
-          </section>
-
-          {/* Section 7 */}
-          <section id="ats" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              7. Optimize for ATS (Applicant Tracking Systems)
-            </h2>
-            <p>
-              Many companies use ATS to process applications. Here are some tips for ATS-friendly formatting:
-            </p>
-            
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '20px',
-              margin: '20px 0'
-            }}>
-              <div style={{
-                background: '#e8f5e9',
-                borderRadius: '12px',
-                padding: '20px',
-                border: '1px solid #a5d6a7'
-              }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#2e7d32' }}>Recommended</h3>
-                <ul style={{ margin: 0 }}>
-                  <li>Standard section headings</li>
-                  <li>Keywords from job description</li>
-                  <li>Simple fonts (Arial, Calibri)</li>
-                  <li>Save as PDF or DOCX</li>
-                </ul>
-              </div>
-              <div style={{
-                background: '#ffebee',
-                borderRadius: '12px',
-                padding: '20px',
-                border: '1px solid #ef9a9a'
-              }}>
-                <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#c62828' }}>Avoid</h3>
-                <ul style={{ margin: 0 }}>
-                  <li>Tables or columns</li>
-                  <li>Headers/footers with important info</li>
-                  <li>Graphics or images</li>
-                  <li>Fancy fonts or symbols</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 8 */}
-          <section id="mistakes" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              8. Common Mistakes to Avoid
-            </h2>
-            
-            <div style={{
-              background: '#fff3cd',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #ffc107'
-            }}>
-              <ul style={{ margin: 0 }}>
-                <li>Typos and grammatical errors</li>
-                <li>Too long or too short</li>
-                <li>Irrelevant information</li>
-                <li>Generic content not tailored to the job</li>
-                <li>Inconsistent formatting</li>
-                <li>Missing keywords from job description</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Section 9 */}
-          <section id="checklist" style={{ scrollMarginTop: '100px' }}>
-            <h2 style={{ 
-              fontSize: '32px', 
-              margin: '50px 0 20px 0',
-              borderBottom: '3px solid #0070f3',
-              paddingBottom: '10px'
-            }}>
-              9. Final Resume Checklist
-            </h2>
-            
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '16px',
-              padding: '30px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '15px'
-              }}>
-                {[
-                  'âœ“ Contact information is correct',
-                  'âœ“ Summary is relevant to the job',
-                  'âœ“ Experience uses action verbs',
-                  'âœ“ Skills are well-organized',
-                  'âœ“ Formatting is consistent',
-                  'âœ“ No spelling or grammar errors',
-                  'âœ“ Saved as PDF (unless DOCX requested)',
-                  'âœ“ File name is professional'
-                ].map((item, index) => (
-                  <div key={index} style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px'
-                  }}>
-                    <span style={{ color: '#2e7d32', fontSize: '18px' }}>âœ“</span>
-                    <span style={{ fontSize: '14px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ Section */}
-          <section style={{ margin: '50px 0' }}>
-            <h2 style={{ 
-              fontSize: '28px', 
-              margin: '0 0 20px 0',
-              color: '#333'
-            }}>
-              Frequently Asked Questions
-            </h2>
-            
-            <div style={{
-              display: 'grid',
-              gap: '15px'
-            }}>
-              {[
-                {
-                  q: 'How do I write a resume in 2026?',
-                  a: 'Start with a professional summary, list your experience with achievements, include relevant skills, add education and certifications, and optimize for ATS by using keywords from the job description.'
-                },
-                {
-                  q: 'What is the best resume format for 2026?',
-                  a: 'The hybrid/combination format works well for many professionals. It highlights skills while also showing career progression through work experience.'
-                },
-                {
-                  q: 'How long should a resume be?',
-                  a: 'Entry-level: 1 page. Mid-level (3-10 years): 1-2 pages. Senior (10+ years): 2 pages maximum. Academic CVs may be longer.'
-                },
-                {
-                  q: 'How do I make my resume ATS-friendly?',
-                  a: 'Use standard section headings, include keywords from the job description, avoid tables and columns, save as PDF or DOCX, and use simple formatting.'
-                },
-                {
-                  q: 'Should I include a photo on my resume?',
-                  a: 'In most countries (US, UK, Canada), it\'s not recommended to include a photo. Some countries in Europe and Asia may expect photos - research norms for your target location.'
-                },
-                {
-                  q: 'What action verbs should I use on my resume?',
-                  a: 'Use strong action verbs like "led," "developed," "managed," "created," "implemented," "achieved," "improved," and "designed."'
-                }
-              ].map((faq, index) => (
-                <div key={index} style={{
-                  background: '#f8f9fa',
-                  borderRadius: '10px',
-                  padding: '20px',
-                  border: '1px solid #e9ecef'
-                }}>
-                  <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#0070f3' }}>{faq.q}</h3>
-                  <p style={{ margin: 0, color: '#666' }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Download Section */}
-          <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
-          }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>ðŸ“¥</div>
-            <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Writing Checklist</h2>
-            <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
-              Download our printable checklist to ensure your resume includes all essential elements.
-            </p>
-            <button
-              onClick={handleDownloadClick}
-              style={{
-                padding: '14px 32px',
-                background: 'white',
-                color: '#667eea',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '16px',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.05)';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Download Free Checklist
-            </button>
-          </section>
-        </article>
-
-        {/* Author Bio */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          display: 'flex',
-          gap: '25px',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
-          <div style={{
-            width: '80px',
-            height: '80px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '32px',
-            color: 'white'
-          }}>
-            SJ
-          </div>
-          <div style={{ flex: 1 }}>
-            <h3 style={{ fontSize: '20px', margin: '0 0 5px 0' }}>About Sarah Johnson</h3>
-            <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>
-              Sarah is a Career Expert with experience in HR and recruitment. She has helped many job seekers improve their 
-              resumes and job applications through practical advice.
-            </p>
-          </div>
-        </section>
-
-        {/* Share Section */}
+        {/* Share Buttons */}
         <div style={{
-          margin: '50px 0',
+          marginTop: '50px',
           padding: '30px',
           background: '#f8f9fa',
-          borderRadius: '16px',
+          borderRadius: '12px',
           textAlign: 'center'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
-            Share This Guide
-          </h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>Share This Article</h3>
           <div style={{
             display: 'flex',
             gap: '15px',
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'ðŸ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('The Ultimate Guide to Writing a Resume in 2026')}&url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'LinkedIn', icon: 'ðŸ’¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'Facebook', icon: 'ðŸ“˜', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026` },
-              { name: 'Email', icon: 'ðŸ“§', url: `mailto:?subject=${encodeURIComponent('Ultimate Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/ultimate-resume-guide-2026')}` }
+              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://yourdomain.com/blog/${slug}` },
+              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://yourdomain.com/blog/${slug}` },
+              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/blog/${slug}` },
+              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: https://yourdomain.com/blog/${slug}`)}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -813,15 +582,15 @@ export default function UltimateResumeGuide2026() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  width: '50px',
-                  height: '50px',
+                  width: '45px',
+                  height: '45px',
                   borderRadius: '50%',
                   background: 'white',
                   border: '1px solid #ddd',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '22px',
+                  fontSize: '20px',
                   textDecoration: 'none',
                   color: '#333',
                   transition: 'all 0.2s ease'
@@ -830,7 +599,7 @@ export default function UltimateResumeGuide2026() {
                   e.currentTarget.style.background = '#0070f3';
                   e.currentTarget.style.borderColor = '#0070f3';
                   e.currentTarget.style.color = 'white';
-                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'white';
@@ -845,140 +614,97 @@ export default function UltimateResumeGuide2026() {
           </div>
         </div>
 
-        {/* Related Articles */}
-        <div style={{
-          marginTop: '50px',
-          paddingTop: '40px',
-          borderTop: '1px solid #e9ecef'
-        }}>
-          <h3 style={{ fontSize: '24px', marginBottom: '30px', color: '#333' }}>
-            You Might Also Like
-          </h3>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '25px'
-          }}>
-            {[
-              { href: '/blog/ats-resume-tips-2026', title: 'ATS Resume Tips for 2026', author: 'Michael Chen', readTime: '6 min' },
-              { href: '/blog/resume-formatting-guide', title: 'Resume Formatting Guide', author: 'Lisa Thompson', readTime: '7 min' },
-              { href: '/blog/resume-mistakes-to-avoid', title: '10 Common Resume Mistakes', author: 'Emily Rodriguez', readTime: '5 min' },
-              { href: '/blog/action-verbs-for-resume', title: '200+ Action Verbs for Resume', author: 'David Kim', readTime: '4 min' }
-            ].map((post, index) => (
-              <Link 
-                key={index}
-                href={post.href}
-                style={{ textDecoration: 'none' }}
-              >
-                <div style={{
-                  padding: '20px',
-                  background: 'white',
-                  borderRadius: '12px',
-                  border: '1px solid #e9ecef',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,112,243,0.1)';
-                  e.currentTarget.style.borderColor = '#0070f3';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                  e.currentTarget.style.borderColor = '#e9ecef';
-                }}
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <div style={{ marginTop: '50px' }}>
+            <h3 style={{ fontSize: '24px', marginBottom: '30px', color: '#333' }}>
+              Related Articles
+            </h3>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '20px'
+            }}>
+              {relatedPosts.map((post, index) => (
+                <Link
+                  key={index}
+                  href={`/blog/${post.slug}`}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit'
+                  }}
                 >
-                  <h4 style={{ fontSize: '16px', marginBottom: '8px', color: '#1a1a1a', fontWeight: 600 }}>
-                    {post.title}
-                  </h4>
-                  <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} â€¢ {post.readTime} read
+                  <div style={{
+                    padding: '20px',
+                    background: '#f8f9fa',
+                    borderRadius: '10px',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#e9ecef';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#f8f9fa';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                  >
+                    <h4 style={{ fontSize: '16px', marginBottom: '8px', color: '#333' }}>
+                      {post.title}
+                    </h4>
+                    <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>
+                      {post.readTime}
+                    </p>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Call to Action */}
         <div style={{
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
-          padding: '50px',
-          margin: '50px 0',
+          marginTop: '50px',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          borderRadius: '12px',
+          padding: '40px',
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
-            Ready to Build Your Resume?
-          </h2>
-          <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>
-            Use our resume builder with professionally designed templates to create your resume in minutes.
+          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Ready to Build Your Resume?</h3>
+          <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9 }}>
+            Use our free resume builder to create a professional resume in minutes.
           </p>
-          <div style={{
-            display: 'flex',
-            gap: '20px',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
-            <Link 
-              href="/editor"
-              style={{
-                padding: '16px 32px',
-                background: 'white',
-                color: '#0070f3',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontWeight: 600,
-                fontSize: '18px',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.05)';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Start Building
-            </Link>
-            <Link 
-              href="/templates"
-              style={{
-                padding: '16px 32px',
-                background: 'transparent',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontWeight: 600,
-                fontSize: '18px',
-                border: '2px solid white',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                e.currentTarget.style.transform = 'scale(1.05)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
-            >
-              Browse Templates
-            </Link>
-          </div>
+          <Link 
+            href="/editor"
+            style={{
+              display: 'inline-block',
+              padding: '12px 30px',
+              background: 'white',
+              color: '#667eea',
+              textDecoration: 'none',
+              borderRadius: '6px',
+              fontWeight: 600
+            }}
+          >
+            Start Building Now
+          </Link>
         </div>
 
-        {/* Footer Note */}
+        {/* Footer Navigation */}
         <div style={{
-          textAlign: 'center',
-          color: '#999',
-          fontSize: '14px',
-          marginTop: '30px'
+          marginTop: '40px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          borderTop: '1px solid #e9ecef',
+          paddingTop: '30px'
         }}>
-          <p>Last updated: February 15, 2026 | Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <Link href="/blog" style={{ color: '#0070f3', textDecoration: 'none' }}>
+            ← Back to Blog
+          </Link>
+          <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none' }}>
+            Browse Templates →
+          </Link>
         </div>
       </div>
     </>

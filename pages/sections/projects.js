@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -172,7 +173,7 @@ export default function ProjectsSectionGuide() {
   const projectExamples = [
     {
       field: "Software Development",
-      icon: "Ã°Å¸â€™Â»",
+      icon: "💻",
       projects: [
         {
           name: "E-Commerce Platform",
@@ -185,7 +186,7 @@ export default function ProjectsSectionGuide() {
             "Deployed on AWS EC2 with CI/CD pipeline using GitHub Actions"
           ],
           link: "github.com/username/ecommerce-platform",
-          stats: "Ã¢Â­Â 250+ GitHub stars | 1,200+ monthly users"
+          stats: "⭐ 250+ GitHub stars | 1,200+ monthly users"
         },
         {
           name: "Task Management SaaS",
@@ -204,7 +205,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "UI/UX Design",
-      icon: "Ã°Å¸Å½Â¨",
+      icon: "🎨",
       projects: [
         {
           name: "Healthcare App Redesign",
@@ -235,7 +236,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "Data Science",
-      icon: "Ã°Å¸â€œÅ ",
+      icon: "📊",
       projects: [
         {
           name: "Sales Forecasting Model",
@@ -266,7 +267,7 @@ export default function ProjectsSectionGuide() {
     },
     {
       field: "Mobile Development",
-      icon: "Ã°Å¸â€œÂ±",
+      icon: "📱",
       projects: [
         {
           name: "Fitness Tracker App",
@@ -330,9 +331,9 @@ export default function ProjectsSectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Projects Guide</span>
         </nav>
 
@@ -342,10 +343,10 @@ export default function ProjectsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>Ã°Å¸â€œâ€¦ Updated: March 24, 2026</span>
-            <span>Ã¢ÂÂ±Ã¯Â¸Â 10 min read</span>
-            <span>Ã°Å¸â€˜ÂÃ¯Â¸Â 38,000+ readers</span>
-            <span>Ã°Å¸â€™Â» 20+ Project Examples</span>
+            <span>📅 Updated: March 24, 2026</span>
+            <span>⏱️ 10 min read</span>
+            <span>👁️ 38,000+ readers</span>
+            <span>💻 20+ Project Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -363,13 +364,13 @@ export default function ProjectsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Ã°Å¸â€œâ€“ Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Project Format</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Examples by Field</a>
-            <a href="#fresher-ideas" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Project Ideas for Freshers</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Placement Strategy</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ FAQ</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Project Format</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Field</a>
+            <a href="#fresher-ideas" style={{ color: '#0070f3', textDecoration: 'none' }}>• Project Ideas for Freshers</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
           </div>
         </div>
 
@@ -382,7 +383,7 @@ export default function ProjectsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
+            <strong>💡 Pro Tip:</strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
             Make sure your repositories have clear README files, screenshots, and setup instructions. A well-documented project shows attention to detail and professionalism.
           </p>
         </div>
@@ -396,11 +397,11 @@ export default function ProjectsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #e9ecef' }}>
             <div style={{ fontFamily: 'monospace', fontSize: '14px', lineHeight: '1.8' }}>
               <strong style={{ fontSize: '16px' }}>[Project Name]</strong> | <em>[Technologies Used]</em> | [Year]<br />
-              Ã¢â‚¬Â¢ <strong>Problem:</strong> What challenge did you solve?<br />
-              Ã¢â‚¬Â¢ <strong>Solution:</strong> Your approach and technical implementation<br />
-              Ã¢â‚¬Â¢ <strong>Role:</strong> Your specific contribution (for team projects)<br />
-              Ã¢â‚¬Â¢ <strong>Result:</strong> Quantifiable impact (users, performance, revenue)<br />
-              Ã¢â‚¬Â¢ <strong>Link:</strong> GitHub | Live Demo | Portfolio
+              • <strong>Problem:</strong> What challenge did you solve?<br />
+              • <strong>Solution:</strong> Your approach and technical implementation<br />
+              • <strong>Role:</strong> Your specific contribution (for team projects)<br />
+              • <strong>Result:</strong> Quantifiable impact (users, performance, revenue)<br />
+              • <strong>Link:</strong> GitHub | Live Demo | Portfolio
             </div>
           </div>
         </section>
@@ -428,10 +429,10 @@ export default function ProjectsSectionGuide() {
                   </ul>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginTop: '12px' }}>
                     <a href="#" style={{ color: '#0070f3', textDecoration: 'none', fontSize: '14px' }}>
-                      Ã°Å¸â€â€” {project.link}
+                      🔗 {project.link}
                     </a>
                     <span style={{ background: '#e3f2fd', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', color: '#0070f3' }}>
-                      Ã°Å¸â€œÅ  {project.stats}
+                      📊 {project.stats}
                     </span>
                   </div>
                 </div>
@@ -443,7 +444,7 @@ export default function ProjectsSectionGuide() {
         {/* Fresher Project Ideas Section */}
         <section id="fresher-ideas">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸â€™Â¡ Project Ideas for Freshers (No Experience)
+            💡 Project Ideas for Freshers (No Experience)
           </h2>
           <div style={{ background: '#fff3e0', padding: '24px', borderRadius: '16px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <p style={{ margin: '0 0 16px 0', fontSize: '16px' }}>
@@ -476,22 +477,22 @@ export default function ProjectsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸Å½Â¯</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>🎯</div>
               <strong>Problem</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>What challenge did you solve?</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã¢Å¡â„¢Ã¯Â¸Â</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>⚙️</div>
               <strong>Technologies</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Tools, languages, frameworks used</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸â€˜Â¤</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>👤</div>
               <strong>Your Role</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Individual contribution (for team projects)</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸â€œË†</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📈</div>
               <strong>Results</strong>
               <p style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>Quantifiable outcomes (users, performance, revenue)</p>
             </div>
@@ -501,7 +502,7 @@ export default function ProjectsSectionGuide() {
         {/* Placement Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸â€œÂ Where to Place Projects on Your Resume
+            📍 Where to Place Projects on Your Resume
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #e9ecef' }}>
@@ -510,7 +511,7 @@ export default function ProjectsSectionGuide() {
                   <th style={{ padding: '12px', textAlign: 'left' }}>Career Stage</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Placement</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Reasoning</th>
-                </tr>
+                 </tr>
               </thead>
               <tbody>
                 {placementGuidelines.map((item, idx) => (
@@ -528,7 +529,7 @@ export default function ProjectsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸Â¤â€“ ATS-Friendly Project Formatting
+            🤖 ATS-Friendly Project Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -587,7 +588,7 @@ export default function ProjectsSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now Ã¢â€ â€™
+            Build Your Resume Now →
           </Link>
         </div>
 
@@ -598,12 +599,12 @@ export default function ProjectsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ¡ Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide Ã¢â€ â€™</Link>
-            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide Ã¢â€ â€™</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide Ã¢â€ â€™</Link>
-            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide Ã¢â€ â€™</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
+            <Link href="/sections/experience" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Experience Section Guide →</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
+            <Link href="/blog/fresher-resume-guide" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Fresher Resume Guide →</Link>
           </div>
         </div>
       </main>

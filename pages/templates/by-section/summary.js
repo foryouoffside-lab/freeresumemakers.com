@@ -1,4 +1,5 @@
-﻿import SEO from '../../../components/SEO';
+﻿import React from 'react';
+import SEO from '../../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -162,13 +163,13 @@ export default function BySectionSummary() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates/by-section/summary" style={{ color: '#666', textDecoration: 'none' }}>Summary Section</Link>
-            <span>â€º</span>
+            <span>›</span>
             <span style={{ color: '#0070f3' }}>{selectedTemplate.name}</span>
           </nav>
 
@@ -199,7 +200,7 @@ export default function BySectionSummary() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Summary Section Templates
+            ← Back to All Summary Section Templates
           </button>
 
           {/* Template Header */}
@@ -343,7 +344,7 @@ export default function BySectionSummary() {
                   gap: '8px',
                   padding: '8px 0'
                 }}>
-                  <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
+                  <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
                   <span style={{ color: '#666' }}>{feature}</span>
                 </div>
               ))}
@@ -391,7 +392,7 @@ export default function BySectionSummary() {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Use This Template â†’
+              Use This Template →
             </Link>
           </div>
         </div>
@@ -438,11 +439,11 @@ export default function BySectionSummary() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Summary Section</span>
         </nav>
 
@@ -494,7 +495,7 @@ export default function BySectionSummary() {
             <div style={{ fontSize: '14px', color: '#666' }}>Summary-Focused Templates</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Executive â€¢ Modern â€¢ Technical</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Executive • Modern • Technical</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Multiple Summary Styles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -655,7 +656,7 @@ export default function BySectionSummary() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Template Details â†’
+                  View Template Details →
                 </span>
               </div>
             </div>
@@ -739,7 +740,7 @@ export default function BySectionSummary() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now â†’
+            Start Building Now →
           </Link>
         </div>
 
@@ -756,10 +757,10 @@ export default function BySectionSummary() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-write-resume-summary" style={{ color: '#0070f3' }}>How to Write a Resume Summary â†’</Link>
-            <Link href="/blog/resume-summary-examples" style={{ color: '#0070f3' }}>20+ Resume Summary Examples â†’</Link>
-            <Link href="/templates/by-section/experience" style={{ color: '#0070f3' }}>Templates with Experience Section â†’</Link>
-            <Link href="/blog/executive-resume-tips" style={{ color: '#0070f3' }}>Executive Resume Tips â†’</Link>
+            <Link href="/blog/how-to-write-resume-summary" style={{ color: '#0070f3' }}>How to Write a Resume Summary →</Link>
+            <Link href="/blog/resume-summary-examples" style={{ color: '#0070f3' }}>20+ Resume Summary Examples →</Link>
+            <Link href="/templates/by-section/experience" style={{ color: '#0070f3' }}>Templates with Experience Section →</Link>
+            <Link href="/blog/executive-resume-tips" style={{ color: '#0070f3' }}>Executive Resume Tips →</Link>
           </div>
         </div>
       </div>

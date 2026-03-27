@@ -1,5 +1,7 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
 
 export default function CompareIndex() {
   const comparisons = [
@@ -101,57 +103,140 @@ export default function CompareIndex() {
     'Style Comparison': comparisons.filter(c => c.category === 'Style Comparison')
   };
 
+  // Breadcrumb schema for structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeresumemaker.xyz"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resume Templates",
+        "item": "https://freeresumemaker.xyz/templates"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Template Comparisons",
+        "item": "https://freeresumemaker.xyz/templates/compare"
+      }
+    ]
+  };
+
+  // ItemList schema for comparisons
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Resume Template Comparisons",
+    "description": "Complete guide to comparing resume templates to find your perfect match. Expert comparisons with ATS scores and industry recommendations.",
+    "numberOfItems": comparisons.length,
+    "itemListElement": comparisons.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.title,
+      "url": `https://freeresumemaker.xyz/templates/compare/${item.path}`
+    }))
+  };
+
+  // FAQ schema for rich results
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I choose between professional and creative templates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Choose professional templates for corporate, finance, legal, and healthcare roles. Choose creative templates for design, marketing, tech startups, and creative industries where visual appeal matters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What ATS score do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For corporate and government jobs, aim for 95%+. Our ATS-friendly templates score 95-99%, while creative templates score 85-92%. Higher scores increase chances of passing automated screening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which template is best for my experience level?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entry-level: Template 10 (The Essential). Mid-level: Template 5 (The Minimalist) or Template 9 (The Modernist). Executive: Template 1 (Obsidian) or Template 4 (The Strategist)."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <SEO 
+        title="Resume Template Comparisons: Find Your Perfect Match 2026 | Free Resume Builder"
+        description="Compare all our resume templates side by side. Find the perfect template for your industry, experience level, and personal style. Expert comparisons with ATS scores and industry recommendations. Choose between professional, creative, ATS-friendly, and industry-specific templates."
+        keywords="resume template comparison, compare resumes, best resume template, template side by side, Obsidian vs Classic Horizon, minimalist vs professional, ATS friendly vs creative, resume template guide 2026"
+        canonical="https://freeresumemaker.xyz/templates/compare"
+        image="https://freeresumemaker.xyz/images/templates/compare-og.jpg"
+        type="website"
+      />
+      
       <Head>
-        <title>Resume Template Comparisons: Find Your Perfect Match (2026) | FreeResumeMakers</title>
-        <meta name="description" content="Compare all our resume templates side by side. Find the perfect template for your industry, experience level, and personal style. Expert comparisons with ATS scores and industry recommendations." />
-        <meta name="keywords" content="resume template comparison, compare resumes, best resume template, template side by side, obsidian vs classic horizon, minimalist vs professional, ats friendly vs creative" />
-        <meta name="author" content="FreeResumeMakers" />
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Free Resume Builder" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
         <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare" />
         
-        <meta property="og:title" content="Resume Template Comparisons: Find Your Perfect Match" />
-        <meta property="og:description" content="Compare all our resume templates side by side. Expert comparisons with ATS scores and industry recommendations." />
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare" />
-        <meta property="og:site_name" content="FreeResumeMakers" />
+        <meta property="og:title" content="Resume Template Comparisons: Find Your Perfect Match 2026" />
+        <meta property="og:description" content="Compare all our resume templates side by side. Expert comparisons with ATS scores and industry recommendations." />
+        <meta property="og:image" content="https://freeresumemaker.xyz/images/templates/compare-og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Free Resume Builder" />
         
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Resume Template Comparisons: Find Your Perfect Match" />
         <meta name="twitter:description" content="Compare all our resume templates side by side. Expert comparisons with ATS scores and industry recommendations." />
+        <meta name="twitter:image" content="https://freeresumemaker.xyz/images/templates/compare-og.jpg" />
+        <meta name="twitter:site" content="@freeresumemaker" />
         
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Resume Template Comparisons",
-            "description": "Complete guide to comparing resume templates to find your perfect match",
-            "numberOfItems": comparisons.length,
-            "itemListElement": comparisons.map((item, index) => ({
-              "@type": "ListItem",
-              "position": index + 1,
-              "name": item.title,
-              "url": `https://freeresumemaker.xyz/templates/compare/${item.path}`
-            }))
-          })}
-        </script>
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </Head>
 
       <div style={{ 
         maxWidth: '1280px', 
         margin: '0 auto', 
         padding: '40px 24px',
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
           <Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#64748b' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#64748b' }}>›</span>
           <span style={{ color: '#1e293b', fontWeight: '500' }}>Comparisons</span>
         </nav>
 
@@ -163,7 +248,7 @@ export default function CompareIndex() {
             marginBottom: '20px',
             color: '#0f172a'
           }}>
-            Resume Template <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>Comparisons</span>
+            Resume Template <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>Comparisons</span>
           </h1>
           <p style={{ 
             fontSize: '1.2rem', 
@@ -184,13 +269,13 @@ export default function CompareIndex() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã°Å¸â€œÅ  11+ Expert Comparisons
+              📊 11+ Expert Comparisons
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã¢Â­Â ATS Scores Included
+              ⭐ ATS Scores Included
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã°Å¸Å½Â¯ Industry Recommendations
+              🎯 Industry Recommendations
             </div>
           </div>
         </header>
@@ -243,7 +328,7 @@ export default function CompareIndex() {
           marginBottom: '40px',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'white' }}>Ã¢Â­Â Most Popular Comparisons</h2>
+          <h2 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'white' }}>⭐ Most Popular Comparisons</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
             {comparisons.filter(c => c.popular).map(item => (
               <Link 
@@ -341,12 +426,12 @@ export default function CompareIndex() {
                         )}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                           <div style={{ fontSize: '1.8rem' }}>
-                            {category.includes('Professional') ? 'Ã°Å¸â€™Â¼' : 
-                             category.includes('Modern') ? 'Ã°Å¸Å’â„¢' : 
-                             category.includes('Tech') ? 'Ã°Å¸â€™Â»' : 
-                             category.includes('Minimalist') ? 'Ã¢Å“Â¨' : 
-                             category.includes('Academic') ? 'Ã°Å¸â€œÅ¡' : 
-                             category.includes('Creative') ? 'Ã°Å¸Å½Â¨' : 'Ã°Å¸â€œÅ '}
+                            {category.includes('Professional') ? '💼' : 
+                             category.includes('Modern') ? '✨' : 
+                             category.includes('Tech') ? '💻' : 
+                             category.includes('Minimalist') ? '✨' : 
+                             category.includes('Academic') ? '📚' : 
+                             category.includes('Creative') ? '🎨' : '📊'}
                           </div>
                           <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#0f172a' }}>{item.title}</h3>
                         </div>
@@ -368,11 +453,11 @@ export default function CompareIndex() {
                             fontSize: '0.7rem',
                             fontWeight: '500'
                           }}>
-                            Ã°Å¸Å½Â¯ {item.bestFor}
+                            🎯 {item.bestFor}
                           </span>
                         </div>
                         <div style={{ marginTop: '16px', color: '#667eea', fontSize: '0.85rem', fontWeight: '500' }}>
-                          Compare now Ã¢â€ â€™
+                          Compare now →
                         </div>
                       </div>
                     </Link>
@@ -392,26 +477,26 @@ export default function CompareIndex() {
           marginBottom: '48px'
         }}>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '20px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€œâ€¹ How to Choose the Right Template
+            📋 How to Choose the Right Template
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>1Ã¯Â¸ÂÃ¢Æ’Â£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>1️⃣</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Consider Your Industry</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Creative fields need modern designs; corporate roles prefer traditional layouts</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>2Ã¯Â¸ÂÃ¢Æ’Â£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>2️⃣</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Check ATS Compatibility</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Higher ATS scores (95%+) ensure your resume passes automated screening</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>3Ã¯Â¸ÂÃ¢Æ’Â£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>3️⃣</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Match Your Experience Level</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Entry-level vs executive templates have different section focuses</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>4Ã¯Â¸ÂÃ¢Æ’Â£</div>
+              <div style={{ fontSize: '2rem', marginBottom: '12px' }}>4️⃣</div>
               <h3 style={{ marginBottom: '8px', color: '#1e293b' }}>Compare Side by Side</h3>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Use our detailed comparisons to see features, sections, and limits</p>
             </div>
@@ -421,7 +506,7 @@ export default function CompareIndex() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '48px' }}>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã¢Ââ€œ Frequently Asked Questions
+            ❓ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <details style={{ background: 'white', padding: '16px 20px', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
@@ -442,7 +527,7 @@ export default function CompareIndex() {
         {/* Related Resources */}
         <div>
           <h2 style={{ fontSize: '1.4rem', marginBottom: '20px', color: '#0f172a' }}>
-            Ã°Å¸â€Â More Resources
+            🔍 More Resources
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             <Link href="/templates" style={{ padding: '10px 20px', background: 'white', borderRadius: '10px', textDecoration: 'none', color: '#1e293b', fontSize: '0.875rem', border: '1px solid #e2e8f0' }}>

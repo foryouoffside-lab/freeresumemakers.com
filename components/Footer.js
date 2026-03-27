@@ -1,6 +1,6 @@
 ﻿// ============================================
-// src/components/common/Footer.js
-// UPDATED - Added FAQ link
+// components/Footer.js
+// UPDATED - Added actual icons instead of letters
 // ============================================
 
 import React, { useState, useEffect } from 'react';
@@ -229,14 +229,14 @@ const Footer = () => {
     e.currentTarget.style.transform = isHover ? 'translateY(-3px)' : 'translateY(0)';
   };
 
-  // Navigation items - ADDED FAQ
+  // Navigation items
   const quickLinks = [
     { name: 'Home', path: '/', working: true },
     { name: 'About', path: '/about', working: true },
     { name: 'Resume Templates', path: '/templates', working: true },
     { name: 'Resume Examples', path: '/examples', working: true },
     { name: 'Blog', path: '/blog', working: true },
-    { name: 'FAQ', path: '/faq', working: true } // ADDED FAQ LINK
+    { name: 'FAQ', path: '/faq', working: true }
   ];
 
   // Legal pages
@@ -245,14 +245,14 @@ const Footer = () => {
     { name: 'Terms of Service', path: '/terms-of-service' }
   ];
 
-  // Share buttons
+  // Share buttons with actual icons
   const shareButtons = [
-    { platform: 'whatsapp', icon: 'Ã°Å¸â€œÂ±', label: 'Share on WhatsApp' },
-    { platform: 'facebook', icon: 'Ã°Å¸â€œËœ', label: 'Share on Facebook' },
-    { platform: 'twitter', icon: 'Ã°Å¸ÂÂ¦', label: 'Share on Twitter' },
-    { platform: 'linkedin', icon: 'Ã°Å¸â€™Â¼', label: 'Share on LinkedIn' },
-    { platform: 'email', icon: 'Ã°Å¸â€œÂ§', label: 'Share via Email' },
-    { platform: 'copy', icon: 'Ã°Å¸â€â€”', label: 'Copy link' }
+    { platform: 'whatsapp', icon: '💬', label: 'Share on WhatsApp' },
+    { platform: 'facebook', icon: '📘', label: 'Share on Facebook' },
+    { platform: 'twitter', icon: '🐦', label: 'Share on Twitter' },
+    { platform: 'linkedin', icon: '🔗', label: 'Share on LinkedIn' },
+    { platform: 'email', icon: '📧', label: 'Share via Email' },
+    { platform: 'copy', icon: '📋', label: 'Copy link' }
   ];
 
   return (
@@ -263,7 +263,7 @@ const Footer = () => {
           {/* Brand Column with Share Section */}
           <div style={styles.brandColumn}>
             <h3 style={styles.brand}>
-              Resume Builder
+              Free Resume Maker
             </h3>
             <p style={styles.description}>
               Create professional, ATS-friendly resumes in minutes. 20+ free templates, no sign-up required.
@@ -347,7 +347,7 @@ const Footer = () => {
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                Ã°Å¸â€œÂ§ Contact Us
+                Contact Us
               </Link>
             </div>
           </div>
@@ -357,7 +357,7 @@ const Footer = () => {
         <div style={styles.bottomBar}>
           <div>
             <p style={styles.copyright}>
-              Ã‚Â© {currentYear} Resume Builder. All rights reserved. | 20+ Templates
+              &copy; {currentYear} Free Resume Maker. All rights reserved. | 20+ Templates
             </p>
             {/* Legal Links */}
             <div style={styles.legalLinks}>
@@ -371,13 +371,13 @@ const Footer = () => {
                   >
                     {page.name}
                   </Link>
-                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>Ã¢â‚¬Â¢</span>}
+                  {index < legalPages.length - 1 && <span style={{color: '#404040'}}>&bull;</span>}
                 </React.Fragment>
               ))}
             </div>
           </div>
           <p style={styles.version}>
-            <span>Made with Ã¢ÂÂ¤Ã¯Â¸Â for job seekers</span>
+            <span>Made with ❤️ for job seekers</span>
             <span>Version 2.0</span>
           </p>
         </div>
@@ -390,7 +390,7 @@ const Footer = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Resume Builder",
+            "name": "Free Resume Maker",
             "url": "https://freeresumemaker.xyz",
             "logo": "https://freeresumemaker.xyz/logo.png",
             "sameAs": [
@@ -412,5 +412,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

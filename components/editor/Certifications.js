@@ -114,6 +114,7 @@ const certificationCategories = {
     label: "Technical",
     title: "Technical Certifications",
     color: "#4299e1",
+    icon: "💻",
     certifications: [
       { name: "AWS Certified Solutions Architect", issuer: "Amazon Web Services" },
       { name: "Google Cloud Professional Cloud Architect", issuer: "Google Cloud" },
@@ -121,7 +122,7 @@ const certificationCategories = {
       { name: "Certified Kubernetes Administrator (CKA)", issuer: "Cloud Native Computing Foundation" },
       { name: "Cisco Certified Network Professional (CCNP)", issuer: "Cisco" },
       { name: "CompTIA Security+", issuer: "CompTIA" },
-      { name: "Certified Information Systems Security Professional (CISSP)", issuer: "ISCÃ‚Â²" },
+      { name: "Certified Information Systems Security Professional (CISSP)", issuer: "ISC²" },
       { name: "AWS Certified Developer", issuer: "Amazon Web Services" }
     ]
   },
@@ -129,6 +130,7 @@ const certificationCategories = {
     label: "Project Management",
     title: "Project Management",
     color: "#48bb78",
+    icon: "📊",
     certifications: [
       { name: "Project Management Professional (PMP)", issuer: "PMI" },
       { name: "Certified Scrum Master (CSM)", issuer: "Scrum Alliance" },
@@ -142,6 +144,7 @@ const certificationCategories = {
     label: "Data Science",
     title: "Data Science & Analytics",
     color: "#ed8936",
+    icon: "📈",
     certifications: [
       { name: "Google Data Analytics Professional Certificate", issuer: "Google" },
       { name: "IBM Data Science Professional Certificate", issuer: "IBM" },
@@ -155,6 +158,7 @@ const certificationCategories = {
     label: "Development",
     title: "Development",
     color: "#9b59b6",
+    icon: "⚙️",
     certifications: [
       { name: "Meta Front-End Developer Professional Certificate", issuer: "Meta" },
       { name: "Google UX Design Professional Certificate", issuer: "Google" },
@@ -1093,7 +1097,7 @@ const Certifications = ({
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>Ã°Å¸â€œÅ“</span>
+                  <span>📜</span>
                   Your Certifications
                 </h2>
                 <div style={{
@@ -1115,7 +1119,7 @@ const Certifications = ({
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>Ã°Å¸â€œÅ“</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📜</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No certifications added yet
                   </p>
@@ -1170,7 +1174,7 @@ const Certifications = ({
                             fontSize: '14px'
                           }}
                         >
-                          Ã¢Å“â€¢
+                          ✕
                         </button>
                       </div>
                       
@@ -1188,7 +1192,7 @@ const Certifications = ({
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            Ã°Å¸â€œâ€¦ {cert.date}
+                            📅 {cert.date}
                           </span>
                         )}
                       </div>
@@ -1283,7 +1287,7 @@ const Certifications = ({
                     transition: 'all 0.2s'
                   }}
                 >
-                  <span>{category.icon || 'Ã°Å¸â€œÅ“'}</span>
+                  <span>{category.icon || '📜'}</span>
                   <span>{category.label}</span>
                 </button>
               ))}
@@ -1306,7 +1310,7 @@ const Certifications = ({
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>Ã¢Â­Â</span>
+                <span>⭐</span>
                 Popular {certificationCategories[selectedCategory]?.label} Certifications
               </h2>
               <p style={{
@@ -1314,7 +1318,7 @@ const Certifications = ({
                 color: '#718096',
                 margin: '0 0 16px 0'
               }}>
-                Click to add Ã¢â‚¬Â¢ These certifications are highly valued by employers
+                Click to add • These certifications are highly valued by employers
               </p>
               
               <div style={{
@@ -1355,7 +1359,7 @@ const Certifications = ({
                       title={!canAdd && !isAdded ? `Max ${maxCertificationsLimit} certifications reached` : ""}
                     >
                       {cert.name}
-                      {isAdded && <span style={{ marginLeft: '4px' }}>Ã¢Å“â€œ</span>}
+                      {isAdded && <span style={{ marginLeft: '4px' }}>✓</span>}
                     </button>
                   );
                 })}
@@ -1420,7 +1424,7 @@ const Certifications = ({
                       >
                         <div style={{ fontWeight: 600, fontSize: '13px', color: '#2d3748' }}>{cert.name}</div>
                         <div style={{ fontSize: '11px', color: '#718096', marginTop: '4px' }}>{cert.issuer}</div>
-                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>Ã¢Å“â€œ Added</div>}
+                        {isAdded && <div style={{ fontSize: '11px', color: '#48bb78', marginTop: '4px' }}>✓ Added</div>}
                       </button>
                     );
                   })}

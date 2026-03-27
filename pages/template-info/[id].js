@@ -91,12 +91,16 @@ export default function TemplateInfoPage() {
         <meta property="og:title" content={`${templateName} - Professional ATS-Friendly Resume Template`} />
         <meta property="og:description" content={longDescription} />
         <meta property="og:image" content={`https://freeresumemaker.xyz/images/templates/${templateId}-preview.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Free Resume Builder" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${templateName} Resume Template`} />
         <meta name="twitter:description" content={longDescription} />
         <meta name="twitter:image" content={`https://freeresumemaker.xyz/images/templates/${templateId}-preview.jpg`} />
+        <meta name="twitter:site" content="@freeresumemaker" />
         
         {/* Structured Data */}
         <script
@@ -107,23 +111,62 @@ export default function TemplateInfoPage() {
               "@type": "Product",
               "name": `${templateName} Resume Template`,
               "description": longDescription,
+              "image": `https://freeresumemaker.xyz/images/templates/${templateId}-preview.jpg`,
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/OnlineOnly"
+                "availability": "https://schema.org/OnlineOnly",
+                "priceValidUntil": "2026-12-31"
               },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
-                "reviewCount": "1250"
+                "reviewCount": "1250",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "brand": {
+                "@type": "Brand",
+                "name": "Free Resume Builder"
               }
+            })
+          }}
+        />
+        
+        {/* Breadcrumb Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://freeresumemaker.xyz/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Resume Templates",
+                  "item": "https://freeresumemaker.xyz/templates/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": templateName,
+                  "item": `https://freeresumemaker.xyz/template-info/${id}`
+                }
+              ]
             })
           }}
         />
       </Head>
       
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '24px', fontSize: '14px' }}>
           <Link href="/" style={{ color: '#0070f3', textDecoration: 'none' }}>Home</Link>
@@ -135,7 +178,7 @@ export default function TemplateInfoPage() {
         
         {/* Header */}
         <header>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '16px', fontWeight: 700, color: '#1a1a1a' }}>
             {templateName} Resume Template
           </h1>
           <p style={{ fontSize: '1.2rem', lineHeight: 1.5, color: '#555', marginBottom: '24px' }}>
@@ -143,34 +186,34 @@ export default function TemplateInfoPage() {
           </p>
           
           {/* Quick Stats */}
-          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginBottom: '32px', padding: '16px 0', borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
+          <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', marginBottom: '32px', padding: '20px 0', borderTop: '1px solid #e9ecef', borderBottom: '1px solid #e9ecef' }}>
             <div>
-              <strong style={{ fontSize: '1.5rem', color: '#0070f3' }}>{sectionCount}</strong>
-              <span style={{ marginLeft: '8px', color: '#666' }}>Sections</span>
+              <strong style={{ fontSize: '1.8rem', color: '#0070f3', display: 'block' }}>{sectionCount}</strong>
+              <span style={{ color: '#666' }}>Sections</span>
             </div>
             <div>
-              <strong style={{ fontSize: '1.5rem', color: '#0070f3' }}>ATS-Friendly</strong>
-              <span style={{ marginLeft: '8px', color: '#666' }}>Optimized</span>
+              <strong style={{ fontSize: '1.8rem', color: '#0070f3', display: 'block' }}>ATS-Friendly</strong>
+              <span style={{ color: '#666' }}>Optimized</span>
             </div>
             <div>
-              <strong style={{ fontSize: '1.5rem', color: '#0070f3' }}>Free</strong>
-              <span style={{ marginLeft: '8px', color: '#666' }}>Download</span>
+              <strong style={{ fontSize: '1.8rem', color: '#0070f3', display: 'block' }}>Free</strong>
+              <span style={{ color: '#666' }}>Download</span>
             </div>
           </div>
         </header>
         
         {/* Sections Required */}
-        <section style={{ marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Sections Included</h2>
-          <p style={{ marginBottom: '20px', color: '#555' }}>
+        <section style={{ marginBottom: '48px' }}>
+          <h2 style={{ fontSize: '1.8rem', marginBottom: '20px', fontWeight: 600, color: '#1a1a1a' }}>Sections Included</h2>
+          <p style={{ marginBottom: '24px', color: '#555', fontSize: '1rem' }}>
             This {templateName} template includes {sectionCount} carefully curated sections:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '12px' }}>
             {sections.map(section => (
-              <div key={section} style={{ padding: '12px 16px', backgroundColor: '#f5f5f5', borderRadius: '8px', borderLeft: '3px solid #0070f3' }}>
-                <strong>{getSectionDisplayName(section)}</strong>
+              <div key={section} style={{ padding: '14px 18px', backgroundColor: '#f8f9fa', borderRadius: '10px', borderLeft: '4px solid #0070f3', transition: 'all 0.2s' }}>
+                <strong style={{ fontSize: '1rem' }}>{getSectionDisplayName(section)}</strong>
                 {getSectionLimit(templateId, section) && (
-                  <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '4px' }}>
+                  <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '6px' }}>
                     Maximum: {getSectionLimit(templateId, section)} {getSectionLimit(templateId, section) === 1 ? 'entry' : 'entries'}
                   </span>
                 )}
@@ -180,70 +223,88 @@ export default function TemplateInfoPage() {
         </section>
         
         {/* Why Choose This Template */}
-        <section style={{ marginBottom: '40px', backgroundColor: '#f8f9fa', padding: '24px', borderRadius: '12px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Why Choose {templateName}?</h2>
-          <ul style={{ paddingLeft: '20px' }}>
-            <li style={{ marginBottom: '12px' }}>✓ ATS-optimized formatting that passes automated screening systems</li>
-            <li style={{ marginBottom: '12px' }}>✓ Professional design trusted by recruiters and hiring managers</li>
-            <li style={{ marginBottom: '12px' }}>✓ Easy to customize and fill out in minutes</li>
-            <li style={{ marginBottom: '12px' }}>✓ Download as PDF or DOCX format</li>
-            <li style={{ marginBottom: '12px' }}>✓ 100% free with no hidden costs</li>
+        <section style={{ marginBottom: '48px', backgroundColor: '#f8f9fa', padding: '32px', borderRadius: '16px' }}>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '20px', fontWeight: 600, color: '#1a1a1a' }}>Why Choose {templateName}?</h2>
+          <ul style={{ paddingLeft: '20px', margin: 0 }}>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>✓ ATS-optimized formatting that passes automated screening systems</li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>✓ Professional design trusted by recruiters and hiring managers</li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>✓ Easy to customize and fill out in minutes</li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>✓ Download as PDF or DOCX format</li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>✓ 100% free with no hidden costs</li>
           </ul>
         </section>
         
         {/* How to Use */}
-        <section style={{ marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>How to Create Your Resume</h2>
-          <ol style={{ paddingLeft: '20px' }}>
-            <li style={{ marginBottom: '12px' }}><strong>Select this template</strong> - Start building your resume with {templateName}</li>
-            <li style={{ marginBottom: '12px' }}><strong>Fill in your information</strong> - Complete each section with your experience and skills</li>
-            <li style={{ marginBottom: '12px' }}><strong>Customize content</strong> - Add keywords relevant to your target job</li>
-            <li style={{ marginBottom: '12px' }}><strong>Review and download</strong> - Export your finished resume in PDF format</li>
+        <section style={{ marginBottom: '48px' }}>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '20px', fontWeight: 600, color: '#1a1a1a' }}>How to Create Your Resume</h2>
+          <ol style={{ paddingLeft: '20px', margin: 0 }}>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>
+              <strong>Select this template</strong> - Start building your resume with {templateName}
+            </li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>
+              <strong>Fill in your information</strong> - Complete each section with your experience and skills
+            </li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>
+              <strong>Customize content</strong> - Add keywords relevant to your target job
+            </li>
+            <li style={{ marginBottom: '12px', color: '#555', lineHeight: 1.5 }}>
+              <strong>Review and download</strong> - Export your finished resume in PDF format
+            </li>
           </ol>
         </section>
         
         {/* FAQ Section */}
-        <section style={{ marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '24px' }}>Frequently Asked Questions</h2>
+        <section style={{ marginBottom: '48px' }}>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '28px', fontWeight: 600, color: '#1a1a1a' }}>Frequently Asked Questions</h2>
           
-          <div style={{ marginBottom: '24px' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', color: '#333' }}>Is this template really free?</h3>
+          <div style={{ marginBottom: '28px' }}>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', fontWeight: 600, color: '#333' }}>Is this template really free?</h3>
             <p style={{ lineHeight: 1.6, color: '#555' }}>Yes, all our resume templates are completely free to use. No credit card required, no hidden fees.</p>
           </div>
           
-          <div style={{ marginBottom: '24px' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', color: '#333' }}>Is this template ATS-friendly?</h3>
+          <div style={{ marginBottom: '28px' }}>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', fontWeight: 600, color: '#333' }}>Is this template ATS-friendly?</h3>
             <p style={{ lineHeight: 1.6, color: '#555' }}>Yes, all our templates are designed to be ATS-compatible with clean formatting and standard section headers that automated systems can easily parse.</p>
           </div>
           
-          <div style={{ marginBottom: '24px' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', color: '#333' }}>Can I download my resume as PDF?</h3>
+          <div style={{ marginBottom: '28px' }}>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', fontWeight: 600, color: '#333' }}>Can I download my resume as PDF?</h3>
             <p style={{ lineHeight: 1.6, color: '#555' }}>Yes, you can download your completed resume as a PDF or DOCX file, ready to submit to employers.</p>
           </div>
         </section>
         
         {/* Call to Action */}
-        <div style={{ textAlign: 'center', marginTop: '48px', padding: '40px 24px', backgroundColor: '#0070f3', borderRadius: '12px', color: 'white' }}>
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'white' }}>Ready to Create Your Resume?</h2>
-          <p style={{ marginBottom: '24px', fontSize: '1.1rem' }}>
+        <div style={{ textAlign: 'center', marginTop: '48px', padding: '48px 32px', backgroundColor: '#0070f3', borderRadius: '16px', color: 'white' }}>
+          <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'white', fontWeight: 700 }}>Ready to Create Your Resume?</h2>
+          <p style={{ marginBottom: '28px', fontSize: '1.1rem', opacity: 0.95 }}>
             Start building your professional resume with {templateName} today
           </p>
           <Link 
             href="/builder/"
             style={{ 
               display: 'inline-block', 
-              padding: '14px 32px', 
+              padding: '14px 36px', 
               backgroundColor: 'white', 
               color: '#0070f3', 
               textDecoration: 'none', 
-              borderRadius: '8px', 
+              borderRadius: '50px', 
               fontWeight: 'bold',
-              fontSize: '1rem'
+              fontSize: '1rem',
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
             }}
           >
             Build Your Resume Now →
           </Link>
-          <p style={{ marginTop: '20px', fontSize: '0.9rem' }}>
+          <p style={{ marginTop: '24px', fontSize: '0.9rem', opacity: 0.9 }}>
             <Link href="/templates/" style={{ color: 'white', textDecoration: 'underline' }}>
               Browse all templates
             </Link>

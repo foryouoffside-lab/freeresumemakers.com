@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -200,15 +201,15 @@ export default function ResumeReview() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <Link href="/tools" style={{ color: '#666', textDecoration: 'none' }}>Tools</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Resume Review</span>
         </nav>
 
         {/* Header */}
         <header style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>Ã¢Â­Â</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>⭐</div>
           <h1 style={{
             fontSize: '48px',
             marginBottom: '16px',
@@ -238,7 +239,7 @@ export default function ResumeReview() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
+            <strong>💡 Pro Tip:</strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
             Our AI tool gives you instant, detailed feedback to help you stand out from other candidates.
           </p>
         </div>
@@ -251,9 +252,9 @@ export default function ResumeReview() {
             textAlign: 'center',
             border: '2px dashed #cbd5e1'
           }}>
-            <div style={{ fontSize: '64px', marginBottom: '20px' }}>Ã°Å¸â€œâ€ž</div>
+            <div style={{ fontSize: '64px', marginBottom: '20px' }}>📄</div>
             <h2 style={{ fontSize: '28px', marginBottom: '12px' }}>Upload Your Resume for Review</h2>
-            <p style={{ color: '#666', marginBottom: '20px', fontSize: '16px' }}>PDF or DOCX files up to 5MB Ã¢â‚¬Â¢ 100% Secure & Private</p>
+            <p style={{ color: '#666', marginBottom: '20px', fontSize: '16px' }}>PDF or DOCX files up to 5MB • 100% Secure & Private</p>
             
             <label htmlFor="resume-upload" style={{ 
               display: 'inline-block',
@@ -268,7 +269,7 @@ export default function ResumeReview() {
             }}
             onMouseEnter={(e) => e.currentTarget.style.background = '#0060d6'}
             onMouseLeave={(e) => e.currentTarget.style.background = '#0070f3'}>
-              Ã°Å¸â€œÂ Choose File
+              📁 Choose File
               <input
                 type="file"
                 id="resume-upload"
@@ -279,14 +280,14 @@ export default function ResumeReview() {
             </label>
             
             <p style={{ marginTop: '24px', fontSize: '14px', color: '#999' }}>
-              Ã°Å¸â€â€™ Your file is encrypted and will be processed anonymously. We never share your data.
+              🔒 Your file is encrypted and will be processed anonymously. We never share your data.
             </p>
           </div>
         ) : (
           <div>
             {reviews.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '60px', background: '#f8fafc', borderRadius: '16px' }}>
-                <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'pulse 1.5s infinite' }}>Ã¢ÂÂ³</div>
+                <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'pulse 1.5s infinite' }}>⏳</div>
                 <h3 style={{ marginBottom: '12px', fontSize: '24px' }}>Analyzing your resume...</h3>
                 <p style={{ color: '#666', fontSize: '16px' }}>Our AI is reviewing your resume for content, formatting, and ATS compatibility</p>
                 <p style={{ fontSize: '14px', color: '#999', marginTop: '16px' }}>File: {fileName}</p>
@@ -309,10 +310,10 @@ export default function ResumeReview() {
                   </p>
                   <p style={{ color: '#666', fontSize: '16px' }}>
                     {overallScore >= 80 
-                      ? 'Ã°Å¸Å½â€° Excellent! Your resume is well-optimized. Minor improvements can make it perfect.'
+                      ? '🎉 Excellent! Your resume is well-optimized. Minor improvements can make it perfect.'
                       : overallScore >= 60
-                      ? 'Ã°Å¸â€œË† Good foundation! Implement the suggestions below to boost your score.'
-                      : 'Ã¢Å¡Â¡ Needs significant improvement. Follow our detailed recommendations to transform your resume.'}
+                      ? '📈 Good foundation! Implement the suggestions below to boost your score.'
+                      : '⚡ Needs significant improvement. Follow our detailed recommendations to transform your resume.'}
                   </p>
                 </div>
 
@@ -343,7 +344,7 @@ export default function ResumeReview() {
                       </div>
 
                       <div style={{ marginBottom: '24px' }}>
-                        <h4 style={{ color: '#059669', marginBottom: '12px', fontSize: '18px' }}>Ã¢Å“â€¦ Strengths</h4>
+                        <h4 style={{ color: '#059669', marginBottom: '12px', fontSize: '18px' }}>✓ Strengths</h4>
                         <ul style={{ margin: 0, paddingLeft: '20px', color: '#555', lineHeight: '1.8' }}>
                           {review.strengths.map((item, i) => (
                             <li key={i}>{item}</li>
@@ -352,7 +353,7 @@ export default function ResumeReview() {
                       </div>
 
                       <div>
-                        <h4 style={{ color: '#b45309', marginBottom: '12px', fontSize: '18px' }}>Ã°Å¸â€œË† Areas for Improvement</h4>
+                        <h4 style={{ color: '#b45309', marginBottom: '12px', fontSize: '18px' }}>📈 Areas for Improvement</h4>
                         <ul style={{ margin: 0, paddingLeft: '20px', color: '#555', lineHeight: '1.8' }}>
                           {review.improvements.map((item, i) => (
                             <li key={i}>{item}</li>
@@ -390,7 +391,7 @@ export default function ResumeReview() {
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                     onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                      Ã¢Å“ÂÃ¯Â¸Â Build Your Optimized Resume Ã¢â€ â€™
+                      ✏️ Build Your Optimized Resume →
                     </Link>
                     <Link href="/tools/ats-scanner" style={{ 
                       display: 'inline-block',
@@ -402,7 +403,7 @@ export default function ResumeReview() {
                       fontSize: '16px',
                       fontWeight: '500'
                     }}>
-                      Ã°Å¸Â¤â€“ Check ATS Score Ã¢â€ â€™
+                      🤖 Check ATS Score →
                     </Link>
                   </div>
                 </div>
@@ -475,9 +476,9 @@ export default function ResumeReview() {
         }}>
           <h3 style={{ fontSize: '22px', marginBottom: '20px' }}>More Free Resume Optimization Tools</h3>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã°Å¸Â¤â€“ ATS Scanner Ã¢â€ â€™</Link>
-            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã°Å¸â€â€˜ Keywords Finder Ã¢â€ â€™</Link>
-            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Ã¢Å“â€œ Resume Checker Ã¢â€ â€™</Link>
+            <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🤖 ATS Scanner →</Link>
+            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🔑 Keywords Finder →</Link>
+            <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>✓ Resume Checker →</Link>
           </div>
         </div>
 

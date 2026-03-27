@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿import Link from 'next/link';
+// ============================================
 // components/editor/PersonalInfo.js
 // FIXED - Removed invalid UTF-8 characters
 // ============================================
@@ -445,11 +446,11 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
   const getSaveStatusConfig = () => {
     switch(saveStatus) {
       case 'saving':
-        return { text: 'Saving...', color: '#0070f3', icon: 'âš¡' };
+        return { text: 'Saving...', color: '#0070f3', icon: '⚡' };
       case 'saved':
-        return { text: 'All changes saved', color: '#27ae60', icon: 'âœ“' };
+        return { text: 'All changes saved', color: '#27ae60', icon: '✓' };
       case 'error':
-        return { text: 'Save failed', color: '#e74c3c', icon: 'âš ' };
+        return { text: 'Save failed', color: '#e74c3c', icon: '⚠' };
       default:
         return { text: '', color: '', icon: '' };
     }
@@ -579,10 +580,10 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
           }}
         >
           {[
-            { label: 'Name', value: formData.fullName ? 'âœ“' : 'â—‹', completed: !!formData.fullName },
-            { label: 'Email', value: formData.email ? 'âœ“' : 'â—‹', completed: !!formData.email },
-            { label: 'Phone', value: formData.phone ? 'âœ“' : 'â—‹', completed: !!formData.phone },
-            { label: 'LinkedIn', value: formData.linkedin ? 'âœ“' : 'â—‹', completed: !!formData.linkedin }
+            { label: 'Name', value: formData.fullName ? '✓' : '○', completed: !!formData.fullName },
+            { label: 'Email', value: formData.email ? '✓' : '○', completed: !!formData.email },
+            { label: 'Phone', value: formData.phone ? '✓' : '○', completed: !!formData.phone },
+            { label: 'LinkedIn', value: formData.linkedin ? '✓' : '○', completed: !!formData.linkedin }
           ].map((item, index) => (
             <div key={index} style={{ 
               textAlign: 'center', 
@@ -605,7 +606,7 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
           ))}
         </div>
 
-        {/* Main Content - Form Fields (continued below) */}
+        {/* Main Content - Form Fields */}
         <div style={{ 
           width: '100%',
           flex: '1 0 auto'

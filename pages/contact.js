@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -127,7 +128,7 @@ export default function Contact() {
               fontWeight: 'bold',
               color: 'white'
             }}>
-              Ã¢Å“â€œ
+              ✓
             </div>
             <h1 style={{
               fontSize: '2.2rem',
@@ -238,7 +239,7 @@ export default function Contact() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Contact Us</span>
         </nav>
 
@@ -426,7 +427,7 @@ export default function Contact() {
                   display: 'inline-block'
                 }}
               >
-                View all FAQs Ã¢â€ â€™
+                View all FAQs →
               </Link>
             </div>
           </div>
@@ -819,7 +820,7 @@ export default function Contact() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
           <p style={{fontSize: '0.8rem', marginTop: '5px'}}>
             20+ Templates | ATS-Friendly | 100% Free
           </p>

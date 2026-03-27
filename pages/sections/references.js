@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -67,7 +68,7 @@ export default function ReferencesSectionGuide() {
             "name": "When should I provide references?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Provide references only when requested by the employer. This typically happens late in the hiring process, after initial interviews and when you're a final candidate. Some applications may require them upfrontÃ¢â‚¬â€follow the instructions."
+              "text": "Provide references only when requested by the employer. This typically happens late in the hiring process, after initial interviews and when you're a final candidate. Some applications may require them upfront—follow the instructions."
             }
           },
           {
@@ -123,11 +124,11 @@ export default function ReferencesSectionGuide() {
     },
     {
       q: "When should I provide references?",
-      a: "Provide references only when requested by the employer. This typically happens late in the hiring process, after initial interviews and when you're a final candidate. Some applications may require them upfrontÃ¢â‚¬â€always follow the specific application instructions."
+      a: "Provide references only when requested by the employer. This typically happens late in the hiring process, after initial interviews and when you're a final candidate. Some applications may require them upfront—always follow the specific application instructions."
     },
     {
       q: "Should I use 'References available upon request' on my resume?",
-      a: "This is optional in 2026. It's acceptable to include at the bottom of your resume, but not required. Many recruiters assume references are available. If you have limited space, omit it entirelyÃ¢â‚¬â€it doesn't add value to your qualifications."
+      a: "This is optional in 2026. It's acceptable to include at the bottom of your resume, but not required. Many recruiters assume references are available. If you have limited space, omit it entirely—it doesn't add value to your qualifications."
     },
     {
       q: "What information should I include for each reference?",
@@ -145,7 +146,7 @@ export default function ReferencesSectionGuide() {
 
   // Reference type guidelines
   const referenceTypes = [
-    { type: "Former Manager/Supervisor", bestFor: "All professional roles", description: "Best choiceÃ¢â‚¬â€can speak directly to your work performance, skills, and achievements." },
+    { type: "Former Manager/Supervisor", bestFor: "All professional roles", description: "Best choice—can speak directly to your work performance, skills, and achievements." },
     { type: "Current Manager", bestFor: "When you have permission", description: "Use with caution; ask permission first and consider timing in your job search." },
     { type: "Professor/Academic Advisor", bestFor: "Recent graduates, academic roles", description: "Excellent for entry-level candidates; can speak to your academic performance and potential." },
     { type: "Colleague/Peer", bestFor: "Team collaboration roles", description: "Good for showcasing teamwork, collaboration, and day-to-day work relationships." },
@@ -157,7 +158,7 @@ export default function ReferencesSectionGuide() {
   const referenceSituations = [
     { situation: "Job application specifically requests references", action: "Include on separate page, not on main resume. Follow format instructions exactly." },
     { situation: "Academic applications (faculty, research)", action: "Usually required (3-5 references with full contact details). Provide as requested." },
-    { situation: "Government positions", action: "Follow specific application instructions carefullyÃ¢â‚¬â€often require detailed reference forms." },
+    { situation: "Government positions", action: "Follow specific application instructions carefully—often require detailed reference forms." },
     { situation: "Executive/Senior-level roles", action: "Prepare 4-6 references; often contacted multiple times throughout process." },
     { situation: "Entry-level with limited experience", action: "Use 'References available' line at bottom; prepare academic and internship references." }
   ];
@@ -189,9 +190,9 @@ export default function ReferencesSectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <span style={{ color: '#0070f3' }} aria-current="page">References Guide</span>
         </nav>
 
@@ -201,10 +202,10 @@ export default function ReferencesSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>Ã°Å¸â€œâ€¦ Updated: March 24, 2026</span>
-            <span>Ã¢ÂÂ±Ã¯Â¸Â 8 min read</span>
-            <span>Ã°Å¸â€˜ÂÃ¯Â¸Â 35,000+ readers</span>
-            <span>Ã¢Â­Â 3-5 References Standard</span>
+            <span>📅 Updated: March 24, 2026</span>
+            <span>⏱️ 8 min read</span>
+            <span>👁️ 35,000+ readers</span>
+            <span>⭐ 3-5 References Standard</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -222,14 +223,14 @@ export default function ReferencesSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Ã°Å¸â€œâ€“ Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#why-not" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Why Not Include References</a>
-            <a href="#when-to-include" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ When to Include</a>
-            <a href="#how-to-format" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ How to Format</a>
-            <a href="#who-to-choose" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Who to Choose</a>
-            <a href="#best-practices" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Best Practices</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ FAQ</a>
+            <a href="#why-not" style={{ color: '#0070f3', textDecoration: 'none' }}>• Why Not Include References</a>
+            <a href="#when-to-include" style={{ color: '#0070f3', textDecoration: 'none' }}>• When to Include</a>
+            <a href="#how-to-format" style={{ color: '#0070f3', textDecoration: 'none' }}>• How to Format</a>
+            <a href="#who-to-choose" style={{ color: '#0070f3', textDecoration: 'none' }}>• Who to Choose</a>
+            <a href="#best-practices" style={{ color: '#0070f3', textDecoration: 'none' }}>• Best Practices</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
           </div>
         </div>
 
@@ -242,9 +243,9 @@ export default function ReferencesSectionGuide() {
           borderLeft: '6px solid #ff9800'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>Ã¢Â­Â 2026 Standard Practice:</strong> Do NOT include references on your resume. 
+            <strong>⭐ 2026 Standard Practice:</strong> Do NOT include references on your resume. 
             Use the phrase <strong>"References available upon request"</strong> or simply omit any reference mention entirely. 
-            Provide a separate reference list only when explicitly requested by the employerÃ¢â‚¬â€typically after initial interviews.
+            Provide a separate reference list only when explicitly requested by the employer—typically after initial interviews.
           </p>
         </div>
 
@@ -262,22 +263,22 @@ export default function ReferencesSectionGuide() {
             marginTop: '20px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '32px', marginBottom: '8px' }}>Ã°Å¸â€œâ€ž</div>
+              <div style={{ fontSize: '32px', marginBottom: '8px' }}>📄</div>
               <strong>Valuable Space</strong>
-              <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Every line of your resume is valuableÃ¢â‚¬â€use it for qualifications, achievements, and skills, not contact information that will be requested later.</p>
+              <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Every line of your resume is valuable—use it for qualifications, achievements, and skills, not contact information that will be requested later.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '32px', marginBottom: '8px' }}>Ã°Å¸â€â€™</div>
+              <div style={{ fontSize: '32px', marginBottom: '8px' }}>🔒</div>
               <strong>Privacy Protection</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Your references may not want their contact information shared widely. Protect their privacy by providing it only when necessary.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '32px', marginBottom: '8px' }}>Ã¢ÂÂ°</div>
+              <div style={{ fontSize: '32px', marginBottom: '8px' }}>⏰</div>
               <strong>Timing Matters</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Employers typically ask for references late in the process, not during initial screening. Providing them too early is unnecessary.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '32px', marginBottom: '8px' }}>Ã°Å¸Â¤â€“</div>
+              <div style={{ fontSize: '32px', marginBottom: '8px' }}>🤖</div>
               <strong>ATS Compatibility</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Contact information in the references section can confuse ATS parsing systems and may not align with standard resume formats.</p>
             </div>
@@ -295,7 +296,7 @@ export default function ReferencesSectionGuide() {
                 <tr style={{ background: '#0070f3', color: 'white' }}>
                   <th style={{ padding: '14px', textAlign: 'left', width: '35%' }}>Situation</th>
                   <th style={{ padding: '14px', textAlign: 'left' }}>Recommendation</th>
-                 </tr>
+                  </tr>
               </thead>
               <tbody>
                 {referenceSituations.map((item, idx) => (
@@ -373,7 +374,7 @@ export default function ReferencesSectionGuide() {
 
           <div style={{ background: '#e8f5e9', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #2e7d32' }}>
             <p style={{ margin: 0, fontSize: '15px' }}>
-              <strong>Ã¢Å“â€œ Pro Tip:</strong> Always ask permission before listing someone as a reference. 
+              <strong>✓ Pro Tip:</strong> Always ask permission before listing someone as a reference. 
               Give them a heads-up about the role you're applying for and what skills you'd like them to highlight. 
               Send a thank-you note after they help you!
             </p>
@@ -416,13 +417,13 @@ export default function ReferencesSectionGuide() {
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>Ã¢Å“â€œ Ask permission first</strong> - Always confirm before listing someone as a reference</li>
-              <li><strong>Ã¢Å“â€œ Prepare your references</strong> - Share job description so they know what to highlight</li>
-              <li><strong>Ã¢Å“â€œ Keep them updated</strong> - Let them know when they might be contacted</li>
-              <li><strong>Ã¢Å“â€œ Thank them afterward</strong> - Send a thank-you note or small gift after they help you</li>
-              <li><strong>Ã¢Å“â€œ Verify contact info</strong> - Ensure emails and phone numbers are current before submitting</li>
-              <li><strong>Ã¢Å“â€œ Use professional emails</strong> - Work emails preferred over personal emails when possible</li>
-              <li><strong>Ã¢Å“â€œ Include relationship context</strong> - Briefly state how you know each reference</li>
+              <li><strong>✓ Ask permission first</strong> - Always confirm before listing someone as a reference</li>
+              <li><strong>✓ Prepare your references</strong> - Share job description so they know what to highlight</li>
+              <li><strong>✓ Keep them updated</strong> - Let them know when they might be contacted</li>
+              <li><strong>✓ Thank them afterward</strong> - Send a thank-you note or small gift after they help you</li>
+              <li><strong>✓ Verify contact info</strong> - Ensure emails and phone numbers are current before submitting</li>
+              <li><strong>✓ Use professional emails</strong> - Work emails preferred over personal emails when possible</li>
+              <li><strong>✓ Include relationship context</strong> - Briefly state how you know each reference</li>
             </ul>
           </div>
         </section>
@@ -467,7 +468,7 @@ export default function ReferencesSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸Â¤â€“ ATS-Friendly References Handling
+            🤖 ATS-Friendly References Handling
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -526,7 +527,7 @@ export default function ReferencesSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now Ã¢â€ â€™
+            Build Your Resume Now →
           </Link>
         </div>
 
@@ -537,12 +538,12 @@ export default function ReferencesSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ¡ Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/faq" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Resume FAQ Ã¢â€ â€™</Link>
-            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume Ã¢â€ â€™</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 Ã¢â€ â€™</Link>
-            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide Ã¢â€ â€™</Link>
+            <Link href="/faq" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Resume FAQ →</Link>
+            <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>How to Write a Resume →</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 →</Link>
+            <Link href="/sections/summary" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Professional Summary Guide →</Link>
           </div>
         </div>
       </main>

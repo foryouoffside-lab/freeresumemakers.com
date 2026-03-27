@@ -1,4 +1,5 @@
-﻿import React, { useRef, useMemo, useEffect, useState } from 'react';
+﻿import Head from 'next/head';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== DEBUG MODE - SET TO false FOR PRODUCTION =====
@@ -28,13 +29,13 @@ const SPACING_CONFIG = {
 
 // ===== ICON MAPPING =====
 const ICON_MAPPING = {
-  email: 'Ã¢Å“â€°Ã¯Â¸Â',
-  phone: 'Ã°Å¸â€œÂ±',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉',
+  phone: '📱',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },
-  github: 'Ã°Å¸Ââ„¢',
-  website: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '🐙',
+  website: '🌐',
+  default: '📌'
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -91,7 +92,7 @@ const formatDateRange = (start, end, isCurrent) => {
   if (!s && !e) return '';
   if (s && !e) return s;
   if (!s && e) return e;
-  return `${s} Ã¢â‚¬â€œ ${e}`;
+  return `${s} – ${e}`;
 };
 
 const formatEducationDate = (startDate, endDate, current) => {
@@ -100,7 +101,7 @@ const formatEducationDate = (startDate, endDate, current) => {
   if (!start && !end) return '';
   if (start && !end) return start;
   if (!start && end) return end;
-  return `${start} Ã¢â‚¬â€œ ${end}`;
+  return `${start} – ${end}`;
 };
 
 // ===== LINK FORMATTING =====
@@ -372,7 +373,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
         .slice(0, 3)
         .map(ach => {
           let cleaned = safeString(ach);
-          cleaned = cleaned.replace(/^[Ã¢â‚¬Â¢\*\-]\s*/, '');
+          cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
           return cleaned.slice(0, CONTENT_LIMITS.achievementLength);
         }) 
       : [];
@@ -630,7 +631,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
               <span style={styles.expCompany}>{exp.company || 'Company not specified'}</span>
               {exp.location && (
                 <span style={styles.expLocation}>
-                  <span>Ã°Å¸â€œÂ</span> {exp.location}
+                  <span>📍</span> {exp.location}
                 </span>
               )}
             </div>
@@ -646,7 +647,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
           <ul style={styles.bulletList}>
             {exp.achievements.map((ach, i) => (
               <li key={i} style={styles.bulletItem}>
-                <span style={styles.bulletPoint}>Ã¢â‚¬Â¢</span>
+                <span style={styles.bulletPoint}>•</span>
                 <span style={styles.bulletText}>{ach}</span>
               </li>
             ))}
@@ -680,7 +681,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
           <ul style={styles.bulletList}>
             {project.achievements.map((ach, i) => (
               <li key={i} style={styles.bulletItem}>
-                <span style={styles.bulletPoint}>Ã¢â‚¬Â¢</span>
+                <span style={styles.bulletPoint}>•</span>
                 <span style={styles.bulletText}>{ach}</span>
               </li>
             ))}
@@ -709,7 +710,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
             <span style={styles.eduInstitution}>{edu.institution || 'Institution not specified'}</span>
             {edu.location && (
               <span style={styles.eduLocation}>
-                <span>Ã°Å¸â€œÂ</span> {edu.location}
+                <span>📍</span> {edu.location}
               </span>
             )}
           </div>
@@ -721,7 +722,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
             {edu.dateDisplay && (
               <span style={styles.eduDateText}>
                 {edu.dateDisplay}
-                {edu.current && <span style={styles.eduCurrent}> Ã¢â‚¬Â¢ Current</span>}
+                {edu.current && <span style={styles.eduCurrent}> • Current</span>}
               </span>
             )}
             
@@ -736,7 +737,7 @@ const Template14 = ({ isExporting = false, ...props }) => {
         {/* Honors on separate line if exists */}
         {edu.honors && (
           <div style={styles.eduHonorsRow}>
-            <span>Ã°Å¸Ââ€ </span> {edu.honors}
+            <span>🏆</span> {edu.honors}
           </div>
         )}
       </div>

@@ -1,31 +1,17 @@
-﻿// pages/_app.js
+﻿import Link from 'next/link';
+import React from 'react';
+// pages/_app.js
 import { ResumeProvider } from '../context/ResumeContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import SEO from '../components/SEO';
 import Head from 'next/head';
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
-
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-
-    return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleComplete);
-      router.events.off('routeChangeError', handleComplete);
-    };
-  }, [router]);
 
   // Organization Schema for structured data
   const organizationSchema = {
@@ -34,7 +20,7 @@ function MyApp({ Component, pageProps }) {
     "name": "Free Resume Maker",
     "url": "https://freeresumemaker.xyz",
     "logo": "https://freeresumemaker.xyz/logo.png",
-    "description": "Create professional ATS-friendly resumes instantly with our Free Resume Maker. No sign up required. 20+ templates, real-time editing, and PDF download.",
+    "description": "Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download.",
     "sameAs": [
       "https://twitter.com/freeresumemaker",
       "https://www.linkedin.com/company/free-resume-maker",
@@ -42,14 +28,9 @@ function MyApp({ Component, pageProps }) {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "freeresumeemaker@gmail.com",
+      "email": "foryouoffside@gmail.com",
       "contactType": "customer support",
       "availableLanguage": ["English"]
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://freeresumemaker.xyz/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
     }
   };
 
@@ -70,79 +51,16 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
-  // Local Business Schema for services
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Free Resume Maker",
-    "description": "Professional resume builder service offering free resume templates, cover letter builder, and career resources.",
-    "url": "https://freeresumemaker.xyz",
-    "priceRange": "Free",
-    "areaServed": "Worldwide",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Resume Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Resume Builder",
-            "description": "Create professional resumes with our free online builder"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Resume Templates",
-            "description": "20+ ATS-friendly professional resume templates"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "PDF Download",
-            "description": "Download your resume as a professional PDF"
-          }
-        }
-      ]
-    }
-  };
-
-  // Breadcrumb Schema for site structure
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://freeresumemaker.xyz"
-      }
-    ]
-  };
-
   // Get current page URL for canonical
   const canonicalUrl = `https://freeresumemaker.xyz${router.asPath === '/' ? '' : router.asPath}`;
-  
-  // Get current path for conditional meta
-  const isHomePage = router.pathname === '/';
-  const isEditorPage = router.pathname === '/editor';
-  const isTemplatesPage = router.pathname === '/templates';
-  const isExamplesPage = router.pathname === '/examples';
 
   // Default SEO for pages without custom SEO
   const defaultSEO = {
-    title: isHomePage 
-      ? 'Free Resume Maker - Create Professional Resumes Online Instantly' 
-      : 'Free Resume Maker - Professional Resume Templates & Examples',
-    description: 'Create professional ATS-friendly resumes instantly with our Free Resume Maker. No sign up required. 20+ templates, real-time editing, and PDF download. Trusted by 100,000+ job seekers.',
+    title: 'Free Resume Builder - Create Professional Resumes Online Instantly',
+    description: 'Create professional ATS-friendly resumes instantly with our free resume builder. No sign up required. 20+ templates, real-time editing, and PDF download.',
     image: 'https://freeresumemaker.xyz/images/default-og-image.jpg',
     type: 'website',
-    keywords: 'resume builder, Free Resume Maker, online resume maker, resume templates, ATS friendly resume, professional resume, CV maker, resume creator'
+    keywords: 'resume builder, free resume builder, online resume maker, resume templates, ATS friendly resume, professional resume, CV maker, resume creator'
   };
 
   return (
@@ -151,29 +69,29 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        
+
         {/* Primary Meta Tags */}
         <title>{defaultSEO.title}</title>
         <meta name="title" content={defaultSEO.title} />
         <meta name="description" content={defaultSEO.description} />
         <meta name="keywords" content={defaultSEO.keywords} />
-        
+
         {/* Canonical URL */}
         <link rel="canonical" href={canonicalUrl} />
-        
+
         {/* Language and Region */}
         <meta name="language" content="English" />
         <meta name="geo.region" content="US" />
         <meta name="geo.placename" content="Global" />
-        
+
         {/* Author and Publisher */}
         <meta name="author" content="Free Resume Maker" />
         <meta name="publisher" content="Free Resume Maker" />
-        
+
         {/* Robots Meta */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content={defaultSEO.type} />
         <meta property="og:url" content={canonicalUrl} />
@@ -184,7 +102,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Free Resume Maker" />
         <meta property="og:locale" content="en_US" />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={canonicalUrl} />
@@ -192,51 +110,35 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content={defaultSEO.description} />
         <meta name="twitter:image" content={defaultSEO.image} />
         <meta name="twitter:site" content="@freeresumemaker" />
-        
+
         {/* Additional SEO Meta Tags */}
-        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
-        
+
         {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        
+
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Verification Tags */}
-        <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
-        <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-        
+
         {/* Structured Data - Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        
+
         {/* Structured Data - Website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        
-        {/* Structured Data - Local Business */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        
-        {/* Structured Data - Breadcrumb */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
       </Head>
-      
+
       {/* Google Analytics - Replace with your measurement ID */}
       <Script
         strategy="afterInteractive"
@@ -257,52 +159,18 @@ function MyApp({ Component, pageProps }) {
           `
         }}
       />
-      
-      {/* Microsoft Clarity - Heatmaps and Session Recording */}
-      <Script
-        id="microsoft-clarity"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "");
-          `
-        }}
-      />
-      
+
       <ResumeProvider>
-        {/* Loading Indicator for Route Changes */}
-        {loading && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            height: '2px',
-            background: 'linear-gradient(90deg, #0070f3 0%, #00c6fb 100%)',
-            zIndex: 9999,
-            animation: 'loading 0.5s ease-in-out'
-          }} />
-        )}
         <Header />
         <Component {...pageProps} />
         <Footer />
       </ResumeProvider>
-      
+
       <style jsx global>{`
-        @keyframes loading {
-          0% { width: 0%; opacity: 0; }
-          50% { width: 70%; opacity: 1; }
-          100% { width: 100%; opacity: 0; }
-        }
-        
         * {
           box-sizing: border-box;
         }
-        
+
         body {
           margin: 0;
           padding: 0;
@@ -310,12 +178,12 @@ function MyApp({ Component, pageProps }) {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
-        
+
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;
         }
-        
+
         /* Focus outline for accessibility */
         :focus {
           outline: 2px solid #0070f3;
@@ -327,12 +195,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
-
-
-
-
-
-
-
-

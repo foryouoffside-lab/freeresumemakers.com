@@ -1,4 +1,6 @@
-﻿// pages/editor/template-selector.js
+﻿import Link from 'next/link';
+import React from 'react';
+// pages/editor/template-selector.js
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import TemplateSelector from '../../components/templates/TemplateSelector';
@@ -202,9 +204,9 @@ export default function TemplateSelectorPage() {
           fontSize: '14px',
           color: '#666'
         }}>
-          <a href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</a>
+          <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
           <span>›</span>
-          <a href="/editor" style={{ color: '#666', textDecoration: 'none' }}>Resume Builder</a>
+          <Link href="/editor" style={{ color: '#666', textDecoration: 'none' }}>Resume Builder</Link>
           <span>›</span>
           <span style={{ color: '#0070f3' }}>Choose Template</span>
         </nav>
@@ -282,11 +284,11 @@ export default function TemplateSelectorPage() {
               Template Categories
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/tech" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/academic" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/templates/category/entry-level" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</a></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/tech" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/academic" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/entry-level" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</Link></li>
             </ul>
           </div>
           
@@ -296,10 +298,10 @@ export default function TemplateSelectorPage() {
               Helpful Resources
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/how-to-make-resume" style={{ color: '#666', textDecoration: 'none' }}>How to Make a Resume</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/ats-resume-tips-2026" style={{ color: '#666', textDecoration: 'none' }}>ATS Resume Tips 2026</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/action-verbs-for-resume" style={{ color: '#666', textDecoration: 'none' }}>200+ Action Verbs</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/blog/resume-formatting-guide" style={{ color: '#666', textDecoration: 'none' }}>Resume Formatting Guide</a></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/how-to-make-resume" style={{ color: '#666', textDecoration: 'none' }}>How to Make a Resume</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/blog/ats-resume-tips-2026" style={{ color: '#666', textDecoration: 'none' }}>ATS Resume Tips 2026</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/blog/action-verbs-for-resume" style={{ color: '#666', textDecoration: 'none' }}>200+ Action Verbs</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/blog/resume-formatting-guide" style={{ color: '#666', textDecoration: 'none' }}>Resume Formatting Guide</Link></li>
             </ul>
           </div>
           
@@ -309,10 +311,10 @@ export default function TemplateSelectorPage() {
               About Us
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><a href="/about" style={{ color: '#666', textDecoration: 'none' }}>About Free Resume Builder</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/contact" style={{ color: '#666', textDecoration: 'none' }}>Contact Us</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/privacy-policy" style={{ color: '#666', textDecoration: 'none' }}>Privacy Policy</a></li>
-              <li style={{ marginBottom: '8px' }}><a href="/terms-of-service" style={{ color: '#666', textDecoration: 'none' }}>Terms of Service</a></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/about" style={{ color: '#666', textDecoration: 'none' }}>About Free Resume Builder</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#666', textDecoration: 'none' }}>Contact Us</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/privacy-policy" style={{ color: '#666', textDecoration: 'none' }}>Privacy Policy</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/terms-of-service" style={{ color: '#666', textDecoration: 'none' }}>Terms of Service</Link></li>
             </ul>
           </div>
         </div>

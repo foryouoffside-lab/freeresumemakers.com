@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -176,7 +177,7 @@ export default function CertificationsSectionGuide() {
     },
     {
       q: "How many certifications should I list?",
-      a: "List 3-8 of your most relevant and current certifications. Quality over quantityÃ¢â‚¬â€prioritize industry-recognized credentials over basic or outdated ones. For entry-level roles, even 1-2 strong certifications can make a difference."
+      a: "List 3-8 of your most relevant and current certifications. Quality over quantity—prioritize industry-recognized credentials over basic or outdated ones. For entry-level roles, even 1-2 strong certifications can make a difference."
     }
   ];
 
@@ -223,9 +224,9 @@ export default function CertificationsSectionGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Certifications Guide</span>
         </nav>
 
@@ -235,10 +236,10 @@ export default function CertificationsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>Ã°Å¸â€œâ€¦ Updated: March 23, 2026</span>
-            <span>Ã¢ÂÂ±Ã¯Â¸Â 10 min read</span>
-            <span>Ã°Å¸â€˜ÂÃ¯Â¸Â 18,500+ readers</span>
-            <span>Ã°Å¸Ââ€  15+ Certification Categories</span>
+            <span>📅 Updated: March 23, 2026</span>
+            <span>⏱️ 10 min read</span>
+            <span>👁️ 18,500+ readers</span>
+            <span>🏆 15+ Certification Categories</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -256,14 +257,14 @@ export default function CertificationsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Ã°Å¸â€œâ€“ Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Certification Format</a>
-            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Examples by Industry</a>
-            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Placement Strategy</a>
-            <a href="#career-stage" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ By Career Stage</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ FAQ</a>
-            <a href="#ats" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ ATS Optimization</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Certification Format</a>
+            <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Industry</a>
+            <a href="#placement" style={{ color: '#0070f3', textDecoration: 'none' }}>• Placement Strategy</a>
+            <a href="#career-stage" style={{ color: '#0070f3', textDecoration: 'none' }}>• By Career Stage</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
+            <a href="#ats" style={{ color: '#0070f3', textDecoration: 'none' }}>• ATS Optimization</a>
           </div>
         </div>
 
@@ -275,7 +276,7 @@ export default function CertificationsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>Ã°Å¸â€™Â¡ Pro Tip:</strong> Certifications boost your resume's ATS score significantly. Always include the full certification name, issuing organization, and year obtained. For credentials with IDs, include themÃ¢â‚¬â€this allows instant verification.
+            <strong>💡 Pro Tip:</strong> Certifications boost your resume's ATS score significantly. Always include the full certification name, issuing organization, and year obtained. For credentials with IDs, include them—this allows instant verification.
           </p>
         </div>
 
@@ -288,9 +289,9 @@ export default function CertificationsSectionGuide() {
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #e9ecef' }}>
             <div style={{ fontFamily: 'monospace', fontSize: '14px', lineHeight: '1.8' }}>
               <strong style={{ fontSize: '16px' }}>[Full Certification Name]</strong> | <em>[Issuing Organization]</em> | [Year Obtained]<br/>
-              Ã¢â‚¬Â¢ <strong>Certification ID:</strong> [ID Number] (if applicable)<br/>
-              Ã¢â‚¬Â¢ <strong>Status:</strong> Active / Expires [Date] / Renewal in Progress<br/>
-              Ã¢â‚¬Â¢ <strong>License Number:</strong> [For regulated professions]
+              • <strong>Certification ID:</strong> [ID Number] (if applicable)<br/>
+              • <strong>Status:</strong> Active / Expires [Date] / Renewal in Progress<br/>
+              • <strong>License Number:</strong> [For regulated professions]
             </div>
           </div>
         </section>
@@ -301,60 +302,60 @@ export default function CertificationsSectionGuide() {
             Examples by Industry
           </h2>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>Ã°Å¸â€™Â» Information Technology & Cloud</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>💻 Information Technology & Cloud</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>AWS Certified Solutions Architect Ã¢â‚¬â€œ Professional</strong> Ã¢â‚¬â€œ <em>Amazon Web Services</em> | 2024<br/>Certification ID: AWS-12345XYZ Ã¢â‚¬Â¢ Valid through 2027 Ã¢â‚¬Â¢ Scored 92% on exam</li>
-              <li><strong>Cisco Certified Network Professional (CCNP) Enterprise</strong> Ã¢â‚¬â€œ <em>Cisco</em> | 2023<br/>Certification ID: CSCO-987654 Ã¢â‚¬Â¢ Active status</li>
-              <li><strong>CompTIA Security+</strong> Ã¢â‚¬â€œ <em>CompTIA</em> | 2023<br/>Valid through 2026 Ã¢â‚¬Â¢ Exam Code: SY0-601</li>
-              <li><strong>Certified Kubernetes Administrator (CKA)</strong> Ã¢â‚¬â€œ <em>Linux Foundation</em> | 2024<br/>Certification ID: LF-ka3n8d Ã¢â‚¬Â¢ Top 10% scorer</li>
-              <li><strong>Google Professional Cloud Architect</strong> Ã¢â‚¬â€œ <em>Google Cloud</em> | 2023<br/>Certification ID: GCP-23781 Ã¢â‚¬Â¢ Valid through 2025</li>
-              <li><strong>Microsoft Certified: Azure Solutions Architect Expert</strong> Ã¢â‚¬â€œ <em>Microsoft</em> | 2024<br/>Certification ID: MCP-423892 Ã¢â‚¬Â¢ Renewed 2026</li>
-              <li><strong>Certified Information Systems Security Professional (CISSP)</strong> Ã¢â‚¬â€œ <em>ISC2</em> | 2023<br/>Certification ID: 123456 Ã¢â‚¬Â¢ Valid through 2026</li>
+              <li><strong>AWS Certified Solutions Architect – Professional</strong> – <em>Amazon Web Services</em> | 2024<br/>Certification ID: AWS-12345XYZ • Valid through 2027 • Scored 92% on exam</li>
+              <li><strong>Cisco Certified Network Professional (CCNP) Enterprise</strong> – <em>Cisco</em> | 2023<br/>Certification ID: CSCO-987654 • Active status</li>
+              <li><strong>CompTIA Security+</strong> – <em>CompTIA</em> | 2023<br/>Valid through 2026 • Exam Code: SY0-601</li>
+              <li><strong>Certified Kubernetes Administrator (CKA)</strong> – <em>Linux Foundation</em> | 2024<br/>Certification ID: LF-ka3n8d • Top 10% scorer</li>
+              <li><strong>Google Professional Cloud Architect</strong> – <em>Google Cloud</em> | 2023<br/>Certification ID: GCP-23781 • Valid through 2025</li>
+              <li><strong>Microsoft Certified: Azure Solutions Architect Expert</strong> – <em>Microsoft</em> | 2024<br/>Certification ID: MCP-423892 • Renewed 2026</li>
+              <li><strong>Certified Information Systems Security Professional (CISSP)</strong> – <em>ISC2</em> | 2023<br/>Certification ID: 123456 • Valid through 2026</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ  Project Management & Agile</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>📊 Project Management & Agile</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Project Management Professional (PMP)</strong> Ã¢â‚¬â€œ <em>Project Management Institute</em> | 2022<br/>Certification ID: 3124567 Ã¢â‚¬Â¢ Valid through 2027 Ã¢â‚¬Â¢ 15+ projects managed</li>
-              <li><strong>Certified ScrumMaster (CSM)</strong> Ã¢â‚¬â€œ <em>Scrum Alliance</em> | 2023<br/>Credential ID: 000987654 Ã¢â‚¬Â¢ Active member</li>
-              <li><strong>PRINCE2 Practitioner</strong> Ã¢â‚¬â€œ <em>AXELOS</em> | 2023<br/>Registration #: PR2-45678 Ã¢â‚¬Â¢ Valid through 2026</li>
-              <li><strong>Agile Certified Practitioner (PMI-ACP)</strong> Ã¢â‚¬â€œ <em>PMI</em> | 2024<br/>Certification ID: ACP-98765</li>
-              <li><strong>Lean Six Sigma Green Belt</strong> Ã¢â‚¬â€œ <em>American Society for Quality</em> | 2023<br/>Certification #: LSSGB-3456</li>
-              <li><strong>SAFe 6.0 Agilist</strong> Ã¢â‚¬â€œ <em>Scaled Agile, Inc.</em> | 2024<br/>Certification ID: SA-78321</li>
+              <li><strong>Project Management Professional (PMP)</strong> – <em>Project Management Institute</em> | 2022<br/>Certification ID: 3124567 • Valid through 2027 • 15+ projects managed</li>
+              <li><strong>Certified ScrumMaster (CSM)</strong> – <em>Scrum Alliance</em> | 2023<br/>Credential ID: 000987654 • Active member</li>
+              <li><strong>PRINCE2 Practitioner</strong> – <em>AXELOS</em> | 2023<br/>Registration #: PR2-45678 • Valid through 2026</li>
+              <li><strong>Agile Certified Practitioner (PMI-ACP)</strong> – <em>PMI</em> | 2024<br/>Certification ID: ACP-98765</li>
+              <li><strong>Lean Six Sigma Green Belt</strong> – <em>American Society for Quality</em> | 2023<br/>Certification #: LSSGB-3456</li>
+              <li><strong>SAFe 6.0 Agilist</strong> – <em>Scaled Agile, Inc.</em> | 2024<br/>Certification ID: SA-78321</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>Ã°Å¸â€™Â° Finance, Accounting & Banking</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>💰 Finance, Accounting & Banking</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Certified Public Accountant (CPA)</strong> Ã¢â‚¬â€œ <em>American Institute of CPAs</em> | 2021<br/>License #: CPA-123456 Ã¢â‚¬Â¢ State of California Ã¢â‚¬Â¢ Active status</li>
-              <li><strong>Chartered Financial Analyst (CFA)</strong> Ã¢â‚¬â€œ <em>CFA Institute</em> | 2022<br/>Charter #: 891234 Ã¢â‚¬Â¢ Active member in good standing</li>
-              <li><strong>Certified Management Accountant (CMA)</strong> Ã¢â‚¬â€œ <em>Institute of Management Accountants</em> | 2023<br/>Certification ID: 7654321 Ã¢â‚¬Â¢ Valid through 2027</li>
-              <li><strong>Financial Risk Manager (FRM)</strong> Ã¢â‚¬â€œ <em>Global Association of Risk Professionals</em> | 2024<br/>Certification ID: FRM-98765</li>
-              <li><strong>Certified Internal Auditor (CIA)</strong> Ã¢â‚¬â€œ <em>The Institute of Internal Auditors</em> | 2022<br/>Certification #: 456789-23</li>
-              <li><strong>Certified Financial Planner (CFP)</strong> Ã¢â‚¬â€œ <em>CFP Board</em> | 2023<br/>License #: 345678 Ã¢â‚¬Â¢ Active</li>
+              <li><strong>Certified Public Accountant (CPA)</strong> – <em>American Institute of CPAs</em> | 2021<br/>License #: CPA-123456 • State of California • Active status</li>
+              <li><strong>Chartered Financial Analyst (CFA)</strong> – <em>CFA Institute</em> | 2022<br/>Charter #: 891234 • Active member in good standing</li>
+              <li><strong>Certified Management Accountant (CMA)</strong> – <em>Institute of Management Accountants</em> | 2023<br/>Certification ID: 7654321 • Valid through 2027</li>
+              <li><strong>Financial Risk Manager (FRM)</strong> – <em>Global Association of Risk Professionals</em> | 2024<br/>Certification ID: FRM-98765</li>
+              <li><strong>Certified Internal Auditor (CIA)</strong> – <em>The Institute of Internal Auditors</em> | 2022<br/>Certification #: 456789-23</li>
+              <li><strong>Certified Financial Planner (CFP)</strong> – <em>CFP Board</em> | 2023<br/>License #: 345678 • Active</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>Ã°Å¸ÂÂ¥ Healthcare & Medical</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>🏥 Healthcare & Medical</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '20px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>Registered Nurse (RN)</strong> Ã¢â‚¬â€œ <em>California Board of Registered Nursing</em> | 2023<br/>License #: 952143 Ã¢â‚¬Â¢ Active Ã¢â‚¬Â¢ Compact License Eligible</li>
-              <li><strong>Basic Life Support (BLS)</strong> Ã¢â‚¬â€œ <em>American Heart Association</em> | 2024<br/>Provider #: AHA-78432 Ã¢â‚¬Â¢ Valid through 2026</li>
-              <li><strong>Advanced Cardiac Life Support (ACLS)</strong> Ã¢â‚¬â€œ <em>American Heart Association</em> | 2023<br/>Provider #: ACLS-56789 Ã¢â‚¬Â¢ Valid through 2025</li>
-              <li><strong>Certified Medical Assistant (CMA)</strong> Ã¢â‚¬â€œ <em>American Association of Medical Assistants</em> | 2022<br/>Certification #: 345678-22</li>
-              <li><strong>Certified Professional Coder (CPC)</strong> Ã¢â‚¬â€œ <em>AAPC</em> | 2023<br/>Credential ID: CPC-1234567</li>
+              <li><strong>Registered Nurse (RN)</strong> – <em>California Board of Registered Nursing</em> | 2023<br/>License #: 952143 • Active • Compact License Eligible</li>
+              <li><strong>Basic Life Support (BLS)</strong> – <em>American Heart Association</em> | 2024<br/>Provider #: AHA-78432 • Valid through 2026</li>
+              <li><strong>Advanced Cardiac Life Support (ACLS)</strong> – <em>American Heart Association</em> | 2023<br/>Provider #: ACLS-56789 • Valid through 2025</li>
+              <li><strong>Certified Medical Assistant (CMA)</strong> – <em>American Association of Medical Assistants</em> | 2022<br/>Certification #: 345678-22</li>
+              <li><strong>Certified Professional Coder (CPC)</strong> – <em>AAPC</em> | 2023<br/>Credential ID: CPC-1234567</li>
             </ul>
           </div>
 
-          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>Ã°Å¸â€˜Â¥ Human Resources</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: '16px', marginTop: '32px', color: '#1a1a1a' }}>👥 Human Resources</h3>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ margin: 0, lineHeight: '1.8' }}>
-              <li><strong>SHRM Certified Professional (SHRM-CP)</strong> Ã¢â‚¬â€œ <em>SHRM</em> | 2023<br/>Credential ID: SHRM-45678 Ã¢â‚¬Â¢ Valid through 2026</li>
-              <li><strong>Professional in Human Resources (PHR)</strong> Ã¢â‚¬â€œ <em>HRCI</em> | 2022<br/>Certification #: PHR-98765 Ã¢â‚¬Â¢ Active</li>
-              <li><strong>Senior Professional in Human Resources (SPHR)</strong> Ã¢â‚¬â€œ <em>HRCI</em> | 2024<br/>Certification #: SPHR-23456</li>
+              <li><strong>SHRM Certified Professional (SHRM-CP)</strong> – <em>SHRM</em> | 2023<br/>Credential ID: SHRM-45678 • Valid through 2026</li>
+              <li><strong>Professional in Human Resources (PHR)</strong> – <em>HRCI</em> | 2022<br/>Certification #: PHR-98765 • Active</li>
+              <li><strong>Senior Professional in Human Resources (SPHR)</strong> – <em>HRCI</em> | 2024<br/>Certification #: SPHR-23456</li>
             </ul>
           </div>
         </section>
@@ -362,7 +363,7 @@ export default function CertificationsSectionGuide() {
         {/* Popular Certifications Table */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸â€œâ€¹ Top Professional Certifications by Category
+            📋 Top Professional Certifications by Category
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
@@ -370,7 +371,7 @@ export default function CertificationsSectionGuide() {
                 <tr style={{ background: '#0070f3', color: 'white' }}>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Category</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Top Certifications</th>
-                 </tr>
+                </tr>
               </thead>
               <tbody>
                 {certificationCategories.map((cat, idx) => (
@@ -387,7 +388,7 @@ export default function CertificationsSectionGuide() {
         {/* Placement Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸â€œÂ Where to Place Certifications on Your Resume
+            📍 Where to Place Certifications on Your Resume
           </h2>
           <div style={{
             display: 'grid',
@@ -396,17 +397,17 @@ export default function CertificationsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>Ã°Å¸â€œÅ’ Dedicated Certifications Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>📌 Dedicated Certifications Section</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> 3+ certifications</p>
               <p style={{ fontSize: '14px', color: '#666' }}>Create a separate "Certifications" section after Education. Use section heading: "Certifications & Credentials"</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>Ã°Å¸Å½â€œ Under Education Section</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>🎓 Under Education Section</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> 1-2 certifications</p>
               <p style={{ fontSize: '14px', color: '#666' }}>List certifications as sub-bullets under your highest degree or in a separate subsection.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>Ã¢Å¡Â¡ Professional Summary</h3>
+              <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>⚡ Professional Summary</h3>
               <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}><strong>Best for:</strong> Key credentials</p>
               <p style={{ fontSize: '14px', color: '#666' }}>Mention your most prestigious certifications in the summary: "PMP-certified project manager with 10+ years experience."</p>
             </div>
@@ -416,7 +417,7 @@ export default function CertificationsSectionGuide() {
         {/* Career Stage Section */}
         <section id="career-stage">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸â€œÅ  Certifications by Career Stage
+            📊 Certifications by Career Stage
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -425,7 +426,7 @@ export default function CertificationsSectionGuide() {
                   <th style={{ padding: '12px', textAlign: 'left' }}>Career Stage</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Recommended Certifications</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Time to Complete</th>
-                 </tr>
+                </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '1px solid #e9ecef' }}>
@@ -451,7 +452,7 @@ export default function CertificationsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸Â¤â€“ ATS-Friendly Certification Formatting
+            🤖 ATS-Friendly Certification Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8' }}>
@@ -510,7 +511,7 @@ export default function CertificationsSectionGuide() {
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now Ã¢â€ â€™
+            Build Your Resume Now →
           </Link>
         </div>
 
@@ -521,12 +522,12 @@ export default function CertificationsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ¡ Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide Ã¢â€ â€™</Link>
-            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide Ã¢â€ â€™</Link>
-            <Link href="/sections/awards" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Awards Section Guide Ã¢â€ â€™</Link>
-            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 Ã¢â€ â€™</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
+            <Link href="/sections/education" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Education Section Guide →</Link>
+            <Link href="/sections/awards" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Awards Section Guide →</Link>
+            <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>ATS Resume Tips 2026 →</Link>
           </div>
         </div>
       </main>

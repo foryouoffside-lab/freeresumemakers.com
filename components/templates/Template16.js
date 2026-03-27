@@ -1,4 +1,5 @@
-﻿import React, { useRef, useMemo } from 'react';
+﻿import Head from 'next/head';
+import React, { useRef, useMemo } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== DEBUG MODE =====
@@ -6,13 +7,13 @@ const DEBUG_MODE = false; // Disabled in production
 
 // ===== ICON MAPPING - LinkedIn "in" icon in blue like Template1 =====
 const ICON_MAPPING = {
-  email: 'Ã¢Å“â€°Ã¯Â¸Â',
-  phone: 'Ã°Å¸â€œÂ±',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉',
+  phone: '📱',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn "in" icon with blue color
-  github: 'Ã°Å¸Ââ„¢',
-  website: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '🐙',
+  website: '🌐',
+  default: '📌'
 };
 
 // ===== LINK FORMATTING FUNCTIONS (like Template1) =====
@@ -456,7 +457,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
     if (!start && !end) return '';
     if (start && !end) return start;
     if (!start && end) return end;
-    return `${start} Ã¢â‚¬â€œ ${end}`;
+    return `${start} – ${end}`;
   };
 
   const displayProfessionalTitle = () => {
@@ -1353,7 +1354,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               )}
               {(exp.startDate || exp.endDate) && (
                 <div style={styles.expDates}>
-                  {formatDate(exp.startDate)} Ã¢â‚¬â€œ {formatDate(exp.endDate)}
+                  {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
                 </div>
               )}
             </div>
@@ -1367,7 +1368,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               )}
               {exp.location && (
                 <span style={styles.expLocation}>
-                  <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span>
+                  <span style={styles.locationIcon}>📍</span>
                   {safeString(exp.location)}
                 </span>
               )}
@@ -1380,7 +1381,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
               <div style={styles.achievements}>
                 {achievements.map((achievement, idx) => (
                   <div key={idx} style={styles.achievement}>
-                    <span style={styles.achievementBullet}>Ã¢â‚¬Â¢</span>
+                    <span style={styles.achievementBullet}>•</span>
                     <span style={styles.achievementText}>{achievement}</span>
                   </div>
                 ))}
@@ -1436,7 +1437,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
           </span>
           {edu.location && (
             <span style={styles.eduLocation}>
-              <span>Ã°Å¸â€œÂ</span> {safeString(edu.location)}
+              <span>📍</span> {safeString(edu.location)}
             </span>
           )}
         </div>
@@ -1451,7 +1452,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
           <div style={styles.eduAchievements}>
             {edu.achievements.map((achievement, idx) => (
               <div key={idx} style={styles.eduAchievementItem}>
-                <span style={styles.eduAchievementBullet}>Ã¢â‚¬Â¢</span>
+                <span style={styles.eduAchievementBullet}>•</span>
                 <span style={styles.eduAchievementText}>{achievement}</span>
               </div>
             ))}
@@ -1488,7 +1489,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
         {(issuer || date) && (
           <div style={styles.awardMeta}>
             {issuer && <span style={styles.awardIssuer}>{issuer}</span>}
-            {issuer && date && <span style={styles.awardSeparator}>Ã¢â‚¬Â¢</span>}
+            {issuer && date && <span style={styles.awardSeparator}>•</span>}
             {date && <span style={styles.awardDate}>{date}</span>}
           </div>
         )}
@@ -1671,7 +1672,7 @@ const Template16 = ({ isExporting = false, ...props }) => {
             </section>
           ) : (
             <div style={styles.noExperience}>
-              <div style={styles.noExperienceIcon}>Ã°Å¸â€™Â¼</div>
+              <div style={styles.noExperienceIcon}>💼</div>
               <p style={styles.noExperienceText}>No experience added yet</p>
               <small style={styles.noExperienceHint}>Add your first experience to showcase here</small>
             </div>

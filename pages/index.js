@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 
@@ -353,7 +354,7 @@ export default function HomePage() {
           </div>
           <div style={{textAlign: 'center', marginTop: '30px'}}>
             <Link href="/templates" style={{color: '#0070f3', textDecoration: 'none', fontWeight: 500}}>
-              View All 20+ Templates Ã¢â€ â€™
+              View All 20+ Templates →
             </Link>
           </div>
         </section>
@@ -437,7 +438,7 @@ export default function HomePage() {
                     {post.title}
                   </h3>
                   <span style={{color: '#0070f3', fontWeight: 500, fontSize: '0.9rem'}}>
-                    Read More Ã¢â€ â€™
+                    Read More →
                   </span>
                 </div>
               </Link>
@@ -445,7 +446,7 @@ export default function HomePage() {
           </div>
           <div style={{textAlign: 'center', marginTop: '30px'}}>
             <Link href="/blog" style={{color: '#0070f3', textDecoration: 'none', fontWeight: 500}}>
-              Read All Articles Ã¢â€ â€™
+              Read All Articles →
             </Link>
           </div>
         </section>
@@ -493,7 +494,7 @@ export default function HomePage() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Create My Resume Now Ã¢â€ â€™
+            Create My Resume Now →
           </Link>
         </section>
 
@@ -506,7 +507,7 @@ export default function HomePage() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Maker. Create professional resumes instantly.</p>
+          <p>© {new Date().getFullYear()} Free Resume Maker. Create professional resumes instantly.</p>
           <div style={{
             marginTop: '12px',
             display: 'flex',

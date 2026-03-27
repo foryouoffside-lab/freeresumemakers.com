@@ -1,4 +1,5 @@
-﻿// pages/templates/compare/17-vs-19.js
+﻿import React from 'react';
+// pages/templates/compare/17-vs-19.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -205,11 +206,11 @@ export default function CompareTemplate17vs19() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Innovator 2.0 vs The Scholar 2.0</span>
         </div>
 
@@ -271,11 +272,11 @@ export default function CompareTemplate17vs19() {
                 }
               }}
             >
-              {tab === 'overview' && 'Ã°Å¸â€œâ€¹ Overview'}
-              {tab === 'features' && 'Ã¢Å¡Â¡ Features'}
-              {tab === 'visual' && 'Ã°Å¸Å½Â¨ Visual Comparison'}
-              {tab === 'industry' && 'Ã°Å¸ÂÂ¢ Industry Fit'}
-              {tab === 'verdict' && 'Ã¢Å¡â€“Ã¯Â¸Â Final Verdict'}
+              {tab === 'overview' && '📋 Overview'}
+              {tab === 'features' && '⚡ Features'}
+              {tab === 'visual' && '🎨 Visual Comparison'}
+              {tab === 'industry' && '🏢 Industry Fit'}
+              {tab === 'verdict' && '⚖️ Final Verdict'}
             </button>
           ))}
         </div>
@@ -559,7 +560,7 @@ export default function CompareTemplate17vs19() {
                     <th style={{ padding: '20px', textAlign: 'left', fontSize: '1.1rem' }}>Feature</th>
                     <th style={{ padding: '20px', textAlign: 'center', fontSize: '1.1rem', color: '#8b5cf6' }}>The Innovator 2.0</th>
                     <th style={{ padding: '20px', textAlign: 'center', fontSize: '1.1rem', color: '#2563eb' }}>The Scholar 2.0</th>
-                  </tr>
+                   </tr>
                 </thead>
                 <tbody>
                   {[
@@ -574,22 +575,22 @@ export default function CompareTemplate17vs19() {
                     { feature: 'Maximum Languages', t1: '3', t2: '3' },
                     { feature: 'Maximum Tools', t1: '6', t2: '5' },
                     { feature: 'Maximum Core Strengths', t1: '4', t2: '4' },
-                    { feature: 'Publications Section', t1: 'Ã¢Å“â€” No', t2: 'Ã¢Å“â€œ Yes (2 max)' },
-                    { feature: 'Hobbies Section', t1: 'Ã¢Å“â€œ Yes (2 max)', t2: 'Ã¢Å“â€œ Yes (3 max)' },
-                    { feature: 'Avatar/Photo', t1: 'Ã¢Å“â€œ Yes', t2: 'Ã¢Å“â€œ Yes (sidebar)' },
-                    { feature: 'Contact Strip', t1: 'Ã¢Å“â€œ Yes (header)', t2: 'Ã¢Å“â€” No (sidebar)' },
+                    { feature: 'Publications Section', t1: '✗ No', t2: '✓ Yes (2 max)' },
+                    { feature: 'Hobbies Section', t1: '✓ Yes (2 max)', t2: '✓ Yes (3 max)' },
+                    { feature: 'Avatar/Photo', t1: '✓ Yes', t2: '✓ Yes (sidebar)' },
+                    { feature: 'Contact Strip', t1: '✓ Yes (header)', t2: '✗ No (sidebar)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 14 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('Ã¢Å“â€œ') ? (
+                        {row.t1.includes('✓') ? (
                           <span style={{ color: '#8b5cf6', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('Ã¢Å“â€œ') ? (
+                        {row.t2.includes('✓') ? (
                           <span style={{ color: '#2563eb', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -609,7 +610,7 @@ export default function CompareTemplate17vs19() {
               borderRadius: '12px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '15px', color: '#333' }}>
-                Ã°Å¸â€œÅ  Primary Focus Areas
+                📊 Primary Focus Areas
               </h3>
               <div style={{
                 display: 'grid',
@@ -619,21 +620,21 @@ export default function CompareTemplate17vs19() {
                 <div>
                   <h4 style={{ color: '#8b5cf6', marginBottom: '10px' }}>The Innovator 2.0 focuses on:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>Ã¢Å“â€œ Internships (3 max) - perfect for students</li>
-                    <li>Ã¢Å“â€œ Projects (4 max) - showcase portfolio work</li>
-                    <li>Ã¢Å“â€œ Tech tags - highlight technical skills</li>
-                    <li>Ã¢Å“â€œ Awards (4 max) - recognize achievements</li>
-                    <li>Ã¢Å“â€œ Card-based design - modern, scannable</li>
+                    <li>✓ Internships (3 max) - perfect for students</li>
+                    <li>✓ Projects (4 max) - showcase portfolio work</li>
+                    <li>✓ Tech tags - highlight technical skills</li>
+                    <li>✓ Awards (4 max) - recognize achievements</li>
+                    <li>✓ Card-based design - modern, scannable</li>
                   </ul>
                 </div>
                 <div>
                   <h4 style={{ color: '#2563eb', marginBottom: '10px' }}>The Scholar 2.0 focuses on:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>Ã¢Å“â€œ Education (white-box styling) - academic credentials</li>
-                    <li>Ã¢Å“â€œ Publications (2 max) - research output</li>
-                    <li>Ã¢Å“â€œ Skills (20 max) - extensive expertise</li>
-                    <li>Ã¢Å“â€œ Certifications (3 max) - professional credentials</li>
-                    <li>Ã¢Å“â€œ Clean academic layout - scholarly appearance</li>
+                    <li>✓ Education (white-box styling) - academic credentials</li>
+                    <li>✓ Publications (2 max) - research output</li>
+                    <li>✓ Skills (20 max) - extensive expertise</li>
+                    <li>✓ Certifications (3 max) - professional credentials</li>
+                    <li>✓ Clean academic layout - scholarly appearance</li>
                   </ul>
                 </div>
               </div>
@@ -648,7 +649,7 @@ export default function CompareTemplate17vs19() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginBottom: '15px' }}>
-                  Ã¢Å“â€¦ The Innovator 2.0 - Pros
+                  ✅ The Innovator 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template17.pros.map((item, index) => (
@@ -656,7 +657,7 @@ export default function CompareTemplate17vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginTop: '25px', marginBottom: '15px' }}>
-                  Ã¢Å¡Â Ã¯Â¸Â The Innovator 2.0 - Cons
+                  ⚠️ The Innovator 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template17.cons.map((item, index) => (
@@ -666,7 +667,7 @@ export default function CompareTemplate17vs19() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginBottom: '15px' }}>
-                  Ã¢Å“â€¦ The Scholar 2.0 - Pros
+                  ✅ The Scholar 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.pros.map((item, index) => (
@@ -674,7 +675,7 @@ export default function CompareTemplate17vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginTop: '25px', marginBottom: '15px' }}>
-                  Ã¢Å¡Â Ã¯Â¸Â The Scholar 2.0 - Cons
+                  ⚠️ The Scholar 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.cons.map((item, index) => (
@@ -724,7 +725,7 @@ export default function CompareTemplate17vs19() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/17" style={{ color: '#8b5cf6', textDecoration: 'underline' }}>
-                      View Full Details Ã¢â€ â€™
+                      View Full Details →
                     </Link>
                   </div>
                 </div>
@@ -752,7 +753,7 @@ export default function CompareTemplate17vs19() {
                   />
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/19" style={{ color: '#2563eb', textDecoration: 'underline' }}>
-                      View Full Details Ã¢â€ â€™
+                      View Full Details →
                     </Link>
                   </div>
                 </div>
@@ -938,7 +939,7 @@ export default function CompareTemplate17vs19() {
                 padding: '30px',
                 border: '1px solid #c4b5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸Å¡â‚¬</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🚀</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#8b5cf6', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Innovator 2.0
                 </h3>
@@ -968,7 +969,7 @@ export default function CompareTemplate17vs19() {
                 padding: '30px',
                 border: '1px solid #93c5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸â€œÅ¡</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📚</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2563eb', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar 2.0
                 </h3>
@@ -1002,7 +1003,7 @@ export default function CompareTemplate17vs19() {
               marginBottom: '40px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                Ã°Å¸â€™Â¡ Expert Tip: Know Your Audience
+                💡 Expert Tip: Know Your Audience
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 The choice between these templates often comes down to your target industry and career stage. Students applying to tech internships will find The Innovator 2.0's project showcase invaluable. PhD candidates applying to faculty positions need The Scholar 2.0's publications section. Consider not just where you are now, but where you want to go - and choose the template that best tells that story.
@@ -1030,28 +1031,28 @@ export default function CompareTemplate17vs19() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#2563eb' }}>The Scholar 2.0</div>
                 
                 <div>Internship applications</div>
-                <div style={{ color: '#8b5cf6' }}>Ã¢Å“â€œÃ¢Å“â€œ Perfect (3 max)</div>
-                <div style={{ color: '#2563eb' }}>Ã¢Å“â€œ Good (2 max)</div>
+                <div style={{ color: '#8b5cf6' }}>✓✓ Perfect (3 max)</div>
+                <div style={{ color: '#2563eb' }}>✓ Good (2 max)</div>
                 
                 <div>Project portfolio</div>
-                <div style={{ color: '#8b5cf6' }}>Ã¢Å“â€œÃ¢Å“â€œ 4 projects max</div>
-                <div style={{ color: '#2563eb' }}>Ã¢Å“â€œ 3 projects max</div>
+                <div style={{ color: '#8b5cf6' }}>✓✓ 4 projects max</div>
+                <div style={{ color: '#2563eb' }}>✓ 3 projects max</div>
                 
                 <div>Publications</div>
-                <div style={{ color: '#999' }}>Ã¢Å“â€” Not available</div>
-                <div style={{ color: '#2563eb' }}>Ã¢Å“â€œÃ¢Å“â€œ Yes (2 max)</div>
+                <div style={{ color: '#999' }}>✗ Not available</div>
+                <div style={{ color: '#2563eb' }}>✓✓ Yes (2 max)</div>
                 
                 <div>Education emphasis</div>
-                <div style={{ color: '#8b5cf6' }}>Ã¢Å“â€œ Standard</div>
-                <div style={{ color: '#2563eb' }}>Ã¢Å“â€œÃ¢Å“â€œ White-box styling</div>
+                <div style={{ color: '#8b5cf6' }}>✓ Standard</div>
+                <div style={{ color: '#2563eb' }}>✓✓ White-box styling</div>
                 
                 <div>Skills display</div>
                 <div style={{ color: '#8b5cf6' }}>15 skills max</div>
                 <div style={{ color: '#2563eb' }}>20 skills max</div>
                 
                 <div>Tech industry focus</div>
-                <div style={{ color: '#8b5cf6' }}>Ã¢Å“â€œÃ¢Å“â€œ Perfect</div>
-                <div style={{ color: '#999' }}>Ã¢Å“â€” Too academic</div>
+                <div style={{ color: '#8b5cf6' }}>✓✓ Perfect</div>
+                <div style={{ color: '#999' }}>✗ Too academic</div>
               </div>
             </div>
           </div>
@@ -1167,7 +1168,7 @@ export default function CompareTemplate17vs19() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

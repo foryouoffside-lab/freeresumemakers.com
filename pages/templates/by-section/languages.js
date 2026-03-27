@@ -1,4 +1,5 @@
-﻿import SEO from '../../../components/SEO';
+﻿import React from 'react';
+import SEO from '../../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -162,13 +163,13 @@ export default function BySectionLanguages() {
             color: '#666'
           }}>
             <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-            <span>â€º</span>
+            <span>›</span>
             <Link href="/templates/by-section/languages" style={{ color: '#666', textDecoration: 'none' }}>Languages Section</Link>
-            <span>â€º</span>
+            <span>›</span>
             <span style={{ color: '#0070f3' }}>{selectedTemplate.name}</span>
           </nav>
 
@@ -199,7 +200,7 @@ export default function BySectionLanguages() {
               e.currentTarget.style.color = '#666';
             }}
           >
-            â† Back to All Languages Section Templates
+            ← Back to All Languages Section Templates
           </button>
 
           {/* Template Header */}
@@ -369,7 +370,7 @@ export default function BySectionLanguages() {
                   gap: '8px',
                   padding: '8px 0'
                 }}>
-                  <span style={{ color: '#0070f3', fontSize: '18px' }}>âœ“</span>
+                  <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
                   <span style={{ color: '#666' }}>{feature}</span>
                 </div>
               ))}
@@ -417,7 +418,7 @@ export default function BySectionLanguages() {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Use This Template â†’
+              Use This Template →
             </Link>
           </div>
         </div>
@@ -464,11 +465,11 @@ export default function BySectionLanguages() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates/by-section" style={{ color: '#666', textDecoration: 'none' }}>Templates by Section</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Languages Section</span>
         </nav>
 
@@ -520,7 +521,7 @@ export default function BySectionLanguages() {
             <div style={{ fontSize: '14px', color: '#666' }}>Language-Focused Templates</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CEFR â€¢ Native â€¢ Professional</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CEFR • Native • Professional</div>
             <div style={{ fontSize: '14px', color: '#666' }}>Multiple Proficiency Formats</div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -698,7 +699,7 @@ export default function BySectionLanguages() {
                   alignItems: 'center',
                   gap: '4px'
                 }}>
-                  View Template Details â†’
+                  View Template Details →
                 </span>
               </div>
             </div>
@@ -782,7 +783,7 @@ export default function BySectionLanguages() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now â†’
+            Start Building Now →
           </Link>
         </div>
 
@@ -799,10 +800,10 @@ export default function BySectionLanguages() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-list-languages-on-resume" style={{ color: '#0070f3' }}>How to List Languages on Your Resume â†’</Link>
-            <Link href="/blog/language-proficiency-levels-guide" style={{ color: '#0070f3' }}>Language Proficiency Levels Guide â†’</Link>
-            <Link href="/templates/by-section/skills" style={{ color: '#0070f3' }}>Templates with Skills Section â†’</Link>
-            <Link href="/blog/international-resume-tips" style={{ color: '#0070f3' }}>International Resume Tips â†’</Link>
+            <Link href="/blog/how-to-list-languages-on-resume" style={{ color: '#0070f3' }}>How to List Languages on Your Resume →</Link>
+            <Link href="/blog/language-proficiency-levels-guide" style={{ color: '#0070f3' }}>Language Proficiency Levels Guide →</Link>
+            <Link href="/templates/by-section/skills" style={{ color: '#0070f3' }}>Templates with Skills Section →</Link>
+            <Link href="/blog/international-resume-tips" style={{ color: '#0070f3' }}>International Resume Tips →</Link>
           </div>
         </div>
       </div>

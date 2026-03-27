@@ -1,4 +1,5 @@
-﻿// pages/templates/compare/19-vs-20.js
+﻿import React from 'react';
+// pages/templates/compare/19-vs-20.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -182,11 +183,11 @@ export default function CompareTemplate19vs20() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <span style={{ color: '#333', fontWeight: 500 }}>The Scholar 2.0 vs The Engineer</span>
         </div>
 
@@ -248,11 +249,11 @@ export default function CompareTemplate19vs20() {
                 }
               }}
             >
-              {tab === 'overview' && 'Ã°Å¸â€œâ€¹ Overview'}
-              {tab === 'features' && 'Ã¢Å¡Â¡ Features'}
-              {tab === 'visual' && 'Ã°Å¸Å½Â¨ Visual Comparison'}
-              {tab === 'industry' && 'Ã°Å¸ÂÂ¢ Industry Fit'}
-              {tab === 'verdict' && 'Ã¢Å¡â€“Ã¯Â¸Â Final Verdict'}
+              {tab === 'overview' && '📋 Overview'}
+              {tab === 'features' && '⚡ Features'}
+              {tab === 'visual' && '🎨 Visual Comparison'}
+              {tab === 'industry' && '🏢 Industry Fit'}
+              {tab === 'verdict' && '⚖️ Final Verdict'}
             </button>
           ))}
         </div>
@@ -299,7 +300,7 @@ export default function CompareTemplate19vs20() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>Ã°Å¸Å½â€œ</div>
+                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🎓</div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#8B4513' }}>The Scholar 2.0</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
                       <div>PhD, Computer Science</div>
@@ -382,7 +383,7 @@ export default function CompareTemplate19vs20() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>Ã¢Å¡â„¢Ã¯Â¸Â</div>
+                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>⚙️</div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#0A2472' }}>The Engineer</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
                       <div>Lead Software Engineer</div>
@@ -532,34 +533,34 @@ export default function CompareTemplate19vs20() {
                     <th style={{ padding: '20px', textAlign: 'left', fontSize: '1.1rem' }}>Feature</th>
                     <th style={{ padding: '20px', textAlign: 'center', fontSize: '1.1rem', color: '#8B4513' }}>The Scholar 2.0</th>
                     <th style={{ padding: '20px', textAlign: 'center', fontSize: '1.1rem', color: '#0A2472' }}>The Engineer</th>
-                  </tr>
+                   </tr>
                 </thead>
                 <tbody>
                   {[
                     { feature: 'Primary Focus', t1: 'Academic achievements', t2: 'Technical projects' },
-                    { feature: 'Education Section', t1: 'Ã¢Å“â€œ White-box featured styling', t2: 'Standard format' },
-                    { feature: 'Publications', t1: 'Ã¢Å“â€œ Dedicated section with citations', t2: 'Ã¢Å“â€” Not included' },
-                    { feature: 'Research Grants', t1: 'Ã¢Å“â€œ Highlighted', t2: 'Ã¢Å“â€” Not included' },
-                    { feature: 'Conference Presentations', t1: 'Ã¢Å“â€œ Dedicated section', t2: 'Ã¢Å“â€” Not included' },
-                    { feature: 'Teaching Experience', t1: 'Ã¢Å“â€œ Featured', t2: 'Standard if included' },
-                    { feature: 'Project Showcase', t1: 'Basic format', t2: 'Ã¢Å“â€œ Project-first layout with links' },
-                    { feature: 'Tech Stack', t1: 'Basic list', t2: 'Ã¢Å“â€œ Comprehensive matrix' },
-                    { feature: 'Team Leadership', t1: 'Standard', t2: 'Ã¢Å“â€œ Metrics and team size' },
-                    { feature: 'Repository Links', t1: 'Ã¢Å“â€” Not included', t2: 'Ã¢Å“â€œ GitHub integration' },
-                    { feature: 'Architecture Highlights', t1: 'Ã¢Å“â€” Not included', t2: 'Ã¢Å“â€œ Dedicated section' },
-                    { feature: 'Awards & Honors', t1: 'Ã¢Å“â€œ Academic awards featured', t2: 'Standard format' },
+                    { feature: 'Education Section', t1: '✓ White-box featured styling', t2: 'Standard format' },
+                    { feature: 'Publications', t1: '✓ Dedicated section with citations', t2: '✗ Not included' },
+                    { feature: 'Research Grants', t1: '✓ Highlighted', t2: '✗ Not included' },
+                    { feature: 'Conference Presentations', t1: '✓ Dedicated section', t2: '✗ Not included' },
+                    { feature: 'Teaching Experience', t1: '✓ Featured', t2: 'Standard if included' },
+                    { feature: 'Project Showcase', t1: 'Basic format', t2: '✓ Project-first layout with links' },
+                    { feature: 'Tech Stack', t1: 'Basic list', t2: '✓ Comprehensive matrix' },
+                    { feature: 'Team Leadership', t1: 'Standard', t2: '✓ Metrics and team size' },
+                    { feature: 'Repository Links', t1: '✗ Not included', t2: '✓ GitHub integration' },
+                    { feature: 'Architecture Highlights', t1: '✗ Not included', t2: '✓ Dedicated section' },
+                    { feature: 'Awards & Honors', t1: '✓ Academic awards featured', t2: 'Standard format' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('Ã¢Å“â€œ') ? (
+                        {row.t1.includes('✓') ? (
                           <span style={{ color: '#8B4513', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('Ã¢Å“â€œ') ? (
+                        {row.t2.includes('✓') ? (
                           <span style={{ color: '#0A2472', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -580,7 +581,7 @@ export default function CompareTemplate19vs20() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#8B4513', marginBottom: '15px' }}>
-                  Ã¢Å“â€¦ The Scholar 2.0 - Pros
+                  ✓ The Scholar 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.pros.map((item, index) => (
@@ -588,7 +589,7 @@ export default function CompareTemplate19vs20() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#8B4513', marginTop: '25px', marginBottom: '15px' }}>
-                  Ã¢Å¡Â Ã¯Â¸Â The Scholar 2.0 - Cons
+                  ⚠️ The Scholar 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.cons.map((item, index) => (
@@ -598,7 +599,7 @@ export default function CompareTemplate19vs20() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0A2472', marginBottom: '15px' }}>
-                  Ã¢Å“â€¦ The Engineer - Pros
+                  ✓ The Engineer - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template20.pros.map((item, index) => (
@@ -606,7 +607,7 @@ export default function CompareTemplate19vs20() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0A2472', marginTop: '25px', marginBottom: '15px' }}>
-                  Ã¢Å¡Â Ã¯Â¸Â The Engineer - Cons
+                  ⚠️ The Engineer - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template20.cons.map((item, index) => (
@@ -664,9 +665,9 @@ export default function CompareTemplate19vs20() {
                     </div>
 
                     <div style={{ marginBottom: '15px' }}>
-                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Ã°Å¸â€œÅ¡ SELECTED PUBLICATIONS</div>
-                      <div style={{ fontSize: '0.8rem', marginBottom: '5px' }}>Ã¢â‚¬Â¢ "Neural Networks in Education" - Nature</div>
-                      <div style={{ fontSize: '0.8rem' }}>Ã¢â‚¬Â¢ "AI Learning Models" - IEEE</div>
+                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>📚 SELECTED PUBLICATIONS</div>
+                      <div style={{ fontSize: '0.8rem', marginBottom: '5px' }}>• "Neural Networks in Education" - Nature</div>
+                      <div style={{ fontSize: '0.8rem' }}>• "AI Learning Models" - IEEE</div>
                     </div>
 
                     <div style={{ background: '#8B451310', padding: '8px', borderRadius: '4px', fontSize: '0.8rem' }}>
@@ -675,7 +676,7 @@ export default function CompareTemplate19vs20() {
                   </div>
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/19" style={{ color: '#8B4513', textDecoration: 'underline' }}>
-                      View Full Details Ã¢â€ â€™
+                      View Full Details →
                     </Link>
                   </div>
                 </div>
@@ -707,7 +708,7 @@ export default function CompareTemplate19vs20() {
                     <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '15px' }}>Lead Software Engineer</div>
                     
                     <div style={{ marginBottom: '15px' }}>
-                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Ã°Å¸Å¡â‚¬ FEATURED PROJECTS</div>
+                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>🚀 FEATURED PROJECTS</div>
                       <div style={{ background: 'white', padding: '10px', borderRadius: '6px', marginBottom: '8px' }}>
                         <div style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>CloudScale Platform</div>
                         <div style={{ fontSize: '0.8rem', color: '#0A2472' }}>github.com/mchen/cloudscale</div>
@@ -727,7 +728,7 @@ export default function CompareTemplate19vs20() {
                   </div>
                   <div style={{ marginTop: '20px' }}>
                     <Link href="/templates/20" style={{ color: '#0A2472', textDecoration: 'underline' }}>
-                      View Full Details Ã¢â€ â€™
+                      View Full Details →
                     </Link>
                   </div>
                 </div>
@@ -915,7 +916,7 @@ export default function CompareTemplate19vs20() {
                 padding: '30px',
                 border: '1px solid #8B4513'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã°Å¸â€œÅ¡</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📚</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#8B4513', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar 2.0
                 </h3>
@@ -945,7 +946,7 @@ export default function CompareTemplate19vs20() {
                 padding: '30px',
                 border: '1px solid #0A2472'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>Ã¢Å¡â„¢Ã¯Â¸Â</div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>⚙️</div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0A2472', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Engineer
                 </h3>
@@ -978,7 +979,7 @@ export default function CompareTemplate19vs20() {
               border: '1px solid #667eea'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#0A2472' }}>
-                Ã°Å¸â€™Â¡ Expert Tip: Industry-Academia Bridge
+                💡 Expert Tip: Industry-Academia Bridge
               </h3>
               <p style={{ color: '#333', lineHeight: '1.7', margin: 0 }}>
                 Are you a PhD considering industry? Or an engineer moving into research? Keep both templates! Use The Scholar 2.0 for academic applications and research positions, and The Engineer for industry roles. Many successful professionals maintain multiple versions of their resume for different career tracks.
@@ -1095,7 +1096,7 @@ export default function CompareTemplate19vs20() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>&copy; {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

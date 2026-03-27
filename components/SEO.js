@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const SEO = ({
@@ -117,4 +118,3 @@ const SEO = ({
 };
 
 export default SEO;
-

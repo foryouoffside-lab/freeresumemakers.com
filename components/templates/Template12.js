@@ -7,8 +7,10 @@ const CONTENT_LIMITS = {
   experiences: 3,        // INCREASED from 2 to 3
   education: 2,          // INCREASED from 1 to 2
   certifications: 2,     // INCREASED from 1 to 2
+  projects: 3,           // ADDED: Project limit
   summaryWords: 100,
   achievementsPerExperience: 4,
+  achievementsPerProject: 4,
   achievementLength: 140,
 };
 
@@ -30,13 +32,13 @@ const SPACING_CONFIG = {
 
 // ===== ICON MAPPING - Using Template12 original icons =====
 const ICON_MAPPING = {
-  email: 'Ã¢Å“â€°',
-  phone: 'Ã°Å¸â€œÅ¾',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉',
+  phone: '📞',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },
-  github: 'Ã¢Å’Â¨',
-  portfolio: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨',
+  portfolio: '🌐',
+  default: '📌'
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -175,9 +177,9 @@ const formatEducationDateRange = (edu) => {
   const end = current ? 'Present' : formatWithMonth(endDate);
   
   if (start && end && end !== 'Present') {
-    return `${start} Ã¢â‚¬â€œ ${end}`;
+    return `${start} – ${end}`;
   } else if (start && current) {
-    return `${start} Ã¢â‚¬â€œ Present`;
+    return `${start} – Present`;
   } else if (start) {
     return start;
   } else if (end) {
@@ -686,7 +688,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
-      gap: '20px',  // ADDED: 3px space between CGPA and date
+      gap: '20px',
       marginTop: '0.2mm',
       marginBottom: '0'
     },
@@ -1142,7 +1144,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.expPosition}>{safeString(exp.position) || 'Position Not Specified'}</h3>
             <div style={styles.dateStyle}>
-              {exp.startDate ? formatDate(exp.startDate) : 'Start'} Ã¢â‚¬â€œ {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
+              {exp.startDate ? formatDate(exp.startDate) : 'Start'} – {exp.current ? 'Present' : (exp.endDate ? formatDate(exp.endDate) : 'End')}
             </div>
           </div>
           
@@ -1150,7 +1152,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
             <span style={styles.expCompany}>{safeString(exp.company) || 'Company Not Specified'}</span>
             {exp.companyLocation && exp.companyLocation.trim() && (
               <span style={styles.expLocation}>
-                <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span>
+                <span style={styles.locationIcon}>📍</span>
                 <span>{exp.companyLocation}</span>
               </span>
             )}
@@ -1198,7 +1200,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
           <div style={styles.titleDateRow}>
             <h3 style={styles.projectName}>{project.name || 'Project Name'}</h3>
             <div style={styles.projectDates}>
-              {project.startDate ? formatDate(project.startDate) : 'Start'} Ã¢â‚¬â€œ {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
+              {project.startDate ? formatDate(project.startDate) : 'Start'} – {project.current ? 'Present' : (project.endDate ? formatDate(project.endDate) : 'End')}
             </div>
           </div>
           
@@ -1250,7 +1252,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
         
         {edu.location && (
           <div style={styles.eduLocationLeft}>
-            <span>Ã°Å¸â€œÂ</span> {edu.location}
+            <span>📍</span> {edu.location}
           </div>
         )}
         
@@ -1375,7 +1377,6 @@ const Template12 = ({ isExporting = false, ...props }) => {
   };
 
   // Professional title removed - no longer displayed
-  // const professionalTitle = displayProfessionalTitle(); - REMOVED
 
   // Add print styles
   const printStyles = `
@@ -1475,7 +1476,7 @@ const Template12 = ({ isExporting = false, ...props }) => {
               <div style={styles.skillsContent}>
                 {contentAnalysis.skills.map((skill, index) => (
                   <div key={index} style={styles.skillLine}>
-                    <div style={styles.skillBullet}>Ã¢â€”Â</div>
+                    <div style={styles.skillBullet}>●</div>
                     <div style={styles.skillName}>{skill}</div>
                   </div>
                 ))}

@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -78,7 +79,7 @@ export default function ToolsSectionGuide() {
             "position": 4,
             "itemListElement": {
               "@type": "HowToDirection",
-              "text": "Don't just list toolsÃ¢â‚¬â€demonstrate how you used them to achieve results. Example: 'Used Salesforce to increase lead conversion by 35%.'"
+              "text": "Don't just list tools—demonstrate how you used them to achieve results. Example: 'Used Salesforce to increase lead conversion by 35%.'"
             }
           },
           {
@@ -117,7 +118,7 @@ export default function ToolsSectionGuide() {
             "name": "What tools should I list on my resume?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "List tools that are relevant to your target role and mentioned in job descriptions. Include industry-standard tools like Adobe Creative Suite for designers, Git for developers, Salesforce for sales, or Excel for analysts. Quality over quantityÃ¢â‚¬â€focus on tools you can confidently use."
+              "text": "List tools that are relevant to your target role and mentioned in job descriptions. Include industry-standard tools like Adobe Creative Suite for designers, Git for developers, Salesforce for sales, or Excel for analysts. Quality over quantity—focus on tools you can confidently use."
             }
           }
         ]
@@ -157,7 +158,7 @@ export default function ToolsSectionGuide() {
     },
     {
       q: "How do I list proficiency levels for tools?",
-      a: "Use clear, text-based terms: 'Advanced' (3+ years, can train others), 'Intermediate' (1-2 years, independent work), or 'Working Knowledge' (basic proficiency). Example: 'Photoshop (Advanced), Figma (Advanced), Sketch (Intermediate).' Avoid visual skill barsÃ¢â‚¬â€they don't work with ATS."
+      a: "Use clear, text-based terms: 'Advanced' (3+ years, can train others), 'Intermediate' (1-2 years, independent work), or 'Working Knowledge' (basic proficiency). Example: 'Photoshop (Advanced), Figma (Advanced), Sketch (Intermediate).' Avoid visual skill bars—they don't work with ATS."
     },
     {
       q: "What tools should I list on my resume?",
@@ -165,7 +166,7 @@ export default function ToolsSectionGuide() {
     },
     {
       q: "Should I include tools I used in previous jobs but am not expert in?",
-      a: "Yes, include them with honest proficiency levels. Even intermediate skills demonstrate familiarity and adaptability. Example: 'Worked with Docker and Kubernetes (basic deployment experience).' Always be truthfulÃ¢â‚¬â€you may be tested in interviews."
+      a: "Yes, include them with honest proficiency levels. Even intermediate skills demonstrate familiarity and adaptability. Example: 'Worked with Docker and Kubernetes (basic deployment experience).' Always be truthful—you may be tested in interviews."
     },
     {
       q: "How do I list tools if I'm applying for different industries?",
@@ -180,7 +181,7 @@ export default function ToolsSectionGuide() {
   // Extended tool categories with detailed examples
   const toolCategories = [
     {
-      icon: "Ã°Å¸Å½Â¨",
+      icon: "🎨",
       title: "Design & Creative Tools",
       tools: [
         { category: "Adobe Creative Suite", items: "Photoshop (Advanced), Illustrator (Advanced), InDesign (Intermediate), After Effects (Intermediate), Premiere Pro (Intermediate), Lightroom (Advanced)" },
@@ -190,7 +191,7 @@ export default function ToolsSectionGuide() {
       ]
     },
     {
-      icon: "Ã°Å¸â€™Â»",
+      icon: "💻",
       title: "Development & DevOps Tools",
       tools: [
         { category: "Version Control", items: "Git (Advanced), GitHub (Advanced), GitLab, Bitbucket" },
@@ -202,7 +203,7 @@ export default function ToolsSectionGuide() {
       ]
     },
     {
-      icon: "Ã°Å¸â€œÅ ",
+      icon: "📊",
       title: "Data & Analytics Tools",
       tools: [
         { category: "Data Visualization", items: "Tableau (Advanced), Power BI, Looker, Google Data Studio, D3.js" },
@@ -213,7 +214,7 @@ export default function ToolsSectionGuide() {
       ]
     },
     {
-      icon: "Ã°Å¸â€œâ€¹",
+      icon: "📋",
       title: "Project Management & Collaboration",
       tools: [
         { category: "Project Management", items: "Jira (Advanced), Asana, Trello, Monday.com, ClickUp, Basecamp, Notion" },
@@ -223,7 +224,7 @@ export default function ToolsSectionGuide() {
       ]
     },
     {
-      icon: "Ã°Å¸â€œË†",
+      icon: "📈",
       title: "Marketing & CRM Tools",
       tools: [
         { category: "CRM Systems", items: "Salesforce (Advanced), HubSpot, Zoho CRM, Pipedrive, Microsoft Dynamics" },
@@ -234,7 +235,7 @@ export default function ToolsSectionGuide() {
       ]
     },
     {
-      icon: "Ã°Å¸ÂÂ¥",
+      icon: "🏥",
       title: "Healthcare Tools",
       tools: [
         { category: "EMR/EHR Systems", items: "Epic, Cerner, Allscripts, Meditech, Athenahealth" },
@@ -258,18 +259,18 @@ export default function ToolsSectionGuide() {
       title: "Simple Bulleted List",
       style: "simple",
       content: `<strong>Technical Tools & Technologies</strong><br/>
-Ã¢â‚¬Â¢ Git, GitHub, GitLab<br/>
-Ã¢â‚¬Â¢ Docker, Kubernetes, Jenkins<br/>
-Ã¢â‚¬Â¢ AWS (EC2, S3, Lambda, RDS)<br/>
-Ã¢â‚¬Â¢ Jira, Confluence, Asana<br/>
-Ã¢â‚¬Â¢ Figma, Miro, Notion`
+• Git, GitHub, GitLab<br/>
+• Docker, Kubernetes, Jenkins<br/>
+• AWS (EC2, S3, Lambda, RDS)<br/>
+• Jira, Confluence, Asana<br/>
+• Figma, Miro, Notion`
     },
     {
       title: "Two-Column Format (Modern)",
       style: "columns",
       content: `<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-<div><strong>Design & Creative</strong><br/>Ã¢â‚¬Â¢ Figma (Advanced)<br/>Ã¢â‚¬Â¢ Adobe Creative Suite<br/>Ã¢â‚¬Â¢ Sketch<br/>Ã¢â‚¬Â¢ Miro</div>
-<div><strong>Development & DevOps</strong><br/>Ã¢â‚¬Â¢ Git/GitHub<br/>Ã¢â‚¬Â¢ Docker/Kubernetes<br/>Ã¢â‚¬Â¢ AWS<br/>Ã¢â‚¬Â¢ VS Code</div>
+<div><strong>Design & Creative</strong><br/>• Figma (Advanced)<br/>• Adobe Creative Suite<br/>• Sketch<br/>• Miro</div>
+<div><strong>Development & DevOps</strong><br/>• Git/GitHub<br/>• Docker/Kubernetes<br/>• AWS<br/>• VS Code</div>
 </div>`
     },
     {
@@ -310,9 +311,9 @@ export default function ToolsSectionGuide() {
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '30px', fontSize: '14px', color: '#666' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <Link href="/sections" style={{ color: '#666', textDecoration: 'none' }}>Resume Sections</Link>
-          <span aria-hidden="true">Ã¢â‚¬Âº</span>
+          <span aria-hidden="true">›</span>
           <span style={{ color: '#0070f3' }} aria-current="page">Tools Guide</span>
         </nav>
 
@@ -322,10 +323,10 @@ export default function ToolsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>Ã°Å¸â€œâ€¦ Updated: March 24, 2026</span>
-            <span>Ã¢ÂÂ±Ã¯Â¸Â 10 min read</span>
-            <span>Ã°Å¸â€˜ÂÃ¯Â¸Â 38,000+ readers</span>
-            <span>Ã°Å¸â€ºÂ Ã¯Â¸Â 100+ Tools Examples</span>
+            <span>📅 Updated: March 24, 2026</span>
+            <span>⏱️ 10 min read</span>
+            <span>👁️ 38,000+ readers</span>
+            <span>🛠️ 100+ Tools Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -343,13 +344,13 @@ export default function ToolsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Ã°Å¸â€œâ€“ Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Format Examples</a>
-            <a href="#categories" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ Tools by Category</a>
-            <a href="#organization" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ How to Organize</a>
-            <a href="#ats-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ ATS Optimization</a>
-            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>Ã¢â‚¬Â¢ FAQ</a>
+            <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Format Examples</a>
+            <a href="#categories" style={{ color: '#0070f3', textDecoration: 'none' }}>• Tools by Category</a>
+            <a href="#organization" style={{ color: '#0070f3', textDecoration: 'none' }}>• How to Organize</a>
+            <a href="#ats-tips" style={{ color: '#0070f3', textDecoration: 'none' }}>• ATS Optimization</a>
+            <a href="#faq" style={{ color: '#0070f3', textDecoration: 'none' }}>• FAQ</a>
           </div>
         </div>
 
@@ -362,7 +363,7 @@ export default function ToolsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>Ã°Å¸â€™Â¡ 2026 Pro Tip:</strong> Don't just list toolsÃ¢â‚¬â€showcase them in action within your experience section. 
+            <strong>💡 2026 Pro Tip:</strong> Don't just list tools—showcase them in action within your experience section. 
             Instead of "Figma (Advanced)," write "Used Figma to design responsive prototypes that reduced development time by 30%." 
             This demonstrates practical application and results, not just tool familiarity.
           </p>
@@ -424,22 +425,22 @@ export default function ToolsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸â€œâ€š</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📂</div>
               <strong>By Category</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Group similar tools together (Design Tools, Development Tools, Project Management, Data Analytics). This makes your skills section scannable and organized.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã¢Â­Â</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>⭐</div>
               <strong>By Proficiency</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Indicate skill level for key tools: Advanced (3+ years), Intermediate (1-2 years), Working Knowledge. Avoid visual skill bars.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸Å½Â¯</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>🎯</div>
               <strong>By Relevance</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>List tools most relevant to the job first, especially those explicitly mentioned in the job description.</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>Ã°Å¸â€œÂ</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📝</div>
               <strong>In Context</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Mention tools within experience bullets to show practical application: "Used Jira to manage sprint planning, increasing team velocity by 25%."</p>
             </div>
@@ -453,12 +454,12 @@ export default function ToolsSectionGuide() {
           </h2>
           <div style={{ background: '#e8f5e9', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #2e7d32' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>Ã¢Å“â€œ</strong> You have 5+ relevant technical tools to list</li>
-              <li><strong>Ã¢Å“â€œ</strong> The job description emphasizes specific software requirements</li>
-              <li><strong>Ã¢Å“â€œ</strong> You're in a technical field (design, development, data analysis, IT, marketing operations)</li>
-              <li><strong>Ã¢Å“â€œ</strong> Tools are critical to performing the job effectively</li>
-              <li><strong>Ã¢Å“â€œ</strong> You want to quickly demonstrate technical expertise to recruiters</li>
-              <li><strong>Ã¢Å“â€œ</strong> Your skills section would otherwise be too cluttered</li>
+              <li><strong>✓</strong> You have 5+ relevant technical tools to list</li>
+              <li><strong>✓</strong> The job description emphasizes specific software requirements</li>
+              <li><strong>✓</strong> You're in a technical field (design, development, data analysis, IT, marketing operations)</li>
+              <li><strong>✓</strong> Tools are critical to performing the job effectively</li>
+              <li><strong>✓</strong> You want to quickly demonstrate technical expertise to recruiters</li>
+              <li><strong>✓</strong> Your skills section would otherwise be too cluttered</li>
             </ul>
           </div>
         </section>
@@ -466,7 +467,7 @@ export default function ToolsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats-tips">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            Ã°Å¸Â¤â€“ ATS-Friendly Tools Formatting
+            🤖 ATS-Friendly Tools Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
@@ -526,7 +527,7 @@ export default function ToolsSectionGuide() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Build Your Resume Now Ã¢â€ â€™
+            Build Your Resume Now →
           </Link>
         </div>
 
@@ -537,12 +538,12 @@ export default function ToolsSectionGuide() {
           background: '#f8f9fa',
           borderRadius: '16px'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>Ã°Å¸â€œÅ¡ Related Resume Guides</h3>
+          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#1a1a1a' }}>📚 Related Resume Guides</h3>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide Ã¢â€ â€™</Link>
-            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Action Verbs for Tech Resumes Ã¢â€ â€™</Link>
-            <Link href="/professions/software-engineering" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Software Engineer Resume Examples Ã¢â€ â€™</Link>
-            <Link href="/professions/ux-designer" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>UX Designer Resume Examples Ã¢â€ â€™</Link>
+            <Link href="/sections/skills" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Skills Section Guide →</Link>
+            <Link href="/blog/action-verbs-for-resume" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Action Verbs for Tech Resumes →</Link>
+            <Link href="/professions/software-engineering" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>Software Engineer Resume Examples →</Link>
+            <Link href="/professions/ux-designer" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: 500 }}>UX Designer Resume Examples →</Link>
           </div>
         </div>
       </main>

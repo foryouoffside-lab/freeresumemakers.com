@@ -1,4 +1,5 @@
-﻿// pages/blog/resume-sections-guide.js
+﻿import React from 'react';
+// pages/blog/resume-sections-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -7,26 +8,26 @@ import { getAllTemplateIds, getTemplateSections } from '../../lib/templateConfig
 
 // Template data for best-for descriptions
 const templateData = {
-  1: { name: 'The Professional', bestFor: 'Business, Finance, Law, Management', icon: 'Ã°Å¸â€œÅ ' },
-  2: { name: 'The Innovator', bestFor: 'Tech, Marketing, Creative, Design', icon: 'Ã°Å¸â€™Â¡' },
-  3: { name: 'The Executive', bestFor: 'Senior Executives, Directors, Leadership', icon: 'Ã°Å¸â€˜â€' },
-  4: { name: 'The Strategist', bestFor: 'Consultants, Project Managers, Analysts', icon: 'Ã°Å¸â€œË†' },
-  5: { name: 'The Minimalist', bestFor: 'Tech, Startups, Modern Companies', icon: 'Ã¢Å¡Âª' },
-  6: { name: 'The Architect', bestFor: 'Engineers, Architects, Technical Roles', icon: 'Ã°Å¸Ââ€”Ã¯Â¸Â' },
-  7: { name: 'The Scholar', bestFor: 'Academics, Researchers, Educators', icon: 'Ã°Å¸â€œÅ¡' },
-  8: { name: 'The Traditionalist', bestFor: 'Government, Legal, Conservative Industries', icon: 'Ã°Å¸Ââ€ºÃ¯Â¸Â' },
-  9: { name: 'The Modernist', bestFor: 'Creative, Marketing, General Professional', icon: 'Ã¢Å“Â¨' },
-  10: { name: 'The Essential', bestFor: 'Students, Interns, Entry-Level', icon: 'Ã°Å¸Å½â€œ' },
-  11: { name: 'The Composer', bestFor: 'Humanities, Arts, Writing, Traditional Roles', icon: 'Ã°Å¸Å½Âµ' },
-  12: { name: 'The Blueprint', bestFor: 'Engineers, Architects, Technical Designers', icon: 'Ã°Å¸â€œÂ' },
-  13: { name: 'The Timeline', bestFor: 'Project Managers, Career Progression Focus', icon: 'Ã¢ÂÂ±Ã¯Â¸Â' },
-  14: { name: 'The Monochrome', bestFor: 'Legal, Government, Formal Roles', icon: 'Ã¢Å¡Â«' },
-  15: { name: 'The Compact', bestFor: 'Experienced Professionals, Dense Content', icon: 'Ã°Å¸â€œÂ¦' },
-  16: { name: 'The Minimal', bestFor: 'Creative, Design, Content-Focused Roles', icon: 'Ã°Å¸Å’â„¢' },
-  17: { name: 'The Innovator 2.0', bestFor: 'Students, Interns, Junior Developers', icon: 'Ã°Å¸Å¡â‚¬' },
-  18: { name: 'The Code', bestFor: 'Software Engineers, Developers, Programmers', icon: 'Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€™Â»' },
-  19: { name: 'The Scholar 2.0', bestFor: 'Academics, Researchers, Educators', icon: 'Ã°Å¸â€œâ€“' },
-  20: { name: 'The Engineer', bestFor: 'Software Engineers, Tech Leads, Developers', icon: 'Ã¢Å¡â„¢Ã¯Â¸Â' },
+  1: { name: 'The Professional', bestFor: 'Business, Finance, Law, Management', icon: '📊' },
+  2: { name: 'The Innovator', bestFor: 'Tech, Marketing, Creative, Design', icon: '💡' },
+  3: { name: 'The Executive', bestFor: 'Senior Executives, Directors, Leadership', icon: '👔' },
+  4: { name: 'The Strategist', bestFor: 'Consultants, Project Managers, Analysts', icon: '📈' },
+  5: { name: 'The Minimalist', bestFor: 'Tech, Startups, Modern Companies', icon: '⚪' },
+  6: { name: 'The Architect', bestFor: 'Engineers, Architects, Technical Roles', icon: '🏗️' },
+  7: { name: 'The Scholar', bestFor: 'Academics, Researchers, Educators', icon: '📚' },
+  8: { name: 'The Traditionalist', bestFor: 'Government, Legal, Conservative Industries', icon: '🏛️' },
+  9: { name: 'The Modernist', bestFor: 'Creative, Marketing, General Professional', icon: '✨' },
+  10: { name: 'The Essential', bestFor: 'Students, Interns, Entry-Level', icon: '🎓' },
+  11: { name: 'The Composer', bestFor: 'Humanities, Arts, Writing, Traditional Roles', icon: '🎵' },
+  12: { name: 'The Blueprint', bestFor: 'Engineers, Architects, Technical Designers', icon: '📐' },
+  13: { name: 'The Timeline', bestFor: 'Project Managers, Career Progression Focus', icon: '⏱️' },
+  14: { name: 'The Monochrome', bestFor: 'Legal, Government, Formal Roles', icon: '⚫' },
+  15: { name: 'The Compact', bestFor: 'Experienced Professionals, Dense Content', icon: '📦' },
+  16: { name: 'The Minimal', bestFor: 'Creative, Design, Content-Focused Roles', icon: '🌙' },
+  17: { name: 'The Innovator 2.0', bestFor: 'Students, Interns, Junior Developers', icon: '🚀' },
+  18: { name: 'The Code', bestFor: 'Software Engineers, Developers, Programmers', icon: '👨‍💻' },
+  19: { name: 'The Scholar 2.0', bestFor: 'Academics, Researchers, Educators', icon: '📖' },
+  20: { name: 'The Engineer', bestFor: 'Software Engineers, Tech Leads, Developers', icon: '⚙️' },
 };
 
 export default function ResumeSectionsGuide() {
@@ -268,9 +269,9 @@ export default function ResumeSectionsGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <span style={{ color: '#0070f3' }}>Resume Sections Guide</span>
         </div>
 
@@ -509,11 +510,11 @@ export default function ResumeSectionsGuide() {
                   <th style={{ padding: '12px', textAlign: 'left', border: '1px solid #0070f3' }}>Sections</th>
                   <th style={{ padding: '12px', textAlign: 'left', border: '1px solid #0070f3' }}>Suitable For</th>
                   <th style={{ padding: '12px', textAlign: 'left', border: '1px solid #0070f3' }}>Preview</th>
-                 </tr>
+                </tr>
               </thead>
               <tbody>
                 {templateIds.map((id, index) => {
-                  const template = templateData[id] || { name: `Template ${id}`, bestFor: 'General Professional', icon: 'Ã°Å¸â€œâ€ž' };
+                  const template = templateData[id] || { name: `Template ${id}`, bestFor: 'General Professional', icon: '📄' };
                   const sectionsList = getTemplateSections(id);
                   
                   return (
@@ -570,7 +571,7 @@ export default function ResumeSectionsGuide() {
             marginBottom: '40px'
           }}>
             {templateIds.map(id => {
-              const template = templateData[id] || { name: `Template ${id}`, icon: 'Ã°Å¸â€œâ€ž' };
+              const template = templateData[id] || { name: `Template ${id}`, icon: '📄' };
               const sectionsList = getTemplateSections(id);
               
               return (
@@ -748,33 +749,33 @@ export default function ResumeSectionsGuide() {
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Essential Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>Ã¢Å“â€œ Contact Information</li>
-                  <li>Ã¢Å“â€œ Education</li>
-                  <li>Ã¢Å“â€œ Skills</li>
+                  <li>✓ Contact Information</li>
+                  <li>✓ Education</li>
+                  <li>✓ Skills</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Common Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>Ã¢Å“â€œ Work Experience</li>
-                  <li>Ã¢Å“â€œ Professional Summary</li>
+                  <li>✓ Work Experience</li>
+                  <li>✓ Professional Summary</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Optional Sections</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>Ã¢Å“â€œ Projects</li>
-                  <li>Ã¢Å“â€œ Certifications</li>
-                  <li>Ã¢Å“â€œ Languages</li>
-                  <li>Ã¢Å“â€œ Awards</li>
-                  <li>Ã¢Å“â€œ Volunteer Experience</li>
+                  <li>✓ Projects</li>
+                  <li>✓ Certifications</li>
+                  <li>✓ Languages</li>
+                  <li>✓ Awards</li>
+                  <li>✓ Volunteer Experience</li>
                 </ul>
               </div>
               <div>
                 <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Industry-Specific</h3>
                 <ul style={{ margin: 0 }}>
-                  <li>Ã¢Å“â€œ Publications (academic)</li>
-                  <li>Ã¢Å“â€œ References (executive)</li>
+                  <li>✓ Publications (academic)</li>
+                  <li>✓ References (executive)</li>
                 </ul>
               </div>
             </div>
@@ -843,7 +844,7 @@ export default function ResumeSectionsGuide() {
           color: 'white',
           textAlign: 'center'
         }}>
-          <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
+          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
           <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Sections Checklist</h2>
           <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
             Download our printable checklist to ensure your resume includes all relevant sections for your target role.
@@ -952,7 +953,7 @@ export default function ResumeSectionsGuide() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 24, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 24, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

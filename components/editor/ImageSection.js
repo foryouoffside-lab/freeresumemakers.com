@@ -420,7 +420,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
           </span>
         ) : (
           <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-            <span>â„¹ï¸</span>
+            <span>ℹ️</span>
             <span>{isMobile ? 'Photo increases interview chances' : 'Adding a photo increases interview chances by 40%'}</span>
           </span>
         )}
@@ -571,7 +571,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                         onChange={handlePhotoUpload}
                         style={{ display: 'none' }}
                       />
-                      <span>📄·</span>
+                      <span>🖼️</span>
                       Change
                     </label>
                     
@@ -596,7 +596,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                         }
                       }}
                     >
-                      <span>📄—‘ï¸</span>
+                      <span>🗑️</span>
                       Remove
                     </button>
                   </div>
@@ -668,7 +668,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                         fontSize: isMobile ? '32px' : '40px',
                         marginBottom: '8px',
                         color: '#9ca3af'
-                      }}>📄¸</div>
+                      }}>📸</div>
                       <div style={{
                         fontSize: isMobile ? '14px' : isTablet ? '16px' : '18px',
                         fontWeight: 600,
@@ -682,7 +682,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                         color: '#6b7280',
                         marginBottom: '10px'
                       }}>
-                        JPG, PNG, WebP â€¢ Max 2MB
+                        JPG, PNG, WebP • Max 2MB
                       </div>
                       <div style={{
                         display: 'inline-block',
@@ -740,7 +740,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                     alignItems: 'center',
                     gap: '8px'
                   }}>
-                    <span>📄‹</span>
+                    <span>💡</span>
                     Photo Requirements
                   </h3>
                   
@@ -749,7 +749,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                       { label: 'Formats', value: 'JPG, PNG, WebP' },
                       { label: 'Max Size', value: '2 MB' },
                       { label: 'Recommended', value: 'Square (1:1 ratio)' },
-                      { label: 'Min Dimensions', value: '400Ã—400 pixels' },
+                      { label: 'Min Dimensions', value: '400×400 pixels' },
                       { label: 'Background', value: 'Neutral, professional' }
                     ].map((item, index) => (
                       <div key={index} style={{
@@ -772,7 +772,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                           color: '#2563eb',
                           fontSize: '13px',
                           fontWeight: 'bold'
-                        }}>âœ“</div>
+                        }}>✓</div>
                         <div>
                           <div style={{ fontWeight: 600, fontSize: '13px', color: '#111827' }}>{item.label}</div>
                           <div style={{ fontSize: '12px', color: '#6b7280' }}>{item.value}</div>
@@ -789,7 +789,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                     border: '1px solid #bfdbfe'
                   }}>
                     <div style={{ fontSize: '12px', color: '#1e40af', textAlign: 'center' }}>
-                      📄’¡ Tip: A professional photo can increase interview chances by 40%
+                      💡 Tip: A professional photo can increase interview chances by 40%
                     </div>
                   </div>
                 </div>
@@ -815,7 +815,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                 alignItems: 'center',
                 gap: '6px'
               }}>
-                <span>📄‹</span>
+                <span>💡</span>
                 Photo Requirements
               </h3>
               <ul style={{
@@ -840,7 +840,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
                 color: '#1e40af',
                 textAlign: 'center'
               }}>
-                📄’¡ Professional photos increase interview chances by 40%
+                💡 Professional photos increase interview chances by 40%
               </div>
             </div>
           )}

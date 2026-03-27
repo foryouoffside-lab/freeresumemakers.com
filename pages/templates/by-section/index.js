@@ -1,4 +1,5 @@
-﻿import Link from 'next/link';
+﻿import React from 'react';
+import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import Head from 'next/head';
 
@@ -104,6 +105,38 @@ export default function BySectionIndex() {
     }))
   };
 
+  // FAQ schema for rich results
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which sections should I include on my resume?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Essential sections include Contact Information, Professional Summary, and Work Experience. Additional sections like Skills, Education, Projects, and Certifications depend on your industry and career level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right template for my needs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consider your industry, career level, and the sections you want to highlight. Use our 'Browse by Section' feature to find templates with specific sections that match your requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize which sections appear on my resume?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Our resume builder allows you to add, remove, and rearrange sections to create a personalized resume that best represents your experience and skills."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <SEO 
@@ -123,6 +156,10 @@ export default function BySectionIndex() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </Head>
 
       <div style={{ 
@@ -141,9 +178,9 @@ export default function BySectionIndex() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Browse by Section</span>
         </nav>
 
@@ -291,7 +328,7 @@ export default function BySectionIndex() {
                     alignItems: 'center',
                     gap: '4px'
                   }}>
-                    View Templates â†’
+                    View Templates →
                   </span>
                 </div>
               </div>
@@ -438,7 +475,7 @@ export default function BySectionIndex() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now â†’
+            Start Building Now →
           </Link>
         </div>
 
@@ -455,10 +492,10 @@ export default function BySectionIndex() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-            <Link href="/blog/how-to-choose-resume-sections" style={{ color: '#0070f3' }}>How to Choose Resume Sections â†’</Link>
-            <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3' }}>Resume Formatting Guide â†’</Link>
-            <Link href="/templates" style={{ color: '#0070f3' }}>All Resume Templates â†’</Link>
-            <Link href="/examples" style={{ color: '#0070f3' }}>Resume Examples by Industry â†’</Link>
+            <Link href="/blog/how-to-choose-resume-sections" style={{ color: '#0070f3' }}>How to Choose Resume Sections →</Link>
+            <Link href="/blog/resume-formatting-guide" style={{ color: '#0070f3' }}>Resume Formatting Guide →</Link>
+            <Link href="/templates" style={{ color: '#0070f3' }}>All Resume Templates →</Link>
+            <Link href="/examples" style={{ color: '#0070f3' }}>Resume Examples by Industry →</Link>
           </div>
         </div>
       </div>

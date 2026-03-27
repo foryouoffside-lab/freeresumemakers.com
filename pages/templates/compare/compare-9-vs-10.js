@@ -1,5 +1,7 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
 import { getTemplateSections, getSectionDisplayName, templateSectionLimits } from '../../../lib/templateConfig';
 
 export default function Compare9Vs10() {
@@ -133,39 +135,42 @@ export default function Compare9Vs10() {
 
   return (
     <>
+      <SEO 
+        title="Template 9 vs Template 10: The Modernist vs The Essential - Creative vs Corporate Resume Comparison 2026"
+        description="Compare Template 9 (The Modernist - Creative) vs Template 10 (The Essential - Corporate) side-by-side. Find the perfect resume style for designers, marketers, students, and entry-level professionals. Updated 2026 guide with ATS scores and industry recommendations."
+        keywords="template 9 vs 10, modernist vs essential, creative resume vs corporate resume, designer resume, entry-level resume, marketing resume, student resume template, modern vs traditional resume, The Modernist template, The Essential template, resume comparison 2026"
+        canonical="https://freeresumemaker.xyz/templates/compare/9-vs-10"
+        image="https://freeresumemaker.xyz/assets/og/template-comparison-9vs10.jpg"
+        type="article"
+      />
+      
       <Head>
-        {/* Primary SEO Tags */}
-        <title>Template 9 vs Template 10: The Modernist vs The Essential - Creative vs Corporate Resume (2026) | FreeResumeMakers</title>
-        <meta name="description" content="Compare Template 9 (The Modernist - Creative) vs Template 10 (The Essential - Corporate) side-by-side. Find the perfect resume style for designers, marketers, students, and entry-level professionals. Updated 2026 guide." />
-        <meta name="keywords" content="template 9 vs 10, modernist vs essential, creative resume vs corporate resume, designer resume, entry-level resume, marketing resume, student resume template, modern vs traditional resume" />
-        <meta name="author" content="FreeResumeMakers" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Free Resume Builder" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Canonical URL */}
         <link rel="canonical" href="https://freeresumemaker.xyz/templates/compare/9-vs-10" />
         
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Template 9 vs Template 10: The Modernist vs The Essential - Creative vs Corporate Resume" />
-        <meta property="og:description" content="Creative vs Corporate showdown! Compare The Modernist and The Essential side-by-side. See which resume style gets you hired in creative agencies or corporate roles." />
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://freeresumemaker.xyz/templates/compare/9-vs-10" />
+        <meta property="og:title" content="Template 9 vs Template 10: The Modernist vs The Essential - Creative vs Corporate Resume" />
+        <meta property="og:description" content="Creative vs Corporate showdown! Compare The Modernist and The Essential side-by-side. See which resume style gets you hired in creative agencies or corporate roles." />
         <meta property="og:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-9vs10.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="FreeResumeMakers" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Free Resume Builder" />
         
-        {/* Twitter Card Tags */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Template 9 vs Template 10: Creative vs Corporate Resume Comparison" />
         <meta name="twitter:description" content="Find your perfect resume style! Compare The Modernist (Creative) vs The Essential (Corporate) with industry-specific recommendations." />
         <meta name="twitter:image" content="https://freeresumemaker.xyz/assets/og/template-comparison-9vs10.jpg" />
+        <meta name="twitter:site" content="@freeresumemaker" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content={comparisonDate} />
         <meta property="article:modified_time" content={currentDate} />
-        <meta property="article:author" content="FreeResumeMakers Team" />
+        <meta property="article:author" content="Free Resume Builder Team" />
         <meta property="article:section" content="Resume Template Comparisons" />
         <meta property="article:tag" content="resume templates" />
         <meta property="article:tag" content="creative resume" />
@@ -173,26 +178,35 @@ export default function Compare9Vs10() {
         <meta property="article:tag" content="entry-level resume" />
         
         {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       <div style={{ 
         maxWidth: '1280px', 
         margin: '0 auto', 
         padding: '40px 24px',
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
       }}>
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '0.875rem' }}>
           <ol style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0, margin: 0, gap: '8px' }}>
             <li><Link href="/" style={{ color: '#3b82f6', textDecoration: 'none' }}>Home</Link></li>
-            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
+            <li style={{ color: '#64748b' }}>›</li>
             <li><Link href="/templates" style={{ color: '#3b82f6', textDecoration: 'none' }}>Templates</Link></li>
-            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
+            <li style={{ color: '#64748b' }}>›</li>
             <li><Link href="/templates/compare" style={{ color: '#3b82f6', textDecoration: 'none' }}>Comparisons</Link></li>
-            <li style={{ color: '#64748b' }}>Ã¢â‚¬Âº</li>
+            <li style={{ color: '#64748b' }}>›</li>
             <li style={{ color: '#1e293b', fontWeight: '500' }}>Template 9 vs Template 10</li>
           </ol>
         </nav>
@@ -209,7 +223,7 @@ export default function Compare9Vs10() {
               fontSize: '0.875rem',
               fontWeight: '600'
             }}>
-              Ã°Å¸Å½Â¨ CREATIVE vs CORPORATE SHOWDOWN
+              🎨 CREATIVE vs CORPORATE SHOWDOWN
             </span>
           </div>
           <h1 style={{ 
@@ -219,7 +233,7 @@ export default function Compare9Vs10() {
             color: '#0f172a',
             lineHeight: '1.2'
           }}>
-            Template 9 vs Template 10: <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>Creative Flair vs Corporate Clarity</span>
+            Template 9 vs Template 10: <span style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>Creative Flair vs Corporate Clarity</span>
           </h1>
           <p style={{ 
             fontSize: '1.2rem', 
@@ -241,13 +255,13 @@ export default function Compare9Vs10() {
             marginTop: '24px'
           }}>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã°Å¸â€œÅ  Updated: March 2026
+              📊 Updated: March 2026
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã°Å¸Å½Â¨ Creative: 96% ATS
+              🎨 Creative: 96% ATS
             </div>
             <div style={{ background: '#f1f5f9', padding: '8px 20px', borderRadius: '100px', fontSize: '0.875rem' }}>
-              Ã°Å¸â€™Â¼ Corporate: 98% ATS
+              💼 Corporate: 98% ATS
             </div>
           </div>
         </header>
@@ -262,12 +276,12 @@ export default function Compare9Vs10() {
           border: '1px solid #e2e8f0'
         }}>
           <p style={{ fontSize: '1rem', color: '#1e293b', margin: 0 }}>
-            <strong>Ã°Å¸â€™Â¡ Quick Career Guide:</strong> 
+            <strong>💡 Quick Career Guide:</strong> 
             <span style={{ display: 'inline-block', marginLeft: '12px' }}>
-              Ã°Å¸Å½Â¨ <strong>Creative Professionals & Designers</strong> Ã¢â€ â€™ Template 9 (The Modernist)
+              🎨 <strong>Creative Professionals & Designers</strong> → Template 9 (The Modernist)
             </span>
             <span style={{ display: 'inline-block', marginLeft: '12px' }}>
-              Ã°Å¸â€™Â¼ <strong>Students, Interns & Entry-Level</strong> Ã¢â€ â€™ Template 10 (The Essential)
+              💼 <strong>Students, Interns & Entry-Level</strong> → Template 10 (The Essential)
             </span>
           </p>
         </div>
@@ -300,10 +314,10 @@ export default function Compare9Vs10() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              Ã°Å¸Å½Â¨ CREATIVE DESIGN
+              🎨 CREATIVE DESIGN
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>🎨</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[9].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 9)</span>
@@ -313,7 +327,7 @@ export default function Compare9Vs10() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸â€œâ€¹ Sections Included
+                📋 Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template9Sections.map(section => (
@@ -326,7 +340,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã¢Å“Â¨ Key Features
+                ✨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[9].features.map(feature => (
@@ -339,7 +353,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸Å½Â¯ Best For
+                🎯 Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[9].bestFor.map(role => (
@@ -352,7 +366,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸â€œÅ  Content Limits
+                📊 Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -386,7 +400,7 @@ export default function Compare9Vs10() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 9 Ã¢â€ â€™
+              View Template 9 →
             </Link>
           </div>
 
@@ -411,10 +425,10 @@ export default function Compare9Vs10() {
               fontSize: '0.75rem',
               fontWeight: '600'
             }}>
-              Ã°Å¸â€™Â¼ CORPORATE ESSENTIAL
+              💼 CORPORATE ESSENTIAL
             </div>
             <div style={{ marginBottom: '24px', marginTop: '8px' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
+              <div style={{ fontSize: '3rem', marginBottom: '8px' }}>💼</div>
               <h2 style={{ fontSize: '1.8rem', marginBottom: '8px', color: '#0f172a' }}>
                 {templates[10].name}
                 <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 'normal', marginLeft: '8px' }}>(Template 10)</span>
@@ -424,7 +438,7 @@ export default function Compare9Vs10() {
             
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸â€œâ€¹ Sections Included
+                📋 Sections Included
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {template10Sections.map(section => (
@@ -437,7 +451,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã¢Å“Â¨ Key Features
+                ✨ Key Features
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[10].features.map(feature => (
@@ -450,7 +464,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸Å½Â¯ Best For
+                🎯 Best For
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {templates[10].bestFor.map(role => (
@@ -463,7 +477,7 @@ export default function Compare9Vs10() {
 
             <div style={{ marginBottom: '24px' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: '#1e293b' }}>
-                Ã°Å¸â€œÅ  Content Limits
+                📊 Content Limits
               </h3>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
@@ -497,7 +511,7 @@ export default function Compare9Vs10() {
                 transition: 'all 0.2s ease'
               }}
             >
-              View Template 10 Ã¢â€ â€™
+              View Template 10 →
             </Link>
           </div>
         </div>
@@ -505,7 +519,7 @@ export default function Compare9Vs10() {
         {/* Feature Comparison Table */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€œÅ  Feature Comparison: Creative vs Corporate Resume
+            📊 Feature Comparison: Creative vs Corporate Resume
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ 
@@ -521,7 +535,7 @@ export default function Compare9Vs10() {
                   <th style={{ padding: '16px', textAlign: 'left', fontWeight: '600' }}>Feature</th>
                   <th style={{ padding: '16px', textAlign: 'center', fontWeight: '600' }}>Template 9 (The Modernist) - Creative</th>
                   <th style={{ padding: '16px', textAlign: 'center', fontWeight: '600' }}>Template 10 (The Essential) - Corporate</th>
-                  </tr>
+                 </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
@@ -542,17 +556,17 @@ export default function Compare9Vs10() {
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Skills Display</td>
                   <td style={{ padding: '16px', textAlign: 'center' }}>Standard List</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Skills Grid</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Skills Grid</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Project Showcase</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes (Simplified)</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Yes (Simplified)</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Equal Spacing Design</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Yes</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢ÂÅ’ No</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Yes</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✗ No</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>ATS Compatibility</td>
@@ -571,8 +585,8 @@ export default function Compare9Vs10() {
                 </tr>
                 <tr style={{ background: '#f8fafc' }}>
                   <td style={{ padding: '16px', fontWeight: '500' }}>Print Quality</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Excellent</td>
-                  <td style={{ padding: '16px', textAlign: 'center' }}>Ã¢Å“â€¦ Excellent</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Excellent</td>
+                  <td style={{ padding: '16px', textAlign: 'center' }}>✓ Excellent</td>
                 </tr>
               </tbody>
             </table>
@@ -587,12 +601,12 @@ export default function Compare9Vs10() {
           marginBottom: '56px'
         }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸Å½Â¯ Choose Based on Your Role & Experience
+            🎯 Choose Based on Your Role & Experience
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸Å½Â¨</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🎨</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 9 (The Modernist) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Graphic Designer & Art Director Roles</li>
@@ -604,12 +618,12 @@ export default function Compare9Vs10() {
                 <li>Creative Portfolio Submissions</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¡ Why:</strong> Contemporary design demonstrates creative sensibilities that hiring managers in creative fields look for.
+                <strong style={{ color: '#1e40af' }}>💡 Why:</strong> Contemporary design demonstrates creative sensibilities that hiring managers in creative fields look for.
               </div>
             </div>
             
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Ã°Å¸â€™Â¼</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>💼</div>
               <h3 style={{ marginBottom: '12px', color: '#1e293b' }}>Choose Template 10 (The Essential) For:</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px', margin: 0 }}>
                 <li>Student Internships & Graduate Roles</li>
@@ -621,7 +635,7 @@ export default function Compare9Vs10() {
                 <li>Rotational Development Programs</li>
               </ul>
               <div style={{ marginTop: '16px', padding: '12px', background: '#eef2ff', borderRadius: '12px' }}>
-                <strong style={{ color: '#1e40af' }}>Ã°Å¸â€™Â¡ Why:</strong> Skills grid and single experience focus highlight education, skills, and potential - perfect for candidates with limited work history.
+                <strong style={{ color: '#1e40af' }}>💡 Why:</strong> Skills grid and single experience focus highlight education, skills, and potential - perfect for candidates with limited work history.
               </div>
             </div>
           </div>
@@ -630,24 +644,24 @@ export default function Compare9Vs10() {
         {/* Experience Level Guide */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€œË† Experience Level Recommendations
+            📈 Experience Level Recommendations
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px' }}>Students & Interns</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½â€œ</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🎓</div>
               <p><strong>Template 10 (The Essential)</strong></p>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Perfect for highlighting education, skills, and internship experiences</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#667eea', marginBottom: '12px' }}>Entry-Level (0-2 years)</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>💼</div>
               <p><strong>Template 10 (The Essential)</strong></p>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Skills grid showcases transferable skills; clean layout for first jobs</p>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#10b981', marginBottom: '12px' }}>Mid-Level (3-8 years)</div>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🎨</div>
               <p><strong>Template 9 (The Modernist)</strong></p>
               <p style={{ fontSize: '0.9rem', color: '#475569' }}>Contemporary design balances creativity with professional presentation</p>
             </div>
@@ -657,17 +671,17 @@ export default function Compare9Vs10() {
         {/* Pros & Cons Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã¢Å¡â€“Ã¯Â¸Â Pros & Cons Analysis
+            ⚖️ Pros & Cons Analysis
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 9 (The Modernist) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✓ Template 9 (The Modernist) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[9].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 9 (The Modernist) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>✗ Template 9 (The Modernist) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[9].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -675,13 +689,13 @@ export default function Compare9Vs10() {
               </ul>
             </div>
             <div style={{ background: 'white', padding: '24px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>Ã¢Å“â€¦ Template 10 (The Essential) Pros</h3>
+              <h3 style={{ color: '#0f172a', marginBottom: '16px' }}>✓ Template 10 (The Essential) Pros</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[10].pros.map((pro, i) => (
                   <li key={i}>{pro}</li>
                 ))}
               </ul>
-              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>Ã¢ÂÅ’ Template 10 (The Essential) Cons</h3>
+              <h3 style={{ color: '#0f172a', marginTop: '20px', marginBottom: '16px' }}>✗ Template 10 (The Essential) Cons</h3>
               <ul style={{ color: '#475569', lineHeight: '1.6', paddingLeft: '20px' }}>
                 {templates[10].cons.map((con, i) => (
                   <li key={i}>{con}</li>
@@ -694,11 +708,11 @@ export default function Compare9Vs10() {
         {/* Industry Success Statistics */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: '#0f172a', textAlign: 'center' }}>
-            Ã°Å¸â€œÅ  Industry Success Rates (2026 Data)
+            📊 Industry Success Rates (2026 Data)
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½Â¨</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🎨</div>
               <strong>Creative & Marketing</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 9: 31% higher response rate<br />
@@ -706,7 +720,7 @@ export default function Compare9Vs10() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸Å½â€œ</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🎓</div>
               <strong>Entry-Level / Internships</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 10: 28% higher interview rate<br />
@@ -714,7 +728,7 @@ export default function Compare9Vs10() {
               </p>
             </div>
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>Ã°Å¸â€™Â¼</div>
+              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>💼</div>
               <strong>Corporate Roles</strong>
               <p style={{ marginTop: '8px', fontSize: '0.9rem', color: '#475569' }}>
                 Template 10: 25% higher success rate<br />
@@ -727,7 +741,7 @@ export default function Compare9Vs10() {
         {/* FAQ Section */}
         <div style={{ marginBottom: '56px' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '28px', color: '#0f172a', textAlign: 'center' }}>
-            Ã¢Ââ€œ Frequently Asked Questions
+            ❓ Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
@@ -780,7 +794,7 @@ export default function Compare9Vs10() {
         {/* Related Comparisons */}
         <div>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '24px', color: '#0f172a' }}>
-            Ã°Å¸â€Â Explore More Template Comparisons
+            🔍 Explore More Template Comparisons
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {[

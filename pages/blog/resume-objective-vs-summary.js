@@ -1,4 +1,5 @@
-﻿// pages/blog/resume-objective-vs-summary.js
+﻿import React from 'react';
+// pages/blog/resume-objective-vs-summary.js
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -145,9 +146,9 @@ export default function ResumeObjectiveVsSummary() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <span style={{ color: '#0070f3' }}>Resume Objective vs Summary</span>
         </div>
 
@@ -307,7 +308,7 @@ export default function ResumeObjectiveVsSummary() {
                     <th style={{ padding: '16px', border: '1px solid #0070f3', textAlign: 'left' }}>Feature</th>
                     <th style={{ padding: '16px', border: '1px solid #0070f3', textAlign: 'left' }}>Resume Objective</th>
                     <th style={{ padding: '16px', border: '1px solid #0070f3', textAlign: 'left' }}>Resume Summary</th>
-                   </tr>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr style={{ background: '#f9f9f9' }}>
@@ -682,8 +683,8 @@ export default function ResumeObjectiveVsSummary() {
               <ul style={{ margin: 0 }}>
                 <li><strong>Being too vague:</strong> "Seeking a challenging position" doesn't tell employers much.</li>
                 <li><strong>Focusing only on yourself:</strong> Connect your goals to what you can do for the employer.</li>
-                <li><strong>Making it too long:</strong> Keep it conciseÃ¢â‚¬â€2-5 sentences maximum.</li>
-                <li><strong>Using clichÃƒÂ©s:</strong> Avoid overused terms like "hardworking," "team player," "go-getter."</li>
+                <li><strong>Making it too long:</strong> Keep it concise - 2-5 sentences maximum.</li>
+                <li><strong>Using cliches:</strong> Avoid overused terms like "hardworking," "team player," "go-getter."</li>
                 <li><strong>Using the wrong type:</strong> Don't use an objective when a summary would be more appropriate.</li>
                 <li><strong>Not customizing:</strong> Tailor your objective or summary for each job application.</li>
               </ul>
@@ -752,7 +753,7 @@ export default function ResumeObjectiveVsSummary() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Opening Statement Guide</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable guide with examples of effective resume objectives and summaries for different experience levels.
@@ -837,10 +838,10 @@ export default function ResumeObjectiveVsSummary() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume Objective vs Summary: Which One Should You Use?')}&url=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
-              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
-              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
-              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Resume Objective vs Summary Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-objective-vs-summary')}` }
+              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Resume Objective vs Summary: Which One Should You Use?')}&url=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
+              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
+              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/resume-objective-vs-summary` },
+              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Resume Objective vs Summary Guide')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/resume-objective-vs-summary')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -927,7 +928,7 @@ export default function ResumeObjectiveVsSummary() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
+                    By {post.author} • {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1013,7 +1014,7 @@ export default function ResumeObjectiveVsSummary() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 22, 2026 | Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 22, 2026 | © {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

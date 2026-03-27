@@ -92,7 +92,7 @@ export default function TemplatesPage() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px' }}>›</span>
           <span style={{ color: '#0070f3' }}>Resume Templates</span>
         </nav>
 
@@ -110,7 +110,7 @@ export default function TemplatesPage() {
           marginRight: 'auto'
         }}>
           <p style={{ margin: 0, color: '#856404' }}>
-            Ã°Å¸Å¡Â§ New templates are being added regularly. Check back for more designs.
+            🚧 New templates are being added regularly. Check back for more designs.
           </p>
         </div>
         
@@ -139,17 +139,17 @@ export default function TemplatesPage() {
             marginBottom: '40px'
           }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>Ã°Å¸Â¤â€“</div>
+              <div style={{ fontSize: '32px', marginBottom: '12px' }}>🤖</div>
               <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>ATS-Friendly Designs</h3>
               <p style={{ fontSize: '14px', color: '#666' }}>All templates are optimized to pass Applicant Tracking Systems</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>Ã°Å¸â€™Â»</div>
+              <div style={{ fontSize: '32px', marginBottom: '12px' }}>💻</div>
               <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Fully Customizable</h3>
               <p style={{ fontSize: '14px', color: '#666' }}>Edit every section, font, and color to match your style</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>Ã°Å¸â€œâ€ž</div>
+              <div style={{ fontSize: '32px', marginBottom: '12px' }}>📄</div>
               <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>PDF Download</h3>
               <p style={{ fontSize: '14px', color: '#666' }}>Download your resume as PDF instantly with one click</p>
             </div>
@@ -173,7 +173,7 @@ export default function TemplatesPage() {
                   <th style={{ padding: '12px', textAlign: 'left' }}>Template Type</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Best For</th>
                   <th style={{ padding: '12px', textAlign: 'left' }}>Key Features</th>
-                 </tr>
+                  </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '1px solid #e0e0e0' }}>
@@ -219,13 +219,13 @@ export default function TemplatesPage() {
             flexWrap: 'wrap'
           }}>
             <Link href="/blog/ats-resume-tips-2026" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              ATS Resume Tips Ã¢â€ â€™
+              ATS Resume Tips →
             </Link>
             <Link href="/templates/compare" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Compare Templates Ã¢â€ â€™
+              Compare Templates →
             </Link>
             <Link href="/blog/how-to-write-resume" style={{ color: '#0070f3', textDecoration: 'none' }}>
-              Resume Writing Guide Ã¢â€ â€™
+              Resume Writing Guide →
             </Link>
           </div>
         </div>
@@ -239,7 +239,7 @@ export default function TemplatesPage() {
           borderTop: '1px solid #eee',
           paddingTop: '30px'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Maker | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>© {new Date().getFullYear()} Free Resume Maker | 20+ ATS-Friendly Templates | 100% Free</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

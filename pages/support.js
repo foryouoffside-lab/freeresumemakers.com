@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import React from 'react';
+import { useState } from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -134,7 +135,7 @@ export default function Support() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Support</span>
         </nav>
 
@@ -152,7 +153,7 @@ export default function Support() {
             fontWeight: 'bold',
             color: '#0070f3'
           }}>
-            Ã¢ÂÂ¤
+            ❤
           </div>
           <h1 style={{
             fontSize: '42px',
@@ -444,7 +445,7 @@ export default function Support() {
                 fontWeight: 500
               }}
             >
-              Share Feedback Ã¢â€ â€™
+              Share Feedback →
             </Link>
             <span style={{ color: '#ddd' }}>|</span>
             <Link 
@@ -455,7 +456,7 @@ export default function Support() {
                 fontWeight: 500
               }}
             >
-              Browse Templates Ã¢â€ â€™
+              Browse Templates →
             </Link>
           </div>
         </div>
@@ -469,7 +470,7 @@ export default function Support() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '30px'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder | 100% Free | Community Supported</p>
+          <p>© {new Date().getFullYear()} Free Resume Builder | 100% Free | Community Supported</p>
         </div>
       </div>
     </>

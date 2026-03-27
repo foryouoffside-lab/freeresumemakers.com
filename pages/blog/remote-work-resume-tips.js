@@ -1,4 +1,5 @@
-﻿// pages/blog/remote-work-resume-tips.js
+﻿import React from 'react';
+// pages/blog/remote-work-resume-tips.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -154,9 +155,9 @@ export default function RemoteWorkResumeTips() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <span style={{ color: '#0070f3' }}>Remote Work Resume Tips</span>
         </div>
 
@@ -732,7 +733,7 @@ export default function RemoteWorkResumeTips() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Remote Resume Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your resume includes key remote work elements.
@@ -826,10 +827,10 @@ export default function RemoteWorkResumeTips() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs')}&url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
-              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
-              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
-              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Remote Work Resume Tips')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/remote-work-resume-tips')}` }
+              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Remote Work Resume Tips: How to Get Hired for Work-From-Home Jobs')}&url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/remote-work-resume-tips` },
+              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Remote Work Resume Tips')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/remote-work-resume-tips')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -916,7 +917,7 @@ export default function RemoteWorkResumeTips() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
+                    By {post.author} • {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1002,7 +1003,7 @@ export default function RemoteWorkResumeTips() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 8, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 8, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

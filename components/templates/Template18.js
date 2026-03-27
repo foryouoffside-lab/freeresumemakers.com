@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿import Link from 'next/link';
+// ============================================
 // components/templates/Template18.js
 // OPTIMIZED: Contact info styling from Template1
 // - LinkedIn "in" icon with blue color
@@ -11,6 +12,7 @@
 // - Removed GPA icon, added text "GPA:" or "CGPA:"
 // - Certification: date below issuer
 // - Increased content font sizes by 2px total
+// FIXED: All corrupted characters replaced with proper Unicode icons
 // ============================================
 
 import React, { useRef, useMemo, useState, useEffect } from 'react';
@@ -19,14 +21,14 @@ import LoadingSpinner from '../LoadingSpinner';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T18_ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°',
-  phone: 'Ã°Å¸â€œÅ¾',
-  location: 'Ã°Å¸â€œÂ',
+  email: '✉️',
+  phone: '📞',
+  location: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'Ã¢Å’Â¨',
-  portfolio: 'Ã°Å¸Å’Â',
-  website: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨️',
+  portfolio: '🌐',
+  website: '🌐',
+  default: '📌'
 });
 
 // CONSTANTS - IMMUTABLE
@@ -42,31 +44,31 @@ const CONTENT_LIMITS = Object.freeze({
   bulletPointsPerItem: 3
 });
 
-// Icon mapping - IMMUTABLE
+// Icon mapping - IMMUTABLE with proper Unicode icons
 const ICONS = Object.freeze({
-  email: 'Ã¢Å“â€°',
-  phone: 'Ã°Å¸â€œÅ¾',
-  location: 'Ã°Å¸â€œÂ',
+  email: '✉️',
+  phone: '📞',
+  location: '📍',
   linkedin: 'in',
-  github: 'Ã¢Å’Â¨',
-  portfolio: 'Ã°Å¸Å’Â',
-  education: 'Ã°Å¸Å½â€œ',
-  internship: 'Ã°Å¸â€™Â¼',
-  project: 'Ã¢Å¡Â¡',
-  skill: 'Ã¢Å¡Â¡',
-  certification: 'Ã°Å¸â€œÅ“',
-  language: 'Ã°Å¸â€”Â£Ã¯Â¸Â',
-  about: 'Ã°Å¸â€œÂ',
-  calendar: 'Ã°Å¸â€œâ€¦',
-  code: 'Ã¢Å’Â¨Ã¯Â¸Â',
-  demo: 'Ã°Å¸â€â€”',
-  gpa: 'Ã°Å¸â€œÅ ',
-  badge: 'Ã¢â‚¬Â¢',
-  bullet: 'Ã¢â‚¬Â¢',
-  triangle: 'Ã¢â€“Â¹',
-  dot: 'Ã¢â‚¬Â¢',
-  default: 'Ã¢â‚¬Â¢',
-  link: 'Ã°Å¸â€â€”'
+  github: '⌨️',
+  portfolio: '🌐',
+  education: '🎓',
+  internship: '💼',
+  project: '⚡',
+  skill: '⚡',
+  certification: '📜',
+  language: '🗣️',
+  about: '📝',
+  calendar: '📅',
+  code: '⌨️',
+  demo: '🔗',
+  gpa: '📊',
+  badge: '•',
+  bullet: '•',
+  triangle: '▹',
+  dot: '•',
+  default: '•',
+  link: '🔗'
 });
 
 // Helper functions - Immutable
@@ -105,7 +107,7 @@ const TemplateHelpers = Object.freeze({
     if (!startDate && !endDate) return '';
     if (!startDate) return endDate;
     if (!endDate) return startDate;
-    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
+    return `${startDate} – ${endDate}`;
   },
 
   formatGPA: (gpa) => {

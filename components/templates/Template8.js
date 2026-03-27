@@ -1,16 +1,16 @@
 ﻿import React, { useRef, useMemo, useState, useEffect } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
-// ===== ICON MAPPING - LinkedIn icon with blue color only =====
+// ===== ICON MAPPING - Clean icons with LinkedIn blue color only =====
 const T8_ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°Ã¯Â¸Â',
-  phone: 'Ã°Å¸â€œÂ±',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉',
+  phone: '📱',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color ONLY for the icon
-  github: 'Ã¢Å’Â¨Ã¯Â¸Â',
-  portfolio: 'Ã°Å¸Å’Â',
-  website: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨',
+  portfolio: '🌐',
+  website: '🌐',
+  default: '📌'
 });
 
 // ===== CONSTANTS - LOCKED VALUES =====
@@ -75,7 +75,7 @@ const Helpers = Object.freeze({
       return startDate;
     }
     
-    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
+    return `${startDate} – ${endDate}`;
   },
 
   formatEducationDate: (startYear, endYear, isCurrent) => {
@@ -105,7 +105,7 @@ const Helpers = Object.freeze({
     if (formattedStart && !formattedEnd) return formattedStart;
     if (!formattedStart && formattedEnd) return formattedEnd;
     
-    return `${formattedStart} Ã¢â‚¬â€œ ${formattedEnd}`;
+    return `${formattedStart} – ${formattedEnd}`;
   },
 
   getSkillName: (skill) => {
@@ -121,7 +121,7 @@ const Helpers = Object.freeze({
 
   cleanBullet: (bullet) => {
     let cleaned = Helpers.safeString(bullet);
-    cleaned = cleaned.replace(/^[Ã¢â‚¬Â¢\*\-]\s*/, '');
+    cleaned = cleaned.replace(/^[•\*\-]\s*/, '');
     return cleaned;
   },
 
@@ -332,7 +332,7 @@ const Helpers = Object.freeze({
   getContactIconColor: (type) => {
     const iconConfig = T8_ICON_MAPPING[type];
     if (typeof iconConfig === 'object' && iconConfig.color) {
-      return iconConfig.color; // Only return color for LinkedIn icon
+      return iconConfig.color;
     }
     return null;
   },
@@ -1015,7 +1015,7 @@ const Template8 = ({
           achievements: achievements,
           hasAchievements: achievements.length > 0,
           link: link,
-          displayLink: displayLink, // Full HTTPS URL for display
+          displayLink: displayLink,
           startDate: proj.startDate || '',
           endDate: proj.endDate || '',
           formattedDate: Helpers.formatDateRange(proj.startDate, proj.endDate)
@@ -1248,7 +1248,7 @@ const Template8 = ({
             {exp.company}
             {exp.location && (
               <span style={styles.experienceLocation}>
-                <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span> {exp.location}
+                <span style={styles.locationIcon}>📍</span> {exp.location}
               </span>
             )}
           </div>
@@ -1260,7 +1260,7 @@ const Template8 = ({
         <ul style={styles.bulletList}>
           {exp.achievements.map((achievement, idx) => (
             <li key={idx} style={styles.bulletItem}>
-              <span style={styles.bulletPoint}>Ã¢â‚¬Â¢</span>
+              <span style={styles.bulletPoint}>•</span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -1288,7 +1288,7 @@ const Template8 = ({
         <ul style={styles.bulletList}>
           {project.achievements.map((achievement, idx) => (
             <li key={idx} style={styles.bulletItem}>
-              <span style={styles.bulletPoint}>Ã¢â‚¬Â¢</span>
+              <span style={styles.bulletPoint}>•</span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -1342,7 +1342,7 @@ const Template8 = ({
       <div style={styles.locationGpaRow}>
         {edu.location && (
           <span style={styles.educationLocation}>
-            <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span> {edu.location}
+            <span style={styles.locationIcon}>📍</span> {edu.location}
           </span>
         )}
         
@@ -1355,7 +1355,7 @@ const Template8 = ({
 
       {edu.honors && (
         <div style={styles.honorsContainer}>
-          <span>Ã°Å¸Ââ€ </span> {edu.honors}
+          <span>🏆</span> {edu.honors}
         </div>
       )}
     </div>
@@ -1372,8 +1372,8 @@ const Template8 = ({
         {ref.company && <div style={styles.referenceDetails}>{ref.company}</div>}
         {(ref.email || ref.phone) && (
           <div style={styles.referenceContact}>
-            {ref.email && <div>Ã¢Å“â€° {ref.email}</div>}
-            {ref.phone && <div>Ã°Å¸â€œÂ± {ref.phone}</div>}
+            {ref.email && <div>✉ {ref.email}</div>}
+            {ref.phone && <div>📱 {ref.phone}</div>}
           </div>
         )}
       </div>

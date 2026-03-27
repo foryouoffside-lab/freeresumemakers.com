@@ -1,4 +1,5 @@
-﻿// pages/templates/compare/by-profession.js
+﻿import React from 'react';
+// pages/templates/compare/by-profession.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -67,7 +68,7 @@ export default function CompareByProfession() {
   const professionData = {
     tech: {
       name: 'Technology / IT',
-      icon: 'Ã°Å¸â€™Â»',
+      icon: '💻',
       color: '#2563eb',
       lightColor: '#dbeafe',
       description: 'For software engineers, developers, IT managers, and tech professionals.',
@@ -93,7 +94,7 @@ export default function CompareByProfession() {
     },
     business: {
       name: 'Business / Management',
-      icon: 'Ã°Å¸â€™Â¼',
+      icon: '💼',
       color: '#0056b3',
       lightColor: '#cce5ff',
       description: 'For managers, executives, consultants, and business professionals.',
@@ -119,7 +120,7 @@ export default function CompareByProfession() {
     },
     creative: {
       name: 'Creative / Design',
-      icon: 'Ã°Å¸Å½Â¨',
+      icon: '🎨',
       color: '#8b5cf6',
       lightColor: '#ede9fe',
       description: 'For designers, artists, creative directors, and marketing creatives.',
@@ -145,7 +146,7 @@ export default function CompareByProfession() {
     },
     academic: {
       name: 'Academic / Research',
-      icon: 'Ã°Å¸â€œÅ¡',
+      icon: '📚',
       color: '#059669',
       lightColor: '#d1fae5',
       description: 'For professors, researchers, PhD candidates, and educators.',
@@ -171,7 +172,7 @@ export default function CompareByProfession() {
     },
     legal: {
       name: 'Legal / Government',
-      icon: 'Ã¢Å¡â€“Ã¯Â¸Â',
+      icon: '⚖️',
       color: '#4b5563',
       lightColor: '#e5e7eb',
       description: 'For lawyers, paralegals, judges, and government employees.',
@@ -197,7 +198,7 @@ export default function CompareByProfession() {
     },
     healthcare: {
       name: 'Healthcare / Medical',
-      icon: 'Ã°Å¸ÂÂ¥',
+      icon: '🏥',
       color: '#0d9488',
       lightColor: '#ccfbf1',
       description: 'For doctors, nurses, healthcare administrators, and medical professionals.',
@@ -223,7 +224,7 @@ export default function CompareByProfession() {
     },
     engineering: {
       name: 'Engineering',
-      icon: 'Ã°Å¸â€Â§',
+      icon: '🔧',
       color: '#d97706',
       lightColor: '#fef3c7',
       description: 'For mechanical, civil, electrical, and chemical engineers.',
@@ -249,7 +250,7 @@ export default function CompareByProfession() {
     },
     sales: {
       name: 'Sales / Marketing',
-      icon: 'Ã°Å¸â€œÅ ',
+      icon: '📊',
       color: '#dc2626',
       lightColor: '#fee2e2',
       description: 'For sales representatives, account executives, and marketing professionals.',
@@ -275,7 +276,7 @@ export default function CompareByProfession() {
     },
     education: {
       name: 'Education / Teaching',
-      icon: 'Ã°Å¸â€œâ€“',
+      icon: '📖',
       color: '#7c3aed',
       lightColor: '#ede9fe',
       description: 'For teachers, administrators, and education professionals.',
@@ -303,15 +304,15 @@ export default function CompareByProfession() {
 
   // Profession list for navigation
   const professions = [
-    { id: 'tech', name: 'Technology / IT', icon: 'Ã°Å¸â€™Â»' },
-    { id: 'business', name: 'Business / Management', icon: 'Ã°Å¸â€™Â¼' },
-    { id: 'creative', name: 'Creative / Design', icon: 'Ã°Å¸Å½Â¨' },
-    { id: 'academic', name: 'Academic / Research', icon: 'Ã°Å¸â€œÅ¡' },
-    { id: 'legal', name: 'Legal / Government', icon: 'Ã¢Å¡â€“Ã¯Â¸Â' },
-    { id: 'healthcare', name: 'Healthcare / Medical', icon: 'Ã°Å¸ÂÂ¥' },
-    { id: 'engineering', name: 'Engineering', icon: 'Ã°Å¸â€Â§' },
-    { id: 'sales', name: 'Sales / Marketing', icon: 'Ã°Å¸â€œÅ ' },
-    { id: 'education', name: 'Education / Teaching', icon: 'Ã°Å¸â€œâ€“' }
+    { id: 'tech', name: 'Technology / IT', icon: '💻' },
+    { id: 'business', name: 'Business / Management', icon: '💼' },
+    { id: 'creative', name: 'Creative / Design', icon: '🎨' },
+    { id: 'academic', name: 'Academic / Research', icon: '📚' },
+    { id: 'legal', name: 'Legal / Government', icon: '⚖️' },
+    { id: 'healthcare', name: 'Healthcare / Medical', icon: '🏥' },
+    { id: 'engineering', name: 'Engineering', icon: '🔧' },
+    { id: 'sales', name: 'Sales / Marketing', icon: '📊' },
+    { id: 'education', name: 'Education / Teaching', icon: '📖' }
   ];
 
   // SEO-optimized meta description
@@ -367,11 +368,11 @@ export default function CompareByProfession() {
         {/* Breadcrumbs */}
         <div style={{ marginBottom: '30px', fontSize: '0.95rem' }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Templates</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <Link href="/templates/compare" style={{ color: '#666', textDecoration: 'none' }}>Compare</Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>Ã¢â‚¬Âº</span>
+          <span style={{ margin: '0 8px', color: '#999' }}>›</span>
           <span style={{ color: '#333', fontWeight: 500 }}>Templates by Profession</span>
         </div>
 
@@ -533,7 +534,7 @@ export default function CompareByProfession() {
                 alignItems: 'center',
                 gap: '8px'
               }}>
-                <span>Ã°Å¸â€™Â¡</span> Professional Tips for {professionData[selectedProfession].name}
+                <span>💡</span> Professional Tips for {professionData[selectedProfession].name}
               </h3>
               <ul style={{
                 display: 'grid',
@@ -623,7 +624,7 @@ export default function CompareByProfession() {
                           fontSize: '2rem',
                           color: professionData[selectedProfession].color
                         }}>
-                          Ã°Å¸â€œâ€ž
+                          📄
                         </div>
                       </div>
                       <div style={{ padding: '20px' }}>
@@ -646,7 +647,7 @@ export default function CompareByProfession() {
                           fontSize: '0.8rem',
                           fontWeight: 'bold'
                         }}>
-                          View Template Ã¢â€ â€™
+                          View Template →
                         </div>
                       </div>
                     </div>
@@ -685,7 +686,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>Ã°Å¸Å’Â±</div>
+                  }}>🌱</div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Entry Level</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.entry.map((id) => {
@@ -720,7 +721,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>Ã°Å¸â€œË†</div>
+                  }}>📈</div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Mid Level</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.mid.map((id) => {
@@ -755,7 +756,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>Ã°Å¸â€˜â€˜</div>
+                  }}>👔</div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Senior / Executive</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.senior.map((id) => {
@@ -791,7 +792,7 @@ export default function CompareByProfession() {
               marginBottom: '40px'
             }}>
               <h4 style={{ color: '#856404', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span>Ã°Å¸â€Â</span> Not sure if this is your industry?
+                <span>🔍</span> Not sure if this is your industry?
               </h4>
               <p style={{ color: '#856404', marginBottom: '15px' }}>
                 Many careers overlap industries. If you work in a specialized field, consider which category best matches 
@@ -989,7 +990,7 @@ export default function CompareByProfession() {
           color: '#999',
           fontSize: '0.9rem'
         }}>
-          <p>Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
+          <p>&copy; {new Date().getFullYear()} Free Resume Builder. All 20 templates are free forever.</p>
           <div style={{ marginTop: '10px' }}>
             <Link href="/templates" style={{ color: '#999', margin: '0 10px', textDecoration: 'none' }}>All Templates</Link>
             <span style={{ color: '#ddd' }}>|</span>

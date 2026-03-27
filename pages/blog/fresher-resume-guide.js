@@ -1,4 +1,5 @@
-﻿// pages/blog/fresher-resume-guide.js
+﻿import React from 'react';
+// pages/blog/fresher-resume-guide.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -215,9 +216,9 @@ export default function FresherResumeGuide() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <span style={{ color: '#0070f3' }}>Fresher Resume Guide</span>
         </div>
 
@@ -409,7 +410,7 @@ export default function FresherResumeGuide() {
                     borderRadius: '8px',
                     border: '1px solid #e9ecef'
                   }}>
-                    <span style={{ color: '#0070f3', fontSize: '18px' }}>Ã¢Å“â€œ</span>
+                    <span style={{ color: '#0070f3', fontSize: '18px' }}>✓</span>
                     <span style={{ fontSize: '15px' }}>{item}</span>
                   </div>
                 ))}
@@ -476,8 +477,8 @@ export default function FresherResumeGuide() {
               margin: '20px 0'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>Example Bullet Points:</strong> "Assisted in developing company website using React" Ã¢â‚¬Â¢ 
-                "Fixed bugs and contributed to code documentation" Ã¢â‚¬Â¢ "Created test cases for quality assurance"
+                <strong>Example Bullet Points:</strong> "Assisted in developing company website using React" • 
+                "Fixed bugs and contributed to code documentation" • "Created test cases for quality assurance"
               </p>
             </div>
           </section>
@@ -620,12 +621,12 @@ export default function FresherResumeGuide() {
               margin: '20px 0'
             }}>
               {[
-                { activity: 'College Club Leadership', example: 'President of Coding Club Ã¢â‚¬Â¢ Organized hackathons with 200+ participants' },
+                { activity: 'College Club Leadership', example: 'President of Coding Club • Organized hackathons with 200+ participants' },
                 { activity: 'Volunteer Work', example: 'Taught programming to underprivileged students through NGO' },
-                { activity: 'Sports Teams', example: 'Captain, University Cricket Team Ã¢â‚¬Â¢ Led team to championship' },
+                { activity: 'Sports Teams', example: 'Captain, University Cricket Team • Led team to championship' },
                 { activity: 'Cultural Events', example: 'Coordinated annual cultural fest with 1000+ attendees' },
-                { activity: 'Competitions', example: 'Winner, National Hackathon Ã¢â‚¬Â¢ Competed against 500+ teams' },
-                { activity: 'Student Government', example: 'Class Representative Ã¢â‚¬Â¢ Managed student concerns' }
+                { activity: 'Competitions', example: 'Winner, National Hackathon • Competed against 500+ teams' },
+                { activity: 'Student Government', example: 'Class Representative • Managed student concerns' }
               ].map((item, index) => (
                 <div key={index} style={{
                   background: '#f8f9fa',
@@ -663,68 +664,68 @@ export default function FresherResumeGuide() {
             }}>
               <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
 {`RAHUL SHARMA
-Ã°Å¸â€œÅ¾ +91 98765 43210 | Ã¢Å“â€°Ã¯Â¸Â rahul.sharma@email.com | Ã°Å¸â€â€” linkedin.com/in/rahulsharma | Ã°Å¸â€™Â» github.com/rahulsharma
+📞 +91 98765 43210 | ✉️ rahul.sharma@email.com | 🔗 linkedin.com/in/rahulsharma | 💻 github.com/rahulsharma
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 EDUCATION
 Bachelor of Technology in Computer Science
 Indian Institute of Technology (IIT), Delhi | Expected 2026
 CGPA: 8.7/10 | Relevant Courses: Data Structures, Algorithms, DBMS, Web Development, Machine Learning
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 TECHNICAL SKILLS
-Ã¢â‚¬Â¢ Languages: Java, Python, JavaScript, TypeScript, SQL
-Ã¢â‚¬Â¢ Frameworks: React, Node.js, Express, Django, Spring Boot
-Ã¢â‚¬Â¢ Tools: Git, Docker, VS Code, PostgreSQL, MongoDB, Postman, AWS
-Ã¢â‚¬Â¢ AI/ML: TensorFlow, Scikit-learn, Pandas
+• Languages: Java, Python, JavaScript, TypeScript, SQL
+• Frameworks: React, Node.js, Express, Django, Spring Boot
+• Tools: Git, Docker, VS Code, PostgreSQL, MongoDB, Postman, AWS
+• AI/ML: TensorFlow, Scikit-learn, Pandas
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 PROJECTS
 E-Learning Platform | React, Node.js, MongoDB
-Ã¢â‚¬Â¢ Built full-stack platform with user authentication and course management system
-Ã¢â‚¬Â¢ Implemented payment gateway integration with Stripe API
-Ã¢â‚¬Â¢ Deployed on AWS EC2, serving 500+ active users during testing
+• Built full-stack platform with user authentication and course management system
+• Implemented payment gateway integration with Stripe API
+• Deployed on AWS EC2, serving 500+ active users during testing
 
 Portfolio Website | HTML, CSS, JavaScript, Three.js
-Ã¢â‚¬Â¢ Designed responsive personal portfolio website with 3D animations
-Ã¢â‚¬Â¢ Optimized for performance achieving 95+ Lighthouse scores
-Ã¢â‚¬Â¢ Featured in university showcase for design excellence
+• Designed responsive personal portfolio website with 3D animations
+• Optimized for performance achieving 95+ Lighthouse scores
+• Featured in university showcase for design excellence
 
 Task Management App | MERN Stack
-Ã¢â‚¬Â¢ Developed collaborative task management tool with real-time updates using WebSockets
-Ã¢â‚¬Â¢ Implemented drag-drop interface for task organization
-Ã¢â‚¬Â¢ Reduced team coordination time by 40% during beta testing
+• Developed collaborative task management tool with real-time updates using WebSockets
+• Implemented drag-drop interface for task organization
+• Reduced team coordination time by 40% during beta testing
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 INTERNSHIPS
 Web Development Intern | TechSolutions Pvt Ltd | Summer 2024
-Ã¢â‚¬Â¢ Developed reusable component library using React, reducing development time by 25%
-Ã¢â‚¬Â¢ Fixed 30+ bugs and contributed to code documentation
-Ã¢â‚¬Â¢ Collaborated with senior developers on client projects
+• Developed reusable component library using React, reducing development time by 25%
+• Fixed 30+ bugs and contributed to code documentation
+• Collaborated with senior developers on client projects
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 ACHIEVEMENTS & EXTRACURRICULARS
-Ã¢â‚¬Â¢ Winner, National Hackathon 2025 (500+ teams participated)
-Ã¢â‚¬Â¢ Captain, College Cricket Team (2024-2025) - Led team to inter-college championship
-Ã¢â‚¬Â¢ Teaching Volunteer, Teach for India - Taught coding to 50+ underprivileged students
-Ã¢â‚¬Â¢ Academic Excellence Scholarship (2023-2025)
+• Winner, National Hackathon 2025 (500+ teams participated)
+• Captain, College Cricket Team (2024-2025) - Led team to inter-college championship
+• Teaching Volunteer, Teach for India - Taught coding to 50+ underprivileged students
+• Academic Excellence Scholarship (2023-2025)
 
-Ã¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€ÂÃ¢â€Â
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
 CERTIFICATIONS
-Ã¢â‚¬Â¢ Meta Frontend Developer Certificate (Coursera) - 2025
-Ã¢â‚¬Â¢ AWS Cloud Practitioner (in progress)
-Ã¢â‚¬Â¢ Google Analytics Individual Qualification - 2024
+• Meta Frontend Developer Certificate (Coursera) - 2025
+• AWS Cloud Practitioner (in progress)
+• Google Analytics Individual Qualification - 2024
 
 LANGUAGES
-Ã¢â‚¬Â¢ English: Fluent
-Ã¢â‚¬Â¢ Hindi: Native
-Ã¢â‚¬Â¢ Spanish: Conversational`}
+• English: Fluent
+• Hindi: Native
+• Spanish: Conversational`}
               </pre>
             </div>
           </section>
@@ -882,7 +883,7 @@ LANGUAGES
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Fresher Resume Template (2026)</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable fresher resume template with pre-filled sections and formatting tips. Updated for 2026 hiring trends.
@@ -966,10 +967,10 @@ LANGUAGES
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Fresher Resume Guide: Land Your First Job with No Experience (2026)')}&url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
-              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
-              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
-              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('Fresher Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/fresher-resume-guide')}` }
+              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Fresher Resume Guide: Land Your First Job with No Experience (2026)')}&url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/fresher-resume-guide` },
+              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('Fresher Resume Guide 2026')}&body=${encodeURIComponent('Check out this guide: https://freeresumemaker.xyz/blog/fresher-resume-guide')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1056,7 +1057,7 @@ LANGUAGES
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
+                    By {post.author} • {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1142,7 +1143,7 @@ LANGUAGES
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 26, 2026 | Ã‚Â© {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 26, 2026 | © {new Date().getFullYear()} Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>

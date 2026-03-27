@@ -1,23 +1,24 @@
-﻿import React, { useRef, useMemo, useEffect, useState } from 'react';
+﻿import Head from 'next/head';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { useResume } from '../../context/ResumeContext';
 
 // ===== ICON MAPPING - Using Template1 style icons =====
 const T6_ICON_MAPPING = Object.freeze({
-  email: 'Ã¢Å“â€°',
-  phone: 'Ã°Å¸â€œÅ¾',
-  address: 'Ã°Å¸â€œÂ',
+  email: '✉️',
+  phone: '📞',
+  address: '📍',
   linkedin: { icon: 'in', color: '#0077b5' },  // LinkedIn blue color matching Template1
-  github: 'Ã¢Å’Â¨',
-  portfolio: 'Ã°Å¸Å’Â',
-  default: 'Ã°Å¸â€œÅ’'
+  github: '⌨️',
+  portfolio: '🌐',
+  default: '📌'
 });
 
 const EXPERIENCE_TYPES = {
-  job: { label: "Experience", icon: "Ã°Å¸â€™Â¼", color: "#1a3a5f" },
-  internship: { label: "Internships", icon: "Ã°Å¸Å½â€œ", color: "#1e6f5c" },
-  project: { label: "Projects", icon: "Ã°Å¸Å¡â‚¬", color: "#c13535" },
-  freelance: { label: "Freelance", icon: "Ã°Å¸â€™Â»", color: "#d35400" },
-  research: { label: "Research", icon: "Ã°Å¸â€Â¬", color: "#5e35b1" }
+  job: { label: "Experience", icon: "💼", color: "#1a3a5f" },
+  internship: { label: "Internships", icon: "🎓", color: "#1e6f5c" },
+  project: { label: "Projects", icon: "🚀", color: "#c13535" },
+  freelance: { label: "Freelance", icon: "💻", color: "#d35400" },
+  research: { label: "Research", icon: "🔬", color: "#5e35b1" }
 };
 
 const Template6 = ({ isExporting = false, ...props }) => {
@@ -362,7 +363,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
     if (!startDate && !endDate) return '';
     if (startDate && !endDate) return startDate;
     if (!startDate && endDate) return endDate;
-    return `${startDate} Ã¢â‚¬â€œ ${endDate}`;
+    return `${startDate} – ${endDate}`;
   };
 
   const formatEducationDate = (dateString) => {
@@ -406,7 +407,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
   const processEducation = (edu) => {
     const startDate = formatEducationDate(edu.startDate || edu.startYear);
     const endDate = edu.current ? 'Present' : formatEducationDate(edu.endDate || edu.endYear || edu.graduationYear);
-    const dateDisplay = startDate && endDate ? `${startDate} Ã¢â‚¬â€œ ${endDate}` : (startDate || endDate || '');
+    const dateDisplay = startDate && endDate ? `${startDate} – ${endDate}` : (startDate || endDate || '');
     
     const gpaDisplay = edu.gpa ? formatGPA(edu.gpa, edu.gpaScale) : '';
     
@@ -731,14 +732,14 @@ const Template6 = ({ isExporting = false, ...props }) => {
               <span style={styles.expBoxCompany}>{safeString(exp.company)}</span>
               {exp.location && (
                 <span style={styles.expBoxLocation}>
-                  <span style={styles.locationIcon}>Ã°Å¸â€œÂ</span>
+                  <span style={styles.locationIcon}>📍</span>
                   {safeString(exp.location)}
                 </span>
               )}
             </div>
           </div>
           <div style={styles.expBoxDates}>
-            {formatDate(exp.startDate)} Ã¢â‚¬â€œ {exp.current ? 'Present' : formatDate(exp.endDate)}
+            {formatDate(exp.startDate)} – {exp.current ? 'Present' : formatDate(exp.endDate)}
           </div>
         </div>
         
@@ -746,7 +747,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
           <ul style={styles.expBoxAchievements}>
             {exp.bulletPoints.map((achievement, idx) => (
               <li key={idx} style={styles.expBoxAchievement}>
-                <span style={styles.achievementBullet}>Ã¢â‚¬Â¢</span>
+                <span style={styles.achievementBullet}>•</span>
                 {safeString(achievement)}
               </li>
             ))}
@@ -763,7 +764,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
         <span style={styles.eduBoxInstitution}>{safeString(edu.institution)}</span>
         {edu.location && (
           <span style={styles.eduBoxLocation}>
-            <span>Ã°Å¸â€œÂ</span>
+            <span>📍</span>
             {safeString(edu.location)}
           </span>
         )}
@@ -839,7 +840,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
     if (!name || name.length < 2) return null;
     return (
       <div key={index} style={styles.skillItem}>
-        <span>Ã¢Å“Â¦</span>
+        <span>✧</span>
         <span>{name}</span>
       </div>
     );
@@ -1430,7 +1431,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.summary && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   PROFESSIONAL SUMMARY
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1445,7 +1446,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
               <section style={styles.section}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                    <span style={styles.sectionIcon}>✧</span>
                     {getSectionTitle("WORK EXPERIENCE", selectedExperienceType)}
                   </h3>
                   
@@ -1477,7 +1478,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
                   </div>
                 ) : (
                   <div style={styles.emptyState}>
-                    <div style={styles.emptyIcon}>{EXPERIENCE_TYPES[selectedExperienceType]?.icon || 'Ã°Å¸â€™Â¼'}</div>
+                    <div style={styles.emptyIcon}>{EXPERIENCE_TYPES[selectedExperienceType]?.icon || '💼'}</div>
                     <p style={styles.emptyStateP}>No {EXPERIENCE_TYPES[selectedExperienceType]?.label.toLowerCase() || 'experience'} entries available</p>
                   </div>
                 )}
@@ -1487,7 +1488,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.education && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   EDUCATION
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1504,7 +1505,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.skills && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   KEY SKILLS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1518,7 +1519,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.projects && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   PROJECT
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1532,7 +1533,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.certifications && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   CERTIFICATIONS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>
@@ -1546,7 +1547,7 @@ const Template6 = ({ isExporting = false, ...props }) => {
             {contentAnalysis.sections.awards && (
               <section style={styles.section}>
                 <h3 style={styles.sectionTitle}>
-                  <span style={styles.sectionIcon}>Ã¢Å“Â¦</span>
+                  <span style={styles.sectionIcon}>✧</span>
                   AWARDS
                 </h3>
                 <div style={{...styles.sectionContent, ...styles.sectionSpacing}}>

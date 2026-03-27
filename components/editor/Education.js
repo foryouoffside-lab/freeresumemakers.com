@@ -907,7 +907,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                   alignItems: 'center',
                   gap: '8px'
                 }}>
-                  <span>📄š</span>
+                  <span>🎓</span>
                   Your Education
                 </h3>
                 <div style={{
@@ -929,7 +929,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                   borderRadius: '12px',
                   border: '2px dashed #cbd5e0'
                 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>📄Ž“</div>
+                  <div style={{ fontSize: '48px', marginBottom: '12px' }}>🎓</div>
                   <p style={{ fontSize: '15px', color: '#4a5568', marginBottom: '4px', fontWeight: 500 }}>
                     No education entries yet
                   </p>
@@ -1020,7 +1020,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                           padding: '4px 8px',
                           borderRadius: '20px'
                         }}>
-                          📄… {edu.startYear?.substring(0, 7)} - {edu.current ? 'Present' : edu.endYear?.substring(0, 7)}
+                          📅 {edu.startYear?.substring(0, 7)} - {edu.current ? 'Present' : edu.endYear?.substring(0, 7)}
                         </span>
                         {edu.gpa && (
                           <span style={{
@@ -1029,7 +1029,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            📄Š GPA: {edu.gpa}/{edu.gpaScale}
+                            📊 GPA: {edu.gpa}/{edu.gpaScale}
                           </span>
                         )}
                         {edu.location && (
@@ -1039,7 +1039,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                             padding: '4px 8px',
                             borderRadius: '20px'
                           }}>
-                            📄 {edu.location}
+                            📍 {edu.location}
                           </span>
                         )}
                       </div>
@@ -1082,7 +1082,7 @@ const Education = ({ onDataChange, data, templateId, navigationButtons }) => {
                           alignItems: 'center',
                           gap: '4px'
                         }}>
-                          <span style={{ fontSize: '14px' }}>âœï¸</span> Click any field to edit
+                          <span style={{ fontSize: '14px' }}>✏️</span> Click any field to edit
                         </p>
                         
                         <div style={{

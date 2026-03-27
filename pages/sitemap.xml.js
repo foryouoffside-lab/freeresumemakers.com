@@ -1,4 +1,5 @@
-﻿// pages/sitemap.xml.js
+﻿import React from 'react';
+// pages/sitemap.xml.js
 const EXTERNAL_DATA_URL = 'https://freeresumemaker.xyz';
 
 function generateSiteMap() {
@@ -306,4 +307,3 @@ export async function getServerSideProps({ res }) {
 export default function Sitemap() {
   return null;
 }
-

@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
@@ -27,20 +28,20 @@ const TEMPLATE_NAMES = {
 };
 
 const comparisons = [
-  { id: '1-vs-2', title: 'Professional vs Innovator', templates: [1, 2], icon: '📄‘” vs 📄Ž¨' },
-  { id: '1-vs-3', title: 'Professional vs Executive', templates: [1, 3], icon: '📄‘” vs 📄’¼' },
-  { id: '1-vs-4', title: 'Professional vs Strategist', templates: [1, 4], icon: '📄‘” vs 📄Š' },
-  { id: '2-vs-3', title: 'Innovator vs Executive', templates: [2, 3], icon: '📄Ž¨ vs 📄’¼' },
-  { id: '3-vs-4', title: 'Executive vs Strategist', templates: [3, 4], icon: '📄’¼ vs 📄Š' },
-  { id: '5-vs-6', title: 'Minimalist vs Architect', templates: [5, 6], icon: 'âœ¨ vs 📄—ï¸' },
-  { id: '7-vs-8', title: 'Scholar vs Traditionalist', templates: [7, 8], icon: '📄š vs 📄œ' },
-  { id: '9-vs-10', title: 'Modernist vs Essential', templates: [9, 10], icon: '📄ŒŸ vs 📄‹' },
-  { id: '17-vs-18', title: 'Innovator 2.0 vs Code', templates: [17, 18], icon: '📄š€ vs 📄’»' },
-  { id: '18-vs-19', title: 'Code vs Scholar 2.0', templates: [18, 19], icon: '📄’» vs 📄–' },
-  { id: '19-vs-20', title: 'Scholar 2.0 vs Engineer', templates: [19, 20], icon: '📄– vs âš™ï¸' },
-  { id: 'ats-friendly-vs-creative', title: 'ATS-Friendly vs Creative', templates: [5, 2], icon: '📄¤– vs 📄Ž¨' },
-  { id: 'by-profession', title: 'Templates by Profession', templates: [], icon: '📄’¼' },
-  { id: 'minimalist-vs-professional', title: 'Minimalist vs Professional', templates: [5, 1], icon: 'âœ¨ vs 📄‘”' }
+  { id: '1-vs-2', title: 'Professional vs Innovator', templates: [1, 2], icon: '📄 vs 💻' },
+  { id: '1-vs-3', title: 'Professional vs Executive', templates: [1, 3], icon: '📄 vs 💼' },
+  { id: '1-vs-4', title: 'Professional vs Strategist', templates: [1, 4], icon: '📄 vs 📊' },
+  { id: '2-vs-3', title: 'Innovator vs Executive', templates: [2, 3], icon: '💻 vs 💼' },
+  { id: '3-vs-4', title: 'Executive vs Strategist', templates: [3, 4], icon: '💼 vs 📊' },
+  { id: '5-vs-6', title: 'Minimalist vs Architect', templates: [5, 6], icon: '✨ vs 🏛️' },
+  { id: '7-vs-8', title: 'Scholar vs Traditionalist', templates: [7, 8], icon: '📚 vs 📜' },
+  { id: '9-vs-10', title: 'Modernist vs Essential', templates: [9, 10], icon: '🎨 vs 📋' },
+  { id: '17-vs-18', title: 'Innovator 2.0 vs Code', templates: [17, 18], icon: '💡 vs 💻' },
+  { id: '18-vs-19', title: 'Code vs Scholar 2.0', templates: [18, 19], icon: '💻 vs 📚' },
+  { id: '19-vs-20', title: 'Scholar 2.0 vs Engineer', templates: [19, 20], icon: '📚 vs ⚙️' },
+  { id: 'ats-friendly-vs-creative', title: 'ATS-Friendly vs Creative', templates: [5, 2], icon: '🤖 vs 🎨' },
+  { id: 'by-profession', title: 'Templates by Profession', templates: [], icon: '💼' },
+  { id: 'minimalist-vs-professional', title: 'Minimalist vs Professional', templates: [5, 1], icon: '✨ vs 📄' }
 ];
 
 export default function CompareIndex() {
@@ -122,14 +123,14 @@ export default function CompareIndex() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <Link href="/templates" style={{ color: '#666', textDecoration: 'none' }}>Resume Templates</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Compare Templates</span>
         </nav>
 
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>âš–ï¸</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>⚖️</div>
           <h1 style={{
             fontSize: '42px',
             marginBottom: '16px',
@@ -158,7 +159,7 @@ export default function CompareIndex() {
           borderLeft: '4px solid #0070f3' 
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>📄’¡ Pro Tip:</strong> The right template can make your resume stand out. Compare templates based on your industry, 
+            <strong>💡 Pro Tip:</strong> The right template can make your resume stand out. Compare templates based on your industry, 
             experience level, and whether you need an ATS-friendly design.
           </p>
         </div>
@@ -212,7 +213,7 @@ export default function CompareIndex() {
                   fontSize: '14px',
                   fontWeight: '500'
                 }}>
-                  Compare Now â†’
+                  Compare Now →
                 </div>
               </div>
             </Link>
@@ -230,24 +231,24 @@ export default function CompareIndex() {
           marginBottom: '48px'
         }}>
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '16px' }}>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📄‘” Corporate & Executive</h3>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📄 Corporate & Executive</h3>
             <p style={{ color: '#666', marginBottom: '16px' }}>Best templates for business, finance, law, and leadership roles</p>
-            <Link href="/templates/compare/1-vs-3" style={{ color: '#0070f3' }}>Professional vs Executive â†’</Link>
+            <Link href="/templates/compare/1-vs-3" style={{ color: '#0070f3' }}>Professional vs Executive →</Link>
           </div>
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '16px' }}>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📄’» Tech & Developer</h3>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>💻 Tech & Developer</h3>
             <p style={{ color: '#666', marginBottom: '16px' }}>Best templates for software engineers, developers, and IT pros</p>
-            <Link href="/templates/compare/17-vs-18" style={{ color: '#0070f3' }}>Innovator 2.0 vs Code â†’</Link>
+            <Link href="/templates/compare/17-vs-18" style={{ color: '#0070f3' }}>Innovator 2.0 vs Code →</Link>
           </div>
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '16px' }}>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📄Ž¨ Creative & Design</h3>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>🎨 Creative & Design</h3>
             <p style={{ color: '#666', marginBottom: '16px' }}>Best templates for designers, artists, and creative roles</p>
-            <Link href="/templates/compare/ats-friendly-vs-creative" style={{ color: '#0070f3' }}>ATS-Friendly vs Creative â†’</Link>
+            <Link href="/templates/compare/ats-friendly-vs-creative" style={{ color: '#0070f3' }}>ATS-Friendly vs Creative →</Link>
           </div>
           <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '16px' }}>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📄š Academic & Research</h3>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>📚 Academic & Research</h3>
             <p style={{ color: '#666', marginBottom: '16px' }}>Best templates for academics, researchers, and educators</p>
-            <Link href="/templates/compare/7-vs-19" style={{ color: '#0070f3' }}>Scholar vs Scholar 2.0 â†’</Link>
+            <Link href="/templates/compare/7-vs-19" style={{ color: '#0070f3' }}>Scholar vs Scholar 2.0 →</Link>
           </div>
         </div>
 
@@ -262,22 +263,22 @@ export default function CompareIndex() {
           marginBottom: '48px'
         }}>
           <div style={{ textAlign: 'center', padding: '24px' }}>
-            <div style={{ fontSize: '32px', marginBottom: '12px' }}>1ï¸âƒ£</div>
+            <div style={{ fontSize: '32px', marginBottom: '12px' }}>1️⃣</div>
             <h3 style={{ marginBottom: '8px' }}>Consider Your Industry</h3>
             <p style={{ fontSize: '14px', color: '#666' }}>Corporate templates for business, creative templates for design, tech templates for developers</p>
           </div>
           <div style={{ textAlign: 'center', padding: '24px' }}>
-            <div style={{ fontSize: '32px', marginBottom: '12px' }}>2ï¸âƒ£</div>
+            <div style={{ fontSize: '32px', marginBottom: '12px' }}>2️⃣</div>
             <h3 style={{ marginBottom: '8px' }}>Check ATS Compatibility</h3>
             <p style={{ fontSize: '14px', color: '#666' }}>Some templates are optimized for ATS systems with clean, simple formatting</p>
           </div>
           <div style={{ textAlign: 'center', padding: '24px' }}>
-            <div style={{ fontSize: '32px', marginBottom: '12px' }}>3ï¸âƒ£</div>
+            <div style={{ fontSize: '32px', marginBottom: '12px' }}>3️⃣</div>
             <h3 style={{ marginBottom: '8px' }}>Match Your Experience Level</h3>
             <p style={{ fontSize: '14px', color: '#666' }}>Entry-level templates focus on skills, executive templates highlight achievements</p>
           </div>
           <div style={{ textAlign: 'center', padding: '24px' }}>
-            <div style={{ fontSize: '32px', marginBottom: '12px' }}>4ï¸âƒ£</div>
+            <div style={{ fontSize: '32px', marginBottom: '12px' }}>4️⃣</div>
             <h3 style={{ marginBottom: '8px' }}>Read Comparison Guides</h3>
             <p style={{ fontSize: '14px', color: '#666' }}>See side-by-side comparisons to understand the differences</p>
           </div>
@@ -310,7 +311,7 @@ export default function CompareIndex() {
             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
-            Start Building Now â†’
+            Start Building Now →
           </Link>
         </div>
       </div>

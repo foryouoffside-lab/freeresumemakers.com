@@ -1,4 +1,5 @@
-﻿// pages/blog/action-verbs-for-resume.js
+﻿import React from 'react';
+// pages/blog/action-verbs-for-resume.js
 import SEO from '../../components/SEO';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -144,9 +145,9 @@ export default function ActionVerbsForResume() {
           color: '#666'
         }}>
           <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
-          <span>Ã¢â‚¬Âº</span>
+          <span>&gt;</span>
           <span style={{ color: '#0070f3' }}>Action Verbs for Resume</span>
         </div>
 
@@ -963,7 +964,7 @@ export default function ActionVerbsForResume() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>Ã°Å¸â€œÂ¥</div>
+            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Download Free Action Verbs List</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Get a printable PDF version of all 200+ action verbs organized by category. Perfect for reference while writing your resume.
@@ -1012,10 +1013,10 @@ export default function ActionVerbsForResume() {
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: 'Ã°Å¸ÂÂ¦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('200+ Powerful Action Verbs for Your Resume')}&url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
-              { name: 'LinkedIn', icon: 'Ã°Å¸â€™Â¼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
-              { name: 'Facebook', icon: 'Ã°Å¸â€œËœ', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
-              { name: 'Email', icon: 'Ã°Å¸â€œÂ§', url: `mailto:?subject=${encodeURIComponent('200+ Powerful Action Verbs for Resume')}&body=${encodeURIComponent('Check out this article: https://freeresumemaker.xyz/blog/action-verbs-for-resume')}` }
+              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent('200+ Powerful Action Verbs for Your Resume')}&url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/action-verbs-for-resume` },
+              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent('200+ Powerful Action Verbs for Resume')}&body=${encodeURIComponent('Check out this article: https://freeresumemaker.xyz/blog/action-verbs-for-resume')}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -1102,7 +1103,7 @@ export default function ActionVerbsForResume() {
                     {post.title}
                   </h4>
                   <div style={{ fontSize: '12px', color: '#666' }}>
-                    By {post.author} Ã¢â‚¬Â¢ {post.readTime} read
+                    By {post.author} • {post.readTime} read
                   </div>
                 </div>
               </Link>
@@ -1188,7 +1189,7 @@ export default function ActionVerbsForResume() {
           fontSize: '14px',
           marginTop: '30px'
         }}>
-          <p>Last updated: February 10, 2026 | Ã‚Â© {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
+          <p>Last updated: February 10, 2026 | © {new Date().getFullYear()} Free Resume Builder. All rights reserved.</p>
         </div>
       </div>
     </>
