@@ -203,9 +203,9 @@ export default function TemplateSelectorPage() {
           color: '#666'
         }}>
           <a href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</a>
-          <span>â€º</span>
+          <span>›</span>
           <a href="/editor" style={{ color: '#666', textDecoration: 'none' }}>Resume Builder</a>
-          <span>â€º</span>
+          <span>›</span>
           <span style={{ color: '#0070f3' }}>Choose Template</span>
         </nav>
 
@@ -325,7 +325,7 @@ export default function TemplateSelectorPage() {
           borderTop: '1px solid #e9ecef',
           paddingTop: '24px'
         }}>
-          <p>Â© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
+          <p>© {new Date().getFullYear()} Free Resume Builder | 20+ ATS-Friendly Templates | 100% Free</p>
         </div>
       </div>
     </>
