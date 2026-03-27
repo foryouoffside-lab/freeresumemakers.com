@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import SEO from '../components/SEO';
 import Head from 'next/head';
 import Script from 'next/script';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -164,6 +165,7 @@ function MyApp({ Component, pageProps }) {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <SpeedInsights />
       </ResumeProvider>
 
       <style jsx global>{`
