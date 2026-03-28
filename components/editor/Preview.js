@@ -53,16 +53,23 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
   const [showThanks, setShowThanks] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showOrientationWarning, setShowOrientationWarning] = useState(false);
   
   // YOUR UPI ID
   const myUpiId = 'biradarsangmesh91@okicici';
   
-  // Check if device is mobile
+  // Check if device is mobile and show warning
   useEffect(() => {
     const checkMobile = () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-      setIsMobile(mobileRegex.test(userAgent));
+      const isMobileDevice = mobileRegex.test(userAgent);
+      setIsMobile(isMobileDevice);
+      
+      // Show orientation warning only for mobile users
+      if (isMobileDevice) {
+        setShowOrientationWarning(true);
+      }
     };
     checkMobile();
   }, []);
@@ -342,6 +349,82 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
         <meta name="description" content="Preview your resume in real-time with our interactive viewer. Zoom, pan, and inspect every detail before downloading as a professional PDF." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+
+      {/* Orientation Warning for Mobile Users */}
+      {showOrientationWarning && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backdropFilter: 'blur(8px)'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '20px',
+            padding: '32px 24px',
+            maxWidth: '320px',
+            width: '85%',
+            textAlign: 'center',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+            animation: 'fadeIn 0.3s ease-out'
+          }}>
+            <div style={{
+              fontSize: '48px',
+              marginBottom: '20px'
+            }}>
+              📱🔄
+            </div>
+            <h2 style={{
+              fontSize: '22px',
+              fontWeight: 'bold',
+              margin: '0 0 12px 0',
+              color: '#1e293b'
+            }}>
+              Rotate Your Device
+            </h2>
+            <p style={{
+              fontSize: '14px',
+              lineHeight: '1.5',
+              color: '#475569',
+              margin: '0 0 20px 0'
+            }}>
+              For the best preview experience and to ensure your PDF downloads correctly, please rotate your phone to landscape mode or switch to desktop mode in your browser.
+            </p>
+            <button
+              onClick={() => setShowOrientationWarning(false)}
+              style={{
+                backgroundColor: '#0070f3',
+                color: 'white',
+                border: 'none',
+                padding: '12px 32px',
+                borderRadius: '30px',
+                fontSize: '16px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                width: '100%',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#005cc5';
+                e.currentTarget.style.transform = 'scale(1.02)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#0070f3';
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              OK, Got it
+            </button>
+          </div>
+        </div>
+      )}
 
       <main 
         style={{
