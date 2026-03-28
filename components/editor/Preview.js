@@ -1,7 +1,6 @@
 ﻿// ============================================
 // components/editor/Preview.js
-// UPI PAYMENT - KEEP PAY VIA UPI BUTTON FOR ALL
-// REMOVED DOWNLOAD COUNTER
+// FIXED: Shows message asking for desktop view on small screens with PDF disturbance warning
 // ============================================
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
@@ -57,26 +56,61 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
   // YOUR UPI ID
   const myUpiId = 'biradarsangmesh91@okicici';
   
-  // Check if device is mobile
+  // Check if device is mobile and screen is too small
+  const [showDesktopMessage, setShowDesktopMessage] = useState(false);
+  const [userProceeded, setUserProceeded] = useState(false);
+  
   useEffect(() => {
-    const checkMobile = () => {
+    const checkDevice = () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-      setIsMobile(mobileRegex.test(userAgent));
+      const isMobileDevice = mobileRegex.test(userAgent) || window.innerWidth < 1024;
+      setIsMobile(isMobileDevice);
+      
+      // Show desktop message if screen width is less than 1024px (tablet/mobile)
+      // or if it's a mobile device AND user hasn't proceeded
+      setShowDesktopMessage((window.innerWidth < 1024 || isMobileDevice) && !userProceeded);
     };
-    checkMobile();
-  }, []);
+    
+    checkDevice();
+    
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      const isMobileDevice = window.innerWidth < 1024;
+      setIsMobile(isMobileDevice);
+      if (!userProceeded) {
+        setShowDesktopMessage(window.innerWidth < 1024);
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [userProceeded]);
   
-  // Draggable state
-  const [isDragging, setIsDragging] = useState(false);
+  // Zoom state - default scale based on screen width
+  const getDefaultScale = () => {
+    if (typeof window === 'undefined') return 0.6;
+    const width = window.innerWidth;
+    if (width < 480) return 0.32;
+    if (width < 640) return 0.38;
+    if (width < 768) return 0.45;
+    if (width < 1024) return 0.55;
+    return 0.6;
+  };
+  
+  const [previewScale, setPreviewScale] = useState(getDefaultScale);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
   const [startPosition, setStartPosition] = useState({ x: 0, y: 0 });
-  const [previewScale, setPreviewScale] = useState(0.5);
   const [showDragHint, setShowDragHint] = useState(true);
   const lastTouchRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setPreviewScale(getDefaultScale());
+      setPosition({ x: 0, y: 0 });
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -144,7 +178,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
     }
     
     setIsGenerating(true);
-    setDownloadStatus('Preparing PDF generation...');
+    setDownloadStatus('Preparing PDF...');
     
     try {
       if (!window.__resumeTemplateElement && templateRef.current) {
@@ -152,9 +186,9 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
       }
       
       await new Promise(resolve => setTimeout(resolve, 500));
-      setDownloadStatus('Generating high-quality PDF...');
+      setDownloadStatus('Generating PDF...');
       await generatePDF(state, tid);
-      setDownloadStatus('PDF downloaded successfully!');
+      setDownloadStatus('✓ PDF downloaded!');
       
       if (onDownloadComplete) {
         await onDownloadComplete(tid);
@@ -164,15 +198,14 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
       
       setTimeout(() => setDownloadStatus(''), 3000);
     } catch (error) {
-      console.error('❌ PDF generation error:', error);
-      setDownloadStatus('Error generating PDF. Please try again.');
+      console.error('PDF generation error:', error);
+      setDownloadStatus('Error. Please try again.');
       setTimeout(() => setDownloadStatus(''), 3000);
     } finally {
       setIsGenerating(false);
     }
   };
 
-  // Direct UPI Payment - Opens UPI App
   const handleUPIPayment = () => {
     const upiUrl = `upi://pay?pa=${myUpiId}&pn=Resume%20Builder&cu=INR&tn=Support%20for%20Resume%20Builder`;
     window.location.href = upiUrl;
@@ -184,21 +217,29 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
     }, 1000);
   };
 
-  // Copy UPI ID
   const copyUpiId = () => {
     navigator.clipboard.writeText(myUpiId);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Generate UPI QR Code
   const getQRCodeUrl = () => {
     const upiData = `upi://pay?pa=${myUpiId}&pn=Resume%20Builder&cu=INR&tn=Support%20for%20Resume%20Builder`;
-    return `https://quickchart.io/qr?text=${encodeURIComponent(upiData)}&size=300&margin=2&dark=000000&light=ffffff`;
+    return `https://quickchart.io/qr?text=${encodeURIComponent(upiData)}&size=200&margin=2&dark=000000&light=ffffff`;
   };
 
-  // Drag handlers
+  const zoomIn = () => setPreviewScale(Math.min(previewScale + 0.08, 1.2));
+  const zoomOut = () => setPreviewScale(Math.max(previewScale - 0.08, 0.25));
+  const resetZoom = () => {
+    setPreviewScale(getDefaultScale());
+    setPosition({ x: 0, y: 0 });
+  };
+
+  // Drag handlers - only enabled on larger screens or when zoomed in
+  const enableDrag = previewScale > 0.6 || (!isMobile && previewScale > 0.5);
+  
   const handleMouseDown = (e) => {
+    if (!enableDrag) return;
     if (e.target.closest('button') || e.target.closest('a')) return;
     setIsDragging(true);
     setStartPosition({
@@ -210,6 +251,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
   };
 
   const handleTouchStart = (e) => {
+    if (!enableDrag) return;
     if (e.target.closest('button') || e.target.closest('a')) return;
     setIsDragging(true);
     const touch = e.touches[0];
@@ -260,21 +302,6 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
     }
   }, [isDragging, handleMouseMove, handleTouchMove]);
 
-  useEffect(() => {
-    const handleWheel = (e) => {
-      if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
-        const delta = e.deltaY > 0 ? -0.1 : 0.1;
-        setPreviewScale(Math.max(0.3, Math.min(1, previewScale + delta)));
-      }
-    };
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener('wheel', handleWheel, { passive: false });
-      return () => container.removeEventListener('wheel', handleWheel);
-    }
-  }, [previewScale]);
-
   const renderTemplate = () => {
     const TemplateComponent = selectedTemplate;
     const tid = currentTemplateId || templateId;
@@ -285,14 +312,17 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
         data-template-id={tid}
         data-pdf-ready="true"
         style={{
-          width: '100%',
-          height: '100%',
+          width: '210mm',
+          minWidth: '210mm',
+          height: '297mm',
+          minHeight: '297mm',
           overflow: 'visible',
           position: 'relative',
           background: 'white',
           transform: 'none',
           animation: 'none',
-          transition: 'none'
+          transition: 'none',
+          boxSizing: 'border-box'
         }}
       >
         <TemplateComponent 
@@ -316,31 +346,308 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
     );
   };
 
-  const zoomIn = () => setPreviewScale(Math.min(previewScale + 0.1, 1));
-  const zoomOut = () => setPreviewScale(Math.max(previewScale - 0.1, 0.3));
-  const resetZoom = () => { setPreviewScale(0.5); setPosition({ x: 0, y: 0 }); };
-
-  const isMobileDevice = windowWidth < 768 || isMobile;
+  const isSmallMobile = windowWidth < 480;
+  const isMobileDevice = isMobile || windowWidth < 768;
+  
   const fontSizes = {
-    h1: windowWidth < 480 ? '24px' : windowWidth < 768 ? '26px' : '28px',
-    h2: windowWidth < 480 ? '20px' : windowWidth < 768 ? '22px' : '24px',
-    body: windowWidth < 480 ? '13px' : '14px',
-    small: windowWidth < 480 ? '11px' : '12px'
+    h1: isSmallMobile ? '20px' : isMobileDevice ? '22px' : '28px',
+    h2: isSmallMobile ? '18px' : isMobileDevice ? '20px' : '24px',
+    body: isSmallMobile ? '12px' : isMobileDevice ? '13px' : '14px',
+    small: isSmallMobile ? '10px' : isMobileDevice ? '11px' : '12px'
   };
 
   const spacing = {
-    section: windowWidth < 480 ? '12px' : '16px',
-    card: windowWidth < 480 ? '16px' : '20px'
+    section: isSmallMobile ? '8px' : isMobileDevice ? '12px' : '16px',
+    card: isSmallMobile ? '12px' : isMobileDevice ? '16px' : '20px'
   };
 
   const displayTemplateId = currentTemplateId || templateId || '?';
+  
+  // Calculate container height based on scale
+  const containerHeight = `calc(297mm * ${previewScale} + 40px)`;
+
+  // If screen is too small, show desktop view message with PDF disturbance warning
+  if (showDesktopMessage) {
+    return (
+      <>
+        <Head>
+          <title>Desktop Mode Required | Resume Preview</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </Head>
+        
+        <div style={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        }}>
+          <div style={{
+            maxWidth: '550px',
+            width: '100%',
+            background: 'white',
+            borderRadius: '24px',
+            padding: '32px 28px',
+            textAlign: 'center',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+            animation: 'slideUp 0.5s ease'
+          }}>
+            {/* Warning Icon */}
+            <div style={{
+              fontSize: '70px',
+              marginBottom: '16px'
+            }}>
+              ⚠️
+            </div>
+            
+            <h1 style={{
+              fontSize: '26px',
+              fontWeight: '700',
+              color: '#dc2626',
+              marginBottom: '12px'
+            }}>
+              Desktop Mode Required!
+            </h1>
+            
+            {/* Critical Warning Message */}
+            <div style={{
+              background: '#fff5f5',
+              borderLeft: '4px solid #dc2626',
+              borderRadius: '8px',
+              padding: '16px',
+              marginBottom: '20px',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                fontSize: '15px',
+                fontWeight: '600',
+                color: '#991b1b',
+                marginBottom: '8px'
+              }}>
+                ⚡ IMPORTANT WARNING:
+              </p>
+              <p style={{
+                fontSize: '14px',
+                color: '#7f1a1a',
+                margin: 0,
+                lineHeight: '1.5'
+              }}>
+                On mobile devices or small screens, <strong>your PDF will be DISTURBED</strong> - 
+                formatting will break, text will overflow, and the layout will appear incorrect.
+                <span style={{ display: 'block', marginTop: '8px', fontWeight: '600' }}>
+                  DO NOT download PDF in mobile view!
+                </span>
+              </p>
+            </div>
+            
+            {/* Solutions Section */}
+            <div style={{
+              background: '#fef3c7',
+              borderRadius: '16px',
+              padding: '20px',
+              marginBottom: '24px',
+              textAlign: 'left'
+            }}>
+              <h3 style={{
+                fontSize: '18px',
+                fontWeight: '600',
+                color: '#92400e',
+                marginBottom: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}>
+                <span>🔧</span> Solutions:
+              </h3>
+              
+              <div style={{ marginBottom: '16px' }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  marginBottom: '16px',
+                  padding: '12px',
+                  background: 'white',
+                  borderRadius: '12px'
+                }}>
+                  <span style={{ fontSize: '28px' }}>🔄</span>
+                  <div>
+                    <strong style={{ color: '#92400e' }}>Rotate to Landscape</strong>
+                    <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: '#78350f' }}>
+                      Turn your phone sideways for a wider view
+                    </p>
+                  </div>
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  marginBottom: '16px',
+                  padding: '12px',
+                  background: 'white',
+                  borderRadius: '12px'
+                }}>
+                  <span style={{ fontSize: '28px' }}>🌐</span>
+                  <div>
+                    <strong style={{ color: '#92400e' }}>Request Desktop Site</strong>
+                    <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: '#78350f' }}>
+                      In browser settings, enable "Desktop Site" mode
+                    </p>
+                  </div>
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '12px',
+                  background: 'white',
+                  borderRadius: '12px'
+                }}>
+                  <span style={{ fontSize: '28px' }}>💻</span>
+                  <div>
+                    <strong style={{ color: '#92400e' }}>Use Desktop/Laptop</strong>
+                    <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: '#78350f' }}>
+                      Open this page on a computer for best results
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* PDF Warning Badge */}
+            <div style={{
+              background: '#fee2e2',
+              borderRadius: '12px',
+              padding: '12px',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px'
+            }}>
+              <span style={{ fontSize: '20px' }}>📄</span>
+              <span style={{ fontSize: '13px', color: '#991b1b', fontWeight: '500' }}>
+                PDF will be DISTURBED if downloaded now
+              </span>
+            </div>
+            
+            {/* Rotate Button (Quick Action) */}
+            {typeof window !== 'undefined' && window.screen?.orientation && (
+              <button
+                onClick={() => {
+                  if (window.screen.orientation && window.screen.orientation.lock) {
+                    window.screen.orientation.lock('landscape').catch(() => {});
+                  }
+                }}
+                style={{
+                  width: '100%',
+                  background: '#f59e0b',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '12px',
+                  padding: '14px 24px',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  marginBottom: '12px',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                🔄 Rotate to Landscape Mode
+              </button>
+            )}
+            
+            {/* Download PDF button with strong warning */}
+            <button
+              onClick={() => {
+                if (confirm('⚠️ WARNING: Your PDF may be DISTURBED and appear broken if downloaded on mobile. Are you sure you want to continue?')) {
+                  setUserProceeded(true);
+                  setShowDesktopMessage(false);
+                  setTimeout(() => handleDownloadPDF(), 500);
+                }
+              }}
+              disabled={isGenerating}
+              style={{
+                width: '100%',
+                background: isGenerating ? '#94a3b8' : '#ef4444',
+                color: 'white',
+                border: 'none',
+                borderRadius: '12px',
+                padding: '14px 24px',
+                fontSize: '15px',
+                fontWeight: '600',
+                cursor: isGenerating ? 'not-allowed' : 'pointer',
+                marginBottom: '12px',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              {isGenerating ? '⏳ Generating...' : '⚠️ Download PDF (Not Recommended)'}
+            </button>
+            
+            {/* Continue button with warning */}
+            <button
+              onClick={() => {
+                if (confirm('⚠️ Your PDF will be DISTURBED if downloaded. You can preview but download may break. Continue anyway?')) {
+                  setUserProceeded(true);
+                  setShowDesktopMessage(false);
+                }
+              }}
+              style={{
+                width: '100%',
+                background: '#f3f4f6',
+                color: '#374151',
+                border: 'none',
+                borderRadius: '12px',
+                padding: '14px 24px',
+                fontSize: '15px',
+                fontWeight: '500',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Continue Preview (Download Not Recommended)
+            </button>
+            
+            <p style={{
+              fontSize: '11px',
+              color: '#999',
+              marginTop: '20px',
+              padding: '12px',
+              background: '#faf5ff',
+              borderRadius: '8px'
+            }}>
+              📌 <strong>Why?</strong> Resume templates are designed for A4 paper size (210mm x 297mm). 
+              Mobile screens cannot display this correctly, causing PDF formatting issues.
+            </p>
+          </div>
+        </div>
+        
+        <style>{`
+          @keyframes slideUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
+      </>
+    );
+  }
 
   return (
     <>
       <Head>
-        <title>Resume Preview & PDF Download | Real-Time Resume Viewer</title>
-        <meta name="description" content="Preview your resume in real-time with our interactive viewer. Zoom, pan, and inspect every detail before downloading as a professional PDF." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume Preview & PDF Download | Free Resume Builder</title>
+        <meta name="description" content="Preview your resume in real-time before downloading as PDF. Zoom and pan to inspect every detail." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
       </Head>
 
       <main 
@@ -355,17 +662,59 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
           boxSizing: 'border-box'
         }}
       >
+        {/* Header with Warning Banner for Mobile Users Who Proceeded */}
+        {(isMobileDevice || windowWidth < 1024) && (
+          <div style={{
+            background: '#fff5f5',
+            border: '1px solid #fecaca',
+            borderRadius: '12px',
+            padding: '12px 16px',
+            marginBottom: '16px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            flexWrap: 'wrap'
+          }}>
+            <span style={{ fontSize: '20px' }}>⚠️</span>
+            <div style={{ flex: 1 }}>
+              <strong style={{ color: '#991b1b', fontSize: '13px' }}>PDF Warning:</strong>
+              <span style={{ fontSize: '12px', color: '#7f1a1a', marginLeft: '8px' }}>
+                Downloading PDF on mobile may cause formatting issues. Use desktop mode or rotate to landscape.
+              </span>
+            </div>
+            <button
+              onClick={() => {
+                if (window.screen?.orientation?.lock) {
+                  window.screen.orientation.lock('landscape').catch(() => {});
+                }
+              }}
+              style={{
+                background: '#f59e0b',
+                color: 'white',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '6px 12px',
+                fontSize: '12px',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              🔄 Rotate
+            </button>
+          </div>
+        )}
+        
         {/* Header */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '16px',
-          marginBottom: '24px',
-          padding: '16px 20px',
+          gap: '12px',
+          marginBottom: '16px',
+          padding: isSmallMobile ? '12px' : '16px',
           background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
-          borderRadius: '16px',
+          borderRadius: '12px',
           border: '1px solid #e9ecef'
         }}>
           <div>
@@ -375,89 +724,67 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               color: '#1a1a1a',
               fontWeight: 700
             }}>
-              Preview Your <span style={{ color: '#0070f3' }}>Resume</span>
+              Resume Preview
             </h1>
             <p style={{
               fontSize: fontSizes.small,
               color: '#6c757d',
-              margin: '8px 0 0 0'
+              margin: '4px 0 0 0'
             }}>
-              Template {displayTemplateId} • Real-time preview • A4 format
+              Template {displayTemplateId} • A4 Format • {Math.round(previewScale * 100)}%
             </p>
           </div>
-        </div>
-
-        {/* Stats Bar */}
-        <div style={{
-          display: 'flex',
-          gap: '16px',
-          marginBottom: '24px',
-          padding: spacing.card,
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around'
-        }}>
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ display: 'block', fontSize: '24px', fontWeight: 700, color: '#0070f3' }}>
-              {Math.round(previewScale * 100)}%
+          
+          {/* Device Mode Indicator */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: (isMobileDevice || windowWidth < 1024) ? '#fee2e2' : '#e8f0fe',
+            padding: '6px 12px',
+            borderRadius: '20px'
+          }}>
+            <span style={{ fontSize: '14px' }}>{(isMobileDevice || windowWidth < 1024) ? '📱' : '💻'}</span>
+            <span style={{ fontSize: fontSizes.small, color: (isMobileDevice || windowWidth < 1024) ? '#dc2626' : '#1a73e8' }}>
+              {(isMobileDevice || windowWidth < 1024) ? 'Mobile Mode - PDF May Break' : 'Desktop Mode'}
             </span>
-            <span style={{ fontSize: fontSizes.small, color: '#6c757d' }}>Zoom Level</span>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ display: 'block', fontSize: '24px', fontWeight: 700, color: '#10b981' }}>
-              A4
-            </span>
-            <span style={{ fontSize: fontSizes.small, color: '#6c757d' }}>Page Size</span>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ display: 'block', fontSize: '24px', fontWeight: 700, color: '#8b5cf6' }}>
-              {state.personalInfo?.fullName ? '✓' : '○'}
-            </span>
-            <span style={{ fontSize: fontSizes.small, color: '#6c757d' }}>Content Ready</span>
           </div>
         </div>
 
-        {/* Preview Container */}
+        {/* Preview Container - Template stays constant */}
         <div style={{
           background: 'white',
-          borderRadius: '16px',
+          borderRadius: '12px',
           padding: spacing.card,
           boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
           border: '1px solid #e2e8f0',
-          marginBottom: '32px'
+          marginBottom: '24px'
         }}>
           {/* Controls Header */}
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginBottom: '20px',
+            marginBottom: '16px',
             flexWrap: 'wrap',
-            gap: '16px',
-            paddingBottom: '16px',
+            gap: '12px',
+            paddingBottom: '12px',
             borderBottom: '1px solid #e2e8f0'
           }}>
             <h2 style={{
               fontSize: fontSizes.h2,
               fontWeight: 600,
               color: '#0f172a',
-              margin: 0,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px'
+              margin: 0
             }}>
-              <span>👁️</span>
-              Interactive Preview
+              Template Preview
             </h2>
             
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              {/* Zoom Controls */}
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '4px',
                 background: '#f8fafc',
                 padding: '4px',
                 borderRadius: '30px',
@@ -466,31 +793,31 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 <button
                   onClick={zoomOut}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: isSmallMobile ? '28px' : '32px',
+                    height: isSmallMobile ? '28px' : '32px',
                     border: 'none',
                     background: 'white',
                     borderRadius: '6px',
                     cursor: 'pointer',
-                    fontSize: '18px',
+                    fontSize: isSmallMobile ? '14px' : '16px',
                     border: '1px solid #e2e8f0'
                   }}
                 >
                   −
                 </button>
-                <span style={{ minWidth: '60px', textAlign: 'center', fontSize: fontSizes.small }}>
+                <span style={{ minWidth: '45px', textAlign: 'center', fontSize: fontSizes.small }}>
                   {Math.round(previewScale * 100)}%
                 </span>
                 <button
                   onClick={zoomIn}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: isSmallMobile ? '28px' : '32px',
+                    height: isSmallMobile ? '28px' : '32px',
                     border: 'none',
                     background: 'white',
                     borderRadius: '6px',
                     cursor: 'pointer',
-                    fontSize: '18px',
+                    fontSize: isSmallMobile ? '14px' : '16px',
                     border: '1px solid #e2e8f0'
                   }}
                 >
@@ -499,13 +826,13 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 <button
                   onClick={resetZoom}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: isSmallMobile ? '28px' : '32px',
+                    height: isSmallMobile ? '28px' : '32px',
                     border: 'none',
                     background: 'white',
                     borderRadius: '6px',
                     cursor: 'pointer',
-                    fontSize: '16px',
+                    fontSize: isSmallMobile ? '12px' : '14px',
                     border: '1px solid #e2e8f0'
                   }}
                 >
@@ -513,30 +840,31 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 </button>
               </div>
 
-              {/* Download Button */}
               <button
-                onClick={handleDownloadPDF}
+                onClick={() => {
+                  if ((isMobileDevice || windowWidth < 1024) && !confirm('⚠️ Warning: PDF may be DISTURBED on mobile. Download anyway?')) {
+                    return;
+                  }
+                  handleDownloadPDF();
+                }}
                 disabled={isGenerating}
                 style={{
-                  background: isGenerating ? '#94a3b8' : '#0070f3',
+                  background: isGenerating ? '#94a3b8' : (isMobileDevice || windowWidth < 1024) ? '#ef4444' : '#0070f3',
                   color: 'white',
                   border: 'none',
                   borderRadius: '8px',
-                  padding: '10px 24px',
+                  padding: isSmallMobile ? '8px 16px' : '10px 20px',
                   fontSize: fontSizes.body,
                   fontWeight: 600,
                   cursor: isGenerating ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '8px',
-                  transition: 'all 0.2s ease',
-                  boxShadow: hoveredBtn === 'download' ? '0 4px 12px rgba(0,112,243,0.3)' : 'none',
-                  transform: hoveredBtn === 'download' ? 'translateY(-2px)' : 'none'
+                  gap: '6px',
+                  whiteSpace: 'nowrap'
                 }}
-                onMouseEnter={() => setHoveredBtn('download')}
-                onMouseLeave={() => setHoveredBtn(null)}
               >
-                {isGenerating ? '⏳ Generating...' : '📄 Download PDF'}
+                {isGenerating ? '⏳' : (isMobileDevice || windowWidth < 1024) ? '⚠️' : '📄'} 
+                {isSmallMobile ? 'PDF' : 'Download PDF'}
               </button>
             </div>
           </div>
@@ -544,13 +872,13 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
           {/* Status Message */}
           {downloadStatus && (
             <div style={{
-              marginBottom: '20px',
-              padding: '12px 16px',
+              marginBottom: '16px',
+              padding: '8px 12px',
               borderRadius: '8px',
               fontSize: fontSizes.small,
               textAlign: 'center',
               background: downloadStatus.includes('Error') ? '#fef2f2' : 
-                         downloadStatus.includes('success') ? '#f0fdf4' : '#f8fafc',
+                         downloadStatus.includes('✓') ? '#f0fdf4' : '#f8fafc',
               border: `1px solid ${downloadStatus.includes('Error') ? '#fee2e2' : '#bbf7d0'}`,
               color: downloadStatus.includes('Error') ? '#991b1b' : '#166534'
             }}>
@@ -558,315 +886,233 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
             </div>
           )}
 
-          {/* Review Success Message */}
-          {showReviewSuccess && (
-            <div style={{
-              marginBottom: '20px',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              background: '#d1fae5',
-              border: '1px solid #10b981',
-              color: '#065f46',
-              textAlign: 'center',
-              fontSize: fontSizes.small,
-              animation: 'slideIn 0.3s ease-out'
-            }}>
-              ✨ Thank you for downloading! Please share your experience below ✨
-            </div>
-          )}
-
-          {/* Preview Area */}
+          {/* Preview Area - Scrollable, template stays constant */}
           <div
             ref={containerRef}
             style={{
               position: 'relative',
               width: '100%',
-              minHeight: isMobileDevice ? '400px' : '600px',
+              height: `calc(297mm * ${previewScale} + 80px)`,
+              minHeight: '400px',
+              maxHeight: isMobileDevice ? '70vh' : '80vh',
               background: 'linear-gradient(45deg, #f8fafc 25%, #ffffff 25%, #ffffff 50%, #f8fafc 50%, #f8fafc 75%, #ffffff 75%, #ffffff)',
               backgroundSize: '20px 20px',
               borderRadius: '12px',
               padding: spacing.card,
               boxSizing: 'border-box',
-              overflow: 'hidden',
-              border: '2px dashed #cbd5e1',
-              touchAction: 'none',
-              cursor: isDragging ? 'grabbing' : 'grab'
+              overflow: 'auto',
+              border: '2px solid #e2e8f0'
             }}
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleTouchStart}
           >
             <div style={{
               width: '100%',
-              height: '100%',
-              position: 'relative',
+              minHeight: '100%',
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              position: 'relative'
             }}>
-              {showDragHint && (
-                <div style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  background: 'rgba(15, 23, 42, 0.8)',
-                  color: 'white',
-                  padding: '10px 16px',
-                  borderRadius: '30px',
-                  fontSize: fontSizes.small,
-                  backdropFilter: 'blur(4px)',
-                  pointerEvents: 'none',
-                  zIndex: 10,
-                  whiteSpace: 'nowrap'
-                }}>
-                  🖱️ Drag to move • Ctrl+Scroll to zoom
-                </div>
-              )}
               <div
                 ref={previewRef}
                 style={{
-                  width: '210mm',
-                  minWidth: '210mm',
-                  height: '297mm',
-                  minHeight: '297mm',
-                  background: 'white',
-                  boxShadow: '0 10px 25px -5px rgba(0,0,0,0.1)',
                   position: 'relative',
-                  transformOrigin: 'center',
                   transform: `translate(${position.x}px, ${position.y}px) scale(${previewScale})`,
-                  transition: isDragging ? 'none' : 'transform 0.15s ease',
-                  cursor: isDragging ? 'grabbing' : 'grab',
+                  transformOrigin: 'center',
+                  transition: isDragging ? 'none' : 'transform 0.1s ease',
+                  cursor: enableDrag ? (isDragging ? 'grabbing' : 'grab') : 'default',
                   userSelect: 'none',
-                  borderRadius: '4px',
-                  overflow: 'hidden'
+                  display: 'inline-block'
                 }}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
               >
                 {renderTemplate()}
               </div>
             </div>
           </div>
+          
+          {/* Hint for users */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '16px',
+            marginTop: '12px',
+            flexWrap: 'wrap'
+          }}>
+            <p style={{
+              fontSize: fontSizes.small,
+              color: '#94a3b8',
+              margin: 0
+            }}>
+              🖱️ {enableDrag ? 'Drag to pan • ' : ''}🔍 Use buttons to zoom
+            </p>
+            <p style={{
+              fontSize: fontSizes.small,
+              color: '#94a3b8',
+              margin: 0
+            }}>
+              📄 Template stays at A4 size (210mm x 297mm)
+            </p>
+          </div>
         </div>
 
-        {/* UPI SUPPORT SECTION */}
+        {/* UPI SUPPORT SECTION - Mobile Optimized */}
         <div style={{
           background: 'white',
-          borderRadius: '16px',
+          borderRadius: '12px',
           padding: spacing.card,
           boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
           border: '1px solid #e2e8f0',
-          marginBottom: '32px'
+          marginBottom: '24px'
         }}>
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
-            marginBottom: '20px',
-            paddingBottom: '16px',
+            gap: '10px',
+            marginBottom: '16px',
+            paddingBottom: '12px',
             borderBottom: '1px solid #e2e8f0'
           }}>
-            <span style={{ fontSize: '28px' }}>💝</span>
+            <span style={{ fontSize: isSmallMobile ? '22px' : '24px' }}>💝</span>
             <div>
-              <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 600, color: '#0f172a' }}>
+              <h3 style={{ margin: 0, fontSize: isSmallMobile ? '15px' : '16px', fontWeight: 600, color: '#0f172a' }}>
                 Support My Work
               </h3>
-              <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: '#64748b' }}>
+              <p style={{ margin: '2px 0 0 0', fontSize: fontSizes.small, color: '#64748b' }}>
                 Pay any amount you wish
               </p>
             </div>
           </div>
 
           {!showSupport && !showThanks && (
-            <div style={{ textAlign: 'center', padding: '20px' }}>
+            <div style={{ textAlign: 'center', padding: isSmallMobile ? '12px' : '16px' }}>
               <button
                 onClick={() => setShowSupport(true)}
                 style={{
                   background: '#f59e0b',
                   color: 'white',
                   border: 'none',
-                  padding: '12px 32px',
+                  padding: isSmallMobile ? '10px 24px' : '12px 32px',
                   borderRadius: '30px',
-                  fontSize: '16px',
+                  fontSize: isSmallMobile ? '14px' : '15px',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  transition: 'all 0.2s',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#d97706';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#f59e0b';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  width: isSmallMobile ? '100%' : 'auto'
                 }}
               >
-                <span>❤️</span>
-                Support via UPI
+                ❤️ Support via UPI
               </button>
             </div>
           )}
 
           {showSupport && !showThanks && (
-            <div style={{ padding: '20px' }}>
-              {/* QR Code */}
+            <div style={{ padding: isSmallMobile ? '12px' : '16px' }}>
               <div style={{
                 textAlign: 'center',
-                padding: '20px',
+                padding: isSmallMobile ? '12px' : '16px',
                 background: '#f8fafc',
                 borderRadius: '12px',
-                marginBottom: '20px'
+                marginBottom: '16px'
               }}>
                 <img
                   src={getQRCodeUrl()}
                   alt="UPI QR Code"
                   style={{
-                    width: '250px',
-                    height: '250px',
+                    width: isSmallMobile ? '150px' : '180px',
+                    height: isSmallMobile ? '150px' : '180px',
                     margin: '0 auto',
                     borderRadius: '12px',
                     cursor: 'pointer'
                   }}
                   onClick={handleUPIPayment}
                 />
-                <p style={{ fontSize: '12px', color: '#64748b', marginTop: '12px' }}>
-                  Scan with any UPI app
+                <p style={{ fontSize: fontSizes.small, color: '#64748b', marginTop: '8px' }}>
+                  Scan with UPI app
                 </p>
               </div>
 
-              {/* UPI ID Display */}
               <div style={{
                 background: '#f1f5f9',
                 borderRadius: '12px',
-                padding: '16px',
+                padding: '12px',
                 textAlign: 'center',
-                marginBottom: '20px'
+                marginBottom: '16px'
               }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '12px',
-                  flexWrap: 'wrap'
+                <code style={{
+                  background: 'white',
+                  padding: '6px 12px',
+                  borderRadius: '8px',
+                  fontSize: isSmallMobile ? '11px' : '12px',
+                  fontFamily: 'monospace',
+                  wordBreak: 'break-all'
                 }}>
-                  <code style={{
-                    background: 'white',
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    fontSize: '14px',
-                    fontFamily: 'monospace',
-                    fontWeight: 'bold',
-                    color: '#0f172a'
-                  }}>
-                    {myUpiId}
-                  </code>
-                  <button
-                    onClick={copyUpiId}
-                    style={{
-                      padding: '8px 20px',
-                      background: copied ? '#10b981' : '#3b82f6',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '8px',
-                      cursor: 'pointer',
-                      fontSize: '13px',
-                      fontWeight: 500
-                    }}
-                  >
-                    {copied ? '✓ Copied!' : 'Copy'}
-                  </button>
-                </div>
-              </div>
-
-              {/* Pay via UPI App Button - KEPT FOR ALL USERS */}
-              <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '16px' }}>
+                  {myUpiId}
+                </code>
                 <button
-                  onClick={handleUPIPayment}
+                  onClick={copyUpiId}
                   style={{
-                    background: '#10b981',
+                    marginLeft: '8px',
+                    padding: '6px 16px',
+                    background: copied ? '#10b981' : '#3b82f6',
                     color: 'white',
                     border: 'none',
-                    padding: '14px 32px',
-                    borderRadius: '30px',
-                    fontSize: '15px',
-                    fontWeight: 600,
+                    borderRadius: '8px',
                     cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#059669';
-                    e.currentTarget.style.transform = 'scale(1.02)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#10b981';
-                    e.currentTarget.style.transform = 'scale(1)';
+                    fontSize: fontSizes.small,
+                    whiteSpace: 'nowrap'
                   }}
                 >
-                  <span>💳</span>
-                  Pay via UPI App
+                  {copied ? '✓' : 'Copy'}
                 </button>
               </div>
 
-              {/* Instructions for desktop users */}
-              {!isMobile && (
-                <div style={{
-                  background: '#fef3c7',
-                  borderRadius: '12px',
-                  padding: '12px',
-                  textAlign: 'center',
-                  marginBottom: '16px'
-                }}>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#92400e' }}>
-                    💡 On desktop: Click "Pay via UPI App" to see QR code<br />
-                    💳 Or scan the QR code with your phone
-                  </p>
-                </div>
-              )}
+              <button
+                onClick={handleUPIPayment}
+                style={{
+                  width: '100%',
+                  background: '#10b981',
+                  color: 'white',
+                  border: 'none',
+                  padding: isSmallMobile ? '12px' : '14px',
+                  borderRadius: '30px',
+                  fontSize: isSmallMobile ? '14px' : '15px',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  marginBottom: '12px'
+                }}
+              >
+                💳 Pay via UPI App
+              </button>
 
-              {/* Action Buttons */}
-              <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <button
-                  onClick={() => setShowSupport(false)}
-                  style={{
-                    background: '#f3f4f6',
-                    color: '#374151',
-                    border: 'none',
-                    padding: '12px 32px',
-                    borderRadius: '30px',
-                    fontSize: '14px',
-                    fontWeight: 500,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#e5e7eb';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#f3f4f6';
-                  }}
-                >
-                  Maybe Later
-                </button>
-              </div>
+              <button
+                onClick={() => setShowSupport(false)}
+                style={{
+                  width: '100%',
+                  background: '#f3f4f6',
+                  color: '#374151',
+                  border: 'none',
+                  padding: isSmallMobile ? '10px' : '12px',
+                  borderRadius: '30px',
+                  fontSize: fontSizes.small,
+                  cursor: 'pointer'
+                }}
+              >
+                Maybe Later
+              </button>
             </div>
           )}
 
           {showThanks && (
             <div style={{
               textAlign: 'center',
-              padding: '40px 20px',
-              animation: 'fadeIn 0.5s ease'
+              padding: '24px 12px'
             }}>
-              <div style={{ fontSize: '64px', marginBottom: '16px' }}>🙏</div>
-              <h4 style={{ margin: '0 0 8px 0', fontSize: '20px', fontWeight: 600, color: '#10b981' }}>
-                Thank you so much!
+              <div style={{ fontSize: '48px', marginBottom: '12px' }}>🙏</div>
+              <h4 style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: 600, color: '#10b981' }}>
+                Thank you!
               </h4>
-              <p style={{ color: '#64748b', marginBottom: '0' }}>
-                Your support means the world to me. 🙏
+              <p style={{ color: '#64748b', margin: 0, fontSize: fontSizes.small }}>
+                Your support means the world to me.
               </p>
             </div>
           )}
@@ -874,8 +1120,8 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
 
         {/* REVIEW SYSTEM SECTION */}
         <div style={{
-          marginTop: '32px',
-          marginBottom: '32px'
+          marginTop: '24px',
+          marginBottom: '24px'
         }}>
           <ReviewSystem templateId={displayTemplateId} />
         </div>
@@ -885,9 +1131,9 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '16px',
-            marginTop: '24px',
-            paddingTop: '24px',
+            gap: '12px',
+            marginTop: '20px',
+            paddingTop: '20px',
             borderTop: '1px solid #e2e8f0'
           }}>
             {onPrev && (
@@ -895,14 +1141,15 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 onClick={onPrev}
                 disabled={currentStep === 0}
                 style={{
-                  padding: '12px 24px',
+                  padding: isSmallMobile ? '10px 20px' : '12px 24px',
                   background: currentStep === 0 ? '#e2e8f0' : 'white',
                   color: currentStep === 0 ? '#94a3b8' : '#0f172a',
                   border: '1px solid #e2e8f0',
                   borderRadius: '8px',
                   fontSize: fontSizes.body,
                   fontWeight: 500,
-                  cursor: currentStep === 0 ? 'not-allowed' : 'pointer'
+                  cursor: currentStep === 0 ? 'not-allowed' : 'pointer',
+                  flex: isMobileDevice ? 1 : 'auto'
                 }}
               >
                 ← Previous
@@ -912,14 +1159,15 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               <button
                 onClick={onNext}
                 style={{
-                  padding: '12px 24px',
+                  padding: isSmallMobile ? '10px 20px' : '12px 24px',
                   background: '#0070f3',
                   color: 'white',
                   border: 'none',
                   borderRadius: '8px',
                   fontSize: fontSizes.body,
                   fontWeight: 500,
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  flex: isMobileDevice ? 1 : 'auto'
                 }}
               >
                 {currentStep === totalSteps - 1 ? 'Finish' : 'Next'} →
@@ -939,19 +1187,17 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               transform: translateY(0);
             }
           }
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
           @media print {
             .no-print { display: none !important; }
           }
-          @media (max-width: 768px) {
-            .preview-header { flex-direction: column; align-items: flex-start; }
+          * {
+            -webkit-tap-highlight-color: transparent;
+          }
+          /* Ensure template content never changes layout */
+          [data-template-id] {
+            width: 210mm !important;
+            min-width: 210mm !important;
+            max-width: 210mm !important;
           }
         `}</style>
       </main>
