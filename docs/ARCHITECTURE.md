@@ -110,7 +110,7 @@ freeresumemaker.xyz/
 ├── public/ # Static assets
 │ ├── assets/ # Images and fonts
 │ │ └── template-previews/ # Template preview images (1-20.png)
-│ ├── favicon.ico # Site favicon
+│ ├── favicon.png # Site favicon
 │ ├── og-image.jpg # Open Graph image
 │ ├── robots.txt # Search engine crawler instructions
 │ └── sitemap.xml # Sitemap (generated)

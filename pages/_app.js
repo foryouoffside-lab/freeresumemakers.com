@@ -119,7 +119,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="format-detection" content="telephone=no" />
 
         {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
