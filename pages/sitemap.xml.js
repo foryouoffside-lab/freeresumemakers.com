@@ -22,23 +22,29 @@ function generateSiteMap() {
     { url: '/templates', changefreq: 'daily', priority: '1.0' },
     { url: '/terms-of-service', changefreq: 'yearly', priority: '0.3' },
     { url: '/blog', changefreq: 'weekly', priority: '0.8' },
-    { url: '/resume-review', changefreq: 'weekly', priority: '0.7' },
-    { url: '/wallpapers', changefreq: 'weekly', priority: '0.6' },
-    { url: '/login', changefreq: 'monthly', priority: '0.4' },
-    { url: '/signup', changefreq: 'monthly', priority: '0.4' },
+    { url: '/templates/by-section', changefreq: 'weekly', priority: '0.8' },
   ];
 
-  // ==================== TEMPLATE PAGES ====================
-  const templatePages = [];
+  // ==================== EDITOR PAGES ====================
+  const editorUrls = [];
   for (let id = 1; id <= 20; id++) {
-    templatePages.push(
-      { url: `/templates/${id}`, changefreq: 'weekly', priority: '0.8' },
-      { url: `/editor/${id}`, changefreq: 'weekly', priority: '0.9' },
-      { url: `/template-info/${id}`, changefreq: 'monthly', priority: '0.6' }
-    );
+    // Editor index (redirects to first section)
+    editorUrls.push({ url: `/editor/${id}`, changefreq: 'weekly', priority: '0.9' });
+    
+    // Editor sections for each template
+    const sections = ['personalInfo', 'summary', 'experience', 'education', 'skills', 'projects', 'certifications', 'awards', 'internships', 'preview'];
+    sections.forEach(section => {
+      editorUrls.push({ url: `/editor/${id}/${section}`, changefreq: 'weekly', priority: '0.8' });
+    });
   }
 
-  // ==================== BLOG PAGES ====================
+  // ==================== TEMPLATE PAGES ====================
+  const templateUrls = [];
+  for (let id = 1; id <= 20; id++) {
+    templateUrls.push({ url: `/templates/${id}`, changefreq: 'weekly', priority: '0.8' });
+  }
+
+  // ==================== BLOG POSTS ====================
   const blogSlugs = [
     'action-verbs-for-resume',
     'ats-resume-tips-2026',
@@ -88,9 +94,7 @@ function generateSiteMap() {
   }));
 
   // ==================== TOOL PAGES ====================
-  const tools = [
-    'ats-scanner', 'keywords-finder', 'resume-checker', 'resume-review'
-  ];
+  const tools = ['ats-scanner', 'keywords-finder', 'resume-checker', 'resume-review'];
   const toolUrls = tools.map(tool => ({
     url: `/tools/${tool}`,
     changefreq: 'monthly',
@@ -99,11 +103,10 @@ function generateSiteMap() {
 
   // ==================== COMPARISON PAGES ====================
   const comparisons = [
-    '1-vs-2', '1-vs-3', '1-vs-4', '2-vs-3',
-    '3-vs-4', '5-vs-6', '7-vs-8', '9-vs-10',
-    '17-vs-18', '17-vs-19', '18-vs-19', '19-vs-20',
-    'ats-friendly-vs-creative', 'by-profession',
-    'minimalist-vs-professional'
+    '1-vs-2', '1-vs-3', '1-vs-4', '2-vs-3', '3-vs-4',
+    '5-vs-6', '7-vs-8', '9-vs-10', '17-vs-18', '17-vs-19',
+    '18-vs-19', '19-vs-20', 'ats-friendly-vs-creative',
+    'by-profession', 'minimalist-vs-professional'
   ];
   const comparisonUrls = comparisons.map(comp => ({
     url: `/templates/compare/${comp}`,
@@ -112,38 +115,27 @@ function generateSiteMap() {
   }));
 
   // ==================== BY-SECTION PAGES ====================
-  const bySections = [
-    'experience', 'summary', 'skills', 'languages',
-    'projects', 'image-section'
-  ];
+  const bySections = ['experience', 'summary', 'skills', 'languages', 'projects', 'image-section'];
   const bySectionUrls = bySections.map(section => ({
     url: `/templates/by-section/${section}`,
     changefreq: 'monthly',
     priority: '0.6'
   }));
 
-  // ==================== WALLPAPER PAGES ====================
-  // Individual wallpaper pages (if you have them)
-  const wallpaperUrls = Array.from({ length: 20 }, (_, i) => ({
-    url: `/wallpapers/${i + 1}`,
-    changefreq: 'monthly',
-    priority: '0.5'
-  }));
-
-  // ==================== COMBINE ALL URLS ====================
-  const allPageData = [
+  // ==================== COMBINE ALL ====================
+  const allPages = [
     ...coreUrls,
-    ...templatePages,
+    ...editorUrls,
+    ...templateUrls,
     ...blogUrls,
     ...professionUrls,
     ...sectionUrls,
     ...toolUrls,
     ...comparisonUrls,
-    ...bySectionUrls,
-    ...wallpaperUrls
+    ...bySectionUrls
   ];
 
-  const allUrls = allPageData.map(page => `
+  const urlElements = allPages.map(page => `
     <url>
       <loc>${EXTERNAL_DATA_URL}${page.url}</loc>
       <lastmod>${currentDate}</lastmod>
@@ -153,15 +145,9 @@ function generateSiteMap() {
   `).join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-            xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-            xmlns:xhtml="http://www.w3.org/1999/xhtml"
-            xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-            xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-            xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-      ${allUrls}
-    </urlset>
-  `;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlElements}
+</urlset>`;
 }
 
 export async function getServerSideProps({ res }) {
@@ -172,9 +158,7 @@ export async function getServerSideProps({ res }) {
   res.write(sitemap);
   res.end();
 
-  return {
-    props: {},
-  };
+  return { props: {} };
 }
 
 export default function Sitemap() {
