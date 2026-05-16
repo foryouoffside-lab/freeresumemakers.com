@@ -1,43 +1,45 @@
 ﻿import React from 'react';
-// pages/sitemap.xml.js
+
 const EXTERNAL_DATA_URL = 'https://freeresumemaker.xyz';
 
 function generateSiteMap() {
-  // Get current date for lastmod
   const currentDate = new Date().toISOString();
-  
-  // Generate URLs for all templates (1-20)
-  const templateUrls = Array.from({length: 20}, (_, i) => i + 1).map(id => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/templates/${id}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  `).join('');
 
-  // Editor template pages (1-20)
-  const editorUrls = Array.from({length: 20}, (_, i) => i + 1).map(id => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/editor/${id}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  `).join('');
+  // ==================== CORE PAGES ====================
+  const coreUrls = [
+    { url: '', changefreq: 'daily', priority: '1.0' },
+    { url: '/about', changefreq: 'monthly', priority: '0.5' },
+    { url: '/contact', changefreq: 'monthly', priority: '0.5' },
+    { url: '/editor', changefreq: 'daily', priority: '1.0' },
+    { url: '/examples', changefreq: 'weekly', priority: '0.8' },
+    { url: '/faq', changefreq: 'weekly', priority: '0.7' },
+    { url: '/free-ats-resume-templates', changefreq: 'weekly', priority: '0.9' },
+    { url: '/free-resume-templates', changefreq: 'weekly', priority: '0.9' },
+    { url: '/how-to-make-resume', changefreq: 'weekly', priority: '0.8' },
+    { url: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
+    { url: '/resume-builder', changefreq: 'weekly', priority: '0.9' },
+    { url: '/support', changefreq: 'monthly', priority: '0.4' },
+    { url: '/templates', changefreq: 'daily', priority: '1.0' },
+    { url: '/terms-of-service', changefreq: 'yearly', priority: '0.3' },
+    { url: '/blog', changefreq: 'weekly', priority: '0.8' },
+    { url: '/resume-review', changefreq: 'weekly', priority: '0.7' },
+    { url: '/wallpapers', changefreq: 'weekly', priority: '0.6' },
+    { url: '/login', changefreq: 'monthly', priority: '0.4' },
+    { url: '/signup', changefreq: 'monthly', priority: '0.4' },
+  ];
 
-  // Template info pages (1-20)
-  const templateInfoUrls = Array.from({length: 20}, (_, i) => i + 1).map(id => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/template-info/${id}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  `).join('');
+  // ==================== TEMPLATE PAGES ====================
+  const templatePages = [];
+  for (let id = 1; id <= 20; id++) {
+    templatePages.push(
+      { url: `/templates/${id}`, changefreq: 'weekly', priority: '0.8' },
+      { url: `/editor/${id}`, changefreq: 'weekly', priority: '0.9' },
+      { url: `/template-info/${id}`, changefreq: 'monthly', priority: '0.6' }
+    );
+  }
 
-  // Blog posts - All articles
-  const blogUrls = [
+  // ==================== BLOG PAGES ====================
+  const blogSlugs = [
     'action-verbs-for-resume',
     'ats-resume-tips-2026',
     'cv-vs-resume-difference',
@@ -53,231 +55,102 @@ function generateSiteMap() {
     'resume-writing-tips',
     'cover-letter-guide',
     'interview-preparation-tips'
-  ].map(slug => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/blog/${slug}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  `).join('');
+  ];
+  const blogUrls = blogSlugs.map(slug => ({
+    url: `/blog/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.7'
+  }));
 
-  // Profession pages
-  const professionUrls = [
-    'software-engineering',
-    'marketing',
-    'sales',
-    'healthcare',
-    'education',
-    'finance',
-    'design',
-    'administrative',
-    'business',
-    'creative',
-    'legal',
-    'human-resources'
-  ].map(prof => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/professions/${prof}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  `).join('');
+  // ==================== PROFESSION PAGES ====================
+  const professions = [
+    'software-engineering', 'marketing', 'sales', 'healthcare',
+    'education', 'finance', 'design', 'administrative',
+    'business', 'creative', 'legal', 'human-resources'
+  ];
+  const professionUrls = professions.map(prof => ({
+    url: `/professions/${prof}`,
+    changefreq: 'monthly',
+    priority: '0.7'
+  }));
 
-  // Section guides
-  const sectionUrls = [
-    'skills',
-    'summary',
-    'experience',
-    'education',
-    'projects',
-    'languages',
-    'certifications',
-    'awards',
-    'references',
-    'publications',
-    'personal-info',
-    'core-strengths',
-    'tools'
-  ].map(section => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/sections/${section}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  `).join('');
+  // ==================== SECTION GUIDES ====================
+  const sections = [
+    'skills', 'summary', 'experience', 'education',
+    'projects', 'languages', 'certifications', 'awards',
+    'references', 'publications', 'personal-info',
+    'core-strengths', 'tools'
+  ];
+  const sectionUrls = sections.map(section => ({
+    url: `/sections/${section}`,
+    changefreq: 'monthly',
+    priority: '0.6'
+  }));
 
-  // Tool pages
-  const toolUrls = [
-    'ats-scanner',
-    'keywords-finder',
-    'resume-checker',
-    'resume-review'
-  ].map(tool => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/tools/${tool}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  `).join('');
+  // ==================== TOOL PAGES ====================
+  const tools = [
+    'ats-scanner', 'keywords-finder', 'resume-checker', 'resume-review'
+  ];
+  const toolUrls = tools.map(tool => ({
+    url: `/tools/${tool}`,
+    changefreq: 'monthly',
+    priority: '0.6'
+  }));
 
-  // Comparison pages
-  const comparisonUrls = [
-    '1-vs-2',
-    '1-vs-3',
-    '1-vs-4',
-    '2-vs-3',
-    '3-vs-4',
-    '5-vs-6',
-    '7-vs-8',
-    '9-vs-10',
-    '17-vs-18',
-    '17-vs-19',
-    '18-vs-19',
-    '19-vs-20',
-    'ats-friendly-vs-creative',
-    'by-profession',
+  // ==================== COMPARISON PAGES ====================
+  const comparisons = [
+    '1-vs-2', '1-vs-3', '1-vs-4', '2-vs-3',
+    '3-vs-4', '5-vs-6', '7-vs-8', '9-vs-10',
+    '17-vs-18', '17-vs-19', '18-vs-19', '19-vs-20',
+    'ats-friendly-vs-creative', 'by-profession',
     'minimalist-vs-professional'
-  ].map(comp => `
+  ];
+  const comparisonUrls = comparisons.map(comp => ({
+    url: `/templates/compare/${comp}`,
+    changefreq: 'monthly',
+    priority: '0.6'
+  }));
+
+  // ==================== BY-SECTION PAGES ====================
+  const bySections = [
+    'experience', 'summary', 'skills', 'languages',
+    'projects', 'image-section'
+  ];
+  const bySectionUrls = bySections.map(section => ({
+    url: `/templates/by-section/${section}`,
+    changefreq: 'monthly',
+    priority: '0.6'
+  }));
+
+  // ==================== WALLPAPER PAGES ====================
+  // Individual wallpaper pages (if you have them)
+  const wallpaperUrls = Array.from({ length: 20 }, (_, i) => ({
+    url: `/wallpapers/${i + 1}`,
+    changefreq: 'monthly',
+    priority: '0.5'
+  }));
+
+  // ==================== COMBINE ALL URLS ====================
+  const allPageData = [
+    ...coreUrls,
+    ...templatePages,
+    ...blogUrls,
+    ...professionUrls,
+    ...sectionUrls,
+    ...toolUrls,
+    ...comparisonUrls,
+    ...bySectionUrls,
+    ...wallpaperUrls
+  ];
+
+  const allUrls = allPageData.map(page => `
     <url>
-      <loc>${EXTERNAL_DATA_URL}/templates/compare/${comp}</loc>
+      <loc>${EXTERNAL_DATA_URL}${page.url}</loc>
       <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
+      <changefreq>${page.changefreq}</changefreq>
+      <priority>${page.priority}</priority>
     </url>
   `).join('');
-
-  // By-section pages
-  const bySectionUrls = [
-    'experience',
-    'summary',
-    'skills',
-    'languages',
-    'projects',
-    'image-section'
-  ].map(section => `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/templates/by-section/${section}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  `).join('');
-
-  // Core pages with proper priorities
-  const coreUrls = `
-    <url>
-      <loc>${EXTERNAL_DATA_URL}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/about</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/contact</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/editor</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/examples</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/faq</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/free-ats-resume-templates</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/free-resume-templates</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/how-to-make-resume</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/privacy-policy</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.3</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/resume-builder</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/support</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.4</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/templates</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/templates/by-section</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/terms-of-service</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.3</priority>
-    </url>
-    <url>
-      <loc>${EXTERNAL_DATA_URL}/blog</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  `;
-
-  // Combine all URLs
-  const allUrls = coreUrls + 
-                  templateUrls + 
-                  editorUrls +
-                  templateInfoUrls + 
-                  blogUrls + 
-                  professionUrls + 
-                  sectionUrls + 
-                  toolUrls + 
-                  comparisonUrls + 
-                  bySectionUrls;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
