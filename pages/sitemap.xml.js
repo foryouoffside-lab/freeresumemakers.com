@@ -3,139 +3,74 @@
 const EXTERNAL_DATA_URL = 'https://freeresumemaker.xyz';
 
 function generateSiteMap() {
-  const currentDate = new Date().toISOString();
+  const currentDate = new Date().toISOString().split('T')[0];
 
-  // ==================== CORE PAGES ====================
-  const coreUrls = [
-    { url: '', changefreq: 'daily', priority: '1.0' },
-    { url: '/about', changefreq: 'monthly', priority: '0.5' },
-    { url: '/contact', changefreq: 'monthly', priority: '0.5' },
-    { url: '/editor', changefreq: 'daily', priority: '1.0' },
-    { url: '/examples', changefreq: 'weekly', priority: '0.8' },
-    { url: '/faq', changefreq: 'weekly', priority: '0.7' },
-    { url: '/free-ats-resume-templates', changefreq: 'weekly', priority: '0.9' },
-    { url: '/free-resume-templates', changefreq: 'weekly', priority: '0.9' },
-    { url: '/how-to-make-resume', changefreq: 'weekly', priority: '0.8' },
-    { url: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
-    { url: '/resume-builder', changefreq: 'weekly', priority: '0.9' },
-    { url: '/support', changefreq: 'monthly', priority: '0.4' },
-    { url: '/templates', changefreq: 'daily', priority: '1.0' },
-    { url: '/terms-of-service', changefreq: 'yearly', priority: '0.3' },
-    { url: '/blog', changefreq: 'weekly', priority: '0.8' },
-    { url: '/templates/by-section', changefreq: 'weekly', priority: '0.8' },
-  ];
-
-  // ==================== EDITOR PAGES ====================
-  const editorUrls = [];
-  for (let id = 1; id <= 20; id++) {
-    // Editor index (redirects to first section)
-    editorUrls.push({ url: `/editor/${id}`, changefreq: 'weekly', priority: '0.9' });
+  const urls = [
+    // Core pages
+    { url: '', priority: '1.0', changefreq: 'daily' },
+    { url: '/templates', priority: '1.0', changefreq: 'daily' },
+    { url: '/editor', priority: '1.0', changefreq: 'daily' },
+    { url: '/examples', priority: '0.8', changefreq: 'weekly' },
+    { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+    { url: '/faq', priority: '0.7', changefreq: 'weekly' },
+    { url: '/about', priority: '0.5', changefreq: 'monthly' },
+    { url: '/contact', priority: '0.5', changefreq: 'monthly' },
+    { url: '/free-ats-resume-templates', priority: '0.9', changefreq: 'weekly' },
+    { url: '/free-resume-templates', priority: '0.9', changefreq: 'weekly' },
+    { url: '/how-to-make-resume', priority: '0.8', changefreq: 'weekly' },
+    { url: '/resume-builder', priority: '0.9', changefreq: 'weekly' },
+    { url: '/support', priority: '0.4', changefreq: 'monthly' },
+    { url: '/privacy-policy', priority: '0.3', changefreq: 'yearly' },
+    { url: '/terms-of-service', priority: '0.3', changefreq: 'yearly' },
+    { url: '/templates/by-section', priority: '0.8', changefreq: 'weekly' },
     
-    // Editor sections for each template
-    const sections = ['personalInfo', 'summary', 'experience', 'education', 'skills', 'projects', 'certifications', 'awards', 'internships', 'preview'];
-    sections.forEach(section => {
-      editorUrls.push({ url: `/editor/${id}/${section}`, changefreq: 'weekly', priority: '0.8' });
-    });
-  }
-
-  // ==================== TEMPLATE PAGES ====================
-  const templateUrls = [];
-  for (let id = 1; id <= 20; id++) {
-    templateUrls.push({ url: `/templates/${id}`, changefreq: 'weekly', priority: '0.8' });
-  }
-
-  // ==================== BLOG POSTS ====================
-  const blogSlugs = [
-    'action-verbs-for-resume',
-    'ats-resume-tips-2026',
-    'cv-vs-resume-difference',
-    'fresher-resume-guide',
-    'how-to-write-resume',
-    'remote-work-resume-tips',
-    'resume-for-career-change',
-    'resume-formatting-guide',
-    'resume-mistakes-to-avoid',
-    'resume-objective-vs-summary',
-    'resume-sections-guide',
-    'ultimate-resume-guide-2026',
-    'resume-writing-tips',
-    'cover-letter-guide',
-    'interview-preparation-tips'
-  ];
-  const blogUrls = blogSlugs.map(slug => ({
-    url: `/blog/${slug}`,
-    changefreq: 'monthly',
-    priority: '0.7'
-  }));
-
-  // ==================== PROFESSION PAGES ====================
-  const professions = [
-    'software-engineering', 'marketing', 'sales', 'healthcare',
-    'education', 'finance', 'design', 'administrative',
-    'business', 'creative', 'legal', 'human-resources'
-  ];
-  const professionUrls = professions.map(prof => ({
-    url: `/professions/${prof}`,
-    changefreq: 'monthly',
-    priority: '0.7'
-  }));
-
-  // ==================== SECTION GUIDES ====================
-  const sections = [
-    'skills', 'summary', 'experience', 'education',
-    'projects', 'languages', 'certifications', 'awards',
-    'references', 'publications', 'personal-info',
-    'core-strengths', 'tools'
-  ];
-  const sectionUrls = sections.map(section => ({
-    url: `/sections/${section}`,
-    changefreq: 'monthly',
-    priority: '0.6'
-  }));
-
-  // ==================== TOOL PAGES ====================
-  const tools = ['ats-scanner', 'keywords-finder', 'resume-checker', 'resume-review'];
-  const toolUrls = tools.map(tool => ({
-    url: `/tools/${tool}`,
-    changefreq: 'monthly',
-    priority: '0.6'
-  }));
-
-  // ==================== COMPARISON PAGES ====================
-  const comparisons = [
-    '1-vs-2', '1-vs-3', '1-vs-4', '2-vs-3', '3-vs-4',
-    '5-vs-6', '7-vs-8', '9-vs-10', '17-vs-18', '17-vs-19',
-    '18-vs-19', '19-vs-20', 'ats-friendly-vs-creative',
-    'by-profession', 'minimalist-vs-professional'
-  ];
-  const comparisonUrls = comparisons.map(comp => ({
-    url: `/templates/compare/${comp}`,
-    changefreq: 'monthly',
-    priority: '0.6'
-  }));
-
-  // ==================== BY-SECTION PAGES ====================
-  const bySections = ['experience', 'summary', 'skills', 'languages', 'projects', 'image-section'];
-  const bySectionUrls = bySections.map(section => ({
-    url: `/templates/by-section/${section}`,
-    changefreq: 'monthly',
-    priority: '0.6'
-  }));
-
-  // ==================== COMBINE ALL ====================
-  const allPages = [
-    ...coreUrls,
-    ...editorUrls,
-    ...templateUrls,
-    ...blogUrls,
-    ...professionUrls,
-    ...sectionUrls,
-    ...toolUrls,
-    ...comparisonUrls,
-    ...bySectionUrls
+    // Template pages (1-20)
+    ...[...Array(20)].map((_, i) => ({
+      url: `/templates/${i + 1}`,
+      priority: '0.8',
+      changefreq: 'weekly'
+    })),
+    
+    // Editor pages (1-20) - just the main editor, not all sections
+    ...[...Array(20)].map((_, i) => ({
+      url: `/editor/${i + 1}`,
+      priority: '0.9',
+      changefreq: 'weekly'
+    })),
+    
+    // Blog posts
+    { url: '/blog/action-verbs-for-resume', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/ats-resume-tips-2026', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/cv-vs-resume-difference', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/fresher-resume-guide', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/how-to-write-resume', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/remote-work-resume-tips', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-for-career-change', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-formatting-guide', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-mistakes-to-avoid', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-objective-vs-summary', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-sections-guide', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/ultimate-resume-guide-2026', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/resume-writing-tips', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/cover-letter-guide', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/interview-preparation-tips', priority: '0.7', changefreq: 'monthly' },
+    
+    // Professions
+    { url: '/professions/software-engineering', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/marketing', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/sales', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/healthcare', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/education', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/finance', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/design', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/administrative', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/business', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/creative', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/legal', priority: '0.7', changefreq: 'monthly' },
+    { url: '/professions/human-resources', priority: '0.7', changefreq: 'monthly' },
   ];
 
-  const urlElements = allPages.map(page => `
+  const urlElements = urls.map(page => `
     <url>
       <loc>${EXTERNAL_DATA_URL}${page.url}</loc>
       <lastmod>${currentDate}</lastmod>
@@ -151,12 +86,18 @@ ${urlElements}
 }
 
 export async function getServerSideProps({ res }) {
-  const sitemap = generateSiteMap();
-
-  res.setHeader('Content-Type', 'text/xml');
-  res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.write(sitemap);
-  res.end();
+  try {
+    const sitemap = generateSiteMap();
+    
+    res.setHeader('Content-Type', 'text/xml; charset=utf-8');
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+    res.write(sitemap);
+    res.end();
+  } catch (error) {
+    console.error('Sitemap error:', error);
+    res.statusCode = 500;
+    res.end();
+  }
 
   return { props: {} };
 }
