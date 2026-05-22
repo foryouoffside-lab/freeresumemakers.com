@@ -18,6 +18,3 @@ User-agent: Googlebot-Image
 Allow: /assets/
 Allow: /images/
 Allow: /template-previews/
-
-Sitemap: https://freeresumemaker.xyz/sitemap.xml
-Host: https://freeresumemaker.xyz
