@@ -1,4 +1,4 @@
-﻿// pages/api/verify-payment.js
+// pages/api/verify-payment.js
 import crypto from 'crypto';
 
 // Constants for validation
@@ -173,7 +173,7 @@ export default async function handler(req, res) {
 
   // Handle GET requests (for checking payment status)
   if (req.method === 'GET') {
-    const { paymentId, orderId } = req.query;
+    const { paymentId, orderId, adminKey } = req.query;
     
     if (paymentId) {
       const record = paymentRecords.find(p => p.paymentId === paymentId);
@@ -203,11 +203,19 @@ export default async function handler(req, res) {
       ));
     }
     
-    return res.status(200).json({
-      success: true,
-      data: paymentRecords,
-      count: paymentRecords.length
-    });
+    // Only return entire records if valid adminKey matches process.env.ADMIN_KEY
+    if (adminKey && process.env.ADMIN_KEY && adminKey === process.env.ADMIN_KEY) {
+      return res.status(200).json({
+        success: true,
+        data: paymentRecords,
+        count: paymentRecords.length
+      });
+    }
+    
+    return res.status(400).json(formatErrorResponse(
+      'BAD_REQUEST',
+      'Missing paymentId or orderId query parameter'
+    ));
   }
 
   // Validate request method for POST

@@ -1,6 +1,7 @@
-﻿// components/templates/TemplateSelector.js
-import React, { useState } from 'react';
+// components/templates/TemplateSelector.js
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // Update image imports to use public folder paths
 const template1Preview = '/assets/template-previews/template-1.png';
@@ -216,7 +217,14 @@ const TEMPLATES = [
 ];
 
 const TemplateSelector = ({ onTemplateSelect }) => {
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    if (router.query.search) {
+      setSearchTerm(router.query.search);
+    }
+  }, [router.query.search]);
 
   // Filter templates based on search term
   const getFilteredTemplates = () => {

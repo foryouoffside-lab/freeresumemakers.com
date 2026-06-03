@@ -5,9 +5,9 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import SEO from '../../components/SEO';
 
-export default function ProfessionPage() {
+export default function ProfessionPage({ slug: staticSlug }) {
   const router = useRouter();
-  const { slug } = router.query;
+  const slug = staticSlug || router.query.slug;
   const [debug, setDebug] = useState({});
 
   // Mapping of slugs to display names and icons
@@ -554,4 +554,25 @@ export default function ProfessionPage() {
       </div>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = [
+    'academic', 'business', 'creative', 'design', 'it-tech', 'legal', 'student', 'tech'
+  ].map(slug => ({
+    params: { slug }
+  }));
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  return {
+    props: {
+      slug
+    }
+  };
 }

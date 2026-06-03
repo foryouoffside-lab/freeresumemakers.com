@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -27,10 +27,10 @@ export default function Contact() {
     "mainEntity": {
       "@type": "Organization",
       "name": "Free Resume Builder",
-      "email": "freeresumeemaker@gmail.com",
+      "email": "support@freeresumemaker.xyz",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "freeresumeemaker@gmail.com",
+        "email": "support@freeresumemaker.xyz",
         "contactType": "customer support",
         "availableLanguage": ["English"],
         "hoursAvailable": {
@@ -316,7 +316,7 @@ export default function Contact() {
                   marginBottom: '5px',
                   wordBreak: 'break-all'
                 }}>
-                  freeresumeemaker@gmail.com
+                  support@freeresumemaker.xyz
                 </div>
                 <div style={{opacity: 0.8, fontSize: '0.85rem'}}>
                   We reply within 24-48 hours
@@ -652,7 +652,7 @@ export default function Contact() {
             },
             {
               title: 'Email Support',
-              desc: 'freeresumeemaker@gmail.com',
+              desc: 'support@freeresumemaker.xyz',
               status: 'Available Now',
               available: true,
               statusBg: '#e3f2fd',

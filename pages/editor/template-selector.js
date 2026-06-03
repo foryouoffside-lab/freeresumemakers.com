@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 // pages/editor/template-selector.js
 import { useRouter } from 'next/router';
@@ -284,11 +284,11 @@ export default function TemplateSelectorPage() {
               Template Categories
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</Link></li>
-              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/tech" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</Link></li>
-              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</Link></li>
-              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/academic" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</Link></li>
-              <li style={{ marginBottom: '8px' }}><Link href="/templates/category/entry-level" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/editor/template-selector?search=Executive" style={{ color: '#666', textDecoration: 'none' }}>Executive & Business</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/editor/template-selector?search=Engineer" style={{ color: '#666', textDecoration: 'none' }}>Technology & Developer</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/editor/template-selector?search=Creative" style={{ color: '#666', textDecoration: 'none' }}>Creative & Design</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/editor/template-selector?search=Scholar" style={{ color: '#666', textDecoration: 'none' }}>Academic & Research</Link></li>
+              <li style={{ marginBottom: '8px' }}><Link href="/editor/template-selector?search=Essential" style={{ color: '#666', textDecoration: 'none' }}>Student & Entry Level</Link></li>
             </ul>
           </div>
           

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 // pages/templates/compare/19-vs-20.js
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1011,7 +1011,6 @@ export default function CompareTemplate19vs20() {
               { id: '17-vs-18', name: 'The Innovator 2.0 vs The Code' },
               { id: '17-vs-19', name: 'The Innovator 2.0 vs The Scholar 2.0' },
               { id: '18-vs-19', name: 'The Code vs The Scholar 2.0' },
-              { id: '18-vs-20', name: 'The Code vs The Engineer' },
             ].map((item) => (
               <Link
                 key={item.id}

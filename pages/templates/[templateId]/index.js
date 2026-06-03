@@ -203,26 +203,31 @@ const getTemplateInfo = (id) => {
   };
 };
 
-export default function TemplateDetailPage() {
+export default function TemplateDetailPage({ templateId: staticTemplateId }) {
   const router = useRouter();
-  const { templateId } = router.query;
+  const templateId = staticTemplateId || router.query.templateId;
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!staticTemplateId);
   
   useEffect(() => {
     if (templateId) {
-      // Small delay to ensure smooth transition
-      const timer = setTimeout(() => {
+      if (staticTemplateId) {
         setIsLoading(false);
-      }, 300);
+      } else {
+        // Small delay to ensure smooth transition
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 300);
+        return () => clearTimeout(timer);
+      }
       
       // Scroll to top on page load
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      return () => clearTimeout(timer);
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
-  }, [templateId]);
+  }, [templateId, staticTemplateId]);
   
   // Show loader while loading
   if (!templateId || isLoading) {
@@ -868,4 +873,23 @@ export default function TemplateDetailPage() {
       `}</style>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = Array.from({ length: 20 }, (_, i) => ({
+    params: { templateId: (i + 1).toString() }
+  }));
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { templateId } = params;
+  return {
+    props: {
+      templateId
+    }
+  };
 }

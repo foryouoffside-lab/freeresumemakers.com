@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "foryouoffside@gmail.com",
+      "email": "support@freeresumemaker.xyz",
       "contactType": "customer support",
       "availableLanguage": ["English"]
     }

@@ -444,7 +444,7 @@ const Footer = () => {
             "contactPoint": {
               "@type": "ContactPoint",
               "contactType": "customer support",
-              "email": "foryouoffside@gmail.com",
+              "email": "support@freeresumemaker.xyz",
               "url": "https://freeresumemaker.xyz/contact"
             }
           })
