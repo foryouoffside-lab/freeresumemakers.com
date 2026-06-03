@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/Summary.js
 // ENHANCED VERSION - 10+ EXAMPLES PER CATEGORY
 // WITH ALL FUNCTIONALITY FIXES AND IMPROVEMENTS
@@ -6,7 +6,6 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useResume } from '../../context/ResumeContext';
-import Head from 'next/head';
 
 const CheckIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27ae60" strokeWidth="3" aria-hidden="true">
@@ -568,16 +567,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
 
   return (
     <>
-      <Head>
-        <title>Professional Summary Generator | Resume Builder</title>
-        <meta name="title" content="Professional Summary Generator | Resume Builder" />
-        <meta name="description" content="Create powerful professional summaries with our free generator. Includes 70+ examples for software engineers, data scientists, project managers, and more." />
-        <meta name="keywords" content="resume summary, professional summary, CV summary, career summary, resume generator" />
-        <meta property="og:title" content="Professional Summary Generator | Resume Builder" />
-        <meta property="og:description" content="Create powerful professional summaries with 70+ examples for various professions." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
+      
       <main 
         ref={contentRef}
         style={{
@@ -665,7 +655,7 @@ const Summary = ({ onDataChange, data, navigationButtons, onContinue }) => {
             )}
           </header>
 
-          <div style={{
+          <div className="editor-main-layout" style={{
             display: 'flex',
             flexDirection: isMobile || isTablet ? 'column' : 'row',
             gap: spacing.mainGap,

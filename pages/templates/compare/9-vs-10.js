@@ -252,11 +252,11 @@ export default function CompareTemplate9vs10() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
               {tab === 'industry' && '🏢 Career Stage Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -567,27 +567,27 @@ export default function CompareTemplate9vs10() {
                 <tbody>
                   {[
                     { feature: 'Layout Style', t1: 'Two-column with equal spacing', t2: 'One-column focused layout' },
-                    { feature: 'Experience Entries', t1: '✓ Multiple (up to 3)', t2: '✓ Single, detailed focus' },
-                    { feature: 'Project Showcase', t1: '✗ No dedicated section', t2: '✓ Yes, included' },
+                    { feature: 'Experience Entries', t1: ' Multiple (up to 3)', t2: ' Single, detailed focus' },
+                    { feature: 'Project Showcase', t1: '✗ No dedicated section', t2: ' Yes, included' },
                     { feature: 'Skills Display', t1: 'Grid layout (8 skills)', t2: 'Grid layout (6 skills)' },
-                    { feature: 'Education Emphasis', t1: 'Standard education section', t2: '✓ Enhanced for students' },
-                    { feature: 'Internship Highlighting', t1: 'Standard experience', t2: '✓ Internship optimized' },
-                    { feature: 'Entry-Level Focus', t1: '✗ General purpose', t2: '✓ Yes, specialized' },
-                    { feature: 'Equal Spacing Design', t1: '✓ Yes, signature feature', t2: '✗ No' },
-                    { feature: 'Modern Typography', t1: '✓ Yes', t2: '✓ Yes' },
-                    { feature: 'Languages Section', t1: '✓ Yes (3 max)', t2: '✓ Yes (2 max)' },
+                    { feature: 'Education Emphasis', t1: 'Standard education section', t2: ' Enhanced for students' },
+                    { feature: 'Internship Highlighting', t1: 'Standard experience', t2: ' Internship optimized' },
+                    { feature: 'Entry-Level Focus', t1: '✗ General purpose', t2: ' Yes, specialized' },
+                    { feature: 'Equal Spacing Design', t1: ' Yes, signature feature', t2: '✗ No' },
+                    { feature: 'Modern Typography', t1: ' Yes', t2: ' Yes' },
+                    { feature: 'Languages Section', t1: ' Yes (3 max)', t2: ' Yes (2 max)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 9 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#0f766e', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#0284c7', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -608,7 +608,7 @@ export default function CompareTemplate9vs10() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0f766e', marginBottom: '15px' }}>
-                  ✓ The Modernist - Pros
+                   The Modernist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template9.pros.map((item, index) => (
@@ -616,7 +616,7 @@ export default function CompareTemplate9vs10() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0f766e', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Modernist - Cons
+                   The Modernist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template9.cons.map((item, index) => (
@@ -626,7 +626,7 @@ export default function CompareTemplate9vs10() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0284c7', marginBottom: '15px' }}>
-                  ✓ The Essential - Pros
+                   The Essential - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template10.pros.map((item, index) => (
@@ -634,7 +634,7 @@ export default function CompareTemplate9vs10() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0284c7', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Essential - Cons
+                   The Essential - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template10.cons.map((item, index) => (
@@ -954,7 +954,7 @@ export default function CompareTemplate9vs10() {
                 padding: '30px',
                 border: '1px solid #99f6e4'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎯</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '28px', height: '28px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0f766e', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Modernist
                 </h3>
@@ -984,7 +984,7 @@ export default function CompareTemplate9vs10() {
                 padding: '30px',
                 border: '1px solid #bae6fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🌱</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#16a34a' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c0-5.523-4.477-10-10-10M22 12c-5.523 0-10 4.477-10 10M12 2a10 10 0 0 0-10 10c0 5.523 4.477 10 10 10 5.523 0 10-4.477 10-10A10 10 0 0 0 12 2z"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0284c7', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Essential
                 </h3>
@@ -1017,7 +1017,7 @@ export default function CompareTemplate9vs10() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Career Growth Tip
+                 Career Growth Tip
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Your resume needs evolve with your career. Start with The Essential as a student or intern, then transition to The Modernist as you gain experience. Both templates are free, so you can update your resume as you grow professionally!

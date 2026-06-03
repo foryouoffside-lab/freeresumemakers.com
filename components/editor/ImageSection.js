@@ -6,7 +6,6 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useResume } from '../../context/ResumeContext';
-import Head from 'next/head';
 
 // Simple icon components
 const CheckIcon = () => (
@@ -430,14 +429,7 @@ const ImageSection = ({ onDataChange, data, navigationButtons }) => {
 
   return (
     <>
-      <Head>
-        <title>Add Professional Profile Photo - Resume Builder</title>
-        <meta name="description" content="Upload a professional profile photo. Support for JPG, PNG, WebP up to 2MB. Increase your interview chances by 40%." />
-        <meta property="og:title" content="Professional Profile Photo - Resume Builder" />
-        <meta property="og:description" content="Add a professional photo to your resume to stand out to recruiters." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
+      
       <div 
         ref={contentRef}
         style={{

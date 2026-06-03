@@ -260,7 +260,7 @@ export default function AdministrativeExamples() {
           maxWidth: '1000px',
           margin: '0 auto',
           padding: '40px 20px',
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          fontFamily: 'var(--font-family-sans)'
         }}>
           {/* Breadcrumb Navigation */}
           <nav style={{
@@ -269,15 +269,15 @@ export default function AdministrativeExamples() {
             gap: '8px',
             marginBottom: '20px',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
-            <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+            <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
             <span>›</span>
-            <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+            <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
             <span>›</span>
-            <Link href="/professions/administrative" style={{ color: '#666', textDecoration: 'none' }}>Administrative Resumes</Link>
+            <Link href="/professions/administrative" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Administrative Resumes</Link>
             <span>›</span>
-            <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
+            <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{selectedExample.title}</span>
           </nav>
 
           {/* Back button */}
@@ -287,7 +287,7 @@ export default function AdministrativeExamples() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              color: '#666',
+              color: 'var(--text-secondary-light)',
               textDecoration: 'none',
               marginBottom: '30px',
               padding: '8px 16px',
@@ -324,10 +324,10 @@ export default function AdministrativeExamples() {
             gap: '16px'
           }}>
             <div>
-              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.title}: Complete Sample with {selectedExample.experience} Experience
               </h1>
-              <p style={{ color: '#666', margin: 0, fontSize: '14px' }}>
+              <p style={{ color: 'var(--text-secondary-light)', margin: 0, fontSize: '14px' }}>
                 Professional resume template for {selectedExample.specialization === 'executive-assistant' ? 'C-suite executive support professionals' : 'corporate office management'} | Updated for 2026 hiring season
               </p>
             </div>
@@ -337,7 +337,7 @@ export default function AdministrativeExamples() {
             }}>
               <span style={{
                 background: '#e3f2fd',
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 padding: '4px 12px',
                 borderRadius: '20px',
                 fontSize: '12px',
@@ -360,22 +360,22 @@ export default function AdministrativeExamples() {
           }}>
             {/* Header */}
             <div style={{ marginBottom: '30px' }}>
-              <h1 style={{ fontSize: '32px', marginBottom: '4px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '4px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.template.name}
               </h1>
               {selectedExample.template.credentials && (
-                <p style={{ fontSize: '16px', color: '#0070f3', marginBottom: '8px', fontWeight: 500 }}>
+                <p style={{ fontSize: '16px', color: 'var(--primary)', fontFamily: 'var(--font-family-display)', marginBottom: '8px', fontWeight: 500 }}>
                   {selectedExample.template.credentials}
                 </p>
               )}
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 <span>{selectedExample.template.email}</span>
                 <span>|</span>
                 <span>{selectedExample.template.phone}</span>
                 <span>|</span>
                 <span>{selectedExample.template.linkedin}</span>
               </div>
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '15px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '15px' }}>
                 {selectedExample.template.location}
               </div>
               
@@ -397,7 +397,7 @@ export default function AdministrativeExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -406,8 +406,8 @@ export default function AdministrativeExamples() {
               {selectedExample.template.education.map((edu, index) => (
                 <div key={index} style={{ marginBottom: '12px' }}>
                   <p style={{ fontWeight: 'bold', marginBottom: '2px' }}>{edu.degree}</p>
-                  <p style={{ color: '#666', marginBottom: '2px' }}>{edu.institution} | {edu.year}</p>
-                  {edu.score && <p style={{ color: '#666' }}>Score: {edu.score}</p>}
+                  <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px' }}>{edu.institution} | {edu.year}</p>
+                  {edu.score && <p style={{ color: 'var(--text-secondary-light)' }}>Score: {edu.score}</p>}
                 </div>
               ))}
             </div>
@@ -417,7 +417,7 @@ export default function AdministrativeExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -425,7 +425,7 @@ export default function AdministrativeExamples() {
               </h2>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {selectedExample.template.certifications.map((cert, index) => (
-                  <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{cert}</li>
+                  <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{cert}</li>
                 ))}
               </ul>
             </div>
@@ -435,7 +435,7 @@ export default function AdministrativeExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -471,7 +471,7 @@ export default function AdministrativeExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -483,11 +483,11 @@ export default function AdministrativeExamples() {
                     <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '2px' }}>
                       {exp.title} | {exp.company}
                     </p>
-                    <p style={{ color: '#666', fontSize: '14px' }}>{exp.period}</p>
+                    <p style={{ color: 'var(--text-secondary-light)', fontSize: '14px' }}>{exp.period}</p>
                   </div>
                   <ul style={{ margin: 0, paddingLeft: '20px' }}>
                     {exp.points.map((point, i) => (
-                      <li key={i} style={{ marginBottom: '4px', color: '#666' }}>{point}</li>
+                      <li key={i} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{point}</li>
                     ))}
                   </ul>
                 </div>
@@ -500,7 +500,7 @@ export default function AdministrativeExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -508,7 +508,7 @@ export default function AdministrativeExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.achievements.map((achievement, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{achievement}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{achievement}</li>
                   ))}
                 </ul>
               </div>
@@ -520,7 +520,7 @@ export default function AdministrativeExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -534,7 +534,7 @@ export default function AdministrativeExamples() {
                   {selectedExample.template.tools.map((tool, index) => (
                     <span key={index} style={{
                       background: '#f0f7ff',
-                      color: '#0070f3',
+                      color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                       padding: '5px 12px',
                       borderRadius: '20px',
                       fontSize: '12px',
@@ -553,7 +553,7 @@ export default function AdministrativeExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -567,7 +567,7 @@ export default function AdministrativeExamples() {
                   {selectedExample.template.vendors.map((vendor, index) => (
                     <span key={index} style={{
                       background: '#f0f7ff',
-                      color: '#0070f3',
+                      color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                       padding: '5px 12px',
                       borderRadius: '20px',
                       fontSize: '12px',
@@ -586,7 +586,7 @@ export default function AdministrativeExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -594,7 +594,7 @@ export default function AdministrativeExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.languages.map((lang, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{lang}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{lang}</li>
                   ))}
                 </ul>
               </div>
@@ -610,11 +610,11 @@ export default function AdministrativeExamples() {
             textAlign: 'center',
             border: '1px solid #e9ecef',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
             <p style={{ margin: 0 }}>
               This is a sample administrative resume for reference purposes. Use our{' '}
-              <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/editor" className="premium-btn-primary" style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)', textDecoration: 'none' }}>
                 free resume builder
               </Link>{' '}
               to create your own customized administrative or executive support resume with 20+ ATS-friendly templates designed for administrative professionals.
@@ -652,7 +652,7 @@ export default function AdministrativeExamples() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{
@@ -661,13 +661,13 @@ export default function AdministrativeExamples() {
           gap: '8px',
           marginBottom: '30px',
           fontSize: '14px',
-          color: '#666'
+          color: 'var(--text-secondary-light)'
         }}>
-          <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+          <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+          <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
           <span>›</span>
-          <span style={{ color: '#0070f3' }}>Administrative Resumes</span>
+          <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>Administrative Resumes</span>
         </nav>
 
         {/* Development Notice */}
@@ -688,9 +688,9 @@ export default function AdministrativeExamples() {
         {/* Header */}
         <div style={{ marginBottom: '40px', textAlign: 'center' }}>
           <h1 style={{
-            fontSize: '42px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '16px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             fontWeight: 700,
             lineHeight: '1.2'
           }}>
@@ -698,7 +698,7 @@ export default function AdministrativeExamples() {
           </h1>
           <p style={{
             fontSize: '18px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: '1.6'
@@ -718,34 +718,25 @@ export default function AdministrativeExamples() {
         </div>
 
         {/* Stats Bar */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
-          marginBottom: '40px',
-          padding: '20px',
-          background: '#f8fafc',
-          borderRadius: '12px',
-          flexWrap: 'wrap'
-        }}>
+        <div className="premium-card" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '24px', marginBottom: '40px', padding: '24px', background: '#f8fafc', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>{resumeExamples.length}+</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{resumeExamples.length}+</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>C-Suite • Corporate</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Executive Support Roles</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>C-Suite • Corporate</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Executive Support Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CEA • COM • MOS</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>CEA • COM • MOS</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Professional Certifications</div>
           </div>
         </div>
 
         {/* Examples Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '24px',
           marginBottom: '50px'
         }}>
@@ -753,12 +744,12 @@ export default function AdministrativeExamples() {
             <div
               key={example.id}
               onClick={() => handleViewExample(example)}
+              className="premium-card"
               style={{
-                background: 'white',
-                borderRadius: '16px',
-                border: '1px solid #e9ecef',
-                padding: '24px',
-                transition: 'all 0.3s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
@@ -778,7 +769,7 @@ export default function AdministrativeExamples() {
                 <h2 style={{
                   fontSize: '20px',
                   marginBottom: '8px',
-                  color: '#1a1a1a',
+                  color: 'var(--text-primary-light)',
                   fontWeight: 600,
                   margin: 0
                 }}>
@@ -792,7 +783,7 @@ export default function AdministrativeExamples() {
                 }}>
                   <span style={{
                     background: '#e6f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -803,7 +794,7 @@ export default function AdministrativeExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px'
@@ -812,7 +803,7 @@ export default function AdministrativeExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -825,7 +816,7 @@ export default function AdministrativeExamples() {
 
               <p style={{
                 fontSize: '14px',
-                color: '#666',
+                color: 'var(--text-secondary-light)',
                 marginBottom: '16px',
                 lineHeight: '1.6'
               }}>
@@ -841,7 +832,7 @@ export default function AdministrativeExamples() {
                 {example.skills.slice(0, 4).map((skill, i) => (
                   <span key={i} style={{
                     background: '#f0f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 12px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -869,7 +860,7 @@ export default function AdministrativeExamples() {
                 paddingTop: '16px'
               }}>
                 <span style={{
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   fontSize: '14px',
                   fontWeight: 600,
                   display: 'flex',
@@ -893,7 +884,7 @@ export default function AdministrativeExamples() {
           <h2 style={{
             fontSize: '24px',
             marginBottom: '20px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             textAlign: 'center'
           }}>
             Tips for Creating Effective Administrative Resumes
@@ -905,30 +896,26 @@ export default function AdministrativeExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Efficiency Improvements</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "Improved executive efficiency by 40%", "Reduced document retrieval time by 60%", "Saved 200+ hours annually through calendar optimization", "Managed ₹2Cr budget with 15% cost reduction".</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Use specific metrics: "Improved executive efficiency by 40%", "Reduced document retrieval time by 60%", "Saved 200+ hours annually through calendar optimization", "Managed ₹2Cr budget with 15% cost reduction".</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Highlight Technical Expertise</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>List software proficiency including MS Office Suite, Google Workspace, SAP, Concur, Asana, and Trello. Include certifications like Certified Executive Assistant (CEA), Microsoft Office Specialist (MOS), and Facility Management Professional (FMP).</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>List software proficiency including MS Office Suite, Google Workspace, SAP, Concur, Asana, and Trello. Include certifications like Certified Executive Assistant (CEA), Microsoft Office Specialist (MOS), and Facility Management Professional (FMP).</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Emphasize Confidentiality & Trust</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Highlight experience handling sensitive information, C-level executive support, board meeting coordination, and confidential HR or financial matters. Trust is the #1 quality hiring managers seek.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Highlight experience handling sensitive information, C-level executive support, board meeting coordination, and confidential HR or financial matters. Trust is the #1 quality hiring managers seek.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Vendor & Stakeholder Management</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Include number of vendors managed, contract values, negotiation outcomes, and cross-departmental collaboration to demonstrate your ability to manage complex stakeholder relationships.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Include number of vendors managed, contract values, negotiation outcomes, and cross-departmental collaboration to demonstrate your ability to manage complex stakeholder relationships.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
-          padding: '40px',
-          textAlign: 'center',
-          color: 'white'
+          background: 'var(--primary-gradient)', borderRadius: '24px', padding: '48px 32px', textAlign: 'center', color: 'white', boxShadow: '0 10px 25px -5px rgba(0, 112, 243, 0.15)'
         }}>
           <h2 style={{
             fontSize: '28px',
@@ -945,13 +932,11 @@ export default function AdministrativeExamples() {
           }}>
             Use our free resume builder with 20+ ATS-friendly templates designed specifically for executive assistants, office managers, and administrative professionals. Get hired faster with a resume that showcases your organizational excellence.
           </p>
-          <Link 
-            href="/editor"
-            style={{
+          <Link href="/editor" className="premium-btn-primary" style={{
               display: 'inline-block',
               padding: '12px 32px',
               background: 'white',
-              color: '#0070f3',
+              color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
               textDecoration: 'none',
               borderRadius: '8px',
               fontWeight: '600',

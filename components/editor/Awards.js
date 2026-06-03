@@ -1,11 +1,10 @@
-﻿// client/src/components/forms/Awards.js
+// client/src/components/forms/Awards.js
 // STABLE VERSION - Fixed infinite save loop, proper layout, and functionality
 // ============================================
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useResume } from '../../context/ResumeContext';
 import { getSectionLimit } from '../../lib/templateConfig';
-import Head from 'next/head';
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27ae60" strokeWidth="3" aria-hidden="true">
@@ -805,21 +804,7 @@ const Awards = ({
   // Main awards component
   return (
     <>
-      <Head>
-        <title>Professional Resume Awards Builder | Add Recognition & Honors</title>
-        <meta name="description" content="Add awards and recognition to your resume with our professional awards builder. Showcase academic honors, professional achievements, and industry recognition." />
-        <meta name="keywords" content="resume awards, professional recognition, academic honors, achievements, resume builder" />
-        <meta property="og:title" content="Professional Resume Awards Builder" />
-        <meta property="og:description" content="Add awards that showcase your excellence and stand out to employers." />
-        <meta name="twitter:card" content="summary_large_image" />
-        {awardsSchema && (
-          <script 
-            type="application/ld+json" 
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(awardsSchema) }}
-          />
-        )}
-      </Head>
-
+      
       <div 
         ref={contentRef}
         style={{
@@ -833,68 +818,7 @@ const Awards = ({
           boxSizing: 'border-box'
         }}
       >
-        {/* Hero Section */}
-        <div style={{
-          textAlign: 'center',
-          padding: spacing.heroPadding,
-          marginBottom: spacing.heroMargin,
-          background: 'linear-gradient(135deg, #f7fafc 0%, #ffffff 100%)',
-          borderRadius: '16px',
-          border: '1px solid #e2e8f0'
-        }}>
-          <h1 style={{
-            fontSize: isMobile ? '24px' : '28px',
-            marginBottom: '8px',
-            color: '#1a202c',
-            fontWeight: 700
-          }}>
-            Awards & <span style={{ color: '#4299e1' }}>Recognition</span>
-          </h1>
-          <p style={{
-            fontSize: isMobile ? '14px' : '16px',
-            color: '#4a5568',
-            marginBottom: '16px',
-            maxWidth: '600px',
-            marginLeft: 'auto',
-            marginRight: 'auto'
-          }}>
-            Add awards and recognition to demonstrate excellence in your field
-          </p>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '8px 16px',
-            background: '#ebf8ff',
-            borderRadius: '20px',
-            border: '1px solid #bee3f8'
-          }}>
-            <span style={{ fontSize: '14px', color: '#3182ce', fontWeight: 600 }}>
-              {completionPercentage}% Complete
-            </span>
-          </div>
-          {isSaving && (
-            <div style={{
-              marginTop: '12px',
-              fontSize: '12px',
-              color: '#4299e1',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px'
-            }}>
-              <div style={{
-                width: '12px',
-                height: '12px',
-                border: '2px solid #4299e1',
-                borderTopColor: 'transparent',
-                borderRadius: '50%',
-                animation: 'spin 1s linear infinite'
-              }} />
-              Saving...
-            </div>
-          )}
-        </div>
+        
 
         {/* Stats Bar */}
         <div style={{
@@ -933,7 +857,7 @@ const Awards = ({
         </div>
 
         {/* Main Content Grid */}
-        <div style={{
+        <div className="editor-main-layout" style={{
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
           gap: spacing.mainGap,

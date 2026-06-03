@@ -1,20 +1,28 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /editor/
+Disallow: /editor
 
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /_next/
+Disallow: /editor/
+Disallow: /editor
 
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
 Disallow: /_next/
+Disallow: /editor/
+Disallow: /editor
 
 User-agent: Googlebot-Image
 Allow: /assets/
 Allow: /images/
 Allow: /template-previews/
+
+Sitemap: https://freeresumemaker.xyz/sitemap.xml

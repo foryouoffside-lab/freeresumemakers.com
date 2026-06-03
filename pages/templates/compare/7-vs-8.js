@@ -556,31 +556,31 @@ export default function CompareTemplate7vs8() {
                   {[
                     { feature: 'Design Style', t1: 'Elegant geometric with accents', t2: 'Clean black & white' },
                     { feature: 'Color Scheme', t1: 'Academic Green with geometric shapes', t2: 'Monochrome (no colors)' },
-                    { feature: 'Sidebar Achievements', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Side-by-Side Education', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Professional Timeline', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Geometric Shapes', t1: '✓ Yes', t2: '✗ No' },
+                    { feature: 'Sidebar Achievements', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Side-by-Side Education', t1: '✗ No', t2: ' Yes' },
+                    { feature: 'Professional Timeline', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Geometric Shapes', t1: ' Yes', t2: '✗ No' },
                     { feature: 'Maximum Experience Entries', t1: '3', t2: '2' },
                     { feature: 'Maximum Skills', t1: '8', t2: '6' },
                     { feature: 'Maximum Languages', t1: '2', t2: '4' },
                     { feature: 'Maximum Projects', t1: '2', t2: '2' },
-                    { feature: 'Certifications Section', t1: '✓ Yes (2 max)', t2: '✓ Yes (2 max)' },
-                    { feature: 'Awards Section', t1: '✓ Yes (1 max)', t2: '✓ Yes (2 max)' },
-                    { feature: 'Tools Section', t1: '✓ Yes (3 max)', t2: '✓ Yes (4 max)' },
-                    { feature: 'Core Strengths Section', t1: '✓ Yes (3 max)', t2: '✓ Yes (4 max)' },
-                    { feature: 'Image Section', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Certifications Section', t1: ' Yes (2 max)', t2: ' Yes (2 max)' },
+                    { feature: 'Awards Section', t1: ' Yes (1 max)', t2: ' Yes (2 max)' },
+                    { feature: 'Tools Section', t1: ' Yes (3 max)', t2: ' Yes (4 max)' },
+                    { feature: 'Core Strengths Section', t1: ' Yes (3 max)', t2: ' Yes (4 max)' },
+                    { feature: 'Image Section', t1: '✗ No', t2: ' Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 14 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#059669', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#4b5563', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -610,21 +610,21 @@ export default function CompareTemplate7vs8() {
                 <div>
                   <h4 style={{ color: '#059669', marginBottom: '10px' }}>The Scholar includes:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>✓ Certifications (2 max)</li>
-                    <li>✓ Awards (1 max)</li>
-                    <li>✓ Tools (3 max)</li>
-                    <li>✓ Core Strengths (3 max)</li>
+                    <li> Certifications (2 max)</li>
+                    <li> Awards (1 max)</li>
+                    <li> Tools (3 max)</li>
+                    <li> Core Strengths (3 max)</li>
                     <li>✗ No image section</li>
                   </ul>
                 </div>
                 <div>
                   <h4 style={{ color: '#4b5563', marginBottom: '10px' }}>The Traditionalist includes:</h4>
                   <ul style={{ margin: 0 }}>
-                    <li>✓ Certifications (2 max)</li>
-                    <li>✓ Awards (2 max)</li>
-                    <li>✓ Tools (4 max)</li>
-                    <li>✓ Core Strengths (4 max)</li>
-                    <li>✓ Image section included</li>
+                    <li> Certifications (2 max)</li>
+                    <li> Awards (2 max)</li>
+                    <li> Tools (4 max)</li>
+                    <li> Core Strengths (4 max)</li>
+                    <li> Image section included</li>
                   </ul>
                 </div>
               </div>
@@ -639,7 +639,7 @@ export default function CompareTemplate7vs8() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#059669', marginBottom: '15px' }}>
-                  ✓ The Scholar - Pros
+                   The Scholar - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template7.pros.map((item, index) => (
@@ -647,7 +647,7 @@ export default function CompareTemplate7vs8() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#059669', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Scholar - Cons
+                   The Scholar - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template7.cons.map((item, index) => (
@@ -657,7 +657,7 @@ export default function CompareTemplate7vs8() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#4b5563', marginBottom: '15px' }}>
-                  ✓ The Traditionalist - Pros
+                   The Traditionalist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template8.pros.map((item, index) => (
@@ -665,7 +665,7 @@ export default function CompareTemplate7vs8() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#4b5563', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Traditionalist - Cons
+                   The Traditionalist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template8.cons.map((item, index) => (
@@ -942,7 +942,7 @@ export default function CompareTemplate7vs8() {
                 padding: '30px',
                 border: '1px solid #a7f3d0'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📚</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#16a34a' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#059669', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar
                 </h3>
@@ -972,7 +972,7 @@ export default function CompareTemplate7vs8() {
                 padding: '30px',
                 border: '1px solid #d1d5db'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>⚖️</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#4b5563' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M5 10c0 3 2.5 4 5 4M19 10c0 3-2.5 4-5 4M3 10h4M17 10h4"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#4b5563', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Traditionalist
                 </h3>
@@ -1034,28 +1034,28 @@ export default function CompareTemplate7vs8() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#4b5563' }}>The Traditionalist</div>
                 
                 <div>Academic positions</div>
-                <div style={{ color: '#059669' }}>✓✓ Perfect</div>
-                <div style={{ color: '#4b5563' }}>✓ Works</div>
+                <div style={{ color: '#059669' }}> Perfect</div>
+                <div style={{ color: '#4b5563' }}> Works</div>
                 
                 <div>Legal / Government</div>
                 <div style={{ color: '#999' }}>✗ Too decorative</div>
-                <div style={{ color: '#4b5563' }}>✓✓ Perfect</div>
+                <div style={{ color: '#4b5563' }}> Perfect</div>
                 
                 <div>Need image section</div>
                 <div style={{ color: '#999' }}>✗ Not available</div>
-                <div style={{ color: '#4b5563' }}>✓ Yes</div>
+                <div style={{ color: '#4b5563' }}> Yes</div>
                 
                 <div>3+ experiences</div>
-                <div style={{ color: '#059669' }}>✓ Yes (3 max)</div>
+                <div style={{ color: '#059669' }}> Yes (3 max)</div>
                 <div style={{ color: '#999' }}>✗ Only 2</div>
                 
                 <div>Side-by-side education</div>
                 <div style={{ color: '#999' }}>✗ No</div>
-                <div style={{ color: '#4b5563' }}>✓✓ Yes</div>
+                <div style={{ color: '#4b5563' }}> Yes</div>
                 
                 <div>Printer-friendly B&W</div>
-                <div style={{ color: '#059669' }}>✓ OK</div>
-                <div style={{ color: '#4b5563' }}>✓✓ Perfect</div>
+                <div style={{ color: '#059669' }}> OK</div>
+                <div style={{ color: '#4b5563' }}> Perfect</div>
               </div>
             </div>
           </div>

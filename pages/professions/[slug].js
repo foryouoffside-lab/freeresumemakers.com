@@ -26,19 +26,22 @@ export default function ProfessionPage() {
     'tech': 'Tech'
   };
 
-  const professionIcons = {
-    'academic': '🎓',
-    'business': '💼',
-    'creative': '🎨',
-    'engineering': '⚙️',
-    'executive': '👔',
-    'healthcare': '🏥',
-    'it-tech': '💻',
-    'legal': '⚖️',
-    'sales-marketing': '📈',
-    'software-engineering': '💻',
-    'student': '📚',
-    'tech': '🔧'
+  const getProfessionIcon = (profSlug, size = '64px') => {
+    const icons = {
+      'academic': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#10b981' }}><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>,
+      'business': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#1e3a8a' }}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>,
+      'creative': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#8b5cf6' }}><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><circle cx="7.5" cy="10.5" r="1.5"></circle><circle cx="11.5" cy="7.5" r="1.5"></circle><circle cx="16.5" cy="9.5" r="1.5"></circle><circle cx="15.5" cy="14.5" r="1.5"></circle></svg>,
+      'engineering': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#4b5563' }}><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>,
+      'executive': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#0f172a' }}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>,
+      'healthcare': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#0d9488' }}><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>,
+      'it-tech': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#2563eb' }}><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>,
+      'legal': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#4b5563' }}><path d="M12 3v18M5 10c0 3 2.5 4 5 4M19 10c0 3-2.5 4-5 4M3 10h4M17 10h4"></path></svg>,
+      'sales-marketing': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#0ea5e9' }}><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>,
+      'software-engineering': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#2563eb' }}><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>,
+      'student': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#16a34a' }}><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>,
+      'tech': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#4b5563' }}><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+    };
+    return icons[profSlug] || <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>;
   };
 
   const professionDescriptions = {
@@ -51,7 +54,8 @@ export default function ProfessionPage() {
     'legal': 'Browse professional legal resume examples for attorneys, lawyers, paralegals, and legal assistants. Sample resumes with litigation experience, contract law, and corporate legal expertise.',
     'finance': 'Browse professional finance resume examples for investment bankers, financial analysts, and accounting professionals. Sample resumes with financial modeling, M&A experience, and regulatory compliance.',
     'education': 'Browse professional education resume examples for teachers, professors, and academic administrators. Sample resumes with curriculum development, student achievement, and educational leadership.',
-    'administrative': 'Browse professional administrative resume examples for executive assistants, office managers, and administrative professionals. Sample resumes with calendar management, vendor relations, and operational efficiency.'
+    'administrative': 'Browse professional administrative resume examples for executive assistants, office managers, and administrative professionals. Sample resumes with calendar management, vendor relations, and operational efficiency.',
+    'design': 'Browse professional design resume examples for UI/UX designers, graphic designers, and product designers. Sample resumes with portfolio links, user research, and design tools expertise.'
   };
 
   const professionStats = {
@@ -64,11 +68,12 @@ export default function ProfessionPage() {
     'legal': { count: 6, stack: 'Litigation • Contracts • Compliance' },
     'finance': { count: 12, stack: 'Financial Modeling • Audit • Taxation' },
     'education': { count: 10, stack: 'Teaching • Research • Curriculum Design' },
-    'administrative': { count: 8, stack: 'Executive Support • Office Management' }
+    'administrative': { count: 8, stack: 'Executive Support • Office Management' },
+    'design': { count: 8, stack: 'UI/UX • Figma • Photoshop • Illustrator' }
   };
 
   const validProfessions = [
-    'academic', 'business', 'creative', 'engineering', 'executive', 
+    'academic', 'business', 'creative', 'design', 'engineering', 'executive', 
     'healthcare', 'it-tech', 'legal', 'sales-marketing', 
     'software-engineering', 'student', 'tech'
   ];
@@ -121,7 +126,7 @@ export default function ProfessionPage() {
             marginBottom: '24px',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '64px', marginBottom: '16px' }}>🔍</div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#64748b' }}><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
             <h1 style={{ fontSize: '28px', marginBottom: '12px', color: '#1a1a1a' }}>
               Profession Page Not Found
             </h1>
@@ -185,7 +190,7 @@ export default function ProfessionPage() {
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   
-  const professionIcon = professionIcons[slug] || '📄';
+  // professionIcon lookup replaced with getProfessionIcon
   const professionDescription = professionDescriptions[slug] || 
     `Browse professional ${professionName.toLowerCase()} resume examples and templates. Sample resumes with industry-specific skills, experience, and achievements to help you create your winning resume.`;
   const professionStat = professionStats[slug] || { count: 8, stack: 'Industry-Specific Skills' };
@@ -205,7 +210,7 @@ export default function ProfessionPage() {
         maxWidth: '1200px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{ marginBottom: '30px' }}>
@@ -214,48 +219,50 @@ export default function ProfessionPage() {
             alignItems: 'center',
             gap: '8px',
             fontSize: '14px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             flexWrap: 'wrap'
           }}>
             <Link 
               href="/"
-              style={{ color: '#666', textDecoration: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#0070f3'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#666'}
+              style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary-light)'}
             >
               Home
             </Link>
             <span>›</span>
             <Link 
               href="/examples"
-              style={{ color: '#666', textDecoration: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#0070f3'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#666'}
+              style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary-light)'}
             >
               Resume Examples
             </Link>
             <span>›</span>
-            <span style={{ color: '#0070f3' }}>{professionName} Resumes</span>
+            <span style={{ color: 'var(--primary)', fontWeight: 500 }}>{professionName} Resumes</span>
           </div>
         </nav>
 
         {/* Header Section */}
         <div style={{ marginBottom: '48px', textAlign: 'center' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>
-            {professionIcon}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+            {getProfessionIcon(slug, "64px")}
           </div>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem',
+            fontFamily: 'var(--font-family-display)',
             marginBottom: '16px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             lineHeight: '1.2',
-            fontWeight: 700
+            fontWeight: 800,
+            letterSpacing: '-0.02em'
           }}>
             {professionName} Resume Examples
           </h1>
           <p style={{
             fontSize: '18px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             maxWidth: '800px',
             margin: '0 auto',
             lineHeight: '1.6'
@@ -263,8 +270,9 @@ export default function ProfessionPage() {
             {professionDescription}
           </p>
           <p style={{
-            fontSize: '16px',
-            color: '#888',
+            fontSize: '15px',
+            color: 'var(--text-secondary-light)',
+            opacity: 0.8,
             maxWidth: '700px',
             margin: '12px auto 0',
             lineHeight: '1.5'
@@ -274,98 +282,99 @@ export default function ProfessionPage() {
         </div>
 
         {/* Stats Bar */}
-        <div style={{
+        <div className="premium-card" style={{
           display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          gap: '24px',
           marginBottom: '48px',
           padding: '24px',
           background: '#f8fafc',
-          borderRadius: '16px',
           flexWrap: 'wrap'
         }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>
+          <div style={{ textAlign: 'center', minWidth: '150px' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>
               {professionStat.count}+
             </div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)', fontWeight: 500 }}>Sample Resumes</div>
           </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>
+          <div style={{ textAlign: 'center', minWidth: '150px' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>
               {professionStat.stack.split(' • ')[0]}
             </div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Key Skills</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)', fontWeight: 500 }}>Key Skills</div>
           </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#0070f3' }}>
+          <div style={{ textAlign: 'center', minWidth: '150px' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>
               2026
             </div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Updated for Hiring Season</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)', fontWeight: 500 }}>Updated for Hiring Season</div>
           </div>
         </div>
 
         {/* Examples Grid - Will be populated with actual examples */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '24px',
           marginBottom: '48px'
         }}>
           {/* Example Card Placeholder */}
-          <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            border: '1px solid #e9ecef',
-            padding: '24px',
-            transition: 'all 0.3s ease'
+          <div className="premium-card" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%'
           }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '32px',
-              marginBottom: '16px'
-            }}>
-              {professionIcon}
-            </div>
-            <h2 style={{ fontSize: '20px', marginBottom: '8px', color: '#1a1a1a' }}>
-              {professionName} Resume Sample
-            </h2>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px', lineHeight: '1.6' }}>
-              Professional resume example for {professionName.toLowerCase()} professionals. Includes industry-specific skills, experience, and achievements.
-            </p>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginBottom: '20px'
-            }}>
-              {professionStat.stack.split(' • ').slice(0, 3).map((skill, i) => (
-                <span key={i} style={{
-                  background: '#f0f7ff',
-                  color: '#0070f3',
-                  padding: '4px 12px',
-                  borderRadius: '20px',
-                  fontSize: '12px',
-                  fontWeight: 500
-                }}>
-                  {skill}
-                </span>
-              ))}
+            <div>
+              <div style={{
+                width: '60px',
+                height: '60px',
+                background: '#f0f7ff',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--primary)',
+                marginBottom: '16px'
+              }}>
+                {getProfessionIcon(slug, "32px")}
+              </div>
+              <h2 style={{ fontSize: '20px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>
+                {professionName} Resume Sample
+              </h2>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', marginBottom: '16px', lineHeight: '1.6' }}>
+                Professional resume example for {professionName.toLowerCase()} professionals. Includes industry-specific skills, experience, and achievements.
+              </p>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '8px',
+                marginBottom: '20px'
+              }}>
+                {professionStat.stack.split(' • ').slice(0, 3).map((skill, i) => (
+                  <span key={i} style={{
+                    background: '#f0f7ff',
+                    color: 'var(--primary)',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: 500
+                  }}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              borderTop: '1px solid #e9ecef',
+              borderTop: '1px solid var(--border-light)',
               paddingTop: '16px'
             }}>
               <span style={{
-                color: '#0070f3',
+                color: 'var(--primary)',
                 fontSize: '14px',
                 fontWeight: 600
               }}>
@@ -374,78 +383,79 @@ export default function ProfessionPage() {
             </div>
           </div>
 
-          <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            border: '1px solid #e9ecef',
-            padding: '24px',
-            transition: 'all 0.3s ease'
+          <div className="premium-card" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%'
           }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '32px',
-              marginBottom: '16px'
-            }}>
-              {professionIcon}
-            </div>
-            <h2 style={{ fontSize: '20px', marginBottom: '8px', color: '#1a1a1a' }}>
-              Senior {professionName} Resume
-            </h2>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px', lineHeight: '1.6' }}>
-              Advanced resume example for experienced {professionName.toLowerCase()} professionals with leadership experience and strategic achievements.
-            </p>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginBottom: '20px'
-            }}>
-              <span style={{
+            <div>
+              <div style={{
+                width: '60px',
+                height: '60px',
                 background: '#f0f7ff',
-                color: '#0070f3',
-                padding: '4px 12px',
-                borderRadius: '20px',
-                fontSize: '12px',
-                fontWeight: 500
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--primary)',
+                marginBottom: '16px'
               }}>
-                Leadership
-              </span>
-              <span style={{
-                background: '#f0f7ff',
-                color: '#0070f3',
-                padding: '4px 12px',
-                borderRadius: '20px',
-                fontSize: '12px',
-                fontWeight: 500
+                {getProfessionIcon(slug, "32px")}
+              </div>
+              <h2 style={{ fontSize: '20px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>
+                Senior {professionName} Resume
+              </h2>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', marginBottom: '16px', lineHeight: '1.6' }}>
+                Advanced resume example for experienced {professionName.toLowerCase()} professionals with leadership experience and strategic achievements.
+              </p>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '8px',
+                marginBottom: '20px'
               }}>
-                Strategy
-              </span>
-              <span style={{
-                background: '#f0f7ff',
-                color: '#0070f3',
-                padding: '4px 12px',
-                borderRadius: '20px',
-                fontSize: '12px',
-                fontWeight: 500
-              }}>
-                Management
-              </span>
+                <span style={{
+                  background: '#f0f7ff',
+                  color: 'var(--primary)',
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  fontSize: '12px',
+                  fontWeight: 500
+                }}>
+                  Leadership
+                </span>
+                <span style={{
+                  background: '#f0f7ff',
+                  color: 'var(--primary)',
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  fontSize: '12px',
+                  fontWeight: 500
+                }}>
+                  Strategy
+                </span>
+                <span style={{
+                  background: '#f0f7ff',
+                  color: 'var(--primary)',
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  fontSize: '12px',
+                  fontWeight: 500
+                }}>
+                  Management
+                </span>
+              </div>
             </div>
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              borderTop: '1px solid #e9ecef',
+              borderTop: '1px solid var(--border-light)',
               paddingTop: '16px'
             }}>
               <span style={{
-                color: '#0070f3',
+                color: 'var(--primary)',
                 fontSize: '14px',
                 fontWeight: 600
               }}>
@@ -456,56 +466,58 @@ export default function ProfessionPage() {
         </div>
 
         {/* Tips Section */}
-        <div style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
+        <div className="premium-card" style={{
+          background: '#f8fafc',
           padding: '32px',
           marginBottom: '40px'
         }}>
           <h2 style={{
             fontSize: '24px',
-            marginBottom: '20px',
-            color: '#1a1a1a',
+            fontFamily: 'var(--font-family-display)',
+            marginBottom: '24px',
+            color: 'var(--text-primary-light)',
             textAlign: 'center'
           }}>
             Tips for Creating Effective {professionName} Resumes
           </h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '24px'
           }}>
             <div>
-              <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Your Achievements</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics and numbers to demonstrate your impact. Numbers make your accomplishments tangible and credible to hiring managers.</p>
+              <h3 style={{ fontSize: '17px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>Quantify Your Achievements</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', lineHeight: '1.6' }}>Use specific metrics and numbers to demonstrate your impact. Numbers make your accomplishments tangible and credible to hiring managers.</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Highlight Industry-Specific Skills</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Include relevant technical skills, certifications, and tools specific to your profession. This helps your resume pass ATS screening.</p>
+              <h3 style={{ fontSize: '17px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>Highlight Industry-Specific Skills</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', lineHeight: '1.6' }}>Include relevant technical skills, certifications, and tools specific to your profession. This helps your resume pass ATS screening.</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Career Progression</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Demonstrate growth through promotions, increased responsibilities, and expanding scope of work. This shows potential for future advancement.</p>
+              <h3 style={{ fontSize: '17px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>Showcase Career Progression</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', lineHeight: '1.6' }}>Demonstrate growth through promotions, increased responsibilities, and expanding scope of work. This shows potential for future advancement.</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Include Professional Certifications</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>List relevant certifications, licenses, and professional development. Certifications validate your expertise and commitment to the field.</p>
+              <h3 style={{ fontSize: '17px', fontFamily: 'var(--font-family-display)', marginBottom: '8px', color: 'var(--text-primary-light)' }}>Include Professional Certifications</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', lineHeight: '1.6' }}>List relevant certifications, licenses, and professional development. Certifications validate your expertise and commitment to the field.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
+          background: 'var(--primary-gradient)',
+          borderRadius: '24px',
           padding: '48px 32px',
           textAlign: 'center',
-          color: 'white'
+          color: 'white',
+          boxShadow: '0 10px 25px -5px rgba(0, 112, 243, 0.15)'
         }}>
           <h2 style={{
             fontSize: '28px',
-            marginBottom: '16px',
-            fontWeight: 700
+            fontFamily: 'var(--font-family-display)',
+            fontWeight: 800,
+            marginBottom: '16px'
           }}>
             Build Your Professional {professionName} Resume
           </h2>
@@ -514,31 +526,19 @@ export default function ProfessionPage() {
             marginBottom: '24px',
             opacity: 0.9,
             maxWidth: '600px',
-            margin: '0 auto 24px'
+            margin: '0 auto 24px',
+            lineHeight: '1.6'
           }}>
             Use our free resume builder with 20+ ATS-friendly templates designed specifically for {professionName.toLowerCase()} professionals. Create a standout resume in minutes.
           </p>
           <Link 
             href="/editor"
+            className="premium-btn-primary"
             style={{
-              display: 'inline-block',
-              padding: '14px 36px',
               background: 'white',
-              color: '#0070f3',
-              textDecoration: 'none',
-              borderRadius: '50px',
-              fontSize: '16px',
-              fontWeight: 600,
-              transition: 'all 0.2s ease',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+              color: 'var(--primary)',
+              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.25)',
+              display: 'inline-flex'
             }}
           >
             Create Your Resume Now →

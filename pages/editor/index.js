@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 // pages/editor/index.js - SEO OPTIMIZED VERSION (2026 Update)
 import TemplateSelector from '../../components/templates/TemplateSelector';
 import { useRouter } from 'next/router';
@@ -181,15 +181,18 @@ export default function EditorIndex() {
         <div style={{
           marginTop: '80px',
           padding: '48px 32px',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          borderRadius: '20px',
-          color: 'white'
+          background: 'linear-gradient(135deg, #090d16 0%, #111827 100%)',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          borderRadius: '24px',
+          color: 'white',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
         }}>
           <h2 style={{
-            fontSize: '32px',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '36px',
             marginBottom: '24px',
             textAlign: 'center',
-            fontWeight: 700
+            fontWeight: 800
           }}>
             Why Our Resume Templates Stand Out (2026)
           </h2>
@@ -200,30 +203,30 @@ export default function EditorIndex() {
             marginTop: '40px'
           }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>📄</div>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>ATS-Friendly Design</h3>
-              <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
+              <div style={{ fontSize: '28px', width: '60px', height: '60px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>📄</div>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '12px', color: 'white' }}>ATS-Friendly Design</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-dark)', opacity: 0.9, lineHeight: '1.6' }}>
                 All templates are optimized to pass Applicant Tracking Systems with clean formatting and standard section headings. Updated for 2026 ATS algorithms.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚡</div>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>Real-Time Preview</h3>
-              <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
+              <div style={{ fontSize: '28px', width: '60px', height: '60px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>⚡</div>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '12px', color: 'white' }}>Real-Time Preview</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-dark)', opacity: 0.9, lineHeight: '1.6' }}>
                 See changes instantly as you type. No waiting, no refreshing - just seamless editing with instant feedback.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>📄</div>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>Instant PDF Download</h3>
-              <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
+              <div style={{ fontSize: '28px', width: '60px', height: '60px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>📄</div>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '12px', color: 'white' }}>Instant PDF Download</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-dark)', opacity: 0.9, lineHeight: '1.6' }}>
                 Download your professional resume as a PDF with one click. High-quality print-ready format for all employers.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '16px' }}>💎</div>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>100% Free Forever</h3>
-              <p style={{ fontSize: '14px', opacity: 0.9, lineHeight: '1.6' }}>
+              <div style={{ fontSize: '28px', width: '60px', height: '60px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>💎</div>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '12px', color: 'white' }}>100% Free Forever</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-dark)', opacity: 0.9, lineHeight: '1.6' }}>
                 No hidden costs, no sign-up required. Create unlimited resumes completely free with no watermarks.
               </p>
             </div>
@@ -233,15 +236,19 @@ export default function EditorIndex() {
         {/* Step-by-Step Guide */}
         <div style={{
           marginTop: '60px',
-          padding: '40px',
-          background: '#f0f7ff',
-          borderRadius: '16px',
-          textAlign: 'center'
+          padding: '48px 40px',
+          background: 'var(--card-light)',
+          border: '1px solid var(--border-light)',
+          borderRadius: '24px',
+          textAlign: 'center',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.02)'
         }}>
           <h2 style={{
-            fontSize: '28px',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '32px',
+            fontWeight: 800,
             marginBottom: '16px',
-            color: '#1a1a1a'
+            color: 'var(--text-primary-light)'
           }}>
             Build Your Resume in 3 Simple Steps
           </h2>
@@ -255,7 +262,7 @@ export default function EditorIndex() {
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: '#0070f3',
+                background: 'var(--primary-gradient)',
                 color: 'white',
                 borderRadius: '50%',
                 display: 'flex',
@@ -263,16 +270,17 @@ export default function EditorIndex() {
                 justifyContent: 'center',
                 fontSize: '24px',
                 fontWeight: 'bold',
-                margin: '0 auto 16px'
+                margin: '0 auto 20px',
+                boxShadow: '0 4px 14px rgba(0, 112, 243, 0.3)'
               }}>1</div>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Choose Template</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Select from 20+ ATS-friendly designs for 2026</p>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '8px', color: 'var(--text-primary-light)' }}>Choose Template</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Select from 20+ ATS-friendly designs for 2026</p>
             </div>
             <div>
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: '#0070f3',
+                background: 'var(--primary-gradient)',
                 color: 'white',
                 borderRadius: '50%',
                 display: 'flex',
@@ -280,16 +288,17 @@ export default function EditorIndex() {
                 justifyContent: 'center',
                 fontSize: '24px',
                 fontWeight: 'bold',
-                margin: '0 auto 16px'
+                margin: '0 auto 20px',
+                boxShadow: '0 4px 14px rgba(0, 112, 243, 0.3)'
               }}>2</div>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Fill Your Details</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Add experience, skills, education, and achievements</p>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '8px', color: 'var(--text-primary-light)' }}>Fill Your Details</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Add experience, skills, education, and achievements</p>
             </div>
             <div>
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: '#0070f3',
+                background: 'var(--primary-gradient)',
                 color: 'white',
                 borderRadius: '50%',
                 display: 'flex',
@@ -297,10 +306,11 @@ export default function EditorIndex() {
                 justifyContent: 'center',
                 fontSize: '24px',
                 fontWeight: 'bold',
-                margin: '0 auto 16px'
+                margin: '0 auto 20px',
+                boxShadow: '0 4px 14px rgba(0, 112, 243, 0.3)'
               }}>3</div>
-              <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Download PDF</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Get your professional resume instantly</p>
+              <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '20px', fontWeight: 700, marginBottom: '8px', color: 'var(--text-primary-light)' }}>Download PDF</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Get your professional resume instantly</p>
             </div>
           </div>
         </div>
@@ -308,15 +318,19 @@ export default function EditorIndex() {
         {/* FAQ Section - Updated for 2026 */}
         <div style={{
           marginTop: '60px',
-          padding: '40px',
-          background: '#f8f9fa',
-          borderRadius: '16px'
+          padding: '48px 40px',
+          background: 'var(--card-light)',
+          border: '1px solid var(--border-light)',
+          borderRadius: '24px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.02)'
         }}>
           <h2 style={{
-            fontSize: '28px',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '32px',
             marginBottom: '30px',
             textAlign: 'center',
-            color: '#1a1a1a'
+            fontWeight: 800,
+            color: 'var(--text-primary-light)'
           }}>
             Frequently Asked Questions (2026)
           </h2>
@@ -331,15 +345,13 @@ export default function EditorIndex() {
               { q: 'Do these templates work for all industries?', a: 'Yes! Our templates are designed for all industries including tech, business, healthcare, creative, education, and more. Choose the style that fits your field.' },
               { q: 'How do I know if my resume is ATS-friendly?', a: 'Our templates use standard section headings (Work Experience, Education, Skills), simple formatting, and no columns or graphics that can confuse ATS software.' }
             ].map((faq, idx) => (
-              <div key={idx} style={{
+              <div key={idx} className="premium-card" style={{
                 padding: '20px',
                 background: 'white',
-                borderRadius: '12px',
-                marginBottom: '16px',
-                border: '1px solid #e9ecef'
+                marginBottom: '16px'
               }}>
-                <h3 style={{ fontSize: '18px', marginBottom: '8px', color: '#0070f3' }}>{faq.q}</h3>
-                <p style={{ color: '#666', margin: 0 }}>{faq.a}</p>
+                <h3 style={{ fontFamily: 'var(--font-family-display)', fontSize: '18px', fontWeight: 700, marginBottom: '8px', color: 'var(--primary)' }}>{faq.q}</h3>
+                <p style={{ color: 'var(--text-secondary-light)', margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -348,14 +360,17 @@ export default function EditorIndex() {
         {/* CTA Section */}
         <div style={{
           marginTop: '60px',
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
-          padding: '48px 32px',
+          background: 'var(--primary-gradient)',
+          borderRadius: '24px',
+          padding: '56px 32px',
           textAlign: 'center',
-          color: 'white'
+          color: 'white',
+          boxShadow: '0 10px 30px rgba(0, 112, 243, 0.2)'
         }}>
           <h2 style={{
-            fontSize: '32px',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '36px',
+            fontWeight: 800,
             marginBottom: '16px'
           }}>
             Ready to Create Your Professional Resume?
@@ -365,7 +380,8 @@ export default function EditorIndex() {
             marginBottom: '30px',
             opacity: 0.9,
             maxWidth: '600px',
-            margin: '0 auto 30px'
+            margin: '0 auto 30px',
+            lineHeight: '1.6'
           }}>
             Join thousands of job seekers who landed their dream jobs with our free resume builder in 2026
           </p>
@@ -374,21 +390,22 @@ export default function EditorIndex() {
             style={{
               padding: '16px 40px',
               background: 'white',
-              color: '#0070f3',
+              color: 'var(--primary)',
               border: 'none',
-              borderRadius: '8px',
+              borderRadius: '12px',
               fontSize: '18px',
               fontWeight: 'bold',
               cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.2)',
               transition: 'transform 0.2s, box-shadow 0.2s'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(255, 255, 255, 0.35)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(255, 255, 255, 0.2)';
             }}
           >
             Start Building Now →

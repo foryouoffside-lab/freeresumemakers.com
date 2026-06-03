@@ -1,6 +1,7 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 // pages/_app.js
+import '../styles/globals.css';
 import { ResumeProvider } from '../context/ResumeContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -180,7 +181,7 @@ function MyApp({ Component, pageProps }) {
         body {
           margin: 0;
           padding: 0;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          font-family: var(--font-family-sans);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }

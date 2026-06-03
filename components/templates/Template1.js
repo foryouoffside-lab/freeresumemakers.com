@@ -1,4 +1,4 @@
-﻿import Head from 'next/head';
+import Head from 'next/head';
 // ============================================
 // components/templates/Template1.js 
 // UPDATED: LinkedIn "in" icon in blue color
@@ -639,7 +639,7 @@ const Template1 = ({
 
   const renderEducationItem = (edu, index) => {
     const isHovered = hoveredEducation === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const dateDisplay = edu.formattedStartDate && edu.formattedEndDate 
       ? `${edu.formattedStartDate} – ${edu.formattedEndDate}`
@@ -726,7 +726,7 @@ const Template1 = ({
   const renderExperienceItem = (exp, index) => {
     const hasBulletPoints = exp.hasBulletPoints;
     const isHovered = hoveredExperience === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const dateDisplay = exp.formattedStartDate && exp.formattedEndDate 
       ? `${exp.formattedStartDate} – ${exp.formattedEndDate}`
@@ -1015,7 +1015,7 @@ const Template1 = ({
     );
   }
 
-  const isMobile = windowWidth < 768;
+  const isMobile = false;
 
   return (
     <div 

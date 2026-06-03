@@ -257,7 +257,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = '#0070f3';
               }}
             >
-              <span>🏠</span> Return to Home
+              <span><svg style={{ width: '1.2rem', height: '1.2rem', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Return to Home
             </Link>
 
             <Link
@@ -285,7 +285,7 @@ export default function Custom404() {
                 e.currentTarget.style.background = 'white';
               }}
             >
-              <span>📝</span> Build Your Resume
+              <span><svg style={{ width: '1.2rem', height: '1.2rem', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></span> Build Your Resume
             </Link>
           </div>
 

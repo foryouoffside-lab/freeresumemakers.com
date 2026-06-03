@@ -1,11 +1,10 @@
-﻿// client/src/components/forms/Projects.js
+// client/src/components/forms/Projects.js
 // STABLE VERSION - Fixed infinite save loop and excessive re-renders
 // ============================================
 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useResume } from '../../context/ResumeContext';
 import { getSectionLimit } from '../../lib/templateConfig';
-import Head from 'next/head';
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27ae60" strokeWidth="3" aria-hidden="true">
@@ -791,19 +790,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
 
   return (
     <>
-      <Head>
-        <title>Resume Project Portfolio Builder | Showcase Development Projects</title>
-        <meta name="description" content="Add software development projects to your resume with quantifiable achievements. 3 bullet points per project, 140 chars each. Projects significantly increase interview chances." />
-        <meta name="keywords" content="resume projects, project portfolio, software development projects, GitHub projects, developer portfolio" />
-        <meta property="og:title" content="Resume Project Portfolio Builder" />
-        <meta property="og:description" content="Showcase your development projects with quantifiable achievements." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
-
+      
       <div 
         ref={contentRef}
         style={{
@@ -817,68 +804,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
           boxSizing: 'border-box'
         }}
       >
-        {/* Hero Section */}
-        <div style={{
-          textAlign: 'center',
-          padding: spacing.heroPadding,
-          marginBottom: spacing.heroMargin,
-          background: 'linear-gradient(135deg, #f7fafc 0%, #ffffff 100%)',
-          borderRadius: '16px',
-          border: '1px solid #e2e8f0'
-        }}>
-          <h1 style={{
-            fontSize: isMobile ? '24px' : '28px',
-            marginBottom: '8px',
-            color: '#1a202c',
-            fontWeight: 700
-          }}>
-            Project <span style={{ color: '#4299e1' }}>Portfolio</span>
-          </h1>
-          <p style={{
-            fontSize: isMobile ? '14px' : '16px',
-            color: '#4a5568',
-            marginBottom: '16px',
-            maxWidth: '600px',
-            marginLeft: 'auto',
-            marginRight: 'auto'
-          }}>
-            Showcase your projects with quantifiable achievements (max 3 bullet points, 140 chars each)
-          </p>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '8px 16px',
-            background: '#ebf8ff',
-            borderRadius: '20px',
-            border: '1px solid #bee3f8'
-          }}>
-            <span style={{ fontSize: '14px', color: '#3182ce', fontWeight: 600 }}>
-              {completionPercentage}% Complete
-            </span>
-          </div>
-          {isSaving && (
-            <div style={{
-              marginTop: '12px',
-              fontSize: '12px',
-              color: '#4299e1',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px'
-            }}>
-              <div style={{
-                width: '12px',
-                height: '12px',
-                border: '2px solid #4299e1',
-                borderTopColor: 'transparent',
-                borderRadius: '50%',
-                animation: 'spin 1s linear infinite'
-              }} />
-              Saving...
-            </div>
-          )}
-        </div>
+        
 
         {/* Stats Bar */}
         <div style={{
@@ -918,7 +844,7 @@ const Projects = ({ onDataChange, data, templateId, navigationButtons }) => {
         </div>
 
         {/* Main Content Grid */}
-        <div style={{
+        <div className="editor-main-layout" style={{
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
           gap: spacing.mainGap,

@@ -257,7 +257,7 @@ export default function ResumeSectionsGuide() {
         maxWidth: '1200px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -278,7 +278,7 @@ export default function ResumeSectionsGuide() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -371,13 +371,7 @@ export default function ResumeSectionsGuide() {
         </div>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             In This Guide:
           </h2>
@@ -424,7 +418,7 @@ export default function ResumeSectionsGuide() {
         {/* All Sections Explained */}
         <section id="sections" style={{ scrollMarginTop: '100px' }}>
           <h2 style={{ 
-            fontSize: '32px', 
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
             margin: '0 0 20px 0',
             borderBottom: '3px solid #0070f3',
             paddingBottom: '10px'
@@ -482,7 +476,7 @@ export default function ResumeSectionsGuide() {
         {/* Template Comparison Table */}
         <section id="template-comparison" style={{ scrollMarginTop: '100px' }}>
           <h2 style={{ 
-            fontSize: '32px', 
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
             margin: '50px 0 20px 0',
             borderBottom: '3px solid #0070f3',
             paddingBottom: '10px'
@@ -556,7 +550,7 @@ export default function ResumeSectionsGuide() {
         {/* Sections by Template */}
         <section id="required-by-template" style={{ scrollMarginTop: '100px' }}>
           <h2 style={{ 
-            fontSize: '32px', 
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
             margin: '50px 0 20px 0',
             borderBottom: '3px solid #0070f3',
             paddingBottom: '10px'
@@ -627,7 +621,7 @@ export default function ResumeSectionsGuide() {
         {/* Section Order Guide */}
         <section id="section-order" style={{ scrollMarginTop: '100px' }}>
           <h2 style={{ 
-            fontSize: '32px', 
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
             margin: '50px 0 20px 0',
             borderBottom: '3px solid #0070f3',
             paddingBottom: '10px'
@@ -837,14 +831,9 @@ export default function ResumeSectionsGuide() {
 
         {/* Download Section */}
         <section style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          borderRadius: '16px',
-          padding: '40px',
-          margin: '50px 0',
-          color: 'white',
-          textAlign: 'center'
+          background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
         }}>
-          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+          <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
           <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Sections Checklist</h2>
           <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
             Download our printable checklist to ensure your resume includes all relevant sections for your target role.

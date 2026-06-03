@@ -233,7 +233,7 @@ export default function KeywordsFinder() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>💡 Pro Tip:</strong> Over 75% of resumes are rejected by ATS systems before reaching human recruiters. 
+            <strong><strong>Pro Tip:</strong></strong> Over 75% of resumes are rejected by ATS systems before reaching human recruiters. 
             Using the right keywords from the job description can increase your interview chances by up to 40%. 
             Our tool identifies the most important keywords recruiters are looking for.
           </p>

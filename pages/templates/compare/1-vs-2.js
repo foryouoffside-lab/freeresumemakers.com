@@ -249,11 +249,11 @@ export default function CompareTemplate1vs2() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
+              {tab === 'industry' && 'Industry Fit'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -513,26 +513,26 @@ export default function CompareTemplate1vs2() {
                   {[
                     { feature: 'Layout Style', t1: 'Two-column with gradient header', t2: 'Two-column with visual connectors' },
                     { feature: 'Typography', t1: 'Classic serif fonts', t2: 'Modern sans-serif' },
-                    { feature: 'Experience Filtering', t1: '✓ Yes (job, internship, project)', t2: '✗ No' },
-                    { feature: 'Visual Connectors', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Centered Header', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Experience Filtering', t1: ' Yes (job, internship, project)', t2: '✗ No' },
+                    { feature: 'Visual Connectors', t1: '✗ No', t2: ' Yes' },
+                    { feature: 'Centered Header', t1: '✗ No', t2: ' Yes' },
                     { feature: 'Contact Pills/Badges', t1: 'Standard contact section', t2: 'Modern contact pills' },
                     { feature: 'Skills Display', t1: 'Grid layout (9 skills)', t2: 'Tags layout (5 skills)' },
-                    { feature: 'Experience Badges', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Professional Summary Box', t1: '✓ Yes', t2: '✓ Yes' },
-                    { feature: 'Languages Section', t1: '✓ Yes (4 max)', t2: '✓ Yes (2 max)' },
+                    { feature: 'Experience Badges', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Professional Summary Box', t1: ' Yes', t2: ' Yes' },
+                    { feature: 'Languages Section', t1: ' Yes (4 max)', t2: ' Yes (2 max)' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 9 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#0070f3', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#7928ca', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -553,7 +553,7 @@ export default function CompareTemplate1vs2() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginBottom: '15px' }}>
-                  ✓ The Professional - Pros
+                  The Professional - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.pros.map((item, index) => (
@@ -561,7 +561,7 @@ export default function CompareTemplate1vs2() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Professional - Cons
+                  The Professional - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.cons.map((item, index) => (
@@ -571,7 +571,7 @@ export default function CompareTemplate1vs2() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginBottom: '15px' }}>
-                  ✓ The Innovator - Pros
+                  The Innovator - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.pros.map((item, index) => (
@@ -579,7 +579,7 @@ export default function CompareTemplate1vs2() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#7928ca', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Innovator - Cons
+                  The Innovator - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template2.cons.map((item, index) => (
@@ -837,7 +837,7 @@ export default function CompareTemplate1vs2() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🏢</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#0070f3' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="16"></line><line x1="15" y1="22" x2="15" y2="16"></line><line x1="9" y1="16" x2="15" y2="16"></line><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0070f3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Professional
                 </h3>
@@ -867,7 +867,7 @@ export default function CompareTemplate1vs2() {
                 padding: '30px',
                 border: '1px solid #e5ccff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🚀</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#7928ca' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#7928ca', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Innovator
                 </h3>
@@ -900,7 +900,7 @@ export default function CompareTemplate1vs2() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: You Can Have Both
+                Expert Tip: You Can Have Both
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Many professionals create multiple versions of their resume. Consider keeping both templates in your toolkit - use The Professional for corporate applications and The Innovator for creative roles. Our free resume builder lets you create unlimited resumes, so you can experiment with both!

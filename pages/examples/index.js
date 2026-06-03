@@ -1,4 +1,4 @@
-﻿// pages/examples/index.js
+// pages/examples/index.js
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -44,37 +44,62 @@ export default function ExamplesPage() {
     ]
   };
 
+  // Helper functions for modern inline vector SVG icons
+  const getCategoryIcon = (slug, size = '36px') => {
+    const icons = {
+      'software-engineering': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>,
+      'marketing': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>,
+      'sales': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>,
+      'healthcare': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>,
+      'education': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>,
+      'finance': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>,
+      'design': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><circle cx="7.5" cy="10.5" r="1.5"></circle><circle cx="11.5" cy="7.5" r="1.5"></circle><circle cx="16.5" cy="9.5" r="1.5"></circle><circle cx="15.5" cy="14.5" r="1.5"></circle></svg>,
+      'administrative': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+    };
+    return icons[slug] || null;
+  };
+
+  const getTipIcon = (iconName, size = '24px') => {
+    const icons = {
+      'pencil': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>,
+      'target': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>,
+      'chart': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>,
+      'search': <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    };
+    return icons[iconName] || null;
+  };
+
   // Profession categories data
   const categories = [
-    { title: 'Software Engineering', icon: '💻', count: '2 examples', slug: 'software-engineering', color: '#e3f2fd', description: 'React, Python, Java, AWS, DevOps' },
-    { title: 'Marketing', icon: '📱', count: '2 examples', slug: 'marketing', color: '#f3e5f5', description: 'SEO, Social Media, Content Strategy, Analytics' },
-    { title: 'Sales', icon: '🤝', count: '2 examples', slug: 'sales', color: '#e8f5e8', description: 'B2B, Account Management, Business Development' },
-    { title: 'Healthcare', icon: '🏥', count: '2 examples', slug: 'healthcare', color: '#fff3e0', description: 'Nursing, Administration, Clinical Roles' },
-    { title: 'Education', icon: '📚', count: '2 examples', slug: 'education', color: '#e1f5fe', description: 'Teaching, Administration, Curriculum Design' },
-    { title: 'Finance', icon: '💰', count: '2 examples', slug: 'finance', color: '#fce4ec', description: 'Accounting, Investment Banking, Analysis' },
-    { title: 'Design', icon: '🎨', count: '2 examples', slug: 'design', color: '#e0f2f1', description: 'UI/UX, Graphic Design, Product Design' },
-    { title: 'Administrative', icon: '📋', count: '2 examples', slug: 'administrative', color: '#fff3e0', description: 'Executive Assistant, Office Management' }
+    { title: 'Software Engineering', count: '2 examples', slug: 'software-engineering', color: '#e3f2fd', description: 'React, Python, Java, AWS, DevOps' },
+    { title: 'Marketing', count: '2 examples', slug: 'marketing', color: '#f3e5f5', description: 'SEO, Social Media, Content Strategy, Analytics' },
+    { title: 'Sales', count: '2 examples', slug: 'sales', color: '#e8f5e8', description: 'B2B, Account Management, Business Development' },
+    { title: 'Healthcare', count: '2 examples', slug: 'healthcare', color: '#fff3e0', description: 'Nursing, Administration, Clinical Roles' },
+    { title: 'Education', count: '2 examples', slug: 'education', color: '#e1f5fe', description: 'Teaching, Administration, Curriculum Design' },
+    { title: 'Finance', count: '2 examples', slug: 'finance', color: '#fce4ec', description: 'Accounting, Investment Banking, Analysis' },
+    { title: 'Design', count: '2 examples', slug: 'design', color: '#e0f2f1', description: 'UI/UX, Graphic Design, Product Design' },
+    { title: 'Administrative', count: '2 examples', slug: 'administrative', color: '#fff3e0', description: 'Executive Assistant, Office Management' }
   ];
 
   // Tips data
   const tips = [
     { 
-      icon: '✏️', 
+      icon: 'pencil', 
       title: 'Customize Content',
       tip: 'Adapt the examples to match your unique experience and achievements. Do not copy-paste directly.' 
     },
     { 
-      icon: '🎯', 
+      icon: 'target', 
       title: 'Focus on Achievements',
       tip: 'Notice how each example highlights quantifiable results and specific accomplishments, not just duties.' 
     },
     { 
-      icon: '📊', 
+      icon: 'chart', 
       title: 'Use Metrics',
       tip: 'Include numbers, percentages, and data to demonstrate your impact, just like in these examples.' 
     },
     { 
-      icon: '🔍', 
+      icon: 'search', 
       title: 'Industry Keywords',
       tip: 'Pay attention to industry-specific keywords and incorporate them into your own resume.' 
     }
@@ -82,14 +107,14 @@ export default function ExamplesPage() {
 
   // Industry quick links
   const industries = [
-    { name: 'Software Engineering', slug: 'software-engineering', icon: '💻' },
-    { name: 'Marketing', slug: 'marketing', icon: '📱' },
-    { name: 'Sales', slug: 'sales', icon: '🤝' },
-    { name: 'Healthcare', slug: 'healthcare', icon: '🏥' },
-    { name: 'Education', slug: 'education', icon: '📚' },
-    { name: 'Finance', slug: 'finance', icon: '💰' },
-    { name: 'Design', slug: 'design', icon: '🎨' },
-    { name: 'Administrative', slug: 'administrative', icon: '📋' }
+    { name: 'Software Engineering', slug: 'software-engineering' },
+    { name: 'Marketing', slug: 'marketing' },
+    { name: 'Sales', slug: 'sales' },
+    { name: 'Healthcare', slug: 'healthcare' },
+    { name: 'Education', slug: 'education' },
+    { name: 'Finance', slug: 'finance' },
+    { name: 'Design', slug: 'design' },
+    { name: 'Administrative', slug: 'administrative' }
   ];
 
   return (
@@ -201,7 +226,7 @@ export default function ExamplesPage() {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                {category.icon}
+                {getCategoryIcon(category.slug, "36px")}
               </div>
               <h3 style={{ 
                 margin: '0 0 8px 0', 
@@ -261,7 +286,7 @@ export default function ExamplesPage() {
             gap: '10px',
             color: '#1a1a1a'
           }}>
-            <span style={{ fontSize: '32px' }}>💡</span>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle', color: '#eab308' }}><path d="M9 18h6M10 22h4M15.09 14c.18-.33.3-.68.37-1.04.18-1 .07-2-.32-2.93-.38-.93-1.07-1.69-1.92-2.16C12.38 7.4 11.22 7.37 10.36 7.8c-.85.43-1.48 1.15-1.78 2.04-.3.88-.32 1.83-.06 2.73.1.36.26.7.47 1.02.5.75.56 1.7.17 2.51H14.9c-.38-.8-.32-1.75.19-2.5z"></path></svg>
             Tips for Using These Examples
           </h2>
           <div style={{
@@ -302,7 +327,7 @@ export default function ExamplesPage() {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  {item.icon}
+                  {getTipIcon(item.icon, "28px")}
                 </div>
                 <div style={{ flex: 1 }}>
                   <h3 style={{ 
@@ -343,7 +368,7 @@ export default function ExamplesPage() {
             alignItems: 'center',
             gap: '8px'
           }}>
-            <span>🔍</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             Browse by Industry
           </h3>
           <div style={{
@@ -379,7 +404,7 @@ export default function ExamplesPage() {
                   e.currentTarget.style.color = '#333';
                 }}
               >
-                <span>{item.icon}</span>
+                <span>{getCategoryIcon(item.slug, "16px")}</span>
                 {item.name}
               </Link>
             ))}

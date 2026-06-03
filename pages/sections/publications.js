@@ -329,10 +329,10 @@ export default function PublicationsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 12 min read</span>
-            <span>👁️ 28,000+ readers</span>
-            <span>📚 APA 7th Edition Standards</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 24, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 12 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 28,000+ readers</span>
+            <span>undefined APA 7th Edition Standards</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -350,7 +350,7 @@ export default function PublicationsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#apa-format" style={{ color: '#0070f3', textDecoration: 'none' }}>• APA Format (2026)</a>
             <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Type</a>
@@ -370,7 +370,7 @@ export default function PublicationsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 2026 Pro Tip:</strong> In multi-author publications, <strong>bold your name</strong> to make it easy for recruiters to identify your contribution. 
+            <strong><strong>2026 Pro Tip:</strong></strong> In multi-author publications, <strong>bold your name</strong> to make it easy for recruiters to identify your contribution. 
             For first-author papers, highlight your name. For corresponding author papers, add an asterisk with a note. Include DOIs for all publications—this adds credibility and provides easy access.
           </p>
         </div>
@@ -425,7 +425,7 @@ export default function PublicationsSectionGuide() {
             marginBottom: '30px'
           }}>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>📅</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
               <strong>Reverse Chronological Order</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>List most recent publications first. This is the preferred method for academic and research resumes, highlighting current productivity.</p>
             </div>
@@ -435,7 +435,7 @@ export default function PublicationsSectionGuide() {
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Separate into Journal Articles, Conference Papers, Books, Chapters, Preprints for clarity. Best for longer publication lists (10+).</p>
             </div>
             <div style={{ background: '#f8f9fa', padding: '18px', borderRadius: '12px', border: '1px solid #e9ecef' }}>
-              <div style={{ fontSize: '28px', marginBottom: '8px' }}>⭐</div>
+              <div style={{ fontSize: '28px', marginBottom: '8px' }}><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
               <strong>Highlight Your Name</strong>
               <p style={{ fontSize: '14px', color: '#666', marginTop: '8px' }}>Bold or underline your name in multi-author publications. Add asterisk for corresponding author status.</p>
             </div>
@@ -475,17 +475,17 @@ export default function PublicationsSectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Mistakes to Avoid (2026)
+            Common Mistakes to Avoid (2026)
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Using inconsistent citation formats</strong> - Mixing APA, MLA, and Chicago styles within the same section looks unprofessional</li>
-              <li><strong>❌ Including publications where you're not an author</strong> - Only list your own scholarly work</li>
-              <li><strong>❌ Forgetting to update citations</strong> - Changing "under review" to "published" after acceptance is critical</li>
-              <li><strong>❌ Not highlighting your name</strong> - Your name should stand out in multi-author publications</li>
-              <li><strong>❌ Including predatory journals</strong> - List only reputable, peer-reviewed venues to maintain credibility</li>
-              <li><strong>❌ Missing DOIs or incomplete citations</strong> - Always include full citation information for easy verification</li>
-              <li><strong>❌ Overwhelming non-academic resumes</strong> - For industry roles, limit to 3-5 most relevant publications</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Using inconsistent citation formats</strong> - Mixing APA, MLA, and Chicago styles within the same section looks unprofessional</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Including publications where you're not an author</strong> - Only list your own scholarly work</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Forgetting to update citations</strong> - Changing "under review" to "published" after acceptance is critical</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Not highlighting your name</strong> - Your name should stand out in multi-author publications</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Including predatory journals</strong> - List only reputable, peer-reviewed venues to maintain credibility</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Missing DOIs or incomplete citations</strong> - Always include full citation information for easy verification</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Overwhelming non-academic resumes</strong> - For industry roles, limit to 3-5 most relevant publications</li>
             </ul>
           </div>
         </section>
@@ -493,7 +493,7 @@ export default function PublicationsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Publication Formatting
+            ATS-Friendly Publication Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>

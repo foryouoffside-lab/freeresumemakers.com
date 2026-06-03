@@ -6,7 +6,6 @@
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useResume } from '../../context/ResumeContext';
-import Head from 'next/head';
 import LoadingSpinner from '../LoadingSpinner';
 
 const CheckIcon = () => (
@@ -460,23 +459,7 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
 
   return (
     <>
-      <Head>
-        <title>Professional Resume Builder - Personal Information Section | Create Your Perfect Resume</title>
-        <meta name="description" content="Complete your professional profile with our easy-to-use resume builder. Add your name, contact details, LinkedIn profile, and experience to create a standout resume." />
-        <meta name="keywords" content="resume builder, personal information, professional profile, resume template, CV builder, job application, career tools" />
-        <meta property="og:title" content="Professional Resume Builder - Personal Information" />
-        <meta property="og:description" content="Create a professional resume with our easy-to-use builder. Start with your personal information section." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Resume Builder - Personal Information" />
-        <meta name="twitter:description" content="Build your professional resume with our guided form. Start with your personal details." />
-        <link rel="canonical" href="https://freeresumemaker.xyz/resume-builder/personal-info" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
-
+      
       <div 
         ref={contentRef}
         style={{
@@ -493,74 +476,7 @@ const PersonalInfo = ({ data, navigationButtons, onDataChange }) => {
         itemScope
         itemType="https://schema.org/Person"
       >
-        {/* Hero Section */}
-        <div 
-          style={{
-            textAlign: 'center',
-            padding: spacing.heroPadding,
-            marginBottom: spacing.heroMargin,
-            background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
-            borderRadius: '12px',
-            border: '1px solid #e9ecef',
-            width: '100%',
-            boxSizing: 'border-box',
-            position: 'relative'
-          }}
-        >
-          <h1 
-            style={{
-              fontSize: isMobile ? '20px' : isTablet ? '22px' : '24px',
-              marginBottom: isMobile ? '6px' : '12px',
-              color: '#1a1a1a',
-              fontWeight: 700,
-              lineHeight: '1.3'
-            }}
-          >
-            Personal <span style={{
-              color: '#0070f3',
-              background: 'linear-gradient(135deg, #0070f3, #0060d6)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Information</span>
-          </h1>
-          <p 
-            style={{
-              fontSize: isMobile ? '13px' : isTablet ? '14px' : '15px',
-              color: '#666',
-              margin: '0 auto 12px',
-              lineHeight: '1.4',
-              padding: '0 4px',
-              maxWidth: '600px'
-            }}
-          >
-            {isMobile ? 'Complete your contact details' : 'Complete your contact details to make it easy for employers to reach you'}
-          </p>
-
-          {/* Auto-save Status Indicator */}
-          {saveStatusConfig.text && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '12px',
-                right: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '6px 12px',
-                background: 'white',
-                borderRadius: '20px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                fontSize: '12px',
-                fontWeight: 500,
-                color: saveStatusConfig.color,
-                border: `1px solid ${saveStatusConfig.color}20`
-              }}
-            >
-              <span>{saveStatusConfig.icon}</span>
-              <span>{saveStatusConfig.text}</span>
-            </div>
-          )}
-        </div>
+        
 
         {/* Stats Bar */}
         <div 

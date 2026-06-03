@@ -5,7 +5,6 @@
 
 import React, { useEffect, useCallback, useState, useRef } from 'react';
 import { useResume } from '../../context/ResumeContext';
-import Head from 'next/head';
 import LoadingSpinner from '../LoadingSpinner';
 
 // Import all section components
@@ -540,13 +539,7 @@ const GuidedForm = ({
 
   return (
     <>
-      <Head>
-        <title>{getSectionDisplayName(currentSection)} - Resume Builder | Create Professional Resume</title>
-        <meta name="description" content={getSectionDescription(currentSection)} />
-        <meta name="keywords" content={`resume builder, ${currentSection}, create resume, professional resume`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      </Head>
-
+      
       <div style={{
         width: '100%',
         maxWidth: '1200px',

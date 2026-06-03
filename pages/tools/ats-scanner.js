@@ -342,7 +342,7 @@ export default function ATSScanner() {
               )}
               {results.score >= 60 && results.score < 80 && (
                 <p style={{ marginTop: '12px', color: '#ffc107', fontWeight: 'bold' }}>
-                  ⚠️ Good start! A few optimizations can significantly improve your ATS score.
+                  <svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#f59e0b' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Good start! A few optimizations can significantly improve your ATS score.
                 </p>
               )}
               {results.score < 60 && (
@@ -400,7 +400,7 @@ export default function ATSScanner() {
             {/* Suggestions */}
             <div>
               <h3 style={{ fontSize: '20px', marginBottom: '16px', color: '#333' }}>
-                💡 Optimization Suggestions
+                <svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6M10 22h4M15.09 14c.18-.33.3-.68.37-1.04.18-1 .07-2-.32-2.93-.38-.93-1.07-1.69-1.92-2.16C12.38 7.4 11.22 7.37 10.36 7.8c-.85.43-1.48 1.15-1.78 2.04-.3.88-.32 1.83-.06 2.73.1.36.26.7.47 1.02.5.75.56 1.7.17 2.51H14.9c-.38-.8-.32-1.75.19-2.5z"></path></svg> Optimization Suggestions
               </h3>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {results.suggestions.map((tip, i) => (

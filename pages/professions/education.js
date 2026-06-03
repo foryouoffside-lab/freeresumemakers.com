@@ -316,7 +316,7 @@ export default function EducationExamples() {
           maxWidth: '1000px',
           margin: '0 auto',
           padding: '40px 20px',
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          fontFamily: 'var(--font-family-sans)'
         }}>
           {/* Breadcrumb Navigation */}
           <nav style={{
@@ -325,15 +325,15 @@ export default function EducationExamples() {
             gap: '8px',
             marginBottom: '20px',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
-            <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+            <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
             <span>›</span>
-            <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+            <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
             <span>›</span>
-            <Link href="/professions/education" style={{ color: '#666', textDecoration: 'none' }}>Education Resumes</Link>
+            <Link href="/professions/education" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Education Resumes</Link>
             <span>›</span>
-            <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
+            <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{selectedExample.title}</span>
           </nav>
 
           {/* Back button */}
@@ -343,7 +343,7 @@ export default function EducationExamples() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              color: '#666',
+              color: 'var(--text-secondary-light)',
               textDecoration: 'none',
               marginBottom: '30px',
               padding: '8px 16px',
@@ -380,10 +380,10 @@ export default function EducationExamples() {
             gap: '16px'
           }}>
             <div>
-              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.title}: Complete Sample with {selectedExample.experience} Experience
               </h1>
-              <p style={{ color: '#666', margin: 0, fontSize: '14px' }}>
+              <p style={{ color: 'var(--text-secondary-light)', margin: 0, fontSize: '14px' }}>
                 Professional resume template for {selectedExample.specialization === 'teaching' ? 'K-12 educators' : 'higher education faculty'} | Updated for 2026 hiring season
               </p>
             </div>
@@ -393,7 +393,7 @@ export default function EducationExamples() {
             }}>
               <span style={{
                 background: '#e3f2fd',
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 padding: '4px 12px',
                 borderRadius: '20px',
                 fontSize: '12px',
@@ -416,22 +416,22 @@ export default function EducationExamples() {
           }}>
             {/* Header */}
             <div style={{ marginBottom: '30px' }}>
-              <h1 style={{ fontSize: '32px', marginBottom: '4px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '4px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.template.name}
               </h1>
               {selectedExample.template.credentials && (
-                <p style={{ fontSize: '16px', color: '#0070f3', marginBottom: '8px', fontWeight: 500 }}>
+                <p style={{ fontSize: '16px', color: 'var(--primary)', fontFamily: 'var(--font-family-display)', marginBottom: '8px', fontWeight: 500 }}>
                   {selectedExample.template.credentials}
                 </p>
               )}
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 <span>{selectedExample.template.email}</span>
                 <span>|</span>
                 <span>{selectedExample.template.phone}</span>
                 <span>|</span>
                 <span>{selectedExample.template.linkedin}</span>
               </div>
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '10px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '10px' }}>
                 {selectedExample.template.location}
               </div>
               {selectedExample.template.certification && (
@@ -441,7 +441,7 @@ export default function EducationExamples() {
                   borderRadius: '6px',
                   marginBottom: '15px',
                   fontSize: '14px',
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   fontWeight: 500,
                   border: '1px solid #bbdefb'
                 }}>
@@ -467,7 +467,7 @@ export default function EducationExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -478,27 +478,27 @@ export default function EducationExamples() {
                   <p style={{ fontWeight: 'bold', marginBottom: '4px' }}>
                     {edu.degree}
                   </p>
-                  <p style={{ color: '#666', marginBottom: '2px' }}>
+                  <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px' }}>
                     {edu.institution} | {edu.year}
                   </p>
                   {edu.thesis && (
-                    <p style={{ color: '#666', marginBottom: '2px', fontStyle: 'italic' }}>
+                    <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px', fontStyle: 'italic' }}>
                       Thesis: {edu.thesis}
                       {edu.guide && ` (Guide: ${edu.guide})`}
                     </p>
                   )}
                   {edu.specialization && (
-                    <p style={{ color: '#666', marginBottom: '2px' }}>
+                    <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px' }}>
                       Specialization: {edu.specialization}
                     </p>
                   )}
                   {edu.percentage && (
-                    <p style={{ color: '#666', marginBottom: '2px' }}>
+                    <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px' }}>
                       Percentage: {edu.percentage}
                     </p>
                   )}
                   {edu.rank && (
-                    <p style={{ color: '#666' }}>
+                    <p style={{ color: 'var(--text-secondary-light)' }}>
                       <strong>Achievement:</strong> {edu.rank}
                     </p>
                   )}
@@ -511,7 +511,7 @@ export default function EducationExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -519,7 +519,7 @@ export default function EducationExamples() {
               </h2>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {selectedExample.template.certifications.map((cert, index) => (
-                  <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{cert}</li>
+                  <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{cert}</li>
                 ))}
               </ul>
             </div>
@@ -529,7 +529,7 @@ export default function EducationExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -565,7 +565,7 @@ export default function EducationExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -577,11 +577,11 @@ export default function EducationExamples() {
                     <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '2px' }}>
                       {exp.title} | {exp.school || exp.university}
                     </p>
-                    <p style={{ color: '#666', fontSize: '14px' }}>{exp.period}</p>
+                    <p style={{ color: 'var(--text-secondary-light)', fontSize: '14px' }}>{exp.period}</p>
                   </div>
                   <ul style={{ margin: 0, paddingLeft: '20px' }}>
                     {exp.points.map((point, i) => (
-                      <li key={i} style={{ marginBottom: '4px', color: '#666' }}>{point}</li>
+                      <li key={i} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{point}</li>
                     ))}
                   </ul>
                 </div>
@@ -594,7 +594,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -602,10 +602,10 @@ export default function EducationExamples() {
                 </h2>
                 {selectedExample.template.publications.map((pub, index) => (
                   <div key={index} style={{ marginBottom: '12px' }}>
-                    <p style={{ margin: 0, color: '#666' }}>
+                    <p style={{ margin: 0, color: 'var(--text-secondary-light)' }}>
                       <strong>"{pub.title}"</strong>
                     </p>
-                    <p style={{ margin: 0, color: '#666', fontSize: '13px' }}>
+                    <p style={{ margin: 0, color: 'var(--text-secondary-light)', fontSize: '13px' }}>
                       {pub.journal || pub.publisher}, {pub.year}
                       {pub.authors && ` | Authors: ${pub.authors}`}
                       {pub.citations && ` | Citations: ${pub.citations}`}
@@ -622,7 +622,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -630,7 +630,7 @@ export default function EducationExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.conferences.map((conf, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{conf}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{conf}</li>
                   ))}
                 </ul>
               </div>
@@ -642,7 +642,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -650,7 +650,7 @@ export default function EducationExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.grants.map((grant, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{grant}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{grant}</li>
                   ))}
                 </ul>
               </div>
@@ -662,7 +662,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -670,7 +670,7 @@ export default function EducationExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.subjects.map((subject, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{subject}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{subject}</li>
                   ))}
                 </ul>
               </div>
@@ -682,7 +682,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -690,7 +690,7 @@ export default function EducationExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.extracurricular.map((item, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{item}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -702,7 +702,7 @@ export default function EducationExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -710,7 +710,7 @@ export default function EducationExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.achievements.map((achievement, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{achievement}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{achievement}</li>
                   ))}
                 </ul>
               </div>
@@ -726,11 +726,11 @@ export default function EducationExamples() {
             textAlign: 'center',
             border: '1px solid #e9ecef',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
             <p style={{ margin: 0 }}>
               This is a sample education resume for reference purposes. Use our{' '}
-              <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/editor" className="premium-btn-primary" style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)', textDecoration: 'none' }}>
                 free resume builder
               </Link>{' '}
               to create your own customized teaching or academic resume with 20+ ATS-friendly templates designed for education professionals.
@@ -768,7 +768,7 @@ export default function EducationExamples() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{
@@ -777,13 +777,13 @@ export default function EducationExamples() {
           gap: '8px',
           marginBottom: '30px',
           fontSize: '14px',
-          color: '#666'
+          color: 'var(--text-secondary-light)'
         }}>
-          <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+          <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+          <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
           <span>›</span>
-          <span style={{ color: '#0070f3' }}>Education Resumes</span>
+          <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>Education Resumes</span>
         </nav>
 
         {/* Development Notice */}
@@ -804,9 +804,9 @@ export default function EducationExamples() {
         {/* Header */}
         <div style={{ marginBottom: '40px', textAlign: 'center' }}>
           <h1 style={{
-            fontSize: '42px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '16px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             fontWeight: 700,
             lineHeight: '1.2'
           }}>
@@ -814,7 +814,7 @@ export default function EducationExamples() {
           </h1>
           <p style={{
             fontSize: '18px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: '1.6'
@@ -834,34 +834,25 @@ export default function EducationExamples() {
         </div>
 
         {/* Stats Bar */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
-          marginBottom: '40px',
-          padding: '20px',
-          background: '#f8fafc',
-          borderRadius: '12px',
-          flexWrap: 'wrap'
-        }}>
+        <div className="premium-card" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '24px', marginBottom: '40px', padding: '24px', background: '#f8fafc', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>{resumeExamples.length}+</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{resumeExamples.length}+</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>K-12 • Higher Ed</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Teaching & Research Roles</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>K-12 • Higher Ed</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Teaching & Research Roles</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>CTET • UGC-NET • PhD</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Professional Certifications</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>CTET • UGC-NET • PhD</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Professional Certifications</div>
           </div>
         </div>
 
         {/* Examples Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '24px',
           marginBottom: '50px'
         }}>
@@ -869,12 +860,12 @@ export default function EducationExamples() {
             <div
               key={example.id}
               onClick={() => handleViewExample(example)}
+              className="premium-card"
               style={{
-                background: 'white',
-                borderRadius: '16px',
-                border: '1px solid #e9ecef',
-                padding: '24px',
-                transition: 'all 0.3s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
@@ -894,7 +885,7 @@ export default function EducationExamples() {
                 <h2 style={{
                   fontSize: '20px',
                   marginBottom: '8px',
-                  color: '#1a1a1a',
+                  color: 'var(--text-primary-light)',
                   fontWeight: 600,
                   margin: 0
                 }}>
@@ -908,7 +899,7 @@ export default function EducationExamples() {
                 }}>
                   <span style={{
                     background: '#e6f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -919,7 +910,7 @@ export default function EducationExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px'
@@ -928,7 +919,7 @@ export default function EducationExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -941,7 +932,7 @@ export default function EducationExamples() {
 
               <p style={{
                 fontSize: '14px',
-                color: '#666',
+                color: 'var(--text-secondary-light)',
                 marginBottom: '16px',
                 lineHeight: '1.6'
               }}>
@@ -957,7 +948,7 @@ export default function EducationExamples() {
                 {example.skills.slice(0, 4).map((skill, i) => (
                   <span key={i} style={{
                     background: '#f0f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 12px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -985,7 +976,7 @@ export default function EducationExamples() {
                 paddingTop: '16px'
               }}>
                 <span style={{
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   fontSize: '14px',
                   fontWeight: 600,
                   display: 'flex',
@@ -1009,7 +1000,7 @@ export default function EducationExamples() {
           <h2 style={{
             fontSize: '24px',
             marginBottom: '20px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             textAlign: 'center'
           }}>
             Tips for Creating Effective Education Resumes
@@ -1021,30 +1012,26 @@ export default function EducationExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Student Outcomes</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific metrics: "Improved class scores by 25%", "100% pass rate for 5 consecutive years", "Mentored 15 Olympiad students with 3 achieving national rankings". Numbers make your impact tangible to hiring committees.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Use specific metrics: "Improved class scores by 25%", "100% pass rate for 5 consecutive years", "Mentored 15 Olympiad students with 3 achieving national rankings". Numbers make your impact tangible to hiring committees.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Professional Certifications</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Include teaching credentials like CTET, TET, state teaching licenses, and professional development certifications such as Google Certified Educator or Cambridge Teaching Certificate.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Include teaching credentials like CTET, TET, state teaching licenses, and professional development certifications such as Google Certified Educator or Cambridge Teaching Certificate.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Highlight Research & Publications</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>For academic roles, list peer-reviewed publications with citation counts, conference presentations, research grants received, and PhD/master's supervision experience.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>For academic roles, list peer-reviewed publications with citation counts, conference presentations, research grants received, and PhD/master's supervision experience.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Include Extracurricular Leadership</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Schools value well-rounded educators. Include coaching roles, club sponsorships, committee memberships, and community involvement to demonstrate initiative beyond classroom teaching.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Schools value well-rounded educators. Include coaching roles, club sponsorships, committee memberships, and community involvement to demonstrate initiative beyond classroom teaching.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
-          padding: '40px',
-          textAlign: 'center',
-          color: 'white'
+          background: 'var(--primary-gradient)', borderRadius: '24px', padding: '48px 32px', textAlign: 'center', color: 'white', boxShadow: '0 10px 25px -5px rgba(0, 112, 243, 0.15)'
         }}>
           <h2 style={{
             fontSize: '28px',
@@ -1061,13 +1048,11 @@ export default function EducationExamples() {
           }}>
             Use our free resume builder with 20+ ATS-friendly templates designed specifically for teachers, professors, and education professionals. Get hired faster with a resume that showcases your teaching excellence.
           </p>
-          <Link 
-            href="/editor"
-            style={{
+          <Link href="/editor" className="premium-btn-primary" style={{
               display: 'inline-block',
               padding: '12px 32px',
               background: 'white',
-              color: '#0070f3',
+              color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
               textDecoration: 'none',
               borderRadius: '8px',
               fontWeight: '600',

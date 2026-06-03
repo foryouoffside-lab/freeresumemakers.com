@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/templates/Template4.js 
 // COMPLETE NEXT.JS COMPATIBLE VERSION WITH LOADING SPINNER
 // WITH INLINE STYLES (CSS CONVERTED TO INLINE)
@@ -1941,9 +1941,7 @@ const Template4 = ({
   const displayName = useMemo(() => {
     return getSafeText(contextPersonalInfo?.fullName) || 'Your Name';
   }, [contextPersonalInfo, getSafeText]);
-
-  const isMobile = windowWidth < 768;
-
+  const isMobile = false;
   // Hover handlers
   const setHoverSkill = useCallback((index) => setHoverStates(prev => ({ ...prev, skill: index })), []);
   const setHoverExperience = useCallback((index) => setHoverStates(prev => ({ ...prev, experience: index })), []);

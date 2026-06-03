@@ -1,33 +1,53 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: {},
   
-  // ✅ Updated images configuration
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'yourdomain.com',
+        hostname: 'freeresumemaker.xyz',
       },
       {
         protocol: 'https', 
         hostname: '**.amazonaws.com', 
       },
     ],
-    // Remove unoptimized: true or set to false
-    unoptimized: false,
-    // Add domains for local development
-    domains: ['localhost'],
   },
 
-  // ✅ Add this to fix the lockfile warning
-  outputFileTracingRoot: __dirname,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 
-  // ✅ Optional: Add transpilePackages if needed
-  transpilePackages: [],
+  experimental: {
+    scrollRestoration: true,
+  },
 
-  // ✅ Add webpack configuration to fix MIME type issues
-webpack: (config: any, { isServer }: { isServer: boolean }) => {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ];
+  },
+
+  webpack: (config, { isServer }) => {
     // Fix for MIME type issues on Windows
     if (!isServer) {
       config.output.filename = 'static/chunks/[name].js';
@@ -35,6 +55,6 @@ webpack: (config: any, { isServer }: { isServer: boolean }) => {
     }
     return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

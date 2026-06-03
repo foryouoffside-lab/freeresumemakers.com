@@ -290,10 +290,10 @@ export default function SummarySectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 9 min read</span>
-            <span>👁️ 45,000+ readers</span>
-            <span>⭐ 10+ Industry Examples</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 24, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 9 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 45,000+ readers</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 10+ Industry Examples</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -311,7 +311,7 @@ export default function SummarySectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#summary-vs-objective" style={{ color: '#0070f3', textDecoration: 'none' }}>• Summary vs Objective</a>
             <a href="#formula" style={{ color: '#0070f3', textDecoration: 'none' }}>• The Winning Formula</a>
@@ -331,7 +331,7 @@ export default function SummarySectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 2026 Pro Tip:</strong> Place your summary at the top of your resume, right under your contact information. 
+            <strong><strong>2026 Pro Tip:</strong></strong> Place your summary at the top of your resume, right under your contact information. 
             It's the first thing recruiters see—make it compelling. Use keywords from the job description to improve ATS match rate. 
             For senior roles, consider using a "Professional Profile" heading instead of "Summary."
           </p>
@@ -425,7 +425,7 @@ export default function SummarySectionGuide() {
               </p>
             </div>
             <div style={{ background: '#e3f2fd', padding: '20px', borderRadius: '12px', border: '1px solid #bbdef5' }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#0070f3' }}>💼 Experienced Professional</h3>
+              <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#0070f3' }}>Experienced Professional</h3>
               <p style={{ margin: 0, fontStyle: 'italic', lineHeight: '1.6' }}>
                 "Senior Software Engineer with 8+ years of experience building scalable applications used by 5M+ users. 
                 Led team of 12 engineers, reduced server costs by 35%, and delivered 15+ successful product launches. 
@@ -441,18 +441,18 @@ export default function SummarySectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Resume Summary Mistakes to Avoid
+            Common Resume Summary Mistakes to Avoid
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Too vague:</strong> "Hardworking professional seeking opportunities" — adds no value</li>
-              <li><strong>❌ Too long:</strong> Keep it to 3-4 lines maximum; recruiters won't read paragraphs</li>
-              <li><strong>❌ Generic and not tailored:</strong> Same summary for every job application misses opportunities</li>
-              <li><strong>❌ Missing keywords:</strong> Not including terms from job description reduces ATS match rate</li>
-              <li><strong>❌ Using first person:</strong> Remove "I," "my," and "me" from your summary</li>
-              <li><strong>❌ Listing responsibilities:</strong> Focus on achievements and results instead of duties</li>
-              <li><strong>❌ No numbers or metrics:</strong> "Increased sales" vs "Increased sales by 45% ($2.3M)" — always quantify</li>
-              <li><strong>❌ Using clichés:</strong> Avoid "go-getter," "team player," "think outside the box" without evidence</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Too vague:</strong> "Hardworking professional seeking opportunities" — adds no value</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Too long:</strong> Keep it to 3-4 lines maximum; recruiters won't read paragraphs</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Generic and not tailored:</strong> Same summary for every job application misses opportunities</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Missing keywords:</strong> Not including terms from job description reduces ATS match rate</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Using first person:</strong> Remove "I," "my," and "me" from your summary</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Listing responsibilities:</strong> Focus on achievements and results instead of duties</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> No numbers or metrics:</strong> "Increased sales" vs "Increased sales by 45% ($2.3M)" — always quantify</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Using clichés:</strong> Avoid "go-getter," "team player," "think outside the box" without evidence</li>
             </ul>
           </div>
         </section>
@@ -460,7 +460,7 @@ export default function SummarySectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats-tips">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Summary Optimization
+            ATS-Friendly Summary Optimization
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>

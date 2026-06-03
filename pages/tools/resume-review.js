@@ -209,7 +209,7 @@ export default function ResumeReview() {
 
         {/* Header */}
         <header style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>⭐</div>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
           <h1 style={{
             fontSize: '48px',
             marginBottom: '16px',
@@ -239,7 +239,7 @@ export default function ResumeReview() {
           borderLeft: '4px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a', lineHeight: 1.6 }}>
-            <strong>💡 Pro Tip:</strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
+            <strong><strong>Pro Tip:</strong></strong> A professionally reviewed resume can <strong>increase your interview chances by up to 40%</strong>. 
             Our AI tool gives you instant, detailed feedback to help you stand out from other candidates.
           </p>
         </div>
@@ -477,7 +477,7 @@ export default function ResumeReview() {
           <h3 style={{ fontSize: '22px', marginBottom: '20px' }}>More Free Resume Optimization Tools</h3>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/tools/ats-scanner" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🤖 ATS Scanner →</Link>
-            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>🔑 Keywords Finder →</Link>
+            <Link href="/tools/keywords-finder" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>Keywords Finder →</Link>
             <Link href="/tools/resume-checker" style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}>✓ Resume Checker →</Link>
           </div>
         </div>

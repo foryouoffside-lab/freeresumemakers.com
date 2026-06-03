@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/templates/Template3.js
 // UPDATED - Summary higher, Projects enabled (1 item above certifications)
 // FIXED - Achievement points now displaying properly
@@ -1055,7 +1055,7 @@ const Template3 = ({
   // RENDER CONTACT ITEM - With LinkedIn icon in blue (matching Template1)
   const renderContactItem = (contact, index) => {
     const isHovered = hoveredContact === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const baseStyles = {
       item: {
@@ -1206,7 +1206,7 @@ const Template3 = ({
     const hasBulletPoints = exp.hasBulletPoints && exp.bulletPoints && exp.bulletPoints.length > 0;
     const experienceType = EXPERIENCE_TYPES[exp.type] || EXPERIENCE_TYPES.job;
     const isHovered = hoveredExperience === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const baseStyles = {
       container: {
@@ -1443,7 +1443,7 @@ const Template3 = ({
   const renderEducationItem = useMemo(() => (edu, index) => {
     const hasBulletPoints = edu.hasBulletPoints;
     const isHovered = hoveredEducation === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const baseStyles = {
       container: {
@@ -1706,7 +1706,7 @@ const Template3 = ({
   // RENDER CERTIFICATION ITEM - Date now has no borders, white color
   const renderCertificationItem = useMemo(() => (cert, index) => {
     const isHovered = hoveredCertification === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const baseStyles = {
       container: {
@@ -1766,7 +1766,7 @@ const Template3 = ({
   // RENDER AWARD ITEM - Date now has no borders, white color
   const renderAwardItem = useMemo(() => (award, index) => {
     const isHovered = hoveredAward === index;
-    const isMobile = windowWidth < 768;
+    const isMobile = false;
     
     const baseStyles = {
       container: {
@@ -1968,7 +1968,7 @@ const Template3 = ({
     return null;
   });
 
-  const isMobile = windowWidth < 768;
+  const isMobile = false;
 
   // Main render
   return (

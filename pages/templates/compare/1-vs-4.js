@@ -249,11 +249,11 @@ export default function CompareTemplate1vs4() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
+              {tab === 'industry' && 'Industry Fit'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -525,26 +525,26 @@ export default function CompareTemplate1vs4() {
                     { feature: 'Experience Display', t1: 'Standard cards', t2: 'Timeline markers with visual connectors' },
                     { feature: 'Maximum Experience Entries', t1: '2', t2: '4' },
                     { feature: 'Maximum Skills', t1: '9', t2: '20' },
-                    { feature: 'Languages Section', t1: '✓ Yes (4 max)', t2: '✗ No' },
-                    { feature: 'Experience Filtering', t1: '✓ Yes (job, internship, project)', t2: '✗ No' },
-                    { feature: 'Career Progression Visualization', t1: '✗ No', t2: '✓ Yes (timeline markers)' },
+                    { feature: 'Languages Section', t1: ' Yes (4 max)', t2: '✗ No' },
+                    { feature: 'Experience Filtering', t1: ' Yes (job, internship, project)', t2: '✗ No' },
+                    { feature: 'Career Progression Visualization', t1: '✗ No', t2: ' Yes (timeline markers)' },
                     { feature: 'Sidebar Layout', t1: 'Standard sidebar', t2: 'Clean sidebar focus' },
-                    { feature: 'Gradient Header', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'ATS-Optimized', t1: '✓ Yes', t2: '✓ Yes' },
-                    { feature: 'Experience Badges', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Professional Summary Box', t1: '✓ Yes', t2: '✓ Yes' },
+                    { feature: 'Gradient Header', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'ATS-Optimized', t1: ' Yes', t2: ' Yes' },
+                    { feature: 'Experience Badges', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Professional Summary Box', t1: ' Yes', t2: ' Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#0070f3', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#00a86b', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -565,7 +565,7 @@ export default function CompareTemplate1vs4() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginBottom: '15px' }}>
-                  ✓ The Professional - Pros
+                  The Professional - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.pros.map((item, index) => (
@@ -573,7 +573,7 @@ export default function CompareTemplate1vs4() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0070f3', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Professional - Cons
+                  The Professional - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template1.cons.map((item, index) => (
@@ -583,7 +583,7 @@ export default function CompareTemplate1vs4() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#00a86b', marginBottom: '15px' }}>
-                  ✓ The Strategist - Pros
+                   The Strategist - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template4.pros.map((item, index) => (
@@ -591,7 +591,7 @@ export default function CompareTemplate1vs4() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#00a86b', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Strategist - Cons
+                   The Strategist - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template4.cons.map((item, index) => (
@@ -849,7 +849,7 @@ export default function CompareTemplate1vs4() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>💼</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#0f172a' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0070f3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Professional
                 </h3>
@@ -879,7 +879,7 @@ export default function CompareTemplate1vs4() {
                 padding: '30px',
                 border: '1px solid #a3e0c0'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📊</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#0ea5e9' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#00a86b', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Strategist
                 </h3>
@@ -913,7 +913,7 @@ export default function CompareTemplate1vs4() {
               marginBottom: '40px'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: Consider Your Experience Count
+                Expert Tip: Consider Your Experience Count
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 The biggest difference between these templates is capacity. If you have 3-4 key experiences you want to highlight, The Strategist is the better choice. If you have 2 or fewer experiences but need to showcase languages, The Professional is ideal. Choose based on your content, not just aesthetics.
@@ -941,19 +941,19 @@ export default function CompareTemplate1vs4() {
                 <div style={{ fontWeight: 'bold', padding: '10px', background: '#f8f9fa', color: '#00a86b' }}>The Strategist</div>
                 
                 <div>1-2 experiences</div>
-                <div style={{ color: '#0070f3' }}>✓ Perfect</div>
-                <div style={{ color: '#00a86b' }}>✓ Also works</div>
+                <div style={{ color: '#0070f3' }}> Perfect</div>
+                <div style={{ color: '#00a86b' }}> Also works</div>
                 
                 <div>3 experiences</div>
                 <div style={{ color: '#999' }}>✗ Limited space</div>
-                <div style={{ color: '#00a86b' }}>✓✓ Ideal</div>
+                <div style={{ color: '#00a86b' }}> Ideal</div>
                 
                 <div>4 experiences</div>
                 <div style={{ color: '#999' }}>✗ Not enough space</div>
-                <div style={{ color: '#00a86b' }}>✓✓ Perfect</div>
+                <div style={{ color: '#00a86b' }}> Perfect</div>
                 
                 <div>Need languages section</div>
-                <div style={{ color: '#0070f3' }}>✓✓ Yes</div>
+                <div style={{ color: '#0070f3' }}> Yes</div>
                 <div style={{ color: '#999' }}>✗ Not available</div>
               </div>
             </div>

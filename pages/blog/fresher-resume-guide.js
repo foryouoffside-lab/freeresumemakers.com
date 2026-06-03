@@ -204,7 +204,7 @@ export default function FresherResumeGuide() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -225,7 +225,7 @@ export default function FresherResumeGuide() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -302,13 +302,7 @@ export default function FresherResumeGuide() {
         </header>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             In This Guide:
           </h2>
@@ -359,15 +353,11 @@ export default function FresherResumeGuide() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           {/* Section 1 - Education */}
           <section id="education" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '0 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -379,13 +369,7 @@ export default function FresherResumeGuide() {
               showcase your academic preparation.
             </p>
             
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <h3 style={{ fontSize: '20px', marginBottom: '15px', color: '#0070f3' }}>What to Include:</h3>
               <div style={{
                 display: 'grid',
@@ -417,13 +401,7 @@ export default function FresherResumeGuide() {
               </div>
             </div>
 
-            <div style={{
-              background: '#fff3cd',
-              borderRadius: '10px',
-              padding: '15px',
-              margin: '20px 0',
-              border: '1px solid #ffc107'
-            }}>
+            <div className="premium-notice" style={{ margin: '20px 0' }}>
               <p style={{ margin: 0 }}>
                 <strong>Tip:</strong> If your GPA is below average, focus on relevant coursework and projects instead. 
                 Employers care more about your skills than your grades.
@@ -434,7 +412,7 @@ export default function FresherResumeGuide() {
           {/* Section 2 - Internships */}
           <section id="internships" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -486,7 +464,7 @@ export default function FresherResumeGuide() {
           {/* Section 3 - Projects */}
           <section id="projects" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -498,8 +476,7 @@ export default function FresherResumeGuide() {
             </p>
             
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: '20px',
               margin: '20px 0'
             }}>
@@ -539,7 +516,7 @@ export default function FresherResumeGuide() {
           {/* Section 4 - Skills */}
           <section id="skills" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -603,7 +580,7 @@ export default function FresherResumeGuide() {
           {/* Section 5 - Extracurriculars */}
           <section id="extracurriculars" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -644,7 +621,7 @@ export default function FresherResumeGuide() {
           {/* Section 6 - Sample Resume */}
           <section id="sample" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -733,7 +710,7 @@ LANGUAGES
           {/* Section 7 - Tips */}
           <section id="tips" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -765,7 +742,7 @@ LANGUAGES
           {/* Section 8 - Templates */}
           <section id="templates" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -876,14 +853,9 @@ LANGUAGES
 
           {/* Download Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
+            background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Fresher Resume Template (2026)</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable fresher resume template with pre-filled sections and formatting tips. Updated for 2026 hiring trends.
@@ -916,17 +888,7 @@ LANGUAGES
         </article>
 
         {/* Author Bio */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          display: 'flex',
-          gap: '25px',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', background: '#f8fafc', display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <div style={{
             width: '80px',
             height: '80px',
@@ -935,7 +897,7 @@ LANGUAGES
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '32px',
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em',
             color: 'white'
           }}>
             KZ
@@ -951,13 +913,7 @@ LANGUAGES
         </section>
 
         {/* Share Section */}
-        <div style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <div className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -1074,7 +1030,7 @@ LANGUAGES
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Ready to Build Your Fresher Resume?
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

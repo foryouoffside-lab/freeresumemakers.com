@@ -293,9 +293,9 @@ export default function SkillsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 10 min read</span>
-            <span>👁️ 52,000+ readers</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 24, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 10 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 52,000+ readers</span>
             <span>📈 100+ Skill Examples</span>
           </div>
           
@@ -314,7 +314,7 @@ export default function SkillsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#hard-vs-soft" style={{ color: '#0070f3', textDecoration: 'none' }}>• Hard vs Soft Skills</a>
             <a href="#industry-skills" style={{ color: '#0070f3', textDecoration: 'none' }}>• Skills by Industry</a>
@@ -334,7 +334,7 @@ export default function SkillsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 2026 Pro Tip:</strong> Tailor your skills to each job application. Use keywords from the job description—ATS systems rank resumes higher when skills match the posting. 
+            <strong><strong>2026 Pro Tip:</strong></strong> Tailor your skills to each job application. Use keywords from the job description—ATS systems rank resumes higher when skills match the posting. 
             Create a master skills list, then select the most relevant 10-15 for each application.
           </p>
         </div>
@@ -430,7 +430,7 @@ export default function SkillsSectionGuide() {
 
           <div style={{ background: '#e8f5e9', padding: '16px', borderRadius: '12px', marginBottom: '30px' }}>
             <p style={{ margin: 0, fontSize: '14px' }}>
-              <strong>⚠️ Note:</strong> Avoid using visual skill bars (stars, circles, progress bars) in your skills section. 
+              <strong><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#f59e0b' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Note:</strong> Avoid using visual skill bars (stars, circles, progress bars) in your skills section. 
               These don't work with ATS systems and can make your resume harder to parse. Stick to text-based formatting.
             </p>
           </div>
@@ -453,17 +453,17 @@ export default function SkillsSectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ Common Skills Section Mistakes
+            Common Skills Section Mistakes
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
-              <li><strong>❌ Listing too many skills</strong> - Keep to 10-15 relevant skills. More than 20 looks cluttered and unfocused.</li>
-              <li><strong>❌ Including outdated technologies</strong> - Skills like Flash, Windows XP, or deprecated frameworks make you look behind the times.</li>
-              <li><strong>❌ Not categorizing skills</strong> - Mixing hard and soft skills without organization makes it harder for recruiters to scan.</li>
-              <li><strong>❌ Listing soft skills without evidence</strong> - Every soft skill should be backed up with achievements in your experience section.</li>
-              <li><strong>❌ Using generic terms like 'hardworking'</strong> - Be specific about what you excel at (e.g., 'Cross-functional Team Leadership' vs 'Team Player').</li>
-              <li><strong>❌ Missing ATS keywords</strong> - Failing to include keywords from the job description reduces your chances of passing screening.</li>
-              <li><strong>❌ Using visual skill bars</strong> - Stars and progress bars don't work with ATS systems and waste valuable space.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Listing too many skills</strong> - Keep to 10-15 relevant skills. More than 20 looks cluttered and unfocused.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Including outdated technologies</strong> - Skills like Flash, Windows XP, or deprecated frameworks make you look behind the times.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Not categorizing skills</strong> - Mixing hard and soft skills without organization makes it harder for recruiters to scan.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Listing soft skills without evidence</strong> - Every soft skill should be backed up with achievements in your experience section.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Using generic terms like 'hardworking'</strong> - Be specific about what you excel at (e.g., 'Cross-functional Team Leadership' vs 'Team Player').</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Missing ATS keywords</strong> - Failing to include keywords from the job description reduces your chances of passing screening.</li>
+              <li><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Using visual skill bars</strong> - Stars and progress bars don't work with ATS systems and waste valuable space.</li>
             </ul>
           </div>
         </section>
@@ -471,7 +471,7 @@ export default function SkillsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats-tips">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Skills Formatting
+            ATS-Friendly Skills Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>

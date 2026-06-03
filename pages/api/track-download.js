@@ -1,4 +1,4 @@
-﻿import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 
 const COUNTER_FILE = path.join(process.cwd(), 'data', 'download-counts.json');
@@ -283,8 +283,8 @@ export default function handler(req, res) {
       const { adminKey } = req.query;
       
       // Simple admin key check (replace with proper authentication)
-      const ADMIN_KEY = process.env.ADMIN_KEY || 'admin123';
-      if (adminKey !== ADMIN_KEY) {
+      const ADMIN_KEY = process.env.ADMIN_KEY;
+      if (!ADMIN_KEY || adminKey !== ADMIN_KEY) {
         return res.status(403).json({
           success: false,
           error: 'Unauthorized',

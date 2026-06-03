@@ -275,7 +275,7 @@ export default function MarketingExamples() {
           maxWidth: '1000px',
           margin: '0 auto',
           padding: '40px 20px',
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          fontFamily: 'var(--font-family-sans)'
         }}>
           {/* Breadcrumb Navigation */}
           <nav style={{
@@ -284,15 +284,15 @@ export default function MarketingExamples() {
             gap: '8px',
             marginBottom: '20px',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
-            <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+            <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
             <span>›</span>
-            <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+            <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
             <span>›</span>
-            <Link href="/professions/marketing" style={{ color: '#666', textDecoration: 'none' }}>Marketing Resumes</Link>
+            <Link href="/professions/marketing" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Marketing Resumes</Link>
             <span>›</span>
-            <span style={{ color: '#0070f3' }}>{selectedExample.title}</span>
+            <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{selectedExample.title}</span>
           </nav>
 
           {/* Back button */}
@@ -302,7 +302,7 @@ export default function MarketingExamples() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              color: '#666',
+              color: 'var(--text-secondary-light)',
               textDecoration: 'none',
               marginBottom: '30px',
               padding: '8px 16px',
@@ -339,10 +339,10 @@ export default function MarketingExamples() {
             gap: '16px'
           }}>
             <div>
-              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '8px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.title}: Complete Sample with {selectedExample.experience} Experience
               </h1>
-              <p style={{ color: '#666', margin: 0, fontSize: '14px' }}>
+              <p style={{ color: 'var(--text-secondary-light)', margin: 0, fontSize: '14px' }}>
                 Professional marketing resume template for {selectedExample.specialization === 'digital-marketing' ? 'digital marketing management roles' : 'content marketing specialist positions'} | Updated for 2026 hiring season
               </p>
             </div>
@@ -352,7 +352,7 @@ export default function MarketingExamples() {
             }}>
               <span style={{
                 background: '#e3f2fd',
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 padding: '4px 12px',
                 borderRadius: '20px',
                 fontSize: '12px',
@@ -375,22 +375,22 @@ export default function MarketingExamples() {
           }}>
             {/* Header */}
             <div style={{ marginBottom: '30px' }}>
-              <h1 style={{ fontSize: '32px', marginBottom: '4px', color: '#1a1a1a' }}>
+              <h1 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '4px', color: 'var(--text-primary-light)' }}>
                 {selectedExample.template.name}
               </h1>
               {selectedExample.template.credentials && (
-                <p style={{ fontSize: '16px', color: '#0070f3', marginBottom: '8px', fontWeight: 500 }}>
+                <p style={{ fontSize: '16px', color: 'var(--primary)', fontFamily: 'var(--font-family-display)', marginBottom: '8px', fontWeight: 500 }}>
                   {selectedExample.template.credentials}
                 </p>
               )}
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 <span>{selectedExample.template.email}</span>
                 <span>|</span>
                 <span>{selectedExample.template.phone}</span>
                 <span>|</span>
                 <span>{selectedExample.template.linkedin}</span>
               </div>
-              <div style={{ color: '#666', fontSize: '14px', marginBottom: '15px' }}>
+              <div style={{ color: 'var(--text-secondary-light)', fontSize: '14px', marginBottom: '15px' }}>
                 {selectedExample.template.location}
               </div>
               
@@ -412,7 +412,7 @@ export default function MarketingExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -421,8 +421,8 @@ export default function MarketingExamples() {
               {selectedExample.template.education.map((edu, index) => (
                 <div key={index} style={{ marginBottom: '12px' }}>
                   <p style={{ fontWeight: 'bold', marginBottom: '2px' }}>{edu.degree}</p>
-                  <p style={{ color: '#666', marginBottom: '2px' }}>{edu.institution} | {edu.year}</p>
-                  {edu.score && <p style={{ color: '#666' }}>Score: {edu.score}</p>}
+                  <p style={{ color: 'var(--text-secondary-light)', marginBottom: '2px' }}>{edu.institution} | {edu.year}</p>
+                  {edu.score && <p style={{ color: 'var(--text-secondary-light)' }}>Score: {edu.score}</p>}
                 </div>
               ))}
             </div>
@@ -432,7 +432,7 @@ export default function MarketingExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -440,7 +440,7 @@ export default function MarketingExamples() {
               </h2>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {selectedExample.template.certifications.map((cert, index) => (
-                  <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{cert}</li>
+                  <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{cert}</li>
                 ))}
               </ul>
             </div>
@@ -450,7 +450,7 @@ export default function MarketingExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -486,7 +486,7 @@ export default function MarketingExamples() {
               <h2 style={{ 
                 fontSize: '18px', 
                 marginBottom: '12px', 
-                color: '#0070f3',
+                color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                 borderBottom: '2px solid #0070f3',
                 paddingBottom: '5px'
               }}>
@@ -498,11 +498,11 @@ export default function MarketingExamples() {
                     <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '2px' }}>
                       {exp.title} | {exp.company}
                     </p>
-                    <p style={{ color: '#666', fontSize: '14px' }}>{exp.period}</p>
+                    <p style={{ color: 'var(--text-secondary-light)', fontSize: '14px' }}>{exp.period}</p>
                   </div>
                   <ul style={{ margin: 0, paddingLeft: '20px' }}>
                     {exp.points.map((point, i) => (
-                      <li key={i} style={{ marginBottom: '4px', color: '#666' }}>{point}</li>
+                      <li key={i} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{point}</li>
                     ))}
                   </ul>
                 </div>
@@ -515,7 +515,7 @@ export default function MarketingExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -524,10 +524,10 @@ export default function MarketingExamples() {
                 {selectedExample.template.campaigns.map((campaign, index) => (
                   <div key={index} style={{ marginBottom: '15px' }}>
                     <p style={{ fontWeight: 'bold', marginBottom: '4px' }}>{campaign.title}</p>
-                    <p style={{ color: '#666', marginBottom: '4px' }}>{campaign.description}</p>
+                    <p style={{ color: 'var(--text-secondary-light)', marginBottom: '4px' }}>{campaign.description}</p>
                     <ul style={{ margin: 0, paddingLeft: '20px' }}>
                       {campaign.results.map((result, i) => (
-                        <li key={i} style={{ marginBottom: '4px', color: '#666' }}>{result}</li>
+                        <li key={i} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{result}</li>
                       ))}
                     </ul>
                   </div>
@@ -540,7 +540,7 @@ export default function MarketingExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -549,10 +549,10 @@ export default function MarketingExamples() {
                 {selectedExample.template.projects.map((project, index) => (
                   <div key={index} style={{ marginBottom: '15px' }}>
                     <p style={{ fontWeight: 'bold', marginBottom: '4px' }}>{project.title}</p>
-                    <p style={{ color: '#666', marginBottom: '4px' }}>{project.description}</p>
+                    <p style={{ color: 'var(--text-secondary-light)', marginBottom: '4px' }}>{project.description}</p>
                     <ul style={{ margin: 0, paddingLeft: '20px' }}>
                       {project.points.map((point, i) => (
-                        <li key={i} style={{ marginBottom: '4px', color: '#666' }}>{point}</li>
+                        <li key={i} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{point}</li>
                       ))}
                     </ul>
                   </div>
@@ -566,7 +566,7 @@ export default function MarketingExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -574,7 +574,7 @@ export default function MarketingExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.achievements.map((achievement, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{achievement}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{achievement}</li>
                   ))}
                 </ul>
               </div>
@@ -586,7 +586,7 @@ export default function MarketingExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -600,7 +600,7 @@ export default function MarketingExamples() {
                   {selectedExample.template.tools.map((tool, index) => (
                     <span key={index} style={{
                       background: '#f0f7ff',
-                      color: '#0070f3',
+                      color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                       padding: '5px 12px',
                       borderRadius: '20px',
                       fontSize: '12px',
@@ -619,7 +619,7 @@ export default function MarketingExamples() {
                 <h2 style={{ 
                   fontSize: '18px', 
                   marginBottom: '12px', 
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   borderBottom: '2px solid #0070f3',
                   paddingBottom: '5px'
                 }}>
@@ -627,7 +627,7 @@ export default function MarketingExamples() {
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: '20px' }}>
                   {selectedExample.template.languages.map((lang, index) => (
-                    <li key={index} style={{ marginBottom: '4px', color: '#666' }}>{lang}</li>
+                    <li key={index} style={{ marginBottom: '4px', color: 'var(--text-secondary-light)' }}>{lang}</li>
                   ))}
                 </ul>
               </div>
@@ -643,11 +643,11 @@ export default function MarketingExamples() {
             textAlign: 'center',
             border: '1px solid #e9ecef',
             fontSize: '14px',
-            color: '#666'
+            color: 'var(--text-secondary-light)'
           }}>
             <p style={{ margin: 0 }}>
               This is a sample marketing resume for reference purposes. Use our{' '}
-              <Link href="/editor" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/editor" className="premium-btn-primary" style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)', textDecoration: 'none' }}>
                 free resume builder
               </Link>{' '}
               to create your own customized marketing resume with 20+ ATS-friendly templates designed for digital marketing and content marketing professionals.
@@ -685,7 +685,7 @@ export default function MarketingExamples() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <nav style={{
@@ -694,13 +694,13 @@ export default function MarketingExamples() {
           gap: '8px',
           marginBottom: '30px',
           fontSize: '14px',
-          color: '#666'
+          color: 'var(--text-secondary-light)'
         }}>
-          <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+          <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/examples" style={{ color: '#666', textDecoration: 'none' }}>Resume Examples</Link>
+          <Link href="/examples" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Resume Examples</Link>
           <span>›</span>
-          <span style={{ color: '#0070f3' }}>Marketing Resumes</span>
+          <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>Marketing Resumes</span>
         </nav>
 
         {/* Development Notice */}
@@ -721,9 +721,9 @@ export default function MarketingExamples() {
         {/* Header */}
         <div style={{ marginBottom: '40px', textAlign: 'center' }}>
           <h1 style={{
-            fontSize: '42px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '16px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             fontWeight: 700,
             lineHeight: '1.2'
           }}>
@@ -731,7 +731,7 @@ export default function MarketingExamples() {
           </h1>
           <p style={{
             fontSize: '18px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: '1.6'
@@ -751,34 +751,25 @@ export default function MarketingExamples() {
         </div>
 
         {/* Stats Bar */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
-          marginBottom: '40px',
-          padding: '20px',
-          background: '#f8fafc',
-          borderRadius: '12px',
-          flexWrap: 'wrap'
-        }}>
+        <div className="premium-card" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '24px', marginBottom: '40px', padding: '24px', background: '#f8fafc', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>{resumeExamples.length}+</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Sample Resumes</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>{resumeExamples.length}+</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Sample Resumes</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>Digital • Content</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Specializations</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>Digital • Content</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Specializations</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#0070f3' }}>ROAS • SEO • Traffic</div>
-            <div style={{ fontSize: '14px', color: '#666' }}>Quantifiable Metrics</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--primary)', fontFamily: 'var(--font-family-display)' }}>ROAS • SEO • Traffic</div>
+            <div style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Quantifiable Metrics</div>
           </div>
         </div>
 
         {/* Examples Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '24px',
           marginBottom: '50px'
         }}>
@@ -786,12 +777,12 @@ export default function MarketingExamples() {
             <div
               key={example.id}
               onClick={() => handleViewExample(example)}
+              className="premium-card"
               style={{
-                background: 'white',
-                borderRadius: '16px',
-                border: '1px solid #e9ecef',
-                padding: '24px',
-                transition: 'all 0.3s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
@@ -811,7 +802,7 @@ export default function MarketingExamples() {
                 <h2 style={{
                   fontSize: '20px',
                   marginBottom: '8px',
-                  color: '#1a1a1a',
+                  color: 'var(--text-primary-light)',
                   fontWeight: 600,
                   margin: 0
                 }}>
@@ -825,7 +816,7 @@ export default function MarketingExamples() {
                 }}>
                   <span style={{
                     background: '#e6f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -836,7 +827,7 @@ export default function MarketingExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px'
@@ -845,7 +836,7 @@ export default function MarketingExamples() {
                   </span>
                   <span style={{
                     background: '#f0f4f8',
-                    color: '#666',
+                    color: 'var(--text-secondary-light)',
                     padding: '4px 10px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -858,7 +849,7 @@ export default function MarketingExamples() {
 
               <p style={{
                 fontSize: '14px',
-                color: '#666',
+                color: 'var(--text-secondary-light)',
                 marginBottom: '16px',
                 lineHeight: '1.6'
               }}>
@@ -874,7 +865,7 @@ export default function MarketingExamples() {
                 {example.skills.slice(0, 4).map((skill, i) => (
                   <span key={i} style={{
                     background: '#f0f7ff',
-                    color: '#0070f3',
+                    color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                     padding: '4px 12px',
                     borderRadius: '20px',
                     fontSize: '12px',
@@ -902,7 +893,7 @@ export default function MarketingExamples() {
                 paddingTop: '16px'
               }}>
                 <span style={{
-                  color: '#0070f3',
+                  color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
                   fontSize: '14px',
                   fontWeight: 600,
                   display: 'flex',
@@ -926,7 +917,7 @@ export default function MarketingExamples() {
           <h2 style={{
             fontSize: '24px',
             marginBottom: '20px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             textAlign: 'center'
           }}>
             Tips for Creating Effective Marketing Resumes
@@ -938,30 +929,26 @@ export default function MarketingExamples() {
           }}>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Quantify Campaign Results</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Use specific marketing metrics: "Increased organic traffic by 150%", "Achieved 3.5x ROAS on $2M budget", "Grew social followers from 10,000 to 85,000", "Reduced CPA by 35% through optimization".</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Use specific marketing metrics: "Increased organic traffic by 150%", "Achieved 3.5x ROAS on $2M budget", "Grew social followers from 10,000 to 85,000", "Reduced CPA by 35% through optimization".</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Showcase Marketing Technology Stack</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Include platforms like Google Analytics, SEMrush, HubSpot, Salesforce Marketing Cloud, and marketing automation tools. Certifications in these tools add credibility.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Include platforms like Google Analytics, SEMrush, HubSpot, Salesforce Marketing Cloud, and marketing automation tools. Certifications in these tools add credibility.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Highlight Cross-Channel Expertise</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>Demonstrate ability to manage integrated campaigns across SEO, PPC, social media, email, and content marketing. Show how channels work together to achieve business goals.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>Demonstrate ability to manage integrated campaigns across SEO, PPC, social media, email, and content marketing. Show how channels work together to achieve business goals.</p>
             </div>
             <div>
               <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>Include Awards and Industry Recognition</h3>
-              <p style={{ fontSize: '14px', color: '#666' }}>List marketing awards, speaking engagements, published articles, and industry certifications. This establishes credibility and expertise in your field.</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)' }}>List marketing awards, speaking engagements, published articles, and industry certifications. This establishes credibility and expertise in your field.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #0070f3 0%, #0060d6 100%)',
-          borderRadius: '16px',
-          padding: '40px',
-          textAlign: 'center',
-          color: 'white'
+          background: 'var(--primary-gradient)', borderRadius: '24px', padding: '48px 32px', textAlign: 'center', color: 'white', boxShadow: '0 10px 25px -5px rgba(0, 112, 243, 0.15)'
         }}>
           <h2 style={{
             fontSize: '28px',
@@ -978,13 +965,11 @@ export default function MarketingExamples() {
           }}>
             Use our free resume builder with 20+ ATS-friendly templates designed specifically for digital marketing and content marketing professionals. Create a resume that showcases your campaign results and marketing expertise.
           </p>
-          <Link 
-            href="/editor"
-            style={{
+          <Link href="/editor" className="premium-btn-primary" style={{
               display: 'inline-block',
               padding: '12px 32px',
               background: 'white',
-              color: '#0070f3',
+              color: 'var(--primary)', fontFamily: 'var(--font-family-display)',
               textDecoration: 'none',
               borderRadius: '8px',
               fontWeight: '600',

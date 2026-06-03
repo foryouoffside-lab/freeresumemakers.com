@@ -1,5 +1,6 @@
 // pages/editor/[templateId]/preview.js
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import { ResumeProvider, useResume } from '../../../context/ResumeContext';
 import Preview from '../../../components/editor/Preview';
 import Link from 'next/link';
@@ -35,6 +36,19 @@ const getTemplateName = (id) => {
 export default function TemplatePreviewPage() {
   const router = useRouter();
   const { templateId } = router.query;
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setWindowWidth(width);
+      setIsMobile(width < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (!templateId) {
     return (
@@ -60,78 +74,169 @@ export default function TemplatePreviewPage() {
       <div style={{ 
         maxWidth: '1200px', 
         margin: '0 auto', 
-        padding: '20px',
+        padding: isMobile ? '8px' : '20px',
         fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
       }}>
         <div style={{ 
           display: 'flex', 
+          flexDirection: isMobile ? 'column' : 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: '30px',
-          padding: '20px',
+          marginBottom: isMobile ? '20px' : '30px',
+          padding: isMobile ? '16px 12px' : '20px',
           background: 'white',
           borderRadius: '12px',
           boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-          border: '1px solid #e9ecef'
+          border: '1px solid #e9ecef',
+          gap: isMobile ? '16px' : '20px'
         }}>
-          <Link 
-            href={`/editor/${templateId}`}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '10px 20px',
-              background: 'white',
-              color: '#0070f3',
-              textDecoration: 'none',
-              borderRadius: '8px',
-              border: '2px solid #0070f3',
-              fontSize: '15px',
-              fontWeight: '600',
-              transition: 'all 0.2s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = '#0070f3';
-              e.target.style.color = 'white';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = 'white';
-              e.target.style.color = '#0070f3';
-            }}
-          >
-            <span style={{ fontSize: '18px' }}>←</span>
-            <span>Back to Editor</span>
-          </Link>
-          
-          <h1 style={{ 
-            margin: 0, 
-            fontSize: '24px', 
-            color: '#1a1a1a',
-            fontWeight: '700'
-          }}>
-            {templateName} Preview
-          </h1>
-          
-          <Link 
-            href="/templates"
-            style={{
-              padding: '10px 20px',
-              background: '#6c757d',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '8px',
-              fontSize: '15px',
-              fontWeight: '600',
-              transition: 'background 0.2s ease'
-            }}
-            onMouseEnter={(e) => e.target.style.background = '#5a6268'}
-            onMouseLeave={(e) => e.target.style.background = '#6c757d'}
-          >
-            Change Template
-          </Link>
+          {isMobile ? (
+            <>
+              <div style={{ textAlign: 'center', width: '100%' }}>
+                <h1 style={{ 
+                  margin: 0, 
+                  fontSize: '20px', 
+                  color: '#1a1a1a',
+                  fontWeight: '800',
+                  fontFamily: 'Outfit, sans-serif',
+                  lineHeight: '1.2'
+                }}>
+                  {templateName} Preview
+                </h1>
+                <p style={{
+                  fontSize: '12px',
+                  color: '#6c757d',
+                  margin: '6px 0 0 0',
+                  fontWeight: 'normal'
+                }}>
+                  Template {templateId} • Real-time preview • A4 format
+                </p>
+              </div>
+              
+              <div style={{ 
+                display: 'flex', 
+                gap: '10px', 
+                width: '100%',
+                justifyContent: 'stretch'
+              }}>
+                <Link 
+                  href={`/editor/${templateId}`}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    padding: '10px',
+                    background: 'white',
+                    color: '#0070f3',
+                    textDecoration: 'none',
+                    borderRadius: '8px',
+                    border: '2px solid #0070f3',
+                    fontSize: '13px',
+                    fontWeight: '700',
+                    flex: 1,
+                    whiteSpace: 'nowrap',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  <span>← Back</span>
+                </Link>
+                
+                <Link 
+                  href="/templates"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '10px',
+                    background: '#6c757d',
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '8px',
+                    fontSize: '13px',
+                    fontWeight: '700',
+                    flex: 1,
+                    whiteSpace: 'nowrap',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  Change Template
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <Link 
+                href={`/editor/${templateId}`}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '10px 20px',
+                  background: 'white',
+                  color: '#0070f3',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  border: '2px solid #0070f3',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = '#0070f3';
+                  e.target.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'white';
+                  e.target.style.color = '#0070f3';
+                }}
+              >
+                <span style={{ fontSize: '18px' }}>←</span>
+                <span>Back to Editor</span>
+              </Link>
+              
+              <div style={{ textAlign: 'center' }}>
+                <h1 style={{ 
+                  margin: 0, 
+                  fontSize: '24px', 
+                  color: '#1a1a1a',
+                  fontWeight: '700'
+                }}>
+                  {templateName} Preview
+                </h1>
+                <p style={{
+                  fontSize: '13px',
+                  color: '#6c757d',
+                  margin: '4px 0 0 0'
+                }}>
+                  Template {templateId} • Real-time preview • A4 format
+                </p>
+              </div>
+              
+              <Link 
+                href="/templates"
+                style={{
+                  padding: '10px 20px',
+                  background: '#6c757d',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  transition: 'background 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseEnter={(e) => e.target.style.background = '#5a6268'}
+                onMouseLeave={(e) => e.target.style.background = '#6c757d'}
+              >
+                Change Template
+              </Link>
+            </>
+          )}
         </div>
 
-        <Preview templateId={templateId} />
+        <Preview templateId={templateId} hideHeader={true} />
       </div>
     </ResumeProvider>
   );

@@ -278,7 +278,7 @@ export default function ResumeMistakesToAvoid() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -299,7 +299,7 @@ export default function ResumeMistakesToAvoid() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -375,13 +375,7 @@ export default function ResumeMistakesToAvoid() {
         </header>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             15 Mistakes (Click to jump):
           </h2>
@@ -412,11 +406,7 @@ export default function ResumeMistakesToAvoid() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           <p style={{ fontSize: '18px', marginBottom: '30px' }}>
             Avoiding common resume mistakes can help you present your qualifications more effectively. Here are 15 errors to watch for.
           </p>
@@ -565,14 +555,9 @@ export default function ResumeMistakesToAvoid() {
 
           {/* Download Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
+            background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Review Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to review your resume for common mistakes before submitting applications.
@@ -627,17 +612,7 @@ export default function ResumeMistakesToAvoid() {
         </article>
 
         {/* Author Bio */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          display: 'flex',
-          gap: '25px',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', background: '#f8fafc', display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <div style={{
             width: '80px',
             height: '80px',
@@ -646,7 +621,7 @@ export default function ResumeMistakesToAvoid() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '32px',
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em',
             color: 'white'
           }}>
             ER
@@ -661,13 +636,7 @@ export default function ResumeMistakesToAvoid() {
         </section>
 
         {/* Share Section */}
-        <div style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <div className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -779,7 +748,7 @@ export default function ResumeMistakesToAvoid() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Create Your Resume
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

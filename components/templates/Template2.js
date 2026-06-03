@@ -1,4 +1,4 @@
-﻿import Head from 'next/head';
+import Head from 'next/head';
 // ============================================
 // components/templates/Template2.js 
 // ENHANCED: Name optimization like Template1
@@ -624,7 +624,7 @@ const Template2 = ({
     return () => clearTimeout(timer);
   }, []);
 
-  const isMobile = windowWidth < 768;
+  const isMobile = false;
 
   // Process all data
   const processedData = useMemo(() => {

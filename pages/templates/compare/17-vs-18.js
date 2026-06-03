@@ -249,11 +249,11 @@ export default function CompareTemplate17vs18() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
+              {tab === 'industry' && 'Industry Fit'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -300,7 +300,7 @@ export default function CompareTemplate17vs18() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🚀</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#7928ca' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg></div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#9333ea' }}>The Innovator 2.0</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>Card-based design • Tech tags • Project showcase</div>
                   </div>
@@ -378,7 +378,7 @@ export default function CompareTemplate17vs18() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>💻</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#2563eb' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2563eb' }}>The Code</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>Project links • Tech tags • Developer icons</div>
                   </div>
@@ -526,11 +526,11 @@ export default function CompareTemplate17vs18() {
                 <tbody>
                   {[
                     { feature: 'Layout Style', t1: 'Card-based design', t2: 'Developer-optimized with project links' },
-                    { feature: 'Project Showcase', t1: '✓ Cards with descriptions', t2: '✓ Links to live demos/GitHub' },
-                    { feature: 'Tech Tags', t1: '✓ Yes', t2: '✓ Yes, with hover effects' },
-                    { feature: 'Internship Focus', t1: '✓ Highlighted', t2: 'Standard' },
-                    { feature: 'GitHub Integration', t1: '✗ No', t2: '✓ Yes, with repository links' },
-                    { feature: 'Code-Friendly Icons', t1: 'Standard icons', t2: '✓ Developer-specific icons' },
+                    { feature: 'Project Showcase', t1: ' Cards with descriptions', t2: ' Links to live demos/GitHub' },
+                    { feature: 'Tech Tags', t1: ' Yes', t2: ' Yes, with hover effects' },
+                    { feature: 'Internship Focus', t1: ' Highlighted', t2: 'Standard' },
+                    { feature: 'GitHub Integration', t1: '✗ No', t2: ' Yes, with repository links' },
+                    { feature: 'Code-Friendly Icons', t1: 'Standard icons', t2: ' Developer-specific icons' },
                     { feature: 'Skills Matrix', t1: 'Basic tags', t2: 'Advanced with proficiency levels' },
                     { feature: 'Experience Format', t1: 'Card layout', t2: 'Traditional timeline' },
                     { feature: 'Education Section', t1: 'Highlighted for students', t2: 'Standard format' },
@@ -539,14 +539,14 @@ export default function CompareTemplate17vs18() {
                     <tr key={index} style={{ borderBottom: index < 9 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#9333ea', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#2563eb', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -567,7 +567,7 @@ export default function CompareTemplate17vs18() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#9333ea', marginBottom: '15px' }}>
-                  ✓ The Innovator 2.0 - Pros
+                   The Innovator 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template17.pros.map((item, index) => (
@@ -575,7 +575,7 @@ export default function CompareTemplate17vs18() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#9333ea', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Innovator 2.0 - Cons
+                   The Innovator 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template17.cons.map((item, index) => (
@@ -585,7 +585,7 @@ export default function CompareTemplate17vs18() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginBottom: '15px' }}>
-                  ✓ The Code - Pros
+                   The Code - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.pros.map((item, index) => (
@@ -593,7 +593,7 @@ export default function CompareTemplate17vs18() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Code - Cons
+                   The Code - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.cons.map((item, index) => (
@@ -691,9 +691,9 @@ export default function CompareTemplate17vs18() {
                     <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2563eb', marginBottom: '10px' }}>John Smith</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '20px' }}>github.com/johnsmith • linkedin.com/in/johnsmith</div>
                     <div style={{ textAlign: 'left', marginBottom: '20px' }}>
-                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>💻 Projects</div>
+                      <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Projects</div>
                       <div style={{ background: 'white', padding: '12px', borderRadius: '8px', marginBottom: '8px' }}>
-                        <div style={{ fontWeight: 'bold' }}>TaskMaster Pro <span style={{ color: '#2563eb', fontSize: '0.8rem' }}>🔗</span></div>
+                        <div style={{ fontWeight: 'bold' }}>TaskMaster Pro </div>
                         <div style={{ fontSize: '0.8rem' }}>React, Node.js, MongoDB</div>
                       </div>
                     </div>
@@ -887,7 +887,7 @@ export default function CompareTemplate17vs18() {
                 padding: '30px',
                 border: '1px solid #e9d5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎓</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#10b981' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#9333ea', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Innovator 2.0
                 </h3>
@@ -917,7 +917,7 @@ export default function CompareTemplate17vs18() {
                 padding: '30px',
                 border: '1px solid #bfdbfe'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>👨‍💻</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#2563eb' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2563eb', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Code
                 </h3>
@@ -950,7 +950,7 @@ export default function CompareTemplate17vs18() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Expert Tip: Career Progression Strategy
+                Expert Tip: Career Progression Strategy
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Many developers start with The Innovator 2.0 during their job search for internships and entry-level positions, then transition to The Code as they gain experience and build a portfolio. Both templates are free, so you can keep both versions updated for different types of applications!

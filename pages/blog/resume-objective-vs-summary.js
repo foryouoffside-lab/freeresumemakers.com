@@ -134,7 +134,7 @@ export default function ResumeObjectiveVsSummary() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -155,7 +155,7 @@ export default function ResumeObjectiveVsSummary() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -217,13 +217,7 @@ export default function ResumeObjectiveVsSummary() {
         </header>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             In This Guide:
           </h2>
@@ -275,15 +269,11 @@ export default function ResumeObjectiveVsSummary() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           {/* Section 1 - Quick Comparison */}
           <section id="comparison" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '0 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -339,7 +329,7 @@ export default function ResumeObjectiveVsSummary() {
           {/* Section 2 - What is a Resume Objective */}
           <section id="objective" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -471,7 +461,7 @@ export default function ResumeObjectiveVsSummary() {
           {/* Section 5 - What is a Resume Summary */}
           <section id="summary" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -602,7 +592,7 @@ export default function ResumeObjectiveVsSummary() {
           {/* Section 8 - Decision Guide */}
           <section id="decision" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -611,8 +601,7 @@ export default function ResumeObjectiveVsSummary() {
             </h2>
             
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: '20px',
               margin: '20px 0'
             }}>
@@ -649,13 +638,7 @@ export default function ResumeObjectiveVsSummary() {
               </div>
             </div>
 
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <p style={{ margin: 0, fontWeight: 500 }}>
                 <strong>Note:</strong> Some job seekers use a combination approach, especially for career changes. For example: "Marketing professional with 5 years of retail experience transitioning to digital marketing. Completed relevant certifications and managed social media for a small business."
               </p>
@@ -665,7 +648,7 @@ export default function ResumeObjectiveVsSummary() {
           {/* Section 9 - Common Mistakes */}
           <section id="mistakes" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -673,13 +656,7 @@ export default function ResumeObjectiveVsSummary() {
               Common Mistakes to Avoid
             </h2>
             
-            <div style={{
-              background: '#fff3cd',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #ffc107'
-            }}>
+            <div className="premium-notice" style={{ margin: '20px 0' }}>
               <ul style={{ margin: 0 }}>
                 <li><strong>Being too vague:</strong> "Seeking a challenging position" doesn't tell employers much.</li>
                 <li><strong>Focusing only on yourself:</strong> Connect your goals to what you can do for the employer.</li>
@@ -746,14 +723,9 @@ export default function ResumeObjectiveVsSummary() {
 
           {/* Download Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
+            background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Resume Opening Statement Guide</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable guide with examples of effective resume objectives and summaries for different experience levels.
@@ -788,17 +760,7 @@ export default function ResumeObjectiveVsSummary() {
         </article>
 
         {/* Author Bio */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          display: 'flex',
-          gap: '25px',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', background: '#f8fafc', display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <div style={{
             width: '80px',
             height: '80px',
@@ -807,7 +769,7 @@ export default function ResumeObjectiveVsSummary() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '32px',
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em',
             color: 'white'
           }}>
             RB
@@ -822,13 +784,7 @@ export default function ResumeObjectiveVsSummary() {
         </section>
 
         {/* Share Section */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -945,7 +901,7 @@ export default function ResumeObjectiveVsSummary() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Ready to Build Your Resume?
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

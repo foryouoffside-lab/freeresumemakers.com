@@ -262,11 +262,11 @@ export default function CompareATSFriendlyVsCreative() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'comparison' && '⚡ Key Differences'}
-              {tab === 'industry' && '🏢 Industry Guide'}
-              {tab === 'templates' && '🎨 Template Examples'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'comparison' && 'Key Differences'}
+              {tab === 'industry' && 'Industry Guide'}
+              {tab === 'templates' && 'Template Examples'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -310,7 +310,7 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '25px',
                 border: '2px solid #0056b3'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🤖</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#0056b3' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4M8 15h.01M16 15h.01"></path></svg></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0056b3', textAlign: 'center', marginBottom: '15px' }}>
                   ATS-Friendly Templates
                 </h2>
@@ -351,7 +351,7 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '25px',
                 border: '2px solid #8b5cf6'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎨</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#8b5cf6' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><circle cx="7.5" cy="10.5" r="1.5"/><circle cx="11.5" cy="7.5" r="1.5"/><circle cx="16.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="14.5" r="1.5"/></svg></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#8b5cf6', textAlign: 'center', marginBottom: '15px' }}>
                   Creative Templates
                 </h2>
@@ -560,13 +560,13 @@ export default function CompareATSFriendlyVsCreative() {
                   </div>
                   
                   <div style={{ marginBottom: '15px', padding: '10px', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '6px' }}>
-                    <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}>✉</span> john.smith@email.com • 
-                    <span style={{ fontWeight: 'bold', color: '#8b5cf6', marginLeft: '8px' }}>📱</span> (555) 123-4567
+                    <span style={{ fontWeight: 'bold', color: '#8b5cf6' }}><svg style={{ width: '1rem', height: '1rem', display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span> john.smith@email.com • 
+                    <span style={{ fontWeight: 'bold', color: '#8b5cf6', marginLeft: '8px' }}><svg style={{ width: '1rem', height: '1rem', display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></span> (555) 123-4567
                   </div>
                   
                   <div style={{ marginBottom: '15px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-                      <span style={{ fontSize: '1.2rem' }}>💼</span>
+                      <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span>
                       <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>EXPERIENCE</span>
                     </div>
                     <div style={{ paddingLeft: '15px', borderLeft: '2px solid #8b5cf6' }}>
@@ -593,7 +593,7 @@ export default function CompareATSFriendlyVsCreative() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0056b3', marginBottom: '15px' }}>
-                  ✓ ATS-Friendly Pros
+                  ATS-Friendly Pros
                 </h3>
                 <ul style={{ marginBottom: '25px' }}>
                   <li style={{ marginBottom: '8px' }}>Guaranteed ATS compatibility</li>
@@ -603,7 +603,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <li style={{ marginBottom: '8px' }}>Printer-friendly</li>
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0056b3', marginBottom: '15px' }}>
-                  ⚠️ ATS-Friendly Cons
+                  ATS-Friendly Cons
                 </h3>
                 <ul>
                   <li style={{ marginBottom: '8px' }}>May look generic</li>
@@ -614,7 +614,7 @@ export default function CompareATSFriendlyVsCreative() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginBottom: '15px' }}>
-                  ✓ Creative Pros
+                  Creative Pros
                 </h3>
                 <ul style={{ marginBottom: '25px' }}>
                   <li style={{ marginBottom: '8px' }}>Stands out to human readers</li>
@@ -624,7 +624,7 @@ export default function CompareATSFriendlyVsCreative() {
                   <li style={{ marginBottom: '8px' }}>Can showcase design skills</li>
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#8b5cf6', marginBottom: '15px' }}>
-                  ⚠️ Creative Cons
+                  Creative Cons
                 </h3>
                 <ul>
                   <li style={{ marginBottom: '8px' }}>ATS rejection risk</li>
@@ -659,7 +659,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🏢</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="16"></line><line x1="15" y1="22" x2="15" y2="16"></line><line x1="9" y1="16" x2="15" y2="16"></line><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"></path></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Corporate / Business</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -698,7 +698,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>💻</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Technology / Startups</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -737,7 +737,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🎨</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><circle cx="7.5" cy="10.5" r="1.5"/><circle cx="11.5" cy="7.5" r="1.5"/><circle cx="16.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="14.5" r="1.5"/></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Creative / Design</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -766,7 +766,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>⚖️</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M12 3v18M5 10c0 3 2.5 4 5 4M19 10c0 3-2.5 4-5 4M3 10h4M17 10h4"></path></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Government / Legal</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -795,7 +795,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #0056b3'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>🏥</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Healthcare</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -833,7 +833,7 @@ export default function CompareATSFriendlyVsCreative() {
                 borderLeft: '5px solid #8b5cf6'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
-                  <span style={{ fontSize: '2rem' }}>📚</span>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
                   <h3 style={{ fontSize: '1.3rem', margin: 0 }}>Education / Academic</h3>
                 </div>
                 <div style={{ marginBottom: '15px' }}>
@@ -972,7 +972,7 @@ export default function CompareATSFriendlyVsCreative() {
             {/* ATS-Friendly Templates */}
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '1.5rem', color: '#0056b3', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>🤖</span> Top ATS-Friendly Templates
+                <span style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '6px' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4M8 15h.01M16 15h.01"></path></svg></span> Top ATS-Friendly Templates
               </h3>
               <div style={{
                 display: 'grid',
@@ -1052,7 +1052,7 @@ export default function CompareATSFriendlyVsCreative() {
             {/* Creative Templates */}
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '1.5rem', color: '#8b5cf6', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>🎨</span> Top Creative Templates
+                <span style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '6px' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><circle cx="7.5" cy="10.5" r="1.5"/><circle cx="11.5" cy="7.5" r="1.5"/><circle cx="16.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="14.5" r="1.5"/></svg></span> Top Creative Templates
               </h3>
               <div style={{
                 display: 'grid',
@@ -1137,7 +1137,7 @@ export default function CompareATSFriendlyVsCreative() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '15px', color: '#856404', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>💡</span> The Hybrid Approach: Best of Both Worlds
+                <span></span> The Hybrid Approach: Best of Both Worlds
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', marginBottom: '15px' }}>
                 Many job seekers create two versions of their resume:
@@ -1178,16 +1178,16 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '30px',
                 border: '1px solid #cce5ff'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🤖</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#0056b3' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4M8 15h.01M16 15h.01"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0056b3', textAlign: 'center', marginBottom: '15px' }}>
                   Choose ATS-Friendly If...
                 </h3>
                 <ul style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying to large corporations</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're in government, legal, or healthcare</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying through online portals</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You want guaranteed ATS compatibility</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're unsure about the company's ATS</li>
+                  <li style={{ marginBottom: '10px' }}> You're applying to large corporations</li>
+                  <li style={{ marginBottom: '10px' }}> You're in government, legal, or healthcare</li>
+                  <li style={{ marginBottom: '10px' }}> You're applying through online portals</li>
+                  <li style={{ marginBottom: '10px' }}> You want guaranteed ATS compatibility</li>
+                  <li style={{ marginBottom: '10px' }}> You're unsure about the company's ATS</li>
                 </ul>
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
                   <Link href="/templates/1" style={{
@@ -1210,16 +1210,16 @@ export default function CompareATSFriendlyVsCreative() {
                 padding: '30px',
                 border: '1px solid #d8b4fe'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎨</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#8b5cf6' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><circle cx="7.5" cy="10.5" r="1.5"/><circle cx="11.5" cy="7.5" r="1.5"/><circle cx="16.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="14.5" r="1.5"/></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#8b5cf6', textAlign: 'center', marginBottom: '15px' }}>
                   Choose Creative If...
                 </h3>
                 <ul style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                  <li style={{ marginBottom: '10px' }}>✓ You're in design, creative, or tech</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're applying to startups or agencies</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You're emailing your resume directly</li>
-                  <li style={{ marginBottom: '10px' }}>✓ You want to stand out visually</li>
-                  <li style={{ marginBottom: '10px' }}>✓ Your resume IS a design portfolio</li>
+                  <li style={{ marginBottom: '10px' }}> You're in design, creative, or tech</li>
+                  <li style={{ marginBottom: '10px' }}> You're applying to startups or agencies</li>
+                  <li style={{ marginBottom: '10px' }}> You're emailing your resume directly</li>
+                  <li style={{ marginBottom: '10px' }}> You want to stand out visually</li>
+                  <li style={{ marginBottom: '10px' }}> Your resume IS a design portfolio</li>
                 </ul>
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
                   <Link href="/templates/2" style={{
@@ -1285,29 +1285,29 @@ export default function CompareATSFriendlyVsCreative() {
                 gap: '20px'
               }}>
                 <div>
-                  <h4 style={{ color: '#0056b3', marginBottom: '10px' }}>✓ ATS-Friendly Checklist</h4>
+                  <h4 style={{ color: '#0056b3', marginBottom: '10px' }}> ATS-Friendly Checklist</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
-                    <li>☐ Simple, standard layout</li>
-                    <li>☐ Common fonts (Arial, Calibri, Times)</li>
-                    <li>☐ No text boxes or graphics</li>
-                    <li>☐ Standard section headers</li>
-                    <li>☐ Simple bullet points</li>
-                    <li>☐ Save as .docx or PDF</li>
+                    <li>Simple, standard layout</li>
+                    <li>Common fonts (Arial, Calibri, Times)</li>
+                    <li>No text boxes or graphics</li>
+                    <li>Standard section headers</li>
+                    <li>Simple bullet points</li>
+                    <li>Save as .docx or PDF</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 style={{ color: '#8b5cf6', marginBottom: '10px' }}>✓ Creative Checklist</h4>
+                  <h4 style={{ color: '#8b5cf6', marginBottom: '10px' }}> Creative Checklist</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
-                    <li>☐ Company uses modern ATS</li>
-                    <li>☐ Applying directly to hiring manager</li>
-                    <li>☐ Creative industry expected</li>
-                    <li>☐ Tested ATS compatibility</li>
-                    <li>☐ Have plain version as backup</li>
-                    <li>☐ Save as PDF for formatting</li>
+                    <li>Company uses modern ATS</li>
+                    <li>Applying directly to hiring manager</li>
+                    <li>Creative industry expected</li>
+                    <li>Tested ATS compatibility</li>
+                    <li>Have plain version as backup</li>
+                    <li>Save as PDF for formatting</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 style={{ color: '#f59e0b', marginBottom: '10px' }}>⚠️ Red Flags</h4>
+                  <h4 style={{ color: '#f59e0b', marginBottom: '10px' }}> Red Flags</h4>
                   <ul style={{ fontSize: '0.95rem' }}>
                     <li>✗ Tables for layout</li>
                     <li>✗ Text in header/footer</li>

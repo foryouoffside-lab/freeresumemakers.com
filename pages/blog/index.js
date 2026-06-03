@@ -1,4 +1,4 @@
-﻿// pages/blog/index.js
+// pages/blog/index.js
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -164,18 +164,18 @@ export default function BlogPage() {
 
         {/* Header */}
         <header style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h1 style={{
-            fontSize: '48px',
+          <h1 className="gradient-text-primary" style={{
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '3rem',
             marginBottom: '16px',
-            color: '#1a1a1a',
-            fontWeight: 700,
+            fontWeight: 800,
             lineHeight: '1.2'
           }}>
             Resume Writing Blog
           </h1>
           <p style={{
             fontSize: '18px',
-            color: '#666',
+            color: 'var(--text-secondary-light)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: '1.6'
@@ -186,69 +186,63 @@ export default function BlogPage() {
         </header>
 
         {/* Development Notice */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '12px',
-          borderRadius: '8px',
-          marginBottom: '30px',
-          textAlign: 'center',
-          fontSize: '0.95rem',
-          border: '1px solid #ffc107',
-          maxWidth: '800px',
-          margin: '0 auto 40px'
-        }}>
-          <p style={{margin: 0, color: '#856404'}}>
+        <div className="premium-notice">
+          <p style={{margin: 0}}>
             🚧 New articles are being added regularly. Check back soon for more content.
           </p>
         </div>
 
         {/* Featured Post */}
         <section aria-label="Featured Article" style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          borderRadius: '20px',
-          padding: '40px',
+          background: 'linear-gradient(135deg, #090d16 0%, #111827 100%)',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          borderRadius: '24px',
+          padding: '48px 40px',
           marginBottom: '50px',
-          color: 'white'
+          color: 'white',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
         }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 2fr',
-            gap: '40px',
-            alignItems: 'center',
-            flexWrap: 'wrap'
+          <div className="responsive-two-col-grid" style={{
+            alignItems: 'center'
           }}>
             <div style={{
-              fontSize: '120px',
+              fontSize: '80px',
               textAlign: 'center',
-              background: 'rgba(255,255,255,0.1)',
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.1)',
               borderRadius: '20px',
-              padding: '20px'
+              padding: '24px',
+              maxWidth: '200px',
+              margin: '0 auto'
             }}>
               📘
             </div>
             <div>
               <span style={{
-                background: 'rgba(255,255,255,0.2)',
+                background: 'rgba(255,255,255,0.1)',
                 color: 'white',
                 padding: '6px 16px',
                 borderRadius: '30px',
                 fontSize: '14px',
                 marginBottom: '16px',
-                display: 'inline-block'
+                display: 'inline-block',
+                fontWeight: 600
               }}>
                 Featured Article
               </span>
               <h2 style={{
+                fontFamily: 'var(--font-family-display)',
                 fontSize: '36px',
-                margin: '16px 0',
+                margin: '12px 0 16px 0',
                 color: 'white',
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                fontWeight: 800
               }}>
                 The Ultimate Resume Guide 2026
               </h2>
               <p style={{
                 fontSize: '16px',
-                color: 'rgba(255,255,255,0.9)',
+                color: 'var(--text-secondary-dark)',
                 lineHeight: '1.6',
                 marginBottom: '24px'
               }}>
@@ -267,27 +261,29 @@ export default function BlogPage() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '10px',
-                    padding: '12px 24px',
+                    padding: '12px 28px',
                     background: 'white',
-                    color: '#667eea',
+                    color: 'var(--primary)',
                     textDecoration: 'none',
-                    borderRadius: '8px',
+                    borderRadius: '12px',
                     fontWeight: 600,
+                    fontSize: '15px',
+                    boxShadow: '0 4px 14px rgba(255,255,255,0.2)',
                     transition: 'all 0.2s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.05)';
-                    e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 10px 25px rgba(255,255,255,0.35)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                    e.currentTarget.style.boxShadow = 'none';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 14px rgba(255,255,255,0.2)';
                   }}
                 >
                   Read Full Guide
                   <span style={{ fontSize: '20px' }}>→</span>
                 </Link>
-                <span style={{ color: 'rgba(255,255,255,0.8)' }}>12 min read</span>
+                <span style={{ color: 'var(--text-secondary-dark)', fontSize: '14px' }}>12 min read</span>
               </div>
             </div>
           </div>
@@ -296,12 +292,14 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         <section aria-label="Latest Articles">
           <h2 style={{
-            fontSize: '28px',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '32px',
             marginBottom: '30px',
-            color: '#333',
-            borderBottom: '2px solid #0070f3',
+            color: 'var(--text-primary-light)',
+            borderBottom: '4px solid var(--primary)',
             paddingBottom: '10px',
-            display: 'inline-block'
+            display: 'inline-block',
+            fontWeight: 800
           }}>
             Latest Articles
           </h2>
@@ -321,25 +319,11 @@ export default function BlogPage() {
                   color: 'inherit'
                 }}
               >
-                <article style={{
+                <article className="premium-card" style={{
                   background: 'white',
-                  borderRadius: '16px',
-                  border: '1px solid #e9ecef',
-                  padding: '24px',
                   height: '100%',
-                  transition: 'all 0.3s ease',
                   display: 'flex',
                   flexDirection: 'column'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
-                  e.currentTarget.style.borderColor = '#0070f3';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                  e.currentTarget.style.borderColor = '#e9ecef';
                 }}
                 >
                   {/* Title */}

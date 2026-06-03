@@ -253,11 +253,11 @@ export default function CompareTemplate18vs19() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
               {tab === 'industry' && '🏢 Profession Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -568,29 +568,29 @@ export default function CompareTemplate18vs19() {
                 <tbody>
                   {[
                     { feature: 'Primary Focus', t1: 'Software Development', t2: 'Academic Research' },
-                    { feature: 'Project Links', t1: '✓ Yes, clickable URLs', t2: '✗ No' },
-                    { feature: 'Tech Tags', t1: '✓ Yes (programming languages)', t2: '✗ No' },
-                    { feature: 'Publications Section', t1: '✗ No', t2: '✓ Yes, dedicated' },
-                    { feature: 'White-Box Education', t1: '✗ No', t2: '✓ Yes, signature feature' },
-                    { feature: 'Code-Friendly Icons', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Research Showcase', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'Teaching Experience', t1: '✗ No', t2: '✓ Yes' },
-                    { feature: 'GitHub Integration', t1: '✓ Yes', t2: '✗ No' },
-                    { feature: 'Conference Presentations', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Project Links', t1: ' Yes, clickable URLs', t2: '✗ No' },
+                    { feature: 'Tech Tags', t1: ' Yes (programming languages)', t2: '✗ No' },
+                    { feature: 'Publications Section', t1: '✗ No', t2: ' Yes, dedicated' },
+                    { feature: 'White-Box Education', t1: '✗ No', t2: ' Yes, signature feature' },
+                    { feature: 'Code-Friendly Icons', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Research Showcase', t1: '✗ No', t2: ' Yes' },
+                    { feature: 'Teaching Experience', t1: '✗ No', t2: ' Yes' },
+                    { feature: 'GitHub Integration', t1: ' Yes', t2: '✗ No' },
+                    { feature: 'Conference Presentations', t1: '✗ No', t2: ' Yes' },
                     { feature: 'Skills Display', t1: 'Tech tags grid (12 skills)', t2: 'Standard grid (8 skills)' },
-                    { feature: 'Academic References', t1: '✗ No', t2: '✓ Yes' },
+                    { feature: 'Academic References', t1: '✗ No', t2: ' Yes' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#2563eb', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#1e3a8a', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -611,7 +611,7 @@ export default function CompareTemplate18vs19() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginBottom: '15px' }}>
-                  ✅ The Code - Pros
+                   The Code - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.pros.map((item, index) => (
@@ -619,7 +619,7 @@ export default function CompareTemplate18vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#2563eb', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Code - Cons
+                   The Code - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template18.cons.map((item, index) => (
@@ -629,7 +629,7 @@ export default function CompareTemplate18vs19() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#1e3a8a', marginBottom: '15px' }}>
-                  ✅ The Scholar 2.0 - Pros
+                   The Scholar 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.pros.map((item, index) => (
@@ -637,7 +637,7 @@ export default function CompareTemplate18vs19() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#1e3a8a', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Scholar 2.0 - Cons
+                   The Scholar 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.cons.map((item, index) => (
@@ -957,7 +957,7 @@ export default function CompareTemplate18vs19() {
                 padding: '30px',
                 border: '1px solid #93c5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>💻</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#2563eb' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2563eb', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Code
                 </h3>
@@ -987,7 +987,7 @@ export default function CompareTemplate18vs19() {
                 padding: '30px',
                 border: '1px solid #93c5fd'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>🎓</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#10b981' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#1e3a8a', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar 2.0
                 </h3>
@@ -1020,7 +1020,7 @@ export default function CompareTemplate18vs19() {
               border: '1px solid #ffc107'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#856404' }}>
-                💡 Industry Transition Tip
+                 Industry Transition Tip
               </h3>
               <p style={{ color: '#856404', lineHeight: '1.7', margin: 0 }}>
                 Moving between industry and academia? Keep both templates ready. Use The Code for tech industry applications and The Scholar 2.0 for academic positions. With our free builder, you can maintain multiple versions of your resume tailored to each opportunity.

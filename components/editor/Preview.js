@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/editor/Preview.js
 // UPI PAYMENT - KEEP PAY VIA UPI BUTTON FOR ALL
 // REMOVED DOWNLOAD COUNTER
@@ -6,7 +6,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useResume } from '../../context/ResumeContext';
-import Head from 'next/head';
 import ReviewSystem from '../ReviewSystem';
 
 // Import ALL templates (1-20)
@@ -33,7 +32,7 @@ import Template20 from '../templates/Template20';
 
 import { generatePDF } from '../../lib/pdfGenerator';
 
-const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev, onNext, currentStep, totalSteps, onDownloadComplete }) => {
+const Preview = ({ templateId, isInline = false, isMini = false, showNavigation = false, onPrev, onNext, currentStep, totalSteps, onDownloadComplete, hideHeader = false }) => {
   const { state } = useResume();
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
   const previewRef = useRef();
@@ -53,25 +52,38 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
   const [showThanks, setShowThanks] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showOrientationWarning, setShowOrientationWarning] = useState(false);
   
   // YOUR UPI ID
   const myUpiId = 'biradarsangmesh91@okicici';
   
-  // Check if device is mobile and show warning
+  // Consolidated effect for checking mobile device, handling resize, and scaling preview
   useEffect(() => {
-    const checkMobile = () => {
+    const checkMobileAndScale = () => {
+      const width = typeof window !== 'undefined' ? window.innerWidth : 1024;
+      setWindowWidth(width);
+      
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-      const isMobileDevice = mobileRegex.test(userAgent);
+      const isMobileDevice = mobileRegex.test(userAgent) || width < 768;
       setIsMobile(isMobileDevice);
       
-      // Show orientation warning only for mobile users
       if (isMobileDevice) {
-        setShowOrientationWarning(true);
+        // Scale to fit screen width exactly with 32px safety margins
+        const scale = Math.max(0.25, Math.min(0.85, (width - 32) / 794));
+        setPreviewScale(scale);
+      } else if (width < 1100) {
+        // Tablet scale
+        const scale = Math.max(0.35, Math.min(0.85, (width - 64) / 794));
+        setPreviewScale(scale);
+      } else {
+        // Desktop default
+        setPreviewScale(0.5);
       }
     };
-    checkMobile();
+    
+    checkMobileAndScale();
+    window.addEventListener('resize', checkMobileAndScale);
+    return () => window.removeEventListener('resize', checkMobileAndScale);
   }, []);
   
   // Draggable state
@@ -82,11 +94,31 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
   const [showDragHint, setShowDragHint] = useState(true);
   const lastTouchRef = useRef({ x: 0, y: 0 });
 
+  // Dynamic scale for Mini preview
+  const [miniScale, setMiniScale] = useState(0.33);
+  const miniContainerRef = useRef(null);
+
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (!isMini) return;
+    const updateScale = () => {
+      if (miniContainerRef.current) {
+        const containerWidth = miniContainerRef.current.clientWidth;
+        const availableWidth = containerWidth - 32; // 16px padding on each side
+        const newScale = Math.max(0.1, Math.min(0.8, availableWidth / 794));
+        setMiniScale(newScale);
+      }
+    };
+
+    updateScale();
+    
+    if (typeof window !== 'undefined' && typeof window.ResizeObserver !== 'undefined' && miniContainerRef.current) {
+      const resizeObserver = new ResizeObserver(() => {
+        updateScale();
+      });
+      resizeObserver.observe(miniContainerRef.current);
+      return () => resizeObserver.disconnect();
+    }
+  }, [isMini]);
 
   // Templates map
   const templates = {
@@ -342,133 +374,95 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
 
   const displayTemplateId = currentTemplateId || templateId || '?';
 
-  return (
-    <>
-      <Head>
-        <title>Resume Preview & PDF Download | Real-Time Resume Viewer</title>
-        <meta name="description" content="Preview your resume in real-time with our interactive viewer. Zoom, pan, and inspect every detail before downloading as a professional PDF." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
-      {/* Orientation Warning for Mobile Users */}
-      {showOrientationWarning && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.9)',
-          zIndex: 9999,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backdropFilter: 'blur(8px)'
-        }}>
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '20px',
-            padding: '32px 24px',
-            maxWidth: '320px',
-            width: '85%',
-            textAlign: 'center',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-            animation: 'fadeIn 0.3s ease-out'
-          }}>
-            <div style={{
-              fontSize: '48px',
-              marginBottom: '20px'
-            }}>
-              📱🔄
-            </div>
-            <h2 style={{
-              fontSize: '22px',
-              fontWeight: 'bold',
-              margin: '0 0 12px 0',
-              color: '#1e293b'
-            }}>
-              Rotate Your Device
-            </h2>
-            <p style={{
-              fontSize: '14px',
-              lineHeight: '1.5',
-              color: '#475569',
-              margin: '0 0 20px 0'
-            }}>
-              For the best preview experience and to ensure your PDF downloads correctly, please rotate your phone to landscape mode or switch to desktop mode in your browser.
-            </p>
-            <button
-              onClick={() => setShowOrientationWarning(false)}
-              style={{
-                backgroundColor: '#0070f3',
-                color: 'white',
-                border: 'none',
-                padding: '12px 32px',
-                borderRadius: '30px',
-                fontSize: '16px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                width: '100%',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#005cc5';
-                e.currentTarget.style.transform = 'scale(1.02)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#0070f3';
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
-            >
-              OK, Got it
-            </button>
-          </div>
-        </div>
-      )}
-
-      <main 
+  if (isMini) {
+    const scaledHeight = 1123 * miniScale;
+    return (
+      <div 
+        ref={miniContainerRef}
         style={{
           width: '100%',
-          maxWidth: '1280px',
-          margin: '0 auto',
-          padding: spacing.section,
+          height: `${scaledHeight + 32}px`,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          overflow: 'hidden',
+          position: 'relative',
+          background: '#f8fafc',
+          borderRadius: '12px',
+          border: '1px solid #e2e8f0',
+          padding: '16px',
+          boxSizing: 'border-box',
+          transition: 'height 0.2s ease'
+        }}
+      >
+        <div style={{
+          position: 'absolute',
+          top: '16px',
+          left: '50%',
+          marginLeft: '-105mm',
+          transform: `scale(${miniScale})`,
+          transformOrigin: 'top center',
+          width: '210mm',
+          height: '297mm',
+          background: 'white',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+          borderRadius: '4px',
+          flexShrink: 0
+        }}>
+          {renderTemplate()}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+
+      <div 
+        style={{
+          width: '100%',
+          maxWidth: hideHeader ? '100%' : '1280px',
+          margin: hideHeader ? '0' : '0 auto',
+          padding: hideHeader ? '0' : spacing.section,
           fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-          background: '#ffffff',
-          minHeight: '100vh',
+          background: hideHeader ? 'transparent' : '#ffffff',
+          minHeight: hideHeader ? 'auto' : '100vh',
           boxSizing: 'border-box'
         }}
       >
         {/* Header */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '16px',
-          marginBottom: '24px',
-          padding: '16px 20px',
-          background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef'
-        }}>
-          <div>
-            <h1 style={{
-              fontSize: fontSizes.h1,
-              margin: 0,
-              color: '#1a1a1a',
-              fontWeight: 700
-            }}>
-              Preview Your <span style={{ color: '#0070f3' }}>Resume</span>
-            </h1>
-            <p style={{
-              fontSize: fontSizes.small,
-              color: '#6c757d',
-              margin: '8px 0 0 0'
-            }}>
-              Template {displayTemplateId} • Real-time preview • A4 format
-            </p>
+        {!hideHeader && (
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '16px',
+            marginBottom: '24px',
+            padding: '16px 20px',
+            background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
+            borderRadius: '16px',
+            border: '1px solid #e9ecef'
+          }}>
+            <div>
+              <h1 style={{
+                fontSize: fontSizes.h1,
+                margin: 0,
+                color: '#1a1a1a',
+                fontWeight: 700
+              }}>
+                Preview Your <span style={{ color: '#0070f3' }}>Resume</span>
+              </h1>
+              <p style={{
+                fontSize: fontSizes.small,
+                color: '#6c757d',
+                margin: '8px 0 0 0'
+              }}>
+                Template {displayTemplateId} • Real-time preview • A4 format
+              </p>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Stats Bar */}
         <div style={{
@@ -520,7 +514,8 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
             flexWrap: 'wrap',
             gap: '16px',
             paddingBottom: '16px',
-            borderBottom: '1px solid #e2e8f0'
+            borderBottom: '1px solid #e2e8f0',
+            flexDirection: isMobileDevice ? 'column' : 'row'
           }}>
             <h2 style={{
               fontSize: fontSizes.h2,
@@ -529,52 +524,71 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
               margin: 0,
               display: 'flex',
               alignItems: 'center',
-              gap: '8px'
+              gap: '8px',
+              textAlign: isMobileDevice ? 'center' : 'left',
+              width: isMobileDevice ? '100%' : 'auto',
+              justifyContent: isMobileDevice ? 'center' : 'flex-start'
             }}>
               <span>👁️</span>
               Interactive Preview
             </h2>
             
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: isMobileDevice ? 'column' : 'row', 
+              gap: '12px', 
+              alignItems: 'stretch',
+              width: isMobileDevice ? '100%' : 'auto' 
+            }}>
               {/* Zoom Controls */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'space-between',
                 gap: '8px',
                 background: '#f8fafc',
-                padding: '4px',
+                padding: '6px 12px',
                 borderRadius: '30px',
-                border: '1px solid #e2e8f0'
+                border: '1px solid #e2e8f0',
+                width: isMobileDevice ? '100%' : 'auto'
               }}>
                 <button
                   onClick={zoomOut}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: '36px',
+                    height: '36px',
                     border: 'none',
                     background: 'white',
-                    borderRadius: '6px',
+                    borderRadius: '50%',
                     cursor: 'pointer',
                     fontSize: '18px',
-                    border: '1px solid #e2e8f0'
+                    border: '1px solid #e2e8f0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                 >
                   −
                 </button>
-                <span style={{ minWidth: '60px', textAlign: 'center', fontSize: fontSizes.small }}>
+                <span style={{ minWidth: '60px', textAlign: 'center', fontSize: fontSizes.small, fontWeight: 600, color: '#475569' }}>
                   {Math.round(previewScale * 100)}%
                 </span>
                 <button
                   onClick={zoomIn}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: '36px',
+                    height: '36px',
                     border: 'none',
                     background: 'white',
-                    borderRadius: '6px',
+                    borderRadius: '50%',
                     cursor: 'pointer',
                     fontSize: '18px',
-                    border: '1px solid #e2e8f0'
+                    border: '1px solid #e2e8f0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                 >
                   +
@@ -582,15 +596,20 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 <button
                   onClick={resetZoom}
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: '36px',
+                    height: '36px',
                     border: 'none',
                     background: 'white',
-                    borderRadius: '6px',
+                    borderRadius: '50%',
                     cursor: 'pointer',
-                    fontSize: '16px',
-                    border: '1px solid #e2e8f0'
+                    fontSize: '14px',
+                    border: '1px solid #e2e8f0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
+                  title="Reset Zoom"
                 >
                   ↺
                 </button>
@@ -601,20 +620,23 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
                 onClick={handleDownloadPDF}
                 disabled={isGenerating}
                 style={{
-                  background: isGenerating ? '#94a3b8' : '#0070f3',
+                  background: isGenerating ? '#94a3b8' : 'linear-gradient(135deg, #0070f3 0%, #00a6ff 100%)',
                   color: 'white',
                   border: 'none',
-                  borderRadius: '8px',
-                  padding: '10px 24px',
+                  borderRadius: '30px',
+                  padding: '12px 24px',
                   fontSize: fontSizes.body,
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: isGenerating ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   gap: '8px',
                   transition: 'all 0.2s ease',
-                  boxShadow: hoveredBtn === 'download' ? '0 4px 12px rgba(0,112,243,0.3)' : 'none',
-                  transform: hoveredBtn === 'download' ? 'translateY(-2px)' : 'none'
+                  boxShadow: hoveredBtn === 'download' ? '0 4px 14px rgba(0,112,243,0.3)' : 'none',
+                  transform: hoveredBtn === 'download' ? 'translateY(-2px)' : 'none',
+                  width: isMobileDevice ? '100%' : 'auto',
+                  minHeight: '48px'
                 }}
                 onMouseEnter={() => setHoveredBtn('download')}
                 onMouseLeave={() => setHoveredBtn(null)}
@@ -664,7 +686,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
             style={{
               position: 'relative',
               width: '100%',
-              minHeight: isMobileDevice ? '400px' : '600px',
+              minHeight: isMobileDevice ? '260px' : '380px',
               background: 'linear-gradient(45deg, #f8fafc 25%, #ffffff 25%, #ffffff 50%, #f8fafc 50%, #f8fafc 75%, #ffffff 75%, #ffffff)',
               backgroundSize: '20px 20px',
               borderRadius: '12px',
@@ -1037,7 +1059,7 @@ const Preview = ({ templateId, isInline = false, showNavigation = false, onPrev,
             .preview-header { flex-direction: column; align-items: flex-start; }
           }
         `}</style>
-      </main>
+      </div>
     </>
   );
 };

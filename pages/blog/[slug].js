@@ -384,19 +384,19 @@ export default function BlogPostPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://yourdomain.com"
+        "item": "https://freeresumemaker.xyz"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://yourdomain.com/blog"
+        "item": "https://freeresumemaker.xyz/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://yourdomain.com/blog/${slug}`
+        "item": `https://freeresumemaker.xyz/blog/${slug}`
       }
     ]
   };
@@ -407,25 +407,25 @@ export default function BlogPostPage() {
     "@type": "Article",
     "headline": post.title,
     "description": post.description,
-    "image": `https://yourdomain.com/images/blog/${slug}.jpg`,
+    "image": `https://freeresumemaker.xyz/images/blog/${slug}.jpg`,
     "author": {
       "@type": "Organization",
       "name": post.author,
-      "url": "https://yourdomain.com"
+      "url": "https://freeresumemaker.xyz"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Resume Builder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://yourdomain.com/logo.png"
+        "url": "https://freeresumemaker.xyz/logo.png"
       }
     },
     "datePublished": post.date,
     "dateModified": post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://yourdomain.com/blog/${slug}`
+      "@id": `https://freeresumemaker.xyz/blog/${slug}`
     }
   };
 
@@ -439,14 +439,14 @@ export default function BlogPostPage() {
         <meta name="author" content={post.author} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href={`https://yourdomain.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://freeresumemaker.xyz/blog/${slug}`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://yourdomain.com/blog/${slug}`} />
+        <meta property="og:url" content={`https://freeresumemaker.xyz/blog/${slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
-        <meta property="og:image" content={`https://yourdomain.com/images/blog/${slug}.jpg`} />
+        <meta property="og:image" content={`https://freeresumemaker.xyz/images/blog/${slug}.jpg`} />
         <meta property="og:site_name" content="Resume Builder" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
@@ -456,7 +456,7 @@ export default function BlogPostPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
-        <meta name="twitter:image" content={`https://yourdomain.com/images/blog/${slug}.jpg`} />
+        <meta name="twitter:image" content={`https://freeresumemaker.xyz/images/blog/${slug}.jpg`} />
         
         {/* Schema Markup */}
         <script
@@ -473,108 +473,117 @@ export default function BlogPostPage() {
         maxWidth: '900px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
+          flexWrap: 'wrap',
           gap: '8px',
           marginBottom: '30px',
           fontSize: '14px',
-          color: '#666'
+          color: 'var(--text-secondary-light)'
         }}>
-          <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>Home</Link>
+          <Link href="/" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Home</Link>
           <span>&gt;</span>
-          <Link href="/blog" style={{ color: '#666', textDecoration: 'none' }}>Blog</Link>
+          <Link href="/blog" style={{ color: 'var(--text-secondary-light)', textDecoration: 'none' }}>Blog</Link>
           <span>&gt;</span>
-          <span style={{ color: '#0070f3' }}>{post.category}</span>
+          <span style={{ color: 'var(--primary)', fontWeight: 500 }}>{post.category}</span>
         </div>
 
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '42px',
+            fontSize: '2.5rem',
+            fontFamily: 'var(--font-family-display)',
             marginBottom: '20px',
-            color: '#1a1a1a',
+            color: 'var(--text-primary-light)',
             lineHeight: '1.2',
-            fontWeight: 700
+            fontWeight: 800,
+            letterSpacing: '-0.02em'
           }}>
             {post.title}
           </h1>
 
           <div style={{
             display: 'flex',
-            gap: '20px',
-            marginBottom: '20px',
-            color: '#666',
+            flexWrap: 'wrap',
+            gap: '12px',
+            marginBottom: '24px',
+            color: 'var(--text-secondary-light)',
             fontSize: '14px'
           }}>
-            <span>📅 {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            <span>⏱️ {post.readTime}</span>
-            <span>📂 Category: {post.category}</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#f1f5f9', padding: '6px 12px', borderRadius: '20px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#f1f5f9', padding: '6px 12px', borderRadius: '20px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              {post.readTime}
+            </span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'var(--primary-glow)', color: 'var(--primary)', padding: '6px 12px', borderRadius: '20px', fontWeight: 600 }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              {post.category}
+            </span>
           </div>
 
           {/* Author Bio */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
-            padding: '16px',
-            background: '#f8f9fa',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0070f3'
+            gap: '16px',
+            padding: '20px',
+            background: '#f8fafc',
+            borderRadius: '16px',
+            border: '1px solid var(--border-light)',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01)'
           }}>
             <div style={{
-              width: '40px',
-              height: '40px',
-              background: '#0070f3',
+              width: '48px',
+              height: '48px',
+              background: 'var(--primary-gradient)',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: 'white',
               fontWeight: 'bold',
-              fontSize: '20px'
+              fontSize: '20px',
+              fontFamily: 'var(--font-family-display)'
             }}>
               {post.author.charAt(0)}
             </div>
             <div>
-              <div style={{ fontWeight: 600, color: '#333' }}>{post.author}</div>
-              <div style={{ fontSize: '13px', color: '#666' }}>Resume Expert & Career Advisor</div>
+              <div style={{ fontWeight: 700, color: 'var(--text-primary-light)', fontFamily: 'var(--font-family-display)', fontSize: '16px' }}>{post.author}</div>
+              <div style={{ fontSize: '13px', color: 'var(--text-secondary-light)' }}>Resume Expert & Career Advisor</div>
             </div>
           </div>
         </header>
 
         {/* Article Content */}
         <article 
-          style={{
-            lineHeight: '1.8',
-            color: '#333',
-            fontSize: '18px'
-          }}
+          className="blog-article-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* Share Buttons */}
-        <div style={{
+        <div className="premium-card" style={{
           marginTop: '50px',
           padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '12px',
           textAlign: 'center'
         }}>
-          <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>Share This Article</h3>
+          <h3 style={{ fontSize: '20px', fontFamily: 'var(--font-family-display)', marginBottom: '20px', color: 'var(--text-primary-light)' }}>Share This Article</h3>
           <div style={{
             display: 'flex',
             gap: '15px',
             justifyContent: 'center'
           }}>
             {[
-              { name: 'Twitter', icon: '🐦', url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://yourdomain.com/blog/${slug}` },
-              { name: 'LinkedIn', icon: '💼', url: `https://www.linkedin.com/sharing/share-offsite/?url=https://yourdomain.com/blog/${slug}` },
-              { name: 'Facebook', icon: '📘', url: `https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/blog/${slug}` },
-              { name: 'Email', icon: '📧', url: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: https://yourdomain.com/blog/${slug}`)}` }
+              { name: 'Twitter', icon: <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>, url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'LinkedIn', icon: <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>, url: `https://www.linkedin.com/sharing/share-offsite/?url=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'Facebook', icon: <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>, url: `https://www.facebook.com/sharer/sharer.php?u=https://freeresumemaker.xyz/blog/${slug}` },
+              { name: 'Email', icon: <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>, url: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: https://freeresumemaker.xyz/blog/${slug}`)}` }
             ].map((social, index) => (
               <a
                 key={index}
@@ -585,26 +594,25 @@ export default function BlogPostPage() {
                   width: '45px',
                   height: '45px',
                   borderRadius: '50%',
-                  background: 'white',
-                  border: '1px solid #ddd',
+                  background: '#f8fafc',
+                  border: '1px solid var(--border-light)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '20px',
                   textDecoration: 'none',
-                  color: '#333',
-                  transition: 'all 0.2s ease'
+                  color: 'var(--text-primary-light)',
+                  transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#0070f3';
-                  e.currentTarget.style.borderColor = '#0070f3';
+                  e.currentTarget.style.background = 'var(--primary)';
+                  e.currentTarget.style.borderColor = 'var(--primary)';
                   e.currentTarget.style.color = 'white';
                   e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'white';
-                  e.currentTarget.style.borderColor = '#ddd';
-                  e.currentTarget.style.color = '#333';
+                  e.currentTarget.style.background = '#f8fafc';
+                  e.currentTarget.style.borderColor = 'var(--border-light)';
+                  e.currentTarget.style.color = 'var(--text-primary-light)';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
@@ -617,13 +625,13 @@ export default function BlogPostPage() {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div style={{ marginTop: '50px' }}>
-            <h3 style={{ fontSize: '24px', marginBottom: '30px', color: '#333' }}>
+            <h3 style={{ fontSize: '24px', fontFamily: 'var(--font-family-display)', marginBottom: '30px', color: 'var(--text-primary-light)' }}>
               Related Articles
             </h3>
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '20px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: '24px'
             }}>
               {relatedPosts.map((post, index) => (
                 <Link
@@ -634,25 +642,11 @@ export default function BlogPostPage() {
                     color: 'inherit'
                   }}
                 >
-                  <div style={{
-                    padding: '20px',
-                    background: '#f8f9fa',
-                    borderRadius: '10px',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#e9ecef';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#f8f9fa';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                  >
-                    <h4 style={{ fontSize: '16px', marginBottom: '8px', color: '#333' }}>
+                  <div className="premium-card" style={{ height: '100%' }}>
+                    <h4 style={{ fontSize: '18px', fontFamily: 'var(--font-family-display)', marginBottom: '12px', color: 'var(--text-primary-light)' }}>
                       {post.title}
                     </h4>
-                    <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>
+                    <p style={{ fontSize: '14px', color: 'var(--text-secondary-light)', margin: 0 }}>
                       {post.readTime}
                     </p>
                   </div>
@@ -665,26 +659,27 @@ export default function BlogPostPage() {
         {/* Call to Action */}
         <div style={{
           marginTop: '50px',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          borderRadius: '12px',
-          padding: '40px',
+          background: 'var(--accent-gradient)',
+          borderRadius: '24px',
+          padding: '48px 32px',
           textAlign: 'center',
-          color: 'white'
+          color: 'white',
+          boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)',
+          position: 'relative',
+          overflow: 'hidden'
         }}>
-          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Ready to Build Your Resume?</h3>
-          <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9 }}>
-            Use our free resume builder to create a professional resume in minutes.
+          <h3 style={{ fontSize: '28px', fontFamily: 'var(--font-family-display)', fontWeight: 800, marginBottom: '12px' }}>Ready to Build Your Resume?</h3>
+          <p style={{ fontSize: '16px', marginBottom: '24px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 28px auto', lineHeight: '1.6' }}>
+            Use our free resume builder to create a professional resume in minutes. No signup required.
           </p>
           <Link 
             href="/editor"
+            className="premium-btn-primary"
             style={{
-              display: 'inline-block',
-              padding: '12px 30px',
               background: 'white',
-              color: '#667eea',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 600
+              color: 'var(--primary)',
+              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.25)',
+              display: 'inline-flex'
             }}
           >
             Start Building Now
@@ -693,20 +688,65 @@ export default function BlogPostPage() {
 
         {/* Footer Navigation */}
         <div style={{
-          marginTop: '40px',
+          marginTop: '50px',
           display: 'flex',
           justifyContent: 'space-between',
-          borderTop: '1px solid #e9ecef',
+          borderTop: '1px solid var(--border-light)',
           paddingTop: '30px'
         }}>
-          <Link href="/blog" style={{ color: '#0070f3', textDecoration: 'none' }}>
+          <Link href="/blog" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>
             ← Back to Blog
           </Link>
-          <Link href="/templates" style={{ color: '#0070f3', textDecoration: 'none' }}>
+          <Link href="/templates" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>
             Browse Templates →
           </Link>
         </div>
       </div>
+
+      <style jsx global>{`
+        .blog-article-content {
+          font-family: var(--font-family-sans);
+          font-size: 1.125rem;
+          line-height: 1.85;
+          color: var(--text-primary-light);
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+        .blog-article-content h2 {
+          font-family: var(--font-family-display);
+          font-size: 1.75rem;
+          font-weight: 800;
+          margin-top: 2.5rem;
+          margin-bottom: 1.25rem;
+          color: var(--text-primary-light);
+          letter-spacing: -0.02em;
+          line-height: 1.3;
+        }
+        .blog-article-content h3 {
+          font-family: var(--font-family-display);
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          color: var(--text-primary-light);
+          line-height: 1.3;
+        }
+        .blog-article-content p {
+          margin-bottom: 1.6rem;
+        }
+        .blog-article-content ul, .blog-article-content ol {
+          margin-bottom: 1.6rem;
+          padding-left: 1.5rem;
+        }
+        .blog-article-content li {
+          margin-bottom: 0.6rem;
+        }
+        .blog-article-content strong {
+          font-weight: 600;
+          color: var(--text-primary-light);
+        }
+      `}</style>
+
     </>
   );
 }

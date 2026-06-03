@@ -249,11 +249,11 @@ export default function CompareTemplate19vs20() {
                 }
               }}
             >
-              {tab === 'overview' && '📋 Overview'}
-              {tab === 'features' && '⚡ Features'}
-              {tab === 'visual' && '🎨 Visual Comparison'}
-              {tab === 'industry' && '🏢 Industry Fit'}
-              {tab === 'verdict' && '⚖️ Final Verdict'}
+              {tab === 'overview' && 'Overview'}
+              {tab === 'features' && 'Features'}
+              {tab === 'visual' && 'Visual Comparison'}
+              {tab === 'industry' && 'Industry Fit'}
+              {tab === 'verdict' && 'Final Verdict'}
             </button>
           ))}
         </div>
@@ -300,7 +300,7 @@ export default function CompareTemplate19vs20() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🎓</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#10b981' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg></div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#8B4513' }}>The Scholar 2.0</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
                       <div>PhD, Computer Science</div>
@@ -383,7 +383,7 @@ export default function CompareTemplate19vs20() {
                     padding: '20px',
                     textAlign: 'center'
                   }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>⚙️</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#4b5563' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
                     <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#0A2472' }}>The Engineer</div>
                     <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
                       <div>Lead Software Engineer</div>
@@ -538,29 +538,29 @@ export default function CompareTemplate19vs20() {
                 <tbody>
                   {[
                     { feature: 'Primary Focus', t1: 'Academic achievements', t2: 'Technical projects' },
-                    { feature: 'Education Section', t1: '✓ White-box featured styling', t2: 'Standard format' },
-                    { feature: 'Publications', t1: '✓ Dedicated section with citations', t2: '✗ Not included' },
-                    { feature: 'Research Grants', t1: '✓ Highlighted', t2: '✗ Not included' },
-                    { feature: 'Conference Presentations', t1: '✓ Dedicated section', t2: '✗ Not included' },
-                    { feature: 'Teaching Experience', t1: '✓ Featured', t2: 'Standard if included' },
-                    { feature: 'Project Showcase', t1: 'Basic format', t2: '✓ Project-first layout with links' },
-                    { feature: 'Tech Stack', t1: 'Basic list', t2: '✓ Comprehensive matrix' },
-                    { feature: 'Team Leadership', t1: 'Standard', t2: '✓ Metrics and team size' },
-                    { feature: 'Repository Links', t1: '✗ Not included', t2: '✓ GitHub integration' },
-                    { feature: 'Architecture Highlights', t1: '✗ Not included', t2: '✓ Dedicated section' },
-                    { feature: 'Awards & Honors', t1: '✓ Academic awards featured', t2: 'Standard format' },
+                    { feature: 'Education Section', t1: ' White-box featured styling', t2: 'Standard format' },
+                    { feature: 'Publications', t1: ' Dedicated section with citations', t2: '✗ Not included' },
+                    { feature: 'Research Grants', t1: ' Highlighted', t2: '✗ Not included' },
+                    { feature: 'Conference Presentations', t1: ' Dedicated section', t2: '✗ Not included' },
+                    { feature: 'Teaching Experience', t1: ' Featured', t2: 'Standard if included' },
+                    { feature: 'Project Showcase', t1: 'Basic format', t2: ' Project-first layout with links' },
+                    { feature: 'Tech Stack', t1: 'Basic list', t2: ' Comprehensive matrix' },
+                    { feature: 'Team Leadership', t1: 'Standard', t2: ' Metrics and team size' },
+                    { feature: 'Repository Links', t1: '✗ Not included', t2: ' GitHub integration' },
+                    { feature: 'Architecture Highlights', t1: '✗ Not included', t2: ' Dedicated section' },
+                    { feature: 'Awards & Honors', t1: ' Academic awards featured', t2: 'Standard format' },
                   ].map((row, index) => (
                     <tr key={index} style={{ borderBottom: index < 11 ? '1px solid #e9ecef' : 'none' }}>
                       <td style={{ padding: '15px 20px', fontWeight: 500 }}>{row.feature}</td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t1.includes('✓') ? (
+                        {row.t1.includes('') ? (
                           <span style={{ color: '#8B4513', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t1}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t1}</span>
                         )}
                       </td>
                       <td style={{ padding: '15px 20px', textAlign: 'center' }}>
-                        {row.t2.includes('✓') ? (
+                        {row.t2.includes('') ? (
                           <span style={{ color: '#0A2472', fontWeight: 'bold', fontSize: '1.2rem' }}>{row.t2}</span>
                         ) : (
                           <span style={{ color: '#333' }}>{row.t2}</span>
@@ -581,7 +581,7 @@ export default function CompareTemplate19vs20() {
             }}>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#8B4513', marginBottom: '15px' }}>
-                  ✓ The Scholar 2.0 - Pros
+                   The Scholar 2.0 - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.pros.map((item, index) => (
@@ -589,7 +589,7 @@ export default function CompareTemplate19vs20() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#8B4513', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Scholar 2.0 - Cons
+                   The Scholar 2.0 - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template19.cons.map((item, index) => (
@@ -599,7 +599,7 @@ export default function CompareTemplate19vs20() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.3rem', color: '#0A2472', marginBottom: '15px' }}>
-                  ✓ The Engineer - Pros
+                   The Engineer - Pros
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template20.pros.map((item, index) => (
@@ -607,7 +607,7 @@ export default function CompareTemplate19vs20() {
                   ))}
                 </ul>
                 <h3 style={{ fontSize: '1.3rem', color: '#0A2472', marginTop: '25px', marginBottom: '15px' }}>
-                  ⚠️ The Engineer - Cons
+                   The Engineer - Cons
                 </h3>
                 <ul style={{ paddingLeft: '20px', margin: 0 }}>
                   {template20.cons.map((item, index) => (
@@ -916,7 +916,7 @@ export default function CompareTemplate19vs20() {
                 padding: '30px',
                 border: '1px solid #8B4513'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>📚</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#16a34a' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#8B4513', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Scholar 2.0
                 </h3>
@@ -946,7 +946,7 @@ export default function CompareTemplate19vs20() {
                 padding: '30px',
                 border: '1px solid #0A2472'
               }}>
-                <div style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '15px' }}>⚙️</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}><svg style={{ width: '48px', height: '48px', color: '#4b5563' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
                 <h3 style={{ fontSize: '1.5rem', color: '#0A2472', textAlign: 'center', marginBottom: '15px' }}>
                   Choose The Engineer
                 </h3>
@@ -979,7 +979,7 @@ export default function CompareTemplate19vs20() {
               border: '1px solid #667eea'
             }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#0A2472' }}>
-                💡 Expert Tip: Industry-Academia Bridge
+                Expert Tip: Industry-Academia Bridge
               </h3>
               <p style={{ color: '#333', lineHeight: '1.7', margin: 0 }}>
                 Are you a PhD considering industry? Or an engineer moving into research? Keep both templates! Use The Scholar 2.0 for academic applications and research positions, and The Engineer for industry roles. Many successful professionals maintain multiple versions of their resume for different career tracks.

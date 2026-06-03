@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -186,7 +186,7 @@ export default function ProjectsSectionGuide() {
             "Deployed on AWS EC2 with CI/CD pipeline using GitHub Actions"
           ],
           link: "github.com/username/ecommerce-platform",
-          stats: "⭐ 250+ GitHub stars | 1,200+ monthly users"
+          stats: <span style={{ display: 'inline-flex', alignItems: 'center' }}><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 250+ GitHub stars | 1,200+ monthly users</span>
         },
         {
           name: "Task Management SaaS",
@@ -343,9 +343,9 @@ export default function ProjectsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 24, 2026</span>
-            <span>⏱️ 10 min read</span>
-            <span>👁️ 38,000+ readers</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 24, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 10 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 38,000+ readers</span>
             <span>💻 20+ Project Examples</span>
           </div>
           
@@ -364,7 +364,7 @@ export default function ProjectsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Project Format</a>
             <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Field</a>
@@ -383,7 +383,7 @@ export default function ProjectsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
+            <strong><strong>Pro Tip:</strong></strong> Include live links to your projects whenever possible. Recruiters love seeing working demos and GitHub repositories. 
             Make sure your repositories have clear README files, screenshots, and setup instructions. A well-documented project shows attention to detail and professionalism.
           </p>
         </div>
@@ -444,7 +444,7 @@ export default function ProjectsSectionGuide() {
         {/* Fresher Project Ideas Section */}
         <section id="fresher-ideas">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            💡 Project Ideas for Freshers (No Experience)
+            <svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6M10 22h4M15.09 14c.18-.33.3-.68.37-1.04.18-1 .07-2-.32-2.93-.38-.93-1.07-1.69-1.92-2.16C12.38 7.4 11.22 7.37 10.36 7.8c-.85.43-1.48 1.15-1.78 2.04-.3.88-.32 1.83-.06 2.73.1.36.26.7.47 1.02.5.75.56 1.7.17 2.51H14.9c-.38-.8-.32-1.75.19-2.5z"></path></svg> Project Ideas for Freshers (No Experience)
           </h2>
           <div style={{ background: '#fff3e0', padding: '24px', borderRadius: '16px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <p style={{ margin: '0 0 16px 0', fontSize: '16px' }}>
@@ -502,7 +502,7 @@ export default function ProjectsSectionGuide() {
         {/* Placement Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '20px', color: '#1a1a1a', marginTop: '40px' }}>
-            📍 Where to Place Projects on Your Resume
+            Where to Place Projects on Your Resume
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #e9ecef' }}>
@@ -529,7 +529,7 @@ export default function ProjectsSectionGuide() {
         {/* ATS Optimization Section */}
         <section>
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Project Formatting
+            ATS-Friendly Project Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>

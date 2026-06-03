@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // components/forms/Experience.js
 // STABLE VERSION - Fixed infinite save loop
 // ============================================
@@ -6,7 +6,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useResume } from '../../context/ResumeContext';
 import { getSectionLimit } from '../../lib/templateConfig';
-import Head from 'next/head';
 
 // SVG Icons as components
 const CheckIcon = () => (
@@ -759,19 +758,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
 
   return (
     <>
-      <Head>
-        <title>Professional Work Experience Builder | Resume Achievement Generator</title>
-        <meta name="description" content="Add and optimize your work experience with quantifiable achievements. Includes templates for software engineers, product managers, and more." />
-        <meta name="keywords" content="work experience, resume achievements, job history, professional experience" />
-        <meta property="og:title" content="Professional Work Experience Builder" />
-        <meta property="og:description" content="Add quantifiable achievements to your work experience." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
-
+      
       <div 
         ref={contentRef}
         style={{
@@ -785,68 +772,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
           boxSizing: 'border-box'
         }}
       >
-        {/* Hero Section */}
-        <div style={{
-          textAlign: 'center',
-          padding: spacing.heroPadding,
-          marginBottom: spacing.heroMargin,
-          background: 'linear-gradient(135deg, #f7fafc 0%, #ffffff 100%)',
-          borderRadius: '16px',
-          border: '1px solid #e2e8f0'
-        }}>
-          <h1 style={{
-            fontSize: isMobile ? '24px' : '28px',
-            marginBottom: '8px',
-            color: '#1a202c',
-            fontWeight: 700
-          }}>
-            Work <span style={{ color: '#4299e1' }}>Experience</span>
-          </h1>
-          <p style={{
-            fontSize: isMobile ? '14px' : '16px',
-            color: '#4a5568',
-            marginBottom: '16px',
-            maxWidth: '600px',
-            marginLeft: 'auto',
-            marginRight: 'auto'
-          }}>
-            Showcase your professional journey with quantifiable achievements using the STAR method
-          </p>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '8px 16px',
-            background: '#ebf8ff',
-            borderRadius: '20px',
-            border: '1px solid #bee3f8'
-          }}>
-            <span style={{ fontSize: '14px', color: '#3182ce', fontWeight: 600 }}>
-              {completionPercentage}% Complete
-            </span>
-          </div>
-          {isSaving && (
-            <div style={{
-              marginTop: '12px',
-              fontSize: '12px',
-              color: '#4299e1',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px'
-            }}>
-              <div style={{
-                width: '12px',
-                height: '12px',
-                border: '2px solid #4299e1',
-                borderTopColor: 'transparent',
-                borderRadius: '50%',
-                animation: 'spin 1s linear infinite'
-              }} />
-              Saving...
-            </div>
-          )}
-        </div>
+        
 
         {/* Stats Bar */}
         <div style={{
@@ -886,7 +812,7 @@ const Experience = ({ onDataChange, data, templateId, navigationButtons }) => {
         </div>
 
         {/* Main Content Grid */}
-        <div style={{
+        <div className="editor-main-layout" style={{
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
           gap: spacing.mainGap,

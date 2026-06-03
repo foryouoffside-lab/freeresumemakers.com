@@ -169,7 +169,7 @@ export default function ResumeFormattingGuide() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -190,7 +190,7 @@ export default function ResumeFormattingGuide() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -288,13 +288,7 @@ export default function ResumeFormattingGuide() {
         </div>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Quick Navigation:
           </h2>
@@ -344,11 +338,7 @@ export default function ResumeFormattingGuide() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           <p style={{ fontSize: '20px', marginBottom: '30px', fontWeight: 500 }}>
             Proper resume formatting helps your document appear professional and improves how it's processed by 
             Applicant Tracking Systems (ATS). This guide covers the key elements of resume formatting for 2026.
@@ -357,7 +347,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 1 - Font Guidelines */}
           <section id="fonts" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '0 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -401,13 +391,7 @@ export default function ResumeFormattingGuide() {
               </div>
             </div>
 
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#667eea' }}>📏 Font Sizes (2026 Standard)</h3>
               <div style={{
                 display: 'grid',
@@ -440,7 +424,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 2 - Margins & Spacing */}
           <section id="margins" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -488,7 +472,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 3 - File Format */}
           <section id="file-format" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -511,7 +495,7 @@ export default function ResumeFormattingGuide() {
                 <h3 style={{ fontSize: '24px', marginBottom: '12px', color: '#2e7d32' }}>PDF</h3>
                 <p><strong>✓ Pros:</strong> Preserves formatting, professional, universal</p>
                 <p><strong>✗ Cons:</strong> Some old ATS may struggle</p>
-                <p><strong>📌 Best for:</strong> Most applications</p>
+                <p><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Best for:</strong> Most applications</p>
               </div>
 
               <div style={{
@@ -523,7 +507,7 @@ export default function ResumeFormattingGuide() {
                 <h3 style={{ fontSize: '24px', marginBottom: '12px', color: '#667eea' }}>DOCX</h3>
                 <p><strong>✓ Pros:</strong> ATS-friendly, easily parsed</p>
                 <p><strong>✗ Cons:</strong> Formatting may shift</p>
-                <p><strong>📌 Best for:</strong> When specifically requested</p>
+                <p><strong><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Best for:</strong> When specifically requested</p>
               </div>
             </div>
 
@@ -549,7 +533,7 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>💡 Rule of thumb:</strong> Use PDF unless the employer specifically requests another format.
+                <strong><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6M10 22h4M15.09 14c.18-.33.3-.68.37-1.04.18-1 .07-2-.32-2.93-.38-.93-1.07-1.69-1.92-2.16C12.38 7.4 11.22 7.37 10.36 7.8c-.85.43-1.48 1.15-1.78 2.04-.3.88-.32 1.83-.06 2.73.1.36.26.7.47 1.02.5.75.56 1.7.17 2.51H14.9c-.38-.8-.32-1.75.19-2.5z"></path></svg> Rule of thumb:</strong> Use PDF unless the employer specifically requests another format.
               </p>
             </div>
           </section>
@@ -557,7 +541,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 4 - Section Order */}
           <section id="section-order" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -620,7 +604,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 5 - ATS-Friendly Formatting */}
           <section id="ats" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -667,7 +651,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 6 - Length Guidelines */}
           <section id="length" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -682,19 +666,19 @@ export default function ResumeFormattingGuide() {
               margin: '20px 0'
             }}>
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>🎓</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '10px' }}>🎓</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Entry Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>1 page</div>
               </div>
 
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>💼</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '10px' }}>💼</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Mid-Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>1-2 pages</div>
               </div>
 
               <div style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '10px' }}>👔</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '10px' }}>👔</div>
                 <h3 style={{ fontSize: '18px', marginBottom: '5px' }}>Senior Level</h3>
                 <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#667eea' }}>2 pages</div>
               </div>
@@ -704,7 +688,7 @@ export default function ResumeFormattingGuide() {
           {/* Section 7 - Common Mistakes */}
           <section id="mistakes" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -839,14 +823,9 @@ export default function ResumeFormattingGuide() {
 
           {/* Download Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
+            background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Formatting Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable formatting checklist to review your resume before submitting.
@@ -915,7 +894,7 @@ export default function ResumeFormattingGuide() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '32px',
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em',
             color: 'white',
             fontWeight: 'bold'
           }}>
@@ -932,13 +911,7 @@ export default function ResumeFormattingGuide() {
         </section>
 
         {/* Share Section */}
-        <div style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <div className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -1055,7 +1028,7 @@ export default function ResumeFormattingGuide() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Ready to Format Your Resume?
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

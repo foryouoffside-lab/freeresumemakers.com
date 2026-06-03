@@ -168,7 +168,7 @@ export default function ResumeForCareerChange() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -189,7 +189,7 @@ export default function ResumeForCareerChange() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -251,13 +251,7 @@ export default function ResumeForCareerChange() {
         </header>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             In This Guide:
           </h2>
@@ -309,15 +303,11 @@ export default function ResumeForCareerChange() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           {/* Section 1 - Choose Format */}
           <section id="format" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '0 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -384,7 +374,7 @@ export default function ResumeForCareerChange() {
           {/* Section 2 - Transferable Skills */}
           <section id="skills" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -442,7 +432,7 @@ export default function ResumeForCareerChange() {
           {/* Section 3 - Compelling Summary */}
           <section id="summary" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -453,13 +443,7 @@ export default function ResumeForCareerChange() {
               Your summary can briefly explain your transition and highlight relevant skills:
             </p>
             
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <p style={{ fontStyle: 'italic', marginBottom: '20px' }}>
                 "Teacher with 8+ years of experience in curriculum development and public speaking, transitioning to corporate training. Skilled in simplifying complex concepts and engaging diverse audiences."
               </p>
@@ -475,7 +459,7 @@ export default function ResumeForCareerChange() {
           {/* Section 4 - Skills Section */}
           <section id="skills-section" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -536,7 +520,7 @@ export default function ResumeForCareerChange() {
           {/* Section 5 - Reframe Experience */}
           <section id="reframe" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -548,8 +532,7 @@ export default function ResumeForCareerChange() {
             </p>
             
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: '20px',
               margin: '20px 0'
             }}>
@@ -582,7 +565,7 @@ export default function ResumeForCareerChange() {
           {/* Section 6 - Education & Certifications */}
           <section id="education" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -611,7 +594,7 @@ export default function ResumeForCareerChange() {
           {/* Section 7 - Explain Career Change */}
           <section id="explain" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -622,13 +605,7 @@ export default function ResumeForCareerChange() {
               While your resume hints at your transition, your cover letter is where you can provide context:
             </p>
             
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <p style={{ fontStyle: 'italic', margin: 0 }}>
                 "After 8 years as a classroom teacher, I'm transitioning to corporate training. I've completed additional 
                 coursework in adult learning and have been developing training materials as a volunteer. I believe my experience 
@@ -640,7 +617,7 @@ export default function ResumeForCareerChange() {
           {/* Section 8 - Complete Examples */}
           <section id="examples" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -674,7 +651,7 @@ export default function ResumeForCareerChange() {
           {/* Section 9 - Mistakes */}
           <section id="mistakes" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -682,13 +659,7 @@ export default function ResumeForCareerChange() {
               9. Common Mistakes to Avoid
             </h2>
             
-            <div style={{
-              background: '#fff3cd',
-              borderRadius: '16px',
-              padding: '25px',
-              margin: '20px 0',
-              border: '1px solid #ffc107'
-            }}>
+            <div className="premium-notice" style={{ margin: '20px 0' }}>
               <ul>
                 <li>Using a purely chronological format that highlights unrelated experience first</li>
                 <li>Not translating your experience into language relevant to the new industry</li>
@@ -746,14 +717,9 @@ export default function ResumeForCareerChange() {
 
           {/* Download Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '16px',
-            padding: '40px',
-            margin: '50px 0',
-            color: 'white',
-            textAlign: 'center'
+            background: 'var(--accent-gradient)', borderRadius: '24px', padding: '48px 32px', margin: '50px 0', color: 'white', textAlign: 'center', boxShadow: '0 12px 30px -10px rgba(0, 112, 243, 0.25)', position: 'relative', overflow: 'hidden'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Free Career Change Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Download our printable checklist to ensure your career change resume includes all essential elements.
@@ -788,17 +754,7 @@ export default function ResumeForCareerChange() {
         </article>
 
         {/* Author Bio */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          border: '1px solid #e9ecef',
-          display: 'flex',
-          gap: '25px',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', background: '#f8fafc', display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <div style={{
             width: '80px',
             height: '80px',
@@ -807,7 +763,7 @@ export default function ResumeForCareerChange() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '32px',
+            fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em',
             color: 'white'
           }}>
             JW
@@ -822,13 +778,7 @@ export default function ResumeForCareerChange() {
         </section>
 
         {/* Share Section */}
-        <section style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <section className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -945,7 +895,7 @@ export default function ResumeForCareerChange() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Ready to Build Your Career Change Resume?
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

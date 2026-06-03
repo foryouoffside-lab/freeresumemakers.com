@@ -404,10 +404,7 @@ export default function TemplateDetailPage() {
         </div>
 
         {/* Main Content - Two Column Layout */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '40px',
+        <div className="responsive-two-col-grid" style={{
           marginBottom: '50px'
         }}>
           {/* Left Column - Template Image */}
@@ -528,29 +525,12 @@ export default function TemplateDetailPage() {
               }}>
                 <button
                   onClick={handleUseTemplate}
+                  className="premium-btn-primary"
                   style={{
                     flex: 1,
+                    justifyContent: 'center',
                     padding: '14px 20px',
-                    background: '#0070f3',
-                    color: 'white',
-                    textDecoration: 'none',
-                    borderRadius: '12px',
-                    fontWeight: 600,
-                    textAlign: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                    fontSize: '15px',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#0060d6';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,112,243,0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#0070f3';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
+                    fontSize: '15px'
                   }}
                 >
                   Use This Template
@@ -561,8 +541,8 @@ export default function TemplateDetailPage() {
                   style={{
                     padding: '14px 20px',
                     background: 'white',
-                    color: '#333',
-                    border: '1px solid #e9ecef',
+                    color: 'var(--text-primary-light)',
+                    border: '1px solid var(--border-light)',
                     borderRadius: '12px',
                     fontWeight: 600,
                     cursor: 'pointer',
@@ -571,11 +551,13 @@ export default function TemplateDetailPage() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = '#f8fafc';
-                    e.currentTarget.style.borderColor = '#0070f3';
+                    e.currentTarget.style.borderColor = 'var(--primary)';
+                    e.currentTarget.style.color = 'var(--primary)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'white';
-                    e.currentTarget.style.borderColor = '#e9ecef';
+                    e.currentTarget.style.borderColor = 'var(--border-light)';
+                    e.currentTarget.style.color = 'var(--text-primary-light)';
                   }}
                 >
                   View Full Size
@@ -587,11 +569,12 @@ export default function TemplateDetailPage() {
           {/* Right Column - Template Details */}
           <div>
             <h1 style={{
-              fontSize: '2.2rem',
+              fontFamily: 'var(--font-family-display)',
+              fontSize: '2.5rem',
               margin: '0 0 8px 0',
-              color: '#1a1a1a',
+              color: 'var(--text-primary-light)',
               lineHeight: '1.2',
-              fontWeight: 700
+              fontWeight: 800
             }}>
               {templateInfo.name}
             </h1>
@@ -671,7 +654,7 @@ export default function TemplateDetailPage() {
               }}>
                 Available Sections
               </h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
                 {sections.map((section, index) => (
                   <button
                     key={index}
@@ -733,10 +716,11 @@ export default function TemplateDetailPage() {
           borderTop: '1px solid #e9ecef'
         }}>
           <h2 style={{
-            fontSize: '1.5rem',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '1.8rem',
             marginBottom: '24px',
-            color: '#1a1a1a',
-            fontWeight: 600
+            color: 'var(--text-primary-light)',
+            fontWeight: 800
           }}>
             Similar Templates You Might Like
           </h2>
@@ -818,11 +802,12 @@ export default function TemplateDetailPage() {
           border: '1px solid #e9ecef'
         }}>
           <h2 style={{
-            fontSize: '1.5rem',
+            fontFamily: 'var(--font-family-display)',
+            fontSize: '1.8rem',
             marginBottom: '24px',
             textAlign: 'center',
-            fontWeight: 600,
-            color: '#1a1a1a'
+            fontWeight: 800,
+            color: 'var(--text-primary-light)'
           }}>
             Frequently Asked Questions
           </h2>

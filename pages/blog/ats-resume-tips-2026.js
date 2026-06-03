@@ -146,7 +146,7 @@ export default function ATSResumeTips2026() {
         maxWidth: '1000px',
         margin: '0 auto',
         padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'var(--font-family-sans)'
       }}>
         {/* Breadcrumb Navigation */}
         <div style={{
@@ -167,7 +167,7 @@ export default function ATSResumeTips2026() {
         {/* Article Header */}
         <header style={{ marginBottom: '40px' }}>
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em',
             marginBottom: '20px',
             color: '#1a1a1a',
             lineHeight: '1.2',
@@ -265,13 +265,7 @@ export default function ATSResumeTips2026() {
         </div>
 
         {/* Table of Contents */}
-        <nav style={{
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '24px',
-          marginBottom: '40px',
-          border: '1px solid #e9ecef'
-        }}>
+        <nav className="premium-card" style={{ background: '#f8fafc', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Quick Navigation:
           </h2>
@@ -322,11 +316,7 @@ export default function ATSResumeTips2026() {
         </nav>
 
         {/* Main Content */}
-        <article style={{
-          fontSize: '18px',
-          lineHeight: '1.8',
-          color: '#333'
-        }}>
+        <article className="blog-article-content" style={{ fontFamily: 'var(--font-family-sans)', fontSize: '1.125rem', lineHeight: '1.85', color: 'var(--text-primary-light)' }}>
           <p style={{ fontSize: '20px', marginBottom: '30px', fontWeight: 500 }}>
             When you submit a job application online, your resume is typically processed by an ATS before a human ever sees it. 
             The software extracts information, stores it, and scores it based on how well it matches the job requirements. 
@@ -336,7 +326,7 @@ export default function ATSResumeTips2026() {
           {/* Section 1 - What is ATS */}
           <section id="what-is-ats" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -365,7 +355,7 @@ export default function ATSResumeTips2026() {
           {/* Section 2 - Formatting */}
           <section id="formatting" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -426,7 +416,7 @@ export default function ATSResumeTips2026() {
               border: '1px solid #bbdef5'
             }}>
               <p style={{ margin: 0 }}>
-                <strong>💡 Pro Tip:</strong> Save your resume as DOCX if the job posting doesn't specify a format. DOCX files are 
+                <strong><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#eab308' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6M10 22h4M15.09 14c.18-.33.3-.68.37-1.04.18-1 .07-2-.32-2.93-.38-.93-1.07-1.69-1.92-2.16C12.38 7.4 11.22 7.37 10.36 7.8c-.85.43-1.48 1.15-1.78 2.04-.3.88-.32 1.83-.06 2.73.1.36.26.7.47 1.02.5.75.56 1.7.17 2.51H14.9c-.38-.8-.32-1.75.19-2.5z"></path></svg> Pro Tip:</strong> Save your resume as DOCX if the job posting doesn't specify a format. DOCX files are 
                 generally more compatible with older ATS systems than PDFs.
               </p>
             </div>
@@ -435,7 +425,7 @@ export default function ATSResumeTips2026() {
           {/* Section 3 - Keywords */}
           <section id="keywords" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -462,13 +452,7 @@ export default function ATSResumeTips2026() {
               </ol>
             </div>
 
-            <div style={{
-              background: '#f0f7ff',
-              borderRadius: '12px',
-              padding: '20px',
-              margin: '20px 0',
-              border: '1px solid #bbdefb'
-            }}>
+            <div className="premium-tip-box" style={{ margin: '20px 0' }}>
               <p style={{ margin: 0 }}>
                 <strong>📝 Example:</strong> If a job description mentions "experience with JavaScript, React, and Node.js," 
                 include these exact terms in your skills section and work experience bullets.
@@ -479,7 +463,7 @@ export default function ATSResumeTips2026() {
           {/* Section 4 - Section Headings */}
           <section id="headings" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -525,7 +509,7 @@ export default function ATSResumeTips2026() {
           {/* Section 5 - Skills Section */}
           <section id="skills" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -555,7 +539,7 @@ export default function ATSResumeTips2026() {
           {/* Section 6 - Acronyms */}
           <section id="acronyms" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -587,7 +571,7 @@ export default function ATSResumeTips2026() {
           {/* Section 7 - Testing */}
           <section id="testing" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -618,7 +602,7 @@ export default function ATSResumeTips2026() {
           {/* Section 8 - Common Mistakes */}
           <section id="mistakes" style={{ scrollMarginTop: '100px' }}>
             <h2 style={{ 
-              fontSize: '32px', 
+              fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', 
               margin: '50px 0 20px 0',
               borderBottom: '3px solid #0070f3',
               paddingBottom: '10px'
@@ -729,7 +713,7 @@ export default function ATSResumeTips2026() {
             color: 'white',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>📥</div>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-family-display)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '20px' }}>📥</div>
             <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Download ATS Checklist</h2>
             <p style={{ fontSize: '16px', marginBottom: '25px', opacity: 0.9, maxWidth: '500px', margin: '0 auto 25px' }}>
               Get a printable checklist of all ATS optimization tips. Use it to review your resume before submitting applications.
@@ -762,13 +746,7 @@ export default function ATSResumeTips2026() {
         </article>
 
         {/* Share Section */}
-        <div style={{
-          margin: '50px 0',
-          padding: '30px',
-          background: '#f8f9fa',
-          borderRadius: '16px',
-          textAlign: 'center'
-        }}>
+        <div className="premium-card" style={{ margin: '50px 0', padding: '30px', textAlign: 'center' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '20px', color: '#333' }}>
             Share This Guide
           </h3>
@@ -885,7 +863,7 @@ export default function ATSResumeTips2026() {
           textAlign: 'center',
           color: 'white'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-family-display)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '20px' }}>
             Ready to Build Your ATS-Friendly Resume?
           </h2>
           <p style={{ fontSize: '18px', marginBottom: '30px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 30px' }}>

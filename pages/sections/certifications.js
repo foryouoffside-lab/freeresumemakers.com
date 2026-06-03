@@ -236,10 +236,10 @@ export default function CertificationsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px', flexWrap: 'wrap' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 10 min read</span>
-            <span>👁️ 18,500+ readers</span>
-            <span>🏆 15+ Certification Categories</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 23, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 10 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 18,500+ readers</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#d97706' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path><path d="M12 2a6 6 0 0 0-6 6v3.5a6 6 0 0 0 12 0V8a6 6 0 0 0-6-6z"></path></svg> 15+ Certification Categories</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -257,7 +257,7 @@ export default function CertificationsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Certification Format</a>
             <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Industry</a>
@@ -276,7 +276,7 @@ export default function CertificationsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Certifications boost your resume's ATS score significantly. Always include the full certification name, issuing organization, and year obtained. For credentials with IDs, include them—this allows instant verification.
+            <strong><strong>Pro Tip:</strong></strong> Certifications boost your resume's ATS score significantly. Always include the full certification name, issuing organization, and year obtained. For credentials with IDs, include them—this allows instant verification.
           </p>
         </div>
 
@@ -388,7 +388,7 @@ export default function CertificationsSectionGuide() {
         {/* Placement Section */}
         <section id="placement">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            📍 Where to Place Certifications on Your Resume
+            Where to Place Certifications on Your Resume
           </h2>
           <div style={{
             display: 'grid',
@@ -452,7 +452,7 @@ export default function CertificationsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Certification Formatting
+            ATS-Friendly Certification Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <ul style={{ lineHeight: '1.8' }}>

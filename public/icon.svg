@@ -1,6 +1,74 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M4 4h16v16H4z"/>
-  <path d="M8 8h8"/>
-  <path d="M8 12h6"/>
-  <path d="M8 16h4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <!-- Document Gradient -->
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <!-- Glow Effect Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Outer Glow circle -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGrad)" stroke="#334155" stroke-width="6" />
+  
+  <!-- Abstract paper document icon with rounded corners and gradients -->
+  <g transform="translate(136, 116)" filter="url(#glow)">
+    <!-- Base Paper shadow / duplicate -->
+    <rect x="12" y="12" width="220" height="280" rx="24" fill="#000000" opacity="0.4" />
+    
+    <!-- Main Paper body -->
+    <rect x="0" y="0" width="220" height="280" rx="24" fill="url(#docGrad)" />
+    
+    <!-- Header visual accent (Profile Picture placeholder) -->
+    <circle cx="56" cy="64" r="24" fill="url(#accentGrad)" />
+    
+    <!-- Header Name placeholder lines -->
+    <rect x="96" y="48" width="100" height="12" rx="6" fill="#cbd5e1" />
+    <rect x="96" y="68" width="60" height="8" rx="4" fill="#cbd5e1" />
+    
+    <!-- Divider Line -->
+    <rect x="24" y="112" width="172" height="4" rx="2" fill="#e2e8f0" />
+    
+    <!-- Section Title -->
+    <rect x="24" y="132" width="60" height="10" rx="5" fill="#94a3b8" />
+    
+    <!-- Experience Line bullet list symbols -->
+    <circle cx="34" cy="166" r="6" fill="url(#accentGrad)" />
+    <rect x="52" y="162" width="144" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="52" y="176" width="100" height="6" rx="3" fill="#e2e8f0" />
+    
+    <circle cx="34" cy="206" r="6" fill="url(#accentGrad)" />
+    <rect x="52" y="202" width="144" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="52" y="216" width="120" height="6" rx="3" fill="#e2e8f0" />
+    
+    <!-- Skills section at bottom -->
+    <rect x="24" y="244" width="40" height="16" rx="8" fill="#e2e8f0" />
+    <rect x="72" y="244" width="55" height="16" rx="8" fill="#e2e8f0" />
+    <rect x="135" y="244" width="45" height="16" rx="8" fill="#e2e8f0" />
+  </g>
+  
+  <!-- Success Emblem (Checkmark Shield or Floating Badge) in bottom right -->
+  <g transform="translate(290, 290)">
+    <!-- Badge Background -->
+    <circle cx="50" cy="50" r="46" fill="#0f172a" />
+    <circle cx="50" cy="50" r="42" fill="url(#accentGrad)" />
+    
+    <!-- Checkmark path -->
+    <path d="M34 50 L45 61 L66 40" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
 </svg>

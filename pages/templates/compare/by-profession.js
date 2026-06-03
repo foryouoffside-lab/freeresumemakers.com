@@ -7,6 +7,69 @@ import { useState } from 'react';
 
 export default function CompareByProfession() {
   const router = useRouter();
+
+  const getProfessionIcon = (id, size = '1.2rem') => {
+    const icons = {
+      tech: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      ),
+      business: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+      ),
+      creative: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+          <circle cx="7.5" cy="10.5" r="1.5"></circle>
+          <circle cx="11.5" cy="7.5" r="1.5"></circle>
+          <circle cx="16.5" cy="9.5" r="1.5"></circle>
+          <circle cx="15.5" cy="14.5" r="1.5"></circle>
+        </svg>
+      ),
+      academic: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+      ),
+      legal: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <path d="M12 3v18M5 10c0 3 2.5 4 5 4M19 10c0 3-2.5 4-5 4M3 10h4M17 10h4"></path>
+        </svg>
+      ),
+      healthcare: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+      ),
+      engineering: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      ),
+      sales: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+      ),
+      education: (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+      )
+    };
+    return icons[id] || null;
+  };
+  
   const [selectedProfession, setSelectedProfession] = useState('tech');
 
   // Structured data for rich snippets
@@ -68,7 +131,7 @@ export default function CompareByProfession() {
   const professionData = {
     tech: {
       name: 'Technology / IT',
-      icon: '💻',
+      icon: 'tech',
       color: '#2563eb',
       lightColor: '#dbeafe',
       description: 'For software engineers, developers, IT managers, and tech professionals.',
@@ -94,7 +157,7 @@ export default function CompareByProfession() {
     },
     business: {
       name: 'Business / Management',
-      icon: '💼',
+      icon: 'business',
       color: '#0056b3',
       lightColor: '#cce5ff',
       description: 'For managers, executives, consultants, and business professionals.',
@@ -120,7 +183,7 @@ export default function CompareByProfession() {
     },
     creative: {
       name: 'Creative / Design',
-      icon: '🎨',
+      icon: 'creative',
       color: '#8b5cf6',
       lightColor: '#ede9fe',
       description: 'For designers, artists, creative directors, and marketing creatives.',
@@ -146,7 +209,7 @@ export default function CompareByProfession() {
     },
     academic: {
       name: 'Academic / Research',
-      icon: '📚',
+      icon: 'academic',
       color: '#059669',
       lightColor: '#d1fae5',
       description: 'For professors, researchers, PhD candidates, and educators.',
@@ -172,7 +235,7 @@ export default function CompareByProfession() {
     },
     legal: {
       name: 'Legal / Government',
-      icon: '⚖️',
+      icon: 'legal',
       color: '#4b5563',
       lightColor: '#e5e7eb',
       description: 'For lawyers, paralegals, judges, and government employees.',
@@ -198,7 +261,7 @@ export default function CompareByProfession() {
     },
     healthcare: {
       name: 'Healthcare / Medical',
-      icon: '🏥',
+      icon: 'healthcare',
       color: '#0d9488',
       lightColor: '#ccfbf1',
       description: 'For doctors, nurses, healthcare administrators, and medical professionals.',
@@ -224,7 +287,7 @@ export default function CompareByProfession() {
     },
     engineering: {
       name: 'Engineering',
-      icon: '🔧',
+      icon: 'engineering',
       color: '#d97706',
       lightColor: '#fef3c7',
       description: 'For mechanical, civil, electrical, and chemical engineers.',
@@ -250,7 +313,7 @@ export default function CompareByProfession() {
     },
     sales: {
       name: 'Sales / Marketing',
-      icon: '📊',
+      icon: 'sales',
       color: '#dc2626',
       lightColor: '#fee2e2',
       description: 'For sales representatives, account executives, and marketing professionals.',
@@ -276,7 +339,7 @@ export default function CompareByProfession() {
     },
     education: {
       name: 'Education / Teaching',
-      icon: '📖',
+      icon: 'education',
       color: '#7c3aed',
       lightColor: '#ede9fe',
       description: 'For teachers, administrators, and education professionals.',
@@ -304,15 +367,15 @@ export default function CompareByProfession() {
 
   // Profession list for navigation
   const professions = [
-    { id: 'tech', name: 'Technology / IT', icon: '💻' },
-    { id: 'business', name: 'Business / Management', icon: '💼' },
-    { id: 'creative', name: 'Creative / Design', icon: '🎨' },
-    { id: 'academic', name: 'Academic / Research', icon: '📚' },
-    { id: 'legal', name: 'Legal / Government', icon: '⚖️' },
-    { id: 'healthcare', name: 'Healthcare / Medical', icon: '🏥' },
-    { id: 'engineering', name: 'Engineering', icon: '🔧' },
-    { id: 'sales', name: 'Sales / Marketing', icon: '📊' },
-    { id: 'education', name: 'Education / Teaching', icon: '📖' }
+    { id: 'tech', name: 'Technology / IT', icon: 'tech' },
+    { id: 'business', name: 'Business / Management', icon: 'business' },
+    { id: 'creative', name: 'Creative / Design', icon: 'creative' },
+    { id: 'academic', name: 'Academic / Research', icon: 'academic' },
+    { id: 'legal', name: 'Legal / Government', icon: 'legal' },
+    { id: 'healthcare', name: 'Healthcare / Medical', icon: 'healthcare' },
+    { id: 'engineering', name: 'Engineering', icon: 'engineering' },
+    { id: 'sales', name: 'Sales / Marketing', icon: 'sales' },
+    { id: 'education', name: 'Education / Teaching', icon: 'education' }
   ];
 
   // SEO-optimized meta description
@@ -436,7 +499,7 @@ export default function CompareByProfession() {
                 }
               }}
             >
-              <span style={{ fontSize: '1.2rem' }}>{prof.icon}</span>
+              <span>{getProfessionIcon(prof.id)}</span>
               <span>{prof.name}</span>
             </button>
           ))}
@@ -470,7 +533,7 @@ export default function CompareByProfession() {
                   justifyContent: 'center',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                 }}>
-                  {professionData[selectedProfession].icon}
+                  {getProfessionIcon(selectedProfession, '32px')}
                 </span>
                 <div>
                   <h2 style={{
@@ -534,7 +597,7 @@ export default function CompareByProfession() {
                 alignItems: 'center',
                 gap: '8px'
               }}>
-                <span>💡</span> Professional Tips for {professionData[selectedProfession].name}
+                Professional Tips for {professionData[selectedProfession].name}
               </h3>
               <ul style={{
                 display: 'grid',
@@ -621,10 +684,8 @@ export default function CompareByProfession() {
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          fontSize: '2rem',
-                          color: professionData[selectedProfession].color
-                        }}>
-                          📄
+                          color: professionData[selectedProfession].color }}>
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
                         </div>
                       </div>
                       <div style={{ padding: '20px' }}>
@@ -686,7 +747,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>🌱</div>
+                  }}></div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Entry Level</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.entry.map((id) => {
@@ -721,7 +782,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>📈</div>
+                  }}></div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Mid Level</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.mid.map((id) => {
@@ -756,7 +817,7 @@ export default function CompareByProfession() {
                   <div style={{
                     fontSize: '2rem',
                     marginBottom: '10px'
-                  }}>👔</div>
+                  }}></div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '15px' }}>Senior / Executive</h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {professionData[selectedProfession].experienceLevels.senior.map((id) => {
@@ -792,7 +853,7 @@ export default function CompareByProfession() {
               marginBottom: '40px'
             }}>
               <h4 style={{ color: '#856404', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span>🔍</span> Not sure if this is your industry?
+                Not sure if this is your industry?
               </h4>
               <p style={{ color: '#856404', marginBottom: '15px' }}>
                 Many careers overlap industries. If you work in a specialized field, consider which category best matches 

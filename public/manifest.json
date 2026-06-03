@@ -1,0 +1,21 @@
+{
+  "name": "Free Resume Maker",
+  "short_name": "FreeResumeMaker",
+  "description": "Create professional ATS-friendly resumes instantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0070f3",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -228,9 +228,9 @@ export default function AwardsSectionGuide() {
           </h1>
           
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', color: '#666', fontSize: '14px' }}>
-            <span>📅 Updated: March 23, 2026</span>
-            <span>⏱️ 8 min read</span>
-            <span>👁️ 25,000+ readers</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Updated: March 23, 2026</span>
+            <span><svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 8 min read</span>
+            <span><svg style={{ width: '1.1em', height: '1.1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> 25,000+ readers</span>
           </div>
           
           <p style={{ fontSize: '18px', color: '#666', marginBottom: '30px', lineHeight: '1.6' }}>
@@ -246,7 +246,7 @@ export default function AwardsSectionGuide() {
           marginBottom: '40px',
           border: '1px solid #e9ecef'
         }}>
-          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>📚 Table of Contents</h2>
+          <h2 style={{ fontSize: '20px', marginBottom: '16px', marginTop: 0 }}>Table of Contents</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
             <a href="#format" style={{ color: '#0070f3', textDecoration: 'none' }}>• Award Format</a>
             <a href="#examples" style={{ color: '#0070f3', textDecoration: 'none' }}>• Examples by Category</a>
@@ -265,7 +265,7 @@ export default function AwardsSectionGuide() {
           borderLeft: '6px solid #0070f3'
         }}>
           <p style={{ margin: 0, fontSize: '16px', color: '#1a1a1a' }}>
-            <strong>💡 Pro Tip:</strong> Awards show third-party validation of your skills. They add credibility beyond your own claims. Include 3-5 of your most impressive awards with context and metrics.
+            <strong><strong>Pro Tip:</strong></strong> Awards show third-party validation of your skills. They add credibility beyond your own claims. Include 3-5 of your most impressive awards with context and metrics.
           </p>
         </div>
 
@@ -372,7 +372,7 @@ export default function AwardsSectionGuide() {
         {/* ATS Optimization Section */}
         <section id="ats">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            🤖 ATS-Friendly Award Formatting
+            ATS-Friendly Award Formatting
           </h2>
           <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '12px', marginBottom: '30px' }}>
             <p><strong>To ensure your awards pass Applicant Tracking Systems (ATS):</strong></p>
@@ -389,7 +389,7 @@ export default function AwardsSectionGuide() {
         {/* Common Mistakes Section */}
         <section id="mistakes">
           <h2 style={{ fontSize: '28px', marginBottom: '16px', color: '#1a1a1a', marginTop: '40px' }}>
-            ❌ 7 Common Award Mistakes to Avoid
+            <svg style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'text-bottom', marginRight: '4px', color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> 7 Common Award Mistakes to Avoid
           </h2>
           <div style={{ background: '#fff3e0', padding: '20px', borderRadius: '12px', marginBottom: '30px', borderLeft: '4px solid #ff9800' }}>
             <ul style={{ lineHeight: '1.8', margin: 0 }}>
