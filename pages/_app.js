@@ -12,6 +12,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -171,6 +172,7 @@ function MyApp({ Component, pageProps }) {
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <Analytics />
       </ResumeProvider>
 
       <style jsx global>{`
